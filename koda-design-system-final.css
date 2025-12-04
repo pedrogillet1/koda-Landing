@@ -374,6 +374,11 @@ select:focus {
   background: var(--koda-bg-page) !important;
 }
 
+.macbook-mockup {
+  width: 90% !important;
+  max-width: 900px !important;
+}
+
 .mvv-section {
   background: var(--koda-bg-section) !important;
 }
