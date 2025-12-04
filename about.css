@@ -284,6 +284,7 @@ html[lang="es"] .hero-title-koda {
     overflow: hidden;
     margin: 0;
     margin-left: calc(-50vw + 50%);
+    background-color: #ffffff;
 }
 
 .mockup-image {
