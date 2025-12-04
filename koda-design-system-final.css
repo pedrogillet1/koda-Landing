@@ -375,6 +375,10 @@ select:focus {
   color: var(--koda-text-primary) !important;
 }
 
+.back-to-top {
+  margin-top: 10px !important;
+}
+
 .footer-watermark {
   position: absolute;
   bottom: 20px;
