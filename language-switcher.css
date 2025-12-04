@@ -11,14 +11,15 @@
   color: #FFFFFF;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 20px;
+  padding: 12px 24px;
+  border-radius: 100px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 8px;
+  line-height: 1;
 }
 
 #language-toggle:hover {
@@ -30,20 +31,23 @@
   color: #000000;
 }
 
-#language-toggle[aria-expanded="true"] .language-arrow {
-  filter: invert(1);
-}
-
 #language-toggle:focus {
   outline: 2px solid #667eea;
   outline-offset: 2px;
 }
 
+#current-language {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+
 .language-arrow {
   width: 14px;
   height: 14px;
+  filter: brightness(0) invert(1);
   opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
 #language-toggle:hover .language-arrow {
@@ -52,6 +56,7 @@
 
 #language-toggle[aria-expanded="true"] .language-arrow {
   transform: rotate(180deg);
+  filter: brightness(0);
 }
 
 #language-menu {
