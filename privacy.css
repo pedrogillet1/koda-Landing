@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     line-height: normal;
@@ -27,8 +32,9 @@ body {
 
 .privacy-content-section {
     align-self: stretch;
-    min-height: 2521px;
+    min-height: auto;
     position: relative;
+    padding-bottom: 120px;
 }
 
 /* Decorative Background */
@@ -36,7 +42,7 @@ body {
     width: 1503px;
     height: 1503px;
     left: -31px;
-    top: -74px;
+    top: 0px;
     position: absolute;
 }
 
@@ -182,9 +188,9 @@ body {
 
 /* Privacy Header */
 .privacy-header {
-    position: absolute;
-    left: 42px;
-    top: 183px;
+    position: relative;
+    margin-left: 42px;
+    margin-top: 183px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,9 +229,9 @@ body {
 
 /* Main Content Area */
 .privacy-main {
-    position: absolute;
-    left: 40px;
-    top: 401px;
+    position: relative;
+    margin-left: 40px;
+    margin-top: 60px;
     width: 1360px;
     display: flex;
     gap: 80px;

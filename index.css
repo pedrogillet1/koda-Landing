@@ -466,7 +466,7 @@ body {
 .workflow-card p {
     font-size: 16px;
     line-height: 1.6;
-    color: #a0a0a0;
+    color: #414241;
     margin-bottom: 32px;
 }
 
@@ -1022,7 +1022,7 @@ body {
 .chaos-text-right {
     font-size: 18px;
     line-height: 1.7;
-    color: #c0c0c0;
+    color: #414241;
 }
 
 .chaos-text-left {
@@ -1092,7 +1092,7 @@ body {
 .intro-text {
     font-size: 18px;
     line-height: 1.6;
-    color: #B0B0B0;
+    color: #414241;
     max-width: 100%;
     width: 100%;
     margin: 0;
@@ -1294,7 +1294,7 @@ body {
     width: 32px;
     height: 32px;
     z-index: 2;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) saturate(100%) invert(26%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(91%);
 }
 
 .text36 {
@@ -1310,6 +1310,7 @@ body {
     position: relative;
     font-size: 16px;
     line-height: 24px;
+    color: #414241;
 }
 
 .features-block {
@@ -1371,7 +1372,7 @@ body {
 .smart-secure-section .intro-text {
     font-size: 18px;
     line-height: 1.6;
-    color: #B0B0B0;
+    color: #414241;
     max-width: 100%;
 }
 
@@ -1405,7 +1406,7 @@ body {
 .icon-circle img {
     width: 28px;
     height: 28px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0) saturate(100%) invert(26%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(91%);
 }
 
 /* Feature Title */
@@ -1421,7 +1422,7 @@ body {
 .feature-item p {
     font-size: 15px;
     line-height: 1.6;
-    color: #B0B0B0;
+    color: #414241;
     margin: 0;
 }
 
@@ -3274,7 +3275,7 @@ body {
         font-size: 16px !important;
         line-height: 24px !important;
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.8);
+        color: #414241;
         margin-bottom: 0 !important;
         text-align: center;
     }
@@ -3441,7 +3442,7 @@ body {
     .smart-secure-mobile-new .description {
         align-self: stretch;
         text-align: center;
-        color: #181818;
+        color: #414241;
         font-size: 18px;
         font-family: Plus Jakarta Sans;
         font-weight: 500;

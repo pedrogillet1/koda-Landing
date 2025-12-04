@@ -430,6 +430,22 @@ select:focus {
   margin-top: 0px !important;
 }
 
+/* Navigation logo sizing and alignment */
+.main-nav .logo img,
+.main-nav .content-icon {
+  height: 60px !important;
+  width: auto !important;
+}
+
+.main-nav {
+  align-items: center !important;
+}
+
+.main-nav .logo {
+  display: flex !important;
+  align-items: center !important;
+}
+
 .newsletter-form {
   margin-bottom: 48px !important;
 }
