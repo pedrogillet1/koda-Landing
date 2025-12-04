@@ -377,15 +377,19 @@ select:focus {
 
 .footer-watermark {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   right: 80px;
   opacity: 0.3;
   pointer-events: none;
 }
 
 .footer-watermark img {
-  width: 500px;
+  width: 600px;
   height: auto;
+}
+
+.footer-left {
+  gap: 16px !important;
 }
 
 .footer-logo {
