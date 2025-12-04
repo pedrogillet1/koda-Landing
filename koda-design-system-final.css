@@ -64,23 +64,30 @@ body {
   max-width: none !important;
   margin-left: calc(-50vw + 50%) !important;
   margin-right: calc(-50vw + 50%) !important;
+  margin-bottom: -120px !important; /* Overlap next section for seamless transition */
 }
 
 .hero-image-container img {
   width: 100% !important;
   max-width: none !important;
+  height: 120vh !important; /* Make image taller */
+  object-fit: cover !important;
   mask-image: linear-gradient(
     to bottom,
-    black 40%,
-    rgba(0, 0, 0, 0.8) 60%,
+    black 30%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 0.7) 65%,
     rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.15) 90%,
     transparent 100%
   ) !important;
   -webkit-mask-image: linear-gradient(
     to bottom,
-    black 40%,
-    rgba(0, 0, 0, 0.8) 60%,
+    black 30%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 0.7) 65%,
     rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.15) 90%,
     transparent 100%
   ) !important;
 }
