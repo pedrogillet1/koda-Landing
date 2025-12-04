@@ -253,8 +253,8 @@ button[type="submit"]:hover {
 /* How It Works icons - dark grey color #535150 */
 .how-it-works-section .iconixtolinearcloud-transfer {
   filter: brightness(0) saturate(100%) invert(32%) sepia(6%) saturate(718%) hue-rotate(360deg) brightness(93%) contrast(86%) !important;
-  width: 80px !important;
-  height: 80px !important;
+  width: 64px !important;
+  height: 64px !important;
 }
 
 /* ----------------------------------------------------------------------------
