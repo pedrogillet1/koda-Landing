@@ -458,7 +458,7 @@ html[lang="es"] .hero-title-koda {
 }
 
 .mvv-image-colored {
-    filter: invert(29%) sepia(6%) saturate(447%) hue-rotate(91deg) brightness(93%) contrast(88%);
+    filter: invert(20%) sepia(8%) saturate(500%) hue-rotate(91deg) brightness(70%) contrast(95%);
 }
 
 .mvv-title {
