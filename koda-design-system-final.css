@@ -359,6 +359,18 @@ select:focus {
   color: var(--koda-text-primary) !important;
 }
 
+.footer-logo {
+  width: 180px !important;
+  height: auto !important;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 16px 24px !important;
+  border-radius: 50px !important;
+  border: 1px solid var(--koda-border-subtle) !important;
+  background-color: var(--koda-bg-section) !important;
+}
+
 /* ----------------------------------------------------------------------------
    13. ABOUT PAGE SECTIONS (COLORS & BORDERS)
    ---------------------------------------------------------------------------- */
