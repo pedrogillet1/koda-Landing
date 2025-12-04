@@ -265,15 +265,22 @@ button[type="submit"]:hover {
 }
 
 .feature-item {
-  background: var(--koda-bg-section) !important;
-  border: 1px solid var(--koda-border-subtle) !important;
-  border-radius: 12px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
 .icon-circle {
-  background: var(--koda-bg-page) !important;
-  border: 1px solid var(--koda-border-subtle) !important;
-  border-radius: 999px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* Smart Secure section icons - match How It Works styling */
+.smart-secure-section .icon-circle img {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%) !important;
+  width: 64px !important;
+  height: 64px !important;
 }
 
 /* ----------------------------------------------------------------------------
