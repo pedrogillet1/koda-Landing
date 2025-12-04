@@ -1,0 +1,13 @@
+version: "2"
+authtoken: YOUR_NGROK_AUTHTOKEN_HERE
+
+tunnels:
+  landingfrontend:
+    proto: http
+    addr: 8080
+    domain: landingfrontend.ngrok.app
+
+  landingbackend:
+    proto: http
+    addr: 3001
+    domain: landingbackend.ngrok.app
