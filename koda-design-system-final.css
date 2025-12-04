@@ -219,14 +219,14 @@ button[type="submit"]:hover {
   opacity: 1 !important;
   display: block !important;
   visibility: visible !important;
-  filter: brightness(1.3) !important;
+  filter: brightness(1.6) !important;
   width: 500px !important;
   height: auto !important;
   mix-blend-mode: normal !important; /* Override screen blend mode from index.css */
   mask-image: none !important; /* Remove radial gradient mask */
   -webkit-mask-image: none !important;
   margin: 0 auto !important;
-  /* Lighter colored SVG icons */
+  /* Lighter grey tone SVG icons */
 }
 
 /* ----------------------------------------------------------------------------
