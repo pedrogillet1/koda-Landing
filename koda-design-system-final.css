@@ -71,12 +71,16 @@ body {
   max-width: none !important;
   mask-image: linear-gradient(
     to bottom,
-    black 60%,
+    black 40%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.4) 80%,
     transparent 100%
   ) !important;
   -webkit-mask-image: linear-gradient(
     to bottom,
-    black 60%,
+    black 40%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0.4) 80%,
     transparent 100%
   ) !important;
 }
