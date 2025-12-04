@@ -414,7 +414,6 @@ select:focus {
 .terms-page,
 .waitlist-page {
   overflow: visible !important;
-  min-height: 100vh !important;
 }
 
 /* Ensure content sections have proper spacing before footer */
@@ -422,18 +421,12 @@ select:focus {
 .terms-content-section,
 .contact-hero,
 .waitlist-hero {
-  margin-bottom: 0px !important;
-  padding-bottom: 120px !important;
-  min-height: 0 !important;
-  height: auto !important;
-  flex-grow: 1 !important;
+  padding-bottom: 80px !important;
 }
 
 /* Ensure site-footer has proper top margin */
 .site-footer {
   margin-top: 0px !important;
-  clear: both !important;
-  flex-shrink: 0 !important;
 }
 
 .newsletter-form {
