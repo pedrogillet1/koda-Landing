@@ -58,8 +58,17 @@ body {
   display: none !important;
 }
 
-/* Hero image fade effect */
+/* Hero image - full width with fade effect */
+.hero-image-container {
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+
 .hero-image-container img {
+  width: 100% !important;
+  max-width: none !important;
   mask-image: linear-gradient(
     to bottom,
     black 60%,
