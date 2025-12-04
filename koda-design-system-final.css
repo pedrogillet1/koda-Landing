@@ -154,6 +154,13 @@ button[type="submit"]:hover {
   border: 1px solid var(--koda-border-subtle) !important;
   border-radius: 16px !important;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03) !important;
+  padding: 32px !important;
+}
+
+.workflow-image {
+  /* Remove the fading shadow effect */
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
 }
 
 .workflow-divider {
