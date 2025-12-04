@@ -29,11 +29,11 @@ body {
     color: var(--color-text-body) !important;
 }
 
-/* Remove all dark backgrounds and images from hero sections */
+/* Hero section should be WHITE */
 .hero-section {
-    background-color: var(--color-page-bg) !important;
+    background-color: #FFFFFF !important;
     background-image: none !important;
-    background: var(--color-page-bg) !important;
+    background: #FFFFFF !important;
 }
 
 /* Other sections white background */
@@ -56,9 +56,13 @@ section {
 .join-section,
 .why-koda-section,
 .mockup-section,
-.mvv-section,
-.since-section {
+.mvv-section {
     background-color: var(--color-page-bg) !important;
+}
+
+/* Since section should be GREY (light background) */
+.since-section {
+    background-color: #F5F5F5 !important;
 }
 
 /* Remove gradient overlays on light theme */
@@ -226,7 +230,7 @@ select,
 .form-field input,
 .form-field textarea,
 .newsletter-form input {
-    background-color: var(--color-section-bg) !important;
+    background-color: transparent !important;
     border: 1px solid var(--color-border) !important;
     color: var(--color-text-primary) !important;
 }
