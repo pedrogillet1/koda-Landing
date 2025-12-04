@@ -3442,11 +3442,13 @@ body {
         align-self: stretch;
         text-align: center;
         color: #181818;
-        font-size: 16px;
+        font-size: 18px;
         font-family: Plus Jakarta Sans;
-        font-weight: 400;
-        line-height: 24px;
+        font-weight: 500;
+        line-height: 28px;
         word-wrap: break-word;
+        display: block;
+        margin-top: 16px;
     }
 
     .smart-secure-mobile-new .image-container {
