@@ -1059,8 +1059,6 @@ img {
     object-fit: contain;
     opacity: 0.8;
     mix-blend-mode: screen;
-    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 100%);
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 100%);
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
 }
