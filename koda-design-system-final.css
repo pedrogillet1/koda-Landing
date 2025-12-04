@@ -414,9 +414,8 @@ select:focus {
 .contact-hero,
 .waitlist-hero {
   margin-bottom: 0px !important;
-  padding-bottom: 80px !important;
-  min-height: auto !important;
-  height: auto !important;
+  padding-bottom: 120px !important;
+  min-height: unset !important;
 }
 
 /* Ensure site-footer has proper top margin */
