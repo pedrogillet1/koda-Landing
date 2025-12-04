@@ -209,8 +209,9 @@ button[type="submit"]:hover {
 }
 
 .chaos-image-container img {
-  opacity: 1 !important;
-  filter: invert(33%) sepia(5%) saturate(500%) hue-rotate(360deg) brightness(95%) contrast(88%) !important;
+  opacity: 0.25 !important;
+  filter: grayscale(100%) brightness(0.7) contrast(1) !important;
+  /* SVG will appear in #535150 gray tone */
 }
 
 /* ----------------------------------------------------------------------------
