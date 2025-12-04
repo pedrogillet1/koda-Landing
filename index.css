@@ -469,6 +469,10 @@ img {
     );
 }
 
+.mvv-image-colored {
+    filter: invert(15%) sepia(5%) saturate(200%) hue-rotate(91deg) brightness(50%) contrast(100%);
+}
+
 .workflow-card h3 {
     font-size: 24px;
     line-height: 110%;
