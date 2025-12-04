@@ -123,6 +123,18 @@ p,
   color: var(--koda-text-body) !important;
 }
 
+.smart-secure-mobile-new {
+  background-color: var(--koda-bg-page) !important;
+}
+
+.smart-secure-mobile-new .title .text-muted {
+  color: var(--koda-text-body) !important;
+}
+
+.smart-secure-mobile-new .title .text-white {
+  color: var(--koda-text-primary) !important;
+}
+
 .smart-secure-mobile-new .description {
   color: var(--koda-text-body) !important;
 }
