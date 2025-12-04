@@ -376,7 +376,7 @@ select:focus {
 }
 
 .back-to-top {
-  margin-top: -88px !important;
+  margin-top: -48px !important;
   margin-bottom: 0px !important;
 }
 
@@ -393,7 +393,7 @@ select:focus {
 
 .footer-watermark {
   position: absolute;
-  bottom: -60px;
+  bottom: -100px;
   right: 80px;
   opacity: 0.3;
   pointer-events: none;
