@@ -2141,10 +2141,6 @@ body {
     position: relative;
     width: 583px;
     height: 526px;
-    background-image: url("assets/images/bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
