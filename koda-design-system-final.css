@@ -384,9 +384,13 @@ select:focus {
   align-items: flex-start !important;
 }
 
+.footer-logo {
+  margin-top: -8px !important;
+}
+
 .footer-watermark {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   right: 80px;
   opacity: 0.3;
   pointer-events: none;
