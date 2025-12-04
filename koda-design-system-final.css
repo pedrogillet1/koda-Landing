@@ -58,6 +58,20 @@ body {
   display: none !important;
 }
 
+/* Hero image fade effect */
+.hero-image-container img {
+  mask-image: linear-gradient(
+    to bottom,
+    black 60%,
+    transparent 100%
+  ) !important;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 60%,
+    transparent 100%
+  ) !important;
+}
+
 /* ----------------------------------------------------------------------------
    3. TYPOGRAPHY COLORS (NO SIZES)
    ---------------------------------------------------------------------------- */
