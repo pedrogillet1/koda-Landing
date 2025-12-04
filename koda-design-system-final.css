@@ -376,12 +376,13 @@ select:focus {
 }
 
 .back-to-top {
-  margin-top: 10px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 .footer-watermark {
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   right: 80px;
   opacity: 0.3;
   pointer-events: none;
@@ -399,6 +400,10 @@ select:focus {
 .footer-logo {
   width: 180px !important;
   height: auto !important;
+}
+
+.newsletter-form {
+  margin-bottom: 48px !important;
 }
 
 .newsletter-form input[type="email"] {
