@@ -219,14 +219,14 @@ button[type="submit"]:hover {
   opacity: 1 !important;
   display: block !important;
   visibility: visible !important;
-  filter: brightness(0) saturate(100%) invert(85%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(90%) !important;
+  filter: none !important;
   width: 500px !important;
   height: auto !important;
   mix-blend-mode: normal !important; /* Override screen blend mode from index.css */
   mask-image: none !important; /* Remove radial gradient mask */
   -webkit-mask-image: none !important;
   margin: 0 auto !important;
-  /* Light grey SVG icons - W, PDF, lock, etc. */
+  /* Display original SVG with all internal details (W, PDF, lock icons, etc.) */
 }
 
 /* ----------------------------------------------------------------------------
