@@ -3401,7 +3401,7 @@ body {
         align-items: center;
         gap: 48px;
         display: inline-flex;
-        background-color: #121212;
+        background-color: #F5F5F5;
     }
 
     .smart-secure-mobile-new .header-content {
@@ -3419,7 +3419,7 @@ body {
     }
 
     .smart-secure-mobile-new .title .text-muted {
-        color: rgba(255, 255, 255, 0.60);
+        color: #55534E;
         font-size: 28px;
         font-family: Plus Jakarta Sans;
         font-weight: 500;
@@ -3429,7 +3429,7 @@ body {
     }
 
     .smart-secure-mobile-new .title .text-white {
-        color: white;
+        color: #181818;
         font-size: 28px;
         font-family: Plus Jakarta Sans;
         font-weight: 500;
@@ -3441,7 +3441,7 @@ body {
     .smart-secure-mobile-new .description {
         align-self: stretch;
         text-align: center;
-        color: rgba(255, 255, 255, 0.80);
+        color: #55534E;
         font-size: 16px;
         font-family: Plus Jakarta Sans;
         font-weight: 400;
