@@ -117,6 +117,12 @@ button[type="submit"]:hover,
    TYPOGRAPHY
    ============================================ */
 
+/* Hero content container - remove any background */
+.hero-content {
+    background: none !important;
+    background-color: transparent !important;
+}
+
 /* Hero titles */
 .hero-content h1,
 .hero-title,
@@ -131,6 +137,8 @@ h1 {
     line-height: var(--line-display) !important;
     color: var(--color-text-primary) !important;
     font-weight: 700 !important;
+    background: none !important;
+    background-color: transparent !important;
 }
 
 /* H2 headings */
