@@ -123,6 +123,10 @@ p,
   color: var(--koda-text-body) !important;
 }
 
+.smart-secure-mobile-new .description {
+  color: var(--koda-text-body) !important;
+}
+
 small,
 .small-text,
 .meta-text,
