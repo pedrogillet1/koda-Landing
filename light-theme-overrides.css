@@ -1,0 +1,436 @@
+/* ============================================
+   LIGHT THEME OVERRIDES
+   Apply Koda webapp design system across all pages
+   ============================================ */
+
+/* ============================================
+   GLOBAL OVERRIDES
+   ============================================ */
+
+/* Body and main containers */
+body,
+.homepage,
+.about-page,
+.contact-page,
+.waitlist-page,
+.privacy-page,
+.terms-page {
+    background-color: var(--color-page-bg) !important;
+    color: var(--color-text-body) !important;
+}
+
+/* Remove all dark backgrounds */
+.hero-section,
+.hero-content-section,
+.waitlist-hero,
+.contact-hero,
+.terms-content-section,
+.privacy-content-section,
+section {
+    background-color: var(--color-section-bg) !important;
+}
+
+/* Alternate section backgrounds */
+.workflow-section,
+.chaos-section,
+.how-it-works-section,
+.smart-secure-section,
+.form-section,
+.join-section,
+.why-koda-section,
+.mockup-section,
+.mvv-section,
+.since-section {
+    background-color: var(--color-page-bg) !important;
+}
+
+/* Remove gradient overlays on light theme */
+.hero-section::after,
+.hero-child,
+.join-gradient {
+    display: none !important;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.main-nav {
+    background-color: var(--color-section-bg) !important;
+    border: 1px solid var(--color-border) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+.nav-links a {
+    color: var(--color-text-body) !important;
+    font-size: var(--font-body) !important;
+    line-height: var(--line-body) !important;
+}
+
+.nav-links a:hover {
+    color: var(--color-text-primary) !important;
+}
+
+.nav-links a.active {
+    background-color: rgba(24, 24, 24, 0.05) !important;
+    color: var(--color-text-primary) !important;
+}
+
+.nav-links .demo-button,
+.cta-button,
+button[type="submit"],
+.submit-button,
+.submit-btn,
+.newsletter-submit,
+.workflow-button,
+.mobile-cta-btn {
+    background-color: var(--color-cta-bg) !important;
+    color: var(--color-cta-text) !important;
+}
+
+.nav-links .demo-button:hover,
+.cta-button:hover,
+button[type="submit"]:hover,
+.submit-button:hover,
+.submit-btn:hover,
+.newsletter-submit:hover,
+.workflow-button:hover {
+    background-color: var(--color-cta-hover) !important;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    background-color: var(--color-section-bg) !important;
+    border: 1px solid var(--color-border) !important;
+}
+
+.mobile-menu-link {
+    color: var(--color-text-body) !important;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link.active {
+    color: var(--color-text-primary) !important;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+/* Hero titles */
+.hero-content h1,
+.hero-title,
+.hero-title-about,
+.hero-title-koda,
+.waitlist-header h1,
+.contact-header h1,
+.privacy-header h1,
+.terms-header h1,
+h1 {
+    font-size: var(--font-display) !important;
+    line-height: var(--line-display) !important;
+    color: var(--color-text-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* H2 headings */
+.workflow-section h2,
+.chaos-header h2,
+.section-header h2,
+.why-header h2,
+.join-content h2,
+.form-header h2,
+.mvv-title,
+h2 {
+    font-size: var(--font-h2) !important;
+    line-height: var(--line-h2) !important;
+    color: var(--color-text-heading) !important;
+    font-weight: 600 !important;
+}
+
+/* H3 headings */
+.workflow-card h3,
+.feature-item h3,
+.why-card h3,
+h3 {
+    font-size: var(--font-h3) !important;
+    line-height: var(--line-h3) !important;
+    color: var(--color-text-heading) !important;
+    font-weight: 600 !important;
+}
+
+/* Body text */
+p,
+.subtitle,
+.intro-text,
+.workflow-card p,
+.feature-item p,
+.chaos-text-left,
+.chaos-text-right,
+.mvv-description,
+.text9,
+.text38,
+.since-message {
+    font-size: var(--font-body) !important;
+    line-height: var(--line-body) !important;
+    color: var(--color-text-body) !important;
+}
+
+/* Small text */
+.last-updated,
+.footer-copyright,
+.intro {
+    font-size: var(--font-small) !important;
+    line-height: var(--line-small) !important;
+    color: var(--color-text-muted) !important;
+}
+
+/* Highlighted text within paragraphs */
+.text-white,
+.document-chaos,
+.chaos-subtitle,
+.workflow-subtitle,
+.smart-subtitle,
+.how-subtitle,
+.signup-subtitle {
+    color: var(--color-text-primary) !important;
+}
+
+.text-grey,
+.text-muted {
+    color: var(--color-text-body) !important;
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+label,
+.form-field label {
+    font-size: var(--font-small) !important;
+    line-height: var(--line-small) !important;
+    color: var(--color-text-heading) !important;
+    font-weight: 500 !important;
+}
+
+input,
+textarea,
+select,
+.form-field input,
+.form-field textarea,
+.newsletter-form input {
+    background-color: var(--color-section-bg) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text-primary) !important;
+    font-size: var(--font-body) !important;
+    line-height: var(--line-body) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-text-primary) !important;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+    background-color: var(--color-footer-bg) !important;
+}
+
+.footer-logo,
+.footer-left img {
+    /* Logo will remain as is */
+}
+
+.footer-nav h4 {
+    font-size: var(--font-body) !important;
+    line-height: var(--line-body) !important;
+    color: var(--color-text-heading) !important;
+    font-weight: 600 !important;
+}
+
+.footer-nav a,
+.back-to-top {
+    font-size: var(--font-small) !important;
+    line-height: var(--line-small) !important;
+    color: var(--color-text-body) !important;
+    text-decoration: none !important;
+}
+
+.footer-nav a:hover,
+.back-to-top:hover {
+    color: var(--color-text-primary) !important;
+}
+
+/* ============================================
+   CARDS & CONTAINERS
+   ============================================ */
+
+.workflow-card,
+.feature-item,
+.why-card,
+.homepage-block,
+.form-container,
+.contact-form,
+.waitlist-form {
+    background-color: var(--color-section-bg) !important;
+    border: 1px solid var(--color-border) !important;
+}
+
+/* Remove dark card backgrounds */
+.why-card-1,
+.why-card-2,
+.why-card-3,
+.homepage-block,
+.container2 {
+    background-color: var(--color-section-bg) !important;
+}
+
+/* ============================================
+   BORDERS & DIVIDERS
+   ============================================ */
+
+.workflow-divider,
+hr,
+.border {
+    border-color: var(--color-border) !important;
+}
+
+/* ============================================
+   DECORATIVE ELEMENTS
+   ============================================ */
+
+/* Keep decorative circles and lines subtle */
+.decorative-background,
+.decorative-circles,
+.decorative-elements {
+    opacity: 0.3;
+}
+
+.circle-large,
+.circle-small,
+.circle-outer,
+.circle-inner,
+.line {
+    border-color: var(--color-border) !important;
+    background-color: transparent !important;
+}
+
+/* ============================================
+   SPECIAL SECTIONS
+   ============================================ */
+
+/* CTA blocks */
+.homepage-cta,
+.homepage-cta-block {
+    background-color: var(--color-page-bg) !important;
+}
+
+/* Table of contents */
+.privacy-toc,
+.terms-toc {
+    background-color: var(--color-section-bg) !important;
+    border: 1px solid var(--color-border) !important;
+}
+
+.privacy-toc a,
+.terms-toc a {
+    color: var(--color-text-body) !important;
+    font-size: var(--font-small) !important;
+}
+
+.privacy-toc a:hover,
+.terms-toc a:hover {
+    color: var(--color-text-primary) !important;
+}
+
+/* Content sections */
+.content-section,
+.privacy-content,
+.terms-content {
+    color: var(--color-text-body) !important;
+}
+
+.content-section h2,
+.privacy-content h2,
+.terms-content h2 {
+    color: var(--color-text-heading) !important;
+}
+
+/* ============================================
+   LANGUAGE SWITCHER
+   ============================================ */
+
+#language-toggle {
+    background-color: transparent !important;
+    color: var(--color-text-body) !important;
+    border: 1px solid var(--color-border) !important;
+}
+
+#language-menu {
+    background-color: var(--color-section-bg) !important;
+    border: 1px solid var(--color-border) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+#language-menu li a {
+    color: var(--color-text-body) !important;
+}
+
+#language-menu li a:hover {
+    background-color: var(--color-page-bg) !important;
+    color: var(--color-text-primary) !important;
+}
+
+/* ============================================
+   MOBILE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px !important;
+        line-height: 32px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+        line-height: 26px !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+        line-height: 110% !important;
+    }
+
+    .mobile-menu-toggle {
+        color: var(--color-text-primary) !important;
+    }
+
+    .menu-line {
+        background-color: var(--color-text-primary) !important;
+    }
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+@media (min-width: 1200px) {
+    h1, .hero-content h1 {
+        font-size: 48px !important;
+        line-height: 60px !important;
+    }
+
+    h2 {
+        font-size: 32px !important;
+        line-height: 42px !important;
+    }
+}

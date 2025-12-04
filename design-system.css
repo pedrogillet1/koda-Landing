@@ -1,0 +1,193 @@
+/* ============================================
+   KODA WEBAPP DESIGN SYSTEM - LIGHT UI
+   ============================================ */
+
+:root {
+  /* Typography Scale */
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Sizes & Line Heights */
+  --font-display: 30px;
+  --line-display: 40px;
+
+  --font-h2: 20px;
+  --line-h2: 30px;
+
+  --font-h3: 18px;
+  --line-h3: 110%;
+
+  --font-body: 16px;
+  --line-body: 24px;
+
+  --font-small: 14px;
+  --line-small: 20px;
+
+  --font-tiny: 12px;
+  --line-tiny: 18px;
+
+  /* Color Palette - Light UI */
+  --color-page-bg: #F5F5F5;
+  --color-section-bg: #FFFFFF;
+  --color-footer-bg: #F1F0EF;
+
+  --color-text-primary: #181818;
+  --color-text-heading: #32302C;
+  --color-text-body: #55534E;
+  --color-text-muted: #6C6B6E;
+
+  --color-border: #E6E6EC;
+
+  --color-cta-bg: #181818;
+  --color-cta-text: #FFFFFF;
+
+  /* Hover States */
+  --color-cta-hover: #32302C;
+  --color-border-hover: #55534E;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-body);
+  line-height: var(--line-body);
+  color: var(--color-text-body);
+  background-color: var(--color-page-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+h1, .h1, .display {
+  font-size: var(--font-display);
+  line-height: var(--line-display);
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-size: var(--font-h2);
+  line-height: var(--line-h2);
+  color: var(--color-text-heading);
+  font-weight: 600;
+}
+
+h3, .h3 {
+  font-size: var(--font-h3);
+  line-height: var(--line-h3);
+  color: var(--color-text-heading);
+  font-weight: 600;
+}
+
+p, .body {
+  font-size: var(--font-body);
+  line-height: var(--line-body);
+  color: var(--color-text-body);
+}
+
+.small {
+  font-size: var(--font-small);
+  line-height: var(--line-small);
+  color: var(--color-text-body);
+}
+
+.tiny, .meta {
+  font-size: var(--font-tiny);
+  line-height: var(--line-tiny);
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+section {
+  background-color: var(--color-section-bg);
+}
+
+.section-light {
+  background-color: var(--color-page-bg);
+}
+
+/* ============================================
+   BUTTONS & CTAs
+   ============================================ */
+
+.cta-button,
+.demo-button,
+button.primary {
+  background-color: var(--color-cta-bg);
+  color: var(--color-cta-text);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-family: var(--font-family);
+  font-size: var(--font-body);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover,
+.demo-button:hover,
+button.primary:hover {
+  background-color: var(--color-cta-hover);
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+label {
+  font-size: var(--font-small);
+  line-height: var(--line-small);
+  color: var(--color-text-heading);
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-family);
+  font-size: var(--font-body);
+  line-height: var(--line-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-section-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   BORDERS
+   ============================================ */
+
+.border,
+hr {
+  border-color: var(--color-border);
+}
