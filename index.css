@@ -2147,8 +2147,8 @@ body {
 }
 
 .visula-icon {
-    width: 160%;
-    height: 160%;
+    width: 130%;
+    height: 130%;
     position: relative;
     object-fit: contain;
     z-index: 1;
