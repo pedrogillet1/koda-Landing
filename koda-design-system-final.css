@@ -419,9 +419,18 @@ select:focus {
 /* Ensure content sections have proper spacing before footer */
 .privacy-content-section,
 .terms-content-section,
-.contact-hero,
 .waitlist-hero {
   padding-bottom: 80px !important;
+}
+
+/* Contact and Privacy pages need larger min-heights due to content */
+.contact-hero {
+  min-height: 1400px !important;
+  padding-bottom: 80px !important;
+}
+
+.privacy-content-section {
+  min-height: 3500px !important;
 }
 
 /* Ensure site-footer has proper top margin */
