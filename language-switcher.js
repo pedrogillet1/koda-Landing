@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Language flags mapping
-  const languageFlags = {
-    'en': '🇬🇧',
-    'pt': '🇧🇷',
-    'es': '🇪🇸'
+  // Language names mapping
+  const languageNames = {
+    'en': 'English',
+    'pt': 'Português (BR)',
+    'es': 'Español'
   };
 
   // Function to set the language
@@ -41,8 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       localStorage.setItem('language', lang);
       if (currentLanguageSpan) {
-        const flag = languageFlags[lang] || '';
-        currentLanguageSpan.textContent = `${flag} ${lang.toUpperCase()}`;
+        currentLanguageSpan.textContent = languageNames[lang] || 'English';
       }
 
       // Apply translations
@@ -160,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     suggestLanguage();
     // Set default to English
     if (currentLanguageSpan) {
-      currentLanguageSpan.textContent = '🇬🇧 EN';
+      currentLanguageSpan.textContent = 'English';
     }
   }
 });

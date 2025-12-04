@@ -257,30 +257,55 @@ html[lang="es"] .hero-title-koda {
 
 /* Since 2025 Section */
 .since-section {
-    padding: 112px 40px;
+    padding: 40px 0 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 4px;
+    background-color: white;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .since-tag {
-    color: white;
+    color: #131210;
     font-size: 30px;
     font-style: italic;
     font-weight: 500;
     line-height: 40px;
     text-align: center;
+    margin: 0;
+    padding: 0 60px;
 }
 
 .since-message {
-    width: 1096px;
+    width: 100%;
+    max-width: 1096px;
     text-align: center;
     font-size: 48px;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 52.80px;
     letter-spacing: 0.96px;
+    margin: 0;
+    padding: 0 60px;
+}
+
+.since-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 0;
+}
+
+.since-section .text-grey {
+    color: rgba(19, 18, 16, 0.60);
+}
+
+.since-section .text-white {
+    color: #131210;
 }
 
 .text-grey {
