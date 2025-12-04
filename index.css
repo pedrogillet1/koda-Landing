@@ -456,20 +456,6 @@ img {
     object-position: center top;
     margin: 0 auto 32px auto;
     display: block;
-
-    /* The Magic: Fading the bottom of the image into the background */
-    mask-image: linear-gradient(
-        to bottom,
-        black 70%,
-        transparent 100%
-    );
-
-    /* For -webkit- browsers like Chrome and Safari */
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        black 70%,
-        transparent 100%
-    );
 }
 
 .mvv-image-colored {
