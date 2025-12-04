@@ -380,16 +380,20 @@ select:focus {
   margin-bottom: 0px !important;
 }
 
+.footer-main {
+  align-items: flex-start !important;
+}
+
 .footer-watermark {
   position: absolute;
-  bottom: 120px;
+  bottom: 50px;
   right: 80px;
   opacity: 0.3;
   pointer-events: none;
 }
 
 .footer-watermark img {
-  width: 600px;
+  width: 750px;
   height: auto;
 }
 
