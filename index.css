@@ -473,6 +473,7 @@ img {
 .finance-image-xlarge {
     width: 460px !important;
     height: 460px !important;
+    margin-bottom: -48px !important;
 }
 
 .workflow-card h3 {
