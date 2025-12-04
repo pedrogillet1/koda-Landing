@@ -193,3 +193,20 @@
     text-align: center;
   }
 }
+
+/* Dropdown arrow styling */
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 12px;
+    opacity: 0.8;
+    transition: transform 0.2s ease;
+}
+
+#language-toggle:hover .dropdown-arrow {
+    opacity: 1;
+}
+
+#language-toggle[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}

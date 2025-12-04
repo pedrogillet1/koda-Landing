@@ -48,9 +48,14 @@ body {
 }
 
 /* Force light backgrounds */
-.homepage,
-.hero-section {
+.homepage {
   background-color: var(--koda-bg-page) !important;
+  background-image: none !important;
+}
+
+/* Hero section should be WHITE */
+.hero-section {
+  background-color: #FFFFFF !important;
   background-image: none !important;
 }
 
@@ -58,38 +63,25 @@ body {
   display: none !important;
 }
 
-/* Hero image - full width with fade effect */
+/* Since section should be GREY */
+.since-section {
+  background-color: #F5F5F5 !important;
+}
+
+/* Hero image - full width */
 .hero-image-container {
   width: 100vw !important;
   max-width: none !important;
   margin-left: calc(-50vw + 50%) !important;
   margin-right: calc(-50vw + 50%) !important;
-  margin-bottom: -120px !important; /* Overlap next section for seamless transition */
+  margin-bottom: 0 !important;
 }
 
 .hero-image-container img {
   width: 100% !important;
   max-width: none !important;
-  height: 120vh !important; /* Make image taller */
-  object-fit: cover !important;
-  mask-image: linear-gradient(
-    to bottom,
-    black 30%,
-    rgba(0, 0, 0, 0.9) 50%,
-    rgba(0, 0, 0, 0.7) 65%,
-    rgba(0, 0, 0, 0.4) 80%,
-    rgba(0, 0, 0, 0.15) 90%,
-    transparent 100%
-  ) !important;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    black 30%,
-    rgba(0, 0, 0, 0.9) 50%,
-    rgba(0, 0, 0, 0.7) 65%,
-    rgba(0, 0, 0, 0.4) 80%,
-    rgba(0, 0, 0, 0.15) 90%,
-    transparent 100%
-  ) !important;
+  height: auto !important;
+  object-fit: contain !important;
 }
 
 /* ----------------------------------------------------------------------------
@@ -465,7 +457,7 @@ select:focus {
 }
 
 .since-section {
-  background: var(--koda-bg-section) !important;
+  background: #F5F5F5 !important;
 }
 
 .mockup-section {
