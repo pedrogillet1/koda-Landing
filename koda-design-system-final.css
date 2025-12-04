@@ -377,14 +377,14 @@ select:focus {
 
 .footer-watermark {
   position: absolute;
-  bottom: 80px;
+  bottom: 40px;
   right: 80px;
   opacity: 0.3;
   pointer-events: none;
 }
 
 .footer-watermark img {
-  width: 350px;
+  width: 500px;
   height: auto;
 }
 
