@@ -393,7 +393,7 @@ select:focus {
 
 .footer-watermark {
   position: absolute;
-  bottom: -10px;
+  bottom: -30px;
   right: 80px;
   opacity: 0.3;
   pointer-events: none;
