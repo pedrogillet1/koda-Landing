@@ -450,8 +450,8 @@ img {
 
 .workflow-image {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 380px;
+    object-fit: contain;
     margin-bottom: 32px;
 
     /* The Magic: Fading the bottom of the image into the background */
