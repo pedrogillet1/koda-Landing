@@ -238,10 +238,21 @@ button[type="submit"]:hover {
 
 .homepage-block,
 .container2 {
-  background: var(--koda-bg-section) !important;
-  border: 1px solid var(--koda-border-subtle) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Hide decorative background pattern and borders */
+.how-it-works-section .background-pattern,
+.how-it-works-section .block-child {
+  display: none !important;
+}
+
+/* How It Works icons - dark grey color #535150 */
+.how-it-works-section .iconixtolinearcloud-transfer {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(6%) saturate(718%) hue-rotate(360deg) brightness(93%) contrast(86%) !important;
 }
 
 /* ----------------------------------------------------------------------------
