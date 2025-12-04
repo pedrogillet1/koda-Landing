@@ -450,9 +450,12 @@ img {
 
 .workflow-image {
     width: 100%;
+    max-width: 300px;
     height: 380px;
     object-fit: contain;
-    margin-bottom: 32px;
+    object-position: center top;
+    margin: 0 auto 32px auto;
+    display: block;
 
     /* The Magic: Fading the bottom of the image into the background */
     mask-image: linear-gradient(
