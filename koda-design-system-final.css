@@ -209,10 +209,8 @@ button[type="submit"]:hover {
 }
 
 .chaos-image-container img {
-  opacity: 0.35 !important;
-  filter: grayscale(100%) brightness(0.9) contrast(1.1) !important;
-  /* Apply gray color tint #535150 */
-  background-blend-mode: multiply !important;
+  opacity: 1 !important;
+  filter: invert(33%) sepia(5%) saturate(500%) hue-rotate(360deg) brightness(95%) contrast(88%) !important;
 }
 
 /* ----------------------------------------------------------------------------
