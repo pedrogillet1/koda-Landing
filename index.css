@@ -397,7 +397,7 @@ img {
 /* Laptop Mockup Image Container */
 .hero-image-container {
     width: 100%;
-    max-width: 1400px; /* Reduced for smaller laptop image */
+    max-width: 1800px;
     flex-shrink: 1; /* Allows the image to shrink if needed */
     line-height: 0;
 }
@@ -405,7 +405,7 @@ img {
 .hero-image-container img {
     width: 100%;
     height: auto;
-    max-height: 700px; /* Reduced for smaller laptop image */
+    max-height: 900px;
     object-fit: contain; /* Maintains aspect ratio while respecting max-height */
 }
 
