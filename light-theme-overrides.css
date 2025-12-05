@@ -231,7 +231,9 @@ select,
 .form-field textarea,
 .newsletter-form input {
     background-color: transparent !important;
-    border: 1px solid var(--color-border) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    border-radius: 0 !important;
     color: var(--color-text-primary) !important;
 }
 
