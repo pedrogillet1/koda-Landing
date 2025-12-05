@@ -321,8 +321,6 @@ label,
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
-input:not(.newsletter-form input),
-textarea:not(.form-field textarea),
 select {
   background-color: var(--koda-bg-section) !important;
   border: 1px solid var(--koda-border-subtle) !important;
@@ -336,12 +334,15 @@ select {
   border-radius: 24px !important;
 }
 
-.newsletter-form input {
+.newsletter-form input,
+.newsletter-form input[type="email"],
+footer .newsletter-form input {
   background-color: transparent !important;
   border: none !important;
   border-bottom: 1px solid var(--koda-border-subtle) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
+  padding: 14px 0 !important;
 }
 
 input::placeholder,
