@@ -1,5 +1,5 @@
 version: "2"
-authtoken: YOUR_NGROK_AUTHTOKEN_HERE
+authtoken: 33fTneoH89q5L6Ji1VPvR78v8pG_2kt4wsMcMvFBUQAnBRJGr
 
 tunnels:
   landingfrontend:
