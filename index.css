@@ -59,6 +59,14 @@ img {
     overflow: hidden; /* Clips any content that extends beyond the section */
 }
 
+/* Hide any decorative line elements in hero section */
+.hero-section .line,
+.hero-section .decorative-line,
+.hero-image-container::before,
+.hero-image-container::after {
+    display: none !important;
+}
+
 /* Smooth bottom transition gradient - REMOVED */
 /* .hero-section::after {
     content: '';
