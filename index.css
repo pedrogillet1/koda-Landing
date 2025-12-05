@@ -38,7 +38,7 @@ img {
 /* Main Hero Section Container */
 .hero-section {
     position: relative;
-    height: 140vh; /* Increased to accommodate much larger laptop */
+    height: 100vh; /* Reduced height for tighter layout */
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
