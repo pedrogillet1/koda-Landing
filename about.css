@@ -528,7 +528,7 @@ html[lang="es"] .hero-title-koda {
 .why-koda-section {
     position: relative;
     height: 816px;
-    padding: 0 40px;
+    padding: 0 40px 80px 40px;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -617,7 +617,7 @@ html[lang="es"] .hero-title-koda {
 /* Join Section */
 .join-section {
     position: relative;
-    padding: 112px 80px;
+    padding: 160px 80px 112px 80px;
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
@@ -1011,9 +1011,9 @@ html[lang="es"] .hero-title-koda {
 
     .mobile-menu-toggle .menu-line {
         display: block;
-        width: 20px;
+        width: 24px;
         height: 2px;
-        background: white;
+        background: #000000;
         transition: all 0.3s ease;
         border-radius: 1px;
     }
@@ -1475,5 +1475,5 @@ html[lang="es"] .hero-title-koda {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
 }
