@@ -407,6 +407,7 @@ img {
     height: auto;
     max-height: 700px;
     object-fit: contain; /* Maintains aspect ratio while respecting max-height */
+    filter: brightness(0.85) contrast(1.1);
 }
 
 /* Workflow Section */
@@ -1365,8 +1366,8 @@ img {
 }
 
 .macbook-mockup {
-    width: 140%;
-    max-width: 1400px;
+    width: 400%;
+    max-width: 4000px;
     height: auto;
 }
 
@@ -2164,16 +2165,16 @@ img {
 
 .cta-image-container {
     position: relative;
-    width: 583px;
-    height: 526px;
+    width: 800px;
+    height: 720px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .visula-icon {
-    width: 130%;
-    height: 130%;
+    width: 180%;
+    height: 180%;
     position: relative;
     object-fit: contain;
     z-index: 1;
@@ -3478,7 +3479,7 @@ img {
 
     .smart-secure-mobile-new .image-container {
         align-self: stretch;
-        height: 491px;
+        height: 650px;
         position: relative;
     }
 
