@@ -228,7 +228,7 @@ button[type="submit"]:hover {
   display: block !important;
   visibility: visible !important;
   filter: brightness(1.6) !important;
-  width: 500px !important;
+  width: 800px !important;
   height: auto !important;
   mix-blend-mode: normal !important; /* Override screen blend mode from index.css */
   mask-image: none !important; /* Remove radial gradient mask */
