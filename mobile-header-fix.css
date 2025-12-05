@@ -14,6 +14,16 @@ This file corrects all mobile header issues across all pages, including:
 @media (max-width: 767px) {
 
     /* ============================================
+       0. HEADER ELEMENT OVERRIDE
+       - Force header element to have white background
+    ============================================ */
+
+    header {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
+    /* ============================================
        1. MAIN NAVIGATION CONTAINER
        - Make header full-width, stick to top, and set a fixed height.
     ============================================ */
@@ -28,13 +38,14 @@ This file corrects all mobile header issues across all pages, including:
         max-width: 100% !important;
         height: 64px !important; /* Standard mobile header height */
         padding: 0 16px !important;
-        border-radius: 0 !important;
+        border-radius: 0 0 24px 24px !important; /* Rounded bottom corners */
         transform: none !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        background-color: #131210 !important; /* Unify background */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.95) !important; /* WHITE background */
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     /* ============================================
@@ -55,24 +66,56 @@ This file corrects all mobile header issues across all pages, including:
 
     /* ============================================
        3. HAMBURGER MENU
-       - Make the menu lines white so they are visible on the dark header.
+       - Make the menu lines black so they are visible on white background.
        - Ensure it is always displayed and aligned to the right.
     ============================================ */
 
-    .mobile-menu-toggle {
+    /* Show mobile-only elements */
+    .mobile-only,
+    button.mobile-only,
+    .mobile-menu-toggle.mobile-only,
+    #mobile-menu-btn {
         display: flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
-    .mobile-menu-toggle .menu-line {
-        background: #FFFFFF !important; /* Make lines WHITE */
+    .mobile-menu-toggle,
+    button.mobile-menu-toggle,
+    .hamburger-menu,
+    #mobile-menu-btn {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 8px !important;
+        gap: 6px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 1001 !important;
+    }
+
+    .mobile-menu-toggle .menu-line,
+    .hamburger-menu .menu-line,
+    #mobile-menu-btn .menu-line {
+        display: block !important;
+        width: 24px !important;
+        height: 2px !important;
+        background: #000000 !important; /* Make lines BLACK for visibility on white */
+        border-radius: 2px !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     /* Hide desktop links to ensure hamburger menu is used */
-    .nav-links {
+    .nav-links,
+    .desktop-only {
         display: none !important;
     }
 
