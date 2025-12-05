@@ -229,6 +229,11 @@ img {
     border-radius: 100px;
     font-weight: 600;
     line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-links .demo-button:hover {

@@ -179,24 +179,23 @@ img {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.demo-button {
+.nav-links .demo-button {
     background-color: #ffffff;
-    color: #000000 !important;
+    color: #000000;
     padding: 12px 24px;
     border-radius: 100px;
-    text-decoration: none !important;
-    font-size: 16px;
     font-weight: 600;
     line-height: 1;
-    transition: all 0.3s ease;
-    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.demo-button:hover {
+.nav-links .demo-button:hover {
     background-color: #e0e0e0;
     opacity: 1;
-    color: #000000 !important;
-    text-decoration: none !important;
 }
 
 /* Desktop/Mobile Toggle Classes */
