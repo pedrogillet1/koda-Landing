@@ -1,0 +1,138 @@
+/*
+============================================
+KODA - UNIVERSAL MOBILE FOOTER FIX
+============================================
+
+This file corrects all mobile footer issues across all pages, including:
+1. Excessive height and large gaps.
+2. Hiding the newsletter form and background watermark.
+3. Reorganizing layout for a compact, mobile-first experience.
+
+*/
+
+@media (max-width: 767px) {
+
+    /* ============================================
+       1. HIDE UNNECESSARY ELEMENTS ON MOBILE
+       - Newsletter form, background watermark pseudo-element, and back-to-top link.
+    ============================================ */
+
+    .newsletter-form,
+    .site-footer::after,
+    .back-to-top {
+        display: none !important;
+    }
+
+    /* ============================================
+       2. MAIN FOOTER CONTAINER
+       - Reduce padding for a compact layout.
+       - Set a greyish background color.
+    ============================================ */
+
+    .site-footer {
+        padding: 32px 24px !important;
+        background-color: #E8E8E8 !important;
+        position: relative;
+    }
+
+    /* ============================================
+       3. FOOTER CONTENT LAYOUT
+       - Use flexbox to reorder content: Nav links first, then copyright.
+       - Center-align all content for a clean mobile look.
+    ============================================ */
+
+    .footer-main {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 32px !important; /* Space between nav and copyright */
+        text-align: center;
+    }
+
+    /* ============================================
+       4. NAVIGATION LINKS
+       - Display COMPANY and POLICY side by side.
+       - Adjust spacing for a clean, readable list.
+    ============================================ */
+
+    .footer-nav,
+    .site-footer .footer-nav,
+    .footer-main .footer-nav {
+        order: 1 !important; /* Show nav links first */
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* Side by side layout */
+        column-gap: 24px !important; /* Space between COMPANY and POLICY columns */
+        row-gap: 24px !important;
+        width: 100% !important;
+        max-width: 400px !important; /* Wider to accommodate 2 columns */
+    }
+
+    .nav-column,
+    .footer-nav .nav-column {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important; /* Space between links in a group */
+        align-items: flex-start !important; /* Left-align within column */
+        text-align: left !important;
+    }
+
+    .nav-column h4,
+    .footer-nav h4 {
+        margin-bottom: 4px !important;
+        text-align: left !important;
+    }
+
+    .nav-column a,
+    .footer-nav a {
+        display: flex !important;
+        justify-content: flex-start !important; /* Left-align link text and icon */
+        text-align: left !important;
+    }
+
+    /* ============================================
+       5. WATERMARK & COPYRIGHT
+       - Show watermark above copyright.
+       - Center-align copyright section.
+    ============================================ */
+
+    .footer-left {
+        order: 2; /* Show copyright section last */
+        gap: 16px !important;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+
+    .footer-logo {
+        display: none !important; /* Hide the main footer logo */
+    }
+
+    /* Show watermark above copyright */
+    .footer-watermark,
+    .site-footer .footer-watermark {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        order: 1 !important;
+        margin-bottom: 12px !important;
+        width: 100% !important;
+    }
+
+    .footer-watermark img,
+    .site-footer .footer-watermark img {
+        width: 140px !important;
+        height: auto !important;
+        opacity: 0.35 !important;
+        display: block !important;
+    }
+
+    .footer-copyright,
+    .site-footer .footer-copyright {
+        order: 2 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        font-size: 14px !important;
+        color: #666666 !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+}
