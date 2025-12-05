@@ -407,7 +407,6 @@ img {
     height: auto;
     max-height: 700px;
     object-fit: contain; /* Maintains aspect ratio while respecting max-height */
-    filter: brightness(0.85) contrast(1.1);
 }
 
 /* Workflow Section */
@@ -1366,9 +1365,15 @@ img {
 }
 
 .macbook-mockup {
+    width: 140%;
+    max-width: 1400px;
+    height: auto;
+}
+
+/* Make Smart Secure section MacBook bigger */
+.smart-secure-section .macbook-mockup {
     width: 400%;
     max-width: 4000px;
-    height: auto;
 }
 
 /* Right Side: Content Container */
