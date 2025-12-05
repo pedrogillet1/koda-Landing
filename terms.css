@@ -45,6 +45,9 @@ img {
     min-height: auto;
     position: relative;
     padding-bottom: 120px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* Decorative Background */
