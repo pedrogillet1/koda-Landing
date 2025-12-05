@@ -8,14 +8,14 @@
 html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
     margin: 0;
     padding: 0;
     line-height: normal;
-    overflow-x: hidden;
+    overflow-x: clip;
     min-width: 320px;
 }
 
@@ -29,7 +29,7 @@ img {
     width: 100%;
     position: relative;
     background-color: #131210;
-    overflow-x: hidden;
+    overflow-x: clip;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -3143,25 +3143,16 @@ img {
         position: relative;
     }
 
-    .hero-image-container::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 150px;
-        background: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, #0E0E0E 100%);
-        pointer-events: none;
-        z-index: 1;
-    }
+    /* REMOVED: Shadow gradient at bottom - no longer needed */
+    /* .hero-image-container::after { ... } */
 
     .hero-image-container img {
-        width: 120%;
+        width: 100%;
         height: auto;
-        max-width: 600px;
+        max-width: 100%;
         margin: 0 auto;
         display: block;
-        transform: scale(1.15);
+        transform: none;
         position: relative;
         z-index: 0;
     }
@@ -3245,16 +3236,8 @@ img {
         position: relative;
     }
 
-    .workflow-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 41px;
-        background: linear-gradient(180deg, #0E0E0E 0%, rgba(14, 14, 14, 0) 100%);
-        z-index: 1;
-    }
+    /* REMOVED: Shadow gradient at top - no longer needed */
+    /* .workflow-section::before { ... } */
 
     .workflow-section h2 {
         font-size: 28px !important;
@@ -3269,7 +3252,7 @@ img {
     }
 
     .workflow-section h2 span:first-child {
-        color: white;
+        color: #414241;
         text-transform: capitalize;
     }
 
@@ -3281,7 +3264,7 @@ img {
     .workflow-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 32px !important;
+        gap: 16px !important;
         padding: 0 !important;
         max-width: 100%;
     }
@@ -3345,7 +3328,7 @@ img {
         border: none;
         height: 1px;
         width: 80%;
-        margin: 64px auto;
+        margin: 32px auto;
         background-color: rgba(255, 255, 255, 0.08);
         display: block;
     }
@@ -3805,27 +3788,52 @@ img {
 /* These wrappers ensure backgrounds extend full viewport width on screens >1440px */
 
 .hero-section-wrapper {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background: linear-gradient(180deg, #131210 0%, #131210 100%);
 }
 
 .workflow-section-wrapper {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: #131210;
 }
 
 .chaos-section-wrapper {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: #131210;
 }
 
 .how-it-works-section-wrapper {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: #131210;
 }
 
 .smart-secure-section-wrapper {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: #121212;
 }
 
