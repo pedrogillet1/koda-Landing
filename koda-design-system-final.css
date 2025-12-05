@@ -316,14 +316,25 @@ input,
 textarea,
 select,
 .form-field input,
-.form-field textarea,
+.form-field textarea {
+  background-color: var(--koda-bg-section) !important;
+  border: 1px solid var(--koda-border-subtle) !important;
+  color: var(--koda-text-primary) !important;
+  border-radius: 50px !important;
+  font-family: var(--font-family) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.form-field textarea {
+  border-radius: 24px !important;
+}
+
 .newsletter-form input {
   background-color: transparent !important;
   border: none !important;
   border-bottom: 1px solid var(--koda-border-subtle) !important;
-  color: var(--koda-text-primary) !important;
   border-radius: 0 !important;
-  font-family: var(--font-family) !important;
+  box-shadow: none !important;
 }
 
 input::placeholder,
