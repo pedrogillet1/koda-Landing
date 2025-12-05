@@ -144,6 +144,13 @@ img {
 .logo {
     display: flex;
     align-items: center;
+    height: 100%;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .content-icon {
@@ -164,6 +171,7 @@ img {
     font-size: 16px;
     font-weight: 500;
     transition: all 0.3s ease;
+    line-height: 1;
     padding: 12px 24px;
     border-radius: 100px;
 }
