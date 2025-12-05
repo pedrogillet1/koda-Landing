@@ -30,9 +30,10 @@ img {
     width: 100%;
     position: relative;
     background-color: #131210;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
 }
 
 /* ===================================
@@ -817,4 +818,12 @@ img {
         height: 48px;
         font-size: 13px;
     }
+}
+
+/* ===== FULL-WIDTH SECTION WRAPPERS ===== */
+/* These wrappers ensure backgrounds extend full viewport width on screens >1440px */
+
+.contact-section-wrapper {
+    width: 100%;
+    background-color: #131210;
 }

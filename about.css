@@ -29,6 +29,10 @@ img {
 .about-page {
     width: 100%;
     background-color: #131210;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -1376,4 +1380,37 @@ html[lang="es"] .hero-title-koda {
     .decorative-elements {
         opacity: 0.3;
     }
+}
+
+/* ===== FULL-WIDTH SECTION WRAPPERS ===== */
+/* These wrappers ensure backgrounds extend full viewport width on screens >1440px */
+
+.hero-section-wrapper {
+    width: 100%;
+    background: linear-gradient(180deg, #131210 0%, #131210 100%);
+}
+
+.since-section-wrapper {
+    width: 100%;
+    background-color: #131210;
+}
+
+.mockup-section-wrapper {
+    width: 100%;
+    background-color: #131210;
+}
+
+.mvv-section-wrapper {
+    width: 100%;
+    background-color: #131210;
+}
+
+.why-koda-section-wrapper {
+    width: 100%;
+    background-color: #131210;
+}
+
+.join-section-wrapper {
+    width: 100%;
+    background-color: #121212;
 }

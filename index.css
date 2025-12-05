@@ -29,10 +29,10 @@ img {
     width: 100%;
     position: relative;
     background-color: #131210;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     text-align: left;
     font-size: 48px;
     color: rgba(255, 255, 255, 0.6);
@@ -170,7 +170,7 @@ img {
     backdrop-filter: blur(10px);
     border-radius: 100px;
     width: 90%;
-    max-width: 1360px;
+    max-width: 1440px;
     height: 80px;
     box-sizing: border-box;
     z-index: 100;
@@ -387,9 +387,9 @@ img {
 .hero-content h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
-    font-size: 62px;
+    font-size: clamp(32px, 5vw, 62px);
     color: #ffffff;
-    max-width: 1000px;
+    max-width: 1440px;
     line-height: 1.25;
     margin: 0;
 }
@@ -397,7 +397,7 @@ img {
 /* Laptop Mockup Image Container */
 .hero-image-container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1440px;
     flex-shrink: 1; /* Allows the image to shrink if needed */
     line-height: 0;
 }
@@ -418,16 +418,16 @@ img {
 }
 
 .workflow-section h2 {
-    font-size: 48px;
+    font-size: clamp(28px, 4vw, 48px);
     line-height: 110%;
     font-weight: 500;
     color: #ffffff;
-    margin-bottom: 60px;
+    margin-bottom: clamp(40px, 6vh, 60px);
     text-align: left;
-    max-width: 1400px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 60px;
+    padding: 0 clamp(16px, 3vw, 60px);
 }
 
 .workflow-subtitle {
@@ -436,11 +436,17 @@ img {
 
 .workflow-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px; /* Increased gap for more space between cards */
-    max-width: 1400px; /* Larger container width to spread cards wider */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(24px, 4vw, 60px); /* Fluid gap for responsive spacing */
+    max-width: 1440px; /* Unified container width */
     margin: 0 auto; /* Centers the grid horizontally */
-    padding: 0 60px; /* Side padding */
+    padding: 0 clamp(16px, 3vw, 60px); /* Responsive side padding */
+}
+
+@media (min-width: 1024px) {
+    .workflow-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .workflow-card {
@@ -1038,11 +1044,17 @@ img {
 /* Three-Column Grid Styling */
 .chaos-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     align-items: center;
-    gap: 40px;
-    max-width: 1400px;
+    gap: clamp(24px, 4vw, 60px);
+    max-width: 1440px;
     margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .chaos-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 /* Side Text Styling */
@@ -1366,14 +1378,16 @@ img {
 
 .macbook-mockup {
     width: 140%;
-    max-width: 1400px;
+    max-width: 1440px;
     height: auto;
+    object-fit: contain;
 }
 
 /* Make Smart Secure section MacBook bigger */
 .smart-secure-section .macbook-mockup {
-    width: 900%;
-    max-width: 9000px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* Right Side: Content Container */
@@ -1478,8 +1492,10 @@ img {
     position: absolute;
     top: calc(50% - 407px);
     left: 80px;
-    width: 1280px;
+    width: 100%;
+    max-width: 1440px;
     height: 814px;
+    margin: 0 auto;
 }
 
 .elements2 {
@@ -1543,12 +1559,14 @@ img {
     position: absolute;
     top: calc(50% - 435px);
     left: calc(50% - 640px);
-    width: 1280px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 48px;
+    margin: 0 auto;
 }
 
 .text63 {
@@ -1852,13 +1870,15 @@ img {
 }
 
 .box13 {
-    width: 1280px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 48px;
     z-index: 1;
+    margin: 0 auto;
 }
 
 .text123 {
@@ -2227,7 +2247,7 @@ img {
     display: flex;
     justify-content: space-between;
     gap: 80px;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto 40px auto;
 }
 
@@ -3779,6 +3799,34 @@ img {
         background: white;
         color: black;
     }
+}
+
+/* ===== FULL-WIDTH SECTION WRAPPERS ===== */
+/* These wrappers ensure backgrounds extend full viewport width on screens >1440px */
+
+.hero-section-wrapper {
+    width: 100%;
+    background: linear-gradient(180deg, #131210 0%, #131210 100%);
+}
+
+.workflow-section-wrapper {
+    width: 100%;
+    background-color: #131210;
+}
+
+.chaos-section-wrapper {
+    width: 100%;
+    background-color: #131210;
+}
+
+.how-it-works-section-wrapper {
+    width: 100%;
+    background-color: #131210;
+}
+
+.smart-secure-section-wrapper {
+    width: 100%;
+    background-color: #121212;
 }
 
 /* ===== REDUCED MOTION (Accessibility) ===== */

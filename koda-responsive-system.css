@@ -28,40 +28,10 @@
 /* ============================================
    2. FLUID CONTAINERS
    ============================================ */
-.main-nav,
-.hero-section,
-.workflow-section,
-.chaos-section,
-.how-it-works-section,
-.mockup-section,
-.since-section,
-.mvv-section,
-.contact-section,
-.privacy-content-section,
-.terms-content-section,
-.smart-secure-section {
-    width: 100% !important;
-    max-width: 1440px !important;
-    margin-inline: auto !important;
-    padding-left: max(var(--space-5), var(--safe-area-left)) !important;
-    padding-right: max(var(--space-5), var(--safe-area-right)) !important;
-}
-
-/* Navigation specific width */
-.main-nav {
-    width: 90% !important;
-    max-width: 1360px !important;
-}
-
-/* Container base rules */
-.container,
-.content-wrapper,
-.section-wrapper {
-    width: 100%;
-    max-width: 1440px;
-    margin-inline: auto;
-    padding-inline: var(--space-5);
-}
+/* REMOVED - Let index.css control layout */
+/* These rules were conflicting with index.css specificity */
+/* The !important declarations were causing layout issues */
+/* Now using unified 1440px max-width system in index.css */
 
 /* ============================================
    3. RESPONSIVE IMAGES
