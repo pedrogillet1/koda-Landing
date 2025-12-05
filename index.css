@@ -52,7 +52,7 @@ img {
     justify-content: flex-start; /* Aligns content to the top */
 
     /* --- Spacing --- */
-    padding: 160px 40px 40px 40px; /* Added bottom padding */
+    padding: 160px 40px 20px 40px; /* Reduced bottom padding */
     box-sizing: border-box;
 
     /* --- CRITICAL FIX: Prevent overflow --- */
@@ -405,7 +405,7 @@ img {
 
 /* Workflow Section */
 .workflow-section {
-    padding: 80px 40px;
+    padding: 40px 40px 80px 40px;
 
     width: 100%;
     max-width: 1440px;
@@ -2925,9 +2925,9 @@ img {
 
     .mobile-menu-toggle .menu-line {
         display: block;
-        width: 20px;
+        width: 24px;
         height: 2px;
-        background: white;
+        background: #000000;
         transition: all 0.3s ease;
         border-radius: 1px;
     }
@@ -3827,11 +3827,7 @@ img {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background: linear-gradient(180deg, #131210 0%, #131210 100%);
-    background-image: url("assets/images/1.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
 .workflow-section-wrapper {
