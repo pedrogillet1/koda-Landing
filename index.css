@@ -8,14 +8,12 @@
 html {
     margin: 0;
     padding: 0;
-    overflow-x: clip;
 }
 
 body {
     margin: 0;
     padding: 0;
     line-height: normal;
-    overflow-x: clip;
     min-width: 320px;
 }
 
@@ -28,7 +26,6 @@ img {
 .homepage {
     width: 100%;
     background-color: #131210;
-    overflow-x: clip;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -3341,20 +3338,41 @@ img {
     }
 
     /* How It Works Section - Mobile */
+    .how-it-works-section {
+        background-color: #131210 !important;
+        padding: 64px 12px !important;
+    }
+
+    .how-it-works-section .section-header {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 48px !important;
+    }
+
     .how-it-works-section .section-header h2 {
         font-size: 28px !important;
         line-height: 30.8px !important;
-        font-weight: 500;
-        text-align: center;
-        font-family: 'Plus Jakarta Sans';
+        font-weight: 500 !important;
+        text-align: center !important;
+        font-family: 'Plus Jakarta Sans' !important;
+        width: 100% !important;
+        margin: 0 !important;
     }
 
-    .how-it-works-section .how-subtitle {
-        color: rgba(255, 255, 255, 0.6) !important;
+    .how-it-works-section .section-header h2 .how-subtitle {
+        color: #000000 !important;
     }
 
     .how-it-works-section .section-header h2 span:not(.how-subtitle) {
-        color: white !important;
+        color: #000000 !important;
+    }
+
+    .how-it-works-section .intro-text {
+        text-align: center !important;
+        width: 100% !important;
     }
 
     .how-it-works-section .text38 {
