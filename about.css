@@ -1199,7 +1199,7 @@ html[lang="es"] .hero-title-koda {
         position: relative;
         left: 0;
         top: 0;
-        font-size: 56px;
+        font-size: 48px;
         line-height: 1.1;
         text-align: center;
         margin-top: 40px;
@@ -1207,6 +1207,21 @@ html[lang="es"] .hero-title-koda {
 
     .hero-title-koda {
         margin-top: 16px;
+        margin-bottom: 40px;
+    }
+
+    /* Hero Image Mobile - Position below titles */
+    .hero-section .hero-xy-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        z-index: 1;
     }
 
     /* Since Section Mobile */
