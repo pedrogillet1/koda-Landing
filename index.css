@@ -1372,8 +1372,8 @@ img {
 
 /* Make Smart Secure section MacBook bigger */
 .smart-secure-section .macbook-mockup {
-    width: 400%;
-    max-width: 4000px;
+    width: 750%;
+    max-width: 7500px;
 }
 
 /* Right Side: Content Container */
@@ -2170,16 +2170,17 @@ img {
 
 .cta-image-container {
     position: relative;
-    width: 800px;
-    height: 720px;
+    width: 650px;
+    height: 580px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -30px;
 }
 
 .visula-icon {
-    width: 180%;
-    height: 180%;
+    width: 130%;
+    height: 130%;
     position: relative;
     object-fit: contain;
     z-index: 1;
@@ -3484,8 +3485,9 @@ img {
 
     .smart-secure-mobile-new .image-container {
         align-self: stretch;
-        height: 650px;
+        height: 450px;
         position: relative;
+        margin-top: -20px;
     }
 
     /* Chaos Section - Mobile (getkoda.io style) */
