@@ -203,6 +203,15 @@ img {
     opacity: 1;
 }
 
+/* Desktop/Mobile Toggle Classes */
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
 /* Contact Header */
 .contact-header {
     position: relative;

@@ -202,6 +202,15 @@ img {
     opacity: 1;
 }
 
+/* Desktop/Mobile Toggle Classes */
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
 /* Terms Header */
 .terms-header {
     position: relative;
