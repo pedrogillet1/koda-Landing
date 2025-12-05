@@ -52,7 +52,7 @@ img {
     justify-content: flex-start; /* Aligns content to the top */
 
     /* --- Spacing --- */
-    padding: 160px 40px 20px 40px; /* Reduced bottom padding */
+    padding: 160px 40px 0 40px; /* Minimal bottom padding */
     box-sizing: border-box;
 
     /* --- CRITICAL FIX: Prevent overflow --- */
