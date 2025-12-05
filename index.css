@@ -3342,6 +3342,22 @@ img {
     }
 
     /* How It Works Section - Mobile */
+    .how-it-works-section .section-header h2 {
+        font-size: 28px !important;
+        line-height: 30.8px !important;
+        font-weight: 500;
+        text-align: center;
+        font-family: 'Plus Jakarta Sans';
+    }
+
+    .how-it-works-section .how-subtitle {
+        color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    .how-it-works-section .section-header h2 span:not(.how-subtitle) {
+        color: white !important;
+    }
+
     .how-it-works-section .text38 {
         display: none !important;
     }
@@ -3391,7 +3407,7 @@ img {
         display: block !important;
         text-align: center !important;
         font-size: 48px !important;
-        color: rgba(255, 255, 255, 0.5) !important;
+        color: #414241 !important;
         margin: 40px auto !important;
         padding: 20px 0 !important;
         line-height: 1 !important;
@@ -3406,7 +3422,7 @@ img {
         display: block !important;
         text-align: center !important;
         font-size: 48px !important;
-        color: rgba(255, 255, 255, 0.5) !important;
+        color: #414241 !important;
         margin: 40px auto !important;
         padding: 20px 0 !important;
         line-height: 1 !important;
