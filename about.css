@@ -1372,7 +1372,7 @@ html[lang="es"] .hero-title-koda {
         left: auto;
         right: 20px;
         top: auto;
-        bottom: 5px;
+        bottom: -30px;
         opacity: 0.3;
         margin: 0;
     }
@@ -1465,7 +1465,7 @@ html[lang="es"] .hero-title-koda {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: #131210;
+    background-color: #F5F5F5;
 }
 
 .join-section-wrapper {
@@ -1475,5 +1475,5 @@ html[lang="es"] .hero-title-koda {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    background-color: #121212;
+    background-color: #F5F5F5;
 }
