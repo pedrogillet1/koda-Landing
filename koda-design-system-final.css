@@ -311,11 +311,19 @@ label,
   color: var(--koda-text-secondary) !important;
 }
 
-input,
-textarea,
-select,
 .form-field input,
 .form-field textarea {
+  background-color: var(--koda-bg-section) !important;
+  border: 1px solid var(--koda-border-subtle) !important;
+  color: var(--koda-text-primary) !important;
+  border-radius: 50px !important;
+  font-family: var(--font-family) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+input:not(.newsletter-form input),
+textarea:not(.form-field textarea),
+select {
   background-color: var(--koda-bg-section) !important;
   border: 1px solid var(--koda-border-subtle) !important;
   color: var(--koda-text-primary) !important;
