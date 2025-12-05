@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = 8080;
-const BASE_DIR = '/Users/alvarocamasmie/Downloads/landing';
+const BASE_DIR = '/Users/alvarocamasmie/Downloads/koda-Landing';
 
 const mimeTypes = {
   '.html': 'text/html',

@@ -1,0 +1,439 @@
+/* ============================================
+   KODA LANDING PAGE - HEADER/FOOTER CONSISTENCY
+   Ensures identical header and footer across ALL pages
+   ============================================ */
+
+/* ============================================
+   CONSISTENCY CSS VARIABLES
+   ============================================ */
+:root {
+    /* Spacing */
+    --header-padding-desktop: 16px 40px;
+    --header-padding-mobile: 12px 20px;
+    --footer-padding-desktop: 80px 40px 40px;
+    --footer-padding-mobile: 48px 20px 24px;
+
+    /* Typography */
+    --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --nav-font-size: 15px;
+    --nav-font-weight: 500;
+}
+
+/* ============================================
+   HEADER CONSISTENCY - ALL PAGES
+   ============================================ */
+
+/* Force exact same header on ALL pages */
+body .main-nav,
+.homepage .main-nav,
+.about-page .main-nav,
+.contact-page .main-nav,
+.privacy-page .main-nav,
+.terms-page .main-nav,
+.waitlist-page .main-nav {
+    /* Position */
+    position: fixed !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 100 !important;
+
+    /* Size */
+    width: 90% !important;
+    max-width: 1360px !important;
+    height: 80px !important;
+
+    /* Layout */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    /* Appearance - DO NOT override colors */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-radius: 100px !important;
+
+    /* Spacing */
+    padding: var(--header-padding-desktop) !important;
+    box-sizing: border-box !important;
+}
+
+/* Logo consistency - DO NOT override size */
+body .main-nav .logo,
+body .main-nav .logo a {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Navigation links consistency */
+body .main-nav .nav-links {
+    display: flex !important;
+    gap: 32px !important;
+    align-items: center !important;
+}
+
+body .main-nav .nav-links a {
+    font-family: var(--font-family) !important;
+    font-size: var(--nav-font-size) !important;
+    font-weight: var(--nav-font-weight) !important;
+    text-decoration: none !important;
+    transition: opacity 0.2s ease !important;
+}
+
+body .main-nav .nav-links a:hover {
+    opacity: 0.8 !important;
+}
+
+/* CTA buttons consistency */
+body .main-nav .nav-cta {
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
+}
+
+body .main-nav .nav-cta .btn,
+body .main-nav .nav-cta button,
+body .main-nav .nav-cta a.btn {
+    font-family: var(--font-family) !important;
+    font-size: var(--nav-font-size) !important;
+    font-weight: 600 !important;
+    padding: 10px 24px !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Language switcher consistency */
+body .main-nav .language-dropdown {
+    font-family: var(--font-family) !important;
+    font-size: var(--nav-font-size) !important;
+    font-weight: var(--nav-font-weight) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+}
+
+/* ============================================
+   MOBILE HEADER CONSISTENCY
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Mobile header adjustments - same across all pages */
+    body .main-nav {
+        width: 100% !important;
+        border-radius: 0 0 24px 24px !important;
+        padding: var(--header-padding-mobile) !important;
+        top: 0 !important;
+        height: auto !important;
+        min-height: 64px !important;
+    }
+
+    /* Hide desktop navigation on mobile - show hamburger */
+    body .main-nav .nav-links {
+        display: none !important;
+    }
+
+    body .main-nav .nav-cta {
+        display: none !important;
+    }
+
+    /* Ensure hamburger menu button is visible and clickable */
+    body .main-nav .hamburger-menu,
+    body .main-nav .mobile-menu-toggle,
+    body .main-nav .menu-toggle {
+        display: flex !important;
+        width: 44px !important;
+        height: 44px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 8px !important;
+        margin: 0 !important;
+    }
+
+    /* Hamburger icon lines */
+    body .main-nav .hamburger-menu span,
+    body .main-nav .mobile-menu-toggle span,
+    body .main-nav .menu-toggle span {
+        display: block !important;
+        width: 24px !important;
+        height: 2px !important;
+        margin: 4px 0 !important;
+    }
+
+    /* Mobile logo - use original sizes from each page */
+}
+
+/* ============================================
+   MOBILE MENU CONSISTENCY
+   ============================================ */
+
+/* Mobile menu overlay - same across all pages */
+body .mobile-menu,
+body .side-menu {
+    position: fixed !important;
+    inset: 0 !important;
+    backdrop-filter: blur(40px) !important;
+    -webkit-backdrop-filter: blur(40px) !important;
+    z-index: 9999 !important;
+    display: none !important;
+    flex-direction: column !important;
+    padding: calc(80px + env(safe-area-inset-top, 0px)) 24px 24px !important;
+    gap: 8px !important;
+}
+
+body .mobile-menu.open,
+body .side-menu.open {
+    display: flex !important;
+}
+
+/* Mobile menu links consistency */
+body .mobile-menu a,
+body .side-menu a {
+    font-family: var(--font-family) !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    padding: 16px 20px !important;
+    border-radius: 12px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Mobile menu CTA buttons */
+body .mobile-menu .btn,
+body .side-menu .btn {
+    width: 100% !important;
+    font-family: var(--font-family) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 14px 24px !important;
+    border-radius: 12px !important;
+    min-height: 48px !important;
+    margin-top: 24px !important;
+}
+
+/* ============================================
+   FOOTER CONSISTENCY - ALL PAGES
+   ============================================ */
+
+/* Force exact same footer on ALL pages */
+body .site-footer,
+.homepage .site-footer,
+.about-page .site-footer,
+.contact-page .site-footer,
+.privacy-page .site-footer,
+.terms-page .site-footer,
+.waitlist-page .site-footer {
+    /* Spacing */
+    padding: var(--footer-padding-desktop) !important;
+    padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)) !important;
+
+    /* Layout */
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Footer main container */
+body .site-footer .footer-main {
+    max-width: 1360px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr 2fr !important;
+    gap: 80px !important;
+}
+
+/* Footer left section (logo + description) */
+body .site-footer .footer-left {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+}
+
+/* Footer logo - DO NOT override size, use original */
+body .site-footer .footer-logo {
+    width: auto !important;
+}
+
+body .site-footer .footer-description {
+    font-family: var(--font-family) !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    max-width: 300px !important;
+}
+
+/* Footer navigation */
+body .site-footer .footer-nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+}
+
+body .site-footer .footer-nav > div {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+}
+
+/* Footer headings */
+body .site-footer .footer-nav h4,
+body .site-footer .footer-nav .footer-heading {
+    font-family: var(--font-family) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 0 8px 0 !important;
+}
+
+/* Footer links */
+body .site-footer .footer-nav a {
+    font-family: var(--font-family) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+/* Footer social icons */
+body .site-footer .social-links {
+    display: flex !important;
+    gap: 12px !important;
+    margin-top: 16px !important;
+}
+
+body .site-footer .social-links a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    transition: all 0.2s ease !important;
+}
+
+body .site-footer .social-links img,
+body .site-footer .social-links svg {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Footer copyright */
+body .site-footer .footer-copyright {
+    margin-top: 48px !important;
+    padding-top: 24px !important;
+    text-align: center !important;
+    font-family: var(--font-family) !important;
+    font-size: 14px !important;
+    max-width: 1360px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ============================================
+   MOBILE FOOTER CONSISTENCY
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Mobile footer adjustments - same across all pages */
+    body .site-footer {
+        padding: var(--footer-padding-mobile) !important;
+        padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    /* Footer stacks vertically */
+    body .site-footer .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    /* Footer navigation stacks */
+    body .site-footer .footer-nav {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    /* Footer description full width */
+    body .site-footer .footer-description {
+        max-width: 100% !important;
+    }
+}
+
+/* ============================================
+   TABLET CONSISTENCY (768px - 1023px)
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    /* Tablet header */
+    body .main-nav {
+        width: 95% !important;
+    }
+
+    /* Tablet footer */
+    body .site-footer .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 60px !important;
+    }
+
+    body .site-footer .footer-nav {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ============================================
+   PRINT CONSISTENCY
+   ============================================ */
+
+@media print {
+    body .main-nav {
+        display: none !important;
+    }
+
+    body .site-footer .footer-nav {
+        display: none !important;
+    }
+
+    body .site-footer .social-links {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY CONSISTENCY
+   ============================================ */
+
+/* Focus states - same across all pages */
+body .main-nav a:focus,
+body .main-nav button:focus,
+body .site-footer a:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5) !important;
+    outline-offset: 2px !important;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    body .main-nav *,
+    body .site-footer *,
+    body .mobile-menu * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE CONSISTENCY
+   ============================================ */
+
+@media (prefers-contrast: high) {
+    body .main-nav {
+        border: 2px solid currentColor !important;
+    }
+
+    body .site-footer {
+        border-top: 2px solid currentColor !important;
+    }
+}

@@ -1349,19 +1349,19 @@ img {
 .smart-secure-section {
     position: relative;
     background-color: #121212;
-    padding: 100px 60px;
+    padding: 100px 40px;
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 40px;
     overflow: visible;
 }
 
 /* Left Side: MacBook Mockup Container */
 .mockup-container {
-    flex: 0 0 45%;
+    flex: 0 0 55%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .macbook-mockup {
@@ -1372,14 +1372,15 @@ img {
 
 /* Make Smart Secure section MacBook bigger */
 .smart-secure-section .macbook-mockup {
-    width: 750%;
-    max-width: 7500px;
+    width: 900%;
+    max-width: 9000px;
 }
 
 /* Right Side: Content Container */
 .content-container {
     flex: 1;
     color: #ffffff;
+    margin-left: -30px;
 }
 
 .smart-secure-section .section-header {
@@ -1422,20 +1423,20 @@ img {
 
 /* Circular Icon Background with SVG Icons */
 .icon-circle {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: rgba(42, 42, 42, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .icon-circle img {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     filter: brightness(0) saturate(100%) invert(26%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(91%);
 }
 
