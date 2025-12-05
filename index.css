@@ -38,7 +38,7 @@ img {
 /* Main Hero Section Container */
 .hero-section {
     position: relative;
-    height: 100vh; /* Reduced height for tighter layout */
+    height: 110vh; /* Balanced height with comfortable spacing */
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
