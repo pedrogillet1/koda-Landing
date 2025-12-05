@@ -318,10 +318,11 @@ select,
 .form-field input,
 .form-field textarea,
 .newsletter-form input {
-  background-color: var(--koda-bg-section) !important;
-  border: 1px solid var(--koda-border-subtle) !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--koda-border-subtle) !important;
   color: var(--koda-text-primary) !important;
-  border-radius: 8px !important;
+  border-radius: 0 !important;
   font-family: var(--font-family) !important;
 }
 
