@@ -82,6 +82,7 @@ body {
   max-width: none !important;
   height: auto !important;
   object-fit: contain !important;
+  filter: brightness(0.75) contrast(1.15) saturate(0.9) !important;
 }
 
 /* ----------------------------------------------------------------------------
