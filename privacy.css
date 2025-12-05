@@ -28,7 +28,6 @@ img {
 /* Privacy Page Container */
 .privacy-page {
     width: 100%;
-    position: relative;
     background-color: #131210;
     overflow-x: clip;
     display: flex;

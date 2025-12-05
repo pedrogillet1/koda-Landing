@@ -27,7 +27,6 @@ img {
 /* Homepage container */
 .homepage {
     width: 100%;
-    position: relative;
     background-color: #131210;
     overflow-x: clip;
     display: flex;
@@ -3461,7 +3460,7 @@ img {
         align-items: center;
         gap: 48px;
         display: inline-flex;
-        background-color: #F5F5F5;
+        background-color: #FFFFFF;
     }
 
     .smart-secure-mobile-new .header-content {

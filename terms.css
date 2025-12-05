@@ -28,7 +28,6 @@ img {
 /* Terms Page Container */
 .terms-page {
     width: 100%;
-    position: relative;
     background-color: #131210;
     overflow-x: clip;
     display: flex;
