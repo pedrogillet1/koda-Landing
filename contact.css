@@ -134,7 +134,7 @@ img {
     backdrop-filter: blur(10px);
     border-radius: 100px;
     width: 90%;
-    max-width: 1360px;
+    max-width: 1440px;
     height: 80px;
     box-sizing: border-box;
     z-index: 100;
@@ -176,25 +176,23 @@ img {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.demo-button {
-    background-color: #ffffff !important;
-    color: #131313 !important;
-    width: 166px;
-    height: 52px;
-    padding: 0 24px !important;
+.nav-links .demo-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 24px;
     border-radius: 100px;
     font-weight: 600;
+    line-height: 1;
     text-decoration: none;
     transition: background-color 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
 }
 
-.demo-button:hover {
-    background-color: #e0e0e0 !important;
-    opacity: 1 !important;
+.nav-links .demo-button:hover {
+    background-color: #e0e0e0;
+    opacity: 1;
 }
 
 /* Contact Header */
