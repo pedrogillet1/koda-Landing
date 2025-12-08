@@ -68,12 +68,12 @@ body {
   background-color: #F5F5F5 !important;
 }
 
-/* Hero image - full width */
+/* Hero image - reduced size */
 .hero-image-container {
-  width: 100vw !important;
-  max-width: none !important;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
+  width: 85vw !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   margin-bottom: 0 !important;
 }
 
