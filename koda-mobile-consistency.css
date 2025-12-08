@@ -223,7 +223,7 @@ body .main-nav .language-dropdown {
    MOBILE MENU CONSISTENCY
    ============================================ */
 
-/* Mobile menu dropdown - appears BELOW header */
+/* Mobile menu dropdown - looks like header expanded downward */
 body .mobile-menu,
 body .side-menu {
     position: fixed !important;
@@ -232,8 +232,11 @@ body .side-menu {
     right: 0 !important;
     bottom: auto !important;
     max-height: calc(100vh - 64px) !important;
-    backdrop-filter: blur(40px) !important;
-    -webkit-backdrop-filter: blur(40px) !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
     z-index: 9999 !important;
     display: none !important;
     flex-direction: column !important;
@@ -262,6 +265,9 @@ body .side-menu a {
     display: flex !important;
     align-items: center !important;
     transition: all 0.2s ease !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    color: #131313 !important;
 }
 
 /* Mobile menu CTA buttons */
@@ -286,6 +292,24 @@ body .side-menu a.mobile-cta-btn {
     padding: 16px 32px !important;
     background: #131313 !important;
     color: white !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Hamburger to X animation - FORCE with !important */
+body .mobile-menu-toggle.active .menu-line:nth-child(1),
+body .mobile-menu-toggle.active.menu-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg) !important;
+}
+
+body .mobile-menu-toggle.active .menu-line:nth-child(2),
+body .mobile-menu-toggle.active.menu-line:nth-child(2) {
+    opacity: 0 !important;
+}
+
+body .mobile-menu-toggle.active .menu-line:nth-child(3),
+body .mobile-menu-toggle.active.menu-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg) !important;
 }
 
 /* ============================================
