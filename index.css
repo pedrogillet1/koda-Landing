@@ -3678,6 +3678,12 @@ img {
         display: block !important;
     }
 
+    /* Mobile menu needs flex layout when active */
+    #mobile-menu.mobile-only.active,
+    .mobile-menu.mobile-only.active {
+        display: flex !important;
+    }
+
     /* Safe Areas (iOS) */
     .hero-section,
     header,
