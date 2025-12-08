@@ -233,30 +233,18 @@ MOBILE MEDIA QUERY - MAX 767PX
     ============================================
     */
 
-    html body.homepage header .main-nav #mobile-menu-btn,
-    html body.about-page header .main-nav #mobile-menu-btn,
-    html body.contact-page header .main-nav #mobile-menu-btn,
-    html body.privacy-page header .main-nav #mobile-menu-btn,
-    html body.terms-page header .main-nav #mobile-menu-btn,
-    html body.waitlist-page header .main-nav #mobile-menu-btn,
-    html body.homepage header .main-nav .mobile-menu-toggle,
-    html body.about-page header .main-nav .mobile-menu-toggle,
-    html body.contact-page header .main-nav .mobile-menu-toggle,
-    html body.privacy-page header .main-nav .mobile-menu-toggle,
-    html body.terms-page header .main-nav .mobile-menu-toggle,
-    html body.waitlist-page header .main-nav .mobile-menu-toggle,
-    html body.homepage header .main-nav .hamburger-menu,
-    html body.about-page header .main-nav .hamburger-menu,
-    html body.contact-page header .main-nav .hamburger-menu,
-    html body.privacy-page header .main-nav .hamburger-menu,
-    html body.terms-page header .main-nav .hamburger-menu,
-    html body.waitlist-page header .main-nav .hamburger-menu,
-    html body.homepage header .main-nav .menu-toggle,
-    html body.about-page header .main-nav .menu-toggle,
-    html body.contact-page header .main-nav .menu-toggle,
-    html body.privacy-page header .main-nav .menu-toggle,
-    html body.terms-page header .main-nav .menu-toggle,
-    html body.waitlist-page header .main-nav .menu-toggle {
+    html body header .main-nav #mobile-menu-btn,
+    html body header .main-nav .mobile-menu-toggle,
+    html body header .main-nav .hamburger-menu,
+    html body header .main-nav .menu-toggle,
+    header .main-nav #mobile-menu-btn,
+    header .main-nav .mobile-menu-toggle,
+    header .main-nav .hamburger-menu,
+    header .main-nav .menu-toggle,
+    .main-nav #mobile-menu-btn,
+    .main-nav .mobile-menu-toggle,
+    .main-nav .hamburger-menu,
+    .main-nav .menu-toggle {
         /* Layout */
         display: flex !important;
         flex-direction: column !important;
@@ -306,30 +294,18 @@ MOBILE MEDIA QUERY - MAX 767PX
     ============================================
     */
 
-    html body.homepage header .main-nav #mobile-menu-btn .menu-line,
-    html body.about-page header .main-nav #mobile-menu-btn .menu-line,
-    html body.contact-page header .main-nav #mobile-menu-btn .menu-line,
-    html body.privacy-page header .main-nav #mobile-menu-btn .menu-line,
-    html body.terms-page header .main-nav #mobile-menu-btn .menu-line,
-    html body.waitlist-page header .main-nav #mobile-menu-btn .menu-line,
-    html body.homepage header .main-nav .mobile-menu-toggle .menu-line,
-    html body.about-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body.contact-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body.privacy-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body.terms-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body.waitlist-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body.homepage header .main-nav .hamburger-menu .menu-line,
-    html body.about-page header .main-nav .hamburger-menu .menu-line,
-    html body.contact-page header .main-nav .hamburger-menu .menu-line,
-    html body.privacy-page header .main-nav .hamburger-menu .menu-line,
-    html body.terms-page header .main-nav .hamburger-menu .menu-line,
-    html body.waitlist-page header .main-nav .hamburger-menu .menu-line,
-    html body.homepage header .main-nav .menu-toggle .menu-line,
-    html body.about-page header .main-nav .menu-toggle .menu-line,
-    html body.contact-page header .main-nav .menu-toggle .menu-line,
-    html body.privacy-page header .main-nav .menu-toggle .menu-line,
-    html body.terms-page header .main-nav .menu-toggle .menu-line,
-    html body.waitlist-page header .main-nav .menu-toggle .menu-line {
+    html body header .main-nav #mobile-menu-btn .menu-line,
+    html body header .main-nav .mobile-menu-toggle .menu-line,
+    html body header .main-nav .hamburger-menu .menu-line,
+    html body header .main-nav .menu-toggle .menu-line,
+    header .main-nav #mobile-menu-btn .menu-line,
+    header .main-nav .mobile-menu-toggle .menu-line,
+    header .main-nav .hamburger-menu .menu-line,
+    header .main-nav .menu-toggle .menu-line,
+    .main-nav #mobile-menu-btn .menu-line,
+    .main-nav .mobile-menu-toggle .menu-line,
+    .main-nav .hamburger-menu .menu-line,
+    .main-nav .menu-toggle .menu-line {
         /* Visibility */
         display: block !important;
         visibility: visible !important;
