@@ -3035,18 +3035,20 @@ img {
 
     .mobile-lang-dropdown {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
         text-align: left;
         padding-left: 0 !important;
         padding-right: 0 !important;
+        gap: 8px;
     }
 
     .mobile-lang-dropdown .lang-right {
         display: flex;
         align-items: center;
         gap: 8px;
+        margin-left: auto;
     }
 
     .mobile-lang-dropdown .lang-flag {
@@ -3109,16 +3111,16 @@ img {
     .mobile-cta-btn {
         display: block;
         width: 100%;
-        padding: 13px 20px;
+        padding: 14px 24px;
         background: white;
         color: #131313;
         text-decoration: none;
         text-align: center;
-        border-radius: 14px;
+        border-radius: 28px;
         font-size: 16px;
         font-weight: 600;
         transition: all 0.3s ease;
-        margin-top: auto; /* Push to bottom */
+        margin-top: 20px;
         line-height: 1.5;
     }
 
