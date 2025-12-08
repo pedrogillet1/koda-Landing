@@ -399,43 +399,33 @@ MOBILE MEDIA QUERY - MAX 767PX
 
     /*
     ============================================
-    10. MOBILE MENU OVERLAY
+    10. MOBILE MENU DROPDOWN - EXTENDS BELOW HEADER
     ============================================
     */
 
-    html body.homepage #mobile-menu,
-    html body.about-page #mobile-menu,
-    html body.contact-page #mobile-menu,
-    html body.privacy-page #mobile-menu,
-    html body.terms-page #mobile-menu,
-    html body.waitlist-page #mobile-menu,
-    html body.homepage .mobile-menu,
-    html body.about-page .mobile-menu,
-    html body.contact-page .mobile-menu,
-    html body.privacy-page .mobile-menu,
-    html body.terms-page .mobile-menu,
-    html body.waitlist-page .mobile-menu,
-    html body.homepage .side-menu,
-    html body.about-page .side-menu,
-    html body.contact-page .side-menu,
-    html body.privacy-page .side-menu,
-    html body.terms-page .side-menu,
-    html body.waitlist-page .side-menu {
+    html body #mobile-menu,
+    html body .mobile-menu,
+    html body .side-menu,
+    #mobile-menu,
+    .mobile-menu,
+    .side-menu {
         position: fixed !important;
-        inset: 0 !important;
-        top: 0 !important;
+        top: 64px !important;
         left: 0 !important;
         right: 0 !important;
-        bottom: 0 !important;
+        bottom: auto !important;
         width: 100% !important;
-        height: 100% !important;
+        max-height: calc(100vh - 64px) !important;
+        height: auto !important;
         background: rgba(255, 255, 255, 0.98) !important;
         backdrop-filter: blur(20px) !important;
         -webkit-backdrop-filter: blur(20px) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
         z-index: 9999 !important;
         display: none !important;
         flex-direction: column !important;
-        padding: calc(80px + env(safe-area-inset-top, 0px)) 24px 24px !important;
+        padding: 24px !important;
         gap: 8px !important;
         overflow-y: auto !important;
     }
@@ -575,6 +565,45 @@ MOBILE MEDIA QUERY - MAX 768PX (FOR CONSISTENCY)
     html body.terms-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
     html body.waitlist-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    /* Mobile menu dropdown - 768px breakpoint */
+    html body #mobile-menu,
+    html body .mobile-menu,
+    html body .side-menu,
+    #mobile-menu,
+    .mobile-menu,
+    .side-menu {
+        position: fixed !important;
+        top: 64px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-height: calc(100vh - 64px) !important;
+        height: auto !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+        z-index: 9999 !important;
+        display: none !important;
+        flex-direction: column !important;
+        padding: 24px !important;
+        gap: 8px !important;
+        overflow-y: auto !important;
+    }
+
+    #mobile-menu.open,
+    #mobile-menu.active,
+    .mobile-menu.open,
+    .mobile-menu.active,
+    .side-menu.open,
+    .side-menu.active {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     /* CRITICAL: Hide desktop navigation on 768px breakpoint too */
