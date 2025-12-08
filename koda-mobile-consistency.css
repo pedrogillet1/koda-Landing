@@ -237,12 +237,13 @@ body .side-menu {
     -webkit-backdrop-filter: blur(20px) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
-    z-index: 9999 !important;
+    z-index: 999999 !important;
     display: none !important;
     flex-direction: column !important;
     padding: 24px !important;
     gap: 8px !important;
     overflow-y: auto !important;
+    isolation: isolate !important;
 }
 
 body .mobile-menu.open,
