@@ -23,29 +23,18 @@
             console.log('Menu toggled, active class:', mobileMenu.classList.contains('active'));
         });
 
-        // Close menu when clicking outside (but not on links inside)
+        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (mobileMenu.classList.contains('active')) {
-                // Check if click is outside menu AND not on a link
-                const isLink = e.target.tagName === 'A' || e.target.closest('a');
+                // Only close if clicking outside the menu
                 if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                     closeMenu();
-                } else if (!isLink && mobileMenu.contains(e.target)) {
-                    // Clicked inside menu but not on a link - close menu
-                    closeMenu();
                 }
+                // Don't close if clicking inside menu - let links work naturally
             }
         });
 
-        // Close menu when clicking on menu links (but not language dropdown)
-        // Let the navigation happen naturally - links will navigate to new pages
-        const menuLinks = mobileMenu.querySelectorAll('.mobile-menu-link:not(.mobile-lang-dropdown)');
-        menuLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                // Don't close menu - let the link navigate naturally
-                // The page will reload and menu will disappear
-            });
-        });
+        // No special handling needed for menu links - they work naturally
 
         // Language dropdown toggle
         const langToggle = document.getElementById('mobile-lang-toggle');
