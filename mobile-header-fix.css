@@ -331,7 +331,62 @@ MOBILE MEDIA QUERY - MAX 767PX
 
     /*
     ============================================
-    9. PAGE HEADER ELEMENTS - CORRECT SPACING
+    9. HAMBURGER TO X ANIMATION - WHEN ACTIVE
+    ============================================
+    */
+
+    /* First line - rotate 45deg and move down */
+    html body header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    html body header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    html body header .main-nav .hamburger-menu.active .menu-line:nth-child(1),
+    html body header .main-nav .menu-toggle.active .menu-line:nth-child(1),
+    header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    header .main-nav .hamburger-menu.active .menu-line:nth-child(1),
+    header .main-nav .menu-toggle.active .menu-line:nth-child(1),
+    .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    .main-nav .hamburger-menu.active .menu-line:nth-child(1),
+    .main-nav .menu-toggle.active .menu-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+
+    /* Second line - hide */
+    html body header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    html body header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    html body header .main-nav .hamburger-menu.active .menu-line:nth-child(2),
+    html body header .main-nav .menu-toggle.active .menu-line:nth-child(2),
+    header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    header .main-nav .hamburger-menu.active .menu-line:nth-child(2),
+    header .main-nav .menu-toggle.active .menu-line:nth-child(2),
+    .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    .main-nav .hamburger-menu.active .menu-line:nth-child(2),
+    .main-nav .menu-toggle.active .menu-line:nth-child(2) {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* Third line - rotate -45deg and move up */
+    html body header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    html body header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    html body header .main-nav .hamburger-menu.active .menu-line:nth-child(3),
+    html body header .main-nav .menu-toggle.active .menu-line:nth-child(3),
+    header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    header .main-nav .hamburger-menu.active .menu-line:nth-child(3),
+    header .main-nav .menu-toggle.active .menu-line:nth-child(3),
+    .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    .main-nav .hamburger-menu.active .menu-line:nth-child(3),
+    .main-nav .menu-toggle.active .menu-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    /*
+    ============================================
+    10. PAGE HEADER ELEMENTS - CORRECT SPACING
     ============================================
     */
 
@@ -473,6 +528,53 @@ MOBILE MEDIA QUERY - MAX 768PX (FOR CONSISTENCY)
         background-color: #000000 !important;
         visibility: visible !important;
         opacity: 1 !important;
+    }
+
+    /* Hamburger to X animation - 768px breakpoint */
+    html body.homepage header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    html body.about-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    html body.contact-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    html body.privacy-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    html body.terms-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    html body.waitlist-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(1),
+    html body.homepage header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    html body.about-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    html body.contact-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    html body.privacy-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    html body.terms-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+    html body.waitlist-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+
+    html body.homepage header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    html body.about-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    html body.contact-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    html body.privacy-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    html body.terms-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    html body.waitlist-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(2),
+    html body.homepage header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    html body.about-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    html body.contact-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    html body.privacy-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    html body.terms-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+    html body.waitlist-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2) {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    html body.homepage header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    html body.about-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    html body.contact-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    html body.privacy-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    html body.terms-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    html body.waitlist-page header .main-nav #mobile-menu-btn.active .menu-line:nth-child(3),
+    html body.homepage header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    html body.about-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    html body.contact-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    html body.privacy-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    html body.terms-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+    html body.waitlist-page header .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
     }
 
     /* CRITICAL: Hide desktop navigation on 768px breakpoint too */
