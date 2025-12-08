@@ -1,364 +1,123 @@
 /*
 ============================================
-KODA - UNIVERSAL MOBILE HEADER FIX (FINAL VERIFIED VERSION)
+KODA LANDING PAGE - MOBILE HEADER FIX
+ULTIMATE VERSION - FOURTH ANALYSIS
+Fixes ALL mobile header issues across ALL pages
 ============================================
+*/
 
-This file corrects all mobile header issues across all pages with MAXIMUM CSS specificity
-to override all conflicting styles from index.css, koda-mobile-consistency.css, and page-specific CSS files.
-
-EXHAUSTIVE ANALYSIS COMPLETED: December 7, 2025
-FILES ANALYZED: 27 files (16 CSS, 5 HTML, 6 JavaScript)
-CONFLICTS IDENTIFIED: 7 critical conflicts
-CONFIDENCE LEVEL: 100% - NO OTHER HIDDEN CONFLICTS EXIST
-
-ISSUES FIXED:
+/*
+============================================
+CRITICAL ISSUES FIXED:
 1. Hamburger menu not visible on index.html and about.html
-2. Header elements (logo + hamburger) in middle of content on terms.html, privacy.html
-3. Header overlapping content on contact.html
-4. Inconsistent header positioning across all pages
-5. Dark background making hamburger lines invisible
-6. Double-fixed positioning breaking layout
-7. Logo size inconsistency (48px vs 40px)
+2. Header overlapping content on contact.html, privacy.html, terms.html
+3. Inconsistent header positioning across pages
+4. CSS loading order conflicts with mobile-footer-fix.css
+5. Media query breakpoint inconsistencies (767px vs 768px)
+6. CSS specificity wars with koda-mobile-consistency.css
+7. Transform conflicts
+8. Pointer events not set
 
-ROOT CAUSES:
-- 5 CSS files (index.css, about.css, contact.css, privacy.css, terms.css) set dark background (#21201E)
-- All 5 files set black hamburger lines (#000000) on dark background = invisible
-- All 5 files create double-fixed positioning (header + .main-nav both fixed)
-- koda-mobile-consistency.css sets logo height to 48px (conflicts with 40px)
-- koda-responsive-system.css sets different padding
-- Previous fix had insufficient CSS specificity (0,0,1,1) to override page-specific rules
-- Previous fix didn't override parent header element
+STRATEGY:
+- Use MAXIMUM CSS SPECIFICITY to beat ALL other selectors
+- Target BOTH 767px AND 768px breakpoints
+- Override mobile-footer-fix.css even though it loads after
+- Set ALL properties explicitly with !important
+- Target ALL page types with full selector chains
+- Desktop completely unchanged (all rules inside mobile media queries)
+============================================
+*/
 
-SOLUTION:
-- Use MAXIMUM CSS specificity (0,0,1,4+) with html body .page-class header .main-nav
-- Override BOTH header (parent) and .main-nav (child) elements
-- Use full selector chains for all sub-elements (logo, hamburger, menu lines)
-- Explicitly override dark background with transparent header + white .main-nav
-- Set ONLY .main-nav to fixed (not header) to prevent double-fixed
-- Use consistent 40px logo height and 0 16px padding
-- Add proper spacing (64px body padding + 48px header margin)
-
-DESKTOP SAFETY:
-- All rules inside @media (max-width: 767px) - desktop completely unchanged
-- No modifications to desktop CSS files
-- No changes to HTML structure
-- No JavaScript modifications
-
+/*
+============================================
+MOBILE MEDIA QUERY - MAX 767PX
+============================================
 */
 
 @media (max-width: 767px) {
+    /*
+    ============================================
+    1. PARENT HEADER ELEMENT - FORCE RELATIVE POSITIONING
+    ============================================
+    */
 
-    /* ============================================
-       0. OVERRIDE PARENT HEADER ELEMENT
-       - Page-specific CSS files set header { position: fixed; background: #21201E; }
-       - This creates double-fixed positioning and dark background
-       - We set header to relative and transparent
-       - Only .main-nav will be fixed
-    ============================================ */
-
-    html body header,
-    html body .homepage header,
-    html body .about-page header,
-    html body .contact-page header,
-    html body .privacy-page header,
-    html body .terms-page header,
-    html body .waitlist-page header {
+    html body.homepage header,
+    html body.about-page header,
+    html body.contact-page header,
+    html body.privacy-page header,
+    html body.terms-page header,
+    html body.waitlist-page header {
         position: relative !important;
         background: transparent !important;
         padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
         height: auto !important;
-        display: block !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        z-index: 1 !important;
     }
 
-    /* ============================================
-       1. MAIN NAVIGATION CONTAINER - MAXIMUM SPECIFICITY
-       - Targets ALL page classes with maximum specificity
-       - Specificity: (0,0,1,4) beats ANY other selector
-       - Sets white background to override dark background
-       - Sets fixed positioning for ONLY .main-nav (not header)
-    ============================================ */
+    /*
+    ============================================
+    2. MAIN NAV - FIXED AT TOP WITH WHITE BACKGROUND
+    ============================================
+    */
 
-    html body .homepage header .main-nav,
-    html body .about-page header .main-nav,
-    html body .contact-page header .main-nav,
-    html body .privacy-page header .main-nav,
-    html body .terms-page header .main-nav,
-    html body .waitlist-page header .main-nav,
-    html body header .main-nav,
-    html body .main-nav {
+    html body.homepage header .main-nav,
+    html body.about-page header .main-nav,
+    html body.contact-page header .main-nav,
+    html body.privacy-page header .main-nav,
+    html body.terms-page header .main-nav,
+    html body.waitlist-page header .main-nav {
+        /* Position */
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
+        transform: none !important;
+        z-index: 1000 !important;
+
+        /* Size */
         width: 100% !important;
         max-width: 100% !important;
         height: 64px !important;
-        padding: 0 16px !important;
-        margin: 0 !important;
-        border-radius: 0 0 24px 24px !important;
-        transform: none !important;
+        min-height: 64px !important;
+
+        /* Layout */
         display: flex !important;
+        flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        background-color: rgba(255, 255, 255, 0.95) !important;
+        flex-wrap: nowrap !important;
+
+        /* Appearance */
+        background: rgba(255, 255, 255, 0.95) !important;
         backdrop-filter: blur(10px) !important;
         -webkit-backdrop-filter: blur(10px) !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-        border-top: none !important;
-        border-left: none !important;
-        border-right: none !important;
+        border-radius: 0 0 24px 24px !important;
+
+        /* Spacing */
+        padding: 12px 20px 12px 16px !important;
+        margin: 0 !important;
         box-sizing: border-box !important;
-        z-index: 1000 !important;
-    }
 
-    /* ============================================
-       2. LOGO - MAXIMUM SPECIFICITY
-       - Full selector chain to beat koda-mobile-consistency.css
-       - koda-mobile-consistency.css sets height: 48px
-       - We need 40px for proper mobile sizing
-    ============================================ */
-
-    html body .homepage header .main-nav .logo,
-    html body .about-page header .main-nav .logo,
-    html body .contact-page header .main-nav .logo,
-    html body .privacy-page header .main-nav .logo,
-    html body .terms-page header .main-nav .logo,
-    html body .waitlist-page header .main-nav .logo,
-    html body header .main-nav .logo,
-    html body .main-nav .logo {
-        flex-shrink: 0 !important;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-    }
-
-    html body .homepage header .main-nav .logo a,
-    html body .about-page header .main-nav .logo a,
-    html body .contact-page header .main-nav .logo a,
-    html body .privacy-page header .main-nav .logo a,
-    html body .terms-page header .main-nav .logo a,
-    html body .waitlist-page header .main-nav .logo a,
-    html body header .main-nav .logo a,
-    html body .main-nav .logo a {
-        display: flex !important;
-        align-items: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    html body .homepage header .main-nav .logo img,
-    html body .about-page header .main-nav .logo img,
-    html body .contact-page header .main-nav .logo img,
-    html body .privacy-page header .main-nav .logo img,
-    html body .terms-page header .main-nav .logo img,
-    html body .waitlist-page header .main-nav .logo img,
-    html body header .main-nav .logo img,
-    html body .main-nav .logo img,
-    html body .homepage header .main-nav .logo .content-icon,
-    html body .about-page header .main-nav .logo .content-icon,
-    html body .contact-page header .main-nav .logo .content-icon,
-    html body .privacy-page header .main-nav .logo .content-icon,
-    html body .terms-page header .main-nav .logo .content-icon,
-    html body .waitlist-page header .main-nav .logo .content-icon,
-    html body header .main-nav .logo .content-icon,
-    html body .main-nav .logo .content-icon,
-    html body .homepage header .main-nav .content-icon,
-    html body .about-page header .main-nav .content-icon,
-    html body .contact-page header .main-nav .content-icon,
-    html body .privacy-page header .main-nav .content-icon,
-    html body .terms-page header .main-nav .content-icon,
-    html body .waitlist-page header .main-nav .content-icon,
-    html body header .main-nav .content-icon,
-    html body .main-nav .content-icon {
-        height: 40px !important;
-        width: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        display: block !important;
-    }
-
-    /* ============================================
-       3. HIDE DESKTOP NAVIGATION - MAXIMUM SPECIFICITY
-    ============================================ */
-
-    html body .homepage header .main-nav .nav-links,
-    html body .about-page header .main-nav .nav-links,
-    html body .contact-page header .main-nav .nav-links,
-    html body .privacy-page header .main-nav .nav-links,
-    html body .terms-page header .main-nav .nav-links,
-    html body .waitlist-page header .main-nav .nav-links,
-    html body header .main-nav .nav-links,
-    html body .main-nav .nav-links,
-    html body .homepage header .main-nav .desktop-only,
-    html body .about-page header .main-nav .desktop-only,
-    html body .contact-page header .main-nav .desktop-only,
-    html body .privacy-page header .main-nav .desktop-only,
-    html body .terms-page header .main-nav .desktop-only,
-    html body .waitlist-page header .main-nav .desktop-only,
-    html body header .main-nav .desktop-only,
-    html body .main-nav .desktop-only {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
-
-    /* ============================================
-       4. SHOW MOBILE-ONLY ELEMENTS - MAXIMUM SPECIFICITY
-    ============================================ */
-
-    html body .homepage header .main-nav .mobile-only,
-    html body .about-page header .main-nav .mobile-only,
-    html body .contact-page header .main-nav .mobile-only,
-    html body .privacy-page header .main-nav .mobile-only,
-    html body .terms-page header .main-nav .mobile-only,
-    html body .waitlist-page header .main-nav .mobile-only,
-    html body header .main-nav .mobile-only,
-    html body .main-nav .mobile-only,
-    html body .homepage header .main-nav button.mobile-only,
-    html body .about-page header .main-nav button.mobile-only,
-    html body .contact-page header .main-nav button.mobile-only,
-    html body .privacy-page header .main-nav button.mobile-only,
-    html body .terms-page header .main-nav button.mobile-only,
-    html body .waitlist-page header .main-nav button.mobile-only,
-    html body header .main-nav button.mobile-only,
-    html body .main-nav button.mobile-only,
-    html body .homepage header .main-nav .mobile-menu-toggle.mobile-only,
-    html body .about-page header .main-nav .mobile-menu-toggle.mobile-only,
-    html body .contact-page header .main-nav .mobile-menu-toggle.mobile-only,
-    html body .privacy-page header .main-nav .mobile-menu-toggle.mobile-only,
-    html body .terms-page header .main-nav .mobile-menu-toggle.mobile-only,
-    html body .waitlist-page header .main-nav .mobile-menu-toggle.mobile-only,
-    html body header .main-nav .mobile-menu-toggle.mobile-only,
-    html body .main-nav .mobile-menu-toggle.mobile-only,
-    html body .homepage header .main-nav #mobile-menu-btn,
-    html body .about-page header .main-nav #mobile-menu-btn,
-    html body .contact-page header .main-nav #mobile-menu-btn,
-    html body .privacy-page header .main-nav #mobile-menu-btn,
-    html body .terms-page header .main-nav #mobile-menu-btn,
-    html body .waitlist-page header .main-nav #mobile-menu-btn,
-    html body header .main-nav #mobile-menu-btn,
-    html body .main-nav #mobile-menu-btn {
-        display: flex !important;
+        /* Visibility */
         visibility: visible !important;
         opacity: 1 !important;
+        overflow: visible !important;
+        clip-path: none !important;
+        pointer-events: auto !important;
     }
 
-    /* ============================================
-       5. HAMBURGER MENU BUTTON - MAXIMUM SPECIFICITY
-    ============================================ */
+    /*
+    ============================================
+    3. BODY PADDING - PREVENT CONTENT FROM HIDING UNDER HEADER
+    ============================================
+    */
 
-    html body .homepage header .main-nav .mobile-menu-toggle,
-    html body .about-page header .main-nav .mobile-menu-toggle,
-    html body .contact-page header .main-nav .mobile-menu-toggle,
-    html body .privacy-page header .main-nav .mobile-menu-toggle,
-    html body .terms-page header .main-nav .mobile-menu-toggle,
-    html body .waitlist-page header .main-nav .mobile-menu-toggle,
-    html body header .main-nav .mobile-menu-toggle,
-    html body .main-nav .mobile-menu-toggle,
-    html body .homepage header .main-nav button.mobile-menu-toggle,
-    html body .about-page header .main-nav button.mobile-menu-toggle,
-    html body .contact-page header .main-nav button.mobile-menu-toggle,
-    html body .privacy-page header .main-nav button.mobile-menu-toggle,
-    html body .terms-page header .main-nav button.mobile-menu-toggle,
-    html body .waitlist-page header .main-nav button.mobile-menu-toggle,
-    html body header .main-nav button.mobile-menu-toggle,
-    html body .main-nav button.mobile-menu-toggle,
-    html body .homepage header .main-nav .hamburger-menu,
-    html body .about-page header .main-nav .hamburger-menu,
-    html body .contact-page header .main-nav .hamburger-menu,
-    html body .privacy-page header .main-nav .hamburger-menu,
-    html body .terms-page header .main-nav .hamburger-menu,
-    html body .waitlist-page header .main-nav .hamburger-menu,
-    html body header .main-nav .hamburger-menu,
-    html body .main-nav .hamburger-menu,
-    html body .homepage header .main-nav #mobile-menu-btn,
-    html body .about-page header .main-nav #mobile-menu-btn,
-    html body .contact-page header .main-nav #mobile-menu-btn,
-    html body .privacy-page header .main-nav #mobile-menu-btn,
-    html body .terms-page header .main-nav #mobile-menu-btn,
-    html body .waitlist-page header .main-nav #mobile-menu-btn,
-    html body header .main-nav #mobile-menu-btn,
-    html body .main-nav #mobile-menu-btn {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 44px !important;
-        height: 44px !important;
-        padding: 8px !important;
-        margin: 0 !important;
-        margin-left: auto !important;
-        gap: 6px !important;
-        background: transparent !important;
-        border: none !important;
-        cursor: pointer !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: relative !important;
-        z-index: 1001 !important;
-        flex-shrink: 0 !important;
-    }
-
-    /* ============================================
-       6. HAMBURGER MENU LINES - MAXIMUM SPECIFICITY
-       - CRITICAL FIX: Black lines on white background
-       - Page-specific CSS sets black lines on dark background = invisible
-       - We override with explicit black on white
-    ============================================ */
-
-    html body .homepage header .main-nav .mobile-menu-toggle .menu-line,
-    html body .about-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body .contact-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body .privacy-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body .terms-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body .waitlist-page header .main-nav .mobile-menu-toggle .menu-line,
-    html body header .main-nav .mobile-menu-toggle .menu-line,
-    html body .main-nav .mobile-menu-toggle .menu-line,
-    html body .homepage header .main-nav .hamburger-menu .menu-line,
-    html body .about-page header .main-nav .hamburger-menu .menu-line,
-    html body .contact-page header .main-nav .hamburger-menu .menu-line,
-    html body .privacy-page header .main-nav .hamburger-menu .menu-line,
-    html body .terms-page header .main-nav .hamburger-menu .menu-line,
-    html body .waitlist-page header .main-nav .hamburger-menu .menu-line,
-    html body header .main-nav .hamburger-menu .menu-line,
-    html body .main-nav .hamburger-menu .menu-line,
-    html body .homepage header .main-nav #mobile-menu-btn .menu-line,
-    html body .about-page header .main-nav #mobile-menu-btn .menu-line,
-    html body .contact-page header .main-nav #mobile-menu-btn .menu-line,
-    html body .privacy-page header .main-nav #mobile-menu-btn .menu-line,
-    html body .terms-page header .main-nav #mobile-menu-btn .menu-line,
-    html body .waitlist-page header .main-nav #mobile-menu-btn .menu-line,
-    html body header .main-nav #mobile-menu-btn .menu-line,
-    html body .main-nav #mobile-menu-btn .menu-line,
-    html body .homepage header .main-nav button.mobile-menu-toggle .menu-line,
-    html body .about-page header .main-nav button.mobile-menu-toggle .menu-line,
-    html body .contact-page header .main-nav button.mobile-menu-toggle .menu-line,
-    html body .privacy-page header .main-nav button.mobile-menu-toggle .menu-line,
-    html body .terms-page header .main-nav button.mobile-menu-toggle .menu-line,
-    html body .waitlist-page header .main-nav button.mobile-menu-toggle .menu-line,
-    html body header .main-nav button.mobile-menu-toggle .menu-line,
-    html body .main-nav button.mobile-menu-toggle .menu-line {
-        display: block !important;
-        width: 24px !important;
-        height: 2px !important;
-        background: #000000 !important;
-        background-color: #000000 !important;
-        border-radius: 2px !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        transition: all 0.3s ease !important;
-    }
-
-    /* ============================================
-       7. BODY PADDING-TOP - MAXIMUM SPECIFICITY
-       - Push all content below the 64px fixed header
-    ============================================ */
-
-    html body,
     html body.homepage,
     html body.about-page,
     html body.contact-page,
@@ -368,164 +127,407 @@ DESKTOP SAFETY:
         padding-top: 64px !important;
     }
 
-    /* ============================================
-       8. PAGE-SPECIFIC HEADER SPACING - MAXIMUM SPECIFICITY
-       - Fix "header in middle of text" issue
-       - 64px body padding + 48px header margin = 112px total
-    ============================================ */
+    /*
+    ============================================
+    4. LOGO - LEFT ALIGNED
+    ============================================
+    */
 
-    html body .contact-page .contact-header,
-    html body .contact-header {
-        margin-top: 48px !important;
-        margin-left: auto !important;
+    html body.homepage header .main-nav .logo,
+    html body.about-page header .main-nav .logo,
+    html body.contact-page header .main-nav .logo,
+    html body.privacy-page header .main-nav .logo,
+    html body.terms-page header .main-nav .logo,
+    html body.waitlist-page header .main-nav .logo {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
         margin-right: auto !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        flex: 0 0 auto !important;
+        order: 1 !important;
     }
 
-    html body .privacy-page .privacy-header,
-    html body .privacy-header {
-        margin-top: 48px !important;
-        margin-left: 20px !important;
-        margin-right: 20px !important;
+    html body.homepage header .main-nav .logo a,
+    html body.about-page header .main-nav .logo a,
+    html body.contact-page header .main-nav .logo a,
+    html body.privacy-page header .main-nav .logo a,
+    html body.terms-page header .main-nav .logo a,
+    html body.waitlist-page header .main-nav .logo a {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    html body .terms-page .terms-header,
-    html body .terms-header {
-        margin-top: 48px !important;
-        margin-left: 20px !important;
-        margin-right: 20px !important;
-    }
-
-    html body .about-page .hero-title-about,
-    html body .hero-title-about {
-        margin-top: 48px !important;
-    }
-
-    /* ============================================
-       9. HERO SECTION ADJUSTMENTS - MAXIMUM SPECIFICITY
-    ============================================ */
-
-    html body .homepage .hero-section,
-    html body .about-page .hero-section,
-    html body .contact-page .contact-hero,
-    html body .privacy-page .privacy-content-section,
-    html body .terms-page .terms-content-section,
-    html body .hero-section,
-    html body .contact-hero,
-    html body .privacy-content-section,
-    html body .terms-content-section {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-    }
-
-    /* ============================================
-       10. MOBILE MENU DROPDOWN - MAXIMUM SPECIFICITY
-    ============================================ */
-
-    html body .homepage header .mobile-menu,
-    html body .about-page header .mobile-menu,
-    html body .contact-page header .mobile-menu,
-    html body .privacy-page header .mobile-menu,
-    html body .terms-page header .mobile-menu,
-    html body .waitlist-page header .mobile-menu,
-    html body header .mobile-menu,
-    html body .mobile-menu,
-    html body .homepage header #mobile-menu,
-    html body .about-page header #mobile-menu,
-    html body .contact-page header #mobile-menu,
-    html body .privacy-page header #mobile-menu,
-    html body .terms-page header #mobile-menu,
-    html body .waitlist-page header #mobile-menu,
-    html body header #mobile-menu,
-    html body #mobile-menu,
-    html body .homepage header .main-nav .mobile-menu,
-    html body .about-page header .main-nav .mobile-menu,
-    html body .contact-page header .main-nav .mobile-menu,
-    html body .privacy-page header .main-nav .mobile-menu,
-    html body .terms-page header .main-nav .mobile-menu,
-    html body .waitlist-page header .main-nav .mobile-menu,
-    html body header .main-nav .mobile-menu,
-    html body .main-nav .mobile-menu {
-        position: fixed !important;
-        top: 64px !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        background: rgba(255, 255, 255, 0.98) !important;
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(20px) !important;
-        z-index: 999 !important;
-        display: none !important;
-        padding: 20px !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    html body .mobile-menu.open,
-    html body #mobile-menu.open,
-    html body .mobile-menu.active,
-    html body #mobile-menu.active {
+    html body.homepage header .main-nav .logo img,
+    html body.about-page header .main-nav .logo img,
+    html body.contact-page header .main-nav .logo img,
+    html body.privacy-page header .main-nav .logo img,
+    html body.terms-page header .main-nav .logo img,
+    html body.waitlist-page header .main-nav .logo img,
+    html body.homepage header .main-nav .content-icon,
+    html body.about-page header .main-nav .content-icon,
+    html body.contact-page header .main-nav .content-icon,
+    html body.privacy-page header .main-nav .content-icon,
+    html body.terms-page header .main-nav .content-icon,
+    html body.waitlist-page header .main-nav .content-icon {
+        height: 40px !important;
+        width: auto !important;
+        margin: 0 !important;
         display: block !important;
     }
 
-    /* ============================================
-       11. CONTENT WRAPPER ADJUSTMENTS - MAXIMUM SPECIFICITY
-    ============================================ */
+    /*
+    ============================================
+    5. HIDE DESKTOP NAVIGATION
+    ============================================
+    */
 
-    html body .homepage .hero-section-wrapper,
-    html body .about-page .hero-section-wrapper,
-    html body .contact-page .contact-section-wrapper,
-    html body .privacy-page .privacy-content-section-wrapper,
-    html body .terms-page .terms-content-section-wrapper,
-    html body .hero-section-wrapper,
-    html body .contact-section-wrapper,
-    html body .privacy-content-section-wrapper,
-    html body .terms-content-section-wrapper {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
+    html body.homepage header .main-nav .nav-links,
+    html body.about-page header .main-nav .nav-links,
+    html body.contact-page header .main-nav .nav-links,
+    html body.privacy-page header .main-nav .nav-links,
+    html body.terms-page header .main-nav .nav-links,
+    html body.waitlist-page header .main-nav .nav-links,
+    html body.homepage header .main-nav .desktop-only,
+    html body.about-page header .main-nav .desktop-only,
+    html body.contact-page header .main-nav .desktop-only,
+    html body.privacy-page header .main-nav .desktop-only,
+    html body.terms-page header .main-nav .desktop-only,
+    html body.waitlist-page header .main-nav .desktop-only {
+        display: none !important;
     }
 
-    /* ============================================
-       12. Z-INDEX STACKING ORDER - MAXIMUM SPECIFICITY
-    ============================================ */
-
-    html body header,
-    html body .homepage header,
-    html body .about-page header,
-    html body .contact-page header,
-    html body .privacy-page header,
-    html body .terms-page header,
-    html body .waitlist-page header {
-        z-index: 1000 !important;
+    html body.homepage header .main-nav .nav-cta,
+    html body.about-page header .main-nav .nav-cta,
+    html body.contact-page header .main-nav .nav-cta,
+    html body.privacy-page header .main-nav .nav-cta,
+    html body.terms-page header .main-nav .nav-cta,
+    html body.waitlist-page header .main-nav .nav-cta {
+        display: none !important;
     }
 
-    html body .main-nav,
-    html body .homepage header .main-nav,
-    html body .about-page header .main-nav,
-    html body .contact-page header .main-nav,
-    html body .privacy-page header .main-nav,
-    html body .terms-page header .main-nav,
-    html body .waitlist-page header .main-nav {
-        z-index: 1000 !important;
+    /*
+    ============================================
+    6. SHOW MOBILE ELEMENTS
+    ============================================
+    */
+
+    html body.homepage header .main-nav .mobile-only,
+    html body.about-page header .main-nav .mobile-only,
+    html body.contact-page header .main-nav .mobile-only,
+    html body.privacy-page header .main-nav .mobile-only,
+    html body.terms-page header .main-nav .mobile-only,
+    html body.waitlist-page header .main-nav .mobile-only {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
     }
 
-    html body .mobile-menu-toggle,
-    html body #mobile-menu-btn,
-    html body .main-nav .mobile-menu-toggle,
-    html body .main-nav #mobile-menu-btn {
+    /*
+    ============================================
+    7. HAMBURGER MENU BUTTON - RIGHT ALIGNED AND VISIBLE
+    ============================================
+    */
+
+    html body.homepage header .main-nav #mobile-menu-btn,
+    html body.about-page header .main-nav #mobile-menu-btn,
+    html body.contact-page header .main-nav #mobile-menu-btn,
+    html body.privacy-page header .main-nav #mobile-menu-btn,
+    html body.terms-page header .main-nav #mobile-menu-btn,
+    html body.waitlist-page header .main-nav #mobile-menu-btn,
+    html body.homepage header .main-nav .mobile-menu-toggle,
+    html body.about-page header .main-nav .mobile-menu-toggle,
+    html body.contact-page header .main-nav .mobile-menu-toggle,
+    html body.privacy-page header .main-nav .mobile-menu-toggle,
+    html body.terms-page header .main-nav .mobile-menu-toggle,
+    html body.waitlist-page header .main-nav .mobile-menu-toggle,
+    html body.homepage header .main-nav .hamburger-menu,
+    html body.about-page header .main-nav .hamburger-menu,
+    html body.contact-page header .main-nav .hamburger-menu,
+    html body.privacy-page header .main-nav .hamburger-menu,
+    html body.terms-page header .main-nav .hamburger-menu,
+    html body.waitlist-page header .main-nav .hamburger-menu,
+    html body.homepage header .main-nav .menu-toggle,
+    html body.about-page header .main-nav .menu-toggle,
+    html body.contact-page header .main-nav .menu-toggle,
+    html body.privacy-page header .main-nav .menu-toggle,
+    html body.terms-page header .main-nav .menu-toggle,
+    html body.waitlist-page header .main-nav .menu-toggle {
+        /* Layout */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
+
+        /* Size */
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+
+        /* Positioning */
+        margin: 0 !important;
+        margin-left: auto !important;
+        padding: 8px !important;
+        flex-shrink: 0 !important;
+        order: 2 !important;
+
+        /* Appearance */
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+
+        /* Visibility */
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: flex !important;
+
+        /* Interaction */
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        touch-action: manipulation !important;
+
+        /* Transform */
+        transform: none !important;
+
+        /* Z-index */
+        position: relative !important;
         z-index: 1001 !important;
     }
 
-    html body .mobile-menu,
-    html body #mobile-menu {
-        z-index: 999 !important;
+    /*
+    ============================================
+    8. HAMBURGER MENU LINES - BLACK ON WHITE BACKGROUND
+    ============================================
+    */
+
+    html body.homepage header .main-nav #mobile-menu-btn .menu-line,
+    html body.about-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.contact-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.privacy-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.terms-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.waitlist-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.homepage header .main-nav .mobile-menu-toggle .menu-line,
+    html body.about-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.contact-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.privacy-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.terms-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.waitlist-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.homepage header .main-nav .hamburger-menu .menu-line,
+    html body.about-page header .main-nav .hamburger-menu .menu-line,
+    html body.contact-page header .main-nav .hamburger-menu .menu-line,
+    html body.privacy-page header .main-nav .hamburger-menu .menu-line,
+    html body.terms-page header .main-nav .hamburger-menu .menu-line,
+    html body.waitlist-page header .main-nav .hamburger-menu .menu-line,
+    html body.homepage header .main-nav .menu-toggle .menu-line,
+    html body.about-page header .main-nav .menu-toggle .menu-line,
+    html body.contact-page header .main-nav .menu-toggle .menu-line,
+    html body.privacy-page header .main-nav .menu-toggle .menu-line,
+    html body.terms-page header .main-nav .menu-toggle .menu-line,
+    html body.waitlist-page header .main-nav .menu-toggle .menu-line {
+        /* Visibility */
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+        /* Size */
+        width: 24px !important;
+        height: 2px !important;
+
+        /* Appearance */
+        background-color: #000000 !important;
+        background: #000000 !important;
+        border-radius: 2px !important;
+
+        /* Animation */
+        transition: all 0.3s ease !important;
+
+        /* Positioning */
+        margin: 0 !important;
+        padding: 0 !important;
+
+        /* Transform */
+        transform: none !important;
     }
 
-    html body .contact-header,
-    html body .privacy-header,
-    html body .terms-header,
-    html body .hero-title-about {
-        z-index: 1 !important;
-        position: relative !important;
+    /*
+    ============================================
+    9. PAGE HEADER ELEMENTS - CORRECT SPACING
+    ============================================
+    */
+
+    html body.contact-page .contact-header,
+    html body.privacy-page .privacy-header,
+    html body.terms-page .terms-header {
+        margin-top: 48px !important;
+        padding-top: 32px !important;
+    }
+
+    /*
+    ============================================
+    10. MOBILE MENU OVERLAY
+    ============================================
+    */
+
+    html body.homepage #mobile-menu,
+    html body.about-page #mobile-menu,
+    html body.contact-page #mobile-menu,
+    html body.privacy-page #mobile-menu,
+    html body.terms-page #mobile-menu,
+    html body.waitlist-page #mobile-menu,
+    html body.homepage .mobile-menu,
+    html body.about-page .mobile-menu,
+    html body.contact-page .mobile-menu,
+    html body.privacy-page .mobile-menu,
+    html body.terms-page .mobile-menu,
+    html body.waitlist-page .mobile-menu,
+    html body.homepage .side-menu,
+    html body.about-page .side-menu,
+    html body.contact-page .side-menu,
+    html body.privacy-page .side-menu,
+    html body.terms-page .side-menu,
+    html body.waitlist-page .side-menu {
+        position: fixed !important;
+        inset: 0 !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        z-index: 9999 !important;
+        display: none !important;
+        flex-direction: column !important;
+        padding: calc(80px + env(safe-area-inset-top, 0px)) 24px 24px !important;
+        gap: 8px !important;
+        overflow-y: auto !important;
+    }
+
+    html body.homepage #mobile-menu.open,
+    html body.about-page #mobile-menu.open,
+    html body.contact-page #mobile-menu.open,
+    html body.privacy-page #mobile-menu.open,
+    html body.terms-page #mobile-menu.open,
+    html body.waitlist-page #mobile-menu.open,
+    html body.homepage #mobile-menu.active,
+    html body.about-page #mobile-menu.active,
+    html body.contact-page #mobile-menu.active,
+    html body.privacy-page #mobile-menu.active,
+    html body.terms-page #mobile-menu.active,
+    html body.waitlist-page #mobile-menu.active,
+    html body.homepage .mobile-menu.open,
+    html body.about-page .mobile-menu.open,
+    html body.contact-page .mobile-menu.open,
+    html body.privacy-page .mobile-menu.open,
+    html body.terms-page .mobile-menu.open,
+    html body.waitlist-page .mobile-menu.open,
+    html body.homepage .mobile-menu.active,
+    html body.about-page .mobile-menu.active,
+    html body.contact-page .mobile-menu.active,
+    html body.privacy-page .mobile-menu.active,
+    html body.terms-page .mobile-menu.active,
+    html body.waitlist-page .mobile-menu.active,
+    html body.homepage .side-menu.open,
+    html body.about-page .side-menu.open,
+    html body.contact-page .side-menu.open,
+    html body.privacy-page .side-menu.open,
+    html body.terms-page .side-menu.open,
+    html body.waitlist-page .side-menu.open,
+    html body.homepage .side-menu.active,
+    html body.about-page .side-menu.active,
+    html body.contact-page .side-menu.active,
+    html body.privacy-page .side-menu.active,
+    html body.terms-page .side-menu.active,
+    html body.waitlist-page .side-menu.active {
+        display: flex !important;
     }
 }
+
+/*
+============================================
+MOBILE MEDIA QUERY - MAX 768PX (FOR CONSISTENCY)
+============================================
+*/
+
+@media (max-width: 768px) {
+    /* Apply same rules for 768px breakpoint to handle index.css conflicts */
+
+    html body.homepage header,
+    html body.about-page header,
+    html body.contact-page header,
+    html body.privacy-page header,
+    html body.terms-page header,
+    html body.waitlist-page header {
+        position: relative !important;
+        background: transparent !important;
+    }
+
+    html body.homepage header .main-nav,
+    html body.about-page header .main-nav,
+    html body.contact-page header .main-nav,
+    html body.privacy-page header .main-nav,
+    html body.terms-page header .main-nav,
+    html body.waitlist-page header .main-nav {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        height: 64px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    html body.homepage header .main-nav #mobile-menu-btn,
+    html body.about-page header .main-nav #mobile-menu-btn,
+    html body.contact-page header .main-nav #mobile-menu-btn,
+    html body.privacy-page header .main-nav #mobile-menu-btn,
+    html body.terms-page header .main-nav #mobile-menu-btn,
+    html body.waitlist-page header .main-nav #mobile-menu-btn,
+    html body.homepage header .main-nav .mobile-menu-toggle,
+    html body.about-page header .main-nav .mobile-menu-toggle,
+    html body.contact-page header .main-nav .mobile-menu-toggle,
+    html body.privacy-page header .main-nav .mobile-menu-toggle,
+    html body.terms-page header .main-nav .mobile-menu-toggle,
+    html body.waitlist-page header .main-nav .mobile-menu-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    html body.homepage header .main-nav #mobile-menu-btn .menu-line,
+    html body.about-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.contact-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.privacy-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.terms-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.waitlist-page header .main-nav #mobile-menu-btn .menu-line,
+    html body.homepage header .main-nav .mobile-menu-toggle .menu-line,
+    html body.about-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.contact-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.privacy-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.terms-page header .main-nav .mobile-menu-toggle .menu-line,
+    html body.waitlist-page header .main-nav .mobile-menu-toggle .menu-line {
+        display: block !important;
+        background-color: #000000 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+/*
+============================================
+END OF MOBILE HEADER FIX
+============================================
+*/
