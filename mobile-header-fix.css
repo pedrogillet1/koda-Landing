@@ -185,27 +185,23 @@ MOBILE MEDIA QUERY - MAX 767PX
     ============================================
     */
 
-    html body.homepage header .main-nav .nav-links,
-    html body.about-page header .main-nav .nav-links,
-    html body.contact-page header .main-nav .nav-links,
-    html body.privacy-page header .main-nav .nav-links,
-    html body.terms-page header .main-nav .nav-links,
-    html body.waitlist-page header .main-nav .nav-links,
-    html body.homepage header .main-nav .desktop-only,
-    html body.about-page header .main-nav .desktop-only,
-    html body.contact-page header .main-nav .desktop-only,
-    html body.privacy-page header .main-nav .desktop-only,
-    html body.terms-page header .main-nav .desktop-only,
-    html body.waitlist-page header .main-nav .desktop-only {
+    /* Hide all desktop navigation elements on mobile */
+    html body header .main-nav .nav-links,
+    html body header .main-nav .desktop-only,
+    html body header .main-nav .nav-links.desktop-only,
+    header .main-nav .nav-links.desktop-only,
+    header .main-nav .desktop-only,
+    .main-nav .nav-links.desktop-only,
+    .main-nav .desktop-only,
+    .nav-links.desktop-only {
         display: none !important;
     }
 
-    html body.homepage header .main-nav .nav-cta,
-    html body.about-page header .main-nav .nav-cta,
-    html body.contact-page header .main-nav .nav-cta,
-    html body.privacy-page header .main-nav .nav-cta,
-    html body.terms-page header .main-nav .nav-cta,
-    html body.waitlist-page header .main-nav .nav-cta {
+    /* Hide desktop CTA button on mobile */
+    html body header .main-nav .nav-cta,
+    header .main-nav .nav-cta,
+    .main-nav .nav-cta,
+    .demo-button.desktop-only {
         display: none !important;
     }
 
