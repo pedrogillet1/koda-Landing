@@ -387,43 +387,15 @@ MOBILE MEDIA QUERY - MAX 767PX
         overflow-y: auto !important;
     }
 
-    html body.homepage #mobile-menu.open,
-    html body.about-page #mobile-menu.open,
-    html body.contact-page #mobile-menu.open,
-    html body.privacy-page #mobile-menu.open,
-    html body.terms-page #mobile-menu.open,
-    html body.waitlist-page #mobile-menu.open,
-    html body.homepage #mobile-menu.active,
-    html body.about-page #mobile-menu.active,
-    html body.contact-page #mobile-menu.active,
-    html body.privacy-page #mobile-menu.active,
-    html body.terms-page #mobile-menu.active,
-    html body.waitlist-page #mobile-menu.active,
-    html body.homepage .mobile-menu.open,
-    html body.about-page .mobile-menu.open,
-    html body.contact-page .mobile-menu.open,
-    html body.privacy-page .mobile-menu.open,
-    html body.terms-page .mobile-menu.open,
-    html body.waitlist-page .mobile-menu.open,
-    html body.homepage .mobile-menu.active,
-    html body.about-page .mobile-menu.active,
-    html body.contact-page .mobile-menu.active,
-    html body.privacy-page .mobile-menu.active,
-    html body.terms-page .mobile-menu.active,
-    html body.waitlist-page .mobile-menu.active,
-    html body.homepage .side-menu.open,
-    html body.about-page .side-menu.open,
-    html body.contact-page .side-menu.open,
-    html body.privacy-page .side-menu.open,
-    html body.terms-page .side-menu.open,
-    html body.waitlist-page .side-menu.open,
-    html body.homepage .side-menu.active,
-    html body.about-page .side-menu.active,
-    html body.contact-page .side-menu.active,
-    html body.privacy-page .side-menu.active,
-    html body.terms-page .side-menu.active,
-    html body.waitlist-page .side-menu.active {
+    #mobile-menu.open,
+    #mobile-menu.active,
+    .mobile-menu.open,
+    .mobile-menu.active,
+    .side-menu.open,
+    .side-menu.active {
         display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }
 
