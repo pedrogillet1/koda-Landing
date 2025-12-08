@@ -256,8 +256,8 @@ body .side-menu a {
     font-size: 18px !important;
     font-weight: 500 !important;
     text-decoration: none !important;
-    padding: 16px 20px !important;
-    border-radius: 12px !important;
+    padding: 16px 0 !important;
+    border-radius: 0 !important;
     min-height: 44px !important;
     display: flex !important;
     align-items: center !important;
@@ -275,6 +275,17 @@ body .side-menu .btn {
     border-radius: 12px !important;
     min-height: 48px !important;
     margin-top: 24px !important;
+}
+
+/* Try Koda button - Perfect cylinder override */
+body .mobile-menu .mobile-cta-btn,
+body .side-menu .mobile-cta-btn,
+body .mobile-menu a.mobile-cta-btn,
+body .side-menu a.mobile-cta-btn {
+    border-radius: 50px !important;
+    padding: 16px 32px !important;
+    background: #131313 !important;
+    color: white !important;
 }
 
 /* ============================================
