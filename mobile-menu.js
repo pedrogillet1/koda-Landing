@@ -15,9 +15,12 @@
 
         // Toggle menu on button click
         mobileMenuBtn.addEventListener('click', function(e) {
+            console.log('Hamburger clicked!');
             e.preventDefault();
             e.stopPropagation();
+            console.log('About to toggle menu');
             toggleMenu();
+            console.log('Menu toggled, active class:', mobileMenu.classList.contains('active'));
         });
 
         // Close menu when clicking outside
