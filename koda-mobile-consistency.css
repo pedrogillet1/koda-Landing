@@ -238,7 +238,9 @@ body .side-menu {
 }
 
 body .mobile-menu.open,
-body .side-menu.open {
+body .mobile-menu.active,
+body .side-menu.open,
+body .side-menu.active {
     display: flex !important;
 }
 
