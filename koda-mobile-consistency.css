@@ -223,18 +223,23 @@ body .main-nav .language-dropdown {
    MOBILE MENU CONSISTENCY
    ============================================ */
 
-/* Mobile menu overlay - same across all pages */
+/* Mobile menu dropdown - appears BELOW header */
 body .mobile-menu,
 body .side-menu {
     position: fixed !important;
-    inset: 0 !important;
+    top: 64px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    max-height: calc(100vh - 64px) !important;
     backdrop-filter: blur(40px) !important;
     -webkit-backdrop-filter: blur(40px) !important;
     z-index: 9999 !important;
     display: none !important;
     flex-direction: column !important;
-    padding: calc(80px + env(safe-area-inset-top, 0px)) 24px 24px !important;
+    padding: 24px !important;
     gap: 8px !important;
+    overflow-y: auto !important;
 }
 
 body .mobile-menu.open,
