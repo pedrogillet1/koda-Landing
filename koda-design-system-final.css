@@ -70,8 +70,8 @@ body {
 
 /* Hero image - reduced size */
 .hero-image-container {
-  width: 75vw !important;
-  max-width: 1200px !important;
+  width: 80vw !important;
+  max-width: 1300px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   margin-bottom: 0 !important;
