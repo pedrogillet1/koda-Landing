@@ -468,6 +468,22 @@ MOBILE MEDIA QUERY - MAX 768PX (FOR CONSISTENCY)
         visibility: visible !important;
         opacity: 1 !important;
     }
+
+    /* CRITICAL: Hide desktop navigation on 768px breakpoint too */
+    html body header .main-nav .nav-links,
+    html body header .main-nav .desktop-only,
+    html body header .main-nav .nav-links.desktop-only,
+    header .main-nav .nav-links.desktop-only,
+    header .main-nav .desktop-only,
+    .main-nav .nav-links.desktop-only,
+    .main-nav .desktop-only,
+    .nav-links.desktop-only,
+    html body header .main-nav .nav-cta,
+    header .main-nav .nav-cta,
+    .main-nav .nav-cta,
+    .demo-button.desktop-only {
+        display: none !important;
+    }
 }
 
 /*
