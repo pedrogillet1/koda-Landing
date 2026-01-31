@@ -23,7 +23,22 @@
       "title": "Para Profissionais",
       "description": "De advogados a jornalistas—gerencie documentos críticos sem caos."
     },
-    "cta": "Experimentar Koda"
+    "cta": "Experimentar Koda",
+    "legal": {
+      "title": "Para Equipes Jurídicas",
+      "description": "Controle contratos, versões e evidências em um espaço de trabalho criptografado — para sempre abrir a cláusula certa no momento certo.",
+      "cta": "Solicitar uma Demo"
+    },
+    "finance": {
+      "title": "Para Negociadores e Finanças",
+      "description": "Encontre qualquer slide, modelo ou relatório em segundos — responda a perguntas de diretores ou clientes rapidamente e proteja seu bônus.",
+      "cta": "Solicitar uma Demo"
+    },
+    "engineering": {
+      "title": "Para Grandes Projetos e Engenharia",
+      "description": "Mantenha desenhos, relatórios e aprovações pesquisáveis em um só lugar — sempre prontos quando um diretor ou inspetor pedir comprovação.",
+      "cta": "Solicitar uma Demo"
+    }
   },
   "chaos": {
     "title_highlight": "Você Está Perdendo 2 Dias Completos",

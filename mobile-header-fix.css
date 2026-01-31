@@ -175,8 +175,9 @@ MOBILE MEDIA QUERY - MAX 767PX
     html body.privacy-page header .main-nav .content-icon,
     html body.terms-page header .main-nav .content-icon,
     html body.waitlist-page header .main-nav .content-icon {
-        height: 40px !important;
-        width: auto !important;
+        height: 44px !important;
+        width: 44px !important;
+        object-fit: contain !important;
         margin: 0 !important;
         display: block !important;
     }

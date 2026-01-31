@@ -159,13 +159,7 @@ body .main-nav .language-dropdown {
         padding: 0 !important;
     }
 
-    body .main-nav .logo img,
-    body .main-nav .content-icon {
-        height: 48px !important;
-        width: auto !important;
-        margin-left: 0 !important;
-        display: block !important;
-    }
+    /* Logo mobile sizing controlled by mobile-header-fix.css */
 
     /* Hide desktop navigation on mobile - show hamburger */
     body .main-nav .nav-links,
@@ -325,35 +319,19 @@ body .site-footer,
 .privacy-page .site-footer,
 .terms-page .site-footer,
 .waitlist-page .site-footer {
-    /* Spacing */
-    padding: var(--footer-padding-desktop) !important;
-    padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)) !important;
+    /* Spacing — inner containers handle padding now */
+    padding: 0 !important;
 
     /* Layout */
     width: 100% !important;
     box-sizing: border-box !important;
 }
 
-/* Footer main container */
-body .site-footer .footer-main {
-    max-width: 1360px !important;
-    margin: 0 auto !important;
-    display: grid !important;
-    grid-template-columns: 1fr 2fr !important;
-    gap: 80px !important;
-}
+/* Footer main container — controlled by koda-design-system-final.css */
 
-/* Footer left section (logo + description) */
-body .site-footer .footer-left {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 24px !important;
-}
+/* Footer left section — controlled by koda-design-system-final.css */
 
-/* Footer logo - DO NOT override size, use original */
-body .site-footer .footer-logo {
-    width: auto !important;
-}
+/* Footer logo sizing controlled by koda-design-system-final.css */
 
 body .site-footer .footer-description {
     font-family: var(--font-family) !important;
@@ -362,12 +340,7 @@ body .site-footer .footer-description {
     max-width: 300px !important;
 }
 
-/* Footer navigation */
-body .site-footer .footer-nav {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 40px !important;
-}
+/* Footer navigation — controlled by koda-design-system-final.css */
 
 body .site-footer .footer-nav > div {
     display: flex !important;
@@ -418,40 +391,18 @@ body .site-footer .social-links svg {
     height: 18px !important;
 }
 
-/* Footer copyright */
-body .site-footer .footer-copyright {
-    margin-top: 48px !important;
-    padding-top: 24px !important;
-    text-align: center !important;
-    font-family: var(--font-family) !important;
-    font-size: 14px !important;
-    max-width: 1360px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
+/* Footer copyright — controlled by koda-design-system-final.css */
 
 /* ============================================
    MOBILE FOOTER CONSISTENCY
    ============================================ */
 
 @media (max-width: 768px) {
-    /* Mobile footer adjustments - same across all pages */
-    body .site-footer {
-        padding: var(--footer-padding-mobile) !important;
-        padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
-    }
+    /* Mobile footer padding — controlled by mobile-footer-fix.css */
 
-    /* Footer stacks vertically */
-    body .site-footer .footer-main {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-    }
+    /* Footer stacks vertically — controlled by mobile-footer-fix.css */
 
-    /* Footer navigation stacks */
-    body .site-footer .footer-nav {
-        grid-template-columns: 1fr !important;
-        gap: 32px !important;
-    }
+    /* Footer navigation stacks — controlled by mobile-footer-fix.css */
 
     /* Footer description full width */
     body .site-footer .footer-description {
@@ -469,15 +420,7 @@ body .site-footer .footer-copyright {
         width: 95% !important;
     }
 
-    /* Tablet footer */
-    body .site-footer .footer-main {
-        grid-template-columns: 1fr !important;
-        gap: 60px !important;
-    }
-
-    body .site-footer .footer-nav {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
+    /* Tablet footer — controlled by koda-design-system-final.css + mobile-footer-fix.css */
 }
 
 /* ============================================

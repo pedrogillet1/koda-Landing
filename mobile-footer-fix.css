@@ -42,10 +42,12 @@ This file corrects all mobile footer issues across all pages, including:
     ============================================ */
 
     .footer-main {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         gap: 32px !important; /* Space between nav and copyright */
         text-align: center;
+        padding: 32px 24px !important;
     }
 
     /* ============================================
@@ -102,25 +104,29 @@ This file corrects all mobile footer issues across all pages, including:
     }
 
     .footer-logo {
-        display: none !important; /* Hide the main footer logo */
+        display: block !important;
+        width: 120px !important;
+        height: auto !important;
     }
 
-    /* Show watermark above copyright */
+    /* Watermark as background signature on mobile */
     .footer-watermark,
     .site-footer .footer-watermark {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        order: 1 !important;
-        margin-bottom: 12px !important;
-        width: 100% !important;
+        position: absolute !important;
+        right: -120px !important;
+        bottom: -120px !important;
+        opacity: 0.04 !important;
+        pointer-events: none !important;
+        z-index: 0 !important;
+        display: block !important;
+        width: auto !important;
+        margin: 0 !important;
     }
 
     .footer-watermark img,
     .site-footer .footer-watermark img {
-        width: 140px !important;
+        width: 200px !important;
         height: auto !important;
-        opacity: 0.35 !important;
         display: block !important;
     }
 
@@ -134,5 +140,8 @@ This file corrects all mobile footer issues across all pages, including:
         color: #666666 !important;
         text-align: center !important;
         width: 100% !important;
+        position: static !important;
+        left: auto !important;
+        transform: none !important;
     }
 }

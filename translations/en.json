@@ -23,7 +23,22 @@
       "title": "For Professionals",
       "description": "From lawyers to journalists—manage critical documents without chaos."
     },
-    "cta": "Try Koda"
+    "cta": "Try Koda",
+    "legal": {
+      "title": "For Legal Teams",
+      "description": "Control contracts, versions, and evidence in one encrypted workspace—so you always open the right clause at the right moment.",
+      "cta": "Request a Demo"
+    },
+    "finance": {
+      "title": "For Dealmakers & Finance",
+      "description": "Find any slide, model, or report in seconds—answer MD or client questions fast and protect your bonus.",
+      "cta": "Request a Demo"
+    },
+    "engineering": {
+      "title": "For Big Projects & Engineering",
+      "description": "Keep drawings, reports, and approvals searchable in one place—always ready when a director or inspector asks for proof.",
+      "cta": "Request a Demo"
+    }
   },
   "chaos": {
     "title_highlight": "You're Losing 2 Full Days",

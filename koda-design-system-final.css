@@ -387,37 +387,87 @@ select:focus {
   color: var(--koda-text-primary) !important;
 }
 
-.back-to-top {
-  margin-top: -48px !important;
-  margin-bottom: 0px !important;
+/* ---- PIXEL-PERFECT FOOTER LAYOUT — SINGLE SOURCE OF TRUTH ---- */
+
+/* Footer layering — content above watermark */
+.site-footer {
+  overflow: hidden !important;
+  position: relative !important;
 }
 
+/* A) Footer top grid: logo+newsletter | Company | Policy */
 .footer-main {
-  align-items: flex-start !important;
+  display: grid !important;
+  grid-template-columns: 420px 1fr 1fr !important;
+  column-gap: 120px !important;
+  align-items: start !important;
+  max-width: 1200px !important;
+  margin: 0 auto 0 auto !important;
+  padding: 64px 64px 40px !important;
+  position: relative !important;
+  z-index: 1 !important;
 }
 
+/* Footer-left takes column 1, footer-nav spans columns 2-3 */
+.footer-left {
+  grid-column: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.footer-nav {
+  grid-column: 2 / 4 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 40px !important;
+}
+
+/* Footer logo — SINGLE SOURCE OF TRUTH */
 .footer-logo {
-  width: 180px !important;
+  width: 150px !important;
   height: auto !important;
-  margin-top: -15px !important;
+  margin-top: 0 !important;
   display: block !important;
 }
 
+/* B) Bottom bar: centered copyright, right-aligned back-to-top */
+.site-footer .footer-bottom-bar {
+  display: flex !important;
+  align-items: center !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 24px 64px 32px !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.footer-copyright {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
+
+.back-to-top {
+  margin: 0 0 0 auto !important;
+}
+
+/* C) Footer watermark — SINGLE SOURCE OF TRUTH (only implementation, no ::after) */
 .footer-watermark {
-  position: absolute;
-  bottom: -80px;
-  right: 80px;
-  opacity: 0.3;
-  pointer-events: none;
+  position: absolute !important;
+  right: 120px !important;
+  bottom: 60px !important;
+  opacity: 0.05 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
 }
 
 .footer-watermark img {
-  width: 750px;
-  height: auto;
-}
-
-.footer-left {
-  gap: 16px !important;
+  width: 320px !important;
+  height: auto !important;
 }
 
 /* Fix page containers to allow content to flow */
@@ -437,16 +487,19 @@ select:focus {
   padding-bottom: 80px !important;
 }
 
-/* Ensure site-footer has proper top margin */
+/* Ensure site-footer has proper top margin and reset padding (grid handles it) */
 .site-footer {
   margin-top: 0px !important;
+  padding: 0 !important;
 }
 
-/* Navigation logo sizing and alignment */
+/* Navigation logo sizing and alignment — SINGLE SOURCE OF TRUTH */
 .main-nav .logo img,
 .main-nav .content-icon {
-  height: 60px !important;
-  width: auto !important;
+  height: 52px !important;
+  width: 52px !important;
+  object-fit: contain !important;
+  display: block !important;
 }
 
 .main-nav {

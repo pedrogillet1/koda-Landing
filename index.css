@@ -191,11 +191,7 @@ img {
     text-decoration: none;
 }
 
-.content-icon {
-    height: 50px;
-    width: 125px;
-    object-fit: contain;
-}
+/* Header logo sizing controlled by koda-design-system-final.css */
 
 .nav-links {
     display: flex;
@@ -2241,22 +2237,7 @@ img {
     box-sizing: border-box;
 }
 
-/* Background Watermark */
-.site-footer::after {
-    content: "";
-    background-image: url("assets/images/logo copy.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    position: absolute;
-    right: 50px;
-    bottom: 20px;
-    width: 300px;
-    height: 300px;
-    opacity: 0.05;
-    z-index: 0;
-    pointer-events: none;
-}
+/* Watermark handled by .footer-watermark div only */
 
 /* Footer Main Layout */
 .footer-main {
@@ -2277,10 +2258,7 @@ img {
     gap: 32px;
 }
 
-.footer-logo {
-    width: 70px;
-    height: auto;
-}
+/* Footer logo sizing controlled by koda-design-system-final.css */
 
 /* Newsletter Form */
 .newsletter-form {
@@ -2498,9 +2476,7 @@ img {
         gap: 24px;
     }
 
-    .footer-logo {
-        width: 100px;
-    }
+    /* Footer logo mobile sizing controlled by mobile-footer-fix.css */
 
     .footer-nav {
         grid-template-columns: 1fr;
@@ -3134,12 +3110,7 @@ img {
         overflow: hidden;
     }
 
-    /* Logo */
-    .logo img,
-    .content-icon {
-        height: 32px;
-        width: auto;
-    }
+    /* Logo sizing controlled by mobile-header-fix.css */
 
     /* Hero Content - Mobile */
     .hero-content {

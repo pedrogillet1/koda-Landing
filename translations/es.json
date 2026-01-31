@@ -23,7 +23,22 @@
       "title": "Para Profesionales",
       "description": "Desde abogados hasta periodistas—gestiona documentos críticos sin caos."
     },
-    "cta": "Probar Koda"
+    "cta": "Probar Koda",
+    "legal": {
+      "title": "Para Equipos Legales",
+      "description": "Controla contratos, versiones y evidencias en un espacio de trabajo encriptado — para siempre abrir la cláusula correcta en el momento correcto.",
+      "cta": "Solicitar una Demo"
+    },
+    "finance": {
+      "title": "Para Negociadores y Finanzas",
+      "description": "Encuentra cualquier diapositiva, modelo o informe en segundos — responde a preguntas de directores o clientes rápidamente y protege tu bono.",
+      "cta": "Solicitar una Demo"
+    },
+    "engineering": {
+      "title": "Para Grandes Proyectos e Ingeniería",
+      "description": "Mantén planos, informes y aprobaciones buscables en un solo lugar — siempre listos cuando un director o inspector pida pruebas.",
+      "cta": "Solicitar una Demo"
+    }
   },
   "chaos": {
     "title_highlight": "Estás Perdiendo 2 Días Completos",
