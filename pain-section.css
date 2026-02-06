@@ -1,0 +1,386 @@
+/* ============================================
+   KODA PAIN SECTION - PIXEL-PERFECT REBUILD
+   Full-bleed white background, 2-column layout
+   ============================================ */
+
+/* ============================================
+   1. SECTION WRAPPER - FULL BLEED
+   ============================================ */
+
+.pain-section-wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+.pain-section {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 96px 40px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   2. GRID LAYOUT - 2 COLUMNS
+   ============================================ */
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* ============================================
+   3. TEXT COLUMN (LEFT)
+   ============================================ */
+
+.pain-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+}
+
+.pain-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 20px 0;
+  max-width: 520px;
+}
+
+/* Animated underline on "searching" - subtle highlight */
+.pain-title .highlight-word {
+  position: relative;
+  display: inline;
+  background-image: linear-gradient(120deg, #FFE066 0%, #FFD700 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 40%;
+  background-position: 0 88%;
+  transition: background-size 0.4s ease;
+}
+
+/* Trigger animation when section is in view */
+.pain-section.is-visible .pain-title .highlight-word {
+  background-size: 100% 40%;
+}
+
+.pain-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #444444;
+  margin: 0 0 24px 0;
+  max-width: 520px;
+}
+
+/* ============================================
+   4. REASSURANCE LINE
+   ============================================ */
+
+.pain-reassurance {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0;
+}
+
+/* ============================================
+   5. HIDE BULLETS (removed per new spec)
+   ============================================ */
+
+.pain-bullets {
+  display: none !important;
+}
+
+.pain-closing {
+  display: none !important;
+}
+
+/* ============================================
+   6. VISUAL COLUMN (RIGHT)
+   ============================================ */
+
+.pain-visual {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pain-media-frame {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 28px;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.pain-media-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+/* Placeholder state when image is blank */
+.pain-media-frame img[src=""],
+.pain-media-frame img:not([src]) {
+  background-color: #F0F0F0;
+  min-height: 280px;
+}
+
+/* ============================================
+   7. SCROLL ANIMATION (Intersection Observer)
+   ============================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .pain-title .highlight-word {
+    transition: background-size 0.4s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pain-title .highlight-word {
+    background-size: 100% 40%;
+    transition: none;
+  }
+}
+
+/* ============================================
+   8. RESPONSIVE - LARGE DESKTOP (>=1440px)
+   ============================================ */
+
+@media (min-width: 1440px) {
+  .pain-section {
+    padding: 112px 48px;
+  }
+
+  .pain-grid {
+    gap: 80px;
+  }
+
+  .pain-title {
+    font-size: 48px;
+  }
+
+  .pain-subtitle {
+    font-size: 19px;
+  }
+
+  .pain-reassurance {
+    font-size: 15px;
+  }
+}
+
+/* ============================================
+   9. RESPONSIVE - DESKTOP (1024-1439px)
+   ============================================ */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .pain-section {
+    padding: 88px 40px;
+  }
+
+  .pain-grid {
+    gap: 56px;
+  }
+
+  .pain-title {
+    font-size: 40px;
+  }
+}
+
+/* ============================================
+   10. RESPONSIVE - TABLET (768-1023px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pain-section {
+    padding: 72px 32px;
+  }
+
+  .pain-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .pain-text {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .pain-title {
+    font-size: 36px;
+  }
+
+  .pain-subtitle {
+    font-size: 17px;
+  }
+
+  .pain-visual {
+    order: 2;
+    justify-content: center;
+  }
+
+  .pain-media-frame {
+    max-width: 560px;
+  }
+}
+
+/* ============================================
+   11. RESPONSIVE - SMALL TABLET (481-767px)
+   ============================================ */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .pain-section {
+    padding: 64px 24px;
+  }
+
+  .pain-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pain-text {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .pain-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .pain-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .pain-reassurance {
+    font-size: 14px;
+  }
+
+  .pain-visual {
+    order: 2;
+    justify-content: center;
+  }
+
+  .pain-media-frame {
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .pain-media-frame img {
+    border-radius: 12px;
+  }
+}
+
+/* ============================================
+   12. RESPONSIVE - MOBILE (<=480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  .pain-section {
+    padding: 56px 20px;
+  }
+
+  .pain-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pain-text {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .pain-title {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .pain-subtitle {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .pain-reassurance {
+    font-size: 14px;
+  }
+
+  .pain-visual {
+    order: 2;
+  }
+
+  .pain-media-frame {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .pain-media-frame img {
+    border-radius: 12px;
+  }
+}
+
+/* ============================================
+   13. RESPONSIVE - SMALL MOBILE (<=360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+  .pain-section {
+    padding: 48px 16px;
+  }
+
+  .pain-grid {
+    gap: 28px;
+  }
+
+  .pain-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .pain-subtitle {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .pain-reassurance {
+    font-size: 13px;
+  }
+
+  .pain-media-frame {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .pain-media-frame img {
+    border-radius: 10px;
+  }
+}
+
+/* ============================================
+   14. HIDE OLD CHAOS SECTION ELEMENTS
+   ============================================ */
+
+.chaos-section-wrapper,
+.chaos-section,
+.chaos-header,
+.chaos-grid,
+.chaos-text-left,
+.chaos-text-right,
+.chaos-image-container {
+  display: none !important;
+}

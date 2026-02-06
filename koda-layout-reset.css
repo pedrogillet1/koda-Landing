@@ -1,0 +1,622 @@
+/* ============================================
+   KODA LANDING PAGE - GLOBAL LAYOUT RESET
+   Fixes: black side panels, text visibility,
+   button consistency, spacing system
+
+   Scoped under .koda-landing to avoid
+   impacting other pages
+   ============================================ */
+
+/* ============================================
+   1. ROOT RESET - WHITE BACKGROUND
+   ============================================ */
+
+/* Force white background on html/body for landing page */
+html:has(.koda-landing),
+body:has(.koda-landing) {
+  background-color: #FFFFFF !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fallback for browsers without :has() support */
+body.koda-landing-page {
+  background-color: #FFFFFF !important;
+}
+
+.koda-landing {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  color: #111111;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ============================================
+   2. FULL-WIDTH SECTION SYSTEM
+   ============================================ */
+
+/* All section wrappers must be full width */
+.koda-landing .hero-section-wrapper,
+.koda-landing .workflow-section-wrapper,
+.koda-landing .pain-section-wrapper,
+.koda-landing .steps-section-wrapper,
+.koda-landing .features-section-wrapper,
+.koda-landing .final-cta-wrapper,
+.koda-landing .site-footer {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+  /* Fix the full-bleed hack from index.css that breaks layout */
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+/* Section backgrounds - full bleed */
+.koda-landing .hero-section-wrapper,
+.koda-landing .workflow-section-wrapper,
+.koda-landing .pain-section-wrapper,
+.koda-landing .steps-section-wrapper,
+.koda-landing .features-section-wrapper,
+.koda-landing .final-cta-wrapper {
+  background-color: #FFFFFF;
+}
+
+/* Override any dark backgrounds from old CSS */
+.koda-landing .homepage {
+  background-color: #FFFFFF !important;
+  width: 100%;
+}
+
+/* ============================================
+   3. CONTAINER SYSTEM - SINGLE SOURCE OF TRUTH
+   All sections MUST use this centered container
+   ============================================ */
+
+.koda-container {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* Tablet (<=1024px) */
+@media (max-width: 1024px) {
+  .koda-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Mobile (<=480px) */
+@media (max-width: 480px) {
+  .koda-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ============================================
+   4. SECTION SPACING SYSTEM (NO 100vh)
+   All sections use max-width: 1120px for consistency
+   ============================================ */
+
+.koda-landing section,
+.koda-landing .hero-section,
+.koda-landing .workflow-section,
+.koda-landing .pain-section,
+.koda-landing .steps-section,
+.koda-landing .features-section,
+.koda-landing .final-cta-section {
+  min-height: auto !important;
+  height: auto !important;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  width: 100%;
+  max-width: 1120px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* Hero section - slightly less top padding (header overlap) */
+.koda-landing .hero-section {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  /* Override old flex/column layout from index.css */
+  display: block !important;
+  flex-direction: unset !important;
+  align-items: unset !important;
+  justify-content: unset !important;
+  /* Fix clipping and fixed height from index.css */
+  overflow: visible !important;
+  height: auto !important;
+  max-width: 1120px !important;
+}
+
+/* Tablet spacing (<=1024px) */
+@media (max-width: 1024px) {
+  .koda-landing section,
+  .koda-landing .hero-section,
+  .koda-landing .workflow-section,
+  .koda-landing .pain-section,
+  .koda-landing .steps-section,
+  .koda-landing .features-section,
+  .koda-landing .final-cta-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .koda-landing .hero-section {
+    padding-top: 120px;
+    padding-bottom: 64px;
+  }
+}
+
+/* Mobile spacing (<=480px) */
+@media (max-width: 480px) {
+  .koda-landing section,
+  .koda-landing .hero-section,
+  .koda-landing .workflow-section,
+  .koda-landing .pain-section,
+  .koda-landing .steps-section,
+  .koda-landing .features-section,
+  .koda-landing .final-cta-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .koda-landing .hero-section {
+    padding-top: 100px;
+    padding-bottom: 48px;
+  }
+}
+
+/* ============================================
+   5. TEXT VISIBILITY SYSTEM
+   ============================================ */
+
+/* Default text colors - NEVER use opacity on parent wrappers */
+.koda-landing {
+  color: #111111;
+}
+
+.koda-landing h1,
+.koda-landing h2,
+.koda-landing h3,
+.koda-landing h4,
+.koda-landing h5,
+.koda-landing h6 {
+  color: #111111;
+  opacity: 1 !important;
+}
+
+.koda-landing p,
+.koda-landing li,
+.koda-landing span {
+  opacity: 1 !important;
+}
+
+/* Secondary text */
+.koda-text-secondary,
+.koda-landing .hero-subheadline,
+.koda-landing .workflow-subtitle,
+.koda-landing .pain-subtitle,
+.koda-landing .steps-subtitle,
+.koda-landing .features-subtitle,
+.koda-landing .final-cta-body {
+  color: #444444 !important;
+}
+
+/* Muted text */
+.koda-text-muted,
+.koda-landing .hero-microcopy,
+.koda-landing .hero-eyebrow,
+.koda-landing .final-cta-micro {
+  color: #666666 !important;
+}
+
+/* Fix any white-on-white text */
+.koda-landing .hero-text *,
+.koda-landing .workflow-panel-text *,
+.koda-landing .pain-text *,
+.koda-landing .step-card *,
+.koda-landing .features-content *,
+.koda-landing .final-cta-content * {
+  opacity: 1 !important;
+}
+
+/* ============================================
+   6. UNIFIED BUTTON SYSTEM
+   ============================================ */
+
+/* Base button */
+.koda-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 150ms ease;
+  white-space: nowrap;
+}
+
+/* Primary button */
+.koda-btn-primary,
+.koda-landing .hero-btn--primary,
+.koda-landing .workflow-btn--primary,
+.koda-landing .final-btn--primary {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+.koda-btn-primary:hover,
+.koda-landing .hero-btn--primary:hover,
+.koda-landing .workflow-btn--primary:hover,
+.koda-landing .final-btn--primary:hover {
+  background-color: #333333 !important;
+}
+
+.koda-btn-primary:active,
+.koda-landing .hero-btn--primary:active,
+.koda-landing .workflow-btn--primary:active,
+.koda-landing .final-btn--primary:active {
+  transform: scale(0.98);
+}
+
+/* Secondary button */
+.koda-btn-secondary,
+.koda-landing .hero-btn--secondary,
+.koda-landing .workflow-btn--secondary,
+.koda-landing .final-btn--secondary {
+  background-color: transparent !important;
+  color: #111111 !important;
+  border: 1px solid #E6E6E6 !important;
+}
+
+.koda-btn-secondary:hover,
+.koda-landing .hero-btn--secondary:hover,
+.koda-landing .workflow-btn--secondary:hover,
+.koda-landing .final-btn--secondary:hover {
+  background-color: #F5F5F5 !important;
+  border-color: #CCCCCC !important;
+}
+
+.koda-btn-secondary:active,
+.koda-landing .hero-btn--secondary:active,
+.koda-landing .workflow-btn--secondary:active,
+.koda-landing .final-btn--secondary:active {
+  transform: scale(0.98);
+}
+
+/* Focus visible for accessibility */
+.koda-btn:focus-visible,
+.koda-landing .hero-btn:focus-visible,
+.koda-landing .workflow-btn:focus-visible,
+.koda-landing .final-btn:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Demo button in header */
+.koda-landing .nav-links .demo-button {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.koda-landing .nav-links .demo-button:hover {
+  background-color: #333333 !important;
+}
+
+/* ============================================
+   7. HEADER FIXES
+   ============================================ */
+
+.koda-landing .main-nav {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid #E6E6E6 !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.koda-landing .main-nav .logo .content-icon {
+  filter: none;
+}
+
+.koda-landing .nav-links a {
+  color: #111111 !important;
+}
+
+.koda-landing .nav-links a:hover {
+  background-color: #F5F5F5 !important;
+}
+
+/* Language switcher */
+.koda-landing .language-switcher button {
+  color: #111111 !important;
+}
+
+/* ============================================
+   8. GRID & LAYOUT COMPONENTS
+   Note: Hero grid is defined in hero-section.css
+   Workflow grid is defined in workflow-section.css
+   ============================================ */
+
+/* No overrides needed - section CSS files handle their own grids */
+
+/* Workflow tabs */
+.koda-landing .workflow-tabs {
+  background-color: #F5F5F5 !important;
+  border: 1px solid #E6E6E6 !important;
+}
+
+.koda-landing .workflow-tab {
+  color: #666666 !important;
+}
+
+.koda-landing .workflow-tab.is-active {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+}
+
+.koda-landing .workflow-tab:hover:not(.is-active) {
+  color: #111111 !important;
+}
+
+/* Workflow panel */
+.koda-landing .workflow-panel-grid {
+  background-color: #FAFAFA !important;
+  border: 1px solid #E6E6E6 !important;
+}
+
+/* Step cards */
+.koda-landing .step-card {
+  background-color: #FAFAFA !important;
+  border: 1px solid #E6E6E6 !important;
+}
+
+.koda-landing .step-card:hover {
+  border-color: #CCCCCC !important;
+}
+
+.koda-landing .step-icon {
+  background-color: #F0F0F0 !important;
+  border: 1px solid #E6E6E6 !important;
+  color: #111111 !important;
+}
+
+.koda-landing .step-number {
+  background-color: #E6E6E6 !important;
+  color: #666666 !important;
+}
+
+/* Pain section bullets */
+.koda-landing .pain-bullets li::before {
+  border-color: #CCCCCC !important;
+}
+
+/* Feature items */
+.koda-landing .feature-item-new {
+  background-color: transparent;
+}
+
+.koda-landing .feature-item-new:hover {
+  background-color: #F5F5F5 !important;
+}
+
+.koda-landing .feature-icon-new {
+  background-color: #F0F0F0 !important;
+  border: 1px solid #E6E6E6 !important;
+  color: #111111 !important;
+}
+
+/* Media frames */
+.koda-landing .hero-media-frame,
+.koda-landing .workflow-media-frame,
+.koda-landing .pain-media-frame,
+.koda-landing .features-media-frame,
+.koda-landing .final-cta-media-frame {
+  background-color: #FAFAFA !important;
+  border: 1px solid #E6E6E6 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Final CTA bullets (green checks) */
+.koda-landing .final-cta-bullets li svg {
+  color: #22C55E !important;
+}
+
+/* ============================================
+   9. FOOTER STYLES
+   ============================================ */
+
+.koda-landing .site-footer {
+  background-color: #FAFAFA !important;
+  border-top: 1px solid #E6E6E6;
+  width: 100%;
+}
+
+.koda-landing .site-footer,
+.koda-landing .site-footer * {
+  color: #111111 !important;
+}
+
+.koda-landing .site-footer h4 {
+  color: #111111 !important;
+}
+
+.koda-landing .site-footer a {
+  color: #444444 !important;
+}
+
+.koda-landing .site-footer a:hover {
+  color: #111111 !important;
+}
+
+.koda-landing .footer-copyright {
+  color: #666666 !important;
+}
+
+.koda-landing .newsletter-form input {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E6E6E6 !important;
+  color: #111111 !important;
+}
+
+.koda-landing .newsletter-form input::placeholder {
+  color: #999999 !important;
+}
+
+.koda-landing .newsletter-submit {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+}
+
+/* ============================================
+   10. MOTION & ACCESSIBILITY
+   ============================================ */
+
+/* Subtle transitions only */
+.koda-landing * {
+  transition-duration: 180ms;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .koda-landing *,
+  .koda-landing *::before,
+  .koda-landing *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .koda-landing .hero-eyebrow,
+  .koda-landing .hero-headline,
+  .koda-landing .hero-subheadline,
+  .koda-landing .hero-cta-row,
+  .koda-landing .hero-microcopy,
+  .koda-landing .hero-bullets,
+  .koda-landing .hero-media-frame {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* ============================================
+   11. OVERRIDE OLD DARK THEME STYLES
+   ============================================ */
+
+/* Kill all dark backgrounds from old CSS */
+.koda-landing,
+.koda-landing .homepage,
+.koda-landing .hero-section-wrapper,
+.koda-landing .hero-section,
+.koda-landing .workflow-section-wrapper,
+.koda-landing .workflow-section,
+.koda-landing .pain-section-wrapper,
+.koda-landing .pain-section,
+.koda-landing .steps-section-wrapper,
+.koda-landing .steps-section,
+.koda-landing .features-section-wrapper,
+.koda-landing .features-section,
+.koda-landing .final-cta-wrapper,
+.koda-landing .final-cta-section {
+  background-color: #FFFFFF !important;
+}
+
+/* Override white text from dark theme */
+.koda-landing h1,
+.koda-landing h2,
+.koda-landing h3 {
+  color: #111111 !important;
+}
+
+.koda-landing .hero-headline,
+.koda-landing .hero-eyebrow,
+.koda-landing .workflow-title,
+.koda-landing .workflow-panel-title,
+.koda-landing .pain-title,
+.koda-landing .steps-title,
+.koda-landing .step-title,
+.koda-landing .features-title,
+.koda-landing .feature-text-new h3,
+.koda-landing .final-cta-title {
+  color: #111111 !important;
+}
+
+/* Bullet text */
+.koda-landing .hero-bullets li,
+.koda-landing .workflow-panel-bullets li,
+.koda-landing .pain-bullets li,
+.koda-landing .final-cta-bullets li {
+  color: #444444 !important;
+}
+
+.koda-landing .hero-bullets li svg,
+.koda-landing .pain-bullets li::before {
+  color: #999999 !important;
+}
+
+/* Step card body */
+.koda-landing .step-body {
+  color: #666666 !important;
+}
+
+/* Feature body text */
+.koda-landing .feature-text-new p {
+  color: #666666 !important;
+}
+
+/* ============================================
+   12. PREVENT HORIZONTAL SCROLL
+   ============================================ */
+
+.koda-landing {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure no element causes horizontal overflow */
+.koda-landing * {
+  max-width: 100%;
+}
+
+.koda-landing img,
+.koda-landing video,
+.koda-landing iframe {
+  max-width: 100%;
+  height: auto;
+}

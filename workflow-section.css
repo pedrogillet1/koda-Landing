@@ -1,0 +1,736 @@
+/* ============================================
+   KODA WORKFLOW SECTION - "Built for high-stakes work"
+   PIXEL-PERFECT REBUILD - Tabs with content panels
+   ============================================ */
+
+/* ============================================
+   1. SECTION WRAPPER & LAYOUT
+   ============================================ */
+
+.workflow-section-wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+.workflow-section {
+  width: 100% !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 96px 40px !important;
+  box-sizing: border-box !important;
+}
+
+/* ============================================
+   2. SECTION HEADER - LEFT ALIGNED
+   ============================================ */
+
+.workflow-header {
+  text-align: left;
+  margin-bottom: 24px;
+  max-width: none;
+  padding-left: 0;
+}
+
+.workflow-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  max-width: 720px;
+  /* Ensure wrapping */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.workflow-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #444444;
+  margin: 0;
+  max-width: 720px;
+  /* Ensure wrapping */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* ============================================
+   3. SEGMENTED TABS CONTAINER
+   ============================================ */
+
+.workflow-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  height: 44px;
+  padding: 4px;
+  background-color: #F4F4F4;
+  border: 1px solid #EAEAEA;
+  border-radius: 999px;
+  margin-bottom: 28px;
+  margin-left: 0;
+}
+
+/* ============================================
+   4. TAB BUTTONS - NO OPACITY HACKS
+   ============================================ */
+
+.workflow-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  height: 36px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #555555;
+  background-color: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease;
+  white-space: nowrap;
+}
+
+.workflow-tab:hover {
+  color: #333333;
+}
+
+.workflow-tab:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Active Tab - White bg, dark text, subtle shadow */
+.workflow-tab.is-active {
+  background-color: #FFFFFF;
+  color: #111111;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.workflow-tab.is-active:hover {
+  background-color: #FFFFFF;
+  color: #111111;
+}
+
+/* ============================================
+   5. TAB PANELS CONTAINER
+   ============================================ */
+
+.workflow-panels {
+  width: 100%;
+  position: relative;
+}
+
+.workflow-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.workflow-panel.is-active {
+  display: block;
+  opacity: 1;
+}
+
+.workflow-panel[hidden] {
+  display: none;
+}
+
+/* ============================================
+   6. CONTENT PANEL CARD
+   ============================================ */
+
+.workflow-panel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #ECECEC;
+  border-radius: 24px;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   7. LEFT PANEL - TEXT CONTENT
+   ============================================ */
+
+.workflow-panel-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.workflow-panel-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111111;
+  margin: 0 0 20px 0;
+}
+
+/* ============================================
+   8. BULLET LIST WITH GREEN CHECKS
+   ============================================ */
+
+.workflow-panel-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.workflow-panel-bullets li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #444444;
+}
+
+/* Green check icon */
+.workflow-panel-bullets li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%2322C55E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================
+   9. CTA BUTTONS
+   ============================================ */
+
+.workflow-panel-cta {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.workflow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+  white-space: nowrap;
+}
+
+.workflow-btn:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.workflow-btn--primary {
+  background-color: #111111;
+  color: #FFFFFF;
+  border: none;
+}
+
+.workflow-btn--primary:hover {
+  background-color: #333333;
+}
+
+.workflow-btn--primary:active {
+  transform: scale(0.98);
+}
+
+.workflow-btn--secondary {
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #E0E0E0;
+}
+
+.workflow-btn--secondary:hover {
+  border-color: #CCCCCC;
+  background-color: #F9F9F9;
+}
+
+.workflow-btn--secondary:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   10. RIGHT PANEL - MEDIA/IMAGE
+   ============================================ */
+
+.workflow-panel-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workflow-media-frame {
+  position: relative;
+  width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 20px;
+  padding: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.workflow-media-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Skeleton placeholder for missing/broken images */
+.workflow-media-frame img[src=""],
+.workflow-media-frame img:not([src]),
+.workflow-media-frame img.is-loading {
+  visibility: hidden;
+}
+
+.workflow-media-frame::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  background: linear-gradient(135deg, #F0F0F0 0%, #E8E8E8 50%, #F0F0F0 100%);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+/* When image is valid, show it above skeleton */
+.workflow-media-frame:has(img[src]:not([src=""])) img {
+  visibility: visible;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fallback for browsers without :has() */
+.workflow-media-frame.has-image::before {
+  display: none;
+}
+
+.workflow-media-frame.has-image img {
+  visibility: visible;
+}
+
+/* ============================================
+   11. CROSS-FADE ANIMATION
+   ============================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .workflow-panel {
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+
+  .workflow-panel.is-active {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workflow-panel {
+    transition: none;
+  }
+}
+
+/* ============================================
+   12. RESPONSIVE - LARGE DESKTOP (>=1440px)
+   ============================================ */
+
+@media (min-width: 1440px) {
+  .workflow-section {
+    padding: 112px 48px;
+  }
+
+  .workflow-title {
+    font-size: 48px;
+  }
+
+  .workflow-subtitle {
+    font-size: 19px;
+  }
+
+  .workflow-panel-grid {
+    gap: 56px;
+    padding: 36px;
+  }
+
+  .workflow-panel-title {
+    font-size: 26px;
+  }
+
+  .workflow-panel-bullets li {
+    font-size: 17px;
+  }
+}
+
+/* ============================================
+   13. RESPONSIVE - DESKTOP (1024-1279px)
+   ============================================ */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .workflow-section {
+    padding: 88px 40px;
+  }
+
+  .workflow-title {
+    font-size: 40px;
+  }
+
+  .workflow-panel-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 28px;
+  }
+}
+
+/* ============================================
+   14. RESPONSIVE - TABLET (768-1023px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .workflow-section {
+    padding: 72px 32px;
+  }
+
+  .workflow-header {
+    margin-bottom: 20px;
+  }
+
+  .workflow-title {
+    font-size: 36px;
+  }
+
+  .workflow-subtitle {
+    font-size: 16px;
+  }
+
+  .workflow-tabs {
+    margin-bottom: 24px;
+  }
+
+  .workflow-tab {
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .workflow-panel-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 24px;
+  }
+
+  .workflow-panel-text {
+    order: 1;
+  }
+
+  .workflow-panel-media {
+    order: 2;
+  }
+
+  .workflow-media-frame {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   15. RESPONSIVE - MOBILE (<=767px)
+   Stack: H2, subhead, tabs, then content card
+   ============================================ */
+
+@media (max-width: 767px) {
+  .workflow-section {
+    padding: 64px 20px;
+  }
+
+  .workflow-header {
+    margin-bottom: 18px;
+    max-width: 100%;
+  }
+
+  .workflow-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+    max-width: 100%;
+  }
+
+  .workflow-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* Horizontally scrollable tabs */
+  .workflow-tabs {
+    display: flex;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 4px 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    background-color: #F4F4F4;
+    height: auto;
+    gap: 8px;
+  }
+
+  .workflow-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .workflow-tab {
+    flex: 0 0 auto;
+    padding: 0 18px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  /* Content card vertical layout */
+  .workflow-panel-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .workflow-panel-text {
+    order: 1;
+  }
+
+  .workflow-panel-media {
+    order: 2;
+  }
+
+  .workflow-panel-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .workflow-panel-bullets {
+    margin-bottom: 16px;
+    gap: 10px;
+  }
+
+  .workflow-panel-bullets li {
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .workflow-panel-bullets li::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Buttons stacked full-width */
+  .workflow-panel-cta {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .workflow-btn {
+    width: 100%;
+    height: 46px;
+    justify-content: center;
+  }
+
+  .workflow-media-frame {
+    padding: 10px;
+    border-radius: 16px;
+  }
+
+  .workflow-media-frame img {
+    border-radius: 10px;
+  }
+
+  .workflow-media-frame::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+  }
+}
+
+/* ============================================
+   16. RESPONSIVE - SMALL MOBILE (<=480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  .workflow-section {
+    padding: 56px 20px;
+  }
+
+  .workflow-title {
+    font-size: 26px;
+  }
+
+  .workflow-subtitle {
+    font-size: 15px;
+  }
+
+  .workflow-tabs {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 4px 20px;
+  }
+
+  .workflow-tab {
+    padding: 0 14px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .workflow-panel-grid {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .workflow-panel-title {
+    font-size: 18px;
+  }
+
+  .workflow-panel-bullets li {
+    font-size: 14px;
+  }
+
+  .workflow-panel-bullets li::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .workflow-btn {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .workflow-media-frame {
+    padding: 8px;
+    border-radius: 14px;
+  }
+
+  .workflow-media-frame img {
+    border-radius: 8px;
+  }
+
+  .workflow-media-frame::before {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 8px;
+  }
+}
+
+/* ============================================
+   17. RESPONSIVE - TINY MOBILE (<=360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+  .workflow-section {
+    padding: 48px 16px;
+  }
+
+  .workflow-title {
+    font-size: 24px;
+  }
+
+  .workflow-subtitle {
+    font-size: 14px;
+  }
+
+  .workflow-tabs {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    padding: 4px 16px;
+  }
+
+  .workflow-tab {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .workflow-panel-grid {
+    padding: 14px;
+    gap: 20px;
+  }
+
+  .workflow-panel-title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .workflow-panel-bullets li {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .workflow-panel-bullets li::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  .workflow-btn {
+    height: 42px;
+    font-size: 13px;
+  }
+}
+
+/* ============================================
+   18. HIDE OLD ELEMENTS
+   ============================================ */
+
+.workflow-grid,
+.workflow-card,
+.workflow-divider,
+.workflow-cta:not(.workflow-panel-cta) {
+  display: none !important;
+}

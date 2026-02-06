@@ -1,0 +1,449 @@
+/* ============================================
+   KODA STEPS SECTION - "How It Works"
+   PIXEL-PERFECT REBUILD - 3 compact cards
+   ============================================ */
+
+/* ============================================
+   1. SECTION WRAPPER
+   ============================================ */
+
+.steps-section-wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+.steps-section {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 96px 40px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   2. SECTION HEADER - CENTERED
+   ============================================ */
+
+.steps-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.steps-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 12px 0;
+}
+
+.steps-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0;
+}
+
+/* ============================================
+   3. STEPS GRID - 3 CARDS
+   ============================================ */
+
+.steps-grid {
+  display: flex;
+  gap: 24px;
+}
+
+/* ============================================
+   4. STEP CARD - COMPACT
+   ============================================ */
+
+.step-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px;
+  background-color: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 24px;
+  box-sizing: border-box;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.step-card:hover {
+  border-color: #DDDDDD;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* ============================================
+   5. STEP ICON - 28px
+   ============================================ */
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  color: #111111;
+}
+
+.step-icon svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   6. STEP NUMBER - HIDDEN (cleaner look)
+   ============================================ */
+
+.step-number {
+  display: none;
+}
+
+/* ============================================
+   7. STEP TITLE & BODY
+   ============================================ */
+
+.step-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111111;
+  margin: 0 0 10px 0;
+}
+
+.step-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #444444;
+  margin: 0;
+}
+
+/* ============================================
+   8. SCROLL ANIMATION - STAGGERED FADE UP
+   ============================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .step-card {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease,
+      border-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  /* Staggered delays */
+  .steps-section.is-visible .step-card:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0ms;
+  }
+
+  .steps-section.is-visible .step-card:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 80ms;
+  }
+
+  .steps-section.is-visible .step-card:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 160ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step-card {
+    opacity: 1;
+    transform: none;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+  }
+}
+
+/* ============================================
+   9. RESPONSIVE - LARGE DESKTOP (>=1440px)
+   ============================================ */
+
+@media (min-width: 1440px) {
+  .steps-section {
+    padding: 112px 48px;
+  }
+
+  .steps-title {
+    font-size: 44px;
+  }
+
+  .steps-subtitle {
+    font-size: 17px;
+  }
+
+  .steps-grid {
+    gap: 28px;
+  }
+
+  .step-card {
+    padding: 32px;
+  }
+
+  .step-title {
+    font-size: 22px;
+  }
+
+  .step-body {
+    font-size: 16px;
+  }
+}
+
+/* ============================================
+   10. RESPONSIVE - DESKTOP (1024-1439px)
+   ============================================ */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .steps-section {
+    padding: 88px 40px;
+  }
+
+  .steps-title {
+    font-size: 38px;
+  }
+}
+
+/* ============================================
+   11. RESPONSIVE - TABLET (768-1023px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .steps-section {
+    padding: 72px 32px;
+  }
+
+  .steps-header {
+    margin-bottom: 40px;
+  }
+
+  .steps-title {
+    font-size: 34px;
+  }
+
+  .steps-subtitle {
+    font-size: 15px;
+  }
+
+  .steps-grid {
+    gap: 20px;
+  }
+
+  .step-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .step-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  .step-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .step-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .step-body {
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   12. RESPONSIVE - SMALL TABLET (481-767px)
+   ============================================ */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .steps-section {
+    padding: 64px 24px;
+  }
+
+  .steps-header {
+    margin-bottom: 36px;
+  }
+
+  .steps-title {
+    font-size: 30px;
+  }
+
+  .steps-subtitle {
+    font-size: 15px;
+  }
+
+  /* Stack cards vertically */
+  .steps-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .step-card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .step-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+
+  .step-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .step-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .step-body {
+    font-size: 15px;
+  }
+}
+
+/* ============================================
+   13. RESPONSIVE - MOBILE (<=480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  .steps-section {
+    padding: 56px 20px;
+  }
+
+  .steps-header {
+    margin-bottom: 32px;
+  }
+
+  .steps-title {
+    font-size: 28px;
+  }
+
+  .steps-subtitle {
+    font-size: 15px;
+  }
+
+  /* Stack cards vertically */
+  .steps-grid {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .step-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .step-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    margin-bottom: 14px;
+  }
+
+  .step-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .step-title {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .step-body {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444444;
+  }
+}
+
+/* ============================================
+   14. RESPONSIVE - SMALL MOBILE (<=360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+  .steps-section {
+    padding: 48px 16px;
+  }
+
+  .steps-header {
+    margin-bottom: 28px;
+  }
+
+  .steps-title {
+    font-size: 26px;
+  }
+
+  .steps-subtitle {
+    font-size: 14px;
+  }
+
+  .steps-grid {
+    gap: 12px;
+  }
+
+  .step-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  .step-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .step-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .step-body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* ============================================
+   15. HIDE OLD HOW-IT-WORKS ELEMENTS
+   ============================================ */
+
+.how-it-works-section-wrapper {
+  display: none !important;
+}

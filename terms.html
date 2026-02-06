@@ -4,6 +4,10 @@
   	<meta charset="utf-8">
   	<meta name="viewport" content="initial-scale=1, width=device-width">
 
+  	<!-- Favicon -->
+  	<link rel="icon" type="image/svg+xml" href="assets/images/koda-knot-glyph.svg">
+  	<link rel="apple-touch-icon" href="assets/images/koda-knot-glyph.svg">
+
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
   	<link rel="stylesheet" href="./design-system.css" />
   	<link rel="stylesheet" href="./terms.css?v=1733620000" />
@@ -14,6 +18,9 @@
   	<link rel="stylesheet" href="./koda-mobile-consistency.css?v=1765216745" />
   	<link rel="stylesheet" href="./mobile-header-fix.css?v=1765216940" />
   	<link rel="stylesheet" href="./mobile-footer-fix.css?v=1764971001" />
+  	<link rel="stylesheet" href="./koda-header.css?v=1765220400" />
+  	<link rel="stylesheet" href="./compact-footer.css?v=1765220600" />
+  	<link rel="stylesheet" href="./koda-buttons.css?v=1765220700" />
 
   	<title>Terms of Service - Koda</title>
 </head>
@@ -169,52 +176,19 @@
     		</section>
 		</div>
 
-    		<!-- Footer -->
-    		<footer class="site-footer">
-      			<div class="footer-main">
-        				<!-- Left Side: Logo and Newsletter -->
-        				<div class="footer-left">
-          					<img src="assets/images/koda-knot-glyph.svg" alt="Koda Logo" class="footer-logo">
-          					<form class="newsletter-form">
-            						<input type="email" placeholder="Your email address" data-i18n-key="footer.newsletter_placeholder">
-            						<button type="submit" class="newsletter-submit">
-              							<span data-i18n-key="footer.newsletter_button">Subscribe to our newsletter</span>
-              							<div class="arrow-circle">
-                								<img src="assets/icons/send-icon.svg" alt="Submit">
-              							</div>
-            						</button>
-          					</form>
+    		<!-- Compact Footer -->
+    		<footer class="compact-footer">
+      			<div class="compact-footer-inner">
+        				<div class="compact-footer-left">
+          					<img src="assets/images/koda-knot-glyph.svg" alt="Koda Logo" class="compact-footer-logo">
+          					<p class="compact-footer-copyright" data-i18n-key="footer.copyright">© 2025 Koda. All rights reserved.</p>
         				</div>
-
-        				<!-- Right Side: Navigation Links -->
-        				<div class="footer-nav">
-          					<div class="nav-column">
-            						<h4 data-i18n-key="footer.company">Company</h4>
-            						<a href="about.html"><span data-i18n-key="nav.about">About Koda</span> <img src="assets/icons/chevron-right.svg" alt=">"></a>
-            						<a href="contact.html"><span data-i18n-key="nav.contact">Contact</span> <img src="assets/icons/chevron-right.svg" alt=">"></a>
-          					</div>
-          					<div class="nav-column">
-            						<h4 data-i18n-key="footer.policy">Policy</h4>
-            						<a href="terms.html"><span data-i18n-key="footer.terms">Our Terms of Use</span> <img src="assets/icons/chevron-right.svg" alt=">"></a>
-            						<a href="privacy.html"><span data-i18n-key="footer.privacy">Privacy Policy</span> <img src="assets/icons/chevron-right.svg" alt=">"></a>
-          					</div>
-        				</div>
-      			</div>
-
-      			<!-- Watermark Logo -->
-      			<div class="footer-watermark">
-        				<img src="assets/images/koda-knot-glyph.svg" alt="Koda">
-      			</div>
-
-      			<!-- Copyright + Back to Top -->
-      			<div class="footer-bottom-bar">
-        				<div class="footer-copyright">
-          					<span data-i18n-key="footer.copyright">© 2025 Koda. All rights reserved.</span>
-        				</div>
-        				<a href="#top" class="back-to-top">
-          					<span data-i18n-key="footer.back_to_top">Back to Top</span>
-          					<img src="assets/icons/chevron-up.svg" alt="^">
-        				</a>
+        				<nav class="compact-footer-links">
+          					<a href="about.html" class="compact-footer-link" data-i18n-key="nav.about">About Koda</a>
+          					<a href="contact.html" class="compact-footer-link" data-i18n-key="nav.contact">Contact</a>
+          					<a href="terms.html" class="compact-footer-link" data-i18n-key="footer.terms_short">Terms of Use</a>
+          					<a href="privacy.html" class="compact-footer-link" data-i18n-key="footer.privacy_short">Privacy Policy</a>
+        				</nav>
       			</div>
     		</footer>
   	</div>

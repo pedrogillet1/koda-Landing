@@ -1,4 +1,4 @@
-// Mobile Menu Toggle Functionality
+// Mobile Menu Toggle Functionality + Header Scroll Behavior
 (function() {
     'use strict';
 
@@ -6,7 +6,43 @@
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mainNav = document.getElementById('main-nav');
         const body = document.body;
+
+        // ============================================
+        // HEADER SCROLL BEHAVIOR
+        // ============================================
+        if (mainNav) {
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+
+            function updateHeader() {
+                const scrollY = window.scrollY;
+
+                // Add/remove scrolled class based on scroll position
+                if (scrollY > 50) {
+                    mainNav.classList.add('is-scrolled');
+                } else {
+                    mainNav.classList.remove('is-scrolled');
+                }
+
+                lastScrollY = scrollY;
+                ticking = false;
+            }
+
+            // Use requestAnimationFrame for smooth performance
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateHeader();
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Initial check
+            updateHeader();
+        }
 
         if (!mobileMenuBtn || !mobileMenu) {
             console.warn('Mobile menu elements not found');

@@ -1,30 +1,98 @@
-// Scroll-triggered animations for About Koda page
+// Scroll-triggered animations for Koda pages
 document.addEventListener("DOMContentLoaded", () => {
+    // Generic animate-on-scroll elements
     const sectionsToAnimate = document.querySelectorAll(".animate-on-scroll");
 
-    if (!sectionsToAnimate || sectionsToAnimate.length === 0) {
-        return;
+    if (sectionsToAnimate && sectionsToAnimate.length > 0) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        sectionsToAnimate.forEach(section => {
+            observer.observe(section);
+        });
     }
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            // If the element is intersecting the viewport, add the 'is-visible' class
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-            }
-            // Optional: Uncomment below to re-animate when scrolling back up
-            // else {
-            //     entry.target.classList.remove("is-visible");
-            // }
-        });
-    }, {
-        root: null, // observes intersections relative to the viewport
-        threshold: 0.2, // Trigger when 20% of the element is visible
-        rootMargin: "0px 0px -50px 0px" // Trigger slightly before element enters viewport
-    });
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Observe each of the sections
-    sectionsToAnimate.forEach(section => {
-        observer.observe(section);
-    });
+    // Pain section highlight animation
+    const painSection = document.querySelector(".pain-section");
+
+    if (painSection) {
+        if (prefersReducedMotion) {
+            painSection.classList.add("is-visible");
+        } else {
+            const painObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        painObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.3,
+                rootMargin: "0px"
+            });
+
+            painObserver.observe(painSection);
+        }
+    }
+
+    // Steps section staggered fade-up animation
+    const stepsSection = document.querySelector(".steps-section");
+
+    if (stepsSection) {
+        if (prefersReducedMotion) {
+            stepsSection.classList.add("is-visible");
+        } else {
+            const stepsObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        stepsObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.2,
+                rootMargin: "0px"
+            });
+
+            stepsObserver.observe(stepsSection);
+        }
+    }
+
+    // Final CTA section staggered checklist animation
+    const finalCtaSection = document.querySelector(".final-cta-section");
+
+    if (finalCtaSection) {
+        if (prefersReducedMotion) {
+            finalCtaSection.classList.add("is-visible");
+        } else {
+            const ctaObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        ctaObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.25,
+                rootMargin: "0px"
+            });
+
+            ctaObserver.observe(finalCtaSection);
+        }
+    }
 });

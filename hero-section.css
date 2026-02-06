@@ -1,0 +1,773 @@
+/* ============================================
+   KODA HERO SECTION - PIXEL-PERFECT REBUILD
+   Desktop (>=1280px) exact specs
+   ============================================ */
+
+/* ============================================
+   1. SECTION WRAPPER & LAYOUT
+   ============================================ */
+
+.hero-section-wrapper {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.hero-section {
+  width: 100% !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 120px 40px 72px 40px !important;
+  box-sizing: border-box !important;
+}
+
+/* ============================================
+   2. HERO GRID - 2 COLUMNS (EXACT SPECS)
+   ============================================ */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ============================================
+   3. LEFT TEXT COLUMN
+   ============================================ */
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 520px;
+}
+
+/* Eyebrow - optional small text */
+.hero-eyebrow {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #666666;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.02em;
+}
+
+/* H1 Headline */
+.hero-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 20px 0;
+  max-width: 520px;
+}
+
+/* Subheadline */
+.hero-subheadline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #444444;
+  margin: 0 0 24px 0;
+  max-width: 520px;
+}
+
+/* ============================================
+   4. CTA ROW - REAL BUTTONS
+   ============================================ */
+
+.hero-cta-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* Primary Button */
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 24px;
+  background-color: #111111;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+  white-space: nowrap;
+}
+
+.hero-btn-primary:hover {
+  background-color: #333333;
+}
+
+.hero-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.hero-btn-primary:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Secondary Button */
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 24px;
+  background-color: transparent;
+  color: #111111;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid #E0E0E0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+  white-space: nowrap;
+}
+
+.hero-btn-secondary:hover {
+  background-color: #F9F9F9;
+  border-color: #CCCCCC;
+}
+
+.hero-btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.hero-btn-secondary:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Support for .koda-btn classes in hero */
+.hero-cta-row .koda-btn {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 15px;
+}
+
+/* ============================================
+   5. PROOF POINTS ROW
+   ============================================ */
+
+.hero-proof-points {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 0;
+}
+
+.proof-point {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.proof-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   6. RIGHT MEDIA COLUMN
+   ============================================ */
+
+.hero-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ============================================
+   7. REUSABLE MEDIA FRAME COMPONENT
+   ============================================ */
+
+.koda-media-frame,
+.hero-media-frame {
+  position: relative;
+  width: 100%;
+  padding: 18px;
+  background-color: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 28px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.koda-media-frame img,
+.hero-media-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Skeleton placeholder for missing/broken images */
+.koda-media-frame img[src=""],
+.koda-media-frame img:not([src]),
+.hero-media-frame img[src=""],
+.hero-media-frame img:not([src]),
+.koda-media-frame img.is-loading,
+.hero-media-frame img.is-loading {
+  visibility: hidden;
+}
+
+.koda-media-frame::before,
+.hero-media-frame::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  background: linear-gradient(135deg, #F0F0F0 0%, #E8E8E8 50%, #F0F0F0 100%);
+  border-radius: 18px;
+  z-index: 0;
+}
+
+/* When image is valid, hide the skeleton */
+.koda-media-frame:has(img[src]:not([src=""])) img,
+.hero-media-frame:has(img[src]:not([src=""])) img {
+  visibility: visible;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fallback for browsers without :has() - use JS class */
+.koda-media-frame.has-image::before,
+.hero-media-frame.has-image::before {
+  display: none;
+}
+
+.koda-media-frame.has-image img,
+.hero-media-frame.has-image img {
+  visibility: visible;
+}
+
+/* ============================================
+   8. ANIMATIONS (subtle)
+   ============================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-text {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: heroTextFadeUp 180ms ease forwards;
+  }
+
+  .hero-media-frame {
+    opacity: 0;
+    animation: heroMediaFadeIn 220ms ease 80ms forwards;
+  }
+
+  @keyframes heroTextFadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes heroMediaFadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/* Disable animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-text,
+  .hero-media-frame {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* ============================================
+   9. RESPONSIVE - LARGE DESKTOP (>=1440px)
+   ============================================ */
+
+@media (min-width: 1440px) {
+  .hero-section {
+    padding: 96px 48px 80px 48px;
+  }
+
+  .hero-grid {
+    gap: 48px;
+  }
+
+  .hero-headline {
+    font-size: 60px;
+  }
+
+  .hero-subheadline {
+    font-size: 19px;
+  }
+}
+
+/* ============================================
+   10. RESPONSIVE - DESKTOP (1024-1279px)
+   ============================================ */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-section {
+    padding: 80px 40px 64px 40px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .hero-headline {
+    font-size: 48px;
+  }
+
+  .hero-subheadline {
+    font-size: 17px;
+  }
+}
+
+/* ============================================
+   11. RESPONSIVE - TABLET (768-1023px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section {
+    padding: 72px 32px 56px 32px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-headline {
+    font-size: 40px;
+    max-width: 100%;
+  }
+
+  .hero-subheadline {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-cta-row .koda-btn,
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .hero-proof-points {
+    gap: 16px;
+  }
+
+  .proof-point {
+    font-size: 13px;
+  }
+
+  .koda-media-frame,
+  .hero-media-frame {
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .koda-media-frame img,
+  .hero-media-frame img {
+    border-radius: 14px;
+  }
+
+  .koda-media-frame::before,
+  .hero-media-frame::before {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    border-radius: 14px;
+  }
+}
+
+/* ============================================
+   12. RESPONSIVE - MOBILE (<=767px)
+   Stack columns: text then media
+   ============================================ */
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 56px 20px 48px 20px;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .hero-text {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .hero-media {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .hero-headline {
+    font-size: 36px;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .hero-subheadline {
+    font-size: 16px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Buttons stacked full width with 10px gap */
+  .hero-cta-row {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-cta-row .koda-btn,
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+  }
+
+  .hero-proof-points {
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .proof-point {
+    font-size: 13px;
+  }
+
+  /* Media frame stays 16:10, full width */
+  .koda-media-frame,
+  .hero-media-frame {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    aspect-ratio: 16 / 10;
+  }
+
+  .koda-media-frame img,
+  .hero-media-frame img {
+    border-radius: 12px;
+  }
+
+  .koda-media-frame::before,
+  .hero-media-frame::before {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border-radius: 12px;
+  }
+}
+
+/* ============================================
+   13. RESPONSIVE - SMALL MOBILE (<=480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 48px 20px 40px 20px;
+  }
+
+  .hero-grid {
+    gap: 28px;
+  }
+
+  .hero-headline {
+    font-size: 32px;
+  }
+
+  .hero-subheadline {
+    font-size: 15px;
+  }
+
+  .hero-cta-row .koda-btn,
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .koda-media-frame,
+  .hero-media-frame {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .koda-media-frame img,
+  .hero-media-frame img {
+    border-radius: 10px;
+  }
+
+  .koda-media-frame::before,
+  .hero-media-frame::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+  }
+}
+
+/* ============================================
+   14. RESPONSIVE - TINY MOBILE (<=360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+  .hero-section {
+    padding: 40px 16px 36px 16px;
+  }
+
+  .hero-grid {
+    gap: 24px;
+  }
+
+  .hero-headline {
+    font-size: 28px;
+  }
+
+  .hero-subheadline {
+    font-size: 14px;
+  }
+
+  .hero-proof-points {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .proof-point {
+    font-size: 12px;
+  }
+
+  .koda-media-frame,
+  .hero-media-frame {
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .koda-media-frame img,
+  .hero-media-frame img {
+    border-radius: 8px;
+  }
+
+  .koda-media-frame::before,
+  .hero-media-frame::before {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 8px;
+  }
+}
+
+/* ============================================
+   15. HEADER STYLES (kept in hero for context)
+   ============================================ */
+
+.main-nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  width: 92%;
+  max-width: 1120px;
+  height: 56px;
+  box-sizing: border-box;
+  z-index: 1000;
+  border: 1px solid #E6E6E6;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.main-nav.is-scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  border-color: #DDDDDD;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo .content-icon {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links a {
+  color: #111111;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: background-color 150ms ease;
+}
+
+.nav-links a:hover {
+  background-color: #F5F5F5;
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.nav-links .demo-button {
+  background-color: #111111;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: background-color 150ms ease;
+}
+
+.nav-links .demo-button:hover {
+  background-color: #333333;
+}
+
+/* Language Switcher */
+.language-switcher {
+  position: relative;
+}
+
+.language-switcher button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: #111111;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: background-color 150ms ease;
+}
+
+.language-switcher button:hover {
+  background-color: #F5F5F5;
+}
+
+.language-switcher .dropdown-arrow {
+  font-size: 9px;
+  opacity: 0.6;
+  transition: transform 180ms ease;
+}
+
+.language-switcher button[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* ============================================
+   16. DESKTOP-ONLY / MOBILE-ONLY UTILITIES
+   ============================================ */
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   17. HIDE OLD HERO ELEMENTS
+   ============================================ */
+
+.hero-microcopy,
+.hero-bullets {
+  display: none !important;
+}

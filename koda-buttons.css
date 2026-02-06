@@ -1,0 +1,329 @@
+/* ============================================
+   KODA UNIFIED BUTTON SYSTEM
+   Premium buttons with subtle micro-interactions
+   ============================================ */
+
+/* ============================================
+   1. BASE BUTTON STYLES
+   ============================================ */
+
+/* Primary Button - Solid Dark */
+.hero-btn-primary,
+.workflow-btn--primary,
+.final-btn--primary,
+.about-hero-btn-primary,
+.about-btn-primary,
+.demo-button,
+.mobile-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 24px;
+  background-color: #181818 !important;
+  color: #FFFFFF !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border: none !important;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+  white-space: nowrap;
+}
+
+/* Primary Button Hover - Lift + Shadow */
+.hero-btn-primary:hover,
+.workflow-btn--primary:hover,
+.final-btn--primary:hover,
+.about-hero-btn-primary:hover,
+.about-btn-primary:hover,
+.demo-button:hover,
+.mobile-cta-btn:hover {
+  background-color: #2a2a2a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary Button Active */
+.hero-btn-primary:active,
+.workflow-btn--primary:active,
+.final-btn--primary:active,
+.about-hero-btn-primary:active,
+.about-btn-primary:active,
+.demo-button:active,
+.mobile-cta-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary Button Focus */
+.hero-btn-primary:focus-visible,
+.workflow-btn--primary:focus-visible,
+.final-btn--primary:focus-visible,
+.about-hero-btn-primary:focus-visible,
+.about-btn-primary:focus-visible,
+.demo-button:focus-visible,
+.mobile-cta-btn:focus-visible {
+  outline: 2px solid #181818;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   2. SECONDARY BUTTON - OUTLINE PILL
+   ============================================ */
+
+.hero-btn-secondary,
+.workflow-btn--secondary,
+.final-btn--secondary,
+.about-hero-btn-secondary,
+.about-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 24px;
+  background-color: transparent !important;
+  color: #181818 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border: 1.5px solid #D0D0D0 !important;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+  white-space: nowrap;
+}
+
+/* Secondary Button Hover - Subtle Fill + Lift */
+.hero-btn-secondary:hover,
+.workflow-btn--secondary:hover,
+.final-btn--secondary:hover,
+.about-hero-btn-secondary:hover,
+.about-btn-secondary:hover {
+  background-color: #F5F5F5 !important;
+  border-color: #B0B0B0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Secondary Button Active */
+.hero-btn-secondary:active,
+.workflow-btn--secondary:active,
+.final-btn--secondary:active,
+.about-hero-btn-secondary:active,
+.about-btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Secondary Button Focus */
+.hero-btn-secondary:focus-visible,
+.workflow-btn--secondary:focus-visible,
+.final-btn--secondary:focus-visible,
+.about-hero-btn-secondary:focus-visible,
+.about-btn-secondary:focus-visible {
+  outline: 2px solid #181818;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   3. HEADER BUTTON - CONSISTENT STYLING
+   ============================================ */
+
+.nav-links .demo-button,
+.koda-landing .nav-links .demo-button,
+.koda-about .nav-links .demo-button {
+  height: 40px !important;
+  padding: 0 20px !important;
+  font-size: 14px !important;
+  background-color: #181818 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 999px !important;
+}
+
+.nav-links .demo-button:hover,
+.koda-landing .nav-links .demo-button:hover,
+.koda-about .nav-links .demo-button:hover {
+  background-color: #2a2a2a !important;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================
+   4. CARD HOVER EFFECTS
+   ============================================ */
+
+/* Step Cards */
+.step-card {
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #D0D0D0 !important;
+}
+
+/* Feature Items */
+.feature-item-new {
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+@media (min-width: 769px) {
+  .feature-item-new:hover {
+    background-color: #F8F8F8;
+    transform: translateX(4px);
+  }
+}
+
+/* Workflow Panel Cards */
+.workflow-panel-grid {
+  transition:
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+
+.workflow-panel-grid:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: #D8D8D8 !important;
+}
+
+/* ============================================
+   5. TAB SMOOTH TRANSITIONS
+   ============================================ */
+
+.workflow-tab {
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease,
+    transform 150ms ease;
+}
+
+.workflow-tab:hover:not(.is-active) {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.workflow-tab.is-active {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   6. MEDIA FRAME HOVER
+   ============================================ */
+
+.hero-media-frame,
+.workflow-media-frame,
+.pain-media-frame,
+.features-media-frame,
+.final-cta-media-frame {
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.hero-media-frame:hover,
+.workflow-media-frame:hover,
+.pain-media-frame:hover,
+.features-media-frame:hover,
+.final-cta-media-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   7. REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-btn-primary,
+  .hero-btn-secondary,
+  .workflow-btn--primary,
+  .workflow-btn--secondary,
+  .final-btn--primary,
+  .final-btn--secondary,
+  .about-hero-btn-primary,
+  .about-hero-btn-secondary,
+  .about-btn-primary,
+  .about-btn-secondary,
+  .demo-button,
+  .mobile-cta-btn,
+  .step-card,
+  .feature-item-new,
+  .workflow-panel-grid,
+  .workflow-tab,
+  .hero-media-frame,
+  .workflow-media-frame,
+  .pain-media-frame,
+  .features-media-frame,
+  .final-cta-media-frame {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   8. MOBILE BUTTON ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 767px) {
+  .hero-btn-primary,
+  .hero-btn-secondary,
+  .workflow-btn--primary,
+  .workflow-btn--secondary,
+  .final-btn--primary,
+  .final-btn--secondary,
+  .about-hero-btn-primary,
+  .about-hero-btn-secondary,
+  .about-btn-primary,
+  .about-btn-secondary {
+    height: 48px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Disable hover lift on touch devices */
+  .hero-btn-primary:hover,
+  .hero-btn-secondary:hover,
+  .workflow-btn--primary:hover,
+  .workflow-btn--secondary:hover,
+  .final-btn--primary:hover,
+  .final-btn--secondary:hover,
+  .about-hero-btn-primary:hover,
+  .about-hero-btn-secondary:hover,
+  .about-btn-primary:hover,
+  .about-btn-secondary:hover {
+    transform: none;
+  }
+
+  /* Disable card hover on mobile */
+  .step-card:hover,
+  .feature-item-new:hover,
+  .workflow-panel-grid:hover,
+  .hero-media-frame:hover,
+  .workflow-media-frame:hover,
+  .pain-media-frame:hover,
+  .features-media-frame:hover,
+  .final-cta-media-frame:hover {
+    transform: none;
+  }
+}

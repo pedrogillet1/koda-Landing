@@ -1,0 +1,547 @@
+/* ============================================
+   KODA FINAL CTA SECTION - PIXEL-PERFECT REBUILD
+   Full-bleed white background, conversion block
+   ============================================ */
+
+/* ============================================
+   1. SECTION WRAPPER - FULL BLEED WHITE
+   ============================================ */
+
+.final-cta-wrapper {
+  background-color: #FFFFFF;
+  width: 100%;
+}
+
+.final-cta-section {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 96px 40px;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   2. GRID LAYOUT - TEXT LEFT, IMAGE RIGHT
+   ============================================ */
+
+.final-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* ============================================
+   3. CONTENT COLUMN (LEFT)
+   ============================================ */
+
+.final-cta-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.final-cta-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 16px 0;
+  max-width: 560px;
+}
+
+.final-cta-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #444444;
+  margin: 0 0 28px 0;
+  max-width: 520px;
+}
+
+/* ============================================
+   4. CHECKLIST - ICON + TEXT
+   ============================================ */
+
+.final-cta-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.final-cta-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #444444;
+}
+
+.final-cta-bullets li svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: #22C55E;
+  stroke: #22C55E;
+}
+
+.final-cta-bullets li span {
+  color: #444444;
+}
+
+/* ============================================
+   5. STAGGERED CHECKLIST ANIMATION
+   ============================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .final-cta-bullets li {
+    opacity: 0;
+    transition: opacity 200ms ease;
+  }
+
+  .final-cta-section.is-visible .final-cta-bullets li:nth-child(1) {
+    opacity: 1;
+    transition-delay: 0ms;
+  }
+
+  .final-cta-section.is-visible .final-cta-bullets li:nth-child(2) {
+    opacity: 1;
+    transition-delay: 120ms;
+  }
+
+  .final-cta-section.is-visible .final-cta-bullets li:nth-child(3) {
+    opacity: 1;
+    transition-delay: 240ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .final-cta-bullets li {
+    opacity: 1;
+    transition: none;
+  }
+}
+
+/* ============================================
+   6. CTA BUTTONS
+   ============================================ */
+
+.final-cta-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.final-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 28px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+  white-space: nowrap;
+}
+
+.final-btn:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.final-btn--primary {
+  background-color: #111111;
+  color: #FFFFFF;
+  border: none;
+}
+
+.final-btn--primary:hover {
+  background-color: #333333;
+}
+
+.final-btn--primary:active {
+  transform: scale(0.98);
+}
+
+.final-btn--secondary {
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid #E0E0E0;
+}
+
+.final-btn--secondary:hover {
+  border-color: #CCCCCC;
+  background-color: #F9F9F9;
+}
+
+.final-btn--secondary:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   7. REASSURANCE MICROCOPY
+   ============================================ */
+
+.final-cta-micro {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0;
+}
+
+/* ============================================
+   8. VISUAL COLUMN (RIGHT)
+   ============================================ */
+
+.final-cta-visual {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.final-cta-media-frame {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 28px;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.final-cta-media-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+/* Placeholder state when image is blank */
+.final-cta-media-frame img[src=""],
+.final-cta-media-frame img:not([src]) {
+  background-color: #F0F0F0;
+  min-height: 280px;
+}
+
+/* ============================================
+   9. RESPONSIVE - LARGE DESKTOP (>=1440px)
+   ============================================ */
+
+@media (min-width: 1440px) {
+  .final-cta-section {
+    padding: 112px 48px;
+  }
+
+  .final-cta-grid {
+    gap: 80px;
+  }
+
+  .final-cta-title {
+    font-size: 48px;
+  }
+
+  .final-cta-body {
+    font-size: 19px;
+  }
+
+  .final-cta-bullets li {
+    font-size: 17px;
+  }
+
+  .final-btn {
+    height: 52px;
+    padding: 0 32px;
+    font-size: 17px;
+  }
+
+  .final-cta-micro {
+    font-size: 15px;
+  }
+}
+
+/* ============================================
+   10. RESPONSIVE - DESKTOP (1024-1439px)
+   ============================================ */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .final-cta-section {
+    padding: 88px 40px;
+  }
+
+  .final-cta-grid {
+    gap: 56px;
+  }
+
+  .final-cta-title {
+    font-size: 40px;
+  }
+}
+
+/* ============================================
+   11. RESPONSIVE - TABLET (768-1023px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .final-cta-section {
+    padding: 72px 32px;
+  }
+
+  .final-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .final-cta-content {
+    order: 1;
+  }
+
+  .final-cta-visual {
+    order: 2;
+    justify-content: center;
+  }
+
+  .final-cta-title {
+    font-size: 36px;
+  }
+
+  .final-cta-body {
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+  .final-cta-media-frame {
+    max-width: 560px;
+  }
+}
+
+/* ============================================
+   12. RESPONSIVE - SMALL TABLET (481-767px)
+   ============================================ */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .final-cta-section {
+    padding: 64px 24px;
+  }
+
+  .final-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .final-cta-content {
+    order: 1;
+  }
+
+  .final-cta-visual {
+    order: 2;
+    justify-content: center;
+  }
+
+  .final-cta-title {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .final-cta-body {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .final-cta-bullets {
+    margin-bottom: 24px;
+    gap: 10px;
+  }
+
+  .final-cta-bullets li {
+    font-size: 15px;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+  }
+
+  .final-btn {
+    width: 100%;
+    height: 50px;
+  }
+
+  .final-cta-media-frame {
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .final-cta-media-frame img {
+    border-radius: 12px;
+  }
+}
+
+/* ============================================
+   13. RESPONSIVE - MOBILE (<=480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+  .final-cta-section {
+    padding: 56px 20px;
+  }
+
+  .final-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .final-cta-content {
+    order: 1;
+  }
+
+  .final-cta-visual {
+    order: 2;
+  }
+
+  .final-cta-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .final-cta-body {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .final-cta-bullets {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .final-cta-bullets li {
+    font-size: 15px;
+    gap: 10px;
+    color: #444444;
+  }
+
+  .final-cta-bullets li svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .final-btn {
+    width: 100%;
+    height: 50px;
+  }
+
+  .final-cta-micro {
+    font-size: 13px;
+  }
+
+  .final-cta-media-frame {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .final-cta-media-frame img {
+    border-radius: 12px;
+  }
+}
+
+/* ============================================
+   14. RESPONSIVE - SMALL MOBILE (<=360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+  .final-cta-section {
+    padding: 48px 16px;
+  }
+
+  .final-cta-grid {
+    gap: 28px;
+  }
+
+  .final-cta-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .final-cta-body {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .final-cta-bullets {
+    margin-bottom: 18px;
+    gap: 8px;
+  }
+
+  .final-cta-bullets li {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .final-cta-bullets li svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .final-cta-buttons {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .final-btn {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .final-cta-micro {
+    font-size: 12px;
+  }
+
+  .final-cta-media-frame {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .final-cta-media-frame img {
+    border-radius: 10px;
+  }
+}
+
+/* ============================================
+   15. HIDE OLD CTA ELEMENTS
+   ============================================ */
+
+.homepage-cta-block,
+.homepage-cta,
+.box15,
+.text139,
+.cta-image-container,
+.visula-icon {
+  display: none !important;
+}
