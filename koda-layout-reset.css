@@ -108,8 +108,8 @@ body.koda-landing-page {
    All sections use max-width: 1120px for consistency
    ============================================ */
 
+/* Non-hero sections use 1120px container */
 .koda-landing section,
-.koda-landing .hero-section,
 .koda-landing .workflow-section,
 .koda-landing .pain-section,
 .koda-landing .steps-section,
@@ -128,10 +128,8 @@ body.koda-landing-page {
   box-sizing: border-box;
 }
 
-/* Hero section - slightly less top padding (header overlap) */
+/* Hero section - uses hero-section.css styles */
 .koda-landing .hero-section {
-  padding-top: 140px;
-  padding-bottom: 80px;
   /* Override old flex/column layout from index.css */
   display: block !important;
   flex-direction: unset !important;
@@ -140,13 +138,13 @@ body.koda-landing-page {
   /* Fix clipping and fixed height from index.css */
   overflow: visible !important;
   height: auto !important;
-  max-width: 1120px !important;
+  /* Hero uses wider container */
+  max-width: 1240px !important;
 }
 
-/* Tablet spacing (<=1024px) */
+/* Tablet spacing (<=1024px) - hero-section.css handles hero */
 @media (max-width: 1024px) {
   .koda-landing section,
-  .koda-landing .hero-section,
   .koda-landing .workflow-section,
   .koda-landing .pain-section,
   .koda-landing .steps-section,
@@ -157,17 +155,11 @@ body.koda-landing-page {
     padding-left: 32px;
     padding-right: 32px;
   }
-
-  .koda-landing .hero-section {
-    padding-top: 120px;
-    padding-bottom: 64px;
-  }
 }
 
-/* Mobile spacing (<=480px) */
+/* Mobile spacing (<=480px) - hero-section.css handles hero */
 @media (max-width: 480px) {
   .koda-landing section,
-  .koda-landing .hero-section,
   .koda-landing .workflow-section,
   .koda-landing .pain-section,
   .koda-landing .steps-section,
@@ -177,11 +169,6 @@ body.koda-landing-page {
     padding-bottom: 56px;
     padding-left: 20px;
     padding-right: 20px;
-  }
-
-  .koda-landing .hero-section {
-    padding-top: 100px;
-    padding-bottom: 48px;
   }
 }
 
@@ -441,7 +428,6 @@ body.koda-landing-page {
 }
 
 /* Media frames */
-.koda-landing .hero-media-frame,
 .koda-landing .workflow-media-frame,
 .koda-landing .pain-media-frame,
 .koda-landing .features-media-frame,
@@ -449,6 +435,13 @@ body.koda-landing-page {
   background-color: #FAFAFA !important;
   border: 1px solid #E6E6E6 !important;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Hero media frame - no box styling */
+.koda-landing .hero-media-frame {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Final CTA bullets (green checks) */
