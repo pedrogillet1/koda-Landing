@@ -104,6 +104,7 @@
   flex-shrink: 0;
 }
 
+
 /* ============================================
    6. STEP NUMBER - HIDDEN (cleaner look)
    ============================================ */
@@ -267,6 +268,7 @@
     height: 24px;
   }
 
+
   .step-title {
     font-size: 18px;
     margin-bottom: 8px;
@@ -320,6 +322,7 @@
     width: 24px;
     height: 24px;
   }
+
 
   .step-title {
     font-size: 18px;
@@ -375,6 +378,7 @@
     height: 22px;
   }
 
+
   .step-title {
     font-size: 17px;
     margin-bottom: 8px;
@@ -429,6 +433,8 @@
     height: 20px;
   }
 
+
+
   .step-title {
     font-size: 16px;
     margin-bottom: 6px;
@@ -446,4 +452,298 @@
 
 .how-it-works-section-wrapper {
   display: none !important;
+}
+
+/* ============================================
+   16. ACTION CARDS SUBSECTION
+   "Then take action." — 2-card feature row
+   ============================================ */
+
+.action-cards-block {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.action-header {
+  margin-bottom: 36px;
+}
+
+.action-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 10px 0;
+}
+
+.action-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0;
+}
+
+/* 2-column grid */
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Card — inherits step-card visual language */
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 28px;
+  background-color: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 24px;
+  box-sizing: border-box;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.action-card:hover {
+  border-color: #DDDDDD;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Top row: icon + badge */
+.action-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* NEW badge */
+.action-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #22C55E;
+  background-color: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 999px;
+  line-height: 1;
+  height: 24px;
+}
+
+/* Detail text (small supporting line) */
+.action-detail {
+  display: block;
+  margin-top: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #888888;
+  line-height: 1.4;
+}
+
+/* Trust microcopy */
+.action-trust {
+  margin-top: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #888888;
+  line-height: 1.5;
+}
+
+/* ============================================
+   17. ACTION CARDS - SCROLL ANIMATION
+   ============================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .action-card {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease,
+      border-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .action-cards-block.is-visible .action-card:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0ms;
+  }
+
+  .action-cards-block.is-visible .action-card:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 80ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action-card {
+    opacity: 1;
+    transform: none;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+  }
+}
+
+/* ============================================
+   18. ACTION CARDS - RESPONSIVE
+   ============================================ */
+
+/* Large Desktop (>=1440px) */
+@media (min-width: 1440px) {
+  .action-cards-block {
+    margin-top: 72px;
+  }
+
+  .action-title {
+    font-size: 36px;
+  }
+
+  .action-grid {
+    gap: 28px;
+  }
+
+  .action-card {
+    padding: 32px;
+  }
+}
+
+/* Desktop (1024-1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .action-title {
+    font-size: 30px;
+  }
+}
+
+/* Tablet (768-1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .action-cards-block {
+    margin-top: 56px;
+  }
+
+  .action-header {
+    margin-bottom: 32px;
+  }
+
+  .action-title {
+    font-size: 28px;
+  }
+
+  .action-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .action-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+}
+
+/* Small Tablet (481-767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .action-cards-block {
+    margin-top: 48px;
+  }
+
+  .action-header {
+    margin-bottom: 28px;
+  }
+
+  .action-title {
+    font-size: 26px;
+  }
+
+  .action-subtitle {
+    font-size: 15px;
+  }
+
+  /* Stack to single column */
+  .action-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .action-card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+}
+
+/* Mobile (<=480px) */
+@media (max-width: 480px) {
+  .action-cards-block {
+    margin-top: 40px;
+  }
+
+  .action-header {
+    margin-bottom: 24px;
+  }
+
+  .action-title {
+    font-size: 24px;
+  }
+
+  .action-subtitle {
+    font-size: 15px;
+  }
+
+  .action-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .action-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .action-badge {
+    font-size: 10px;
+    height: 22px;
+    padding: 2px 8px;
+  }
+}
+
+/* Small Mobile (<=360px) */
+@media (max-width: 360px) {
+  .action-cards-block {
+    margin-top: 36px;
+  }
+
+  .action-header {
+    margin-bottom: 20px;
+  }
+
+  .action-title {
+    font-size: 22px;
+  }
+
+  .action-subtitle {
+    font-size: 14px;
+  }
+
+  .action-grid {
+    gap: 12px;
+  }
+
+  .action-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
 }

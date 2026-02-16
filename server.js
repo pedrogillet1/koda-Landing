@@ -55,7 +55,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`✅ Koda Landing Page Server is running!`);
+  console.log(`✅ Allybi Landing Page Server is running!`);
   console.log(`🌐 Open in browser: http://localhost:${PORT}/`);
   console.log(`📂 Serving files from: ${BASE_DIR}`);
 });

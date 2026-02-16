@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+
+  <!-- Mobile browser theme -->
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/koda-knot-glyph.svg">
@@ -10,7 +13,7 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
   <link rel="stylesheet" href="./design-system.css" />
-  <link rel="stylesheet" href="./about.css?v=1765222500" />
+  <link rel="stylesheet" href="./about.css?v=1765230000" />
   <link rel="stylesheet" href="./language-switcher.css" />
   <link rel="stylesheet" href="./koda-design-system-final.css" />
   <link rel="stylesheet" href="./koda-responsive-system.css" />
@@ -20,7 +23,7 @@
   <link rel="stylesheet" href="./koda-header.css?v=1765220400" />
   <link rel="stylesheet" href="./koda-buttons.css?v=1765220700" />
 
-  <title>About Koda</title>
+  <title>About Allybi</title>
 </head>
 <body class="koda-about">
 
@@ -29,26 +32,26 @@
     <nav class="main-nav" id="main-nav">
       <div class="logo">
         <a href="index.html">
-          <img class="content-icon" alt="Koda Logo" src="assets/images/koda-knot-glyph.svg">
+          <img class="content-icon" alt="Allybi Logo" src="assets/images/koda-knot-glyph.svg">
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <div class="nav-links desktop-only">
-        <a href="about.html" class="active" data-i18n-key="nav.about">About Koda</a>
+        <a href="about.html" aria-current="page" class="active" data-i18n-key="nav.about">About Allybi</a>
         <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
         <div class="language-switcher">
           <button id="language-toggle" aria-haspopup="true" aria-expanded="false">
             <span id="current-language">English</span>
-            <span class="dropdown-arrow">▼</span>
+            <span class="dropdown-arrow">&#9660;</span>
           </button>
           <ul id="language-menu" class="hidden">
             <li><a href="#" data-lang="en">English</a></li>
-            <li><a href="#" data-lang="pt">Português (BR)</a></li>
-            <li><a href="#" data-lang="es">Español</a></li>
+            <li><a href="#" data-lang="pt">Portugu&ecirc;s (BR)</a></li>
+            <li><a href="#" data-lang="es">Espa&ntilde;ol</a></li>
           </ul>
         </div>
-        <a href="https://getkoda.ai/" class="demo-button" data-i18n-key="nav.open_app">Open Web App</a>
+        <a href="https://getkoda.ai/" class="demo-button" data-i18n-key="nav.open_app">Open Allybi</a>
       </div>
 
       <!-- Mobile Menu Toggle Button -->
@@ -63,64 +66,65 @@
     <div class="mobile-menu mobile-only" id="mobile-menu">
       <div class="mobile-menu-content">
         <div class="mobile-menu-row">
-          <a href="about.html" class="mobile-menu-link active" data-i18n-key="nav.about">About Koda</a>
+          <a href="about.html" class="mobile-menu-link active" aria-current="page" data-i18n-key="nav.about">About Allybi</a>
           <a href="contact.html" class="mobile-menu-link" data-i18n-key="nav.contact">Contact</a>
           <button class="mobile-menu-link mobile-lang-dropdown" id="mobile-lang-toggle">
             Language
             <span class="lang-right">
-              <span id="current-language-mobile" class="lang-flag">🇬🇧</span>
-              <span class="lang-arrow">▼</span>
+              <span id="current-language-mobile" class="lang-flag">&#127468;&#127463;</span>
+              <span class="lang-arrow">&#9660;</span>
             </span>
           </button>
         </div>
 
         <div class="mobile-language-options" id="mobile-lang-options">
-          <button class="mobile-lang-btn active" data-lang="en">🇬🇧 English</button>
-          <button class="mobile-lang-btn" data-lang="pt">🇧🇷 Português</button>
-          <button class="mobile-lang-btn" data-lang="es">🇪🇸 Español</button>
+          <button class="mobile-lang-btn active" data-lang="en">&#127468;&#127463; English</button>
+          <button class="mobile-lang-btn" data-lang="pt">&#127463;&#127479; Portugu&ecirc;s</button>
+          <button class="mobile-lang-btn" data-lang="es">&#127466;&#127480; Espa&ntilde;ol</button>
         </div>
 
-        <a href="https://getkoda.ai/" class="mobile-cta-btn" data-i18n-key="nav.get_started">Try Koda</a>
+        <a href="https://getkoda.ai/" class="mobile-cta-btn" data-i18n-key="nav.open_app">Open Allybi</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- ============================================
+       HERO SECTION
+       1 primary CTA + 1 tertiary scroll link
+       No broken images. No duplicate buttons.
+       ============================================ -->
   <div class="about-section-wrapper">
     <section class="about-section about-hero" id="top">
-      <div class="koda-container">
-        <div class="about-hero-grid">
-          <!-- Left Column: Text -->
-          <div class="about-hero-text">
-            <span class="about-hero-eyebrow" data-i18n-key="about.eyebrow">About Koda</span>
-            <h1 class="about-hero-h1" data-i18n-key="about.hero_title">Private AI that keeps your documents under your control.</h1>
-            <p class="about-hero-subhead" data-i18n-key="about.hero_subtitle">We built Koda for people who work with sensitive files and can't afford chaos — or surveillance. Store, search, and ask questions across your documents with privacy-first design.</p>
-            <div class="about-hero-cta">
-              <a href="https://getkoda.ai/" class="about-hero-btn-primary" data-i18n-key="nav.get_started">Get Started</a>
-              <a href="https://getkoda.ai/" class="about-hero-btn-secondary" data-i18n-key="about.open_app">Open Web App</a>
-            </div>
-            <p class="about-hero-trust" data-i18n-key="about.trust_line">Privacy-first by design. Built for high-stakes work.</p>
+      <div class="about-container">
+        <div class="about-hero-content about-hero-content--centered">
+          <span class="about-eyebrow" data-i18n-key="about.eyebrow">About Allybi</span>
+          <h1 class="about-hero-h1" data-i18n-key="about.hero_title">Private AI that keeps your documents under your control.</h1>
+          <p class="about-hero-subhead" data-i18n-key="about.hero_subtitle">We built Allybi for people who work with sensitive files and can't afford chaos &mdash; or surveillance. Store, search, and ask questions across your documents with privacy-first design.</p>
+          <div class="about-hero-visual">
+            <img class="about-hero-image" src="assets/images/about-hero.svg" alt="Allybi" loading="lazy">
           </div>
-          <!-- Right Column: Media -->
-          <div class="about-hero-media">
-            <div class="about-hero-media-frame">
-              <img src="assets/images/abcd123.svg" alt="Koda - Private AI for Documents" onerror="this.style.opacity='0'">
-            </div>
+          <div class="about-hero-cta">
+            <a href="https://getkoda.ai/" class="btn btn--primary" data-i18n-key="nav.open_app">Open Allybi</a>
+            <a href="#capabilities" class="btn btn--tertiary">See what's new <span aria-hidden="true">&rarr;</span></a>
           </div>
+          <p class="about-hero-trust" data-i18n-key="about.trust_line">Privacy-first by design. Built for high-stakes work.</p>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- Trust & Security Foundation Section -->
+  <!-- ============================================
+       TRUST & SECURITY FOUNDATION
+       Single-column centered. No broken image.
+       Replaced right media with inline SVG illustration.
+       ============================================ -->
   <div class="about-section-wrapper about-section-wrapper--alt">
-    <section class="about-section about-trust-section" id="security-foundation">
-      <div class="koda-container">
-        <div class="about-trust-grid">
-          <!-- Left Column: Copy -->
+    <section class="about-section about-trust-section animate-section" id="security-foundation">
+      <div class="about-container">
+        <div class="about-trust-layout">
           <div class="about-trust-text">
-            <h2 class="about-trust-h2" data-i18n-key="about.trust_title">Privacy isn't a feature. It's the <span class="highlight-word">foundation</span>.</h2>
-            <p class="about-trust-body" data-i18n-key="about.trust_body">Koda is designed so your information stays yours. We prioritize control, clarity, and security — even when it's inconvenient.</p>
+            <h2 class="about-section-h2" data-i18n-key="about.trust_title">Privacy isn't a feature. It's the <span class="highlight-word">foundation</span>.</h2>
+            <p class="about-section-body" data-i18n-key="about.trust_body">Allybi is designed so your information stays yours. We prioritize control, clarity, and security &mdash; even when it's inconvenient.</p>
             <ul class="about-trust-bullets">
               <li data-i18n-key="about.trust_bullet_1">Encryption by default</li>
               <li data-i18n-key="about.trust_bullet_2">Zero-knowledge key control (you control access)</li>
@@ -128,46 +132,107 @@
               <li data-i18n-key="about.trust_bullet_4">Designed for sensitive workflows</li>
               <li data-i18n-key="about.trust_bullet_5">Clear, verifiable outputs (grounded in your files)</li>
             </ul>
-            <a href="index.html#security" class="about-trust-link" data-i18n-key="about.trust_link">Read the Security overview</a>
+            <a href="index.html#security" class="btn btn--tertiary" data-i18n-key="about.trust_link">Read the Security overview <span aria-hidden="true">&rarr;</span></a>
           </div>
-          <!-- Right Column: Media -->
-          <div class="about-trust-media">
-            <div class="about-trust-media-frame">
-              <img src="assets/images/a2.svg" alt="Koda Security Foundation" onerror="this.style.opacity='0'">
-            </div>
+          <div class="about-trust-visual">
+            <img class="about-trust-image" src="assets/images/about-privacy.svg" alt="Allybi Privacy" loading="lazy">
           </div>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- What We're Building Section - Mission/Vision/Values -->
+  <!-- ============================================
+       CAPABILITIES SECTION (NEW)
+       "From search to action."
+       2 feature cards: AI Editing + Connections
+       ============================================ -->
   <div class="about-section-wrapper">
-    <section class="about-section about-building-section" id="what-we-build">
-      <div class="koda-container">
+    <section class="about-section about-capabilities-section animate-section" id="capabilities">
+      <div class="about-container">
+        <div class="about-capabilities-header">
+          <h2 class="about-section-h2" data-i18n-key="about.capabilities_title">From search to action.</h2>
+          <p class="about-section-body" data-i18n-key="about.capabilities_subtitle">Allybi doesn't just find your files &mdash; it helps you work with them. Two new capabilities, still private, still under your control.</p>
+        </div>
+
+        <div class="about-capabilities-grid">
+          <!-- Card 1: AI Editing -->
+          <div class="about-capability-card">
+            <div class="about-capability-top">
+              <div class="about-capability-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                </svg>
+              </div>
+              <span class="about-capability-badge">New</span>
+            </div>
+            <h3 class="about-capability-title" data-i18n-key="about.cap_edit_title">AI Editing for Docs & Spreadsheets</h3>
+            <p class="about-capability-desc" data-i18n-key="about.cap_edit_desc">Edit documents and spreadsheets directly through Allybi using natural language. No need to open another app.</p>
+            <ul class="about-capability-bullets">
+              <li data-i18n-key="about.cap_edit_b1">Rewrite paragraphs and sections in .docx files</li>
+              <li data-i18n-key="about.cap_edit_b2">Update table data with simple instructions</li>
+              <li data-i18n-key="about.cap_edit_b3">Create spreadsheet formulas and calculations in .xlsx</li>
+              <li data-i18n-key="about.cap_edit_b4">Export changes back to your original file format</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Connections -->
+          <div class="about-capability-card">
+            <div class="about-capability-top">
+              <div class="about-capability-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <span class="about-capability-badge">New</span>
+            </div>
+            <h3 class="about-capability-title" data-i18n-key="about.cap_connect_title">Outlook, Gmail & Slack Connections</h3>
+            <p class="about-capability-desc" data-i18n-key="about.cap_connect_desc">Search across your messages and emails with natural language. Draft replies and attach the right document &mdash; without remembering the file name.</p>
+            <ul class="about-capability-bullets">
+              <li data-i18n-key="about.cap_connect_b1">Search emails and messages using plain language</li>
+              <li data-i18n-key="about.cap_connect_b2">Draft and send with explicit confirmation before delivery</li>
+              <li data-i18n-key="about.cap_connect_b3">Attach files from Allybi (e.g. "attach the latest cap table")</li>
+              <li data-i18n-key="about.cap_connect_b4">Permissioned access &mdash; you choose what's connected</li>
+              <li data-i18n-key="about.cap_connect_b5">Disconnect anytime, no data retained</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================
+       WHAT WE'RE BUILDING - Mission / Vision / Values
+       3-card grid, centered header
+       ============================================ -->
+  <div class="about-section-wrapper about-section-wrapper--alt">
+    <section class="about-section about-building-section animate-section" id="what-we-build">
+      <div class="about-container">
         <div class="about-building-header">
-          <h2 class="about-building-h2" data-i18n-key="about.building_title">What we're building</h2>
-          <p class="about-building-intro" data-i18n-key="about.building_intro">Koda exists to make working with documents feel calm again — no chaos, no surveillance, no complexity. Just clarity and control.</p>
+          <h2 class="about-section-h2" data-i18n-key="about.building_title">What we're building</h2>
+          <p class="about-section-body" data-i18n-key="about.building_intro">Allybi exists to make working with documents feel calm again &mdash; no chaos, no surveillance, no complexity. Just clarity and control.</p>
         </div>
 
         <div class="about-building-grid">
           <!-- Card 1: Mission -->
           <div class="about-building-card">
-            <div class="about-building-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <div class="about-building-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="6"></circle>
                 <circle cx="12" cy="12" r="2"></circle>
               </svg>
             </div>
             <h3 class="about-building-title" data-i18n-key="about.card_mission_title">Mission</h3>
-            <p class="about-building-body" data-i18n-key="about.card_mission_body">Give professionals, families, and teams a privacy-first AI that turns messy folders into instant, trustworthy answers — so they can spend their time thinking, not searching.</p>
+            <p class="about-building-body" data-i18n-key="about.card_mission_body">Give professionals, families, and teams a privacy-first AI that turns messy folders into instant, trustworthy answers &mdash; so they can spend their time thinking, not searching.</p>
           </div>
 
           <!-- Card 2: Vision -->
           <div class="about-building-card">
-            <div class="about-building-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <div class="about-building-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
@@ -178,8 +243,8 @@
 
           <!-- Card 3: Values -->
           <div class="about-building-card">
-            <div class="about-building-icon">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <div class="about-building-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
@@ -191,67 +256,91 @@
     </section>
   </div>
 
-  <!-- Why Koda Section -->
-  <div class="about-section-wrapper about-section-wrapper--alt">
-    <section class="about-section about-why-section" id="why-koda">
-      <div class="koda-container">
-        <div class="about-why-grid">
-          <!-- Left Column: Text + Mini-Cards -->
-          <div class="about-why-text">
-            <h2 class="about-why-h2" data-i18n-key="about.why_title">Why Koda?</h2>
-            <p class="about-why-body" data-i18n-key="about.why_body">Most tools force a tradeoff: convenience or privacy. Koda is built to give you both — without drowning you in complexity.</p>
+  <!-- ============================================
+       MEASURABLE OUTCOMES
+       ============================================ -->
+  <div class="about-section-wrapper">
+    <section class="about-section about-outcomes-section animate-section">
+      <div class="about-container">
+        <div class="about-outcomes-header">
+          <h2 class="about-section-h2">Measurable <span class="outcomes-highlight">Outcomes</span></h2>
+          <p class="about-section-body">Trackable improvements in the first weeks</p>
+        </div>
+        <div class="about-outcomes-grid">
+          <div class="about-outcome-card">
+            <span class="outcome-number">30–60%</span>
+            <p class="outcome-desc">Less time spent searching for files, emails, and threads</p>
+          </div>
+          <div class="about-outcome-card">
+            <span class="outcome-number">2×</span>
+            <p class="outcome-desc">Faster drafts (updates, summaries, emails) from your documents</p>
+          </div>
+          <div class="about-outcome-card">
+            <span class="outcome-number">50%</span>
+            <p class="outcome-desc">Fewer wrong-version / wrong-attachment mistakes</p>
+          </div>
+          <div class="about-outcome-card">
+            <span class="outcome-number">25–40%</span>
+            <p class="outcome-desc">Faster spreadsheet work (formulas, cleanup, quick calculations)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-            <div class="about-why-cards">
-              <!-- Mini-card 1: Privacy-first -->
-              <div class="about-why-card">
-                <div class="about-why-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <div class="about-why-card-content">
-                  <h3 class="about-why-card-title" data-i18n-key="about.why_card1_title">Privacy-first</h3>
-                  <p class="about-why-card-desc" data-i18n-key="about.why_card1_desc">Your documents stay under your control.</p>
-                </div>
+  <!-- ============================================
+       WHY ALLYBI - 3 mini-cards, no broken image
+       ============================================ -->
+  <div class="about-section-wrapper">
+    <section class="about-section about-why-section animate-section" id="why-koda">
+      <div class="about-container">
+        <div class="about-why-content">
+          <h2 class="about-section-h2" data-i18n-key="about.why_title">Why Allybi?</h2>
+          <p class="about-section-body" data-i18n-key="about.why_body">Most tools force a tradeoff: convenience or privacy. Allybi is built to give you both &mdash; without drowning you in complexity.</p>
+
+          <div class="about-why-cards">
+            <!-- Mini-card 1: Privacy-first -->
+            <div class="about-why-card">
+              <div class="about-why-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
               </div>
-
-              <!-- Mini-card 2: Calm simplicity -->
-              <div class="about-why-card">
-                <div class="about-why-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                  </svg>
-                </div>
-                <div class="about-why-card-content">
-                  <h3 class="about-why-card-title" data-i18n-key="about.why_card2_title">Calm simplicity</h3>
-                  <p class="about-why-card-desc" data-i18n-key="about.why_card2_desc">Designed to feel obvious — not overwhelming.</p>
-                </div>
-              </div>
-
-              <!-- Mini-card 3: One system -->
-              <div class="about-why-card">
-                <div class="about-why-card-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="3" y1="9" x2="21" y2="9"></line>
-                    <line x1="9" y1="21" x2="9" y2="9"></line>
-                  </svg>
-                </div>
-                <div class="about-why-card-content">
-                  <h3 class="about-why-card-title" data-i18n-key="about.why_card3_title">One system</h3>
-                  <p class="about-why-card-desc" data-i18n-key="about.why_card3_desc">Store, search, and organize without scattered tools.</p>
-                </div>
+              <div class="about-why-card-content">
+                <h3 class="about-why-card-title" data-i18n-key="about.why_card1_title">Privacy-first</h3>
+                <p class="about-why-card-desc" data-i18n-key="about.why_card1_desc">Your documents stay under your control.</p>
               </div>
             </div>
-          </div>
 
-          <!-- Right Column: Media -->
-          <div class="about-why-media">
-            <div class="about-why-media-frame">
-              <img src="assets/images/a2.svg" alt="Why Koda" onerror="this.style.opacity='0'">
+            <!-- Mini-card 2: Calm simplicity -->
+            <div class="about-why-card">
+              <div class="about-why-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+              </div>
+              <div class="about-why-card-content">
+                <h3 class="about-why-card-title" data-i18n-key="about.why_card2_title">Calm simplicity</h3>
+                <p class="about-why-card-desc" data-i18n-key="about.why_card2_desc">Designed to feel obvious &mdash; not overwhelming.</p>
+              </div>
+            </div>
+
+            <!-- Mini-card 3: One system -->
+            <div class="about-why-card">
+              <div class="about-why-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <div class="about-why-card-content">
+                <h3 class="about-why-card-title" data-i18n-key="about.why_card3_title">One system</h3>
+                <p class="about-why-card-desc" data-i18n-key="about.why_card3_desc">Store, search, and organize without scattered tools.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -259,31 +348,29 @@
     </section>
   </div>
 
-  <!-- Final CTA Section -->
-  <div class="about-section-wrapper">
-    <section class="about-section about-final-cta" id="cta">
-      <div class="koda-container">
+  <!-- ============================================
+       FINAL CTA - 1 primary CTA + email opt-in
+       No duplicate "Get Started" / "Open Allybi"
+       ============================================ -->
+  <div class="about-section-wrapper about-section-wrapper--alt">
+    <section class="about-section about-final-cta animate-section" id="cta">
+      <div class="about-container">
         <div class="about-cta-band">
           <div class="about-cta-inner">
             <!-- Left: Text -->
             <div class="about-cta-text">
-              <h2 class="about-cta-headline" data-i18n-key="about.final_cta_title">Ready to try Koda?</h2>
+              <h2 class="about-cta-headline" data-i18n-key="about.final_cta_title">Ready to try Allybi?</h2>
               <p class="about-cta-support" data-i18n-key="about.final_cta_support">Start in minutes. Keep your documents private, organized, and useful.</p>
             </div>
 
-            <!-- Right: Actions -->
+            <!-- Right: Single CTA + email -->
             <div class="about-cta-actions">
-              <div class="about-cta-buttons">
-                <a href="https://getkoda.ai/" class="about-btn-primary" data-i18n-key="nav.get_started">Get Started</a>
-                <a href="https://getkoda.ai/" class="about-btn-secondary" data-i18n-key="about.open_app">Open Web App</a>
-              </div>
-
-              <!-- Optional email row (secondary) -->
+              <a href="https://getkoda.ai/" class="btn btn--primary" data-i18n-key="nav.open_app">Open Allybi</a>
               <div class="about-cta-email">
                 <p class="about-cta-email-label" data-i18n-key="about.email_label">Get product updates (optional)</p>
                 <form class="about-cta-email-row">
-                  <input type="email" class="about-cta-email-input" placeholder="you@email.com" data-i18n-key="about.email_placeholder">
-                  <button type="submit" class="about-cta-email-btn" data-i18n-key="about.email_button">Notify me</button>
+                  <input type="email" class="about-cta-email-input" placeholder="you@email.com" data-i18n-key="about.email_placeholder" aria-label="Email address for updates">
+                  <button type="submit" class="btn btn--secondary btn--sm" data-i18n-key="about.email_button">Notify me</button>
                 </form>
               </div>
             </div>
@@ -295,17 +382,20 @@
 
   <!-- Compact Footer -->
   <footer class="about-footer">
-    <div class="koda-container">
+    <div class="about-container">
       <div class="about-footer-inner">
         <div class="about-footer-left">
-          <img src="assets/images/koda-knot-glyph.svg" alt="Koda Logo" class="about-footer-logo">
-          <p class="about-footer-copyright" data-i18n-key="footer.copyright">© 2025 Koda. All rights reserved.</p>
+          <img src="assets/images/koda-knot-glyph.svg" alt="Allybi Logo" class="about-footer-logo" width="32" height="32">
+          <p class="about-footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
         </div>
-        <nav class="about-footer-links">
-          <a href="about.html" class="about-footer-link" data-i18n-key="nav.about">About Koda</a>
+        <nav class="about-footer-links" aria-label="Footer navigation">
+          <a href="about.html" class="about-footer-link" data-i18n-key="nav.about">About Allybi</a>
           <a href="contact.html" class="about-footer-link" data-i18n-key="nav.contact">Contact</a>
-          <a href="terms.html" class="about-footer-link" data-i18n-key="footer.terms_short">Terms of Use</a>
+          <a href="tos.html" class="about-footer-link" data-i18n-key="footer.tos_short">Terms of Service</a>
+          <a href="terms.html" class="about-footer-link" data-i18n-key="footer.terms_short">Acceptable Use</a>
           <a href="privacy.html" class="about-footer-link" data-i18n-key="footer.privacy_short">Privacy Policy</a>
+          <a href="cookies.html" class="about-footer-link" data-i18n-key="footer.cookies_short">Cookie Policy</a>
+          <a href="security.html" class="about-footer-link" data-i18n-key="footer.security_short">Security &amp; Privacy</a>
         </nav>
       </div>
     </div>
@@ -317,73 +407,89 @@
   <!-- Page animations -->
   <script>
     (function() {
-      // Check for reduced motion preference
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+      // Hero entrance
       if (prefersReducedMotion) {
-        // Immediately show elements if user prefers reduced motion
-        document.querySelectorAll('.about-hero-text, .about-hero-media').forEach(el => {
+        document.querySelectorAll('.about-hero-content').forEach(function(el) {
           el.classList.add('is-visible');
         });
-        document.querySelectorAll('.about-trust-section').forEach(el => {
+        document.querySelectorAll('.animate-section').forEach(function(el) {
           el.classList.add('is-visible');
         });
-        document.querySelectorAll('.about-building-card').forEach(el => {
+        document.querySelectorAll('.about-building-card').forEach(function(el) {
+          el.classList.add('is-visible');
+        });
+        document.querySelectorAll('.about-capability-card').forEach(function(el) {
           el.classList.add('is-visible');
         });
         return;
       }
 
-      // Hero fade-up animation on page load
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          document.querySelectorAll('.about-hero-text, .about-hero-media').forEach(el => {
+      // Hero fade-up on load
+      requestAnimationFrame(function() {
+        setTimeout(function() {
+          document.querySelectorAll('.about-hero-content').forEach(function(el) {
             el.classList.add('is-visible');
           });
         }, 100);
       });
 
-      // Trust section highlight animation on scroll
-      const trustSection = document.querySelector('.about-trust-section');
-      if (trustSection && 'IntersectionObserver' in window) {
-        const trustObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
+      // Sections: animate on scroll
+      if ('IntersectionObserver' in window) {
+        var sectionObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
             if (entry.isIntersecting) {
               entry.target.classList.add('is-visible');
-              trustObserver.unobserve(entry.target);
+              sectionObserver.unobserve(entry.target);
             }
           });
-        }, {
-          threshold: 0.3
-        });
-        trustObserver.observe(trustSection);
-      } else if (trustSection) {
-        trustSection.classList.add('is-visible');
-      }
+        }, { threshold: 0.2 });
 
-      // Building cards staggered fade-up animation on scroll
-      const buildingSection = document.querySelector('.about-building-section');
-      const buildingCards = document.querySelectorAll('.about-building-card');
-
-      if (buildingSection && buildingCards.length && 'IntersectionObserver' in window) {
-        const cardObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              // Add is-visible to all cards - stagger is handled by CSS transition-delay
-              buildingCards.forEach(card => {
-                card.classList.add('is-visible');
-              });
-              cardObserver.unobserve(entry.target);
-            }
-          });
-        }, {
-          threshold: 0.2
+        document.querySelectorAll('.animate-section').forEach(function(el) {
+          sectionObserver.observe(el);
         });
-        cardObserver.observe(buildingSection);
-      } else if (buildingCards.length) {
-        // Fallback for browsers without IntersectionObserver
-        buildingCards.forEach(card => {
-          card.classList.add('is-visible');
+
+        // Building cards staggered
+        var buildingSection = document.querySelector('.about-building-section');
+        var buildingCards = document.querySelectorAll('.about-building-card');
+        if (buildingSection && buildingCards.length) {
+          var cardObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                buildingCards.forEach(function(card) {
+                  card.classList.add('is-visible');
+                });
+                cardObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.2 });
+          cardObserver.observe(buildingSection);
+        }
+
+        // Capability cards staggered
+        var capSection = document.querySelector('.about-capabilities-section');
+        var capCards = document.querySelectorAll('.about-capability-card');
+        if (capSection && capCards.length) {
+          var capObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                capCards.forEach(function(card) {
+                  card.classList.add('is-visible');
+                });
+                capObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.15 });
+          capObserver.observe(capSection);
+        }
+      } else {
+        // Fallback
+        document.querySelectorAll('.animate-section').forEach(function(el) {
+          el.classList.add('is-visible');
+        });
+        document.querySelectorAll('.about-building-card, .about-capability-card').forEach(function(el) {
+          el.classList.add('is-visible');
         });
       }
     })();

@@ -3083,7 +3083,7 @@ img {
         font-weight: 600;
     }
 
-    /* Try Koda Button - Cylindrical shape */
+    /* Try Allybi Button - Cylindrical shape */
     .mobile-cta-btn {
         display: block;
         width: 100%;
@@ -3403,7 +3403,7 @@ img {
     }
 
     /* Add arrows between steps (except before first) */
-    /* Arrow before "Ask Koda Anything" (2nd step) */
+    /* Arrow before "Ask Allybi Anything" (2nd step) */
     .how-it-works-section .box6:first-child .container2:nth-child(2)::before,
     /* Arrow before "Stay Organized" (4th step) */
     .how-it-works-section .box6:nth-child(2) .container2:nth-child(2)::before {

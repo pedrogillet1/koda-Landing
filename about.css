@@ -1,11 +1,11 @@
 /* ============================================
-   KODA ABOUT PAGE - DESIGN SYSTEM REBUILD
+   ALLYBI ABOUT PAGE - PREMIUM REFACTOR
    Scoped under .koda-about root
-   Light theme, 1120px container, responsive
+   White background, minimal, trust-forward
    ============================================ */
 
 /* ============================================
-   1. ROOT SCOPE & BASE STYLES
+   1. ROOT SCOPE & BASE
    ============================================ */
 
 .koda-about {
@@ -23,20 +23,20 @@
 }
 
 /* ============================================
-   2. CONTAINER SYSTEM
+   2. CONTAINER - 1200px max, fluid padding
    ============================================ */
 
-.koda-about .koda-container {
+.koda-about .about-container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: clamp(20px, 4vw, 56px);
+  padding-right: clamp(20px, 4vw, 56px);
 }
 
 /* ============================================
-   3. SECTION WRAPPER - FULL BLEED BACKGROUNDS
+   3. SECTION WRAPPERS
    ============================================ */
 
 .koda-about .about-section-wrapper {
@@ -54,105 +54,212 @@
 }
 
 /* ============================================
-   4. TYPOGRAPHY - NO ALL CAPS (except eyebrow)
+   4. UNIFIED BUTTON SYSTEM (.btn)
+   True pill/cylinder. Consistent height.
+   ============================================ */
+
+.koda-about .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 9999px;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+/* Primary: filled dark */
+.koda-about .btn--primary {
+  height: 48px;
+  padding: 0 28px;
+  font-size: 15px;
+  color: #FFFFFF;
+  background-color: #181818;
+}
+
+.koda-about .btn--primary:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.koda-about .btn--primary:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.koda-about .btn--primary:focus-visible {
+  outline: 2px solid #181818;
+  outline-offset: 3px;
+}
+
+/* Secondary: outline pill */
+.koda-about .btn--secondary {
+  height: 48px;
+  padding: 0 28px;
+  font-size: 15px;
+  color: #181818;
+  background-color: #FFFFFF;
+  border: 1.5px solid #D0D0D0;
+}
+
+.koda-about .btn--secondary:hover {
+  background-color: #F5F5F5;
+  border-color: #B0B0B0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.koda-about .btn--secondary:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.koda-about .btn--secondary:focus-visible {
+  outline: 2px solid #181818;
+  outline-offset: 3px;
+}
+
+/* Secondary small (for email button) */
+.koda-about .btn--sm {
+  height: 38px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+/* Tertiary: text link with arrow */
+.koda-about .btn--tertiary {
+  height: auto;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #181818;
+  background: none;
+  border: none;
+  gap: 4px;
+}
+
+.koda-about .btn--tertiary:hover {
+  color: #22C55E;
+}
+
+.koda-about .btn--tertiary:hover span {
+  transform: translateX(3px);
+}
+
+.koda-about .btn--tertiary span {
+  display: inline-block;
+  transition: transform 150ms ease;
+}
+
+.koda-about .btn--tertiary:focus-visible {
+  outline: 2px solid #181818;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   5. SHARED TYPOGRAPHY
    ============================================ */
 
 .koda-about .about-eyebrow {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #666666;
-  margin-bottom: 16px;
-}
-
-.koda-about .about-h1 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(36px, 4vw, 56px);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #111111;
-  margin: 0 0 24px 0;
-}
-
-.koda-about .about-h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(28px, 2.6vw, 40px);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #111111;
-  margin: 0 0 20px 0;
-}
-
-.koda-about .about-h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(20px, 2vw, 24px);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: #111111;
-  margin: 0 0 12px 0;
-}
-
-.koda-about .about-subtitle {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(16px, 1.4vw, 18px);
-  font-weight: 400;
-  line-height: 1.6;
-  color: #444444;
-  margin: 0;
-}
-
-.koda-about .about-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #444444;
-}
-
-/* ============================================
-   5. HERO SECTION - 2 COLUMN GRID
-   Desktop (>=1280): 88px top / 72px bottom
-   ============================================ */
-
-.koda-about .about-hero {
-  padding-top: 88px;
-  padding-bottom: 72px;
-}
-
-/* 2-column grid layout */
-.koda-about .about-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(420px, 520px) minmax(420px, 560px);
-  gap: 40px;
-  align-items: center;
-}
-
-/* Left column - text content */
-.koda-about .about-hero-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.koda-about .about-hero-eyebrow {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #666666;
+  margin-bottom: 16px;
+}
+
+.koda-about .about-section-h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #111111;
   margin: 0 0 16px 0;
+}
+
+.koda-about .about-section-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #444444;
+  margin: 0;
+  max-width: 65ch;
+}
+
+/* ============================================
+   6. HERO SECTION - CENTERED, SINGLE COLUMN
+   ============================================ */
+
+.koda-about .about-hero {
+  padding-top: 88px;
+  padding-bottom: 80px;
+}
+
+.koda-about .about-hero-content.about-hero-content--centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+}
+
+.koda-about .about-hero-content--centered .about-hero-h1 {
+  max-width: 900px;
+}
+
+.koda-about .about-hero-content--centered .about-hero-subhead {
+  max-width: 700px;
+}
+
+.koda-about .about-hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.koda-about .about-hero-image {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto;
+  object-fit: contain;
+}
+
+.koda-about .about-hero-content {
+  max-width: 640px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.koda-about .about-hero-content.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .koda-about .about-hero-h1 {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 600;
-  line-height: 1.12;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: #111111;
   margin: 0 0 20px 0;
@@ -165,66 +272,16 @@
   line-height: 1.6;
   color: #444444;
   margin: 0 0 28px 0;
-  max-width: 480px;
+  max-width: 540px;
 }
 
-/* CTA button row */
 .koda-about .about-hero-cta {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
-.koda-about .about-hero-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  padding: 0 28px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #FFFFFF;
-  background-color: #111111;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-.koda-about .about-hero-btn-primary:hover {
-  background-color: #333333;
-}
-
-.koda-about .about-hero-btn-primary:active {
-  transform: scale(0.98);
-}
-
-.koda-about .about-hero-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  padding: 0 28px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #111111;
-  background-color: transparent;
-  border: 1.5px solid #DDDDDD;
-  border-radius: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.koda-about .about-hero-btn-secondary:hover {
-  border-color: #111111;
-  background-color: #F9F9F9;
-}
-
-/* Trust line */
 .koda-about .about-hero-trust {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
@@ -233,80 +290,8 @@
   margin: 0;
 }
 
-/* Right column - media frame */
-.koda-about .about-hero-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.koda-about .about-hero-media-frame {
-  position: relative;
-  width: 100%;
-  padding: 18px;
-  background-color: #FAFAFA;
-  border: 1px solid #ECECEC;
-  border-radius: 28px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-}
-
-/* Skeleton placeholder */
-.koda-about .about-hero-media-frame::before {
-  content: '';
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  background: linear-gradient(135deg, #F0F0F0 0%, #E8E8E8 50%, #F0F0F0 100%);
-  border-radius: 18px;
-  z-index: 0;
-}
-
-.koda-about .about-hero-media-frame img {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-/* Hide broken images */
-.koda-about .about-hero-media-frame img[src=""],
-.koda-about .about-hero-media-frame img:not([src]) {
-  opacity: 0;
-}
-
 /* ============================================
-   5b. HERO ANIMATION - FADE UP ON FIRST VIEW
-   ============================================ */
-
-.koda-about .about-hero-text,
-.koda-about .about-hero-media {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 200ms ease, transform 200ms ease;
-}
-
-.koda-about .about-hero-text.is-visible,
-.koda-about .about-hero-media.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Stagger the media slightly */
-.koda-about .about-hero-media {
-  transition-delay: 80ms;
-}
-
-/* ============================================
-   5c. TRUST & SECURITY FOUNDATION SECTION
-   2-column grid: left 520px, right 560px
+   7. TRUST & SECURITY SECTION
    ============================================ */
 
 .koda-about .about-trust-section {
@@ -314,31 +299,23 @@
   padding-bottom: 96px;
 }
 
-.koda-about .about-trust-grid {
+.koda-about .about-trust-layout {
   display: grid;
-  grid-template-columns: 520px 560px;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: flex-start;
 }
 
-/* Left column - copy */
 .koda-about .about-trust-text {
-  display: flex;
-  flex-direction: column;
+  max-width: 560px;
 }
 
-.koda-about .about-trust-h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #111111;
-  margin: 0 0 20px 0;
+.koda-about .about-trust-text .about-section-body {
+  margin-bottom: 28px;
 }
 
 /* Highlight sweep on "foundation" */
-.koda-about .about-trust-h2 .highlight-word {
+.koda-about .highlight-word {
   position: relative;
   display: inline;
   background-image: linear-gradient(120deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.25) 100%);
@@ -348,18 +325,8 @@
   transition: background-size 0.4s ease;
 }
 
-.koda-about .about-trust-section.is-visible .about-trust-h2 .highlight-word {
+.koda-about .about-trust-section.is-visible .highlight-word {
   background-size: 100% 100%;
-}
-
-.koda-about .about-trust-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #444444;
-  margin: 0 0 28px 0;
-  max-width: 480px;
 }
 
 /* Bullet list */
@@ -383,7 +350,6 @@
   color: #333333;
 }
 
-/* Green check icon */
 .koda-about .about-trust-bullets li::before {
   content: '';
   flex-shrink: 0;
@@ -396,85 +362,183 @@
   background-position: center;
 }
 
-/* Link row */
-.koda-about .about-trust-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #111111;
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-
-.koda-about .about-trust-link:hover {
-  color: #22C55E;
-}
-
-.koda-about .about-trust-link::after {
-  content: '→';
-  font-size: 16px;
-  transition: transform 0.15s ease;
-}
-
-.koda-about .about-trust-link:hover::after {
-  transform: translateX(3px);
-}
-
-/* Right column - media */
-.koda-about .about-trust-media {
+/* Trust visual icon */
+.koda-about .about-trust-visual {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  max-width: 550px;
 }
 
-.koda-about .about-trust-media-frame {
-  position: relative;
-  width: 100%;
-  padding: 18px;
-  background-color: #FAFAFA;
-  border: 1px solid #ECECEC;
-  border-radius: 28px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-}
-
-/* Skeleton placeholder */
-.koda-about .about-trust-media-frame::before {
-  content: '';
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  background: linear-gradient(135deg, #F0F0F0 0%, #E8E8E8 50%, #F0F0F0 100%);
-  border-radius: 18px;
-  z-index: 0;
-}
-
-.koda-about .about-trust-media-frame img {
-  position: relative;
-  z-index: 1;
+.koda-about .about-trust-image {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-/* Hide broken images */
-.koda-about .about-trust-media-frame img[src=""],
-.koda-about .about-trust-media-frame img:not([src]) {
-  opacity: 0;
+  width: 550px !important;
+  max-width: none !important;
+  height: auto;
+  object-fit: contain;
+  margin-top: 60px;
 }
 
 /* ============================================
-   6. WHAT WE'RE BUILDING - H2 + INTRO + 3 CARDS
-   Replaces old Mission/Vision/Values sections
+   8. CAPABILITIES SECTION (NEW)
+   ============================================ */
+
+.koda-about .about-capabilities-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.koda-about .about-capabilities-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px auto;
+}
+
+.koda-about .about-capabilities-header .about-section-body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 2-column grid */
+.koda-about .about-capabilities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Capability card */
+.koda-about .about-capability-card {
+  background-color: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.koda-about .about-capability-card:hover {
+  border-color: #DDDDDD;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Card top: icon + badge */
+.koda-about .about-capability-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.koda-about .about-capability-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 14px;
+  color: #111111;
+}
+
+.koda-about .about-capability-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #22C55E;
+  background-color: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 999px;
+  line-height: 1;
+  height: 24px;
+}
+
+.koda-about .about-capability-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111111;
+  margin: 0 0 10px 0;
+}
+
+.koda-about .about-capability-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #444444;
+  margin: 0 0 16px 0;
+  max-width: 60ch;
+}
+
+/* Capability bullet list */
+.koda-about .about-capability-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.koda-about .about-capability-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #444444;
+}
+
+.koda-about .about-capability-bullets li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2322C55E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Capability card stagger animation */
+.koda-about .about-capability-card {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.koda-about .about-capability-card.is-visible:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0ms;
+}
+
+.koda-about .about-capability-card.is-visible:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 100ms;
+}
+
+/* ============================================
+   9. WHAT WE'RE BUILDING - 3-CARD GRID
    ============================================ */
 
 .koda-about .about-building-section {
@@ -482,50 +546,40 @@
   padding-bottom: 96px;
 }
 
-/* Top header: H2 + intro */
 .koda-about .about-building-header {
   text-align: center;
   max-width: 640px;
   margin: 0 auto 56px auto;
 }
 
-.koda-about .about-building-h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #111111;
-  margin: 0 0 16px 0;
+.koda-about .about-building-header .about-section-body {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.koda-about .about-building-intro {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #444444;
-  margin: 0;
-}
-
-/* 3-card grid */
 .koda-about .about-building-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-/* Individual card */
 .koda-about .about-building-card {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   border: 1px solid #ECECEC;
   border-radius: 24px;
   padding: 28px;
   display: flex;
   flex-direction: column;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
-/* Card icon */
+.koda-about .about-building-card:hover {
+  border-color: #DDDDDD;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
 .koda-about .about-building-icon {
   width: 48px;
   height: 48px;
@@ -533,15 +587,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.koda-about .about-building-icon svg {
-  width: 40px;
-  height: 40px;
   color: #111111;
 }
 
-/* Card title */
 .koda-about .about-building-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 20px;
@@ -551,7 +599,6 @@
   margin: 0 0 12px 0;
 }
 
-/* Card body */
 .koda-about .about-building-body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 15px;
@@ -561,14 +608,15 @@
   margin: 0;
 }
 
-/* ============================================
-   6b. BUILDING CARDS - FADE UP ANIMATION
-   ============================================ */
-
+/* Building cards fade-up */
 .koda-about .about-building-card {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 200ms ease, transform 200ms ease;
+  transform: translateY(12px);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .koda-about .about-building-card.is-visible {
@@ -576,23 +624,12 @@
   transform: translateY(0);
 }
 
-/* Stagger: 80ms between each card */
-.koda-about .about-building-card:nth-child(1) {
-  transition-delay: 0ms;
-}
-
-.koda-about .about-building-card:nth-child(2) {
-  transition-delay: 80ms;
-}
-
-.koda-about .about-building-card:nth-child(3) {
-  transition-delay: 160ms;
-}
+.koda-about .about-building-card:nth-child(1) { transition-delay: 0ms; }
+.koda-about .about-building-card:nth-child(2) { transition-delay: 80ms; }
+.koda-about .about-building-card:nth-child(3) { transition-delay: 160ms; }
 
 /* ============================================
-   7. WHY KODA SECTION - 2 COLUMN + MINI CARDS
-   Left: H2 + body + 3 stacked mini-cards
-   Right: Media frame (16:10)
+   10. WHY ALLYBI - MINI-CARDS
    ============================================ */
 
 .koda-about .about-why-section {
@@ -600,89 +637,68 @@
   padding-bottom: 96px;
 }
 
-.koda-about .about-why-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: flex-start;
+.koda-about .about-why-content {
+  max-width: 100%;
+  text-align: center;
 }
 
-/* Left column - text + cards */
-.koda-about .about-why-text {
-  display: flex;
-  flex-direction: column;
+.koda-about .about-why-content .about-section-h2 {
+  text-align: center;
 }
 
-.koda-about .about-why-h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #111111;
-  margin: 0 0 16px 0;
+.koda-about .about-why-content .about-section-body {
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-.koda-about .about-why-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #444444;
-  margin: 0 0 32px 0;
-  max-width: 480px;
-}
-
-/* Mini-cards container */
 .koda-about .about-why-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-/* Individual mini-card */
 .koda-about .about-why-card {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  background-color: #FFFFFF;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  background-color: #FAFAFA;
   border: 1px solid #ECECEC;
-  border-radius: 18px;
-  padding: 18px 20px;
-  transition: background-color 150ms ease;
+  border-radius: 20px;
+  padding: 32px 24px;
+  transition: background-color 150ms ease, transform 150ms ease;
 }
 
 .koda-about .about-why-card:hover {
-  background-color: #FAFAFA;
+  background-color: #F5F5F5;
 }
 
-/* Mini-card icon */
 .koda-about .about-why-card-icon {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2px;
-}
-
-.koda-about .about-why-card-icon svg {
-  width: 24px;
-  height: 24px;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 14px;
   color: #111111;
 }
 
-/* Mini-card content */
 .koda-about .about-why-card-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .koda-about .about-why-card-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
   color: #111111;
@@ -691,172 +707,15 @@
 
 .koda-about .about-why-card-desc {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
   color: #555555;
   margin: 0;
 }
 
-/* Right column - media */
-.koda-about .about-why-media {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.koda-about .about-why-media-frame {
-  position: relative;
-  width: 100%;
-  padding: 18px;
-  background-color: #FAFAFA;
-  border: 1px solid #ECECEC;
-  border-radius: 28px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-}
-
-/* Skeleton placeholder */
-.koda-about .about-why-media-frame::before {
-  content: '';
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  background: linear-gradient(135deg, #F0F0F0 0%, #E8E8E8 50%, #F0F0F0 100%);
-  border-radius: 18px;
-  z-index: 0;
-}
-
-.koda-about .about-why-media-frame img {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 18px;
-}
-
-/* Hide broken images */
-.koda-about .about-why-media-frame img[src=""],
-.koda-about .about-why-media-frame img:not([src]) {
-  opacity: 0;
-}
-
 /* ============================================
-   7b. OLD VALUES SECTION - DEPRECATED
-   Keeping for backwards compatibility
-   ============================================ */
-
-.koda-about .about-values-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 64px auto;
-}
-
-.koda-about .about-values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.koda-about .about-value-card {
-  background-color: #FFFFFF;
-  border: 1px solid #ECECEC;
-  border-radius: 20px;
-  padding: 32px 28px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.koda-about .about-value-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.koda-about .about-value-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F5F5F5;
-  border-radius: 12px;
-}
-
-.koda-about .about-value-icon svg,
-.koda-about .about-value-icon img {
-  width: 24px;
-  height: 24px;
-  max-width: 56px;
-  max-height: 56px;
-}
-
-.koda-about .about-value-card .about-h3 {
-  margin-bottom: 12px;
-}
-
-.koda-about .about-value-card .about-body {
-  font-size: 15px;
-  margin: 0;
-}
-
-/* ============================================
-   8. TEAM SECTION - GRID
-   ============================================ */
-
-.koda-about .about-team-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 64px auto;
-}
-
-.koda-about .about-team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.koda-about .about-team-card {
-  text-align: center;
-}
-
-.koda-about .about-team-avatar {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 20px auto;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #F0F0F0;
-}
-
-.koda-about .about-team-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.koda-about .about-team-name {
-  font-size: 18px;
-  font-weight: 600;
-  color: #111111;
-  margin: 0 0 4px 0;
-}
-
-.koda-about .about-team-role {
-  font-size: 14px;
-  font-weight: 400;
-  color: #666666;
-  margin: 0;
-}
-
-/* ============================================
-   9. FINAL CTA SECTION - ROUNDED BAND
+   11. FINAL CTA SECTION
    ============================================ */
 
 .koda-about .about-final-cta {
@@ -867,7 +726,7 @@
 .koda-about .about-cta-band {
   background-color: #F4F4F4;
   border-radius: 24px;
-  padding: 32px;
+  padding: 36px;
 }
 
 .koda-about .about-cta-inner {
@@ -877,7 +736,6 @@
   align-items: center;
 }
 
-/* Left side: text */
 .koda-about .about-cta-text {
   display: flex;
   flex-direction: column;
@@ -904,7 +762,6 @@
   max-width: 400px;
 }
 
-/* Right side: buttons */
 .koda-about .about-cta-actions {
   display: flex;
   flex-direction: column;
@@ -912,12 +769,6 @@
   align-items: flex-end;
 }
 
-.koda-about .about-cta-buttons {
-  display: flex;
-  gap: 12px;
-}
-
-/* Optional email row (secondary) */
 .koda-about .about-cta-email {
   display: flex;
   flex-direction: column;
@@ -940,14 +791,14 @@
 
 .koda-about .about-cta-email-input {
   width: 180px;
-  height: 36px;
-  padding: 0 12px;
+  height: 38px;
+  padding: 0 14px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   color: #111111;
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
-  border-radius: 8px;
+  border-radius: 9999px;
   outline: none;
   transition: border-color 150ms ease;
 }
@@ -960,27 +811,8 @@
   border-color: #111111;
 }
 
-.koda-about .about-cta-email-btn {
-  height: 36px;
-  padding: 0 14px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #555555;
-  background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: border-color 150ms ease, background-color 150ms ease;
-}
-
-.koda-about .about-cta-email-btn:hover {
-  border-color: #111111;
-  background-color: #FAFAFA;
-}
-
 /* ============================================
-   9b. ABOUT PAGE FOOTER - COMPACT
+   12. FOOTER
    ============================================ */
 
 .koda-about .about-footer {
@@ -1035,136 +867,61 @@
 }
 
 /* ============================================
-   9c. OLD CTA STYLES - DEPRECATED
+   13. SECTION ENTRANCE ANIMATIONS
    ============================================ */
 
-.koda-about .about-cta {
-  text-align: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
+.koda-about .animate-section {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 250ms ease, transform 250ms ease;
 }
 
-.koda-about .about-cta-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.koda-about .about-cta .about-h2 {
-  margin-bottom: 16px;
-}
-
-.koda-about .about-cta .about-subtitle {
-  margin-bottom: 32px;
+.koda-about .animate-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ============================================
-   10. BUTTONS - REUSE LANDING SYSTEM
-   ============================================ */
-
-.koda-about .about-btn-group {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.koda-about .about-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  padding: 0 28px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #FFFFFF;
-  background-color: #111111;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-  text-decoration: none;
-}
-
-.koda-about .about-btn-primary:hover {
-  background-color: #333333;
-}
-
-.koda-about .about-btn-primary:active {
-  transform: scale(0.98);
-}
-
-.koda-about .about-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  padding: 0 28px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #111111;
-  background-color: transparent;
-  border: 1.5px solid #DDDDDD;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-  text-decoration: none;
-}
-
-.koda-about .about-btn-secondary:hover {
-  border-color: #111111;
-  background-color: #F9F9F9;
-}
-
-/* ============================================
-   11. RESPONSIVE - LARGE DESKTOP (>=1440px)
+   14. RESPONSIVE - LARGE DESKTOP (>=1440px)
    ============================================ */
 
 @media (min-width: 1440px) {
-  .koda-about .koda-container {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-
   .koda-about .about-section {
     padding-top: 112px;
     padding-bottom: 112px;
   }
 
+  .koda-about .about-hero {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .koda-about .about-hero-h1 {
+    font-size: 52px;
+  }
+
+  .koda-about .about-section-h2 {
+    font-size: 44px;
+  }
+
+  .koda-about .about-capabilities-grid {
+    gap: 28px;
+  }
+
+  .koda-about .about-capability-card {
+    padding: 32px;
+  }
+
   .koda-about .about-building-grid {
-    gap: 32px;
+    gap: 28px;
   }
 
-  .koda-about .about-building-h2 {
-    font-size: 44px;
-  }
-
-  .koda-about .about-values-grid,
-  .koda-about .about-team-grid {
-    gap: 40px;
-  }
-
-  .koda-about .about-why-section {
-    padding-top: 112px;
-    padding-bottom: 112px;
-  }
-
-  .koda-about .about-why-grid {
-    gap: 48px;
-  }
-
-  .koda-about .about-why-h2 {
-    font-size: 44px;
-  }
-
-  .koda-about .about-final-cta {
-    padding-top: 112px;
-    padding-bottom: 112px;
+  .koda-about .about-building-card {
+    padding: 32px;
   }
 
   .koda-about .about-cta-band {
-    padding: 40px;
+    padding: 44px;
   }
 
   .koda-about .about-cta-headline {
@@ -1173,30 +930,20 @@
 }
 
 /* ============================================
-   12. RESPONSIVE - DESKTOP (1024-1279px)
+   15. RESPONSIVE - DESKTOP (1024-1439px)
    ============================================ */
 
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .koda-about .about-hero-grid {
-    grid-template-columns: minmax(360px, 480px) minmax(360px, 480px);
-    gap: 32px;
-  }
-
+@media (min-width: 1024px) and (max-width: 1439px) {
   .koda-about .about-hero-h1 {
-    font-size: 40px;
+    font-size: 44px;
   }
 
-  .koda-about .about-trust-grid {
-    grid-template-columns: minmax(400px, 480px) minmax(400px, 500px);
-    gap: 32px;
+  .koda-about .about-section-h2 {
+    font-size: 38px;
   }
 
-  .koda-about .about-trust-h2 {
-    font-size: 36px;
-  }
-
-  .koda-about .about-building-h2 {
-    font-size: 36px;
+  .koda-about .about-capabilities-grid {
+    gap: 20px;
   }
 
   .koda-about .about-building-grid {
@@ -1206,126 +953,71 @@
   .koda-about .about-building-card {
     padding: 24px;
   }
-
-  .koda-about .about-why-grid {
-    gap: 32px;
-  }
-
-  .koda-about .about-why-h2 {
-    font-size: 36px;
-  }
-
-  .koda-about .about-why-body {
-    font-size: 16px;
-    margin-bottom: 28px;
-  }
-
-  .koda-about .about-cta-headline {
-    font-size: 26px;
-  }
 }
 
 /* ============================================
-   12b. RESPONSIVE - TABLET (768-1023px)
-   Sticky header: 68px height + 16px top margin + spacing
+   16. RESPONSIVE - TABLET (768-1023px)
    ============================================ */
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .koda-about .koda-container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
   .koda-about .about-section {
     padding-top: 72px;
     padding-bottom: 72px;
   }
 
   .koda-about .about-hero {
-    padding-top: 72px;
+    padding-top: 64px;
     padding-bottom: 64px;
-  }
-
-  .koda-about .about-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .koda-about .about-hero-text {
-    order: 1;
-    max-width: 560px;
   }
 
   .koda-about .about-hero-h1 {
     font-size: 38px;
   }
 
-  .koda-about .about-hero-media {
-    order: 2;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  .koda-about .about-trust-section {
-    padding-top: 72px;
-    padding-bottom: 72px;
-  }
-
-  .koda-about .about-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .koda-about .about-trust-text {
-    order: 1;
-    max-width: 560px;
-  }
-
-  .koda-about .about-trust-h2 {
-    font-size: 34px;
-  }
-
-  .koda-about .about-trust-media {
-    order: 2;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  .koda-about .about-building-section {
-    padding-top: 72px;
-    padding-bottom: 72px;
-  }
-
-  .koda-about .about-building-header {
-    margin-bottom: 40px;
-  }
-
-  .koda-about .about-building-h2 {
-    font-size: 32px;
-  }
-
-  .koda-about .about-building-intro {
+  .koda-about .about-hero-subhead {
     font-size: 16px;
   }
 
+  .koda-about .about-section-h2 {
+    font-size: 32px;
+  }
+
+  .koda-about .about-section-body {
+    font-size: 16px;
+  }
+
+  /* Trust layout: stack on tablet */
+  .koda-about .about-trust-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .koda-about .about-trust-visual {
+    display: none;
+  }
+
+  /* Capabilities: keep 2-col */
+  .koda-about .about-capabilities-grid {
+    gap: 16px;
+  }
+
+  .koda-about .about-capability-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .koda-about .about-capability-title {
+    font-size: 18px;
+  }
+
+  /* Building: 3-col still but tighter */
   .koda-about .about-building-grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
 
   .koda-about .about-building-card {
     padding: 22px;
-  }
-
-  .koda-about .about-building-icon {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 16px;
-  }
-
-  .koda-about .about-building-icon svg {
-    width: 36px;
-    height: 36px;
+    border-radius: 20px;
   }
 
   .koda-about .about-building-title {
@@ -1336,66 +1028,18 @@
     font-size: 14px;
   }
 
-  .koda-about .about-values-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+  /* Why: full width */
+  .koda-about .about-why-content {
+    max-width: 100%;
   }
 
-  .koda-about .about-values-grid .about-value-card:last-child {
-    grid-column: 1 / -1;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .koda-about .about-team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-
-  .koda-about .about-why-section {
-    padding-top: 72px;
-    padding-bottom: 72px;
-  }
-
-  .koda-about .about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .koda-about .about-why-text {
-    order: 1;
-    max-width: 560px;
-  }
-
-  .koda-about .about-why-h2 {
-    font-size: 32px;
-  }
-
-  .koda-about .about-why-body {
-    font-size: 16px;
-  }
-
-  .koda-about .about-why-media {
-    order: 2;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  .koda-about .about-final-cta {
-    padding-top: 72px;
-    padding-bottom: 72px;
-  }
-
-  .koda-about .about-cta-inner {
-    gap: 24px;
+  /* CTA */
+  .koda-about .about-cta-band {
+    padding: 28px;
   }
 
   .koda-about .about-cta-headline {
     font-size: 24px;
-  }
-
-  .koda-about .about-cta-support {
-    font-size: 15px;
   }
 
   .koda-about .about-footer {
@@ -1405,388 +1049,102 @@
 }
 
 /* ============================================
-   13. RESPONSIVE - SMALL TABLET (481-767px)
-   Fixed header on mobile: body has padding-top: 72px from koda-header.css
+   17. RESPONSIVE - SMALL TABLET / LARGE PHONE (640-767px)
    ============================================ */
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .koda-about .koda-container {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
+@media (max-width: 767px) {
   .koda-about .about-section {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .koda-about .about-hero {
     padding-top: 40px;
-    padding-bottom: 56px;
+    padding-bottom: 48px;
   }
 
-  .koda-about .about-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .koda-about .about-hero-image {
+    width: 100% !important;
   }
 
-  .koda-about .about-hero-text {
-    order: 1;
+  .koda-about .about-hero-content {
+    max-width: 100%;
   }
 
   .koda-about .about-hero-h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .koda-about .about-hero-subhead {
-    font-size: 16px;
-  }
-
-  .koda-about .about-hero-cta {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .koda-about .about-hero-btn-primary,
-  .koda-about .about-hero-btn-secondary {
-    width: 100%;
-  }
-
-  .koda-about .about-hero-media {
-    order: 2;
-  }
-
-  .koda-about .about-trust-section {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
-  .koda-about .about-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .koda-about .about-trust-text {
-    order: 1;
-  }
-
-  .koda-about .about-trust-h2 {
-    font-size: 30px;
-  }
-
-  .koda-about .about-trust-body {
-    font-size: 16px;
-  }
-
-  .koda-about .about-trust-media {
-    order: 2;
-  }
-
-  .koda-about .about-building-section {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
-  .koda-about .about-building-header {
-    margin-bottom: 36px;
-  }
-
-  .koda-about .about-building-h2 {
-    font-size: 28px;
-  }
-
-  .koda-about .about-building-intro {
-    font-size: 15px;
-  }
-
-  .koda-about .about-building-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .koda-about .about-building-card {
-    padding: 24px;
-  }
-
-  .koda-about .about-building-icon {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 16px;
-  }
-
-  .koda-about .about-building-icon svg {
-    width: 36px;
-    height: 36px;
-  }
-
-  .koda-about .about-building-title {
-    font-size: 18px;
-  }
-
-  .koda-about .about-building-body {
-    font-size: 15px;
-  }
-
-  .koda-about .about-values-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .koda-about .about-value-card {
-    padding: 28px 24px;
-  }
-
-  .koda-about .about-team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .koda-about .about-team-avatar {
-    width: 100px;
-    height: 100px;
-  }
-
-  .koda-about .about-btn-group {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .koda-about .about-btn-primary,
-  .koda-about .about-btn-secondary {
-    width: 100%;
-  }
-
-  .koda-about .about-why-section {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
-  .koda-about .about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .koda-about .about-why-text {
-    order: 1;
-  }
-
-  .koda-about .about-why-h2 {
-    font-size: 28px;
-  }
-
-  .koda-about .about-why-body {
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
-
-  .koda-about .about-why-card {
-    padding: 16px 18px;
-  }
-
-  .koda-about .about-why-media {
-    order: 2;
-  }
-
-  .koda-about .about-final-cta {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
-  .koda-about .about-cta-band {
-    padding: 28px 24px;
-  }
-
-  .koda-about .about-cta-inner {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .koda-about .about-cta-headline {
-    font-size: 24px;
-  }
-
-  .koda-about .about-cta-support {
     font-size: 15px;
     max-width: 100%;
   }
 
-  .koda-about .about-cta-actions {
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .koda-about .about-cta-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .koda-about .about-cta-buttons .about-btn-primary,
-  .koda-about .about-cta-buttons .about-btn-secondary {
-    width: 100%;
-  }
-
-  .koda-about .about-cta-email {
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .koda-about .about-cta-email-row {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .koda-about .about-cta-email-input {
-    width: 100%;
-  }
-
-  .koda-about .about-cta-email-btn {
-    width: 100%;
-  }
-
-  .koda-about .about-footer {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
-
-  .koda-about .about-footer-inner {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
-
-  .koda-about .about-footer-links {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-}
-
-/* ============================================
-   14. RESPONSIVE - MOBILE (390-480px)
-   Fixed header on mobile: body has padding-top from koda-header.css
-   ============================================ */
-
-@media (min-width: 390px) and (max-width: 480px) {
-  .koda-about .koda-container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .koda-about .about-section {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
-
-  .koda-about .about-hero {
-    padding-top: 32px;
-    padding-bottom: 48px;
-  }
-
-  .koda-about .about-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .koda-about .about-hero-h1 {
-    font-size: 36px;
-  }
-
-  .koda-about .about-hero-subhead {
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
-
   .koda-about .about-hero-cta {
     flex-direction: column;
-    gap: 10px;
+    align-items: stretch;
+    gap: 12px;
   }
 
-  .koda-about .about-hero-btn-primary,
-  .koda-about .about-hero-btn-secondary {
+  .koda-about .about-hero-cta .btn--primary {
     width: 100%;
-    height: 46px;
   }
 
-  .koda-about .about-hero-trust {
-    font-size: 13px;
+  .koda-about .about-hero-cta .btn--tertiary {
+    align-self: flex-start;
   }
 
-  .koda-about .about-hero-media-frame {
-    padding: 14px;
-    border-radius: 22px;
-  }
-
-  .koda-about .about-hero-media-frame::before {
-    top: 14px;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    border-radius: 14px;
-  }
-
-  .koda-about .about-hero-media-frame img {
-    border-radius: 14px;
-  }
-
-  .koda-about .about-trust-section {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
-
-  .koda-about .about-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .koda-about .about-trust-h2 {
+  .koda-about .about-section-h2 {
     font-size: 28px;
   }
 
-  .koda-about .about-trust-body {
+  .koda-about .about-section-body {
     font-size: 15px;
-    margin-bottom: 24px;
   }
 
-  .koda-about .about-trust-bullets {
-    gap: 12px;
-    margin-bottom: 24px;
+  /* Trust */
+  .koda-about .about-trust-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .koda-about .about-trust-visual {
+    display: none;
   }
 
   .koda-about .about-trust-bullets li {
     font-size: 15px;
   }
 
-  .koda-about .about-trust-media-frame {
-    padding: 14px;
-    border-radius: 22px;
+  /* Capabilities: stack */
+  .koda-about .about-capabilities-header {
+    margin-bottom: 40px;
   }
 
-  .koda-about .about-trust-media-frame::before {
-    top: 14px;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    border-radius: 14px;
+  .koda-about .about-capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .koda-about .about-trust-media-frame img {
-    border-radius: 14px;
+  .koda-about .about-capability-card {
+    padding: 22px;
+    border-radius: 20px;
   }
 
-  .koda-about .about-building-section {
-    padding-top: 56px;
-    padding-bottom: 56px;
+  .koda-about .about-capability-title {
+    font-size: 18px;
   }
 
+  .koda-about .about-capability-desc {
+    font-size: 14px;
+  }
+
+  .koda-about .about-capability-bullets li {
+    font-size: 13px;
+  }
+
+  /* Building: single column */
   .koda-about .about-building-header {
-    margin-bottom: 32px;
-  }
-
-  .koda-about .about-building-h2 {
-    font-size: 26px;
-  }
-
-  .koda-about .about-building-intro {
-    font-size: 15px;
+    margin-bottom: 36px;
   }
 
   .koda-about .about-building-grid {
@@ -1799,100 +1157,17 @@
     border-radius: 20px;
   }
 
-  .koda-about .about-building-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 14px;
-  }
-
-  .koda-about .about-building-icon svg {
-    width: 32px;
-    height: 32px;
-  }
-
   .koda-about .about-building-title {
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 18px;
   }
 
   .koda-about .about-building-body {
     font-size: 14px;
   }
 
-  .koda-about .about-mission-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .koda-about .about-values-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .koda-about .about-value-card {
-    padding: 24px 20px;
-    border-radius: 16px;
-  }
-
-  .koda-about .about-value-icon {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 16px;
-  }
-
-  .koda-about .about-team-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .koda-about .about-team-avatar {
-    width: 100px;
-    height: 100px;
-  }
-
-  .koda-about .about-media-frame {
-    padding: 14px;
-    border-radius: 22px;
-  }
-
-  .koda-about .about-media-frame::before {
-    top: 14px;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    border-radius: 14px;
-  }
-
-  .koda-about .about-media-frame img {
-    border-radius: 14px;
-  }
-
-  .koda-about .about-cta {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
-
-  .koda-about .about-why-section {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
-
-  .koda-about .about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .koda-about .about-why-h2 {
-    font-size: 26px;
-  }
-
-  .koda-about .about-why-body {
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
-
-  .koda-about .about-why-cards {
-    gap: 10px;
+  /* Why */
+  .koda-about .about-why-content {
+    max-width: 100%;
   }
 
   .koda-about .about-why-card {
@@ -1908,28 +1183,7 @@
     font-size: 13px;
   }
 
-  .koda-about .about-why-media-frame {
-    padding: 14px;
-    border-radius: 22px;
-  }
-
-  .koda-about .about-why-media-frame::before {
-    top: 14px;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    border-radius: 14px;
-  }
-
-  .koda-about .about-why-media-frame img {
-    border-radius: 14px;
-  }
-
-  .koda-about .about-final-cta {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
-
+  /* CTA */
   .koda-about .about-cta-band {
     padding: 24px 20px;
     border-radius: 20px;
@@ -1945,41 +1199,41 @@
   }
 
   .koda-about .about-cta-support {
-    font-size: 14px;
+    font-size: 15px;
+    max-width: 100%;
   }
 
   .koda-about .about-cta-actions {
     align-items: stretch;
+    width: 100%;
   }
 
-  .koda-about .about-cta-buttons {
-    flex-direction: column;
-  }
-
-  .koda-about .about-cta-buttons .about-btn-primary,
-  .koda-about .about-cta-buttons .about-btn-secondary {
+  .koda-about .about-cta-actions .btn--primary {
     width: 100%;
   }
 
   .koda-about .about-cta-email {
     align-items: stretch;
+    width: 100%;
   }
 
   .koda-about .about-cta-email-row {
     flex-direction: column;
+    width: 100%;
   }
 
   .koda-about .about-cta-email-input {
     width: 100%;
   }
 
-  .koda-about .about-cta-email-btn {
+  .koda-about .about-cta-email-row .btn--sm {
     width: 100%;
   }
 
+  /* Footer */
   .koda-about .about-footer {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 
   .koda-about .about-footer-inner {
@@ -1992,97 +1246,42 @@
     flex-wrap: wrap;
     gap: 14px 20px;
   }
-
-  .koda-about .about-footer-link {
-    font-size: 13px;
-  }
 }
 
 /* ============================================
-   15. RESPONSIVE - SMALL MOBILE (360-389px)
-   Fixed header on mobile: body has padding-top from koda-header.css
+   18. RESPONSIVE - MOBILE (<=480px)
    ============================================ */
 
-@media (min-width: 360px) and (max-width: 389px) {
-  .koda-about .koda-container {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
+@media (max-width: 480px) {
   .koda-about .about-section {
-    padding-top: 52px;
-    padding-bottom: 52px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .koda-about .about-hero {
-    padding-top: 28px;
-    padding-bottom: 44px;
-  }
-
-  .koda-about .about-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 40px;
   }
 
   .koda-about .about-hero-h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .koda-about .about-hero-subhead {
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-
-  .koda-about .about-hero-cta {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .koda-about .about-hero-btn-primary,
-  .koda-about .about-hero-btn-secondary {
-    width: 100%;
-    height: 44px;
     font-size: 14px;
+    margin-bottom: 24px;
   }
 
   .koda-about .about-hero-trust {
     font-size: 13px;
   }
 
-  .koda-about .about-hero-media-frame {
-    padding: 12px;
-    border-radius: 20px;
+  .koda-about .about-section-h2 {
+    font-size: 24px;
   }
 
-  .koda-about .about-hero-media-frame::before {
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border-radius: 12px;
-  }
-
-  .koda-about .about-hero-media-frame img {
-    border-radius: 12px;
-  }
-
-  .koda-about .about-trust-section {
-    padding-top: 52px;
-    padding-bottom: 52px;
-  }
-
-  .koda-about .about-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .koda-about .about-trust-h2 {
-    font-size: 26px;
-  }
-
-  .koda-about .about-trust-body {
+  .koda-about .about-section-body {
     font-size: 14px;
-    margin-bottom: 20px;
   }
 
   .koda-about .about-trust-bullets {
@@ -2100,133 +1299,56 @@
     height: 18px;
   }
 
-  .koda-about .about-trust-link {
+  .koda-about .about-capabilities-header {
+    margin-bottom: 32px;
+  }
+
+  .koda-about .about-capability-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .koda-about .about-capability-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .koda-about .about-capability-badge {
+    font-size: 10px;
+    height: 22px;
+    padding: 2px 8px;
+  }
+
+  .koda-about .about-capability-title {
+    font-size: 17px;
+  }
+
+  .koda-about .about-capability-desc {
     font-size: 14px;
-  }
-
-  .koda-about .about-trust-media-frame {
-    padding: 12px;
-    border-radius: 20px;
-  }
-
-  .koda-about .about-trust-media-frame::before {
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border-radius: 12px;
-  }
-
-  .koda-about .about-trust-media-frame img {
-    border-radius: 12px;
-  }
-
-  .koda-about .about-building-section {
-    padding-top: 52px;
-    padding-bottom: 52px;
   }
 
   .koda-about .about-building-header {
     margin-bottom: 28px;
   }
 
-  .koda-about .about-building-h2 {
-    font-size: 24px;
-  }
-
-  .koda-about .about-building-intro {
-    font-size: 14px;
-  }
-
-  .koda-about .about-building-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
   .koda-about .about-building-card {
-    padding: 22px;
+    padding: 20px;
     border-radius: 18px;
   }
 
   .koda-about .about-building-icon {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 12px;
-  }
-
-  .koda-about .about-building-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 14px;
   }
 
   .koda-about .about-building-title {
-    font-size: 16px;
-    margin-bottom: 8px;
+    font-size: 17px;
   }
 
   .koda-about .about-building-body {
     font-size: 14px;
-  }
-
-  .koda-about .about-h1 {
-    font-size: 32px;
-  }
-
-  .koda-about .about-h2 {
-    font-size: 26px;
-  }
-
-  .koda-about .about-mission-grid {
-    gap: 28px;
-  }
-
-  .koda-about .about-values-grid {
-    gap: 14px;
-  }
-
-  .koda-about .about-value-card {
-    padding: 22px 18px;
-  }
-
-  .koda-about .about-team-avatar {
-    width: 88px;
-    height: 88px;
-  }
-
-  .koda-about .about-media-frame {
-    padding: 12px;
-    border-radius: 20px;
-  }
-
-  .koda-about .about-media-frame::before {
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border-radius: 12px;
-  }
-
-  .koda-about .about-media-frame img {
-    border-radius: 12px;
-  }
-
-  .koda-about .about-why-section {
-    padding-top: 52px;
-    padding-bottom: 52px;
-  }
-
-  .koda-about .about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .koda-about .about-why-h2 {
-    font-size: 24px;
-  }
-
-  .koda-about .about-why-body {
-    font-size: 14px;
-    margin-bottom: 20px;
   }
 
   .koda-about .about-why-cards {
@@ -2238,16 +1360,6 @@
     border-radius: 14px;
   }
 
-  .koda-about .about-why-card-icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .koda-about .about-why-card-icon svg {
-    width: 22px;
-    height: 22px;
-  }
-
   .koda-about .about-why-card-title {
     font-size: 15px;
   }
@@ -2256,42 +1368,9 @@
     font-size: 13px;
   }
 
-  .koda-about .about-why-media-frame {
-    padding: 12px;
-    border-radius: 20px;
-  }
-
-  .koda-about .about-why-media-frame::before {
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border-radius: 12px;
-  }
-
-  .koda-about .about-why-media-frame img {
-    border-radius: 12px;
-  }
-
-  .koda-about .about-btn-primary,
-  .koda-about .about-btn-secondary {
-    height: 46px;
-    font-size: 14px;
-  }
-
-  .koda-about .about-final-cta {
-    padding-top: 52px;
-    padding-bottom: 52px;
-  }
-
   .koda-about .about-cta-band {
-    padding: 22px 18px;
+    padding: 20px 18px;
     border-radius: 18px;
-  }
-
-  .koda-about .about-cta-inner {
-    grid-template-columns: 1fr;
-    gap: 18px;
   }
 
   .koda-about .about-cta-headline {
@@ -2302,50 +1381,27 @@
     font-size: 14px;
   }
 
-  .koda-about .about-cta-actions {
-    align-items: stretch;
-  }
-
-  .koda-about .about-cta-buttons {
-    flex-direction: column;
-  }
-
-  .koda-about .about-cta-buttons .about-btn-primary,
-  .koda-about .about-cta-buttons .about-btn-secondary {
-    width: 100%;
-    height: 44px;
+  .koda-about .btn--primary {
+    height: 46px;
     font-size: 14px;
   }
 
-  .koda-about .about-cta-email-label {
-    font-size: 11px;
-  }
-
-  .koda-about .about-cta-email-row {
-    flex-direction: column;
-  }
-
-  .koda-about .about-cta-email-input {
-    width: 100%;
-    height: 34px;
-    font-size: 13px;
-  }
-
-  .koda-about .about-cta-email-btn {
-    width: 100%;
-    height: 34px;
-    font-size: 13px;
+  .koda-about .btn--secondary {
+    height: 46px;
+    font-size: 14px;
   }
 
   .koda-about .about-footer {
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .koda-about .about-footer-inner {
-    flex-direction: column;
     gap: 16px;
-    align-items: flex-start;
+  }
+
+  .koda-about .about-footer-left {
+    gap: 12px;
   }
 
   .koda-about .about-footer-logo {
@@ -2358,7 +1414,6 @@
   }
 
   .koda-about .about-footer-links {
-    flex-wrap: wrap;
     gap: 12px 16px;
   }
 
@@ -2368,424 +1423,63 @@
 }
 
 /* ============================================
-   16. RESPONSIVE - EXTRA SMALL MOBILE (320-359px)
-   Fixed header on mobile: body has padding-top from koda-header.css
-   Trust line stays visible above media
+   19. RESPONSIVE - SMALL MOBILE (<=360px)
    ============================================ */
 
-@media (max-width: 359px) {
-  .koda-about .koda-container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .koda-about .about-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .koda-about .about-hero {
-    padding-top: 24px;
-    padding-bottom: 40px;
-  }
-
-  .koda-about .about-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .koda-about .about-hero-eyebrow {
-    font-size: 12px;
-    margin-bottom: 12px;
-  }
-
+@media (max-width: 360px) {
   .koda-about .about-hero-h1 {
-    font-size: 28px;
-    margin-bottom: 16px;
+    font-size: 26px;
   }
 
-  .koda-about .about-hero-subhead {
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-
-  .koda-about .about-hero-cta {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .koda-about .about-hero-btn-primary,
-  .koda-about .about-hero-btn-secondary {
-    width: 100%;
-    height: 44px;
-    font-size: 14px;
-  }
-
-  .koda-about .about-hero-trust {
-    font-size: 12px;
-    margin-bottom: 8px;
-  }
-
-  .koda-about .about-hero-media-frame {
-    padding: 10px;
-    border-radius: 18px;
-  }
-
-  .koda-about .about-hero-media-frame::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 10px;
-  }
-
-  .koda-about .about-hero-media-frame img {
-    border-radius: 10px;
-  }
-
-  .koda-about .about-trust-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .koda-about .about-trust-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .koda-about .about-trust-h2 {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-
-  .koda-about .about-trust-body {
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-
-  .koda-about .about-trust-bullets {
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .koda-about .about-trust-bullets li {
-    font-size: 14px;
-    gap: 10px;
-    line-height: 1.4;
-  }
-
-  .koda-about .about-trust-bullets li::before {
-    width: 16px;
-    height: 16px;
-    margin-top: 3px;
-  }
-
-  .koda-about .about-trust-link {
-    font-size: 14px;
-  }
-
-  .koda-about .about-trust-media-frame {
-    padding: 10px;
-    border-radius: 18px;
-  }
-
-  .koda-about .about-trust-media-frame::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 10px;
-  }
-
-  .koda-about .about-trust-media-frame img {
-    border-radius: 10px;
-  }
-
-  .koda-about .about-building-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .koda-about .about-building-header {
-    margin-bottom: 24px;
-  }
-
-  .koda-about .about-building-h2 {
+  .koda-about .about-section-h2 {
     font-size: 22px;
   }
 
-  .koda-about .about-building-intro {
+  .koda-about .about-section-body {
     font-size: 14px;
     line-height: 1.5;
   }
 
-  .koda-about .about-building-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .koda-about .about-capability-card {
+    padding: 18px;
+    border-radius: 16px;
   }
 
   .koda-about .about-building-card {
-    padding: 20px;
+    padding: 18px;
     border-radius: 16px;
-  }
-
-  .koda-about .about-building-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 12px;
-  }
-
-  .koda-about .about-building-icon svg {
-    width: 28px;
-    height: 28px;
-  }
-
-  .koda-about .about-building-title {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-
-  .koda-about .about-building-body {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .koda-about .about-h1 {
-    font-size: 28px;
-  }
-
-  .koda-about .about-h2 {
-    font-size: 24px;
-  }
-
-  .koda-about .about-h3 {
-    font-size: 18px;
-  }
-
-  .koda-about .about-subtitle {
-    font-size: 15px;
-  }
-
-  .koda-about .about-body {
-    font-size: 14px;
-  }
-
-  .koda-about .about-mission-grid {
-    gap: 24px;
-  }
-
-  .koda-about .about-values-grid {
-    gap: 12px;
-  }
-
-  .koda-about .about-value-card {
-    padding: 20px 16px;
-    border-radius: 14px;
-  }
-
-  .koda-about .about-value-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 14px;
-    border-radius: 10px;
-  }
-
-  .koda-about .about-team-avatar {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 16px;
-  }
-
-  .koda-about .about-team-name {
-    font-size: 16px;
-  }
-
-  .koda-about .about-team-role {
-    font-size: 13px;
-  }
-
-  .koda-about .about-media-frame {
-    padding: 10px;
-    border-radius: 18px;
-  }
-
-  .koda-about .about-media-frame::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 10px;
-  }
-
-  .koda-about .about-media-frame img {
-    border-radius: 10px;
-  }
-
-  .koda-about .about-btn-primary,
-  .koda-about .about-btn-secondary {
-    height: 44px;
-    padding: 0 20px;
-    font-size: 14px;
-  }
-
-  .koda-about .about-cta {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .koda-about .about-cta .about-subtitle {
-    margin-bottom: 24px;
-  }
-
-  .koda-about .about-why-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
-  .koda-about .about-why-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .koda-about .about-why-h2 {
-    font-size: 22px;
-    margin-bottom: 12px;
-  }
-
-  .koda-about .about-why-body {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-
-  .koda-about .about-why-cards {
-    gap: 8px;
   }
 
   .koda-about .about-why-card {
-    padding: 14px 14px;
-    border-radius: 14px;
-    gap: 12px;
-  }
-
-  .koda-about .about-why-card-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .koda-about .about-why-card-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .koda-about .about-why-card-title {
-    font-size: 14px;
-  }
-
-  .koda-about .about-why-card-desc {
-    font-size: 13px;
-    line-height: 1.4;
-  }
-
-  .koda-about .about-why-media-frame {
-    padding: 10px;
-    border-radius: 18px;
-  }
-
-  .koda-about .about-why-media-frame::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 10px;
-  }
-
-  .koda-about .about-why-media-frame img {
-    border-radius: 10px;
-  }
-
-  .koda-about .about-final-cta {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding: 14px;
+    border-radius: 12px;
+    gap: 10px;
   }
 
   .koda-about .about-cta-band {
-    padding: 20px 16px;
+    padding: 18px 16px;
     border-radius: 16px;
-  }
-
-  .koda-about .about-cta-inner {
-    grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .koda-about .about-cta-headline {
     font-size: 18px;
   }
 
-  .koda-about .about-cta-support {
-    font-size: 13px;
-    line-height: 1.4;
+  .koda-about .btn--primary {
+    height: 44px;
+    padding: 0 22px;
+    font-size: 14px;
   }
 
-  .koda-about .about-cta-actions {
-    align-items: stretch;
-  }
-
-  .koda-about .about-cta-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .koda-about .about-cta-buttons .about-btn-primary,
-  .koda-about .about-cta-buttons .about-btn-secondary {
-    width: 100%;
-    height: 42px;
-    font-size: 13px;
-  }
-
-  .koda-about .about-cta-email {
-    align-items: stretch;
-  }
-
-  .koda-about .about-cta-email-label {
-    font-size: 11px;
-  }
-
-  .koda-about .about-cta-email-row {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .koda-about .about-cta-email-input {
-    width: 100%;
-    height: 32px;
-    font-size: 12px;
-    padding: 0 10px;
-  }
-
-  .koda-about .about-cta-email-btn {
-    width: 100%;
-    height: 32px;
-    font-size: 12px;
+  .koda-about .btn--secondary {
+    height: 44px;
+    padding: 0 22px;
+    font-size: 14px;
   }
 
   .koda-about .about-footer {
     padding-top: 24px;
     padding-bottom: 24px;
-  }
-
-  .koda-about .about-footer-inner {
-    flex-direction: column;
-    gap: 14px;
-    align-items: flex-start;
-  }
-
-  .koda-about .about-footer-left {
-    gap: 12px;
   }
 
   .koda-about .about-footer-logo {
@@ -2797,55 +1491,116 @@
     font-size: 11px;
   }
 
-  .koda-about .about-footer-links {
-    flex-wrap: wrap;
-    gap: 10px 14px;
-  }
-
   .koda-about .about-footer-link {
     font-size: 11px;
   }
 }
 
 /* ============================================
-   17. REDUCED MOTION
+   20. REDUCED MOTION
    ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
-  .koda-about .about-hero-text,
-  .koda-about .about-hero-media {
+  .koda-about .about-hero-content,
+  .koda-about .animate-section,
+  .koda-about .about-building-card,
+  .koda-about .about-capability-card {
     opacity: 1;
     transform: none;
     transition: none;
   }
 
-  .koda-about .about-trust-h2 .highlight-word {
+  .koda-about .highlight-word {
     background-size: 100% 100%;
     transition: none;
   }
 
-  .koda-about .about-trust-link::after {
+  .koda-about .btn,
+  .koda-about .about-why-card,
+  .koda-about .about-building-card,
+  .koda-about .about-capability-card {
     transition: none;
   }
 
-  .koda-about .about-building-card {
-    opacity: 1;
-    transform: none;
+  .koda-about .btn--tertiary span {
     transition: none;
   }
+}
 
-  .koda-about .about-value-card {
-    transition: none;
+/* ============================================
+   MEASURABLE OUTCOMES SECTION
+   ============================================ */
+
+.koda-about .about-outcomes-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.koda-about .about-outcomes-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.koda-about .about-outcomes-header .about-section-h2 {
+  margin-bottom: 12px;
+}
+
+.koda-about .about-outcomes-header .about-section-body {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.koda-about .outcomes-highlight {
+  color: #999999;
+}
+
+.koda-about .about-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.koda-about .about-outcome-card {
+  padding: 0;
+}
+
+.koda-about .outcome-number {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #111111;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.koda-about .outcome-prefix {
+  font-size: 20px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.koda-about .outcome-desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+@media (max-width: 767px) {
+  .koda-about .about-outcomes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
   }
 
-  .koda-about .about-why-card {
-    transition: none;
+  .koda-about .outcome-number {
+    font-size: 36px;
   }
+}
 
-  .koda-about .about-btn-primary,
-  .koda-about .about-btn-secondary,
-  .koda-about .about-hero-btn-primary,
-  .koda-about .about-hero-btn-secondary {
-    transition: none;
+@media (max-width: 480px) {
+  .koda-about .about-outcomes-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }

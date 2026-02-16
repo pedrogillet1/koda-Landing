@@ -1,4 +1,4 @@
-// Koda Landing Page JavaScript
+// Allybi Landing Page JavaScript
 // Cross-platform compatible functionality
 
 // Smooth scrolling for navigation links

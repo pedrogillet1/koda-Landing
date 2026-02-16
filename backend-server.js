@@ -20,13 +20,13 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
       status: 'ok',
-      message: 'Koda Landing Backend is running',
+      message: 'Allybi Landing Backend is running',
       timestamp: new Date().toISOString()
     }));
   } else if (req.url === '/api/status' || req.url === '/') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({
-      service: 'Koda Landing Backend',
+      service: 'Allybi Landing Backend',
       version: '1.0.0',
       status: 'active',
       endpoints: [
@@ -44,7 +44,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`✅ Koda Landing Backend Server is running!`);
+  console.log(`✅ Allybi Landing Backend Server is running!`);
   console.log(`🌐 Backend API: http://localhost:${PORT}/`);
   console.log(`💚 Health check: http://localhost:${PORT}/api/health`);
 });

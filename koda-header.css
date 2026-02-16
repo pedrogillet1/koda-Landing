@@ -64,6 +64,7 @@ header {
   border-radius: 999px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   pointer-events: auto;
+  overflow: visible;
   transition:
     background-color 180ms ease,
     border-color 180ms ease,
@@ -596,8 +597,6 @@ header {
    14. PREVENT HORIZONTAL OVERFLOW
    ============================================ */
 
-header,
-.main-nav,
 .mobile-menu {
   max-width: 100vw;
   overflow-x: hidden;

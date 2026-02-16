@@ -7,28 +7,30 @@
 
 #language-toggle {
   background-color: transparent;
-  border: none;
-  color: #FFFFFF;
+  border: 1.5px solid #E6E6EC;
+  color: #181818;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  padding: 12px 24px;
-  border-radius: 100px;
+  padding: 10px 16px;
+  border-radius: 999px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   line-height: 1;
 }
 
 #language-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #F5F5F5;
+  border-color: #CCCCCC;
 }
 
 #language-toggle[aria-expanded="true"] {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #F5F5F5;
+  color: #181818;
+  border-color: #CCCCCC;
 }
 
 #language-toggle:focus {
@@ -37,9 +39,10 @@
 }
 
 #current-language {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1;
+  color: #181818;
 }
 
 .language-arrow {
@@ -198,9 +201,10 @@
 .dropdown-arrow {
     display: inline-block;
     margin-left: 4px;
-    font-size: 12px;
-    opacity: 0.8;
+    font-size: 9px;
+    opacity: 0.6;
     transition: transform 0.2s ease;
+    color: #181818;
 }
 
 #language-toggle:hover .dropdown-arrow {

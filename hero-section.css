@@ -16,8 +16,10 @@
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 140px clamp(24px, 6vw, 96px) 80px;
+  padding: 120px clamp(24px, 6vw, 96px) 80px !important;
+  padding-top: 120px !important;
   box-sizing: border-box;
+  height: auto !important;
 }
 
 /* ============================================
@@ -179,6 +181,46 @@
 }
 
 /* ============================================
+   4b. TERTIARY BUTTON (text link + arrow)
+   ============================================ */
+
+.hero-btn-tertiary {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: auto;
+  padding: 8px 0;
+  background: none;
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #181818;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.hero-btn-tertiary:hover {
+  color: #22C55E;
+}
+
+.hero-btn-tertiary:hover span {
+  transform: translateX(3px);
+}
+
+.hero-btn-tertiary span {
+  display: inline-block;
+  transition: transform 150ms ease;
+}
+
+.hero-btn-tertiary:focus-visible {
+  outline: 2px solid #181818;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================
    5. TRUST / PROOF POINTS
    Subtle with dot separators
    ============================================ */
@@ -219,7 +261,7 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  padding-top: 12px; /* Align top edge with text */
+  padding-top: 0;
 }
 
 /* ============================================
@@ -234,19 +276,39 @@
   background-color: transparent;
   border: none;
   border-radius: 0;
-  box-shadow: none;
   box-sizing: border-box;
   overflow: visible;
-  /* Animation setup */
-  will-change: transform, opacity;
 }
 
 .hero-media-frame img {
   display: block;
-  width: 100%;
+  width: 200% !important;
+  max-width: none !important;
   height: auto;
   object-fit: contain;
   border-radius: 0;
+  margin-left: 25%;
+  margin-top: -20px;
+}
+
+.hero-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 16px;
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hero-image-placeholder svg {
+  opacity: 0.5;
 }
 
 /* ============================================
@@ -291,20 +353,11 @@
     }
   }
 
-  /* Mockup reveal + float */
+  /* Mockup reveal only - no float */
   .hero-media-frame {
     opacity: 0;
-    animation:
-      heroMockupReveal 500ms ease forwards,
-      heroMockupFloat 7s ease-in-out 500ms infinite;
-  }
-
-  /* Hover: pause float, scale up slightly */
-  .hero-media-frame:hover {
-    animation-play-state: paused, paused;
-    transform: scale(1.01);
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.12));
-    transition: transform 300ms ease, filter 300ms ease;
+    animation: heroMockupReveal 500ms ease forwards;
+    filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.15));
   }
 }
 
@@ -329,7 +382,8 @@
 
 @media (min-width: 1440px) {
   .hero-section {
-    padding: 160px 96px 96px;
+    padding: 140px 96px 96px !important;
+    padding-top: 140px !important;
     max-width: 1400px;
   }
 
@@ -351,7 +405,7 @@
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .hero-section {
-    padding: 130px 48px 72px;
+    padding: 170px 48px 72px;
   }
 
   .hero-grid {
@@ -369,7 +423,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-section {
-    padding: 120px 32px 64px;
+    padding: 160px 32px 64px;
   }
 
   .hero-grid {
@@ -410,7 +464,7 @@
 
 @media (max-width: 767px) {
   .hero-section {
-    padding: 100px 24px 56px;
+    padding: 140px 24px 56px;
   }
 
   .hero-grid {
@@ -483,7 +537,7 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 90px 20px 48px;
+    padding: 130px 20px 48px;
   }
 
   .hero-grid {
@@ -515,7 +569,7 @@
 
 @media (max-width: 360px) {
   .hero-section {
-    padding: 80px 16px 40px;
+    padding: 120px 16px 40px;
   }
 
   .hero-grid {

@@ -1,4 +1,4 @@
-// Scroll-triggered animations for Koda pages
+// Scroll-triggered animations for Allybi pages
 document.addEventListener("DOMContentLoaded", () => {
     // Generic animate-on-scroll elements
     const sectionsToAnimate = document.querySelectorAll(".animate-on-scroll");
@@ -69,6 +69,30 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             stepsObserver.observe(stepsSection);
+        }
+    }
+
+    // Action cards staggered fade-up animation
+    const actionBlock = document.querySelector(".action-cards-block");
+
+    if (actionBlock) {
+        if (prefersReducedMotion) {
+            actionBlock.classList.add("is-visible");
+        } else {
+            const actionObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        actionObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.2,
+                rootMargin: "0px"
+            });
+
+            actionObserver.observe(actionBlock);
         }
     }
 
