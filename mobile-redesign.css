@@ -363,6 +363,39 @@
   .hero-proof-points::after {
     display: none !important;
   }
+
+  /* Hero mobile visual — centered below trust line */
+  .hero-mobile-visual {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 32px !important;
+    margin-bottom: 28px !important;
+    text-align: center !important;
+  }
+
+  .hero-mobile-visual img {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Steps mobile visual — centered above How it works */
+  .steps-mobile-visual {
+    display: block !important;
+    width: 100% !important;
+    padding: 32px 20px 28px !important;
+    text-align: center !important;
+  }
+
+  .steps-mobile-visual img {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
 }
 
 /* ============================================
