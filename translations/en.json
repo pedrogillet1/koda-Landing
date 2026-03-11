@@ -7,17 +7,21 @@
   },
   "hero": {
     "eyebrow": "Private AI for your documents",
-    "title": "Find answers in your files — in seconds.",
-    "subtitle": "Upload PDFs, contracts, decks, and notes. Ask questions in plain language. Allybi searches only what you've uploaded and returns a clean, grounded response you can use immediately.",
+    "title": "Find answers in your files in seconds.",
+    "subtitle": "Upload your documents. Ask questions in plain language. Allybi returns grounded answers from your files — ready to use.",
     "cta_primary": "Open Allybi",
-    "cta_secondary": "See how it works <span aria-hidden=\"true\">&rarr;</span>",
+    "cta_secondary": "How it works <span aria-hidden=\"true\">&rarr;</span>",
     "proof1": "Private by design",
     "proof2": "Encrypted",
-    "proof3": "Answers grounded in your files"
+    "proof3": "Answers grounded in your files",
+    "trust_line": "Private by design · Encrypted · Grounded answers"
+  },
+  "proof": {
+    "label": "See it in action"
   },
   "workflow": {
-    "title": "Built for high-stakes work.",
-    "subtitle": "Different teams. Same problem: finding the right file fast — without losing control of sensitive docs.",
+    "title": "Built for teams that can't afford the wrong file.",
+    "subtitle": "The right file, fast — without losing control.",
     "tab": {
       "finance": "Finance",
       "legal": "Legal",
@@ -25,24 +29,27 @@
     },
     "finance": {
       "title": "Dealmakers & finance",
-      "bullet1": "Find the exact slide, metric, or note in seconds.",
-      "bullet2": "Answer client questions fast — edit and send without leaving Allybi.",
-      "bullet3": "Keep sensitive deal material organized by project."
+      "bullet1": "Find the exact slide or metric in seconds.",
+      "bullet2": "Answer client questions fast — edit and send in place.",
+      "bullet3": "Keep deal material organized by project.",
+      "proof": "Used by finance teams at 50+ firms"
     },
     "legal": {
       "title": "Legal teams",
-      "bullet1": "Keep contracts, versions, and evidence in one private workspace.",
-      "bullet2": "Search clauses and definitions across folders instantly.",
-      "bullet3": "Edit and send the right version — no 'wrong file' risk under pressure."
+      "bullet1": "Contracts, versions, and evidence in one workspace.",
+      "bullet2": "Search clauses across folders instantly.",
+      "bullet3": "Send the right version — no wrong-file risk.",
+      "proof": "Trusted by legal teams managing sensitive cases"
     },
     "business": {
       "title": "For Business Teams",
-      "bullet1": "Keep proposals, plans, and key documents in one private workspace.",
-      "bullet2": "Ask questions across docs, spreadsheets, and threads in plain language.",
-      "bullet3": "Edit and send the latest file from Allybi — without hunting attachments."
+      "bullet1": "Proposals, plans, and key docs in one workspace.",
+      "bullet2": "Ask across docs and threads in plain language.",
+      "bullet3": "Send the latest file — no hunting for attachments.",
+      "proof": "Adopted by business teams at growing companies"
     },
     "cta": {
-      "primary": "Get Started",
+      "primary": "Open Allybi",
       "secondary": "Open Allybi"
     }
   },
@@ -56,28 +63,31 @@
     "subtitle": "Three steps. No learning curve.",
     "upload": {
       "title": "Upload",
-      "body": "Drop in PDFs, documents, decks, and notes — anything you want searchable and private."
+      "body": "Drop in PDFs, decks, contracts — anything you need searchable."
     },
     "search": {
       "title": "Ask & Search",
-      "body": "Search normally or ask questions in plain language. Allybi finds what matters inside your uploaded files."
+      "body": "Ask in plain language. Allybi finds what matters in your files."
     },
     "organize": {
       "title": "Organize",
-      "body": "Tag, group, and manage files by project so you can move fast without losing track."
+      "body": "Group files by project. Move fast without losing track."
     },
     "action": {
       "title": "Then take action.",
       "subtitle": "Two power features — still private, still simple.",
+      "label": "Also included",
       "edit": {
         "title": "Edit Docs & Sheets",
         "body": "Rewrite paragraphs, update tables, and create formulas — directly inside your documents.",
-        "detail": "Works with .docx and .xlsx."
+        "detail": "Works with .docx and .xlsx.",
+        "short": "Edit Docs & Sheets"
       },
       "connect": {
         "title": "Connect Inbox & Slack",
         "body": "Find any email or message, then send replies with the right Allybi file attached.",
-        "detail": "Connect Outlook, Gmail, and Slack."
+        "detail": "Connect Outlook, Gmail, and Slack.",
+        "short": "Connect Inbox & Slack"
       },
       "trust": "You control what's connected. Disconnect anytime."
     }
@@ -98,13 +108,22 @@
       "description": "Group files by deal, client, case, or project — and keep everything easy to find."
     }
   },
+  "trust": {
+    "mobile_title": "Why teams trust Allybi",
+    "mobile_enc_title": "Encrypted storage",
+    "mobile_enc_desc": "at rest and in transit",
+    "mobile_ground_title": "Grounded answers only",
+    "mobile_ground_desc": "sourced from your uploaded files",
+    "mobile_org_title": "Project-level organization",
+    "mobile_org_desc": "group by deal, client, or case"
+  },
   "cta": {
-    "title": "Your files. Your AI. Your rules.",
-    "body": "Allybi gives you one place to store, search, and work with your documents — without the chaos.",
+    "title": "Your files. Searchable. Private. Ready.",
+    "body": "Store, search, and ask across your documents in one private workspace.",
     "bullet1": "Search and ask across your uploaded files",
     "bullet2": "Encrypted storage",
     "bullet3": "Clean project organization",
-    "primary": "Get Started",
+    "primary": "Open Allybi",
     "secondary": "Open Allybi",
     "micro": "Designed for privacy-first teams and individuals."
   },

@@ -1,0 +1,1351 @@
+/* ============================================
+   ALLYBI MOBILE REDESIGN
+   Scope: max-width 768px ONLY
+   Loads LAST to override all other stylesheets.
+   Desktop and tablet are completely untouched.
+   ============================================ */
+
+/* ============================================
+   1. MOBILE HEADER — COMPACT, CLEAN, PREMIUM
+   Target: 56px height, no rounded bottom, subtle
+   border on scroll, logo left, hamburger right.
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* --- Override body padding for new header height --- */
+  body,
+  html body,
+  html body.homepage {
+    padding-top: 48px !important;
+  }
+
+  /* --- Header wrapper --- */
+  html body header,
+  header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 48px !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 10000 !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+
+  /* --- Main nav bar --- */
+  html body header .main-nav,
+  html body .hero-section header .main-nav,
+  header .main-nav,
+  .main-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    background-color: #FFFFFF !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+    z-index: 10001 !important;
+    pointer-events: auto !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: box-shadow 180ms ease, border-color 180ms ease !important;
+  }
+
+  /* Scrolled state — subtle divider appears after scroll only */
+  .main-nav.is-scrolled {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03) !important;
+    border-bottom-color: rgba(0,0,0,0.06) !important;
+  }
+
+  /* --- Logo --- */
+  html body header .main-nav .logo,
+  .main-nav .logo {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 auto !important;
+    order: 1 !important;
+  }
+
+  html body header .main-nav .logo img,
+  html body header .main-nav .content-icon,
+  .main-nav .logo img,
+  .main-nav .content-icon {
+    height: 32px !important;
+    width: 32px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* --- Hamburger --- */
+  html body header .main-nav .mobile-menu-toggle,
+  html body header .main-nav #mobile-menu-btn,
+  .main-nav .mobile-menu-toggle,
+  .main-nav #mobile-menu-btn {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4.5px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    order: 2 !important;
+    flex-shrink: 0 !important;
+    position: relative !important;
+    z-index: 1001 !important;
+    transform: none !important;
+  }
+
+  html body header .main-nav .mobile-menu-toggle .menu-line,
+  html body header .main-nav #mobile-menu-btn .menu-line,
+  .main-nav .mobile-menu-toggle .menu-line,
+  .main-nav #mobile-menu-btn .menu-line {
+    display: block !important;
+    width: 18px !important;
+    height: 1.5px !important;
+    background-color: #181818 !important;
+    border-radius: 1px !important;
+    transition: all 200ms ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Hamburger to X */
+  .main-nav .mobile-menu-toggle.active .menu-line:nth-child(1),
+  .main-nav #mobile-menu-btn.active .menu-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) !important;
+  }
+  .main-nav .mobile-menu-toggle.active .menu-line:nth-child(2),
+  .main-nav #mobile-menu-btn.active .menu-line:nth-child(2) {
+    opacity: 0 !important;
+  }
+  .main-nav .mobile-menu-toggle.active .menu-line:nth-child(3),
+  .main-nav #mobile-menu-btn.active .menu-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) !important;
+  }
+
+  /* --- Mobile dropdown menu --- */
+  html body #mobile-menu,
+  html body .mobile-menu,
+  #mobile-menu,
+  .mobile-menu {
+    position: fixed !important;
+    top: 48px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-height: calc(100vh - 48px) !important;
+    background: #FFFFFF !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid #E6E6EC !important;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
+    z-index: 9999 !important;
+    display: none !important;
+    flex-direction: column !important;
+    padding: 16px 20px 20px !important;
+    gap: 12px !important;
+    overflow-y: auto !important;
+  }
+
+  #mobile-menu.open,
+  #mobile-menu.active,
+  .mobile-menu.open,
+  .mobile-menu.active {
+    display: flex !important;
+  }
+
+  /* Menu link chips */
+  .mobile-menu .mobile-menu-link {
+    font-size: 14px !important;
+    padding: 8px 14px !important;
+    border-radius: 999px !important;
+    background-color: #F5F5F5 !important;
+    color: #181818 !important;
+    min-height: 36px !important;
+  }
+
+  /* Menu CTA */
+  .mobile-menu .mobile-cta-btn,
+  .mobile-menu a.mobile-cta-btn {
+    height: 44px !important;
+    font-size: 14px !important;
+    border-radius: 999px !important;
+    background: #181818 !important;
+    color: #FFFFFF !important;
+    padding: 0 24px !important;
+    margin-top: 4px !important;
+  }
+}
+
+/* ============================================
+   2. HERO SECTION — SHARP, TIGHT, ABOVE-FOLD
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .hero-section-wrapper {
+    background-color: #FFFFFF !important;
+  }
+
+  .hero-section {
+    padding: 4px 20px 24px !important;
+    padding-top: 4px !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  .hero-text {
+    order: 1 !important;
+    max-width: 100% !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* Hide the giant hero device render on mobile */
+  .hero-media {
+    display: none !important;
+  }
+
+  /* Eyebrow */
+  .hero-eyebrow {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: #7A7A7E !important;
+    opacity: 1 !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* H1 — balanced wrapping, immediate presence */
+  .hero-headline {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    color: #181818 !important;
+    margin-bottom: 12px !important;
+    max-width: 100% !important;
+    text-wrap: balance !important;
+  }
+
+  /* Body — tight and clear */
+  .hero-subheadline {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    color: #6C6B6E !important;
+    margin-bottom: 16px !important;
+    max-width: 100% !important;
+  }
+
+  /* CTA Row — clear hierarchy */
+  .hero-cta-row {
+    flex-direction: row !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin-bottom: 14px !important;
+    align-items: center !important;
+  }
+
+  /* Primary CTA — dominant */
+  .hero-btn-primary {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    height: 46px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 0 28px !important;
+    border-radius: 999px !important;
+    background-color: #181818 !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    justify-content: center !important;
+  }
+
+  /* Secondary CTA — subdued text link, not competing */
+  .hero-btn-tertiary {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+    color: #6C6B6E !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    justify-content: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+  }
+
+  /* Hide proof chips on mobile — replaced by trust row */
+  .hero-proof-points {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .proof-point {
+    display: none !important;
+  }
+
+  /* Trust row — premium integrated metadata */
+  .hero-trust-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #7A7A7E !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .hero-trust-icon {
+    flex-shrink: 0 !important;
+    width: 12px !important;
+    height: 12px !important;
+    color: #7A7A7E !important;
+  }
+
+  .hero-proof-points::after {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   3. PRODUCT PROOF CARD — MOBILE ONLY
+   Shows a realistic query + answer
+   ============================================ */
+
+@media (max-width: 768px) {
+  .mobile-product-proof {
+    display: block !important;
+    margin: 0 20px 0;
+    padding: 0 0 12px;
+  }
+
+  .mobile-proof-card {
+    background-color: #F9F8F7;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  .mobile-proof-label {
+    display: inline-block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #7A7A7E;
+    margin-bottom: 6px;
+  }
+
+  .mobile-proof-query {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 10px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 6px;
+  }
+
+  .mobile-proof-query-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    color: #7A7A7E;
+    margin-top: 1px;
+  }
+
+  .mobile-proof-query-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #181818;
+    margin: 0;
+  }
+
+  .mobile-proof-answer {
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: none;
+    border-left: 2px solid #34A853;
+    border-radius: 8px;
+  }
+
+  .mobile-proof-answer-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #34A853;
+    margin-bottom: 4px;
+  }
+
+  .mobile-proof-answer-label svg {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  .mobile-proof-answer-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #444444;
+    margin: 0;
+  }
+
+  .mobile-proof-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+    padding: 3px 7px;
+    background-color: rgba(0,0,0,0.03);
+    border: none;
+    border-radius: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6C6B6E;
+  }
+
+  .mobile-proof-source svg {
+    flex-shrink: 0;
+    color: #7A7A7E;
+    width: 12px;
+    height: 12px;
+  }
+
+  .mobile-proof-answer-text strong {
+    font-weight: 600;
+    color: #181818;
+  }
+}
+
+/* Hide on desktop */
+@media (min-width: 769px) {
+  .mobile-product-proof {
+    display: none !important;
+  }
+  .hero-trust-row {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   4. PAIN SECTION — HIDDEN ON MOBILE
+   The hero already communicates the value prop.
+   Hiding this reduces scroll by ~300px.
+   ============================================ */
+
+@media (max-width: 768px) {
+  .pain-section-wrapper {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   5. WORKFLOW SECTION — COMPACT TABS + CARDS
+   Keep the switcher, remove media, tighten.
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .workflow-section {
+    padding: 32px 20px !important;
+  }
+
+  .workflow-header {
+    margin-bottom: 12px !important;
+  }
+
+  .workflow-title {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    margin-bottom: 6px !important;
+    text-wrap: balance !important;
+  }
+
+  .workflow-subtitle {
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+    color: #6C6B6E !important;
+  }
+
+  /* Segmented control — crisp, premium */
+  .workflow-tabs {
+    display: flex !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 2px !important;
+    height: 36px !important;
+    margin-bottom: 12px !important;
+    border-radius: 999px !important;
+    background-color: #F1F0EF !important;
+    border: none !important;
+    overflow: visible !important;
+    gap: 0 !important;
+  }
+
+  .workflow-tab {
+    flex: 1 !important;
+    padding: 0 12px !important;
+    height: 32px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    transition: all 150ms ease !important;
+  }
+
+  .workflow-tab.is-active {
+    background-color: #181818 !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12) !important;
+  }
+
+  /* Panel — borderless, warm bg only */
+  .workflow-panel-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 18px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    background-color: #F5F4F2 !important;
+  }
+
+  /* Hide media images on mobile */
+  .workflow-panel-media {
+    display: none !important;
+  }
+
+  .workflow-panel-title {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+    color: #181818 !important;
+  }
+
+  .workflow-panel-bullets {
+    margin-bottom: 14px !important;
+    gap: 6px !important;
+  }
+
+  .workflow-panel-bullets li {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    gap: 8px !important;
+    color: #444444 !important;
+  }
+
+  .workflow-panel-bullets li::before {
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: 2px !important;
+  }
+
+  /* Single CTA */
+  .workflow-panel-cta {
+    flex-direction: row !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .workflow-btn {
+    height: 40px !important;
+    font-size: 14px !important;
+    border-radius: 999px !important;
+  }
+
+  .workflow-btn--secondary {
+    display: none !important;
+  }
+
+  .workflow-btn--primary {
+    flex: none !important;
+    width: 100% !important;
+  }
+
+  .workflow-panel-proof {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   6. STEPS SECTION — TIGHT COMPACT ROWS
+   3 stacked cards, minimal padding
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .steps-section-wrapper {
+    background-color: #FFFFFF !important;
+  }
+
+  .steps-section {
+    padding: 24px 20px !important;
+  }
+
+  .steps-header {
+    margin-bottom: 10px !important;
+    text-align: left !important;
+  }
+
+  .steps-title {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .steps-subtitle {
+    font-size: 13px !important;
+    color: #7A7A7E !important;
+  }
+
+  .steps-grid {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  /* Step rows — light, fast-reading */
+  .step-card {
+    padding: 10px 0 !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.03) !important;
+    display: grid !important;
+    grid-template-columns: 22px 1fr !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 10px !important;
+    row-gap: 1px !important;
+    align-items: start !important;
+    flex-direction: unset !important;
+  }
+
+  .step-card:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  .step-icon {
+    display: none !important;
+  }
+
+  /* Step number — small, subtle */
+  .step-number {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    height: 22px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #7A7A7E !important;
+    background-color: #F5F4F2 !important;
+    border-radius: 50% !important;
+    grid-row: 1 / 3 !important;
+    grid-column: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .step-title {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
+    color: #181818 !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    align-self: end !important;
+  }
+
+  .step-body {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    color: #7A7A7E !important;
+    margin: 0 !important;
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+}
+
+/* ============================================
+   7. ACTION CARDS — DEMOTED ON MOBILE
+   Compact mini-cards, visually secondary
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Hide original action cards on mobile — replaced by compact row */
+  .action-cards-block {
+    display: none !important;
+  }
+
+  /* Hide compact action block — demoted out of main flow */
+  .action-compact-block {
+    display: none !important;
+  }
+
+  .action-compact-row {
+    padding: 16px !important;
+    background-color: #FAFAFA !important;
+    border: 1px solid #E6E6EC !important;
+    border-radius: 12px !important;
+  }
+
+  .action-compact-label {
+    display: block !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #7A7A7E !important;
+    margin-bottom: 10px !important;
+  }
+
+  .action-compact-items {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .action-compact-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #444444 !important;
+  }
+
+  .action-compact-item svg {
+    flex-shrink: 0 !important;
+    color: #6C6B6E !important;
+  }
+
+  .action-compact-separator {
+    color: #CCCCCC !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Hide compact block on desktop */
+@media (min-width: 769px) {
+  .action-compact-block {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   8. FEATURES / TRUST SECTION — COMPACT LIST
+   Hide the giant image, show text-only trust
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Hide entire features section on mobile — merged into trust block */
+  .features-section-wrapper {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   9. MOBILE TRUST SECTION — INSERTED VIA HTML
+   Compact trust strip between features and CTA
+   ============================================ */
+
+@media (max-width: 768px) {
+  .mobile-trust-section {
+    display: block !important;
+    padding: 0 20px 16px !important;
+    background-color: #FFFFFF !important;
+  }
+
+  .mobile-trust-inner {
+    background-color: #F7F6F4 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 16px 16px !important;
+  }
+
+  .mobile-trust-title {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #181818 !important;
+    margin: 0 0 10px !important;
+    line-height: 1.3 !important;
+  }
+
+  .mobile-trust-items {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .mobile-trust-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* Icon — inline, no box */
+  .mobile-trust-item-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    color: #7A7A7E !important;
+    flex-shrink: 0 !important;
+    margin-top: 1px !important;
+  }
+
+  .mobile-trust-item-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .mobile-trust-item-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1px !important;
+    align-items: flex-start !important;
+  }
+
+  .mobile-trust-item-text strong {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #181818 !important;
+    line-height: 1.3 !important;
+  }
+
+  .mobile-trust-item-text span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: #7A7A7E !important;
+    line-height: 1.3 !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-trust-section {
+    display: none !important;
+  }
+  .workflow-panel-proof {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   10. FINAL CTA — CLEAN, FOCUSED
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .final-cta-wrapper {
+    background-color: #FFFFFF !important;
+    padding: 0 20px 20px !important;
+  }
+
+  .final-cta-section {
+    padding: 28px 24px 32px !important;
+    background-color: #111111 !important;
+    border-radius: 14px !important;
+  }
+
+  .final-cta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .final-cta-visual {
+    display: none !important;
+  }
+
+  .final-cta-content {
+    order: 1 !important;
+    text-align: center !important;
+  }
+
+  /* Headline — the payoff */
+  .final-cta-title {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 8px !important;
+    color: #FFFFFF !important;
+    max-width: 100% !important;
+    font-weight: 700 !important;
+    text-wrap: balance !important;
+  }
+
+  .final-cta-body {
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-bottom: 20px !important;
+    max-width: 100% !important;
+  }
+
+  .final-cta-bullets {
+    display: none !important;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Button — unmistakable, high-contrast CTA */
+  .final-btn {
+    width: 100% !important;
+    height: 56px !important;
+    font-size: 16px !important;
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .final-btn--primary {
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+    border: none !important;
+  }
+
+  .final-btn--secondary {
+    display: none !important;
+  }
+
+  .final-cta-micro {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   11. FOOTER — MINIMAL
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .compact-footer {
+    padding-top: 6px !important;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom)) !important;
+    background-color: #FAFAFA !important;
+    border-top: 1px solid rgba(0,0,0,0.04) !important;
+  }
+
+  .compact-footer-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 0 20px !important;
+    text-align: center !important;
+  }
+
+  .compact-footer-left {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+
+  .compact-footer-logo {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .compact-footer-copyright {
+    font-size: 10px !important;
+    color: #888888 !important;
+  }
+
+  .compact-footer-links {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1px 8px !important;
+  }
+
+  .compact-footer-link {
+    font-size: 10px !important;
+    color: #777777 !important;
+  }
+}
+
+/* ============================================
+   12. GLOBAL MOBILE POLISH + SPECIFICITY FIXES
+   Override koda-layout-reset.css and koda-buttons.css
+   which use .koda-landing prefix for higher specificity
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Section scroll margins for fixed header */
+  section[id],
+  [id].hero-section,
+  [id].workflow-section,
+  [id].steps-section,
+  [id].features-section,
+  [id].final-cta-section,
+  #top,
+  #security,
+  #how-it-works {
+    scroll-margin-top: 64px !important;
+  }
+
+  /* Section wrapper backgrounds */
+  .workflow-section-wrapper,
+  .steps-section-wrapper,
+  .features-section-wrapper {
+    background-color: #FFFFFF !important;
+  }
+
+  .final-cta-wrapper {
+    background-color: #FFFFFF !important;
+    padding: 0 20px 20px !important;
+  }
+
+  /* Disable float/hover animations on mobile */
+  .hero-media-frame,
+  .koda-landing .hero-media-frame,
+  .hero-text,
+  .koda-landing .hero-text {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Make sure step cards are visible (override scroll animation) */
+  .step-card,
+  .koda-landing .step-card,
+  .action-card,
+  .koda-landing .action-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Disable hover transforms on cards */
+  .koda-landing .step-card:hover,
+  .koda-landing .action-card:hover,
+  .koda-landing .workflow-panel-grid:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure checklist items are visible */
+  .final-cta-bullets li,
+  .koda-landing .final-cta-bullets li {
+    opacity: 1 !important;
+  }
+
+  /* --- SPECIFICITY OVERRIDES --- */
+  /* Override koda-layout-reset.css colors */
+  .koda-landing .hero-eyebrow {
+    color: #7A7A7E !important;
+  }
+
+  .koda-landing .hero-subheadline {
+    color: #6C6B6E !important;
+  }
+
+  .koda-landing .step-body {
+    color: #7A7A7E !important;
+  }
+
+  .koda-landing .features-subtitle {
+    color: #6C6B6E !important;
+  }
+
+  .koda-landing .feature-text-new p {
+    color: #6C6B6E !important;
+  }
+
+  .koda-landing .final-cta-body {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .koda-landing .final-cta-micro {
+    display: none !important;
+  }
+
+  .koda-landing .final-cta-title {
+    color: #FFFFFF !important;
+  }
+
+  /* Override koda-layout-reset.css workflow tab active state */
+  .koda-landing .workflow-tab.is-active {
+    background-color: #181818 !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+  }
+
+  .koda-landing .workflow-tab {
+    color: #6C6B6E !important;
+  }
+
+  .koda-landing .workflow-tab:hover:not(.is-active) {
+    color: #181818 !important;
+    background-color: transparent !important;
+    transform: none !important;
+  }
+
+  /* Override koda-buttons.css which sets all buttons to width:100% on mobile */
+  .koda-landing .hero-btn-primary,
+  .hero-btn-primary {
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  .koda-landing .hero-btn-tertiary,
+  .hero-btn-tertiary {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    border: none !important;
+    background: none !important;
+    color: #6C6B6E !important;
+  }
+
+  /* Override koda-buttons.css button hover transforms */
+  .koda-landing .hero-btn-primary:hover,
+  .koda-landing .hero-btn-tertiary:hover,
+  .koda-landing .workflow-btn--primary:hover,
+  .koda-landing .workflow-btn--secondary:hover,
+  .koda-landing .final-btn--primary:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Override koda-layout-reset.css section padding */
+  .koda-landing .workflow-section {
+    padding: 32px 20px !important;
+  }
+
+  .koda-landing .steps-section {
+    padding: 24px 20px !important;
+  }
+
+  .koda-landing .features-section {
+    padding: 36px 20px !important;
+  }
+
+  .koda-landing .final-cta-section {
+    padding: 28px 24px 32px !important;
+    background-color: #111111 !important;
+    border-radius: 14px !important;
+  }
+
+  .koda-landing .hero-section {
+    padding: 4px 20px 24px !important;
+    padding-top: 4px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  /* Override koda-layout-reset max-width on all elements */
+  .koda-landing .hero-media-frame img {
+    max-width: none !important;
+  }
+
+  /* Ensure nav border style wins over koda-layout-reset */
+  .koda-landing .main-nav {
+    border: none !important;
+    border-bottom: 1px solid transparent !important;
+    border-radius: 0 !important;
+    background-color: #FFFFFF !important;
+    backdrop-filter: none !important;
+  }
+
+  .koda-landing .main-nav.is-scrolled {
+    border-bottom-color: rgba(0,0,0,0.06) !important;
+  }
+}
+
+/* ============================================
+   13. SMALL MOBILE (<=375px) FINE-TUNING
+   ============================================ */
+
+@media (max-width: 375px) {
+
+  html body header .main-nav,
+  .main-nav {
+    padding: 0 16px !important;
+  }
+
+  .hero-section {
+    padding: 4px 16px 20px !important;
+    padding-top: 4px !important;
+  }
+
+  .hero-headline {
+    font-size: 27px !important;
+  }
+
+  .hero-subheadline {
+    font-size: 14px !important;
+  }
+
+  .hero-cta-row {
+    flex-direction: row !important;
+    gap: 14px !important;
+  }
+
+  .hero-btn-primary,
+  .koda-landing .hero-btn-primary {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: 44px !important;
+    padding: 0 24px !important;
+  }
+
+  .hero-btn-tertiary,
+  .koda-landing .hero-btn-tertiary {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .mobile-product-proof {
+    margin: 0 16px !important;
+  }
+
+  .workflow-section,
+  .steps-section,
+  .features-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .final-cta-section {
+    padding: 24px 18px 28px !important;
+  }
+
+  .final-cta-title {
+    font-size: 20px !important;
+  }
+
+  .final-cta-wrapper {
+    padding: 0 16px 16px !important;
+  }
+
+  .mobile-trust-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .compact-footer-inner {
+    padding: 0 16px !important;
+  }
+}
+
+/* ============================================
+   14. TINY MOBILE (<=320px)
+   ============================================ */
+
+@media (max-width: 320px) {
+  .hero-headline {
+    font-size: 24px !important;
+  }
+
+  .hero-subheadline {
+    font-size: 13px !important;
+  }
+
+  .workflow-title,
+  .steps-title,
+  .features-title {
+    font-size: 18px !important;
+  }
+
+  .final-cta-title {
+    font-size: 19px !important;
+  }
+}

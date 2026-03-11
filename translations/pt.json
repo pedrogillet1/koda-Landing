@@ -7,17 +7,21 @@
   },
   "hero": {
     "eyebrow": "IA privada para seus documentos",
-    "title": "Encontre respostas nos seus arquivos — em segundos.",
-    "subtitle": "Carregue PDFs, contratos, apresentações e notas. Faça perguntas em linguagem natural. O Allybi pesquisa apenas no que você enviou e retorna uma resposta clara e fundamentada que você pode usar imediatamente.",
+    "title": "Encontre respostas nos seus arquivos em segundos.",
+    "subtitle": "Carregue seus documentos. Faça perguntas em linguagem natural. O Allybi retorna respostas fundamentadas dos seus arquivos — prontas para uso.",
     "cta_primary": "Abrir Allybi",
     "cta_secondary": "Como funciona <span aria-hidden=\"true\">&rarr;</span>",
     "proof1": "Privado por design",
     "proof2": "Criptografado",
-    "proof3": "Respostas baseadas nos seus arquivos"
+    "proof3": "Respostas baseadas nos seus arquivos",
+    "trust_line": "Privado por design · Criptografado · Respostas fundamentadas"
+  },
+  "proof": {
+    "label": "Veja em ação"
   },
   "workflow": {
-    "title": "Feito para trabalho de alto nível.",
-    "subtitle": "Diferentes equipes. Mesmo problema: encontrar o arquivo certo rápido — sem perder o controle de documentos sensíveis.",
+    "title": "Para equipes que não podem errar o arquivo.",
+    "subtitle": "O arquivo certo, rápido — sem perder o controle.",
     "tab": {
       "finance": "Finanças",
       "legal": "Jurídico",
@@ -25,24 +29,27 @@
     },
     "finance": {
       "title": "Negociadores e finanças",
-      "bullet1": "Encontre o slide, métrica ou anotação exata em segundos.",
-      "bullet2": "Responda perguntas de clientes rápido — edite e envie sem sair do Allybi.",
-      "bullet3": "Mantenha material sensível de negociações organizado por projeto."
+      "bullet1": "Encontre o slide ou métrica exata em segundos.",
+      "bullet2": "Responda clientes rápido — edite e envie sem sair.",
+      "bullet3": "Material de negociações organizado por projeto.",
+      "proof": "Usado por equipes de finanças em 50+ empresas"
     },
     "legal": {
       "title": "Equipes jurídicas",
-      "bullet1": "Mantenha contratos, versões e evidências em um espaço de trabalho privado.",
-      "bullet2": "Pesquise cláusulas e definições em todas as pastas instantaneamente.",
-      "bullet3": "Edite e envie a versão correta — sem risco de 'arquivo errado' sob pressão."
+      "bullet1": "Contratos, versões e evidências em um workspace.",
+      "bullet2": "Pesquise cláusulas em pastas instantaneamente.",
+      "bullet3": "Envie a versão certa — sem risco de arquivo errado.",
+      "proof": "Confiado por equipes jurídicas em casos sensíveis"
     },
     "business": {
       "title": "Para equipes de negócios",
-      "bullet1": "Mantenha propostas, planos e documentos-chave em um espaço de trabalho privado.",
-      "bullet2": "Faça perguntas sobre docs, planilhas e conversas em linguagem natural.",
-      "bullet3": "Edite e envie o arquivo mais recente do Allybi — sem caçar anexos."
+      "bullet1": "Propostas, planos e docs-chave em um workspace.",
+      "bullet2": "Pergunte sobre docs e conversas em linguagem natural.",
+      "bullet3": "Envie o arquivo mais recente — sem caçar anexos.",
+      "proof": "Adotado por equipes de negócios em empresas em crescimento"
     },
     "cta": {
-      "primary": "Começar",
+      "primary": "Abrir Allybi",
       "secondary": "Abrir Allybi"
     }
   },
@@ -56,28 +63,31 @@
     "subtitle": "Três passos. Sem curva de aprendizado.",
     "upload": {
       "title": "Carregue",
-      "body": "Arraste PDFs, documentos, apresentações e notas — tudo que você quer pesquisar e manter privado."
+      "body": "Arraste PDFs, apresentações, contratos — tudo que precisa ser pesquisável."
     },
     "search": {
       "title": "Pergunte e pesquise",
-      "body": "Pesquise normalmente ou faça perguntas em linguagem natural. O Allybi encontra o que importa dentro dos seus arquivos."
+      "body": "Pergunte em linguagem natural. O Allybi encontra o que importa nos seus arquivos."
     },
     "organize": {
       "title": "Organize",
-      "body": "Marque, agrupe e gerencie arquivos por projeto para se mover rápido sem perder o controle."
+      "body": "Agrupe arquivos por projeto. Mova-se rápido sem perder o controle."
     },
     "action": {
       "title": "Depois tome ação.",
       "subtitle": "Duas funcionalidades poderosas — ainda privadas, ainda simples.",
+      "label": "Também incluído",
       "edit": {
         "title": "Edite Docs e Planilhas",
         "body": "Reescreva parágrafos, atualize tabelas e crie fórmulas — diretamente dentro dos seus documentos.",
-        "detail": "Compatível com .docx e .xlsx."
+        "detail": "Compatível com .docx e .xlsx.",
+        "short": "Edite Docs e Planilhas"
       },
       "connect": {
         "title": "Conecte Email e Slack",
         "body": "Encontre qualquer email ou mensagem, depois envie respostas com o arquivo Allybi correto anexado.",
-        "detail": "Conecte Outlook, Gmail e Slack."
+        "detail": "Conecte Outlook, Gmail e Slack.",
+        "short": "Conecte Email e Slack"
       },
       "trust": "Você controla o que está conectado. Desconecte quando quiser."
     }
@@ -98,13 +108,22 @@
       "description": "Agrupe arquivos por negociação, cliente, caso ou projeto — e mantenha tudo fácil de encontrar."
     }
   },
+  "trust": {
+    "mobile_title": "Por que equipes confiam no Allybi",
+    "mobile_enc_title": "Armazenamento criptografado",
+    "mobile_enc_desc": "em repouso e em trânsito",
+    "mobile_ground_title": "Apenas respostas fundamentadas",
+    "mobile_ground_desc": "baseadas nos seus arquivos enviados",
+    "mobile_org_title": "Organização por projetos",
+    "mobile_org_desc": "agrupe por negócio, cliente ou caso"
+  },
   "cta": {
-    "title": "Seus arquivos. Sua IA. Suas regras.",
-    "body": "O Allybi dá a você um só lugar para armazenar, pesquisar e trabalhar com seus documentos — sem o caos.",
+    "title": "Seus arquivos. Pesquisáveis. Privados. Prontos.",
+    "body": "Armazene, pesquise e pergunte sobre seus documentos em um workspace privado.",
     "bullet1": "Pesquise e pergunte sobre seus arquivos carregados",
     "bullet2": "Armazenamento criptografado",
     "bullet3": "Organização limpa por projetos",
-    "primary": "Começar",
+    "primary": "Abrir Allybi",
     "secondary": "Abrir Allybi",
     "micro": "Projetado para equipes e indivíduos que priorizam a privacidade."
   },

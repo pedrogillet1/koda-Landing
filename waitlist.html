@@ -21,6 +21,7 @@
   	<link rel="stylesheet" href="./koda-header.css?v=1765220400" />
   	<link rel="stylesheet" href="./compact-footer.css?v=1765220600" />
   	<link rel="stylesheet" href="./koda-buttons.css?v=1765220700" />
+  	<link rel="stylesheet" href="./mobile-redesign.css?v=1765400000" />
 
   	<title>Allybi Waitlist</title>
 </head>
@@ -40,29 +41,61 @@
 
       			<!-- Navigation -->
       			<header>
-        				<nav class="main-nav">
+        				<nav class="main-nav" id="main-nav">
           					<div class="logo">
             						<a href="index.html">
               							<img class="content-icon" alt="Allybi Logo" src="assets/images/koda-knot-glyph.svg">
             						</a>
           					</div>
-          					<div class="nav-links">
+          					<div class="nav-links desktop-only">
             						<a href="about.html" data-i18n-key="nav.about">About Allybi</a>
             						<a href="contact.html" data-i18n-key="nav.contact">Contact</a>
             						<div class="language-switcher">
               							<button id="language-toggle" aria-haspopup="true" aria-expanded="false">
                 								<span id="current-language">English</span>
-                								<span class="dropdown-arrow">▼</span>
+                								<span class="dropdown-arrow">&#9660;</span>
               							</button>
               							<ul id="language-menu" class="hidden">
                 								<li><a href="#" data-lang="en">English</a></li>
-                								<li><a href="#" data-lang="pt">Português (BR)</a></li>
-                								<li><a href="#" data-lang="es">Español</a></li>
+                								<li><a href="#" data-lang="pt">Portugu&ecirc;s (BR)</a></li>
+                								<li><a href="#" data-lang="es">Espa&ntilde;ol</a></li>
               							</ul>
             						</div>
             						<a href="https://getkoda.ai/" class="demo-button" data-i18n-key="nav.open_app">Open Allybi</a>
           					</div>
+
+          					<!-- Mobile Menu Toggle Button -->
+          					<button class="mobile-menu-toggle mobile-only" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+            						<span class="menu-line"></span>
+            						<span class="menu-line"></span>
+            						<span class="menu-line"></span>
+          					</button>
         				</nav>
+
+        				<!-- Mobile Dropdown Menu -->
+        				<div class="mobile-menu mobile-only" id="mobile-menu">
+          					<div class="mobile-menu-content">
+            						<div class="mobile-menu-row">
+              							<a href="about.html" class="mobile-menu-link" data-i18n-key="nav.about">About Allybi</a>
+              							<a href="contact.html" class="mobile-menu-link" data-i18n-key="nav.contact">Contact</a>
+              							<button class="mobile-menu-link mobile-lang-dropdown" id="mobile-lang-toggle">
+                								Language
+                								<span class="lang-right">
+                  									<span id="current-language-mobile" class="lang-flag">&#127468;&#127463;</span>
+                  									<span class="lang-arrow">&#9660;</span>
+                								</span>
+              							</button>
+            						</div>
+
+            						<div class="mobile-language-options" id="mobile-lang-options">
+              							<button class="mobile-lang-btn active" data-lang="en">&#127468;&#127463; English</button>
+              							<button class="mobile-lang-btn" data-lang="pt">&#127463;&#127479; Portugu&ecirc;s</button>
+              							<button class="mobile-lang-btn" data-lang="es">&#127466;&#127480; Espa&ntilde;ol</button>
+            						</div>
+
+            						<a href="https://getkoda.ai/" class="mobile-cta-btn" data-i18n-key="nav.open_app">Open Allybi</a>
+          					</div>
+        				</div>
       			</header>
 
       			<!-- Waitlist Form Content -->
@@ -118,5 +151,6 @@
     		</footer>
   	</div>
   	<script src="language-switcher.js"></script>
+  	<script src="mobile-menu.js?v=1765215540"></script>
 </body>
 </html>

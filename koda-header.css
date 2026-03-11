@@ -48,6 +48,9 @@ header {
 
 .main-nav {
   position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
   display: flex;
   justify-content: space-between;
   align-items: center;

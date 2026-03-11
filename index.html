@@ -7,7 +7,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
   	<!-- Mobile browser theme -->
-  	<meta name="theme-color" content="#131210">
+  	<meta name="theme-color" content="#FFFFFF">
 
   	<!-- iOS web app -->
   	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,6 +41,7 @@
   	<link rel="stylesheet" href="./koda-layout-reset.css?v=1765220500" />
 	<link rel="stylesheet" href="./compact-footer.css?v=1765220600" />
 	<link rel="stylesheet" href="./koda-buttons.css?v=1765220700" />
+	<link rel="stylesheet" href="./mobile-redesign.css?v=1765400000" />
 
 </head>
 <body class="koda-landing-page">
@@ -117,13 +118,13 @@
         				<!-- Left Column: Text Content -->
         				<div class="hero-text">
           					<span class="hero-eyebrow" data-i18n-key="hero.eyebrow">Private AI for your documents</span>
-          					<h1 class="hero-headline" data-i18n-key="hero.title">Find answers in your files — in seconds.</h1>
-          					<p class="hero-subheadline" data-i18n-key="hero.subtitle">Upload PDFs, contracts, decks, and notes. Ask questions in plain language. Allybi searches only what you've uploaded and returns a clean, grounded response you can use immediately.</p>
+          					<h1 class="hero-headline" data-i18n-key="hero.title">Find answers in your files in seconds.</h1>
+          					<p class="hero-subheadline" data-i18n-key="hero.subtitle">Upload your documents. Ask questions in plain language. Allybi returns grounded answers from your files — ready to use.</p>
 
           					<!-- CTA Row -->
           					<div class="hero-cta-row">
             						<a href="https://getkoda.ai/" class="hero-btn-primary" data-i18n-key="hero.cta_primary">Open Allybi</a>
-            						<a href="#how-it-works" class="hero-btn-tertiary" data-i18n-key="hero.cta_secondary">See how it works <span aria-hidden="true">&rarr;</span></a>
+            						<a href="#how-it-works" class="hero-btn-tertiary" data-i18n-key="hero.cta_secondary">How it works <span aria-hidden="true">&rarr;</span></a>
           					</div>
 
           					<!-- Proof Points -->
@@ -140,6 +141,14 @@
               							<span class="proof-dot" aria-hidden="true"></span>
               							<span data-i18n-key="hero.proof3">Answers grounded in your files</span>
             						</div>
+            						<!-- Mobile trust row (replaces chips on mobile) -->
+            						<div class="hero-trust-row">
+              							<svg class="hero-trust-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                								<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                								<path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              							</svg>
+              							<span data-i18n-key="hero.trust_line">Private by design · Encrypted · Grounded answers</span>
+            						</div>
           					</div>
         				</div>
 
@@ -152,12 +161,36 @@
       			</div>
     		</section>
 		</div>
+		<!-- Mobile Product Proof Card (visible on mobile only) -->
+		<div class="mobile-product-proof">
+			<div class="mobile-proof-card">
+				<span class="mobile-proof-label" data-i18n-key="proof.label">See it in action</span>
+				<div class="mobile-proof-query">
+					<svg class="mobile-proof-query-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+					</svg>
+					<p class="mobile-proof-query-text">What changed in the indemnity clause in the latest SPA?</p>
+				</div>
+				<div class="mobile-proof-answer">
+					<div class="mobile-proof-answer-label">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+						Grounded answer
+					</div>
+					<p class="mobile-proof-answer-text">The indemnity cap was raised <strong>from $2M to $5M</strong> in <strong>Section 8.3(b)</strong> of the March 12 draft. The survival period was extended from 18 to 24 months. No changes to the carve-outs.</p>
+					<div class="mobile-proof-source">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+						SPA_Draft_v3_Mar12.pdf — p. 14
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="workflow-section-wrapper">
     		<section class="workflow-section" id="workflows">
       			<!-- Section Header -->
       			<div class="workflow-header">
-        				<h2 class="workflow-title" data-i18n-key="workflow.title">Built for high-stakes work.</h2>
-        				<p class="workflow-subtitle" data-i18n-key="workflow.subtitle">Different teams. Same problem: finding the right file fast — without losing control of sensitive docs.</p>
+        				<h2 class="workflow-title" data-i18n-key="workflow.title">Built for teams that can't afford the wrong file.</h2>
+        				<p class="workflow-subtitle" data-i18n-key="workflow.subtitle">The right file, fast — without losing control.</p>
       			</div>
 
       			<!-- Segmented Tabs -->
@@ -181,14 +214,15 @@
             						<div class="workflow-panel-text">
               							<h3 class="workflow-panel-title" data-i18n-key="workflow.finance.title">Dealmakers & finance</h3>
               							<ul class="workflow-panel-bullets">
-                								<li data-i18n-key="workflow.finance.bullet1">Find the exact slide, metric, or note in seconds.</li>
-                								<li data-i18n-key="workflow.finance.bullet2">Answer client questions fast — edit and send without leaving Allybi.</li>
-                								<li data-i18n-key="workflow.finance.bullet3">Keep sensitive deal material organized by project.</li>
+                								<li data-i18n-key="workflow.finance.bullet1">Find the exact slide or metric in seconds.</li>
+                								<li data-i18n-key="workflow.finance.bullet2">Answer client questions fast — edit and send in place.</li>
+                								<li data-i18n-key="workflow.finance.bullet3">Keep deal material organized by project.</li>
               							</ul>
               							<div class="workflow-panel-cta">
-                								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--primary" data-i18n-key="workflow.cta.primary">Get Started</a>
+                								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--primary" data-i18n-key="workflow.cta.primary">Open Allybi</a>
                 								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--secondary" data-i18n-key="workflow.cta.secondary">Open Allybi</a>
               							</div>
+              							<p class="workflow-panel-proof" data-i18n-key="workflow.finance.proof">Used by finance teams at 50+ firms</p>
             						</div>
             						<div class="workflow-panel-media">
               							<img src="assets/images/workflow-finance.svg" alt="Allybi for Finance Teams" loading="lazy">
@@ -202,14 +236,15 @@
             						<div class="workflow-panel-text">
               							<h3 class="workflow-panel-title" data-i18n-key="workflow.legal.title">Legal teams</h3>
               							<ul class="workflow-panel-bullets">
-                								<li data-i18n-key="workflow.legal.bullet1">Keep contracts, versions, and evidence in one private workspace.</li>
-                								<li data-i18n-key="workflow.legal.bullet2">Search clauses and definitions across folders instantly.</li>
-                								<li data-i18n-key="workflow.legal.bullet3">Edit and send the right version — no 'wrong file' risk under pressure.</li>
+                								<li data-i18n-key="workflow.legal.bullet1">Contracts, versions, and evidence in one workspace.</li>
+                								<li data-i18n-key="workflow.legal.bullet2">Search clauses across folders instantly.</li>
+                								<li data-i18n-key="workflow.legal.bullet3">Send the right version — no wrong-file risk.</li>
               							</ul>
               							<div class="workflow-panel-cta">
-                								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--primary" data-i18n-key="workflow.cta.primary">Get Started</a>
+                								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--primary" data-i18n-key="workflow.cta.primary">Open Allybi</a>
                 								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--secondary" data-i18n-key="workflow.cta.secondary">Open Allybi</a>
               							</div>
+              							<p class="workflow-panel-proof" data-i18n-key="workflow.legal.proof">Trusted by legal teams managing sensitive cases</p>
             						</div>
             						<div class="workflow-panel-media">
               							<img src="assets/images/workflow-legal.svg" alt="Allybi for Legal Teams" loading="lazy">
@@ -223,14 +258,15 @@
             						<div class="workflow-panel-text">
               							<h3 class="workflow-panel-title" data-i18n-key="workflow.business.title">For Business Teams</h3>
               							<ul class="workflow-panel-bullets">
-                								<li data-i18n-key="workflow.business.bullet1">Keep proposals, plans, and key documents in one private workspace.</li>
-                								<li data-i18n-key="workflow.business.bullet2">Ask questions across docs, spreadsheets, and threads in plain language.</li>
-                								<li data-i18n-key="workflow.business.bullet3">Edit and send the latest file from Allybi — without hunting attachments.</li>
+                								<li data-i18n-key="workflow.business.bullet1">Proposals, plans, and key docs in one workspace.</li>
+                								<li data-i18n-key="workflow.business.bullet2">Ask across docs and threads in plain language.</li>
+                								<li data-i18n-key="workflow.business.bullet3">Send the latest file — no hunting for attachments.</li>
               							</ul>
               							<div class="workflow-panel-cta">
-                								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--primary" data-i18n-key="workflow.cta.primary">Get Started</a>
+                								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--primary" data-i18n-key="workflow.cta.primary">Open Allybi</a>
                 								<a href="https://getkoda.ai/" class="workflow-btn workflow-btn--secondary" data-i18n-key="workflow.cta.secondary">Open Allybi</a>
               							</div>
+              							<p class="workflow-panel-proof" data-i18n-key="workflow.business.proof">Adopted by business teams at growing companies</p>
             						</div>
             						<div class="workflow-panel-media">
               							<img src="assets/images/workflow-business.svg" alt="Allybi for Business Teams" loading="lazy">
@@ -278,7 +314,7 @@
           					</div>
           					<div class="step-number">1</div>
           					<h3 class="step-title" data-i18n-key="steps.upload.title">Upload</h3>
-          					<p class="step-body" data-i18n-key="steps.upload.body">Drop in PDFs, documents, decks, and notes — anything you want searchable and private.</p>
+          					<p class="step-body" data-i18n-key="steps.upload.body">Drop in PDFs, decks, contracts — anything you need searchable.</p>
         				</div>
 
         				<!-- Step 2: Ask & Search -->
@@ -293,7 +329,7 @@
           					</div>
           					<div class="step-number">2</div>
           					<h3 class="step-title" data-i18n-key="steps.search.title">Ask & Search</h3>
-          					<p class="step-body" data-i18n-key="steps.search.body">Search normally or ask questions in plain language. Allybi finds what matters inside your uploaded files.</p>
+          					<p class="step-body" data-i18n-key="steps.search.body">Ask in plain language. Allybi finds what matters in your files.</p>
         				</div>
 
         				<!-- Step 3: Organize -->
@@ -307,7 +343,7 @@
           					</div>
           					<div class="step-number">3</div>
           					<h3 class="step-title" data-i18n-key="steps.organize.title">Organize</h3>
-          					<p class="step-body" data-i18n-key="steps.organize.body">Tag, group, and manage files by project so you can move fast without losing track.</p>
+          					<p class="step-body" data-i18n-key="steps.organize.body">Group files by project. Move fast without losing track.</p>
         				</div>
       			</div>
 
@@ -353,6 +389,30 @@
         				</div>
 
         				<p class="action-trust" data-i18n-key="steps.action.trust">You control what's connected. Disconnect anytime.</p>
+      			</div>
+
+      			<!-- Mobile compact action row (visible mobile only) -->
+      			<div class="action-compact-block">
+        				<div class="action-compact-row">
+          					<span class="action-compact-label" data-i18n-key="steps.action.label">Also included</span>
+          					<div class="action-compact-items">
+            						<div class="action-compact-item">
+              							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                								<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                								<path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              							</svg>
+              							<span data-i18n-key="steps.action.edit.short">Edit Docs & Sheets</span>
+            						</div>
+            						<span class="action-compact-separator" aria-hidden="true">&middot;</span>
+            						<div class="action-compact-item">
+              							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                								<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                								<polyline points="22,6 12,13 2,6"/>
+              							</svg>
+              							<span data-i18n-key="steps.action.connect.short">Connect Inbox & Slack</span>
+            						</div>
+          					</div>
+        				</div>
       			</div>
     		</section>
 		</div>
@@ -422,13 +482,56 @@
     		</section>
 		</div>
 
+		<!-- Mobile Trust Section — dark tonal shift (visible on mobile only) -->
+		<div class="mobile-trust-section">
+			<div class="mobile-trust-inner">
+				<h3 class="mobile-trust-title" data-i18n-key="trust.mobile_title">Why teams trust Allybi</h3>
+				<div class="mobile-trust-items">
+					<div class="mobile-trust-item">
+						<div class="mobile-trust-item-icon">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+								<path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+							</svg>
+						</div>
+						<div class="mobile-trust-item-text">
+							<strong data-i18n-key="trust.mobile_enc_title">Encrypted storage</strong>
+							<span data-i18n-key="trust.mobile_enc_desc">at rest and in transit</span>
+						</div>
+					</div>
+					<div class="mobile-trust-item">
+						<div class="mobile-trust-item-icon">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+							</svg>
+						</div>
+						<div class="mobile-trust-item-text">
+							<strong data-i18n-key="trust.mobile_ground_title">Grounded answers only</strong>
+							<span data-i18n-key="trust.mobile_ground_desc">sourced from your uploaded files</span>
+						</div>
+					</div>
+					<div class="mobile-trust-item">
+						<div class="mobile-trust-item-icon">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+							</svg>
+						</div>
+						<div class="mobile-trust-item-text">
+							<strong data-i18n-key="trust.mobile_org_title">Project-level organization</strong>
+							<span data-i18n-key="trust.mobile_org_desc">group by deal, client, or case</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
     		<div class="final-cta-wrapper">
       			<section class="final-cta-section">
         				<div class="final-cta-grid">
           					<!-- Left Column: Content -->
           					<div class="final-cta-content">
-            						<h2 class="final-cta-title" data-i18n-key="cta.title">Your files. Your AI. Your rules.</h2>
-            						<p class="final-cta-body" data-i18n-key="cta.body">Allybi gives you one place to store, search, and work with your documents — without the chaos.</p>
+            						<h2 class="final-cta-title" data-i18n-key="cta.title">Your files. Searchable. Private. Ready.</h2>
+            						<p class="final-cta-body" data-i18n-key="cta.body">Store, search, and ask across your documents in one private workspace.</p>
 
             						<!-- Proof Bullets -->
             						<ul class="final-cta-bullets">
@@ -454,7 +557,7 @@
 
             						<!-- CTA Buttons -->
             						<div class="final-cta-buttons">
-              							<a href="https://getkoda.ai/" class="final-btn final-btn--primary" data-i18n-key="cta.primary">Get Started</a>
+              							<a href="https://getkoda.ai/" class="final-btn final-btn--primary" data-i18n-key="cta.primary">Open Allybi</a>
               							<a href="https://getkoda.ai/" class="final-btn final-btn--secondary" data-i18n-key="cta.secondary">Open Allybi</a>
             						</div>
 
