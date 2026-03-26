@@ -1564,31 +1564,38 @@
     overflow: visible;
   }
 
-  /* Security pillars — ensure they stay within viewport */
-  .security-teaser__grid {
-    overflow: hidden;
-  }
-
+  /* Security pillars — compact card style on mobile */
   .security-teaser__pillars {
-    gap: 16px;
+    gap: 12px;
   }
 
   .security-teaser__pillar {
     gap: 12px;
+    padding: 14px 16px;
+    background: var(--allybi-bg-surface);
+    border: 1px solid var(--allybi-border-default);
+    border-radius: var(--allybi-radius-sm);
   }
 
   .security-teaser__pillar-icon {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
+
+  .security-teaser__pillar-icon svg {
+    width: 16px;
+    height: 16px;
   }
 
   .security-teaser__pillar h4 {
     font-size: 14px;
+    margin-bottom: 0;
   }
 
+  /* Hide descriptions on mobile — title + icon is enough */
   .security-teaser__pillar p {
-    font-size: 13px;
+    display: none;
   }
 
   .hero-scene__topbar {
