@@ -1551,14 +1551,7 @@
 
   .hero-scene__float--version,
   .hero-scene__float--send {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    margin-top: 12px;
-    width: 100%;
-    box-sizing: border-box;
+    display: none;
   }
 
   .hero__visual {
