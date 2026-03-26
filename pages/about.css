@@ -144,6 +144,17 @@
   flex-wrap: wrap;
 }
 
+/* Make secondary and ghost buttons visible in this section */
+.about-cta-buttons .allybi-btn--secondary {
+  border: 1.5px solid var(--allybi-text-strongest);
+  color: var(--allybi-text-strongest);
+}
+
+.about-cta-buttons .allybi-btn--ghost {
+  border: 1.5px solid var(--allybi-border-strong);
+  color: var(--allybi-text-primary);
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 768px) {
   .about-hero {
