@@ -1,0 +1,241 @@
+/* ==========================================================================
+   Customers Page
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.cust-hero {
+  text-align: center;
+  padding-top: calc(var(--allybi-section-py) + 40px);
+}
+
+.cust-hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cust-hero .allybi-eyebrow {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.cust-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.cust-hero .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Role-Based Outcomes ---------- */
+.cust-outcome-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-6);
+}
+
+.cust-outcome-role {
+  display: inline-block;
+  font-size: var(--allybi-meta-size);
+  font-weight: var(--allybi-weight-bold);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  color: var(--allybi-accent);
+  margin-bottom: var(--allybi-space-2);
+}
+
+.cust-outcome-before,
+.cust-outcome-after {
+  padding: var(--allybi-space-4);
+  border-radius: var(--allybi-radius-sm);
+}
+
+.cust-outcome-before {
+  background-color: var(--allybi-error-subtle);
+}
+
+.cust-outcome-after {
+  background-color: var(--allybi-trust-subtle);
+}
+
+.cust-outcome-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--allybi-weight-bold);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--allybi-space-2);
+}
+
+.cust-outcome-label--before {
+  color: var(--allybi-error);
+}
+
+.cust-outcome-label--after {
+  color: var(--allybi-trust);
+}
+
+.cust-outcome-text {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-primary);
+  font-style: italic;
+}
+
+/* ---------- Workflow Transformations ---------- */
+.cust-transform-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--allybi-space-6);
+  align-items: center;
+  padding: var(--allybi-space-8) 0;
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.cust-transform-row:last-child {
+  border-bottom: none;
+}
+
+.cust-transform-side {
+  padding: var(--allybi-space-6);
+  border-radius: var(--allybi-radius-md);
+}
+
+.cust-transform-side--before {
+  background-color: var(--allybi-error-subtle);
+  border-left: 3px solid var(--allybi-error);
+}
+
+.cust-transform-side--after {
+  background-color: var(--allybi-trust-subtle);
+  border-left: 3px solid var(--allybi-trust);
+}
+
+.cust-transform-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--allybi-weight-bold);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--allybi-space-2);
+}
+
+.cust-transform-label--before {
+  color: var(--allybi-error);
+}
+
+.cust-transform-label--after {
+  color: var(--allybi-trust);
+}
+
+.cust-transform-title {
+  font-size: var(--allybi-card-title-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-2);
+}
+
+.cust-transform-desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+.cust-transform-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--allybi-bg-alt-1);
+  color: var(--allybi-text-muted);
+  flex-shrink: 0;
+}
+
+/* ---------- Trust Points ---------- */
+.cust-trust-point {
+  text-align: center;
+}
+
+.cust-trust-point__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--allybi-radius-md);
+  background-color: var(--allybi-trust-subtle);
+  color: var(--allybi-trust);
+  margin: 0 auto var(--allybi-space-4);
+}
+
+.cust-trust-point__title {
+  font-size: var(--allybi-body-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-2);
+}
+
+.cust-trust-point__desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- CTA ---------- */
+.cust-cta__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cust-cta__inner .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.cust-cta__inner .allybi-body-lg {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--allybi-space-10);
+}
+
+.cust-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--allybi-space-4);
+  flex-wrap: wrap;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .cust-hero {
+    padding-top: calc(var(--allybi-section-py-mobile) + 32px);
+  }
+
+  .cust-transform-row {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-4);
+  }
+
+  .cust-transform-arrow {
+    margin: 0 auto;
+    transform: rotate(90deg);
+  }
+
+  .cust-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cust-transform-side {
+    padding: var(--allybi-space-4);
+  }
+
+  .cust-outcome-card {
+    gap: var(--allybi-space-4);
+  }
+
+  .cust-trust-point__desc {
+    font-size: 13px;
+  }
+}

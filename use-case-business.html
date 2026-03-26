@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0F12">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+
+  <!-- SEO -->
+  <title>Allybi for Business Teams — Proposals, Plans, and Decisions Made Easy</title>
+  <meta name="description" content="Keep proposals, project plans, and decisions easy to find and act on. Search across docs and messages with grounded answers.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Allybi for Business Teams — Proposals, Plans, and Decisions Made Easy">
+  <meta property="og:description" content="Keep proposals, project plans, and decisions easy to find and act on. Search across docs and messages with grounded answers.">
+  <meta property="og:image" content="assets/images/og-home.png">
+  <meta property="og:url" content="https://allybi.co/use-case-business.html">
+  <meta property="og:site_name" content="Allybi">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Allybi for Business Teams — Proposals, Plans, and Decisions Made Easy">
+  <meta name="twitter:description" content="Keep proposals, project plans, and decisions easy to find and act on. Search across docs and messages with grounded answers.">
+  <meta name="twitter:image" content="assets/images/og-home.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="pages/use-case-business.css">
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+  <header id="allybi-header" class="allybi-header">
+    <div class="allybi-header-inner">
+      <a href="/" class="allybi-logo">
+        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
+      </a>
+
+      <nav class="allybi-nav desktop-only">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+          <div class="nav-dropdown-menu">
+            <a href="/" data-i18n-key="nav.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+          <div class="nav-dropdown-menu">
+            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+          </div>
+        </div>
+
+        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
+        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+          <div class="nav-dropdown-menu">
+            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      </nav>
+
+      <div class="header-ctas desktop-only">
+        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+        <a href="demo.html" class="allybi-btn allybi-btn--secondary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free">Start free</a>
+      </div>
+
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       MOBILE MENU
+       ================================================================ -->
+  <div id="allybi-mobile-menu" class="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="mobile-dropdown-items">
+          <a href="/" data-i18n-key="nav.overview">Overview</a>
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+        <div class="mobile-dropdown-items">
+          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+        </div>
+      </div>
+      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+        <div class="mobile-dropdown-items">
+          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    </nav>
+    <div class="mobile-ctas">
+      <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+      <a href="demo.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    </div>
+    <div class="mobile-language-selector">
+      <div class="language-selector" id="mobile-language-selector">
+        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-label">English</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="language-menu hidden" role="listbox">
+          <li role="option" data-lang="en">English</li>
+          <li role="option" data-lang="pt">Portugues (BR)</li>
+          <li role="option" data-lang="es">Espanol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       MAIN CONTENT
+       ================================================================ -->
+  <main>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         HERO
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-hero allybi-section">
+      <div class="allybi-container">
+        <span class="allybi-hero-eyebrow" data-i18n-key="uc_business.hero.eyebrow">Business &amp; Operations</span>
+        <h1 class="allybi-h1" data-i18n-key="uc_business.hero.title">Keep proposals, plans, and decisions easy to find and easy to act on.</h1>
+        <p class="allybi-body-lg" data-i18n-key="uc_business.hero.support">Allybi gives business and operations teams a private workspace to search across documents and messages, organize by project, and follow up with the right file attached — without the cross-functional chaos.</p>
+        <div class="ucb-hero__ctas">
+          <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+          <a href="demo.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="nav.book_demo">Book demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         PAIN SCENARIOS
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-pains allybi-section">
+      <div class="allybi-container">
+        <div class="ucb-pains__grid">
+
+          <div class="ucb-pain-card">
+            <h3 class="ucb-pain-card__title" data-i18n-key="uc_business.pains.chaos.title">Cross-functional chaos</h3>
+            <p class="ucb-pain-card__desc" data-i18n-key="uc_business.pains.chaos.desc">Proposals in Drive, decisions in Slack, approvals in email. When information lives everywhere, finding the latest version of anything takes longer than the work itself.</p>
+          </div>
+
+          <div class="ucb-pain-card">
+            <h3 class="ucb-pain-card__title" data-i18n-key="uc_business.pains.latest.title">Finding the latest file</h3>
+            <p class="ucb-pain-card__desc" data-i18n-key="uc_business.pains.latest.desc">Was it "Proposal_final" or "Proposal_final_v2_updated"? Version confusion wastes time and erodes trust when the wrong document reaches a client or partner.</p>
+          </div>
+
+          <div class="ucb-pain-card">
+            <h3 class="ucb-pain-card__title" data-i18n-key="uc_business.pains.followup.title">Following up without the right doc</h3>
+            <p class="ucb-pain-card__desc" data-i18n-key="uc_business.pains.followup.desc">You know the next step but cannot find the file to attach. The follow-up gets delayed, momentum stalls, and the project slips another week.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 1 · SEARCH ACROSS DOCS AND MESSAGES
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-feature allybi-section">
+      <div class="allybi-container">
+        <div class="ucb-feature__grid">
+          <div class="ucb-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_business.feature1.title">Search across docs and messages.</h2>
+            <p data-i18n-key="uc_business.feature1.desc">Ask Allybi a question and it searches your documents, emails, and Slack messages in one query. Find the proposal, the email thread where it was approved, and the Slack message with the client feedback — all at once, with exact source citations.</p>
+          </div>
+          <div class="ucb-mockup">
+            <div class="ucb-mockup__bar">
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+            </div>
+            <div class="ucb-mockup__body">
+              <div class="ucb-cross-search">
+                <div class="ucb-cross-search__q">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M10 10l3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  "What was decided about the ACME pricing proposal?"
+                </div>
+                <div class="ucb-cross-search__results">
+                  <div class="ucb-cross-search__item">
+                    <span class="ucb-cross-search__source ucb-cross-search__source--doc">Document</span>
+                    <div class="ucb-cross-search__text"><strong>ACME_Proposal_v3.pdf</strong> — Page 4: Pricing tier set at <mark>$24,000/year</mark> for Enterprise, with 15% volume discount above 50 seats.</div>
+                  </div>
+                  <div class="ucb-cross-search__item">
+                    <span class="ucb-cross-search__source ucb-cross-search__source--email">Email</span>
+                    <div class="ucb-cross-search__text"><strong>Re: ACME pricing review</strong> — Sarah confirmed <mark>approval of the Enterprise tier</mark> pricing on Feb 12. Attached revised proposal.</div>
+                  </div>
+                  <div class="ucb-cross-search__item">
+                    <span class="ucb-cross-search__source ucb-cross-search__source--slack">Slack</span>
+                    <div class="ucb-cross-search__text"><strong>#deals channel</strong> — Marcus: "Client is happy with the <mark>volume discount structure</mark>. Ready to move to contract stage."</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 2 · PROJECT ORGANIZATION
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-feature ucb-feature--alt allybi-section">
+      <div class="allybi-container">
+        <div class="ucb-feature__grid ucb-feature__grid--reverse">
+          <div class="ucb-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_business.feature2.title">Project-level organization.</h2>
+            <p data-i18n-key="uc_business.feature2.desc">Create project workspaces for each client, initiative, or campaign. Drop in proposals, plans, budgets, and meeting notes. Search stays scoped to the project, so you never accidentally pull information from the wrong context. Share access with stakeholders as needed.</p>
+          </div>
+          <div class="ucb-mockup">
+            <div class="ucb-mockup__bar">
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+            </div>
+            <div class="ucb-mockup__body">
+              <div class="ucb-project-tree">
+                <div class="ucb-project-tree__item ucb-project-tree__item--active">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+                  ACME Enterprise Deal
+                </div>
+                <div class="ucb-project-tree__nested">
+                  <div class="ucb-project-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    Proposal_v3_final.pdf
+                  </div>
+                  <div class="ucb-project-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    Budget_Breakdown.xlsx
+                  </div>
+                  <div class="ucb-project-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    Meeting_Notes_Feb12.docx
+                  </div>
+                  <div class="ucb-project-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    SOW_Draft.pdf
+                  </div>
+                </div>
+                <div class="ucb-project-tree__item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+                  Q1 Marketing Campaign
+                </div>
+                <div class="ucb-project-tree__item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+                  Office Expansion Plan
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 3 · DRAFT MESSAGES WITH RIGHT FILE
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-feature allybi-section">
+      <div class="allybi-container">
+        <div class="ucb-feature__grid">
+          <div class="ucb-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_business.feature3.title">Draft next-step messages with the right file.</h2>
+            <p data-i18n-key="uc_business.feature3.desc">Tell Allybi to draft a follow-up email with the latest proposal attached. It will find the correct version, compose the message, and show you exactly which file is attached before you send. No more hunting for attachments or guessing which version is current.</p>
+          </div>
+          <div class="ucb-mockup">
+            <div class="ucb-mockup__bar">
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+            </div>
+            <div class="ucb-mockup__body">
+              <div class="ucb-msg-draft">
+                <div class="ucb-msg-draft__to">
+                  <span class="ucb-msg-draft__label">To</span>
+                  <span class="ucb-msg-draft__value">james.wilson@acme.com</span>
+                </div>
+                <div class="ucb-msg-draft__body">
+                  Hi James, following up on our conversation last week. I have attached the updated proposal with the revised pricing tiers we discussed. Please review and let me know if you have any questions before our call on Thursday.
+                </div>
+                <div class="ucb-msg-draft__attachment">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7.5 1.5l-5 5a3.5 3.5 0 0 0 5 5l5-5a2 2 0 0 0-3-3l-5 5a.5.5 0 0 0 .7.7l4-4" stroke="currentColor" stroke-width="1"/></svg>
+                  Proposal_v3_final.pdf
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 4 · EDIT DOCUMENTS
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-feature ucb-feature--alt allybi-section">
+      <div class="allybi-container">
+        <div class="ucb-feature__grid ucb-feature__grid--reverse">
+          <div class="ucb-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_business.feature4.title">Edit documents and spreadsheets.</h2>
+            <p data-i18n-key="uc_business.feature4.desc">Open proposals, project plans, and budgets directly inside Allybi. Make edits, update numbers, and get AI-assisted formatting and formula help. No more downloading, editing in a separate app, and re-uploading — everything stays in one place.</p>
+          </div>
+          <div class="ucb-mockup">
+            <div class="ucb-mockup__bar">
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+              <span class="ucb-mockup__dot"></span>
+            </div>
+            <div class="ucb-mockup__body">
+              <div class="ucb-doc-edit">
+                <div class="ucb-doc-edit__title">ACME Enterprise Proposal — v3</div>
+                <p>This proposal outlines the Enterprise tier service agreement between Allybi and ACME Corporation for a 12-month period beginning April 1, 2025.</p>
+                <p><strong>Pricing:</strong> $24,000/year for up to 50 seats, with a 15% volume discount for additional seats. Implementation support included at no additional cost for the first 90 days.<span class="ucb-doc-edit__cursor"></span></p>
+                <p style="color: var(--allybi-text-muted); font-style: italic; font-size: 12px; margin-top: 12px;">AI suggestion: Consider adding a section on renewal terms and early termination provisions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         SECURITY
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-security allybi-section">
+      <div class="allybi-container">
+        <div class="ucb-security__header">
+          <h2 class="allybi-h2" data-i18n-key="uc_business.security.title">Security you can trust with business-critical documents.</h2>
+        </div>
+        <div class="ucb-security__grid">
+
+          <div class="ucb-security__item">
+            <div class="ucb-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="ucb-security__item-title" data-i18n-key="uc_business.security.encryption.title">Encryption by default</h3>
+            <p class="ucb-security__item-desc" data-i18n-key="uc_business.security.encryption.desc">All data encrypted in transit and at rest. Proposals and plans stay private.</p>
+          </div>
+
+          <div class="ucb-security__item">
+            <div class="ucb-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3 class="ucb-security__item-title" data-i18n-key="uc_business.security.grounded.title">Grounded answers only</h3>
+            <p class="ucb-security__item-desc" data-i18n-key="uc_business.security.grounded.desc">Every answer cites the exact source. No fabricated information in your decision-making.</p>
+          </div>
+
+          <div class="ucb-security__item">
+            <div class="ucb-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="ucb-security__item-title" data-i18n-key="uc_business.security.notraining.title">No model training</h3>
+            <p class="ucb-security__item-desc" data-i18n-key="uc_business.security.notraining.desc">Your business documents never train AI models. Contractually guaranteed.</p>
+          </div>
+
+          <div class="ucb-security__item">
+            <div class="ucb-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="ucb-security__item-title" data-i18n-key="uc_business.security.access.title">Project-level access control</h3>
+            <p class="ucb-security__item-desc" data-i18n-key="uc_business.security.access.desc">Control who can view and edit each project. Workspaces are fully isolated.</p>
+          </div>
+
+        </div>
+        <div class="ucb-security__cta">
+          <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="uc_business.security.cta">View security overview</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FAQ
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-faq allybi-section" id="faq">
+      <div class="allybi-container">
+        <div class="ucb-faq__header">
+          <h2 class="allybi-h2" data-i18n-key="uc_business.faq.title">Frequently asked questions</h2>
+        </div>
+        <div class="ucb-faq__list allybi-accordion">
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_business.faq.q1">Can Allybi search across email and Slack at the same time?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_business.faq.a1">Yes. Connect your Gmail, Outlook, or Slack account and Allybi will search across documents and messages in a single query. Results show the source type (document, email, or message) with exact citations.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_business.faq.q2">How does project organization work?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_business.faq.a2">Create project workspaces and drag in files. Each workspace is isolated — search results only come from files within that project. You can share access with specific team members while keeping other projects private.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_business.faq.q3">What file types does Allybi support?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_business.faq.a3">Allybi supports PDF, DOCX, XLSX, PPTX, and plain text files. You can also connect email (Gmail, Outlook) and Slack to search across messages alongside your documents.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_business.faq.q4">Can I edit documents directly in Allybi?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_business.faq.a4">Yes. Open documents and spreadsheets directly in the workspace. Make edits, update values, and get AI-assisted suggestions without leaving Allybi.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_business.faq.q5">Is my data private?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_business.faq.a5">Yes. All data is encrypted in transit and at rest. Your documents never train AI models. Workspaces are isolated, and you control access per project. You can choose EU or US data hosting.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_business.faq.q6">How does Allybi help with follow-ups?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_business.faq.a6">Ask Allybi to draft a follow-up message and it will find the relevant file, compose the email, and attach the correct version. You review everything — message, attachment, and recipient — before sending.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FINAL CTA
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucb-final-cta allybi-section">
+      <div class="allybi-container">
+        <h2 class="allybi-h2" data-i18n-key="uc_business.final_cta.title">Your projects, organized and actionable.</h2>
+        <p data-i18n-key="uc_business.final_cta.support">Bring your proposals, plans, and decisions into one private workspace.</p>
+        <div class="ucb-final-cta__buttons">
+          <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary-inverse" data-i18n-key="nav.start_free">Start free</a>
+          <a href="demo.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="nav.book_demo">Book demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="allybi-footer">
+    <div class="allybi-footer-inner">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-brand-logo">
+          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
+        </a>
+        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
+      </div>
+
+      <div class="footer-columns">
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+          <div class="footer-col-links">
+            <a href="/" data-i18n-key="footer.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
+          <div class="footer-col-links">
+            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
+          <div class="footer-col-links">
+            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+          <div class="footer-col-links">
+            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
+            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
+          <div class="footer-col-links">
+            <a href="about.html" data-i18n-key="footer.about">About</a>
+            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+          <div class="footer-col-links">
+            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
+            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
+            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          <div class="language-selector" id="footer-language-selector">
+            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span class="lang-label">English</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="language-menu hidden" role="listbox">
+              <li role="option" data-lang="en">English</li>
+              <li role="option" data-lang="pt">Portugues (BR)</li>
+              <li role="option" data-lang="es">Espanol</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       SCRIPTS
+       ================================================================ -->
+  <script src="language-switcher.js"></script>
+  <script src="allybi-header.js"></script>
+  <script src="animations.js"></script>
+  <script src="allybi-animations.js"></script>
+
+  <!-- FAQ accordion -->
+  <script>
+    (function () {
+      var triggers = document.querySelectorAll('.allybi-accordion__trigger');
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          var content = this.nextElementSibling;
+          if (!expanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          } else {
+            content.style.maxHeight = '0';
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

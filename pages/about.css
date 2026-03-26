@@ -1,0 +1,197 @@
+/* ==========================================================================
+   About Page Styles
+   Requires: allybi-tokens.css, allybi-base.css, allybi-components.css
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.about-hero {
+  padding-top: 180px;
+  text-align: center;
+}
+
+.about-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.about-hero .allybi-hero-eyebrow {
+  display: block;
+  margin-bottom: var(--allybi-space-4);
+}
+
+.about-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.about-hero .allybi-body-lg {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* ---------- Narrative / Why Allybi Exists ---------- */
+.about-narrative .allybi-h2 {
+  margin-bottom: var(--allybi-space-8);
+}
+
+.about-narrative .allybi-body {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.about-narrative .allybi-body:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Conviction Cards ---------- */
+.about-convictions .allybi-card .allybi-h3 {
+  margin-bottom: var(--allybi-space-3);
+}
+
+/* ---------- Product Principles ---------- */
+.about-principles-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about-principle-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-principle-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--allybi-bg-alt-1);
+  border-radius: var(--allybi-radius-sm);
+  margin-bottom: var(--allybi-space-5);
+}
+
+.about-principle-card .allybi-h3 {
+  margin-bottom: var(--allybi-space-3);
+}
+
+/* 5 cards: 3 + 2 centered on second row */
+.about-principles-grid .allybi-card:nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.about-principles-grid .allybi-card:nth-child(5) {
+  grid-column: 2 / 3;
+}
+
+/* ---------- Privacy / Grounded Outputs ---------- */
+.about-grounded .allybi-h2 {
+  margin-bottom: var(--allybi-space-8);
+}
+
+.about-grounded .allybi-body {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.about-grounded-cta {
+  margin-top: var(--allybi-space-10);
+}
+
+/* ---------- What Allybi Is Building ---------- */
+.about-building .allybi-h2 {
+  margin-bottom: var(--allybi-space-8);
+}
+
+.about-building .allybi-body {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.about-building .allybi-body:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- How We Build ---------- */
+.about-build-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--allybi-space-6);
+}
+
+.about-build-col {
+  padding-top: var(--allybi-space-6);
+  border-top: 3px solid var(--allybi-text-strongest);
+}
+
+.about-build-col .allybi-h3 {
+  margin-bottom: var(--allybi-space-3);
+}
+
+/* ---------- Final CTA ---------- */
+.about-final-cta {
+  text-align: center;
+}
+
+.about-final-cta-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.about-final-cta .allybi-h2 {
+  margin-bottom: var(--allybi-space-10);
+}
+
+.about-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--allybi-space-4);
+  flex-wrap: wrap;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .about-hero {
+    padding-top: 140px;
+  }
+
+  .about-principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-principles-grid .allybi-card:nth-child(4),
+  .about-principles-grid .allybi-card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .about-build-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+  }
+
+  .about-cta-buttons .allybi-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding-top: 110px;
+  }
+
+  .about-hero .allybi-h1 {
+    font-size: clamp(28px, 7vw, 38px);
+  }
+
+  .about-narrative .allybi-body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding-top: 120px;
+  }
+
+  .about-principles-grid {
+    grid-template-columns: 1fr;
+  }
+}

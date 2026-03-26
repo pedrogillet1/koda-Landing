@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0F12">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+
+  <!-- SEO -->
+  <title>Book a Demo — See Allybi in Action</title>
+  <meta name="description" content="Book a personalized demo of Allybi. See how private AI search, document editing, and send confirmation work for your team.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book a Demo — See Allybi in Action">
+  <meta property="og:description" content="Book a personalized demo of Allybi. See how private AI search, document editing, and send confirmation work for your team.">
+  <meta property="og:url" content="https://allybi.co/demo.html">
+  <meta property="og:site_name" content="Allybi">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book a Demo — See Allybi in Action">
+  <meta name="twitter:description" content="Book a personalized demo of Allybi. See how private AI search, document editing, and send confirmation work for your team.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="pages/demo.css">
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+  <header id="allybi-header" class="allybi-header">
+    <div class="allybi-header-inner">
+      <a href="/" class="allybi-logo">
+        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
+      </a>
+
+      <nav class="allybi-nav desktop-only">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+          <div class="nav-dropdown-menu">
+            <a href="/" data-i18n-key="nav.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+          <div class="nav-dropdown-menu">
+            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+          </div>
+        </div>
+
+        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
+        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+          <div class="nav-dropdown-menu">
+            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      </nav>
+
+      <div class="header-ctas desktop-only">
+        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+        <a href="demo.html" class="allybi-btn allybi-btn--secondary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free">Start free</a>
+      </div>
+
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       MOBILE MENU
+       ================================================================ -->
+  <div id="allybi-mobile-menu" class="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="mobile-dropdown-items">
+          <a href="/" data-i18n-key="nav.overview">Overview</a>
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+        </div>
+      </div>
+
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+        <div class="mobile-dropdown-items">
+          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+        </div>
+      </div>
+
+      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+        <div class="mobile-dropdown-items">
+          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+        </div>
+      </div>
+
+      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    </nav>
+
+    <div class="mobile-ctas">
+      <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+      <a href="demo.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    </div>
+
+    <div class="mobile-language-selector">
+      <div class="language-selector" id="mobile-language-selector">
+        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-label">English</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="language-menu hidden" role="listbox">
+          <li role="option" data-lang="en">English</li>
+          <li role="option" data-lang="pt">Portugues (BR)</li>
+          <li role="option" data-lang="es">Espanol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       MAIN CONTENT
+       ================================================================ -->
+  <main>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         HERO
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="demo-hero allybi-section">
+      <div class="allybi-container">
+        <div class="demo-hero__inner">
+          <h1 class="allybi-h1" data-i18n-key="demo.hero.title">See Allybi in action.</h1>
+          <p class="allybi-body-lg" data-i18n-key="demo.hero.support">Book a personalized walkthrough. We'll show you how Allybi works for your specific workflow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         WHAT A DEMO COVERS
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="demo-covers allybi-section" style="background-color: var(--allybi-bg-alt-1);">
+      <div class="allybi-container">
+        <div class="allybi-section-header">
+          <h2 class="allybi-h2" data-i18n-key="demo.covers.title">What a demo covers</h2>
+        </div>
+        <div class="allybi-grid-4">
+
+          <div class="demo-cover-item">
+            <div class="demo-cover-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3 class="demo-cover-item__title" data-i18n-key="demo.covers.item1.title">Private document search</h3>
+            <p class="demo-cover-item__desc" data-i18n-key="demo.covers.item1.desc">See how AI search finds answers grounded in your actual files with source citations.</p>
+          </div>
+
+          <div class="demo-cover-item">
+            <div class="demo-cover-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="demo-cover-item__title" data-i18n-key="demo.covers.item2.title">Project-level organization</h3>
+            <p class="demo-cover-item__desc" data-i18n-key="demo.covers.item2.desc">Organize documents by project with isolated workspaces and team access controls.</p>
+          </div>
+
+          <div class="demo-cover-item">
+            <div class="demo-cover-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </div>
+            <h3 class="demo-cover-item__title" data-i18n-key="demo.covers.item3.title">Document and spreadsheet editing</h3>
+            <p class="demo-cover-item__desc" data-i18n-key="demo.covers.item3.desc">Edit .docx and .xlsx files with AI assistance — rewrite sections, update tables, create formulas.</p>
+          </div>
+
+          <div class="demo-cover-item">
+            <div class="demo-cover-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="demo-cover-item__title" data-i18n-key="demo.covers.item4.title">Send with confirmation</h3>
+            <p class="demo-cover-item__desc" data-i18n-key="demo.covers.item4.desc">See how email and Slack integration works with explicit review before anything is sent.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         WHO DEMOS ARE FOR
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="demo-audience allybi-section">
+      <div class="allybi-container">
+        <div class="demo-audience__inner">
+          <h2 class="allybi-h2" data-i18n-key="demo.audience.title">Who demos are for</h2>
+          <p class="allybi-body-lg" data-i18n-key="demo.audience.support">Allybi demos are personalized for your team and workflow.</p>
+          <div class="demo-audience__tags">
+            <span class="allybi-chip" data-i18n-key="demo.audience.tag1">Legal teams</span>
+            <span class="allybi-chip" data-i18n-key="demo.audience.tag2">Finance teams</span>
+            <span class="allybi-chip" data-i18n-key="demo.audience.tag3">Business operations</span>
+            <span class="allybi-chip" data-i18n-key="demo.audience.tag4">Anyone handling sensitive documents</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         DEMO FORM + PREVIEW
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="demo-form-section allybi-section" style="background-color: var(--allybi-bg-alt-1);">
+      <div class="allybi-container">
+        <div class="demo-form-layout">
+
+          <!-- Form -->
+          <div class="demo-form-col">
+            <h2 class="allybi-h2" data-i18n-key="demo.form.title">Request a demo</h2>
+            <p class="allybi-body-lg" data-i18n-key="demo.form.support">Fill out the form and we'll schedule a personalized walkthrough.</p>
+
+            <form class="demo-form" id="demo-form">
+              <div class="allybi-input-group">
+                <label class="allybi-label" for="demo-name" data-i18n-key="demo.form.name_label">Name</label>
+                <input type="text" id="demo-name" name="name" class="allybi-input" required placeholder="Your full name" data-i18n-key="demo.form.name_placeholder">
+              </div>
+
+              <div class="allybi-input-group">
+                <label class="allybi-label" for="demo-email" data-i18n-key="demo.form.email_label">Work email</label>
+                <input type="email" id="demo-email" name="email" class="allybi-input" required placeholder="you@company.com" data-i18n-key="demo.form.email_placeholder">
+              </div>
+
+              <div class="allybi-input-group">
+                <label class="allybi-label" for="demo-company" data-i18n-key="demo.form.company_label">Company</label>
+                <input type="text" id="demo-company" name="company" class="allybi-input" required placeholder="Your company name" data-i18n-key="demo.form.company_placeholder">
+              </div>
+
+              <div class="allybi-input-group">
+                <label class="allybi-label" for="demo-role" data-i18n-key="demo.form.role_label">Role</label>
+                <select id="demo-role" name="role" class="allybi-select" required>
+                  <option value="" disabled selected data-i18n-key="demo.form.role_placeholder">Select your role</option>
+                  <option value="legal" data-i18n-key="demo.form.role_legal">Legal</option>
+                  <option value="finance" data-i18n-key="demo.form.role_finance">Finance</option>
+                  <option value="operations" data-i18n-key="demo.form.role_operations">Operations</option>
+                  <option value="executive" data-i18n-key="demo.form.role_executive">Executive</option>
+                  <option value="it" data-i18n-key="demo.form.role_it">IT / Engineering</option>
+                  <option value="other" data-i18n-key="demo.form.role_other">Other</option>
+                </select>
+              </div>
+
+              <div class="allybi-input-group">
+                <label class="allybi-label" for="demo-interest" data-i18n-key="demo.form.interest_label">What are you most interested in?</label>
+                <select id="demo-interest" name="interest" class="allybi-select">
+                  <option value="" disabled selected data-i18n-key="demo.form.interest_placeholder">Select an area</option>
+                  <option value="search" data-i18n-key="demo.form.interest_search">AI document search</option>
+                  <option value="editing" data-i18n-key="demo.form.interest_editing">Document editing</option>
+                  <option value="integrations" data-i18n-key="demo.form.interest_integrations">Email & Slack integrations</option>
+                  <option value="security" data-i18n-key="demo.form.interest_security">Security & privacy</option>
+                  <option value="all" data-i18n-key="demo.form.interest_all">Full platform overview</option>
+                </select>
+              </div>
+
+              <div class="allybi-input-group">
+                <label class="allybi-label" for="demo-message" data-i18n-key="demo.form.message_label">Message (optional)</label>
+                <textarea id="demo-message" name="message" class="allybi-textarea" rows="4" placeholder="Tell us about your workflow or specific needs" data-i18n-key="demo.form.message_placeholder"></textarea>
+              </div>
+
+              <button type="submit" class="allybi-btn allybi-btn--primary demo-form__submit" data-i18n-key="demo.form.submit">Request demo</button>
+            </form>
+          </div>
+
+          <!-- Product Preview -->
+          <div class="demo-preview-col">
+            <div class="demo-preview">
+              <div class="demo-preview__window">
+                <div class="demo-preview__titlebar">
+                  <span class="demo-preview__dot"></span>
+                  <span class="demo-preview__dot"></span>
+                  <span class="demo-preview__dot"></span>
+                  <span class="demo-preview__titlebar-text">Allybi Workspace</span>
+                </div>
+                <div class="demo-preview__body">
+                  <div class="demo-preview__sidebar">
+                    <div class="demo-preview__sidebar-item demo-preview__sidebar-item--active" data-i18n-key="demo.preview.project">Q4 Board Deck</div>
+                    <div class="demo-preview__sidebar-item" data-i18n-key="demo.preview.contracts">Client Contracts</div>
+                    <div class="demo-preview__sidebar-item" data-i18n-key="demo.preview.proposals">Proposals</div>
+                  </div>
+                  <div class="demo-preview__main">
+                    <div class="demo-preview__search">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                      <span data-i18n-key="demo.preview.query">Find the latest revenue projections</span>
+                    </div>
+                    <div class="demo-preview__result">
+                      <div class="demo-preview__result-badge" data-i18n-key="demo.preview.source">Q4-Board-Deck-v3.pdf, p.12</div>
+                      <p class="demo-preview__result-text" data-i18n-key="demo.preview.answer">Revenue projections for Q4 show a 23% increase over Q3, driven by new enterprise contracts...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FAQ
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="demo-faq allybi-section">
+      <div class="allybi-container">
+        <div class="allybi-section-header">
+          <h2 class="allybi-h2" data-i18n-key="demo.faq.title">Demo FAQ</h2>
+        </div>
+        <div class="allybi-accordion" style="max-width: var(--allybi-max-reading); margin: 0 auto;">
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="demo.faq.q1">How long is a demo?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="demo.faq.a1">Demos typically last 30 minutes. We tailor the session to your specific workflow and questions, so you see exactly what matters to your team.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="demo.faq.q2">Do I need to prepare anything?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="demo.faq.a2">No preparation needed. Just tell us about your role and what you're most interested in, and we'll customize the demo accordingly.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="demo.faq.q3">Can I invite my team?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="demo.faq.a3">Absolutely. We encourage team demos so everyone can see how Allybi fits into your shared workflow. Just mention the number of attendees in the form.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="demo.faq.q4">Is there any cost?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="demo.faq.a4">No. Demos are completely free and come with no obligation. We just want to show you how Allybi can help your team.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="allybi-footer">
+    <div class="allybi-footer-inner">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-brand-logo">
+          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
+        </a>
+        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
+      </div>
+
+      <div class="footer-columns">
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+          <div class="footer-col-links">
+            <a href="/" data-i18n-key="footer.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
+          <div class="footer-col-links">
+            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
+          <div class="footer-col-links">
+            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+          <div class="footer-col-links">
+            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
+            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
+          <div class="footer-col-links">
+            <a href="about.html" data-i18n-key="footer.about">About</a>
+            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+          <div class="footer-col-links">
+            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
+            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
+            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          <div class="language-selector" id="footer-language-selector">
+            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span class="lang-label">English</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="language-menu hidden" role="listbox">
+              <li role="option" data-lang="en">English</li>
+              <li role="option" data-lang="pt">Portugues (BR)</li>
+              <li role="option" data-lang="es">Espanol</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       SCRIPTS
+       ================================================================ -->
+  <script src="language-switcher.js"></script>
+  <script src="allybi-header.js"></script>
+  <script src="animations.js"></script>
+  <script src="allybi-animations.js"></script>
+
+  <!-- FAQ accordion -->
+  <script>
+    (function () {
+      var triggers = document.querySelectorAll('.allybi-accordion__trigger');
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          var content = this.nextElementSibling;
+          if (!expanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          } else {
+            content.style.maxHeight = '0';
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

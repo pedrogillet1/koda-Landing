@@ -1,165 +1,160 @@
-// Language Switcher JavaScript
-// Handles dropdown interaction, language switching, and translations
+// Language Switcher — Allybi
+// Handles ALL language selectors (mobile menu, footer, legacy header)
+// and applies translations from /translations/{lang}.json
 
 document.addEventListener('DOMContentLoaded', () => {
-  const languageToggle = document.getElementById('language-toggle');
-  const languageMenu = document.getElementById('language-menu');
-  const currentLanguageSpan = document.getElementById('current-language');
+  'use strict';
 
-  // Dropdown Interaction
-  if (languageToggle && languageMenu) {
-    languageToggle.addEventListener('click', (e) => {
+  // ── Language names ──
+  const LANG_NAMES = {
+    en: 'English',
+    pt: 'Português (BR)',
+    es: 'Español'
+  };
+
+  // ── Collect every language-selector widget on the page ──
+  // Each widget has: a .language-toggle button, a .language-menu list, and optionally a label span
+  const selectors = [];
+
+  document.querySelectorAll('.language-selector').forEach(container => {
+    const toggle = container.querySelector('.language-toggle');
+    const menu = container.querySelector('.language-menu');
+    const label = container.querySelector('[id$="current-language"], .lang-label');
+    if (toggle && menu) {
+      selectors.push({ container, toggle, menu, label });
+    }
+  });
+
+  // ── Dropdown open/close for every selector ──
+  selectors.forEach(({ container, toggle, menu }) => {
+    toggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isExpanded = languageToggle.getAttribute('aria-expanded') === 'true';
-      languageToggle.setAttribute('aria-expanded', !isExpanded);
-      languageMenu.classList.toggle('hidden');
-    });
-
-    // Close the dropdown when clicking outside of it
-    document.addEventListener('click', (event) => {
-      if (!languageToggle.contains(event.target) && !languageMenu.contains(event.target)) {
-        languageToggle.setAttribute('aria-expanded', 'false');
-        languageMenu.classList.add('hidden');
+      const wasOpen = !menu.classList.contains('hidden');
+      closeAllMenus();
+      if (!wasOpen) {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
       }
     });
+  });
 
-    // Prevent menu clicks from closing the dropdown
-    languageMenu.addEventListener('click', (event) => {
-      event.stopPropagation();
+  function closeAllMenus() {
+    selectors.forEach(({ toggle, menu }) => {
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   }
 
-  // Language names mapping
-  const languageNames = {
-    'en': 'English',
-    'pt': 'Português (BR)',
-    'es': 'Español'
-  };
+  // Close all on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.language-selector')) {
+      closeAllMenus();
+    }
+  });
 
-  // Function to set the language
-  const setLanguage = async (lang) => {
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllMenus();
+  });
+
+  // ── Language selection (click on any [data-lang] inside any menu) ──
+  selectors.forEach(({ menu }) => {
+    menu.addEventListener('click', (e) => {
+      const item = e.target.closest('[data-lang]');
+      if (item) {
+        e.preventDefault();
+        e.stopPropagation();
+        const lang = item.getAttribute('data-lang');
+        setLanguage(lang);
+      }
+    });
+  });
+
+  // ── Set language ──
+  async function setLanguage(lang) {
     try {
       localStorage.setItem('language', lang);
-      if (currentLanguageSpan) {
-        currentLanguageSpan.textContent = languageNames[lang] || 'English';
-      }
+
+      // Update all labels
+      const displayName = LANG_NAMES[lang] || 'English';
+      selectors.forEach(({ label }) => {
+        if (label) label.textContent = displayName;
+      });
 
       // Apply translations
       await applyTranslations(lang);
 
-      // Close the dropdown
-      if (languageToggle && languageMenu) {
-        languageToggle.setAttribute('aria-expanded', 'false');
-        languageMenu.classList.add('hidden');
-      }
-    } catch (error) {
-      console.error('Error setting language:', error);
+      // Close all menus
+      closeAllMenus();
+    } catch (err) {
+      console.error('Language switch error:', err);
     }
-  };
+  }
 
-  // Function to apply translations
+  // ── Apply translations ──
   async function applyTranslations(lang) {
     try {
-      const response = await fetch(`/translations/${lang}.json`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const translations = await response.json();
+      // Detect base path: if served under /homepage/, use that prefix
+      const basePath = window.location.pathname.includes('/homepage/') ? '/homepage/' : '';
+      const resp = await fetch(basePath + 'translations/' + lang + '.json');
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const translations = await resp.json();
 
-      // Set the lang attribute on the HTML element for CSS selectors
       document.documentElement.setAttribute('lang', lang);
 
-      // Apply translations to elements with data-i18n-key
-      document.querySelectorAll('[data-i18n-key]').forEach(element => {
-        const key = element.getAttribute('data-i18n-key');
-        const translation = getNestedTranslation(translations, key);
-
-        if (translation) {
-          // Check if element has a placeholder attribute
-          if (element.hasAttribute('placeholder')) {
-            element.setAttribute('placeholder', translation);
+      document.querySelectorAll('[data-i18n-key]').forEach(el => {
+        const key = el.getAttribute('data-i18n-key');
+        const value = resolve(translations, key);
+        if (value != null) {
+          if (el.hasAttribute('placeholder')) {
+            el.setAttribute('placeholder', value);
           } else {
-            element.innerHTML = translation;
+            el.innerHTML = value;
           }
         }
       });
-    } catch (error) {
-      console.error('Error loading translations:', error);
+    } catch (err) {
+      console.error('Translation error:', err);
     }
   }
 
-  // Helper function to get nested translation
-  function getNestedTranslation(obj, key) {
-    const keys = key.split('.');
-    let result = obj;
-    for (const k of keys) {
-      if (result && typeof result === 'object' && k in result) {
-        result = result[k];
-      } else {
-        return null;
-      }
-    }
-    return result;
+  // ── Resolve dot-notated key from nested object ──
+  function resolve(obj, key) {
+    return key.split('.').reduce((o, k) => (o && typeof o === 'object' && k in o ? o[k] : null), obj);
   }
 
-  // Event listeners for language selection
-  if (languageMenu) {
-    languageMenu.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A') {
-        event.preventDefault();
-        const lang = event.target.getAttribute('data-lang');
-        setLanguage(lang);
-      }
-    });
-  }
-
-  // Browser Language Detection and Suggestion
-  const suggestLanguage = () => {
-    const browserLang = navigator.language.split('-')[0]; // 'en-US' -> 'en'
-    const supportedLangs = ['en', 'pt', 'es'];
-    const isFirstVisit = !localStorage.getItem('language');
-
-    if (isFirstVisit && supportedLangs.includes(browserLang) && browserLang !== 'en') {
-      // Create suggestion bar
-      const suggestionBar = document.createElement('div');
-      suggestionBar.className = 'language-suggestion-bar';
-
-      const langNames = {
-        'pt': 'Português',
-        'es': 'Español'
-      };
-
-      suggestionBar.innerHTML = `
-        <span>Detected ${langNames[browserLang]} — Switch to ${langNames[browserLang]}?</span>
-        <div>
-          <button id="lang-yes">Yes</button>
-          <button id="lang-no">No</button>
-        </div>
-      `;
-      document.body.appendChild(suggestionBar);
+  // ── Browser language suggestion (first visit) ──
+  function suggestLanguage() {
+    const browserLang = navigator.language.split('-')[0];
+    const supported = ['pt', 'es'];
+    if (!localStorage.getItem('language') && supported.includes(browserLang)) {
+      const names = { pt: 'Português', es: 'Español' };
+      const bar = document.createElement('div');
+      bar.className = 'language-suggestion-bar';
+      bar.innerHTML =
+        '<span>Detected ' + names[browserLang] + ' — Switch?</span>' +
+        '<div>' +
+        '<button id="lang-yes">Yes</button>' +
+        '<button id="lang-no">No</button>' +
+        '</div>';
+      document.body.appendChild(bar);
 
       document.getElementById('lang-yes').addEventListener('click', () => {
         setLanguage(browserLang);
-        suggestionBar.remove();
+        bar.remove();
       });
-
       document.getElementById('lang-no').addEventListener('click', () => {
         localStorage.setItem('language', 'en');
-        suggestionBar.remove();
+        bar.remove();
       });
     }
-  };
+  }
 
-  // Check for saved language on page load
-  const savedLanguage = localStorage.getItem('language');
-  if (savedLanguage) {
-    setLanguage(savedLanguage);
-  } else {
-    // Suggest language based on browser settings
+  // ── Init ──
+  const saved = localStorage.getItem('language');
+  if (saved && saved !== 'en') {
+    setLanguage(saved);
+  } else if (!saved) {
     suggestLanguage();
-    // Set default to English
-    if (currentLanguageSpan) {
-      currentLanguageSpan.textContent = 'English';
-    }
   }
 });

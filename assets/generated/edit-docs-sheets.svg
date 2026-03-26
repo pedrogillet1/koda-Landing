@@ -1,0 +1,180 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="es" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="rgba(16,24,40,0.06)"/>
+    </filter>
+    <style>
+      text { font-family: "Plus Jakarta Sans", -apple-system, sans-serif; fill: #0D0F12; }
+      .panel { fill: #FCFCFA; stroke: rgba(16,24,40,0.08); stroke-width: 1; filter: url(#es); }
+      .bar { rx: 2; fill: #E5E7EB; }
+      .t11 { font-size: 11px; font-weight: 600; }
+      .t9 { font-size: 9px; fill: #9CA3AF; }
+      .t8 { font-size: 8px; fill: #6B7280; }
+      .cell { fill: #FCFCFA; stroke: rgba(16,24,40,0.08); stroke-width: 0.6; }
+      .cell-head { fill: #F6F7F8; stroke: rgba(16,24,40,0.08); stroke-width: 0.6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="360" fill="#F6F7F8" rx="12"/>
+
+  <!-- Left panel: Document editor -->
+  <rect class="panel" x="20" y="16" width="292" height="328" rx="10"/>
+
+  <!-- Title bar -->
+  <rect x="20" y="16" width="292" height="36" rx="10" fill="#F6F7F8" stroke="rgba(16,24,40,0.06)" stroke-width="0.8"/>
+  <rect x="20" y="42" width="292" height="10" fill="#F6F7F8"/>
+  <!-- Doc icon -->
+  <rect x="34" y="24" width="14" height="18" rx="2" fill="none" stroke="#2563EB" stroke-width="0.8"/>
+  <line x1="38" y1="30" x2="44" y2="30" stroke="#2563EB" stroke-width="0.6"/>
+  <line x1="38" y1="34" x2="42" y2="34" stroke="#2563EB" stroke-width="0.6"/>
+  <text class="t11" x="56" y="37">Proposal_Draft.docx</text>
+  <!-- Toolbar dots -->
+  <circle cx="264" cy="34" r="2.5" fill="#D1D5DB"/>
+  <circle cx="276" cy="34" r="2.5" fill="#D1D5DB"/>
+  <circle cx="288" cy="34" r="2.5" fill="#D1D5DB"/>
+
+  <!-- Paragraph lines -->
+  <rect class="bar" x="40" y="68" width="240" height="5"/>
+  <rect class="bar" x="40" y="80" width="220" height="5"/>
+  <rect class="bar" x="40" y="92" width="250" height="5"/>
+  <rect class="bar" x="40" y="104" width="200" height="5"/>
+
+  <rect class="bar" x="40" y="124" width="230" height="5"/>
+  <rect class="bar" x="40" y="136" width="250" height="5"/>
+  <rect class="bar" x="40" y="148" width="210" height="5"/>
+
+  <!-- Highlighted section: "Rewrite this section" -->
+  <rect x="36" y="168" width="260" height="56" rx="4" fill="#2563EB" opacity="0.05" stroke="#2563EB" stroke-width="0.8" stroke-dasharray="4,2"/>
+  <rect x="40" y="176" width="240" height="5" rx="2" fill="#2563EB" opacity="0.2"/>
+  <rect x="40" y="188" width="220" height="5" rx="2" fill="#2563EB" opacity="0.2"/>
+  <rect x="40" y="200" width="230" height="5" rx="2" fill="#2563EB" opacity="0.2"/>
+
+  <!-- Inline action chip -->
+  <rect x="100" y="212" width="130" height="20" rx="10" fill="#2563EB"/>
+  <text x="165" y="225" text-anchor="middle" font-size="8" font-weight="600" font-family="Plus Jakarta Sans, -apple-system, sans-serif" fill="#FCFCFA">Rewrite this section...</text>
+
+  <!-- More lines -->
+  <rect class="bar" x="40" y="244" width="240" height="5"/>
+  <rect class="bar" x="40" y="256" width="220" height="5"/>
+  <rect class="bar" x="40" y="268" width="250" height="5"/>
+  <rect class="bar" x="40" y="280" width="200" height="5"/>
+  <rect class="bar" x="40" y="300" width="230" height="5"/>
+  <rect class="bar" x="40" y="312" width="210" height="5"/>
+
+  <!-- Divider -->
+  <line x1="320" y1="40" x2="320" y2="340" stroke="rgba(16,24,40,0.06)" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Right panel: Spreadsheet editor -->
+  <rect class="panel" x="328" y="16" width="292" height="328" rx="10"/>
+
+  <!-- Title bar -->
+  <rect x="328" y="16" width="292" height="36" rx="10" fill="#F6F7F8" stroke="rgba(16,24,40,0.06)" stroke-width="0.8"/>
+  <rect x="328" y="42" width="292" height="10" fill="#F6F7F8"/>
+  <!-- Sheet icon -->
+  <rect x="342" y="24" width="14" height="18" rx="2" fill="none" stroke="#16A34A" stroke-width="0.8"/>
+  <line x1="342" y1="30" x2="356" y2="30" stroke="#16A34A" stroke-width="0.6"/>
+  <line x1="349" y1="24" x2="349" y2="42" stroke="#16A34A" stroke-width="0.6"/>
+  <text class="t11" x="364" y="37">Budget_Q2.xlsx</text>
+
+  <!-- Column headers -->
+  <rect class="cell-head" x="348" y="60" width="40" height="22"/>
+  <rect class="cell-head" x="388" y="60" width="80" height="22"/>
+  <rect class="cell-head" x="468" y="60" width="80" height="22"/>
+  <rect class="cell-head" x="548" y="60" width="60" height="22"/>
+  <text class="t8" x="368" y="74" text-anchor="middle"> </text>
+  <text class="t8" x="428" y="74" text-anchor="middle" font-weight="600">Category</text>
+  <text class="t8" x="508" y="74" text-anchor="middle" font-weight="600">Amount</text>
+  <text class="t8" x="578" y="74" text-anchor="middle" font-weight="600">Status</text>
+
+  <!-- Row 1 -->
+  <rect class="cell" x="348" y="82" width="40" height="22"/>
+  <rect class="cell" x="388" y="82" width="80" height="22"/>
+  <rect class="cell" x="468" y="82" width="80" height="22"/>
+  <rect class="cell" x="548" y="82" width="60" height="22"/>
+  <text class="t8" x="368" y="96" text-anchor="middle">1</text>
+  <text class="t8" x="428" y="96" text-anchor="middle" fill="#0D0F12">Marketing</text>
+  <text class="t8" x="508" y="96" text-anchor="middle" fill="#0D0F12">$240K</text>
+  <circle cx="572" cy="93" r="3" fill="#16A34A" opacity="0.3"/><text class="t8" x="580" y="96">OK</text>
+
+  <!-- Row 2 -->
+  <rect class="cell" x="348" y="104" width="40" height="22"/>
+  <rect class="cell" x="388" y="104" width="80" height="22"/>
+  <rect class="cell" x="468" y="104" width="80" height="22"/>
+  <rect class="cell" x="548" y="104" width="60" height="22"/>
+  <text class="t8" x="368" y="118" text-anchor="middle">2</text>
+  <text class="t8" x="428" y="118" text-anchor="middle" fill="#0D0F12">Engineering</text>
+  <text class="t8" x="508" y="118" text-anchor="middle" fill="#0D0F12">$890K</text>
+  <circle cx="572" cy="115" r="3" fill="#16A34A" opacity="0.3"/><text class="t8" x="580" y="118">OK</text>
+
+  <!-- Row 3 -->
+  <rect class="cell" x="348" y="126" width="40" height="22"/>
+  <rect class="cell" x="388" y="126" width="80" height="22"/>
+  <rect class="cell" x="468" y="126" width="80" height="22"/>
+  <rect class="cell" x="548" y="126" width="60" height="22"/>
+  <text class="t8" x="368" y="140" text-anchor="middle">3</text>
+  <text class="t8" x="428" y="140" text-anchor="middle" fill="#0D0F12">Sales</text>
+  <text class="t8" x="508" y="140" text-anchor="middle" fill="#0D0F12">$560K</text>
+  <circle cx="572" cy="137" r="3" fill="#16A34A" opacity="0.3"/><text class="t8" x="580" y="140">OK</text>
+
+  <!-- Row 4 -->
+  <rect class="cell" x="348" y="148" width="40" height="22"/>
+  <rect class="cell" x="388" y="148" width="80" height="22"/>
+  <rect class="cell" x="468" y="148" width="80" height="22"/>
+  <rect class="cell" x="548" y="148" width="60" height="22"/>
+  <text class="t8" x="368" y="162" text-anchor="middle">4</text>
+  <text class="t8" x="428" y="162" text-anchor="middle" fill="#0D0F12">Operations</text>
+  <text class="t8" x="508" y="162" text-anchor="middle" fill="#0D0F12">$310K</text>
+  <circle cx="572" cy="159" r="3" fill="#D97706" opacity="0.3"/><text class="t8" x="580" y="162">Rev</text>
+
+  <!-- Rows 5-7 (more data) -->
+  <rect class="cell" x="348" y="170" width="40" height="22"/>
+  <rect class="cell" x="388" y="170" width="80" height="22"/>
+  <rect class="cell" x="468" y="170" width="80" height="22"/>
+  <rect class="cell" x="548" y="170" width="60" height="22"/>
+  <text class="t8" x="368" y="184" text-anchor="middle">5</text>
+  <text class="t8" x="428" y="184" text-anchor="middle" fill="#0D0F12">Legal</text>
+  <text class="t8" x="508" y="184" text-anchor="middle" fill="#0D0F12">$180K</text>
+  <circle cx="572" cy="181" r="3" fill="#16A34A" opacity="0.3"/><text class="t8" x="580" y="184">OK</text>
+
+  <rect class="cell" x="348" y="192" width="40" height="22"/>
+  <rect class="cell" x="388" y="192" width="80" height="22"/>
+  <rect class="cell" x="468" y="192" width="80" height="22"/>
+  <rect class="cell" x="548" y="192" width="60" height="22"/>
+  <text class="t8" x="368" y="206" text-anchor="middle">6</text>
+  <text class="t8" x="428" y="206" text-anchor="middle" fill="#0D0F12">R&amp;D</text>
+  <text class="t8" x="508" y="206" text-anchor="middle" fill="#0D0F12">$420K</text>
+  <circle cx="572" cy="203" r="3" fill="#16A34A" opacity="0.3"/><text class="t8" x="580" y="206">OK</text>
+
+  <rect class="cell" x="348" y="214" width="40" height="22"/>
+  <rect class="cell" x="388" y="214" width="80" height="22"/>
+  <rect class="cell" x="468" y="214" width="80" height="22"/>
+  <rect class="cell" x="548" y="214" width="60" height="22"/>
+  <text class="t8" x="368" y="228" text-anchor="middle">7</text>
+  <text class="t8" x="428" y="228" text-anchor="middle" fill="#0D0F12">HR</text>
+  <text class="t8" x="508" y="228" text-anchor="middle" fill="#0D0F12">$150K</text>
+  <circle cx="572" cy="225" r="3" fill="#16A34A" opacity="0.3"/><text class="t8" x="580" y="228">OK</text>
+
+  <!-- Total row (highlighted) -->
+  <rect x="348" y="240" width="260" height="24" rx="0" fill="#F6F7F8" stroke="rgba(16,24,40,0.08)" stroke-width="0.6"/>
+  <text class="t8" x="368" y="256" text-anchor="middle" font-weight="700">8</text>
+  <text class="t8" x="428" y="256" text-anchor="middle" font-weight="700" fill="#0D0F12">Total</text>
+
+  <!-- Highlighted formula cell -->
+  <rect x="468" y="240" width="80" height="24" fill="#2563EB" opacity="0.06" stroke="#2563EB" stroke-width="1.2"/>
+  <text x="508" y="256" text-anchor="middle" font-size="8" font-weight="700" font-family="Plus Jakarta Sans, -apple-system, sans-serif" fill="#2563EB">$2,750K</text>
+
+  <!-- Formula bar popup -->
+  <rect x="430" y="270" width="160" height="26" rx="6" fill="#0D0F12"/>
+  <text x="510" y="287" text-anchor="middle" font-size="9" font-family="monospace" fill="#FCFCFA">=SUM(B2:B8)</text>
+  <!-- Pointer triangle -->
+  <polygon points="505,270 510,262 515,270" fill="#0D0F12"/>
+
+  <!-- Tab bar at bottom -->
+  <rect x="348" y="308" width="60" height="20" rx="4" fill="#2563EB" opacity="0.1"/>
+  <text x="378" y="321" text-anchor="middle" font-size="8" font-weight="600" font-family="Plus Jakarta Sans, -apple-system, sans-serif" fill="#2563EB">Budget</text>
+  <rect x="414" y="308" width="60" height="20" rx="4" fill="#F6F7F8"/>
+  <text class="t8" x="444" y="321" text-anchor="middle">Forecast</text>
+  <rect x="480" y="308" width="50" height="20" rx="4" fill="#F6F7F8"/>
+  <text class="t8" x="505" y="321" text-anchor="middle">Notes</text>
+</svg>

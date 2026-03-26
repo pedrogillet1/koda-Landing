@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Security Overview Page
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.secov-hero {
+  text-align: center;
+  padding-top: calc(var(--allybi-section-py) + 40px);
+}
+
+.secov-hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.secov-hero .allybi-eyebrow {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.secov-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.secov-hero .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Trust Pillars ---------- */
+.secov-pillar-card {
+  text-align: left;
+}
+
+.secov-pillar-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--allybi-radius-md);
+  background-color: var(--allybi-trust-subtle);
+  color: var(--allybi-trust);
+  margin-bottom: var(--allybi-space-5);
+}
+
+.secov-pillar-title {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.secov-pillar-desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Architecture Diagram ---------- */
+.secov-arch-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.secov-arch-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--allybi-space-2);
+  padding: var(--allybi-space-6) var(--allybi-space-8);
+  border: 2px solid var(--allybi-border-strong);
+  border-radius: var(--allybi-radius-lg);
+  background-color: var(--allybi-bg-surface);
+  text-align: center;
+  min-width: 200px;
+}
+
+.secov-arch-node--user {
+  border-color: var(--allybi-accent);
+  background-color: var(--allybi-accent-subtle);
+}
+
+.secov-arch-node--app {
+  border-color: var(--allybi-trust);
+  background-color: var(--allybi-trust-subtle);
+}
+
+.secov-arch-node--branch {
+  min-width: 160px;
+  padding: var(--allybi-space-5) var(--allybi-space-5);
+}
+
+.secov-arch-node__icon {
+  color: var(--allybi-text-secondary);
+}
+
+.secov-arch-node--user .secov-arch-node__icon {
+  color: var(--allybi-accent);
+}
+
+.secov-arch-node--app .secov-arch-node__icon {
+  color: var(--allybi-trust);
+}
+
+.secov-arch-node__label {
+  font-size: var(--allybi-body-sm-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+}
+
+.secov-arch-node__detail {
+  font-size: var(--allybi-meta-size);
+  color: var(--allybi-text-muted);
+}
+
+.secov-arch-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--allybi-space-1);
+  padding: var(--allybi-space-2) 0;
+}
+
+.secov-arch-connector__line {
+  width: 2px;
+  height: 32px;
+  background-color: var(--allybi-border-strong);
+}
+
+.secov-arch-connector__label {
+  font-size: var(--allybi-meta-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-trust);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+}
+
+.secov-arch-branches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--allybi-space-6);
+  width: 100%;
+}
+
+/* Branch connector lines */
+.secov-arch-branches::before {
+  content: '';
+  display: block;
+  position: absolute;
+  /* we use relative positioning instead */
+}
+
+/* ---------- Data Handling ---------- */
+.secov-data-block {
+  padding-left: var(--allybi-space-5);
+  border-left: 3px solid var(--allybi-accent);
+}
+
+.secov-data-block__title {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.secov-data-block__desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Integration Security ---------- */
+.secov-integ-card__title {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.secov-integ-card__desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- CTA ---------- */
+.secov-cta__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.secov-cta__inner .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.secov-cta__inner .allybi-body-lg {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--allybi-space-10);
+}
+
+.secov-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--allybi-space-4);
+  flex-wrap: wrap;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .secov-hero {
+    padding-top: calc(var(--allybi-section-py-mobile) + 32px);
+  }
+
+  .secov-arch-diagram {
+    flex-direction: column;
+  }
+
+  .secov-arch-branches {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-4);
+  }
+
+  .secov-data-grid.allybi-grid-4 {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-8);
+  }
+
+  .secov-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

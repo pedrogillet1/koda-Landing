@@ -9,22 +9,22 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
 
   <!-- SEO -->
-  <title>Contact Allybi — Demos, Support, and Security Questions</title>
-  <meta name="description" content="Questions about Allybi? Reach us for demos, product questions, security inquiries, or partnership opportunities.">
+  <title>Use Cases — Allybi for Legal, Finance, and Business Teams</title>
+  <meta name="description" content="Discover how legal, finance, and business teams use Allybi to find files faster, reduce wrong-version risk, and act with confidence.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact Allybi — Demos, Support, and Security Questions">
-  <meta property="og:description" content="Questions about Allybi? Reach us for demos, product questions, security inquiries, or partnership opportunities.">
-  <meta property="og:image" content="assets/images/og-contact.png">
-  <meta property="og:url" content="https://allybi.co/contact.html">
+  <meta property="og:title" content="Use Cases — Allybi for Legal, Finance, and Business Teams">
+  <meta property="og:description" content="Discover how legal, finance, and business teams use Allybi to find files faster, reduce wrong-version risk, and act with confidence.">
+  <meta property="og:image" content="assets/images/og-home.png">
+  <meta property="og:url" content="https://allybi.co/use-cases.html">
   <meta property="og:site_name" content="Allybi">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact Allybi — Demos, Support, and Security Questions">
-  <meta name="twitter:description" content="Questions about Allybi? Reach us for demos, product questions, security inquiries, or partnership opportunities.">
-  <meta name="twitter:image" content="assets/images/og-contact.png">
+  <meta name="twitter:title" content="Use Cases — Allybi for Legal, Finance, and Business Teams">
+  <meta name="twitter:description" content="Discover how legal, finance, and business teams use Allybi to find files faster, reduce wrong-version risk, and act with confidence.">
+  <meta name="twitter:image" content="assets/images/og-home.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="allybi-footer.css">
 
   <!-- Page-specific CSS -->
-  <link rel="stylesheet" href="pages/contact.css">
+  <link rel="stylesheet" href="pages/use-cases.css">
 </head>
 <body>
 
@@ -172,114 +172,128 @@
        ================================================================ -->
   <main>
 
-    <!-- Hero -->
-    <section class="contact-hero allybi-section">
-      <div class="allybi-container contact-hero-inner">
-        <h1 class="allybi-h1 allybi-reveal" data-i18n-key="contact.hero_h1">Talk to Allybi</h1>
-        <p class="allybi-body-lg allybi-reveal" data-i18n-key="contact.hero_support">Questions about the product, security, demos, or partnerships? We'll point you to the right place.</p>
+    <!-- ────────────────────────────────────────────────────────────────
+         HERO
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="uc-hero allybi-section">
+      <div class="allybi-container">
+        <span class="allybi-hero-eyebrow" data-i18n-key="uc_overview.hero.eyebrow">Use Cases</span>
+        <h1 class="allybi-h1" data-i18n-key="uc_overview.hero.title">One workspace. Built for how you actually work.</h1>
+        <p class="allybi-body-lg" data-i18n-key="uc_overview.hero.support">Allybi serves teams that work under pressure with sensitive documents — where wrong files, lost versions, and slow search carry real cost.</p>
       </div>
     </section>
 
-    <!-- Routing Cards -->
-    <section class="allybi-section allybi-section--dense contact-routing">
-      <div class="allybi-content">
-        <div class="allybi-grid-2 allybi-stagger">
+    <!-- ────────────────────────────────────────────────────────────────
+         ROLE SELECTION CARDS
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="uc-roles allybi-section">
+      <div class="allybi-container">
+        <div class="uc-roles__grid">
 
-          <!-- Sales & Demos -->
-          <div class="allybi-card allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="contact.route_sales_title">Sales & Demos</h3>
-            <p class="allybi-body" data-i18n-key="contact.route_sales_desc">See Allybi in action. We'll walk you through the product and answer any questions about fit, pricing, or implementation.</p>
-            <a href="demo.html" class="allybi-btn allybi-btn--primary contact-route-btn" data-i18n-key="contact.route_sales_cta">Book a demo</a>
+          <!-- Legal -->
+          <div class="uc-role-card">
+            <div class="uc-role-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M2 8v8l10 5 10-5V8"/><path d="M12 13v8"/></svg>
+            </div>
+            <h3 class="uc-role-card__title" data-i18n-key="uc_overview.roles.legal.title">Legal teams</h3>
+            <p class="uc-role-card__pain" data-i18n-key="uc_overview.roles.legal.pain">Contracts, versions, evidence — find and compare without losing the thread.</p>
+            <a href="use-case-legal.html" class="uc-role-card__cta" data-i18n-key="uc_overview.roles.legal.cta">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <!-- Support -->
-          <div class="allybi-card allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="contact.route_support_title">Support</h3>
-            <p class="allybi-body" data-i18n-key="contact.route_support_desc">Need help with your account or a technical question? Our team reads every message and responds within one business day.</p>
-            <a href="#contact-form" class="allybi-btn allybi-btn--secondary contact-route-btn" data-i18n-key="contact.route_support_cta">Get support</a>
+          <!-- Finance -->
+          <div class="uc-role-card">
+            <div class="uc-role-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 4 5-8"/></svg>
+            </div>
+            <h3 class="uc-role-card__title" data-i18n-key="uc_overview.roles.finance.title">Finance &amp; deal teams</h3>
+            <p class="uc-role-card__pain" data-i18n-key="uc_overview.roles.finance.pain">Decks, models, cap tables — find the exact number and send the right file.</p>
+            <a href="use-case-finance.html" class="uc-role-card__cta" data-i18n-key="uc_overview.roles.finance.cta">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <!-- Security & Privacy -->
-          <div class="allybi-card allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="contact.route_security_title">Security & Privacy</h3>
-            <p class="allybi-body" data-i18n-key="contact.route_security_desc">Questions about encryption, data handling, or compliance? Start with our security overview or reach out directly.</p>
-            <a href="security-overview.html" class="allybi-btn allybi-btn--secondary contact-route-btn" data-i18n-key="contact.route_security_cta">Security overview</a>
-          </div>
-
-          <!-- Partnerships -->
-          <div class="allybi-card allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="contact.route_partners_title">Partnerships</h3>
-            <p class="allybi-body" data-i18n-key="contact.route_partners_desc">Interested in working with us? Whether it's integrations, reselling, or co-development, we'd like to hear from you.</p>
-            <a href="#contact-form" class="allybi-btn allybi-btn--secondary contact-route-btn" data-i18n-key="contact.route_partners_cta">Contact us</a>
+          <!-- Business -->
+          <div class="uc-role-card">
+            <div class="uc-role-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            </div>
+            <h3 class="uc-role-card__title" data-i18n-key="uc_overview.roles.business.title">Business &amp; operations</h3>
+            <p class="uc-role-card__pain" data-i18n-key="uc_overview.roles.business.pain">Proposals, plans, decisions — keep everything findable and actionable.</p>
+            <a href="use-case-business.html" class="uc-role-card__cta" data-i18n-key="uc_overview.roles.business.cta">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Contact Form -->
-    <section id="contact-form" class="allybi-section contact-form-section">
+    <!-- ────────────────────────────────────────────────────────────────
+         SHARED VALUE
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="uc-shared allybi-section">
       <div class="allybi-container">
-        <div class="contact-form-wrapper">
-          <div class="allybi-section-header">
-            <h2 class="allybi-h2 allybi-reveal" data-i18n-key="contact.form_title">Send us a message</h2>
-            <p class="allybi-body-lg allybi-reveal" data-i18n-key="contact.form_subtitle">We'll get back to you within one business day.</p>
+        <div class="uc-shared__header">
+          <h2 class="allybi-h2" data-i18n-key="uc_overview.shared.title">What every team gets.</h2>
+        </div>
+        <div class="uc-shared__grid">
+
+          <!-- Grounded answers -->
+          <div class="uc-shared__item">
+            <div class="uc-shared__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.grounded.title">Grounded answers from your files</h3>
+            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.grounded.desc">Every response cites the exact source. If the answer is not in your documents, Allybi tells you.</p>
           </div>
 
-          <form class="contact-form allybi-reveal" action="#" method="POST">
-            <div class="allybi-input-group">
-              <label class="allybi-label" for="contact-name" data-i18n-key="contact.label_name">Name</label>
-              <input class="allybi-input" type="text" id="contact-name" name="name" required placeholder="Your full name" data-i18n-key="contact.placeholder_name">
+          <!-- Project organization -->
+          <div class="uc-shared__item">
+            <div class="uc-shared__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
             </div>
+            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.organization.title">Project-level organization</h3>
+            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.organization.desc">Group files by matter, deal, or project. Search stays scoped. Context stays clean.</p>
+          </div>
 
-            <div class="allybi-input-group">
-              <label class="allybi-label" for="contact-email" data-i18n-key="contact.label_email">Work email</label>
-              <input class="allybi-input" type="email" id="contact-email" name="email" required placeholder="you@company.com" data-i18n-key="contact.placeholder_email">
+          <!-- Editing -->
+          <div class="uc-shared__item">
+            <div class="uc-shared__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
             </div>
+            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.editing.title">Editing inside the workflow</h3>
+            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.editing.desc">Edit documents and spreadsheets without leaving the workspace. AI helps with formulas and formatting.</p>
+          </div>
 
-            <div class="allybi-input-group">
-              <label class="allybi-label" for="contact-company" data-i18n-key="contact.label_company">Company <span class="contact-optional" data-i18n-key="contact.optional">(optional)</span></label>
-              <input class="allybi-input" type="text" id="contact-company" name="company" placeholder="Company name" data-i18n-key="contact.placeholder_company">
+          <!-- Send confirmation -->
+          <div class="uc-shared__item">
+            <div class="uc-shared__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
             </div>
+            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.send.title">Explicit confirmation before send</h3>
+            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.send.desc">Allybi always shows you the file, the version, and the recipient before anything leaves your workspace.</p>
+          </div>
 
-            <div class="allybi-input-group">
-              <label class="allybi-label" for="contact-role" data-i18n-key="contact.label_role">What best describes you?</label>
-              <select class="allybi-select" id="contact-role" name="role" required>
-                <option value="" disabled selected data-i18n-key="contact.select_placeholder">Select one</option>
-                <option value="legal" data-i18n-key="contact.role_legal">Legal</option>
-                <option value="finance" data-i18n-key="contact.role_finance">Finance</option>
-                <option value="business" data-i18n-key="contact.role_business">Business</option>
-                <option value="other" data-i18n-key="contact.role_other">Other</option>
-              </select>
-            </div>
-
-            <div class="allybi-input-group">
-              <label class="allybi-label" for="contact-topic" data-i18n-key="contact.label_topic">What can we help with?</label>
-              <select class="allybi-select" id="contact-topic" name="topic" required>
-                <option value="" disabled selected data-i18n-key="contact.select_placeholder_topic">Select a topic</option>
-                <option value="demo" data-i18n-key="contact.topic_demo">Demo</option>
-                <option value="product" data-i18n-key="contact.topic_product">Product question</option>
-                <option value="security" data-i18n-key="contact.topic_security">Security</option>
-                <option value="support" data-i18n-key="contact.topic_support">Support</option>
-                <option value="partnership" data-i18n-key="contact.topic_partnership">Partnership</option>
-              </select>
-            </div>
-
-            <div class="allybi-input-group">
-              <label class="allybi-label" for="contact-message" data-i18n-key="contact.label_message">Message</label>
-              <textarea class="allybi-textarea" id="contact-message" name="message" rows="5" required placeholder="Tell us how we can help..." data-i18n-key="contact.placeholder_message"></textarea>
-            </div>
-
-            <button type="submit" class="allybi-btn allybi-btn--primary contact-submit-btn" data-i18n-key="contact.submit">Send message</button>
-          </form>
         </div>
       </div>
     </section>
 
-    <!-- Reassurance -->
-    <section class="contact-reassurance">
+    <!-- ────────────────────────────────────────────────────────────────
+         FINAL CTA
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="uc-final-cta allybi-section">
       <div class="allybi-container">
-        <p class="contact-reassurance-text allybi-reveal" data-i18n-key="contact.reassurance">Sensitive workflow questions welcome. We read every message and route inquiries carefully.</p>
+        <h2 class="allybi-h2" data-i18n-key="uc_overview.final_cta.title">Find your workflow</h2>
+        <div class="uc-final-cta__buttons">
+          <a href="use-case-legal.html" class="allybi-btn allybi-btn--primary" data-i18n-key="uc_overview.final_cta.legal">Legal teams</a>
+          <a href="use-case-finance.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="uc_overview.final_cta.finance">Finance teams</a>
+          <a href="use-case-business.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="uc_overview.final_cta.business">Business teams</a>
+        </div>
       </div>
     </section>
 

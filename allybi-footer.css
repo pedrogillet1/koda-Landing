@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Allybi Footer
+   Rich multi-column footer with brand, navigation, and legal info.
+   Requires: allybi-tokens.css
+   ========================================================================== */
+
+/* ---------- Footer shell ---------- */
+.allybi-footer {
+  background: var(--allybi-bg-dark);
+  color: var(--allybi-text-inverse);
+  padding: 80px 0 40px;
+}
+
+.allybi-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Top section: brand ---------- */
+.footer-brand {
+  margin-bottom: 48px;
+}
+
+.footer-brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-brand-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.footer-tagline {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 280px;
+}
+
+/* ---------- Column grid ---------- */
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(5, 1fr);
+  gap: 40px;
+}
+
+/* ---------- Single column ---------- */
+.footer-col-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+}
+
+.footer-col-links a {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 6px 0;
+  text-decoration: none;
+  transition: color var(--allybi-duration-hover) var(--allybi-ease);
+}
+
+.footer-col-links a:hover {
+  color: #FFFFFF;
+}
+
+.footer-col-links .coming-soon {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  margin-left: 6px;
+}
+
+/* ---------- Bottom bar ---------- */
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Footer language selector overrides */
+.footer-bottom .language-selector {
+  position: relative;
+}
+
+.footer-bottom .language-toggle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition:
+    color var(--allybi-duration-hover) var(--allybi-ease),
+    border-color var(--allybi-duration-hover) var(--allybi-ease);
+}
+
+.footer-bottom .language-toggle:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer language dropdown menu */
+.footer-bottom .language-menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background: var(--allybi-bg-dark-surface, #1A1D23);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  list-style: none;
+  margin: 0;
+  z-index: 100;
+}
+
+.footer-bottom .language-menu.hidden {
+  display: none;
+}
+
+.footer-bottom .language-menu li {
+  padding: 8px 14px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.footer-bottom .language-menu li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+.footer-bottom .language-menu li.active {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* ---------- Responsive: Tablet ---------- */
+@media (max-width: 1024px) {
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+/* ---------- Responsive: Mobile ---------- */
+@media (max-width: 640px) {
+  .allybi-footer {
+    padding: 56px 0 32px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .allybi-footer-inner {
+    padding: 0 var(--allybi-gutter-mobile, 20px);
+  }
+}

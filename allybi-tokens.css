@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Allybi Design Tokens
+   Version: 1.0.0
+   The single source of truth for all visual primitives.
+   ========================================================================== */
+
+:root {
+
+  /* ---------- Colors · Text ---------- */
+  --allybi-text-strongest:   #0D0F12;
+  --allybi-text-primary:     #1A1D23;
+  --allybi-text-secondary:   #454B57;
+  --allybi-text-muted:       #6B7280;
+  --allybi-text-subtle:      #9CA3AF;
+  --allybi-text-inverse:     #FFFFFF;
+
+  /* ---------- Colors · Surfaces ---------- */
+  --allybi-bg-page:          #FCFCFA;
+  --allybi-bg-surface:       #FFFFFF;
+  --allybi-bg-alt-1:         #F6F7F8;
+  --allybi-bg-alt-2:         #EEF1F4;
+  --allybi-bg-dark:          #0D0F12;
+  --allybi-bg-dark-surface:  #1A1D23;
+
+  /* ---------- Colors · Borders ---------- */
+  --allybi-border-default:   rgba(16, 24, 40, 0.08);
+  --allybi-border-subtle:    rgba(16, 24, 40, 0.05);
+  --allybi-border-strong:    rgba(16, 24, 40, 0.15);
+  --allybi-border-focus:     #3B82F6;
+
+  /* ---------- Colors · Accent ---------- */
+  --allybi-accent:           #2563EB;
+  --allybi-accent-hover:     #1D4ED8;
+  --allybi-accent-subtle:    rgba(37, 99, 235, 0.08);
+
+  /* ---------- Colors · Trust green ---------- */
+  --allybi-trust:            #16A34A;
+  --allybi-trust-subtle:     rgba(22, 163, 74, 0.08);
+  --allybi-trust-muted:      #15803D;
+
+  /* ---------- Colors · Semantic ---------- */
+  --allybi-error:            #DC2626;
+  --allybi-error-subtle:     rgba(220, 38, 38, 0.08);
+  --allybi-warning:          #D97706;
+
+  /* ---------- Typography · Font family ---------- */
+  --allybi-font:             'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ---------- Typography · Hero eyebrow ---------- */
+  --allybi-hero-eyebrow-size:    14px;
+  --allybi-hero-eyebrow-lh:     20px;
+  --allybi-hero-eyebrow-weight:  600;
+
+  /* ---------- Typography · Hero H1 ---------- */
+  --allybi-hero-h1-size:     clamp(38px, 5vw, 72px);
+  --allybi-hero-h1-lh:       1.02;
+
+  /* ---------- Typography · Hero support ---------- */
+  --allybi-hero-support-size: clamp(17px, 1.4vw, 20px);
+  --allybi-hero-support-lh:   1.5;
+
+  /* ---------- Typography · Section H2 ---------- */
+  --allybi-section-h2-size:  clamp(30px, 3.2vw, 48px);
+  --allybi-section-h2-lh:    1.08;
+
+  /* ---------- Typography · Section intro ---------- */
+  --allybi-section-intro-size: 18px;
+  --allybi-section-intro-lh:   30px;
+
+  /* ---------- Typography · Card title ---------- */
+  --allybi-card-title-size:  clamp(20px, 1.6vw, 24px);
+  --allybi-card-title-lh:    1.2;
+
+  /* ---------- Typography · Body ---------- */
+  --allybi-body-size:        17px;
+  --allybi-body-lh:          1.6;
+
+  /* ---------- Typography · Body small ---------- */
+  --allybi-body-sm-size:     15px;
+  --allybi-body-sm-lh:       1.55;
+
+  /* ---------- Typography · Meta ---------- */
+  --allybi-meta-size:        13px;
+  --allybi-meta-lh:          1.4;
+  --allybi-meta-weight:      600;
+
+  /* ---------- Typography · Eyebrow ---------- */
+  --allybi-eyebrow-size:     12px;
+  --allybi-eyebrow-lh:       1.4;
+  --allybi-eyebrow-weight:   600;
+
+  /* ---------- Typography · Weights ---------- */
+  --allybi-weight-regular:   400;
+  --allybi-weight-medium:    500;
+  --allybi-weight-semibold:  600;
+  --allybi-weight-bold:      700;
+
+  /* ---------- Typography · Letter spacing ---------- */
+  --allybi-tracking-tight:   -0.02em;
+  --allybi-tracking-normal:  0;
+  --allybi-tracking-wide:    0.04em;
+
+  /* ---------- Spacing (8 px base grid) ---------- */
+  --allybi-space-1:          4px;
+  --allybi-space-2:          8px;
+  --allybi-space-3:          12px;
+  --allybi-space-4:          16px;
+  --allybi-space-5:          20px;
+  --allybi-space-6:          24px;
+  --allybi-space-8:          32px;
+  --allybi-space-10:         40px;
+  --allybi-space-12:         48px;
+  --allybi-space-16:         64px;
+  --allybi-space-20:         80px;
+  --allybi-space-26:         104px;
+  --allybi-space-32:         128px;
+
+  /* ---------- Spacing · Section padding ---------- */
+  --allybi-section-py:       clamp(64px, 8vw, 112px);
+  --allybi-section-py-mobile: 64px;
+  --allybi-section-py-dense: clamp(56px, 6vw, 88px);
+
+  /* ---------- Spacing · Layout ---------- */
+  --allybi-max-page:         1280px;
+  --allybi-max-content:      1160px;
+  --allybi-max-reading:      720px;
+  --allybi-gutter:           24px;
+  --allybi-gutter-mobile:    20px;
+
+  /* ---------- Radii ---------- */
+  --allybi-radius-sm:        8px;
+  --allybi-radius-md:        14px;
+  --allybi-radius-lg:        20px;
+  --allybi-radius-xl:        24px;
+  --allybi-radius-btn:       14px;
+  --allybi-radius-input:     14px;
+  --allybi-radius-card:      20px;
+  --allybi-radius-hero-panel: 24px;
+
+  /* ---------- Shadows ---------- */
+  --allybi-shadow-sm:
+    0 1px 2px rgba(16, 24, 40, 0.04),
+    0 1px 3px rgba(16, 24, 40, 0.03);
+  --allybi-shadow-md:
+    0 2px 4px rgba(16, 24, 40, 0.04),
+    0 4px 12px rgba(16, 24, 40, 0.06);
+  --allybi-shadow-lg:
+    0 4px 8px rgba(16, 24, 40, 0.04),
+    0 8px 24px rgba(16, 24, 40, 0.08);
+  --allybi-shadow-xl:
+    0 8px 16px rgba(16, 24, 40, 0.06),
+    0 16px 48px rgba(16, 24, 40, 0.1);
+  --allybi-shadow-card-hover:
+    0 4px 8px rgba(16, 24, 40, 0.03),
+    0 12px 32px rgba(16, 24, 40, 0.07);
+
+  /* ---------- Motion ---------- */
+  --allybi-ease:             cubic-bezier(0.25, 0.1, 0.25, 1);
+  --allybi-ease-out:         cubic-bezier(0.16, 1, 0.3, 1);
+  --allybi-duration-hover:   160ms;
+  --allybi-duration-ui:      240ms;
+  --allybi-duration-section: 380ms;
+  --allybi-duration-modal:   300ms;
+  --allybi-duration-accordion: 250ms;
+  --allybi-duration-tab:     200ms;
+
+  /* ---------- Z-index ---------- */
+  --allybi-z-base:           1;
+  --allybi-z-dropdown:       100;
+  --allybi-z-sticky:         200;
+  --allybi-z-overlay:        300;
+  --allybi-z-modal:          400;
+  --allybi-z-toast:          500;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --allybi-duration-hover:     0ms;
+    --allybi-duration-ui:        0ms;
+    --allybi-duration-section:   0ms;
+    --allybi-duration-modal:     0ms;
+    --allybi-duration-accordion: 0ms;
+    --allybi-duration-tab:       0ms;
+  }
+}

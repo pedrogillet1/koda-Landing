@@ -1,0 +1,68 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="s1" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="rgba(16,24,40,0.06)"/>
+    </filter>
+    <style>
+      text { font-family: "Plus Jakarta Sans", -apple-system, sans-serif; fill: #0D0F12; }
+      .box { fill: #FCFCFA; stroke: rgba(16,24,40,0.08); stroke-width: 1.2; rx: 8; filter: url(#s1); }
+      .label { font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .sublabel { font-size: 9px; fill: #6B7280; text-anchor: middle; }
+      .line { stroke: #D1D5DB; stroke-width: 1.2; fill: none; }
+      .arrow { fill: #D1D5DB; }
+      .green-box { fill: #F0FDF4; stroke: #16A34A; stroke-width: 1.2; rx: 8; filter: url(#s1); }
+    </style>
+  </defs>
+
+  <!-- Your Devices -->
+  <rect class="box" x="240" y="16" width="160" height="40"/>
+  <text class="label" x="320" y="41">Your Devices</text>
+
+  <!-- Arrow 1 -->
+  <line class="line" x1="320" y1="56" x2="320" y2="78"/>
+  <polygon class="arrow" points="316,76 320,84 324,76"/>
+
+  <!-- Encrypted Connection -->
+  <rect class="box" x="210" y="84" width="220" height="36"/>
+  <text class="sublabel" x="320" y="106">Encrypted Connection (TLS 1.3)</text>
+
+  <!-- Arrow 2 -->
+  <line class="line" x1="320" y1="120" x2="320" y2="142"/>
+  <polygon class="arrow" points="316,140 320,148 324,140"/>
+
+  <!-- Allybi Application Layer -->
+  <rect class="box" x="180" y="148" width="280" height="56"/>
+  <text class="label" x="320" y="172" font-size="13">Allybi Application Layer</text>
+  <text class="sublabel" x="320" y="190">Processing &amp; Orchestration</text>
+
+  <!-- Left branch line -->
+  <line class="line" x1="240" y1="204" x2="140" y2="240"/>
+  <polygon class="arrow" points="137,236 136,246 143,240"/>
+
+  <!-- Right branch line -->
+  <line class="line" x1="400" y1="204" x2="500" y2="240"/>
+  <polygon class="arrow" points="497,240 504,246 503,236"/>
+
+  <!-- Encrypted Storage -->
+  <rect class="box" x="50" y="248" width="180" height="44"/>
+  <text class="label" x="140" y="268">Encrypted Storage</text>
+  <text class="sublabel" x="140" y="282">AES-256 at rest</text>
+
+  <!-- Permissioned Integrations -->
+  <rect class="box" x="410" y="244" width="190" height="68"/>
+  <text class="label" x="505" y="264">Permissioned Integrations</text>
+  <text class="sublabel" x="505" y="280">Gmail</text>
+  <text class="sublabel" x="505" y="294">Outlook  ·  Slack</text>
+
+  <!-- Center arrow down to Confirmation Gate -->
+  <line class="line" x1="320" y1="204" x2="320" y2="332"/>
+  <polygon class="arrow" points="316,330 320,338 324,330"/>
+
+  <!-- Confirmation Gate -->
+  <rect class="green-box" x="230" y="340" width="180" height="44"/>
+  <text class="label" x="320" y="362" fill="#16A34A" font-size="12">Confirmation Gate</text>
+  <!-- Checkmark -->
+  <circle cx="290" cy="367" r="8" fill="#16A34A" opacity="0.15"/>
+  <polyline points="286,367 289,370 295,364" fill="none" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="sublabel" x="335" y="378">Human-in-the-loop</text>
+</svg>

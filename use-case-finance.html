@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0F12">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+
+  <!-- SEO -->
+  <title>Allybi for Finance Teams — Find the Exact Deck, Model, or Metric</title>
+  <meta name="description" content="Search deal materials, find exact numbers across cap tables and models, and send the right attachment. Private AI for finance workflows.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Allybi for Finance Teams — Find the Exact Deck, Model, or Metric">
+  <meta property="og:description" content="Search deal materials, find exact numbers across cap tables and models, and send the right attachment. Private AI for finance workflows.">
+  <meta property="og:image" content="assets/images/og-home.png">
+  <meta property="og:url" content="https://allybi.co/use-case-finance.html">
+  <meta property="og:site_name" content="Allybi">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Allybi for Finance Teams — Find the Exact Deck, Model, or Metric">
+  <meta name="twitter:description" content="Search deal materials, find exact numbers across cap tables and models, and send the right attachment. Private AI for finance workflows.">
+  <meta name="twitter:image" content="assets/images/og-home.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="pages/use-case-finance.css">
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+  <header id="allybi-header" class="allybi-header">
+    <div class="allybi-header-inner">
+      <a href="/" class="allybi-logo">
+        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
+      </a>
+
+      <nav class="allybi-nav desktop-only">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+          <div class="nav-dropdown-menu">
+            <a href="/" data-i18n-key="nav.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+          <div class="nav-dropdown-menu">
+            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+          </div>
+        </div>
+
+        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
+        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+          <div class="nav-dropdown-menu">
+            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      </nav>
+
+      <div class="header-ctas desktop-only">
+        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+        <a href="demo.html" class="allybi-btn allybi-btn--secondary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free">Start free</a>
+      </div>
+
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       MOBILE MENU
+       ================================================================ -->
+  <div id="allybi-mobile-menu" class="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="mobile-dropdown-items">
+          <a href="/" data-i18n-key="nav.overview">Overview</a>
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+        <div class="mobile-dropdown-items">
+          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+        </div>
+      </div>
+      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+        <div class="mobile-dropdown-items">
+          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    </nav>
+    <div class="mobile-ctas">
+      <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+      <a href="demo.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    </div>
+    <div class="mobile-language-selector">
+      <div class="language-selector" id="mobile-language-selector">
+        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-label">English</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="language-menu hidden" role="listbox">
+          <li role="option" data-lang="en">English</li>
+          <li role="option" data-lang="pt">Portugues (BR)</li>
+          <li role="option" data-lang="es">Espanol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       MAIN CONTENT
+       ================================================================ -->
+  <main>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         HERO
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-hero allybi-section">
+      <div class="allybi-container">
+        <span class="allybi-hero-eyebrow" data-i18n-key="uc_finance.hero.eyebrow">Finance Teams</span>
+        <h1 class="allybi-h1" data-i18n-key="uc_finance.hero.title">Find the exact deck, model, metric, or cap table in seconds.</h1>
+        <p class="allybi-body-lg" data-i18n-key="uc_finance.hero.support">Allybi gives finance and deal teams a private workspace to search across deal materials, find exact numbers, and send the right attachment — without folder chaos or version confusion.</p>
+        <div class="ucf-hero__ctas">
+          <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+          <a href="demo.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="nav.book_demo">Book demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         PAIN SCENARIOS
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-pains allybi-section">
+      <div class="allybi-container">
+        <div class="ucf-pains__grid">
+
+          <div class="ucf-pain-card">
+            <h3 class="ucf-pain-card__title" data-i18n-key="uc_finance.pains.chaos.title">Deal material chaos</h3>
+            <p class="ucf-pain-card__desc" data-i18n-key="uc_finance.pains.chaos.desc">Pitch decks, CIMs, models, and board decks scattered across drives and email. Finding the right version means opening 10 folders and guessing which "final_v3" is actually final.</p>
+          </div>
+
+          <div class="ucf-pain-card">
+            <h3 class="ucf-pain-card__title" data-i18n-key="uc_finance.pains.numbers.title">Searching for the right number</h3>
+            <p class="ucf-pain-card__desc" data-i18n-key="uc_finance.pains.numbers.desc">The revenue figure is in a model, the cap table is in a spreadsheet, and the board deck has a different number. You need the right one — fast — and you need to know where it came from.</p>
+          </div>
+
+          <div class="ucf-pain-card">
+            <h3 class="ucf-pain-card__title" data-i18n-key="uc_finance.pains.attachment.title">Sending the wrong attachment</h3>
+            <p class="ucf-pain-card__desc" data-i18n-key="uc_finance.pains.attachment.desc">Attaching last quarter's deck instead of this quarter's costs credibility with investors and partners. The risk is invisible until it happens.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 1 · ASK FOR NUMBERS
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-feature allybi-section">
+      <div class="allybi-container">
+        <div class="ucf-feature__grid">
+          <div class="ucf-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_finance.feature1.title">Ask for numbers across files.</h2>
+            <p data-i18n-key="uc_finance.feature1.desc">Ask Allybi "What was our Series B post-money valuation?" or "What is the fully diluted share count in the latest cap table?" and get the exact number with a citation to the source file, cell, or slide. No more opening five spreadsheets to cross-check.</p>
+          </div>
+          <div class="ucf-mockup">
+            <div class="ucf-mockup__bar">
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+            </div>
+            <div class="ucf-mockup__body">
+              <div class="ucf-query-result">
+                <div class="ucf-query-result__q">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M10 10l3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  "What is the fully diluted share count?"
+                </div>
+                <div class="ucf-query-result__answer">
+                  <div class="ucf-query-result__answer-value">12,450,000 shares</div>
+                  <div class="ucf-query-result__answer-source">Source: CapTable_Q4_2025.xlsx — Sheet "Summary", Cell D14</div>
+                </div>
+                <div class="ucf-query-result__answer" style="border-left-color: var(--allybi-accent); background: var(--allybi-accent-subtle);">
+                  <div class="ucf-query-result__answer-value" style="font-size: 14px; font-weight: 500;">Post-money valuation: $48M</div>
+                  <div class="ucf-query-result__answer-source">Source: Board_Deck_Q4.pptx — Slide 8</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 2 · ORGANIZE BY DEAL
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-feature ucf-feature--alt allybi-section">
+      <div class="allybi-container">
+        <div class="ucf-feature__grid ucf-feature__grid--reverse">
+          <div class="ucf-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_finance.feature2.title">Organize by deal or project.</h2>
+            <p data-i18n-key="uc_finance.feature2.desc">Create project workspaces for each deal, fund, or reporting cycle. Drop in decks, models, cap tables, and correspondence. Search stays scoped so you never pull numbers from the wrong deal. Share access with your team while keeping other projects private.</p>
+          </div>
+          <div class="ucf-mockup">
+            <div class="ucf-mockup__bar">
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+            </div>
+            <div class="ucf-mockup__body">
+              <div class="ucf-deal-tree">
+                <div class="ucf-deal-tree__item ucf-deal-tree__item--active">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+                  Series B Round
+                </div>
+                <div class="ucf-deal-tree__nested">
+                  <div class="ucf-deal-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    Pitch_Deck_v4.pptx
+                  </div>
+                  <div class="ucf-deal-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    CapTable_Q4_2025.xlsx
+                  </div>
+                  <div class="ucf-deal-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    Financial_Model_v3.xlsx
+                  </div>
+                  <div class="ucf-deal-tree__item">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
+                    Term_Sheet_Draft.pdf
+                  </div>
+                </div>
+                <div class="ucf-deal-tree__item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+                  Q4 Board Reporting
+                </div>
+                <div class="ucf-deal-tree__item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+                  LP Updates
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 3 · DRAFT & ATTACH
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-feature allybi-section">
+      <div class="allybi-container">
+        <div class="ucf-feature__grid">
+          <div class="ucf-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_finance.feature3.title">Draft and attach the right file.</h2>
+            <p data-i18n-key="uc_finance.feature3.desc">Tell Allybi to draft an email to your investor with the latest pitch deck attached. It will pull the correct version, compose the message, and show you exactly which file is attached — with explicit confirmation before send. No more wrong-attachment mistakes.</p>
+          </div>
+          <div class="ucf-mockup">
+            <div class="ucf-mockup__bar">
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+            </div>
+            <div class="ucf-mockup__body">
+              <div class="ucf-email-draft">
+                <div class="ucf-email-draft__field">
+                  <span class="ucf-email-draft__label">To</span>
+                  <span class="ucf-email-draft__value">sarah.chen@sequoia.com</span>
+                </div>
+                <div class="ucf-email-draft__field">
+                  <span class="ucf-email-draft__label">Subject</span>
+                  <span class="ucf-email-draft__value">Updated deck — Series B materials</span>
+                </div>
+                <div class="ucf-email-draft__body">
+                  Hi Sarah, as discussed, please find attached the latest version of our pitch deck with updated Q4 financials. Happy to walk through the model on our call Thursday.
+                </div>
+                <div class="ucf-email-draft__attachment">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7.5 1.5l-5 5a3.5 3.5 0 0 0 5 5l5-5a2 2 0 0 0-3-3l-5 5a.5.5 0 0 0 .7.7l4-4" stroke="currentColor" stroke-width="1"/></svg>
+                  Pitch_Deck_v4.pptx
+                  <span class="ucf-email-draft__attachment-badge">Latest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FEATURE 4 · SPREADSHEET EDITING
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-feature ucf-feature--alt allybi-section">
+      <div class="allybi-container">
+        <div class="ucf-feature__grid ucf-feature__grid--reverse">
+          <div class="ucf-feature__text">
+            <h2 class="allybi-h2" data-i18n-key="uc_finance.feature4.title">Edit spreadsheets with AI help.</h2>
+            <p data-i18n-key="uc_finance.feature4.desc">Open cap tables and financial models directly inside Allybi. Ask for formula help, update values, and let AI suggest corrections. Edit without leaving the workspace — no more downloading, editing, and re-uploading.</p>
+          </div>
+          <div class="ucf-mockup">
+            <div class="ucf-mockup__bar">
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+              <span class="ucf-mockup__dot"></span>
+            </div>
+            <div class="ucf-mockup__body">
+              <table class="ucf-spreadsheet">
+                <thead>
+                  <tr>
+                    <th>Investor</th>
+                    <th>Shares</th>
+                    <th>% Ownership</th>
+                    <th>Value ($)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Founders</td>
+                    <td>5,000,000</td>
+                    <td>40.2%</td>
+                    <td>$19,296,000</td>
+                  </tr>
+                  <tr>
+                    <td>Series A</td>
+                    <td>3,200,000</td>
+                    <td>25.7%</td>
+                    <td>$12,349,440</td>
+                  </tr>
+                  <tr class="ucf-spreadsheet__highlight">
+                    <td>Series B</td>
+                    <td>2,500,000</td>
+                    <td>20.1%</td>
+                    <td class="ucf-spreadsheet__highlight">$9,648,000</td>
+                  </tr>
+                  <tr>
+                    <td>ESOP</td>
+                    <td>1,750,000</td>
+                    <td>14.1%</td>
+                    <td>$6,753,600</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         SECURITY
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-security allybi-section">
+      <div class="allybi-container">
+        <div class="ucf-security__header">
+          <h2 class="allybi-h2" data-i18n-key="uc_finance.security.title">Security posture for sensitive financial data.</h2>
+        </div>
+        <div class="ucf-security__grid">
+
+          <div class="ucf-security__item">
+            <div class="ucf-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="ucf-security__item-title" data-i18n-key="uc_finance.security.encryption.title">Encryption by default</h3>
+            <p class="ucf-security__item-desc" data-i18n-key="uc_finance.security.encryption.desc">All data encrypted in transit and at rest. Financial models and cap tables are never exposed.</p>
+          </div>
+
+          <div class="ucf-security__item">
+            <div class="ucf-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3 class="ucf-security__item-title" data-i18n-key="uc_finance.security.grounded.title">Grounded answers only</h3>
+            <p class="ucf-security__item-desc" data-i18n-key="uc_finance.security.grounded.desc">Numbers always cite the exact source file and cell. No fabricated figures.</p>
+          </div>
+
+          <div class="ucf-security__item">
+            <div class="ucf-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="ucf-security__item-title" data-i18n-key="uc_finance.security.notraining.title">No model training</h3>
+            <p class="ucf-security__item-desc" data-i18n-key="uc_finance.security.notraining.desc">Your financial data never trains AI models. This is contractually guaranteed in our terms.</p>
+          </div>
+
+          <div class="ucf-security__item">
+            <div class="ucf-security__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </div>
+            <h3 class="ucf-security__item-title" data-i18n-key="uc_finance.security.confirmation.title">Explicit send confirmation</h3>
+            <p class="ucf-security__item-desc" data-i18n-key="uc_finance.security.confirmation.desc">Every attachment and email shows file, version, and recipient before send.</p>
+          </div>
+
+        </div>
+        <div class="ucf-security__cta">
+          <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="uc_finance.security.cta">View security overview</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FAQ
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-faq allybi-section" id="faq">
+      <div class="allybi-container">
+        <div class="ucf-faq__header">
+          <h2 class="allybi-h2" data-i18n-key="uc_finance.faq.title">Frequently asked questions</h2>
+        </div>
+        <div class="ucf-faq__list allybi-accordion">
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_finance.faq.q1">Can Allybi search inside spreadsheets and financial models?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_finance.faq.a1">Yes. Allybi indexes the content of XLSX files including individual sheets, cell values, and formulas. You can ask for specific numbers and get answers with exact cell references.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_finance.faq.q2">How does Allybi handle cap table confidentiality?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_finance.faq.a2">Cap tables and all financial documents are encrypted and stored in isolated workspaces. They are never shared across accounts, never used for model training, and never accessible to Allybi staff. Access is controlled per-project.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_finance.faq.q3">Can I compare numbers across different versions of a model?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_finance.faq.a3">Yes. Upload multiple versions and ask Allybi to compare specific metrics. It will show you what changed between versions with exact cell references for both files.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_finance.faq.q4">Does Allybi support pitch decks and PDFs?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_finance.faq.a4">Yes. Allybi supports PDF, DOCX, XLSX, PPTX, and plain text files. Pitch decks are indexed slide by slide, so you can search for specific content across presentations.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_finance.faq.q5">Can I edit spreadsheets inside Allybi?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_finance.faq.a5">Yes. Open spreadsheets directly in the workspace, update values, and get AI-assisted formula suggestions. No need to download, edit externally, and re-upload.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="uc_finance.faq.q6">How does the send confirmation prevent wrong attachments?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p data-i18n-key="uc_finance.faq.a6">Before any file is sent, Allybi displays the exact file name, version date, size, and recipient. You must explicitly confirm before the action completes. This catches wrong-version mistakes before they happen.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FINAL CTA
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="ucf-final-cta allybi-section">
+      <div class="allybi-container">
+        <h2 class="allybi-h2" data-i18n-key="uc_finance.final_cta.title">Your deals, organized and searchable.</h2>
+        <p data-i18n-key="uc_finance.final_cta.support">Bring your decks, models, and cap tables into one private workspace.</p>
+        <div class="ucf-final-cta__buttons">
+          <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary-inverse" data-i18n-key="nav.start_free">Start free</a>
+          <a href="demo.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="nav.book_demo">Book demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="allybi-footer">
+    <div class="allybi-footer-inner">
+
+      <div class="footer-brand">
+        <a href="/" class="footer-brand-logo">
+          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
+        </a>
+        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
+      </div>
+
+      <div class="footer-columns">
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+          <div class="footer-col-links">
+            <a href="/" data-i18n-key="footer.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
+          <div class="footer-col-links">
+            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
+          <div class="footer-col-links">
+            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+          <div class="footer-col-links">
+            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
+            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
+          <div class="footer-col-links">
+            <a href="about.html" data-i18n-key="footer.about">About</a>
+            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+          <div class="footer-col-links">
+            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
+            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
+            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          <div class="language-selector" id="footer-language-selector">
+            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span class="lang-label">English</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="language-menu hidden" role="listbox">
+              <li role="option" data-lang="en">English</li>
+              <li role="option" data-lang="pt">Portugues (BR)</li>
+              <li role="option" data-lang="es">Espanol</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       SCRIPTS
+       ================================================================ -->
+  <script src="language-switcher.js"></script>
+  <script src="allybi-header.js"></script>
+  <script src="animations.js"></script>
+  <script src="allybi-animations.js"></script>
+
+  <!-- FAQ accordion -->
+  <script>
+    (function () {
+      var triggers = document.querySelectorAll('.allybi-accordion__trigger');
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          var content = this.nextElementSibling;
+          if (!expanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          } else {
+            content.style.maxHeight = '0';
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

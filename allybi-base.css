@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Allybi Base
+   Global reset, typography classes, layout containers, section spacing,
+   utility classes, and scroll-reveal animation system.
+   Requires: allybi-tokens.css
+   ========================================================================== */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--allybi-font);
+  font-size: var(--allybi-body-size);
+  line-height: var(--allybi-body-lh);
+  color: var(--allybi-text-primary);
+  background-color: var(--allybi-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ---------- Typography classes ---------- */
+.allybi-eyebrow {
+  font-size: var(--allybi-eyebrow-size);
+  line-height: var(--allybi-eyebrow-lh);
+  font-weight: var(--allybi-eyebrow-weight);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  color: var(--allybi-text-muted);
+}
+
+.allybi-hero-eyebrow {
+  font-size: var(--allybi-hero-eyebrow-size);
+  line-height: var(--allybi-hero-eyebrow-lh);
+  font-weight: var(--allybi-hero-eyebrow-weight);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  color: var(--allybi-text-muted);
+}
+
+.allybi-h1 {
+  font-size: var(--allybi-hero-h1-size);
+  line-height: var(--allybi-hero-h1-lh);
+  font-weight: var(--allybi-weight-bold);
+  letter-spacing: var(--allybi-tracking-tight);
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  letter-spacing: var(--allybi-tracking-tight);
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-h3 {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  letter-spacing: var(--allybi-tracking-tight);
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-body-lg {
+  font-size: var(--allybi-section-intro-size);
+  line-height: var(--allybi-section-intro-lh);
+  font-weight: var(--allybi-weight-regular);
+  color: var(--allybi-text-secondary);
+}
+
+.allybi-body {
+  font-size: var(--allybi-body-size);
+  line-height: var(--allybi-body-lh);
+  font-weight: var(--allybi-weight-regular);
+  color: var(--allybi-text-secondary);
+}
+
+.allybi-meta {
+  font-size: var(--allybi-meta-size);
+  line-height: var(--allybi-meta-lh);
+  font-weight: var(--allybi-meta-weight);
+  color: var(--allybi-text-muted);
+}
+
+/* ---------- Layout containers ---------- */
+.allybi-container {
+  width: 100%;
+  max-width: var(--allybi-max-page);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--allybi-gutter);
+  padding-right: var(--allybi-gutter);
+}
+
+.allybi-content {
+  width: 100%;
+  max-width: var(--allybi-max-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--allybi-gutter);
+  padding-right: var(--allybi-gutter);
+}
+
+.allybi-narrow {
+  width: 100%;
+  max-width: var(--allybi-max-reading);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--allybi-gutter);
+  padding-right: var(--allybi-gutter);
+}
+
+/* ---------- Section spacing ---------- */
+.allybi-section {
+  padding-top: var(--allybi-section-py);
+  padding-bottom: var(--allybi-section-py);
+}
+
+.allybi-section--dense {
+  padding-top: var(--allybi-section-py-dense);
+  padding-bottom: var(--allybi-section-py-dense);
+}
+
+@media (max-width: 768px) {
+  .allybi-section {
+    padding-top: var(--allybi-section-py-mobile);
+    padding-bottom: var(--allybi-section-py-mobile);
+  }
+
+  .allybi-section--dense {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .allybi-container {
+    padding-left: var(--allybi-gutter);
+    padding-right: var(--allybi-gutter);
+  }
+}
+
+@media (max-width: 480px) {
+  .allybi-container {
+    padding-left: var(--allybi-gutter-mobile, 20px);
+    padding-right: var(--allybi-gutter-mobile, 20px);
+  }
+}
+
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+}
+
+/* ---------- Responsive utilities ---------- */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* ---------- Scroll-reveal animations ---------- */
+.allybi-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--allybi-duration-section) var(--allybi-ease-out),
+    transform var(--allybi-duration-section) var(--allybi-ease-out);
+}
+
+.allybi-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children — up to 6 */
+.allybi-stagger > :nth-child(1) { transition-delay: 0ms; }
+.allybi-stagger > :nth-child(2) { transition-delay: 80ms; }
+.allybi-stagger > :nth-child(3) { transition-delay: 160ms; }
+.allybi-stagger > :nth-child(4) { transition-delay: 240ms; }
+.allybi-stagger > :nth-child(5) { transition-delay: 320ms; }
+.allybi-stagger > :nth-child(6) { transition-delay: 400ms; }
+
+/* Reduced motion: instant reveal, no transforms */
+@media (prefers-reduced-motion: reduce) {
+  .allybi-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .allybi-stagger > * {
+    transition-delay: 0ms !important;
+  }
+}

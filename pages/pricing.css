@@ -1,0 +1,247 @@
+/* ==========================================================================
+   Pricing Page
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.pricing-hero {
+  text-align: center;
+  padding-top: calc(var(--allybi-section-py) + 40px);
+}
+
+.pricing-hero__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.pricing-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.pricing-hero .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Plan Cards ---------- */
+.pricing-plans__grid {
+  align-items: stretch;
+}
+
+.pricing-plan-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--allybi-space-10);
+  position: relative;
+}
+
+.pricing-plan-card--featured {
+  border-color: var(--allybi-accent);
+  border-width: 2px;
+  box-shadow: var(--allybi-shadow-lg);
+  transform: translateY(-8px);
+}
+
+.pricing-plan-card--featured:hover {
+  transform: translateY(-11px);
+}
+
+.pricing-plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pricing-plan-card__header {
+  margin-bottom: var(--allybi-space-8);
+  padding-bottom: var(--allybi-space-8);
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.pricing-plan-card__name {
+  font-size: var(--allybi-card-title-size);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.pricing-plan-card__price {
+  margin-bottom: var(--allybi-space-2);
+}
+
+.pricing-plan-card__amount {
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+}
+
+.pricing-plan-card__tagline {
+  font-size: var(--allybi-body-sm-size);
+  color: var(--allybi-text-muted);
+}
+
+.pricing-plan-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--allybi-space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-4);
+  flex: 1;
+}
+
+.pricing-plan-card__features li {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-3);
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+.pricing-plan-card__features li svg {
+  flex-shrink: 0;
+}
+
+.pricing-plan-card__cta {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* ---------- Comparison Table ---------- */
+.pricing-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--allybi-font);
+  min-width: 600px;
+}
+
+.pricing-table thead th {
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  text-align: left;
+  font-size: var(--allybi-body-sm-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  border-bottom: 2px solid var(--allybi-border-strong);
+}
+
+.pricing-table thead th:not(:first-child) {
+  text-align: center;
+}
+
+.pricing-table tbody td {
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  font-size: var(--allybi-body-sm-size);
+  color: var(--allybi-text-secondary);
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.pricing-table tbody td:not(:first-child) {
+  text-align: center;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+  background-color: var(--allybi-bg-alt-1);
+}
+
+.pricing-table tbody td svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ---------- Security & Support ---------- */
+.pricing-security__inner {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-security__inner .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.pricing-security__inner .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+  margin-bottom: var(--allybi-space-8);
+}
+
+.pricing-security__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--allybi-space-3);
+}
+
+/* ---------- CTA ---------- */
+.pricing-cta__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pricing-cta__inner .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.pricing-cta__inner .allybi-body-lg {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--allybi-space-10);
+}
+
+.pricing-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--allybi-space-4);
+  flex-wrap: wrap;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .pricing-plans__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .pricing-plan-card--featured {
+    transform: none;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .pricing-hero {
+    padding-top: calc(var(--allybi-section-py-mobile) + 32px);
+  }
+
+  .pricing-plans__grid.allybi-grid-3 {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .pricing-plan-card--featured {
+    transform: none;
+  }
+
+  .pricing-plan-card--featured:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-table-wrap {
+    font-size: 13px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 10px 8px;
+  }
+}

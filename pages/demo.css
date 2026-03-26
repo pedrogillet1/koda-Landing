@@ -1,0 +1,246 @@
+/* ==========================================================================
+   Demo Page
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.demo-hero {
+  text-align: center;
+  padding-top: calc(var(--allybi-section-py) + 40px);
+}
+
+.demo-hero__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.demo-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.demo-hero .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- What a Demo Covers ---------- */
+.demo-cover-item {
+  text-align: center;
+}
+
+.demo-cover-item__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--allybi-radius-md);
+  background-color: var(--allybi-accent-subtle);
+  color: var(--allybi-accent);
+  margin: 0 auto var(--allybi-space-4);
+}
+
+.demo-cover-item__title {
+  font-size: var(--allybi-body-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-2);
+}
+
+.demo-cover-item__desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Who Demos Are For ---------- */
+.demo-audience__inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.demo-audience__inner .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.demo-audience__inner .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+  margin-bottom: var(--allybi-space-8);
+}
+
+.demo-audience__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--allybi-space-3);
+}
+
+/* ---------- Form + Preview Layout ---------- */
+.demo-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--allybi-space-16);
+  align-items: start;
+}
+
+.demo-form-col {
+  max-width: 520px;
+}
+
+.demo-form-col .allybi-h2 {
+  margin-bottom: var(--allybi-space-3);
+}
+
+.demo-form-col .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+  margin-bottom: var(--allybi-space-10);
+}
+
+.demo-form__submit {
+  width: 100%;
+}
+
+/* ---------- Product Preview ---------- */
+.demo-preview {
+  position: sticky;
+  top: 120px;
+}
+
+.demo-preview__window {
+  border-radius: var(--allybi-radius-lg);
+  border: 1px solid var(--allybi-border-default);
+  overflow: hidden;
+  background-color: var(--allybi-bg-surface);
+  box-shadow: var(--allybi-shadow-xl);
+}
+
+.demo-preview__titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background-color: var(--allybi-bg-alt-1);
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.demo-preview__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--allybi-border-strong);
+}
+
+.demo-preview__dot:nth-child(1) { background-color: #FF605C; }
+.demo-preview__dot:nth-child(2) { background-color: #FFBD44; }
+.demo-preview__dot:nth-child(3) { background-color: #00CA4E; }
+
+.demo-preview__titlebar-text {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--allybi-text-muted);
+  font-weight: var(--allybi-weight-medium);
+}
+
+.demo-preview__body {
+  display: flex;
+  min-height: 320px;
+}
+
+.demo-preview__sidebar {
+  width: 160px;
+  padding: var(--allybi-space-4);
+  border-right: 1px solid var(--allybi-border-default);
+  background-color: var(--allybi-bg-alt-1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-2);
+}
+
+.demo-preview__sidebar-item {
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: var(--allybi-radius-sm);
+  color: var(--allybi-text-secondary);
+  cursor: default;
+}
+
+.demo-preview__sidebar-item--active {
+  background-color: var(--allybi-bg-surface);
+  color: var(--allybi-text-strongest);
+  font-weight: var(--allybi-weight-medium);
+  box-shadow: var(--allybi-shadow-sm);
+}
+
+.demo-preview__main {
+  flex: 1;
+  padding: var(--allybi-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-5);
+}
+
+.demo-preview__search {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-2);
+  padding: 10px 14px;
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-sm);
+  font-size: 13px;
+  color: var(--allybi-text-muted);
+}
+
+.demo-preview__result {
+  padding: var(--allybi-space-4);
+  border-radius: var(--allybi-radius-sm);
+  background-color: var(--allybi-bg-alt-1);
+}
+
+.demo-preview__result-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-trust);
+  background-color: var(--allybi-trust-subtle);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: var(--allybi-space-2);
+}
+
+.demo-preview__result-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .demo-hero {
+    padding-top: calc(var(--allybi-section-py-mobile) + 32px);
+  }
+
+  .demo-form-layout {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-10);
+  }
+
+  .demo-form-col {
+    max-width: 100%;
+  }
+
+  .demo-preview {
+    position: static;
+    order: 2;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .demo-preview__sidebar {
+    display: none;
+  }
+
+  .demo-form-col .allybi-input,
+  .demo-form-col .allybi-textarea,
+  .demo-form-col .allybi-select {
+    font-size: 16px; /* prevent iOS zoom */
+  }
+}

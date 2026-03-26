@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Contact Page Styles
+   Requires: allybi-tokens.css, allybi-base.css, allybi-components.css
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.contact-hero {
+  padding-top: 180px;
+  text-align: center;
+}
+
+.contact-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.contact-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.contact-hero .allybi-body-lg {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ---------- Routing Cards ---------- */
+.contact-routing .allybi-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-routing .allybi-card .allybi-h3 {
+  margin-bottom: var(--allybi-space-3);
+}
+
+.contact-routing .allybi-card .allybi-body {
+  margin-bottom: var(--allybi-space-6);
+  flex: 1;
+}
+
+.contact-route-btn {
+  align-self: flex-start;
+}
+
+/* ---------- Contact Form ---------- */
+.contact-form-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact-form-wrapper .allybi-section-header {
+  margin-bottom: var(--allybi-space-10);
+}
+
+.contact-form .allybi-input-group {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.contact-optional {
+  font-weight: var(--allybi-weight-regular);
+  color: var(--allybi-text-muted);
+}
+
+.contact-submit-btn {
+  width: 100%;
+  margin-top: var(--allybi-space-4);
+}
+
+/* ---------- Reassurance ---------- */
+.contact-reassurance {
+  padding-top: 0;
+  padding-bottom: var(--allybi-section-py);
+}
+
+.contact-reassurance-text {
+  text-align: center;
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-muted);
+  font-style: italic;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding-top: 140px;
+  }
+
+  .contact-reassurance {
+    padding-bottom: var(--allybi-section-py-mobile);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding-top: 110px;
+  }
+
+  .contact-form .allybi-input,
+  .contact-form .allybi-textarea,
+  .contact-form .allybi-select {
+    font-size: 16px; /* prevent iOS zoom */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding-top: 120px;
+  }
+}

@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Integrations Page
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.integ-hero {
+  text-align: center;
+  padding-top: calc(var(--allybi-section-py) + 40px);
+}
+
+.integ-hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.integ-hero .allybi-eyebrow {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.integ-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.integ-hero .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Integration Cards ---------- */
+.integ-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--allybi-space-10);
+}
+
+.integ-card__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--allybi-radius-md);
+  margin-bottom: var(--allybi-space-6);
+}
+
+.integ-card__icon--gmail {
+  background-color: rgba(234, 67, 53, 0.08);
+  color: #EA4335;
+}
+
+.integ-card__icon--outlook {
+  background-color: rgba(0, 120, 212, 0.08);
+  color: #0078D4;
+}
+
+.integ-card__icon--slack {
+  background-color: rgba(74, 21, 75, 0.08);
+  color: #4A154B;
+}
+
+.integ-card__icon--docs {
+  background-color: var(--allybi-accent-subtle);
+  color: var(--allybi-accent);
+}
+
+.integ-card__title {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.integ-card__desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Workflow Cards ---------- */
+.integ-workflow-card {
+  position: relative;
+  padding-top: var(--allybi-space-12);
+}
+
+.integ-workflow-number {
+  position: absolute;
+  top: var(--allybi-space-8);
+  left: var(--allybi-space-8);
+  font-size: 13px;
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-accent);
+  letter-spacing: var(--allybi-tracking-wide);
+}
+
+.integ-workflow-title {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.integ-workflow-desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Permissions & Control ---------- */
+.integ-control__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--allybi-space-16);
+  align-items: start;
+}
+
+.integ-control__text .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.integ-control__text .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+}
+
+.integ-control__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-8);
+}
+
+.integ-control-point {
+  display: flex;
+  gap: var(--allybi-space-4);
+  align-items: flex-start;
+}
+
+.integ-control-point__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.integ-control-point__title {
+  font-size: var(--allybi-body-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-1);
+}
+
+.integ-control-point__desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- CTA ---------- */
+.integ-cta__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.integ-cta__inner .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.integ-cta__inner .allybi-body-lg {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--allybi-space-10);
+}
+
+.integ-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--allybi-space-4);
+  flex-wrap: wrap;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .integ-hero {
+    padding-top: calc(var(--allybi-section-py-mobile) + 32px);
+  }
+
+  .integ-control__inner {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-10);
+  }
+
+  .integ-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .integ-card {
+    padding: var(--allybi-space-6);
+  }
+
+  .integ-workflow-card {
+    padding-top: var(--allybi-space-8);
+  }
+
+  .integ-control__points {
+    gap: var(--allybi-space-5);
+  }
+}

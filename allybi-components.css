@@ -1,0 +1,446 @@
+/* ==========================================================================
+   Allybi Components
+   Reusable UI components for the Allybi marketing site.
+   Requires: allybi-tokens.css, allybi-base.css
+   ========================================================================== */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.allybi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 50px;
+  padding: 0 28px;
+  font-family: var(--allybi-font);
+  font-size: 15px;
+  font-weight: var(--allybi-weight-semibold);
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--allybi-radius-btn);
+  cursor: pointer;
+  transition:
+    background-color var(--allybi-duration-hover) var(--allybi-ease),
+    color var(--allybi-duration-hover) var(--allybi-ease),
+    box-shadow var(--allybi-duration-hover) var(--allybi-ease),
+    border-color var(--allybi-duration-hover) var(--allybi-ease),
+    transform var(--allybi-duration-hover) var(--allybi-ease);
+  white-space: nowrap;
+  user-select: none;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .allybi-btn {
+    height: 46px;
+    padding: 0 24px;
+    font-size: 14px;
+  }
+}
+
+/* Primary */
+.allybi-btn--primary {
+  background-color: var(--allybi-text-strongest);
+  color: var(--allybi-text-inverse);
+}
+
+.allybi-btn--primary:hover {
+  background-color: #1E2128;
+  box-shadow: var(--allybi-shadow-md);
+}
+
+.allybi-btn--primary:active {
+  background-color: var(--allybi-text-strongest);
+  box-shadow: none;
+}
+
+/* Secondary */
+.allybi-btn--secondary {
+  background-color: transparent;
+  color: var(--allybi-text-primary);
+  border: 1px solid var(--allybi-border-strong);
+}
+
+.allybi-btn--secondary:hover {
+  background-color: var(--allybi-bg-alt-1);
+}
+
+.allybi-btn--secondary:active {
+  background-color: var(--allybi-bg-alt-2);
+}
+
+/* Ghost */
+.allybi-btn--ghost {
+  background-color: transparent;
+  color: var(--allybi-text-secondary);
+  border: none;
+}
+
+.allybi-btn--ghost:hover {
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-btn--ghost:active {
+  color: var(--allybi-text-primary);
+}
+
+/* Accent */
+.allybi-btn--accent {
+  background-color: var(--allybi-accent);
+  color: var(--allybi-text-inverse);
+}
+
+.allybi-btn--accent:hover {
+  background-color: var(--allybi-accent-hover);
+  box-shadow: var(--allybi-shadow-md);
+}
+
+.allybi-btn--accent:active {
+  background-color: var(--allybi-accent-hover);
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.allybi-card {
+  background-color: var(--allybi-bg-surface);
+  border-radius: var(--allybi-radius-card);
+  padding: 32px;
+  border: 1px solid var(--allybi-border-default);
+  transition:
+    transform var(--allybi-duration-ui) var(--allybi-ease),
+    box-shadow var(--allybi-duration-ui) var(--allybi-ease),
+    border-color var(--allybi-duration-ui) var(--allybi-ease);
+}
+
+.allybi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--allybi-shadow-card-hover);
+  border-color: var(--allybi-border-strong);
+}
+
+/* Flat — no hover lift */
+.allybi-card--flat {
+  transition: none;
+}
+
+.allybi-card--flat:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Dark variant */
+.allybi-card--dark {
+  background-color: var(--allybi-bg-dark);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--allybi-text-inverse);
+}
+
+.allybi-card--dark:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   Inputs
+   ========================================================================== */
+
+.allybi-input-group {
+  margin-bottom: 20px;
+}
+
+.allybi-label {
+  display: block;
+  font-size: 14px;
+  font-weight: var(--allybi-weight-medium);
+  color: var(--allybi-text-primary);
+  margin-bottom: 6px;
+}
+
+.allybi-input,
+.allybi-textarea,
+.allybi-select {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  font-family: var(--allybi-font);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--allybi-text-primary);
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-input);
+  transition: border-color var(--allybi-duration-hover) var(--allybi-ease);
+  appearance: none;
+}
+
+.allybi-input::placeholder,
+.allybi-textarea::placeholder {
+  color: var(--allybi-text-subtle);
+}
+
+.allybi-input:focus,
+.allybi-textarea:focus,
+.allybi-select:focus {
+  outline: 2px solid var(--allybi-border-focus);
+  outline-offset: -1px;
+  border-color: var(--allybi-border-focus);
+}
+
+.allybi-textarea {
+  height: auto;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.allybi-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+/* ==========================================================================
+   Chips
+   ========================================================================== */
+
+.allybi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-family: var(--allybi-font);
+  font-size: 13px;
+  font-weight: var(--allybi-weight-medium);
+  line-height: 1;
+  border-radius: 100px;
+  background-color: var(--allybi-bg-alt-1);
+  color: var(--allybi-text-secondary);
+  white-space: nowrap;
+}
+
+.allybi-chip--trust {
+  background-color: var(--allybi-trust-subtle);
+  color: var(--allybi-trust-muted);
+}
+
+.allybi-chip--accent {
+  background-color: var(--allybi-accent-subtle);
+  color: var(--allybi-accent);
+}
+
+/* ==========================================================================
+   Accordion
+   ========================================================================== */
+
+.allybi-accordion {
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.allybi-accordion__trigger {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--allybi-font);
+  font-size: 17px;
+  font-weight: var(--allybi-weight-semibold);
+  text-align: left;
+  cursor: pointer;
+  color: var(--allybi-text-strongest);
+  background: none;
+  border: none;
+  transition: color var(--allybi-duration-hover) var(--allybi-ease);
+}
+
+.allybi-accordion__trigger:hover {
+  color: var(--allybi-accent);
+}
+
+.allybi-accordion__trigger[aria-expanded="true"] {
+  color: var(--allybi-accent);
+}
+
+.allybi-accordion__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform var(--allybi-duration-accordion) var(--allybi-ease);
+}
+
+.allybi-accordion__trigger[aria-expanded="true"] .allybi-accordion__icon {
+  transform: rotate(45deg);
+}
+
+.allybi-accordion__content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height var(--allybi-duration-accordion) var(--allybi-ease);
+}
+
+.allybi-accordion__content.is-open {
+  /* max-height set via JS to match content height */
+}
+
+.allybi-accordion__body {
+  padding: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--allybi-text-secondary);
+  max-width: var(--allybi-max-reading);
+}
+
+/* ==========================================================================
+   Badges
+   ========================================================================== */
+
+.allybi-badge {
+  display: inline-block;
+  font-family: var(--allybi-font);
+  font-size: 11px;
+  font-weight: var(--allybi-weight-semibold);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background-color: var(--allybi-accent-subtle);
+  color: var(--allybi-accent);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+
+.allybi-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background-color: var(--allybi-bg-alt-1);
+  border-radius: var(--allybi-radius-md);
+  width: fit-content;
+}
+
+.allybi-tab {
+  padding: 10px 24px;
+  font-family: var(--allybi-font);
+  font-size: 14px;
+  font-weight: var(--allybi-weight-semibold);
+  border-radius: calc(var(--allybi-radius-md) - 4px);
+  transition: all var(--allybi-duration-tab) var(--allybi-ease);
+  color: var(--allybi-text-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.allybi-tab.is-active {
+  background-color: var(--allybi-bg-surface);
+  color: var(--allybi-text-strongest);
+  box-shadow: var(--allybi-shadow-sm);
+}
+
+.allybi-tab:hover:not(.is-active) {
+  color: var(--allybi-text-primary);
+}
+
+/* ==========================================================================
+   Section header pattern
+   ========================================================================== */
+
+.allybi-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--allybi-space-16);
+}
+
+.allybi-section-header .allybi-eyebrow {
+  margin-bottom: 12px;
+}
+
+.allybi-section-header .allybi-h2 {
+  margin-bottom: 16px;
+}
+
+.allybi-section-header .allybi-body-lg {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Grid helpers
+   ========================================================================== */
+
+.allybi-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.allybi-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.allybi-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* 2-col at tablet for 4-col grids */
+@media (max-width: 1024px) {
+  .allybi-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2-col at mobile for 2/3-col grids */
+@media (max-width: 768px) {
+  .allybi-grid-2,
+  .allybi-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .allybi-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Single column at small mobile */
+@media (max-width: 480px) {
+  .allybi-grid-2,
+  .allybi-grid-3,
+  .allybi-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* Small phone button variant */
+@media (max-width: 390px) {
+  .allybi-btn {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+}
+
+/* Prevent iOS zoom on focus */
+@media screen and (max-width: 768px) {
+  .allybi-input,
+  .allybi-textarea,
+  .allybi-select {
+    font-size: 16px; /* iOS won't zoom if >= 16px */
+  }
+}

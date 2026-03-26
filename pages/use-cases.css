@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Allybi Use Cases Overview — pages/use-cases.css
+   ========================================================================== */
+
+/* ---------- HERO ---------- */
+.uc-hero {
+  padding-top: 160px;
+  padding-bottom: var(--allybi-space-20);
+  text-align: center;
+}
+
+.uc-hero .allybi-hero-eyebrow {
+  display: inline-block;
+  font-size: var(--allybi-hero-eyebrow-size);
+  font-weight: var(--allybi-hero-eyebrow-weight);
+  line-height: var(--allybi-hero-eyebrow-lh);
+  color: var(--allybi-accent);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+}
+
+.uc-hero .allybi-h1 {
+  margin: 16px auto 20px;
+  font-size: var(--allybi-hero-h1-size);
+  line-height: var(--allybi-hero-h1-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+  max-width: 800px;
+}
+
+.uc-hero .allybi-body-lg {
+  font-size: var(--allybi-hero-support-size);
+  line-height: var(--allybi-hero-support-lh);
+  color: var(--allybi-text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ---------- ROLE CARDS ---------- */
+.uc-roles {
+  padding: var(--allybi-section-py) 0;
+}
+
+.uc-roles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.uc-role-card {
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-card);
+  padding: 40px 32px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--allybi-duration-hover) var(--allybi-ease),
+              transform var(--allybi-duration-hover) var(--allybi-ease);
+}
+
+.uc-role-card:hover {
+  box-shadow: var(--allybi-shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.uc-role-card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--allybi-accent-subtle);
+  border-radius: var(--allybi-radius-sm);
+  margin-bottom: var(--allybi-space-6);
+  color: var(--allybi-accent);
+}
+
+.uc-role-card__title {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-4);
+}
+
+.uc-role-card__pain {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+  flex: 1;
+  margin-bottom: var(--allybi-space-8);
+}
+
+.uc-role-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--allybi-body-sm-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-accent);
+  text-decoration: none;
+  transition: gap var(--allybi-duration-hover) var(--allybi-ease);
+}
+
+.uc-role-card__cta:hover {
+  gap: 10px;
+}
+
+/* ---------- SHARED VALUE ---------- */
+.uc-shared {
+  padding: var(--allybi-section-py) 0;
+  background: var(--allybi-bg-alt-1);
+}
+
+.uc-shared__header {
+  text-align: center;
+  margin-bottom: var(--allybi-space-16);
+}
+
+.uc-shared__header .allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+}
+
+.uc-shared__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.uc-shared__item {
+  text-align: center;
+}
+
+.uc-shared__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--allybi-accent-subtle);
+  border-radius: var(--allybi-radius-sm);
+  margin: 0 auto var(--allybi-space-5);
+  color: var(--allybi-accent);
+}
+
+.uc-shared__item-title {
+  font-size: var(--allybi-body-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.uc-shared__item-desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- FINAL CTA ---------- */
+.uc-final-cta {
+  padding: var(--allybi-section-py) 0;
+  text-align: center;
+}
+
+.uc-final-cta .allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+  margin-bottom: var(--allybi-space-10);
+}
+
+.uc-final-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 960px) {
+  .uc-roles__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .uc-shared__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .uc-hero {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 640px) {
+  .uc-hero {
+    padding-top: 100px;
+    padding-bottom: var(--allybi-space-12);
+  }
+
+  .uc-roles,
+  .uc-shared,
+  .uc-final-cta {
+    padding: var(--allybi-section-py-mobile) 0;
+  }
+
+  .uc-shared__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uc-role-card {
+    min-height: auto;
+    padding: 32px 24px;
+  }
+}

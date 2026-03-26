@@ -1,0 +1,524 @@
+/* ==========================================================================
+   How It Works Page Styles
+   Requires: allybi-tokens.css, allybi-base.css, allybi-components.css
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.hiw-hero {
+  padding-top: 180px;
+  text-align: center;
+}
+
+.hiw-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hiw-hero .allybi-hero-eyebrow {
+  display: block;
+  margin-bottom: var(--allybi-space-4);
+}
+
+.hiw-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.hiw-hero .allybi-body-lg {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ---------- End-to-End Flow Diagram ---------- */
+.hiw-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--allybi-space-3);
+  flex-wrap: wrap;
+}
+
+.hiw-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--allybi-space-2);
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-md);
+  min-width: 100px;
+}
+
+.hiw-flow-step--accent {
+  background-color: var(--allybi-text-strongest);
+  color: var(--allybi-text-inverse);
+  border-color: var(--allybi-text-strongest);
+}
+
+.hiw-flow-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiw-flow-label {
+  font-size: var(--allybi-meta-size);
+  font-weight: var(--allybi-weight-semibold);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hiw-flow-arrow {
+  color: var(--allybi-text-muted);
+  flex-shrink: 0;
+}
+
+/* ---------- Feature Sections ---------- */
+.hiw-feature {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.hiw-feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--allybi-space-16);
+  align-items: center;
+}
+
+.hiw-feature-row--reverse {
+  direction: rtl;
+}
+
+.hiw-feature-row--reverse > * {
+  direction: ltr;
+}
+
+.hiw-feature-text .allybi-eyebrow {
+  display: block;
+  margin-bottom: var(--allybi-space-3);
+}
+
+.hiw-feature-text .allybi-h2 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.hiw-feature-text .allybi-body {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.hiw-feature-text .allybi-body:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- File Tree Visual ---------- */
+.hiw-file-tree {
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-card);
+  padding: var(--allybi-space-6);
+  font-size: var(--allybi-body-sm-size);
+}
+
+.hiw-tree-folder,
+.hiw-tree-file {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-2);
+  padding: var(--allybi-space-2) 0;
+  color: var(--allybi-text-primary);
+}
+
+.hiw-tree-folder {
+  font-weight: var(--allybi-weight-semibold);
+}
+
+.hiw-tree-indent {
+  padding-left: var(--allybi-space-6);
+}
+
+.hiw-tree-file {
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Query/Answer Visual ---------- */
+.hiw-query-visual {
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-card);
+  overflow: hidden;
+}
+
+.hiw-query-input {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-3);
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  border-bottom: 1px solid var(--allybi-border-default);
+  font-size: var(--allybi-body-sm-size);
+  color: var(--allybi-text-secondary);
+  font-style: italic;
+}
+
+.hiw-query-answer {
+  padding: var(--allybi-space-5);
+}
+
+.hiw-answer-label {
+  font-size: var(--allybi-eyebrow-size);
+  font-weight: var(--allybi-weight-semibold);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+  color: var(--allybi-trust);
+  margin-bottom: var(--allybi-space-3);
+}
+
+.hiw-answer-text {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-primary);
+  margin-bottom: var(--allybi-space-4);
+}
+
+.hiw-answer-source {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-2);
+  font-size: var(--allybi-meta-size);
+  color: var(--allybi-text-muted);
+}
+
+/* ---------- Version Visual ---------- */
+.hiw-version-visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-3);
+}
+
+.hiw-version-item {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-3);
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-md);
+  font-size: var(--allybi-body-sm-size);
+}
+
+.hiw-version-item--current {
+  border-color: var(--allybi-trust);
+  background-color: var(--allybi-trust-subtle);
+}
+
+.hiw-version-item--old {
+  opacity: 0.6;
+}
+
+.hiw-version-tag {
+  font-size: var(--allybi-meta-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-muted);
+  background-color: var(--allybi-bg-alt-1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.hiw-version-item--current .hiw-version-tag {
+  background-color: var(--allybi-trust);
+  color: var(--allybi-text-inverse);
+}
+
+.hiw-version-name {
+  flex: 1;
+  font-weight: var(--allybi-weight-medium);
+  color: var(--allybi-text-primary);
+}
+
+.hiw-version-date {
+  color: var(--allybi-text-muted);
+  font-size: var(--allybi-meta-size);
+}
+
+.hiw-version-badge {
+  font-size: 11px;
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-trust);
+  background-color: rgba(22, 163, 74, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ---------- Edit Visual ---------- */
+.hiw-edit-visual {
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-card);
+  overflow: hidden;
+}
+
+.hiw-edit-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--allybi-space-3) var(--allybi-space-5);
+  background-color: var(--allybi-bg-alt-1);
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.hiw-edit-filename {
+  font-size: var(--allybi-meta-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-primary);
+}
+
+.hiw-edit-status {
+  font-size: 11px;
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-accent);
+  background-color: var(--allybi-accent-subtle);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.hiw-edit-content {
+  padding: var(--allybi-space-5);
+}
+
+.hiw-edit-line {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  margin-bottom: var(--allybi-space-4);
+}
+
+.hiw-edit-line--original {
+  color: var(--allybi-text-muted);
+  text-decoration: line-through;
+}
+
+.hiw-edit-line--new {
+  color: var(--allybi-text-primary);
+  margin-bottom: 0;
+}
+
+.hiw-edit-suggestion {
+  background-color: var(--allybi-trust-subtle);
+  border-left: 3px solid var(--allybi-trust);
+  padding: var(--allybi-space-4);
+  border-radius: 0 var(--allybi-radius-sm) var(--allybi-radius-sm) 0;
+}
+
+.hiw-edit-suggestion-label {
+  display: block;
+  font-size: 11px;
+  font-weight: var(--allybi-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--allybi-tracking-wide);
+  color: var(--allybi-trust);
+  margin-bottom: var(--allybi-space-2);
+}
+
+/* ---------- Connect Visual ---------- */
+.hiw-connect-visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-3);
+}
+
+.hiw-connect-item {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-3);
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-md);
+  font-size: var(--allybi-body-sm-size);
+  font-weight: var(--allybi-weight-medium);
+  color: var(--allybi-text-primary);
+}
+
+.hiw-connect-status {
+  margin-left: auto;
+  font-size: var(--allybi-meta-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-muted);
+}
+
+.hiw-connect-status--active {
+  color: var(--allybi-trust);
+}
+
+/* ---------- Confirm Visual ---------- */
+.hiw-confirm-visual {
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-card);
+  overflow: hidden;
+  box-shadow: var(--allybi-shadow-lg);
+}
+
+.hiw-confirm-header {
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  background-color: var(--allybi-bg-alt-1);
+  border-bottom: 1px solid var(--allybi-border-default);
+  font-size: var(--allybi-body-sm-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+}
+
+.hiw-confirm-body {
+  padding: var(--allybi-space-5);
+}
+
+.hiw-confirm-row {
+  display: flex;
+  gap: var(--allybi-space-3);
+  padding: var(--allybi-space-2) 0;
+  font-size: var(--allybi-body-sm-size);
+  color: var(--allybi-text-primary);
+}
+
+.hiw-confirm-label {
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-muted);
+  min-width: 90px;
+}
+
+.hiw-confirm-actions {
+  display: flex;
+  gap: var(--allybi-space-3);
+  padding: var(--allybi-space-4) var(--allybi-space-5);
+  border-top: 1px solid var(--allybi-border-default);
+  justify-content: flex-end;
+}
+
+.hiw-confirm-cancel,
+.hiw-confirm-send {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+/* ---------- Security Section ---------- */
+.hiw-security .allybi-card {
+  text-align: center;
+}
+
+.hiw-security-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--allybi-bg-alt-1);
+  border-radius: var(--allybi-radius-sm);
+  margin: 0 auto var(--allybi-space-4);
+}
+
+.hiw-security .allybi-h3 {
+  margin-bottom: var(--allybi-space-2);
+}
+
+.hiw-security-cta {
+  text-align: center;
+  margin-top: var(--allybi-space-12);
+}
+
+/* ---------- FAQ Section ---------- */
+.hiw-faq-list {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ---------- Final CTA ---------- */
+.hiw-final-cta {
+  text-align: center;
+}
+
+.hiw-final-cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hiw-final-cta .allybi-h2 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.hiw-final-cta .allybi-body-lg {
+  margin-bottom: var(--allybi-space-10);
+}
+
+.hiw-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--allybi-space-4);
+  flex-wrap: wrap;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .hiw-hero {
+    padding-top: 140px;
+  }
+
+  .hiw-flow {
+    flex-direction: column;
+    gap: var(--allybi-space-2);
+  }
+
+  .hiw-flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .hiw-flow-step {
+    width: 100%;
+    max-width: 240px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hiw-feature {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hiw-feature-row,
+  .hiw-feature-row--reverse {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-10);
+    direction: ltr;
+  }
+
+  .hiw-feature-row > .hiw-feature-text ~ * {
+    order: 2;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hiw-cta-buttons {
+    flex-direction: column;
+  }
+
+  .hiw-cta-buttons .allybi-btn {
+    width: 100%;
+  }
+
+  .hiw-confirm-actions {
+    flex-direction: column;
+  }
+
+  .hiw-confirm-cancel,
+  .hiw-confirm-send {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hiw-hero {
+    padding-top: 120px;
+  }
+}

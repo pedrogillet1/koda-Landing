@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0F12">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+
+  <!-- SEO -->
+  <title>Security — Allybi Privacy and Security Overview</title>
+  <meta name="description" content="Encryption at rest and in transit, grounded AI outputs, permissioned integrations, and explicit send confirmation. See how Allybi protects your work.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Security — Allybi Privacy and Security Overview">
+  <meta property="og:description" content="Encryption at rest and in transit, grounded AI outputs, permissioned integrations, and explicit send confirmation. See how Allybi protects your work.">
+  <meta property="og:url" content="https://allybi.co/security-overview.html">
+  <meta property="og:site_name" content="Allybi">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Security — Allybi Privacy and Security Overview">
+  <meta name="twitter:description" content="Encryption at rest and in transit, grounded AI outputs, permissioned integrations, and explicit send confirmation. See how Allybi protects your work.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="pages/security-overview.css">
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+  <header id="allybi-header" class="allybi-header">
+    <div class="allybi-header-inner">
+      <a href="/" class="allybi-logo">
+        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
+      </a>
+
+      <nav class="allybi-nav desktop-only">
+        <!-- Product dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+          <div class="nav-dropdown-menu">
+            <a href="/" data-i18n-key="nav.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+          </div>
+        </div>
+
+        <!-- Use Cases dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+          <div class="nav-dropdown-menu">
+            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+          </div>
+        </div>
+
+        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
+        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+
+        <!-- Resources dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+          <div class="nav-dropdown-menu">
+            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      </nav>
+
+      <div class="header-ctas desktop-only">
+        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+        <a href="demo.html" class="allybi-btn allybi-btn--secondary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free">Start free</a>
+      </div>
+
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       MOBILE MENU
+       ================================================================ -->
+  <div id="allybi-mobile-menu" class="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <!-- Product -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="mobile-dropdown-items">
+          <a href="/" data-i18n-key="nav.overview">Overview</a>
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+        </div>
+      </div>
+
+      <!-- Use Cases -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+        <div class="mobile-dropdown-items">
+          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+        </div>
+      </div>
+
+      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+
+      <!-- Resources -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+        <div class="mobile-dropdown-items">
+          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+        </div>
+      </div>
+
+      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    </nav>
+
+    <!-- Mobile CTAs -->
+    <div class="mobile-ctas">
+      <a href="https://app.allybi.co" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+      <a href="demo.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    </div>
+
+    <!-- Mobile language selector -->
+    <div class="mobile-language-selector">
+      <div class="language-selector" id="mobile-language-selector">
+        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-label">English</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="language-menu hidden" role="listbox">
+          <li role="option" data-lang="en">English</li>
+          <li role="option" data-lang="pt">Portugues (BR)</li>
+          <li role="option" data-lang="es">Espanol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       MAIN CONTENT
+       ================================================================ -->
+  <main>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         HERO
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="secov-hero allybi-section">
+      <div class="allybi-container">
+        <div class="secov-hero__inner">
+          <span class="allybi-eyebrow allybi-chip allybi-chip--trust" data-i18n-key="security_ov.hero.eyebrow">Security</span>
+          <h1 class="allybi-h1" data-i18n-key="security_ov.hero.title">Security and privacy, made visible.</h1>
+          <p class="allybi-body-lg" data-i18n-key="security_ov.hero.support">Allybi is built for sensitive workflows, grounded outputs, and user control. Here's how we protect your work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         TRUST PILLARS
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="secov-pillars allybi-section" style="background-color: var(--allybi-bg-alt-1);">
+      <div class="allybi-container">
+        <div class="allybi-section-header">
+          <h2 class="allybi-h2" data-i18n-key="security_ov.pillars.title">Built on six trust pillars</h2>
+        </div>
+        <div class="allybi-grid-3">
+
+          <!-- Pillar 1 -->
+          <div class="allybi-card secov-pillar-card">
+            <div class="secov-pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="secov-pillar-title" data-i18n-key="security_ov.pillars.encryption.title">Encryption at rest and in transit</h3>
+            <p class="secov-pillar-desc" data-i18n-key="security_ov.pillars.encryption.desc">All data is encrypted with TLS in transit and AES-256-GCM at rest. Your documents are protected at every stage of their lifecycle.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="allybi-card secov-pillar-card">
+            <div class="secov-pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="secov-pillar-title" data-i18n-key="security_ov.pillars.grounded.title">Grounded outputs from your files</h3>
+            <p class="secov-pillar-desc" data-i18n-key="security_ov.pillars.grounded.desc">Every AI answer cites the specific file and location. Allybi never fabricates information — if the answer isn't in your documents, it tells you.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="allybi-card secov-pillar-card">
+            <div class="secov-pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="5" width="22" height="14" rx="7" ry="7"/><circle cx="16" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="secov-pillar-title" data-i18n-key="security_ov.pillars.permissioned.title">Permissioned integrations</h3>
+            <p class="secov-pillar-desc" data-i18n-key="security_ov.pillars.permissioned.desc">Every connection requires explicit OAuth authorization. You choose exactly which services Allybi can access, and you revoke access anytime.</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="allybi-card secov-pillar-card">
+            <div class="secov-pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h3 class="secov-pillar-title" data-i18n-key="security_ov.pillars.confirmation.title">Explicit confirmation before send</h3>
+            <p class="secov-pillar-desc" data-i18n-key="security_ov.pillars.confirmation.desc">Nothing leaves Allybi without your review. Every email, message, and file share requires explicit confirmation before it is sent.</p>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="allybi-card secov-pillar-card">
+            <div class="secov-pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+            </div>
+            <h3 class="secov-pillar-title" data-i18n-key="security_ov.pillars.control.title">User control — disconnect anytime</h3>
+            <p class="secov-pillar-desc" data-i18n-key="security_ov.pillars.control.desc">You stay in control of every connection. Disconnect any integration instantly and your linked data is no longer accessible to Allybi.</p>
+          </div>
+
+          <!-- Pillar 6 -->
+          <div class="allybi-card secov-pillar-card">
+            <div class="secov-pillar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            </div>
+            <h3 class="secov-pillar-title" data-i18n-key="security_ov.pillars.notraining.title">No training on user documents</h3>
+            <p class="secov-pillar-desc" data-i18n-key="security_ov.pillars.notraining.desc">Your documents are never used to train AI models. This is contractually guaranteed in our terms of service — your data stays yours.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         ARCHITECTURE DIAGRAM
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="secov-architecture allybi-section">
+      <div class="allybi-container">
+        <div class="allybi-section-header">
+          <h2 class="allybi-h2" data-i18n-key="security_ov.arch.title">How your data flows through Allybi</h2>
+          <p class="allybi-body-lg" data-i18n-key="security_ov.arch.support">Every step is encrypted, permissioned, and under your control.</p>
+        </div>
+
+        <div class="secov-arch-diagram">
+          <!-- Row 1: User Devices -->
+          <div class="secov-arch-node secov-arch-node--user">
+            <div class="secov-arch-node__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <span class="secov-arch-node__label" data-i18n-key="security_ov.arch.user_devices">User Devices</span>
+          </div>
+
+          <!-- Connector -->
+          <div class="secov-arch-connector">
+            <div class="secov-arch-connector__line"></div>
+            <span class="secov-arch-connector__label" data-i18n-key="security_ov.arch.encrypted_conn">TLS Encrypted</span>
+          </div>
+
+          <!-- Row 2: Allybi App Layer -->
+          <div class="secov-arch-node secov-arch-node--app">
+            <div class="secov-arch-node__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="secov-arch-node__label" data-i18n-key="security_ov.arch.app_layer">Allybi App Layer</span>
+          </div>
+
+          <!-- Connector branching -->
+          <div class="secov-arch-connector">
+            <div class="secov-arch-connector__line"></div>
+          </div>
+
+          <!-- Row 3: Three branches -->
+          <div class="secov-arch-branches">
+            <div class="secov-arch-node secov-arch-node--branch">
+              <div class="secov-arch-node__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <span class="secov-arch-node__label" data-i18n-key="security_ov.arch.encrypted_storage">Encrypted Storage</span>
+              <span class="secov-arch-node__detail" data-i18n-key="security_ov.arch.encrypted_storage_detail">AES-256-GCM</span>
+            </div>
+            <div class="secov-arch-node secov-arch-node--branch">
+              <div class="secov-arch-node__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="5" width="22" height="14" rx="7" ry="7"/><circle cx="16" cy="12" r="3"/></svg>
+              </div>
+              <span class="secov-arch-node__label" data-i18n-key="security_ov.arch.perm_integrations">Permissioned Integrations</span>
+              <span class="secov-arch-node__detail" data-i18n-key="security_ov.arch.perm_integrations_detail">OAuth scoped</span>
+            </div>
+            <div class="secov-arch-node secov-arch-node--branch">
+              <div class="secov-arch-node__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <span class="secov-arch-node__label" data-i18n-key="security_ov.arch.confirm_gate">Confirmation Gate</span>
+              <span class="secov-arch-node__detail" data-i18n-key="security_ov.arch.confirm_gate_detail">User reviews before send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         DATA HANDLING PRINCIPLES
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="secov-data allybi-section" style="background-color: var(--allybi-bg-alt-1);">
+      <div class="allybi-container">
+        <div class="allybi-section-header">
+          <h2 class="allybi-h2" data-i18n-key="security_ov.data.title">Data handling principles</h2>
+        </div>
+        <div class="secov-data-grid allybi-grid-4">
+
+          <div class="secov-data-block">
+            <h3 class="secov-data-block__title" data-i18n-key="security_ov.data.transit.title">Encryption in transit</h3>
+            <p class="secov-data-block__desc" data-i18n-key="security_ov.data.transit.desc">All data uses TLS encryption between your device and Allybi servers. No unencrypted connections are ever permitted.</p>
+          </div>
+
+          <div class="secov-data-block">
+            <h3 class="secov-data-block__title" data-i18n-key="security_ov.data.rest.title">Encryption at rest</h3>
+            <p class="secov-data-block__desc" data-i18n-key="security_ov.data.rest.desc">Documents are encrypted with AES-256-GCM at rest. Encryption keys are managed separately from data storage.</p>
+          </div>
+
+          <div class="secov-data-block">
+            <h3 class="secov-data-block__title" data-i18n-key="security_ov.data.grounded.title">Grounded responses</h3>
+            <p class="secov-data-block__desc" data-i18n-key="security_ov.data.grounded.desc">AI answers cite specific files and locations. If the answer isn't in your documents, Allybi tells you instead of guessing.</p>
+          </div>
+
+          <div class="secov-data-block">
+            <h3 class="secov-data-block__title" data-i18n-key="security_ov.data.notraining.title">No model training</h3>
+            <p class="secov-data-block__desc" data-i18n-key="security_ov.data.notraining.desc">User documents are not used to train AI models. This commitment is contractually guaranteed in our terms of service.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         INTEGRATION SECURITY
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="secov-integ allybi-section">
+      <div class="allybi-container">
+        <div class="allybi-section-header">
+          <h2 class="allybi-h2" data-i18n-key="security_ov.integ.title">Integration security</h2>
+          <p class="allybi-body-lg" data-i18n-key="security_ov.integ.support">Every connected service is permissioned, controllable, and transparent.</p>
+        </div>
+        <div class="secov-integ-grid allybi-grid-3">
+
+          <div class="allybi-card secov-integ-card">
+            <h3 class="secov-integ-card__title" data-i18n-key="security_ov.integ.permissioned.title">Permissioned connections</h3>
+            <p class="secov-integ-card__desc" data-i18n-key="security_ov.integ.permissioned.desc">Each integration uses OAuth with scoped permissions. Allybi only accesses what you explicitly authorize — nothing more.</p>
+          </div>
+
+          <div class="allybi-card secov-integ-card">
+            <h3 class="secov-integ-card__title" data-i18n-key="security_ov.integ.disconnect.title">Disconnect controls</h3>
+            <p class="secov-integ-card__desc" data-i18n-key="security_ov.integ.disconnect.desc">Revoke any integration instantly from your settings. Once disconnected, Allybi can no longer access that service's data.</p>
+          </div>
+
+          <div class="allybi-card secov-integ-card">
+            <h3 class="secov-integ-card__title" data-i18n-key="security_ov.integ.confirm.title">Explicit send confirmation</h3>
+            <p class="secov-integ-card__desc" data-i18n-key="security_ov.integ.confirm.desc">Before any email or message is sent through a connected service, you see exactly what will be sent and confirm it yourself.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         FAQ
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="secov-faq allybi-section" style="background-color: var(--allybi-bg-alt-1);">
+      <div class="allybi-container">
+        <div class="allybi-section-header">
+          <h2 class="allybi-h2" data-i18n-key="security_ov.faq.title">Security FAQ</h2>
+        </div>
+        <div class="allybi-accordion" style="max-width: var(--allybi-max-reading); margin: 0 auto;">
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="security_ov.faq.q1">Do my documents train AI models?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="security_ov.faq.a1">No. Your documents are never used to train AI models. This is contractually guaranteed. Allybi uses your files only to generate answers during your session.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="security_ov.faq.q2">How are files protected?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="security_ov.faq.a2">All files are encrypted with TLS in transit and AES-256-GCM at rest. Encryption keys are managed separately from document storage for additional protection.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="security_ov.faq.q3">How do connected services work?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="security_ov.faq.a3">Allybi connects to services like Gmail, Outlook, and Slack through OAuth with scoped permissions. You authorize each connection individually and can revoke access at any time.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="security_ov.faq.q4">What happens before a message is sent?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="security_ov.faq.a4">Before any email or message is sent, Allybi shows you the full content, recipient, and any attachments. You must explicitly confirm before anything leaves the platform.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="security_ov.faq.q5">How can I disconnect integrations?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="security_ov.faq.a5">Go to your account settings and click disconnect on any integration. Access is revoked immediately and Allybi can no longer access that service's data.</p>
+            </div>
+          </div>
+
+          <div class="allybi-accordion__item">
+            <button class="allybi-accordion__trigger" aria-expanded="false">
+              <span data-i18n-key="security_ov.faq.q6">Where is my data stored?</span>
+              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="allybi-accordion__content">
+              <p class="allybi-accordion__body" data-i18n-key="security_ov.faq.a6">Your data is stored in encrypted cloud infrastructure. All storage uses AES-256-GCM encryption. Workspaces are isolated so no data leaks between projects or users.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────────────────────────────────────────────
+         CTA
+         ──────────────────────────────────────────────────────────────── -->
+    <section class="secov-cta allybi-section" style="background-color: var(--allybi-bg-dark); color: var(--allybi-text-inverse);">
+      <div class="allybi-container">
+        <div class="secov-cta__inner">
+          <h2 class="allybi-h2" data-i18n-key="security_ov.cta.title">Questions about security?</h2>
+          <p class="allybi-body-lg" data-i18n-key="security_ov.cta.support">We're happy to answer any security or privacy questions about Allybi.</p>
+          <div class="secov-cta__buttons">
+            <a href="contact.html" class="allybi-btn allybi-btn--primary" style="background-color: var(--allybi-text-inverse); color: var(--allybi-text-strongest);" data-i18n-key="security_ov.cta.contact">Contact us</a>
+            <a href="security.html" class="allybi-btn allybi-btn--secondary" style="border-color: rgba(255,255,255,0.3); color: var(--allybi-text-inverse);" data-i18n-key="security_ov.cta.policy">View full security policy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="allybi-footer">
+    <div class="allybi-footer-inner">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="/" class="footer-brand-logo">
+          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
+        </a>
+        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
+      </div>
+
+      <!-- Column grid -->
+      <div class="footer-columns">
+
+        <!-- Product -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+          <div class="footer-col-links">
+            <a href="/" data-i18n-key="footer.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          </div>
+        </div>
+
+        <!-- Use Cases -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
+          <div class="footer-col-links">
+            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
+          </div>
+        </div>
+
+        <!-- Security -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
+          <div class="footer-col-links">
+            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+          <div class="footer-col-links">
+            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
+            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
+          <div class="footer-col-links">
+            <a href="about.html" data-i18n-key="footer.about">About</a>
+            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
+          </div>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+          <div class="footer-col-links">
+            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
+            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
+            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          <div class="language-selector" id="footer-language-selector">
+            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span class="lang-label">English</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="language-menu hidden" role="listbox">
+              <li role="option" data-lang="en">English</li>
+              <li role="option" data-lang="pt">Portugues (BR)</li>
+              <li role="option" data-lang="es">Espanol</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       SCRIPTS
+       ================================================================ -->
+  <script src="language-switcher.js"></script>
+  <script src="allybi-header.js"></script>
+  <script src="animations.js"></script>
+  <script src="allybi-animations.js"></script>
+
+  <!-- FAQ accordion -->
+  <script>
+    (function () {
+      var triggers = document.querySelectorAll('.allybi-accordion__trigger');
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          var content = this.nextElementSibling;
+          if (!expanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          } else {
+            content.style.maxHeight = '0';
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

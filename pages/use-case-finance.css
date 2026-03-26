@@ -1,0 +1,472 @@
+/* ==========================================================================
+   Allybi Use Case — Finance Teams — pages/use-case-finance.css
+   Reuses patterns from use-case-legal.css with ucf- prefix.
+   ========================================================================== */
+
+/* ---------- HERO ---------- */
+.ucf-hero {
+  padding-top: 160px;
+  padding-bottom: var(--allybi-space-20);
+  text-align: center;
+}
+
+.ucf-hero .allybi-hero-eyebrow {
+  display: inline-block;
+  font-size: var(--allybi-hero-eyebrow-size);
+  font-weight: var(--allybi-hero-eyebrow-weight);
+  line-height: var(--allybi-hero-eyebrow-lh);
+  color: var(--allybi-accent);
+  letter-spacing: var(--allybi-tracking-wide);
+  text-transform: uppercase;
+}
+
+.ucf-hero .allybi-h1 {
+  margin: 16px auto 20px;
+  font-size: var(--allybi-hero-h1-size);
+  line-height: var(--allybi-hero-h1-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+  max-width: 800px;
+}
+
+.ucf-hero .allybi-body-lg {
+  font-size: var(--allybi-hero-support-size);
+  line-height: var(--allybi-hero-support-lh);
+  color: var(--allybi-text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ucf-hero__ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* ---------- PAIN CARDS ---------- */
+.ucf-pains {
+  padding: var(--allybi-section-py) 0;
+  background: var(--allybi-bg-alt-1);
+}
+
+.ucf-pains__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.ucf-pain-card {
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-card);
+  padding: 32px;
+}
+
+.ucf-pain-card__title {
+  font-size: var(--allybi-card-title-size);
+  line-height: var(--allybi-card-title-lh);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-4);
+}
+
+.ucf-pain-card__desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- FEATURE SECTIONS ---------- */
+.ucf-feature {
+  padding: var(--allybi-section-py) 0;
+}
+
+.ucf-feature--alt {
+  background: var(--allybi-bg-alt-1);
+}
+
+.ucf-feature__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.ucf-feature__grid--reverse {
+  direction: rtl;
+}
+
+.ucf-feature__grid--reverse > * {
+  direction: ltr;
+}
+
+.ucf-feature__text .allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+  margin-bottom: var(--allybi-space-6);
+}
+
+.ucf-feature__text p {
+  font-size: var(--allybi-body-size);
+  line-height: var(--allybi-body-lh);
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- MOCKUP PANELS ---------- */
+.ucf-mockup {
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-hero-panel);
+  box-shadow: var(--allybi-shadow-lg);
+  overflow: hidden;
+}
+
+.ucf-mockup__bar {
+  display: flex;
+  gap: 4px;
+  padding: 10px 14px;
+  background: var(--allybi-bg-alt-1);
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.ucf-mockup__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--allybi-border-strong);
+}
+
+.ucf-mockup__body {
+  padding: 20px;
+}
+
+/* Number query mockup */
+.ucf-query-result {
+  font-size: 13px;
+}
+
+.ucf-query-result__q {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--allybi-bg-alt-1);
+  border-radius: var(--allybi-radius-sm);
+  margin-bottom: 16px;
+  color: var(--allybi-text-muted);
+  font-style: italic;
+}
+
+.ucf-query-result__answer {
+  padding: 12px;
+  border-left: 3px solid var(--allybi-trust);
+  background: var(--allybi-trust-subtle);
+  border-radius: 0 var(--allybi-radius-sm) var(--allybi-radius-sm) 0;
+  margin-bottom: 12px;
+}
+
+.ucf-query-result__answer-value {
+  font-size: 20px;
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+}
+
+.ucf-query-result__answer-source {
+  font-size: 11px;
+  color: var(--allybi-text-muted);
+  margin-top: 4px;
+}
+
+/* Deal folder mockup */
+.ucf-deal-tree {
+  font-size: 13px;
+  color: var(--allybi-text-secondary);
+}
+
+.ucf-deal-tree__item {
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  margin-bottom: 2px;
+}
+
+.ucf-deal-tree__item--active {
+  background: var(--allybi-accent-subtle);
+  color: var(--allybi-accent);
+  font-weight: var(--allybi-weight-medium);
+}
+
+.ucf-deal-tree__nested {
+  padding-left: 24px;
+}
+
+/* Email draft mockup */
+.ucf-email-draft {
+  font-size: 13px;
+}
+
+.ucf-email-draft__field {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--allybi-border-subtle);
+}
+
+.ucf-email-draft__label {
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-muted);
+  font-size: 12px;
+  min-width: 50px;
+}
+
+.ucf-email-draft__value {
+  color: var(--allybi-text-primary);
+}
+
+.ucf-email-draft__body {
+  padding: 12px 0;
+  color: var(--allybi-text-secondary);
+  line-height: 1.6;
+}
+
+.ucf-email-draft__attachment {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--allybi-bg-alt-1);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-sm);
+  font-size: 12px;
+  color: var(--allybi-text-primary);
+  font-weight: var(--allybi-weight-medium);
+}
+
+.ucf-email-draft__attachment-badge {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--allybi-trust-subtle);
+  color: var(--allybi-trust);
+  font-weight: var(--allybi-weight-semibold);
+}
+
+/* Spreadsheet mockup */
+.ucf-spreadsheet {
+  font-size: 12px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.ucf-spreadsheet th,
+.ucf-spreadsheet td {
+  padding: 8px 12px;
+  border: 1px solid var(--allybi-border-default);
+  text-align: left;
+}
+
+.ucf-spreadsheet th {
+  background: var(--allybi-bg-alt-1);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ucf-spreadsheet td {
+  color: var(--allybi-text-secondary);
+}
+
+.ucf-spreadsheet__highlight {
+  background: rgba(37, 99, 235, 0.08);
+  font-weight: var(--allybi-weight-medium);
+  color: var(--allybi-text-strongest);
+}
+
+/* ---------- SECURITY ---------- */
+.ucf-security {
+  padding: var(--allybi-section-py) 0;
+  background: var(--allybi-bg-alt-1);
+}
+
+.ucf-security__header {
+  text-align: center;
+  margin-bottom: var(--allybi-space-16);
+}
+
+.ucf-security__header .allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+}
+
+.ucf-security__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: var(--allybi-space-12);
+}
+
+.ucf-security__item {
+  text-align: center;
+}
+
+.ucf-security__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--allybi-trust-subtle);
+  border-radius: var(--allybi-radius-sm);
+  margin: 0 auto var(--allybi-space-5);
+  color: var(--allybi-trust);
+}
+
+.ucf-security__item-title {
+  font-size: var(--allybi-body-size);
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-2);
+}
+
+.ucf-security__item-desc {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
+}
+
+.ucf-security__cta {
+  text-align: center;
+}
+
+/* ---------- FAQ ---------- */
+.ucf-faq {
+  padding: var(--allybi-section-py) 0;
+}
+
+.ucf-faq__header {
+  text-align: center;
+  margin-bottom: var(--allybi-space-12);
+}
+
+.ucf-faq__header .allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-strongest);
+  letter-spacing: var(--allybi-tracking-tight);
+}
+
+.ucf-faq__list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ---------- FINAL CTA ---------- */
+.ucf-final-cta {
+  padding: var(--allybi-section-py) 0;
+  background: var(--allybi-bg-dark);
+  text-align: center;
+}
+
+.ucf-final-cta .allybi-h2 {
+  font-size: var(--allybi-section-h2-size);
+  line-height: var(--allybi-section-h2-lh);
+  font-weight: var(--allybi-weight-bold);
+  color: var(--allybi-text-inverse);
+  letter-spacing: var(--allybi-tracking-tight);
+  margin-bottom: var(--allybi-space-4);
+}
+
+.ucf-final-cta p {
+  font-size: var(--allybi-hero-support-size);
+  line-height: var(--allybi-hero-support-lh);
+  color: var(--allybi-text-subtle);
+  margin-bottom: var(--allybi-space-10);
+}
+
+.ucf-final-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 960px) {
+  .ucf-pains__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ucf-feature__grid,
+  .ucf-feature__grid--reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+
+  .ucf-feature__grid .ucf-mockup,
+  .ucf-feature__grid--reverse .ucf-mockup {
+    order: 2;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .ucf-security__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ucf-hero {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ucf-hero {
+    padding-top: 110px;
+    padding-bottom: var(--allybi-space-12);
+  }
+
+  .ucf-hero__ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ucf-pains,
+  .ucf-feature,
+  .ucf-security,
+  .ucf-faq,
+  .ucf-final-cta {
+    padding: var(--allybi-section-py-mobile) 0;
+  }
+
+  .ucf-security__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ucf-final-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ucf-spreadsheet {
+    font-size: 11px;
+  }
+
+  .ucf-spreadsheet th,
+  .ucf-spreadsheet td {
+    padding: 6px 8px;
+  }
+}

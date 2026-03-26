@@ -1,0 +1,105 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="ps" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(16,24,40,0.05)"/>
+    </filter>
+    <style>
+      text { font-family: "Plus Jakarta Sans", -apple-system, sans-serif; fill: #0D0F12; }
+      .card { fill: #FCFCFA; stroke: rgba(16,24,40,0.08); stroke-width: 1; filter: url(#ps); }
+      .dot-line { fill: none; stroke: rgba(16,24,40,0.08); stroke-width: 1; stroke-dasharray: 3,4; }
+      .t9 { font-size: 9px; fill: #9CA3AF; }
+      .t8 { font-size: 8px; fill: #6B7280; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="transparent"/>
+
+  <!-- Dotted connection lines (drawn first, behind cards) -->
+  <path class="dot-line" d="M200,160 Q300,100 400,150"/>
+  <path class="dot-line" d="M180,240 Q300,200 420,260"/>
+  <path class="dot-line" d="M250,120 Q320,180 350,280"/>
+  <path class="dot-line" d="M160,180 Q260,260 400,220"/>
+
+  <!-- Card 1: Search bar card (top-left, slight rotation) -->
+  <g transform="translate(60, 60) rotate(-3, 120, 55)">
+    <rect class="card" x="0" y="0" width="240" height="110" rx="10"/>
+    <!-- Mini search bar -->
+    <rect x="16" y="18" width="208" height="30" rx="8" fill="#F6F7F8" stroke="rgba(16,24,40,0.06)" stroke-width="0.6"/>
+    <circle cx="34" cy="33" r="6" fill="none" stroke="#D1D5DB" stroke-width="1"/>
+    <line x1="38" y1="37" x2="42" y2="41" stroke="#D1D5DB" stroke-width="1" stroke-linecap="round"/>
+    <text x="50" y="36" font-size="9" fill="#9CA3AF" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Search your workspace...</text>
+    <!-- Mini text lines -->
+    <rect x="16" y="60" width="160" height="4" rx="2" fill="#E5E7EB"/>
+    <rect x="16" y="72" width="130" height="4" rx="2" fill="#E5E7EB"/>
+    <rect x="16" y="84" width="150" height="4" rx="2" fill="#E5E7EB"/>
+  </g>
+
+  <!-- Card 2: Citation chip card (top-right, opposite rotation) -->
+  <g transform="translate(320, 40) rotate(2, 120, 60)">
+    <rect class="card" x="0" y="0" width="220" height="100" rx="10"/>
+    <!-- Citation chip -->
+    <rect x="16" y="18" width="180" height="24" rx="12" fill="#F6F7F8" stroke="rgba(16,24,40,0.06)" stroke-width="0.6"/>
+    <circle cx="30" cy="30" r="5" fill="#16A34A" opacity="0.2"/>
+    <text x="42" y="33" font-size="8" fill="#6B7280" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Source: NDA_v3.pdf — Section 4.1</text>
+    <!-- Confidence bar -->
+    <text x="16" y="60" font-size="8" fill="#9CA3AF" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Confidence</text>
+    <rect x="72" y="53" width="100" height="5" rx="2.5" fill="#E5E7EB"/>
+    <rect x="72" y="53" width="82" height="5" rx="2.5" fill="#16A34A" opacity="0.4"/>
+    <!-- Mini text -->
+    <rect x="16" y="76" width="140" height="4" rx="2" fill="#E5E7EB"/>
+  </g>
+
+  <!-- Card 3: Version badge card (center-left) -->
+  <g transform="translate(40, 200) rotate(2, 100, 50)">
+    <rect class="card" x="0" y="0" width="200" height="100" rx="10"/>
+    <!-- Version badges -->
+    <rect x="16" y="16" width="52" height="20" rx="10" fill="#F6F7F8" stroke="rgba(16,24,40,0.06)" stroke-width="0.6"/>
+    <text x="42" y="29" text-anchor="middle" font-size="8" fill="#9CA3AF" font-family="Plus Jakarta Sans, -apple-system, sans-serif">v1.0</text>
+    <rect x="76" y="16" width="52" height="20" rx="10" fill="#F6F7F8" stroke="rgba(16,24,40,0.06)" stroke-width="0.6"/>
+    <text x="102" y="29" text-anchor="middle" font-size="8" fill="#9CA3AF" font-family="Plus Jakarta Sans, -apple-system, sans-serif">v2.0</text>
+    <rect x="136" y="16" width="52" height="20" rx="10" fill="#0D0F12"/>
+    <text x="162" y="29" text-anchor="middle" font-size="8" fill="#FCFCFA" font-weight="600" font-family="Plus Jakarta Sans, -apple-system, sans-serif">v3.0</text>
+    <!-- Lines -->
+    <rect x="16" y="48" width="160" height="4" rx="2" fill="#E5E7EB"/>
+    <rect x="16" y="60" width="140" height="4" rx="2" fill="#E5E7EB"/>
+    <!-- Change highlight -->
+    <rect x="14" y="74" width="172" height="14" rx="4" fill="#FEFCE8" stroke="#FDE68A" stroke-width="0.5"/>
+    <rect x="20" y="79" width="120" height="4" rx="2" fill="#D97706" opacity="0.2"/>
+  </g>
+
+  <!-- Card 4: Folder / workspace card (center-right) -->
+  <g transform="translate(310, 180) rotate(-2, 120, 65)">
+    <rect class="card" x="0" y="0" width="240" height="130" rx="10"/>
+    <!-- Folder items -->
+    <g transform="translate(16, 16)">
+      <!-- Folder icon -->
+      <path d="M0,6 L0,2 Q0,0 2,0 L8,0 L10,2 L16,2 Q18,2 18,4 L18,14 Q18,16 16,16 L2,16 Q0,16 0,14 Z" fill="none" stroke="#2563EB" stroke-width="0.8" fill-opacity="0.1"/>
+      <text x="24" y="12" font-size="9" font-weight="600" fill="#0D0F12" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Deal Room</text>
+    </g>
+    <g transform="translate(30, 40)">
+      <rect x="0" y="0" width="10" height="12" rx="1.5" fill="none" stroke="#D1D5DB" stroke-width="0.6"/>
+      <text x="16" y="10" font-size="8" fill="#6B7280" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Term_Sheet_Final.pdf</text>
+    </g>
+    <g transform="translate(30, 58)">
+      <rect x="0" y="0" width="10" height="12" rx="1.5" fill="none" stroke="#D1D5DB" stroke-width="0.6"/>
+      <text x="16" y="10" font-size="8" fill="#6B7280" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Board_Deck_Q1.pptx</text>
+    </g>
+    <g transform="translate(30, 76)">
+      <rect x="0" y="0" width="10" height="12" rx="1.5" fill="none" stroke="#D1D5DB" stroke-width="0.6"/>
+      <text x="16" y="10" font-size="8" fill="#6B7280" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Cap_Table_2026.xlsx</text>
+    </g>
+    <!-- Action chip -->
+    <rect x="16" y="100" width="100" height="20" rx="10" fill="#F6F7F8" stroke="rgba(16,24,40,0.06)" stroke-width="0.6"/>
+    <text x="66" y="113" text-anchor="middle" font-size="8" fill="#6B7280" font-family="Plus Jakarta Sans, -apple-system, sans-serif">3 files organized</text>
+  </g>
+
+  <!-- Card 5: Small floating confirmation card (bottom-center) -->
+  <g transform="translate(200, 330) rotate(-1, 100, 25)">
+    <rect class="card" x="0" y="0" width="200" height="48" rx="8"/>
+    <circle cx="22" cy="24" r="10" fill="#16A34A" opacity="0.1"/>
+    <polyline points="17,24 21,28 28,20" fill="none" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="21" font-size="9" font-weight="600" fill="#0D0F12" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Always confirmed</text>
+    <text x="40" y="34" font-size="8" fill="#9CA3AF" font-family="Plus Jakarta Sans, -apple-system, sans-serif">Human-in-the-loop by design</text>
+  </g>
+</svg>
