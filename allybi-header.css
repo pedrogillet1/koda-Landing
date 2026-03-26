@@ -46,8 +46,14 @@
 }
 
 .allybi-logo img {
-  height: 28px;
+  height: 38px;
   width: auto;
+}
+
+@media (max-width: 1024px) {
+  .allybi-logo img {
+    height: 32px;
+  }
 }
 
 /* ---------- Desktop nav ---------- */
