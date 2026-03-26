@@ -125,6 +125,28 @@
   border-color: rgba(255,255,255,0.5);
 }
 
+/* ── Inverse button variants (for dark backgrounds) ── */
+.allybi-btn--primary-inverse {
+  background-color: #FFFFFF;
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-btn--primary-inverse:hover {
+  background-color: #F0F0F0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.allybi-btn--secondary-inverse {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.allybi-btn--secondary-inverse:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 /* Accent */
 .allybi-btn--accent {
   background-color: var(--allybi-accent);
