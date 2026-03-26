@@ -88,6 +88,43 @@
   color: var(--allybi-text-primary);
 }
 
+/* ── Dark section button overrides ── */
+/* Use on any dark-bg parent: buttons auto-invert */
+[style*="--allybi-bg-dark"],
+[class*="final-cta"],
+[class*="dark-section"] {
+  --_btn-primary-bg: #FFFFFF;
+  --_btn-primary-color: var(--allybi-text-strongest);
+  --_btn-secondary-border: rgba(255,255,255,0.3);
+  --_btn-secondary-color: #FFFFFF;
+  --_btn-secondary-hover-bg: rgba(255,255,255,0.1);
+}
+
+[class*="final-cta"] .allybi-btn--primary,
+.dark-section .allybi-btn--primary {
+  background-color: #FFFFFF;
+  color: var(--allybi-text-strongest);
+}
+
+[class*="final-cta"] .allybi-btn--primary:hover,
+.dark-section .allybi-btn--primary:hover {
+  background-color: #F0F0F0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+[class*="final-cta"] .allybi-btn--secondary,
+.dark-section .allybi-btn--secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255,255,255,0.3);
+}
+
+[class*="final-cta"] .allybi-btn--secondary:hover,
+.dark-section .allybi-btn--secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+}
+
 /* Accent */
 .allybi-btn--accent {
   background-color: var(--allybi-accent);
