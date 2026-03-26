@@ -1557,10 +1557,45 @@
     bottom: auto;
     left: auto;
     margin-top: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero__visual {
+    overflow: hidden;
+    max-width: 100%;
   }
 
   .hero-scene {
     max-width: 100%;
+    overflow: visible;
+  }
+
+  /* Security pillars — ensure they stay within viewport */
+  .security-teaser__grid {
+    overflow: hidden;
+  }
+
+  .security-teaser__pillars {
+    gap: 16px;
+  }
+
+  .security-teaser__pillar {
+    gap: 12px;
+  }
+
+  .security-teaser__pillar-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .security-teaser__pillar h4 {
+    font-size: 14px;
+  }
+
+  .security-teaser__pillar p {
+    font-size: 13px;
   }
 
   .hero-scene__topbar {
