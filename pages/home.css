@@ -1151,10 +1151,15 @@
 .security-teaser__arch-box--workspace {
   flex: 1;
   justify-content: center;
+  border-color: var(--allybi-border-strong);
+  background: var(--allybi-bg-alt-1);
+  color: var(--allybi-text-primary);
 }
 
 .security-teaser__arch-box--ai {
   color: var(--allybi-text-muted);
+  border-style: dashed;
+  background: var(--allybi-bg-alt-1);
 }
 
 .security-teaser__arch-line {
