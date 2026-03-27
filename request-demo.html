@@ -9,22 +9,20 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
 
   <!-- SEO -->
-  <title>Use Cases — Allybi for Legal, Finance, and Business Teams</title>
-  <meta name="description" content="Discover how legal, finance, and business teams use Allybi to find files faster, reduce wrong-version risk, and act with confidence.">
+  <title>Request a Demo — Allybi</title>
+  <meta name="description" content="See Allybi in action. Tell us about your team and we'll set up a personalized walkthrough of the private AI workspace.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Use Cases — Allybi for Legal, Finance, and Business Teams">
-  <meta property="og:description" content="Discover how legal, finance, and business teams use Allybi to find files faster, reduce wrong-version risk, and act with confidence.">
-  <meta property="og:image" content="assets/images/og-home.png">
-  <meta property="og:url" content="https://allybi.co/use-cases.html">
+  <meta property="og:title" content="Request a Demo — Allybi">
+  <meta property="og:description" content="See Allybi in action. Tell us about your team and we'll set up a personalized walkthrough of the private AI workspace.">
+  <meta property="og:url" content="https://allybi.co/request-demo.html">
   <meta property="og:site_name" content="Allybi">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Use Cases — Allybi for Legal, Finance, and Business Teams">
-  <meta name="twitter:description" content="Discover how legal, finance, and business teams use Allybi to find files faster, reduce wrong-version risk, and act with confidence.">
-  <meta name="twitter:image" content="assets/images/og-home.png">
+  <meta name="twitter:title" content="Request a Demo — Allybi">
+  <meta name="twitter:description" content="See Allybi in action. Tell us about your team and we'll set up a personalized walkthrough of the private AI workspace.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +37,7 @@
   <link rel="stylesheet" href="allybi-footer.css">
 
   <!-- Page-specific CSS -->
-  <link rel="stylesheet" href="pages/use-cases.css">
+  <link rel="stylesheet" href="pages/request-demo.css">
 </head>
 <body>
 
@@ -53,7 +51,6 @@
       </a>
 
       <nav class="allybi-nav desktop-only">
-        <!-- Product dropdown -->
         <div class="nav-dropdown">
           <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
           <div class="nav-dropdown-menu">
@@ -64,7 +61,6 @@
           </div>
         </div>
 
-        <!-- Use Cases dropdown -->
         <div class="nav-dropdown">
           <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
           <div class="nav-dropdown-menu">
@@ -77,7 +73,6 @@
         <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
         <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
 
-        <!-- Resources dropdown -->
         <div class="nav-dropdown">
           <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
           <div class="nav-dropdown-menu">
@@ -92,7 +87,7 @@
 
       <div class="header-ctas desktop-only">
         <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Request demo</a>
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="demo.nav.request_demo">Request demo</a>
       </div>
 
       <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
@@ -106,7 +101,6 @@
        ================================================================ -->
   <div id="allybi-mobile-menu" class="mobile-menu">
     <nav class="mobile-menu-nav">
-      <!-- Product -->
       <div class="mobile-dropdown">
         <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
         <div class="mobile-dropdown-items">
@@ -117,7 +111,6 @@
         </div>
       </div>
 
-      <!-- Use Cases -->
       <div class="mobile-dropdown">
         <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
         <div class="mobile-dropdown-items">
@@ -130,7 +123,6 @@
       <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
       <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
 
-      <!-- Resources -->
       <div class="mobile-dropdown">
         <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
         <div class="mobile-dropdown-items">
@@ -143,13 +135,11 @@
       <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
     </nav>
 
-    <!-- Mobile CTAs -->
     <div class="mobile-ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Request demo</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="demo.nav.request_demo">Request demo</a>
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
     </div>
 
-    <!-- Mobile language selector -->
     <div class="mobile-language-selector">
       <div class="language-selector" id="mobile-language-selector">
         <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
@@ -173,124 +163,142 @@
     <!-- ────────────────────────────────────────────────────────────────
          HERO
          ──────────────────────────────────────────────────────────────── -->
-    <section class="uc-hero allybi-section">
+    <section class="rdemo-hero">
       <div class="allybi-container">
-        <span class="allybi-hero-eyebrow" data-i18n-key="uc_overview.hero.eyebrow">Use Cases</span>
-        <h1 class="allybi-h1" data-i18n-key="uc_overview.hero.title">One workspace. Built for how you actually work.</h1>
-        <p class="allybi-body-lg" data-i18n-key="uc_overview.hero.support">Allybi serves teams that work under pressure with sensitive documents — where wrong files, lost versions, and slow search carry real cost.</p>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         ROLE SELECTION CARDS
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="uc-roles allybi-section">
-      <div class="allybi-container">
-        <div class="uc-roles__grid">
-
-          <!-- Legal -->
-          <div class="uc-role-card">
-            <div class="uc-role-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M2 8v8l10 5 10-5V8"/><path d="M12 13v8"/></svg>
-            </div>
-            <h3 class="uc-role-card__title" data-i18n-key="uc_overview.roles.legal.title">Legal teams</h3>
-            <p class="uc-role-card__pain" data-i18n-key="uc_overview.roles.legal.pain">Contracts, versions, evidence — find and compare without losing the thread.</p>
-            <a href="use-case-legal.html" class="uc-role-card__cta" data-i18n-key="uc_overview.roles.legal.cta">
-              Learn more
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-
-          <!-- Finance -->
-          <div class="uc-role-card">
-            <div class="uc-role-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 4 5-8"/></svg>
-            </div>
-            <h3 class="uc-role-card__title" data-i18n-key="uc_overview.roles.finance.title">Finance &amp; deal teams</h3>
-            <p class="uc-role-card__pain" data-i18n-key="uc_overview.roles.finance.pain">Decks, models, cap tables — find the exact number and send the right file.</p>
-            <a href="use-case-finance.html" class="uc-role-card__cta" data-i18n-key="uc_overview.roles.finance.cta">
-              Learn more
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-
-          <!-- Business -->
-          <div class="uc-role-card">
-            <div class="uc-role-card__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-            </div>
-            <h3 class="uc-role-card__title" data-i18n-key="uc_overview.roles.business.title">Business &amp; operations</h3>
-            <p class="uc-role-card__pain" data-i18n-key="uc_overview.roles.business.pain">Proposals, plans, decisions — keep everything findable and actionable.</p>
-            <a href="use-case-business.html" class="uc-role-card__cta" data-i18n-key="uc_overview.roles.business.cta">
-              Learn more
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-
+        <div class="rdemo-hero__inner">
+          <h1 class="allybi-h1" data-i18n-key="demo.hero.title">See Allybi in action.</h1>
+          <p class="allybi-body-lg" data-i18n-key="demo.hero.subhead">Tell us about your team and we'll set up a personalized walkthrough.</p>
         </div>
       </div>
     </section>
 
     <!-- ────────────────────────────────────────────────────────────────
-         SHARED VALUE
+         FORM + PREVIEW (Two-column)
          ──────────────────────────────────────────────────────────────── -->
-    <section class="uc-shared allybi-section">
+    <section class="rdemo-main allybi-section">
       <div class="allybi-container">
-        <div class="uc-shared__header">
-          <h2 class="allybi-h2" data-i18n-key="uc_overview.shared.title">What every team gets.</h2>
-        </div>
-        <div class="uc-shared__grid">
+        <div class="rdemo-grid">
 
-          <!-- Grounded answers -->
-          <div class="uc-shared__item">
-            <div class="uc-shared__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-            </div>
-            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.grounded.title">Grounded answers from your files</h3>
-            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.grounded.desc">Every response cites the exact source. If the answer is not in your documents, Allybi tells you.</p>
+          <!-- LEFT: Form -->
+          <div class="rdemo-form-col">
+            <form class="rdemo-form" id="request-demo-form" novalidate>
+
+              <!-- Name -->
+              <div class="rdemo-field">
+                <label class="rdemo-label" for="rdemo-name" data-i18n-key="demo.form.name_label">Name</label>
+                <input type="text" id="rdemo-name" name="name" class="rdemo-input" required autocomplete="name" placeholder="Your full name" data-i18n-key="demo.form.name_placeholder">
+              </div>
+
+              <!-- Work email -->
+              <div class="rdemo-field">
+                <label class="rdemo-label" for="rdemo-email" data-i18n-key="demo.form.email_label">Work email</label>
+                <input type="email" id="rdemo-email" name="email" class="rdemo-input" required autocomplete="email" placeholder="you@company.com" data-i18n-key="demo.form.email_placeholder">
+              </div>
+
+              <!-- Company -->
+              <div class="rdemo-field">
+                <label class="rdemo-label" for="rdemo-company" data-i18n-key="demo.form.company_label">Company</label>
+                <input type="text" id="rdemo-company" name="company" class="rdemo-input" required autocomplete="organization" placeholder="Your company name" data-i18n-key="demo.form.company_placeholder">
+              </div>
+
+              <!-- Your role -->
+              <div class="rdemo-field">
+                <label class="rdemo-label" for="rdemo-role" data-i18n-key="demo.form.role_label">Your role</label>
+                <select id="rdemo-role" name="role" class="rdemo-select" required>
+                  <option value="" disabled selected data-i18n-key="demo.form.role_placeholder">Select your role</option>
+                  <option value="legal" data-i18n-key="demo.form.role_legal">Legal</option>
+                  <option value="finance" data-i18n-key="demo.form.role_finance">Finance</option>
+                  <option value="operations" data-i18n-key="demo.form.role_operations">Operations</option>
+                  <option value="engineering" data-i18n-key="demo.form.role_engineering">Engineering</option>
+                  <option value="executive" data-i18n-key="demo.form.role_executive">Executive</option>
+                  <option value="other" data-i18n-key="demo.form.role_other">Other</option>
+                </select>
+              </div>
+
+              <!-- Team size -->
+              <div class="rdemo-field">
+                <label class="rdemo-label" for="rdemo-team-size" data-i18n-key="demo.form.team_size_label">Team size</label>
+                <select id="rdemo-team-size" name="team_size" class="rdemo-select" required>
+                  <option value="" disabled selected data-i18n-key="demo.form.team_size_placeholder">Select team size</option>
+                  <option value="1-10" data-i18n-key="demo.form.team_1_10">1-10</option>
+                  <option value="11-50" data-i18n-key="demo.form.team_11_50">11-50</option>
+                  <option value="51-200" data-i18n-key="demo.form.team_51_200">51-200</option>
+                  <option value="201-500" data-i18n-key="demo.form.team_201_500">201-500</option>
+                  <option value="500+" data-i18n-key="demo.form.team_500_plus">500+</option>
+                </select>
+              </div>
+
+              <!-- Primary use case -->
+              <div class="rdemo-field">
+                <label class="rdemo-label" for="rdemo-use-case" data-i18n-key="demo.form.use_case_label">Primary use case</label>
+                <select id="rdemo-use-case" name="use_case" class="rdemo-select" required>
+                  <option value="" disabled selected data-i18n-key="demo.form.use_case_placeholder">Select a use case</option>
+                  <option value="document-search" data-i18n-key="demo.form.uc_search">Document search & Q&A</option>
+                  <option value="contract-analysis" data-i18n-key="demo.form.uc_contracts">Contract analysis</option>
+                  <option value="financial-analysis" data-i18n-key="demo.form.uc_finance">Financial analysis</option>
+                  <option value="email-search" data-i18n-key="demo.form.uc_email">Email & message search</option>
+                  <option value="document-editing" data-i18n-key="demo.form.uc_editing">Document editing</option>
+                  <option value="general-management" data-i18n-key="demo.form.uc_general">General document management</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="rdemo-field">
+                <label class="rdemo-label" for="rdemo-message" data-i18n-key="demo.form.message_label">Anything else we should know? <span class="rdemo-optional" data-i18n-key="demo.form.optional">(optional)</span></label>
+                <textarea id="rdemo-message" name="message" class="rdemo-textarea" rows="4" placeholder="Tell us about your workflow or specific needs" data-i18n-key="demo.form.message_placeholder"></textarea>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="allybi-btn allybi-btn--primary rdemo-submit" data-i18n-key="demo.form.submit">Request demo</button>
+            </form>
+
+            <!-- Below form note -->
+            <p class="rdemo-note" data-i18n-key="demo.form.note">We typically respond within one business day. Your information is handled according to our <a href="privacy.html">privacy policy</a>.</p>
           </div>
 
-          <!-- Project organization -->
-          <div class="uc-shared__item">
-            <div class="uc-shared__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <!-- RIGHT: Product preview + Reassurance -->
+          <div class="rdemo-preview-col">
+            <div class="rdemo-preview">
+
+              <!-- Mini workspace preview -->
+              <div class="rdemo-preview__window">
+                <div class="rdemo-preview__titlebar">
+                  <span class="rdemo-preview__dot"></span>
+                  <span class="rdemo-preview__dot"></span>
+                  <span class="rdemo-preview__dot"></span>
+                  <span class="rdemo-preview__titlebar-text">Allybi Workspace</span>
+                </div>
+                <div class="rdemo-preview__body">
+                  <div class="rdemo-preview__search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span data-i18n-key="demo.preview.query">What are the key terms in the NDA with Acme Corp?</span>
+                  </div>
+                  <div class="rdemo-preview__result">
+                    <div class="rdemo-preview__result-badge" data-i18n-key="demo.preview.source">Acme-NDA-2024.pdf, p.3</div>
+                    <p class="rdemo-preview__result-text" data-i18n-key="demo.preview.answer">The NDA includes a 2-year confidentiality period, covers all proprietary information shared during the partnership, and includes a mutual non-solicitation clause...</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reassurance points -->
+              <ul class="rdemo-reassurance">
+                <li class="rdemo-reassurance__item">
+                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span data-i18n-key="demo.reassurance.personalized">Personalized to your workflow</span>
+                </li>
+                <li class="rdemo-reassurance__item">
+                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <span data-i18n-key="demo.reassurance.real_product">See real product, not slides</span>
+                </li>
+                <li class="rdemo-reassurance__item">
+                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span data-i18n-key="demo.reassurance.no_commitment">No commitment required</span>
+                </li>
+              </ul>
+
             </div>
-            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.organization.title">Project-level organization</h3>
-            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.organization.desc">Group files by matter, deal, or project. Search stays scoped. Context stays clean.</p>
           </div>
 
-          <!-- Editing -->
-          <div class="uc-shared__item">
-            <div class="uc-shared__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-            </div>
-            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.editing.title">Editing inside the workflow</h3>
-            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.editing.desc">Edit documents and spreadsheets without leaving the workspace. AI helps with formulas and formatting.</p>
-          </div>
-
-          <!-- Send confirmation -->
-          <div class="uc-shared__item">
-            <div class="uc-shared__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </div>
-            <h3 class="uc-shared__item-title" data-i18n-key="uc_overview.shared.send.title">Explicit confirmation before send</h3>
-            <p class="uc-shared__item-desc" data-i18n-key="uc_overview.shared.send.desc">Allybi always shows you the file, the version, and the recipient before anything leaves your workspace.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FINAL CTA
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="uc-final-cta allybi-section">
-      <div class="allybi-container">
-        <h2 class="allybi-h2" data-i18n-key="uc_overview.final_cta.title">Find your workflow</h2>
-        <div class="uc-final-cta__buttons">
-          <a href="use-case-legal.html" class="allybi-btn allybi-btn--primary" data-i18n-key="uc_overview.final_cta.legal">Legal teams</a>
-          <a href="use-case-finance.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="uc_overview.final_cta.finance">Finance teams</a>
-          <a href="use-case-business.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="uc_overview.final_cta.business">Business teams</a>
         </div>
       </div>
     </section>
@@ -303,7 +311,6 @@
   <footer class="allybi-footer">
     <div class="allybi-footer-inner">
 
-      <!-- Brand -->
       <div class="footer-brand">
         <a href="/" class="footer-brand-logo">
           <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
@@ -311,10 +318,8 @@
         <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
       </div>
 
-      <!-- Column grid -->
       <div class="footer-columns">
 
-        <!-- Product -->
         <div class="footer-col">
           <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
           <div class="footer-col-links">
@@ -325,7 +330,6 @@
           </div>
         </div>
 
-        <!-- Use Cases -->
         <div class="footer-col">
           <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
           <div class="footer-col-links">
@@ -335,7 +339,6 @@
           </div>
         </div>
 
-        <!-- Security -->
         <div class="footer-col">
           <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
           <div class="footer-col-links">
@@ -345,7 +348,6 @@
           </div>
         </div>
 
-        <!-- Resources -->
         <div class="footer-col">
           <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
           <div class="footer-col-links">
@@ -355,7 +357,6 @@
           </div>
         </div>
 
-        <!-- Company -->
         <div class="footer-col">
           <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
           <div class="footer-col-links">
@@ -364,7 +365,6 @@
           </div>
         </div>
 
-        <!-- Legal -->
         <div class="footer-col">
           <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
           <div class="footer-col-links">
@@ -378,8 +378,6 @@
 
       </div>
 
-            <!-- Bottom bar -->
-      <!-- Mobile compact links (visible only on small screens) -->
       <div class="footer-mobile-links">
         <a href="/" data-i18n-key="footer.overview">Overview</a>
         <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
@@ -392,12 +390,13 @@
         <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
         <a href="about.html" data-i18n-key="footer.about">About</a>
         <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="request-demo.html" data-i18n-key="nav.book_demo">Request demo</a>
+        <a href="request-demo.html" data-i18n-key="demo.nav.request_demo">Request demo</a>
         <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
         <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
         <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>
         <a href="security.html" data-i18n-key="footer.security_privacy">Security &amp; Privacy</a>
       </div>
+
       <div class="footer-bottom">
         <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
         <div class="footer-bottom-right">
@@ -424,7 +423,6 @@
        ================================================================ -->
   <script src="language-switcher.js"></script>
   <script src="allybi-header.js"></script>
-  <script src="animations.js"></script>
   <script src="allybi-animations.js"></script>
 
 </body>

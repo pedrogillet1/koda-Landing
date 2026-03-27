@@ -10,12 +10,12 @@
 
   <!-- SEO -->
   <title>Allybi — Private AI for High-Stakes Documents</title>
-  <meta name="description" content="Search, organize, edit, and act across documents and messages with grounded answers, project-level control, and encryption by default.">
+  <meta name="description" content="Find, compare, and act on your documents with grounded answers, source verification, and explicit send confirmation. Request a demo.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Allybi — Private AI for High-Stakes Documents">
-  <meta property="og:description" content="Search, organize, edit, and act across documents and messages with grounded answers, project-level control, and encryption by default.">
+  <meta property="og:description" content="Find, compare, and act on your documents with grounded answers, source verification, and explicit send confirmation. Request a demo.">
   <meta property="og:image" content="assets/images/og-home.png">
   <meta property="og:url" content="https://allybi.co">
   <meta property="og:site_name" content="Allybi">
@@ -23,7 +23,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Allybi — Private AI for High-Stakes Documents">
-  <meta name="twitter:description" content="Search, organize, edit, and act across documents and messages with grounded answers, project-level control, and encryption by default.">
+  <meta name="twitter:description" content="Find, compare, and act on your documents with grounded answers, source verification, and explicit send confirmation. Request a demo.">
   <meta name="twitter:image" content="assets/images/og-home.png">
 
   <!-- Fonts -->
@@ -82,7 +82,6 @@
           <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
           <div class="nav-dropdown-menu">
             <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
             <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
           </div>
         </div>
@@ -92,7 +91,7 @@
 
       <div class="header-ctas desktop-only">
         <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.request_demo">Request demo</a>
       </div>
 
       <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
@@ -135,7 +134,6 @@
         <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
         <div class="mobile-dropdown-items">
           <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
           <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
         </div>
       </div>
@@ -145,7 +143,7 @@
 
     <!-- Mobile CTAs -->
     <div class="mobile-ctas">
-      <a href="demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.request_demo">Request demo</a>
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
     </div>
 
@@ -166,86 +164,56 @@
   </div>
 
   <!-- ================================================================
-       MAIN CONTENT
+       MAIN CONTENT — 9 SECTIONS
        ================================================================ -->
   <main>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 1 · HERO
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="hero allybi-section" id="top">
+    <!-- ============================================================
+         SECTION 1: HERO
+         ============================================================ -->
+    <section class="hero" id="top">
       <div class="allybi-container">
         <div class="hero__grid">
           <div class="hero__text">
-            <span class="allybi-hero-eyebrow" data-i18n-key="hero.eyebrow">Private AI for high-stakes documents</span>
-            <h1 class="allybi-h1" data-i18n-key="hero.title">Find the exact file, clause, version, or attachment in seconds.</h1>
-            <p class="allybi-body-lg" data-i18n-key="hero.subtitle">Allybi helps privacy-first teams search, organize, edit, and act across documents and messages — with grounded answers, project-level control, and explicit confirmation before anything is sent.</p>
+            <span class="hero__eyebrow" data-i18n-key="home.hero_eyebrow">Private AI workspace</span>
+            <h1 class="hero__h1" data-i18n-key="home.hero_h1">The right file.<br>Found in seconds.</h1>
+            <p class="hero__sub" data-i18n-key="home.hero_sub">Allybi finds, compares, and acts on your documents — with grounded answers and explicit confirmation before anything is sent.</p>
             <div class="hero__ctas">
-              <a href="demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
-              <a href="#how-it-works" class="allybi-btn allybi-btn--secondary" data-i18n-key="hero.cta_secondary">How it works</a>
+              <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="home.hero_cta_primary">Request demo</a>
+              <a href="#how-it-works" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.hero_cta_secondary">See how it works</a>
             </div>
-            <div class="hero__proof">
-              <span class="allybi-chip allybi-chip--trust">
+            <div class="hero__trust">
+              <span class="hero__trust-item">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                Grounded in your files
+                <span data-i18n-key="home.hero_trust_1">Grounded in your files</span>
               </span>
-              <span class="allybi-chip allybi-chip--trust">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                Encrypted by default
+              <span class="hero__trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.hero_trust_2">No model training</span>
               </span>
-              <span class="allybi-chip">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                Project-level organization
-              </span>
-              <span class="allybi-chip">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Explicit confirmation before send
+              <span class="hero__trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.hero_trust_3">Confirmation before send</span>
               </span>
             </div>
           </div>
           <div class="hero__visual">
-            <div class="hero-scene">
-              <div class="hero-scene__window">
-                <div class="hero-scene__topbar">
-                  <div class="hero-scene__dots"><span></span><span></span><span></span></div>
-                  <div class="hero-scene__search">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    <span class="hero-scene__query">What changed in the indemnity clause in the latest SPA?</span>
-                  </div>
-                </div>
-                <div class="hero-scene__content">
-                  <div class="hero-scene__sidebar">
-                    <div class="hero-scene__folder">Deal Room — Acme Corp</div>
-                    <div class="hero-scene__file hero-scene__file--active">SPA_Draft_v3_Mar12.pdf</div>
-                    <div class="hero-scene__file">SPA_Draft_v2_Feb28.pdf</div>
-                    <div class="hero-scene__file">Term_Sheet_Final.docx</div>
-                    <div class="hero-scene__file">Cap_Table_Q1.xlsx</div>
-                  </div>
-                  <div class="hero-scene__answer">
-                    <div class="hero-scene__answer-label">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                      Grounded answer
-                    </div>
-                    <p>The indemnity cap was raised <strong>from $2M to $5M</strong> in <strong>Section 8.3(b)</strong> of the March 12 draft. The survival period was extended from 18 to 24 months. No changes to the carve-outs.</p>
-                    <div class="hero-scene__source">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                      SPA_Draft_v3_Mar12.pdf — p. 14
-                    </div>
-                  </div>
-                </div>
+            <!-- Product scene: clean workspace mockup -->
+            <div class="hero__scene">
+              <div class="hero__scene-bar">
+                <span class="hero__scene-dot"></span>
+                <span class="hero__scene-dot"></span>
+                <span class="hero__scene-dot"></span>
               </div>
-              <!-- Floating cards -->
-              <div class="hero-scene__float hero-scene__float--version">
-                <span class="hero-scene__float-label">Latest version</span>
-                <span class="hero-scene__float-value">v3 — Mar 12</span>
-                <span class="hero-scene__float-badge">Updated terms</span>
-              </div>
-              <div class="hero-scene__float hero-scene__float--send">
-                <span class="hero-scene__float-label">Ready to send</span>
-                <span class="hero-scene__float-value">SPA_Draft_v3 attached</span>
-                <div class="hero-scene__float-confirm">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Confirm before sending
+              <div class="hero__scene-body">
+                <div class="hero__scene-query">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  What changed in the indemnity clause?
+                </div>
+                <div class="hero__scene-answer">
+                  <div class="hero__scene-badge">Grounded answer</div>
+                  <p>The indemnity cap was raised <strong>from $2M to $5M</strong> in Section 8.3(b). Survival period extended to 24 months.</p>
+                  <span class="hero__scene-source">SPA_Draft_v3.pdf — p. 14</span>
                 </div>
               </div>
             </div>
@@ -254,654 +222,358 @@
       </div>
     </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 2 · TRUST MICRO-STRIP
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="trust-strip">
+    <!-- ============================================================
+         SECTION 2: TRUST BAND
+         ============================================================ -->
+    <section class="trust-band" style="background:var(--allybi-bg-alt-1);padding:28px 0;">
       <div class="allybi-container">
-        <div class="trust-strip__inner">
-          <div class="trust-strip__item" data-i18n-key="home.trust.item1">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            End-to-end encrypted
+        <div class="trust-band__row" style="display:flex;justify-content:center;flex-wrap:wrap;gap:32px 48px;align-items:center;">
+          <span class="trust-band__item" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--allybi-text-muted);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            <span data-i18n-key="home.trust_1">End-to-end encrypted</span>
+          </span>
+          <span class="trust-band__item" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--allybi-text-muted);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span data-i18n-key="home.trust_2">Grounded answers only</span>
+          </span>
+          <span class="trust-band__item" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--allybi-text-muted);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+            <span data-i18n-key="home.trust_3">No model training</span>
+          </span>
+          <span class="trust-band__item" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--allybi-text-muted);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <span data-i18n-key="home.trust_4">Region controls</span>
+          </span>
+          <span class="trust-band__item" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--allybi-text-muted);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n-key="home.trust_5">Confirmation before every send</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3: FIND / COMPARE / ACT
+         ============================================================ -->
+    <section class="home-capabilities" style="padding:var(--allybi-section-py) 0;">
+      <div class="allybi-container">
+        <div style="text-align:center;margin-bottom:64px;">
+          <h2 class="allybi-section-h2" data-i18n-key="home.capabilities_h2" style="font-size:var(--allybi-section-h2-size);line-height:var(--allybi-section-h2-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);letter-spacing:var(--allybi-tracking-tight);">Three moves. Total clarity.</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+          <!-- Find -->
+          <div style="padding:40px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5" style="margin-bottom:24px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 12px;" data-i18n-key="home.cap_find_title">Find</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.cap_find_body">Find the exact file, clause, or number instantly.</p>
           </div>
-          <div class="trust-strip__item" data-i18n-key="home.trust.item2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            No model training on your data
+          <!-- Compare -->
+          <div style="padding:40px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5" style="margin-bottom:24px;"><rect x="2" y="4" width="8" height="16" rx="1"/><rect x="14" y="4" width="8" height="16" rx="1"/><path d="M10 12h4"/></svg>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 12px;" data-i18n-key="home.cap_compare_title">Compare</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.cap_compare_body">Compare versions and spot what changed.</p>
           </div>
-          <div class="trust-strip__item" data-i18n-key="home.trust.item3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Grounded in your files
-          </div>
-          <div class="trust-strip__item" data-i18n-key="home.trust.item4">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            Confirmation before every send
-          </div>
-          <div class="trust-strip__item" data-i18n-key="home.trust.item5">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            EU &amp; US hosting available
+          <!-- Act -->
+          <div style="padding:40px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5" style="margin-bottom:24px;"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 12px;" data-i18n-key="home.cap_act_title">Act</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.cap_act_body">Edit, reply, and send — with confirmation.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 3 · PAIN
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="pain allybi-section" id="pain">
+    <!-- ============================================================
+         SECTION 4: HOW IT WORKS
+         ============================================================ -->
+    <section class="home-how" id="how-it-works" style="padding:var(--allybi-section-py) 0;background:var(--allybi-bg-alt-1);">
       <div class="allybi-container">
-        <div class="pain__header">
-          <h2 class="allybi-h2" data-i18n-key="home.pain.title">The hidden tax isn't just search time.</h2>
-          <p class="allybi-body-lg" data-i18n-key="home.pain.subtitle">Every wrong version, missed clause, or stale attachment compounds into real risk.</p>
+        <div style="text-align:center;margin-bottom:16px;">
+          <h2 class="allybi-section-h2" data-i18n-key="home.how_h2" style="font-size:var(--allybi-section-h2-size);line-height:var(--allybi-section-h2-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);letter-spacing:var(--allybi-tracking-tight);">How Allybi works</h2>
         </div>
-        <div class="pain__grid">
-          <div class="pain__card">
-            <div class="pain__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-error)" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
-            <h3 class="pain__card-title" data-i18n-key="home.pain.card1_title">Wrong version risk</h3>
-            <p class="pain__card-desc" data-i18n-key="home.pain.card1_desc">Someone signs an outdated draft, references a superseded model, or sends stale terms. The damage is already done before anyone notices.</p>
+        <p style="text-align:center;font-size:var(--allybi-section-intro-size);line-height:var(--allybi-section-intro-lh);color:var(--allybi-text-secondary);margin:0 auto 64px;max-width:var(--allybi-max-reading);" data-i18n-key="home.how_sub">Three steps. No learning curve.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+          <!-- Step 1 -->
+          <div style="padding:40px;border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);border:1px solid var(--allybi-border-default);">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--allybi-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin-bottom:20px;">1</div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5" style="margin-bottom:16px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 8px;" data-i18n-key="home.how_step1_title">Bring in your files</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.how_step1_body">Upload docs, connect email, link Slack.</p>
           </div>
-          <div class="pain__card">
-            <div class="pain__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-warning)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h3 class="pain__card-title" data-i18n-key="home.pain.card2_title">Search interruption</h3>
-            <p class="pain__card-desc" data-i18n-key="home.pain.card2_desc">Every time you pause real work to hunt for a file, clause, or number across five tools, you lose focus and momentum on what actually matters.</p>
+          <!-- Step 2 -->
+          <div style="padding:40px;border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);border:1px solid var(--allybi-border-default);">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--allybi-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin-bottom:20px;">2</div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5" style="margin-bottom:16px;"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 8px;" data-i18n-key="home.how_step2_title">Ask in plain language</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.how_step2_body">Get grounded answers with exact sources.</p>
           </div>
-          <div class="pain__card">
-            <div class="pain__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-error)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <h3 class="pain__card-title" data-i18n-key="home.pain.card3_title">Wrong attachment risk</h3>
-            <p class="pain__card-desc" data-i18n-key="home.pain.card3_desc">Sending the wrong file to the wrong person. Allybi surfaces the right version and asks for explicit confirmation before anything leaves your workspace.</p>
+          <!-- Step 3 -->
+          <div style="padding:40px;border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);border:1px solid var(--allybi-border-default);">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--allybi-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin-bottom:20px;">3</div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5" style="margin-bottom:16px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 8px;" data-i18n-key="home.how_step3_title">Act with confidence</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.how_step3_body">Edit, reply, send. Always confirmed.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 4 · USE-CASE SWITCHER
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="use-cases allybi-section" id="use-cases">
+    <!-- ============================================================
+         SECTION 5: USE CASES
+         ============================================================ -->
+    <section class="home-usecases" id="use-cases" style="padding:var(--allybi-section-py) 0;">
       <div class="allybi-container">
-        <div class="use-cases__header">
-          <h2 class="allybi-h2" data-i18n-key="home.usecase.title">Built for teams where precision matters</h2>
-          <p class="allybi-body-lg" data-i18n-key="home.usecase.subtitle">Choose your workflow. See how Allybi fits.</p>
+        <div style="text-align:center;margin-bottom:48px;">
+          <h2 class="allybi-section-h2" data-i18n-key="home.usecases_h2" style="font-size:var(--allybi-section-h2-size);line-height:var(--allybi-section-h2-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);letter-spacing:var(--allybi-tracking-tight);">Built for teams that handle sensitive work.</h2>
         </div>
 
-        <div class="allybi-tabs use-cases__tabs">
-          <div class="allybi-tabs__nav" role="tablist">
-            <button class="allybi-tabs__tab is-active" role="tab" aria-selected="true" data-tab="legal" data-i18n-key="home.usecase.tab_legal">Legal</button>
-            <button class="allybi-tabs__tab" role="tab" aria-selected="false" data-tab="finance" data-i18n-key="home.usecase.tab_finance">Finance</button>
-            <button class="allybi-tabs__tab" role="tab" aria-selected="false" data-tab="business" data-i18n-key="home.usecase.tab_business">Business</button>
-          </div>
-
-          <div class="use-cases__panels">
-            <!-- Legal panel -->
-            <div class="use-cases__panel is-active" data-panel="legal">
-              <div class="use-cases__panel-grid">
-                <div class="use-cases__panel-text">
-                  <h3 class="allybi-h3" data-i18n-key="home.usecase.legal.title">Compare clauses, versions, and evidence without losing the thread.</h3>
-                  <ul class="use-cases__bullets">
-                    <li data-i18n-key="home.usecase.legal.bullet1">Search across contracts, memos, and correspondence in one place</li>
-                    <li data-i18n-key="home.usecase.legal.bullet2">Compare clause changes between draft versions instantly</li>
-                    <li data-i18n-key="home.usecase.legal.bullet3">Every answer grounded in the source document and page number</li>
-                  </ul>
-                  <a href="use-case-legal.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.usecase.legal.cta">See legal use cases</a>
-                </div>
-                <div class="use-cases__panel-visual">
-                  <div class="use-cases__scene">
-                    <div class="use-cases__scene-bar">
-                      <span class="use-cases__scene-dot"></span>
-                      <span class="use-cases__scene-dot"></span>
-                      <span class="use-cases__scene-dot"></span>
-                    </div>
-                    <div class="use-cases__scene-body">
-                      <div class="use-cases__scene-query">"Show clause 12.4 changes between v2 and v3"</div>
-                      <div class="use-cases__scene-result">
-                        <strong>Section 12.4 — Limitation of Liability</strong>
-                        <p>Cap changed from <span class="use-cases__highlight use-cases__highlight--removed">$1M</span> to <span class="use-cases__highlight use-cases__highlight--added">$3M</span>. Exclusion for gross negligence added in v3.</p>
-                        <span class="use-cases__scene-source">NDA_v3_Final.pdf — p. 8</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Finance panel -->
-            <div class="use-cases__panel" data-panel="finance">
-              <div class="use-cases__panel-grid">
-                <div class="use-cases__panel-text">
-                  <h3 class="allybi-h3" data-i18n-key="home.usecase.finance.title">Find the exact deck, cap table, model, or number fast.</h3>
-                  <ul class="use-cases__bullets">
-                    <li data-i18n-key="home.usecase.finance.bullet1">Pull revenue figures, projections, and metrics from any uploaded model</li>
-                    <li data-i18n-key="home.usecase.finance.bullet2">Compare numbers across quarterly versions automatically</li>
-                    <li data-i18n-key="home.usecase.finance.bullet3">Grounded answers with exact cell references and source pages</li>
-                  </ul>
-                  <a href="use-case-finance.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.usecase.finance.cta">See finance use cases</a>
-                </div>
-                <div class="use-cases__panel-visual">
-                  <div class="use-cases__scene">
-                    <div class="use-cases__scene-bar">
-                      <span class="use-cases__scene-dot"></span>
-                      <span class="use-cases__scene-dot"></span>
-                      <span class="use-cases__scene-dot"></span>
-                    </div>
-                    <div class="use-cases__scene-body">
-                      <div class="use-cases__scene-query">"What was Q4 ARR in the latest board deck?"</div>
-                      <div class="use-cases__scene-result">
-                        <strong>Annual Recurring Revenue — Q4 2025</strong>
-                        <p>Q4 ARR reached <span class="use-cases__highlight use-cases__highlight--added">$4.2M</span>, up 38% from Q3. Net revenue retention at 112%.</p>
-                        <span class="use-cases__scene-source">Board_Deck_Q4_2025.pdf — slide 7</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Business panel -->
-            <div class="use-cases__panel" data-panel="business">
-              <div class="use-cases__panel-grid">
-                <div class="use-cases__panel-text">
-                  <h3 class="allybi-h3" data-i18n-key="home.usecase.business.title">Keep proposals, plans, and decision docs actionable.</h3>
-                  <ul class="use-cases__bullets">
-                    <li data-i18n-key="home.usecase.business.bullet1">Search across proposals, SOWs, and project plans in one workspace</li>
-                    <li data-i18n-key="home.usecase.business.bullet2">Get answers grounded in the latest version of every document</li>
-                    <li data-i18n-key="home.usecase.business.bullet3">Draft responses and emails from your own project context</li>
-                  </ul>
-                  <a href="use-case-business.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.usecase.business.cta">See business use cases</a>
-                </div>
-                <div class="use-cases__panel-visual">
-                  <div class="use-cases__scene">
-                    <div class="use-cases__scene-bar">
-                      <span class="use-cases__scene-dot"></span>
-                      <span class="use-cases__scene-dot"></span>
-                      <span class="use-cases__scene-dot"></span>
-                    </div>
-                    <div class="use-cases__scene-body">
-                      <div class="use-cases__scene-query">"Summarize the deliverables in the Acme SOW"</div>
-                      <div class="use-cases__scene-result">
-                        <strong>Acme Corp — Statement of Work</strong>
-                        <p>3 deliverables: Platform audit (Apr 15), Migration plan (May 1), Go-live support (Jun 15). Total contract value: <span class="use-cases__highlight use-cases__highlight--added">$185K</span>.</p>
-                        <span class="use-cases__scene-source">Acme_SOW_v2_Final.docx — p. 3</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Tabs -->
+        <div style="display:flex;justify-content:center;gap:8px;margin-bottom:48px;" id="uc-tabs">
+          <button class="uc-tab uc-tab--active" data-tab="legal" style="padding:10px 24px;border-radius:999px;border:1px solid var(--allybi-border-default);background:var(--allybi-accent);color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:var(--allybi-font);" data-i18n-key="home.tab_legal">Legal</button>
+          <button class="uc-tab" data-tab="finance" style="padding:10px 24px;border-radius:999px;border:1px solid var(--allybi-border-default);background:var(--allybi-bg-surface);color:var(--allybi-text-secondary);font-size:15px;font-weight:600;cursor:pointer;font-family:var(--allybi-font);" data-i18n-key="home.tab_finance">Finance</button>
+          <button class="uc-tab" data-tab="business" style="padding:10px 24px;border-radius:999px;border:1px solid var(--allybi-border-default);background:var(--allybi-bg-surface);color:var(--allybi-text-secondary);font-size:15px;font-weight:600;cursor:pointer;font-family:var(--allybi-font);" data-i18n-key="home.tab_business">Business</button>
         </div>
-      </div>
-    </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 5 · HOW IT WORKS
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="how-it-works allybi-section" id="how-it-works">
-      <div class="allybi-container">
-        <div class="how-it-works__header">
-          <h2 class="allybi-h2" data-i18n-key="home.steps.title">How Allybi works</h2>
-          <p class="allybi-body-lg" data-i18n-key="home.steps.subtitle">Three steps. No chaos. No learning curve.</p>
-        </div>
-        <div class="how-it-works__grid">
-          <div class="how-it-works__step">
-            <div class="how-it-works__number">1</div>
-            <div class="how-it-works__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            </div>
-            <h3 class="how-it-works__step-title" data-i18n-key="home.steps.step1_title">Bring in your files</h3>
-            <p class="how-it-works__step-desc" data-i18n-key="home.steps.step1_desc">Upload documents, connect email, or link Slack. Allybi indexes everything into private, project-level workspaces.</p>
-          </div>
-          <div class="how-it-works__connector" aria-hidden="true">
-            <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--allybi-border-strong)" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
-          </div>
-          <div class="how-it-works__step">
-            <div class="how-it-works__number">2</div>
-            <div class="how-it-works__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </div>
-            <h3 class="how-it-works__step-title" data-i18n-key="home.steps.step2_title">Ask in plain language</h3>
-            <p class="how-it-works__step-desc" data-i18n-key="home.steps.step2_desc">Ask anything — "What changed in the indemnity clause?" Allybi returns grounded answers with exact sources and page numbers.</p>
-          </div>
-          <div class="how-it-works__connector" aria-hidden="true">
-            <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--allybi-border-strong)" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
-          </div>
-          <div class="how-it-works__step">
-            <div class="how-it-works__number">3</div>
-            <div class="how-it-works__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            </div>
-            <h3 class="how-it-works__step-title" data-i18n-key="home.steps.step3_title">Act with confidence</h3>
-            <p class="how-it-works__step-desc" data-i18n-key="home.steps.step3_desc">Edit documents, draft responses, or send files — all from one workspace. Allybi always asks for confirmation before anything is sent.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 6 · PRODUCT PILLARS
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="pillars allybi-section" id="pillars">
-      <div class="allybi-container">
-
-        <!-- Pillar 1: Grounded search -->
-        <div class="pillars__block pillars__block--normal">
-          <div class="pillars__text">
-            <span class="allybi-eyebrow" data-i18n-key="home.pillars.search_eyebrow">Search & Answers</span>
-            <h2 class="allybi-h2" data-i18n-key="home.pillars.search_title">Grounded search and answers</h2>
-            <p class="allybi-body-lg" data-i18n-key="home.pillars.search_desc">Every answer comes from your actual documents — with source file, page number, and highlighted passage. No hallucinations. No guessing.</p>
-            <ul class="pillars__list">
-              <li data-i18n-key="home.pillars.search_bullet1">Natural language search across all project files</li>
-              <li data-i18n-key="home.pillars.search_bullet2">Answers cite exact source and page</li>
-              <li data-i18n-key="home.pillars.search_bullet3">Compare clauses and versions side by side</li>
+        <!-- Tab panel: Legal -->
+        <div id="uc-panel-legal" class="uc-panel" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+          <div>
+            <h3 style="font-size:var(--allybi-card-title-size);line-height:var(--allybi-card-title-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 24px;" data-i18n-key="home.uc_legal_h3">Search clauses. Compare drafts. Send the right version.</h3>
+            <ul style="list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:14px;">
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_legal_1">Search across contracts and memos instantly</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_legal_2">Compare clause changes between draft versions</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_legal_3">Every answer grounded in the source document</span>
+              </li>
             </ul>
+            <a href="use-case-legal.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.uc_legal_cta">Learn more</a>
           </div>
-          <div class="pillars__visual">
-            <div class="pillars__mockup">
-              <div class="pillars__mockup-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="pillars__mockup-body">
-                <div class="pillars__mockup-query">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                  "Non-compete radius in the latest agreement?"
-                </div>
-                <div class="pillars__mockup-answer">
-                  <div class="pillars__mockup-label">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    Grounded answer
-                  </div>
-                  <p>The non-compete radius is <strong>50 miles</strong> with a <strong>24-month</strong> duration, as defined in Section 7.2(a).</p>
-                  <span class="pillars__mockup-source">Employment_Agreement_v4.pdf — p. 11</span>
-                </div>
-              </div>
+          <div style="background:var(--allybi-bg-alt-1);border-radius:var(--allybi-radius-lg);padding:40px;border:1px solid var(--allybi-border-subtle);min-height:280px;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:var(--allybi-text-muted);font-size:13px;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-border-strong)" stroke-width="1"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <p style="margin:12px 0 0;">Legal workspace</p>
             </div>
           </div>
         </div>
 
-        <!-- Pillar 2: Project-level organization -->
-        <div class="pillars__block pillars__block--reversed">
-          <div class="pillars__text">
-            <span class="allybi-eyebrow" data-i18n-key="home.pillars.org_eyebrow">Organization</span>
-            <h2 class="allybi-h2" data-i18n-key="home.pillars.org_title">Project-level organization</h2>
-            <p class="allybi-body-lg" data-i18n-key="home.pillars.org_desc">Group documents, messages, and data by project. Every workspace has its own context boundary — your deal room files never leak into your HR project.</p>
-            <ul class="pillars__list">
-              <li data-i18n-key="home.pillars.org_bullet1">Isolated workspaces per deal, matter, or initiative</li>
-              <li data-i18n-key="home.pillars.org_bullet2">Drag-and-drop file management</li>
-              <li data-i18n-key="home.pillars.org_bullet3">Version history tracked automatically</li>
+        <!-- Tab panel: Finance -->
+        <div id="uc-panel-finance" class="uc-panel" style="display:none;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+          <div>
+            <h3 style="font-size:var(--allybi-card-title-size);line-height:var(--allybi-card-title-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 24px;" data-i18n-key="home.uc_finance_h3">Find the number. Pull the deck. Respond fast.</h3>
+            <ul style="list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:14px;">
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_finance_1">Pull revenue figures from any uploaded model</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_finance_2">Compare numbers across quarterly versions</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_finance_3">Grounded answers with exact cell references</span>
+              </li>
             </ul>
+            <a href="use-case-finance.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.uc_finance_cta">Learn more</a>
           </div>
-          <div class="pillars__visual">
-            <div class="pillars__mockup">
-              <div class="pillars__mockup-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="pillars__mockup-body pillars__mockup-body--folders">
-                <div class="pillars__folder-row">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                  <strong>Deal Room — Acme Corp</strong>
-                  <span class="pillars__file-count">12 files</span>
-                </div>
-                <div class="pillars__folder-row">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                  <strong>Series B Fundraise</strong>
-                  <span class="pillars__file-count">8 files</span>
-                </div>
-                <div class="pillars__folder-row">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                  <strong>HR — Employee Agreements</strong>
-                  <span class="pillars__file-count">5 files</span>
-                </div>
-                <div class="pillars__folder-row pillars__folder-row--muted">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                  Each workspace is isolated
-                </div>
-              </div>
+          <div style="background:var(--allybi-bg-alt-1);border-radius:var(--allybi-radius-lg);padding:40px;border:1px solid var(--allybi-border-subtle);min-height:280px;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:var(--allybi-text-muted);font-size:13px;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-border-strong)" stroke-width="1"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              <p style="margin:12px 0 0;">Finance workspace</p>
             </div>
           </div>
         </div>
 
-        <!-- Pillar 3: Action inside the workflow -->
-        <div class="pillars__block pillars__block--normal">
-          <div class="pillars__text">
-            <span class="allybi-eyebrow" data-i18n-key="home.pillars.action_eyebrow">Action</span>
-            <h2 class="allybi-h2" data-i18n-key="home.pillars.action_title">Action inside the workflow</h2>
-            <p class="allybi-body-lg" data-i18n-key="home.pillars.action_desc">Don't just find information — act on it. Edit documents, draft emails, attach files, and send — all from within Allybi. With explicit confirmation before anything leaves.</p>
-            <ul class="pillars__list">
-              <li data-i18n-key="home.pillars.action_bullet1">Edit docs and sheets inline</li>
-              <li data-i18n-key="home.pillars.action_bullet2">Draft and send emails from project context</li>
-              <li data-i18n-key="home.pillars.action_bullet3">Confirmation step before every external action</li>
+        <!-- Tab panel: Business -->
+        <div id="uc-panel-business" class="uc-panel" style="display:none;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+          <div>
+            <h3 style="font-size:var(--allybi-card-title-size);line-height:var(--allybi-card-title-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 24px;" data-i18n-key="home.uc_business_h3">Organize proposals. Find answers. Move forward.</h3>
+            <ul style="list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:14px;">
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_business_1">Search across proposals and project plans</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_business_2">Get answers grounded in the latest version</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" style="flex-shrink:0;margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n-key="home.uc_business_3">Draft responses from your own project context</span>
+              </li>
             </ul>
+            <a href="use-case-business.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.uc_business_cta">Learn more</a>
           </div>
-          <div class="pillars__visual">
-            <div class="pillars__mockup">
-              <div class="pillars__mockup-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="pillars__mockup-body pillars__mockup-body--action">
-                <div class="pillars__action-draft">
-                  <div class="pillars__action-label">Draft email</div>
-                  <div class="pillars__action-to">To: j.smith@acmecorp.com</div>
-                  <div class="pillars__action-body">Hi John, please find attached the updated SPA (v3) with the revised indemnity terms we discussed...</div>
-                  <div class="pillars__action-attachment">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                    SPA_Draft_v3_Mar12.pdf
-                  </div>
-                </div>
-                <div class="pillars__action-confirm">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  Confirm and send
-                </div>
-              </div>
+          <div style="background:var(--allybi-bg-alt-1);border-radius:var(--allybi-radius-lg);padding:40px;border:1px solid var(--allybi-border-subtle);min-height:280px;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:var(--allybi-text-muted);font-size:13px;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-border-strong)" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <p style="margin:12px 0 0;">Business workspace</p>
             </div>
           </div>
         </div>
-
       </div>
+
+      <!-- Tab switching -->
+      <script>
+        (function(){
+          var tabs = document.querySelectorAll('.uc-tab');
+          tabs.forEach(function(tab){
+            tab.addEventListener('click', function(){
+              tabs.forEach(function(t){
+                t.style.background = 'var(--allybi-bg-surface)';
+                t.style.color = 'var(--allybi-text-secondary)';
+                t.classList.remove('uc-tab--active');
+              });
+              tab.style.background = 'var(--allybi-accent)';
+              tab.style.color = '#fff';
+              tab.classList.add('uc-tab--active');
+              document.querySelectorAll('.uc-panel').forEach(function(p){ p.style.display = 'none'; });
+              var panel = document.getElementById('uc-panel-' + tab.getAttribute('data-tab'));
+              if(panel) panel.style.display = 'grid';
+            });
+          });
+        })();
+      </script>
     </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 7 · ACTION LAYER
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="action-layer allybi-section" id="action-layer">
+    <!-- ============================================================
+         SECTION 6: SECURITY
+         ============================================================ -->
+    <section class="home-security" style="padding:var(--allybi-section-py) 0;background:var(--allybi-bg-alt-1);">
       <div class="allybi-container">
-        <div class="action-layer__header">
-          <h2 class="allybi-h2" data-i18n-key="home.action.title">Do more without leaving Allybi</h2>
-          <p class="allybi-body-lg" data-i18n-key="home.action.subtitle">Search is just the start. Edit, draft, and send — all from one workspace.</p>
-        </div>
-        <div class="action-layer__grid">
-
-          <!-- Edit card -->
-          <div class="action-layer__card">
-            <div class="action-layer__card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-            </div>
-            <h3 class="action-layer__card-title" data-i18n-key="home.action.edit_title">Edit Docs & Sheets</h3>
-            <p class="action-layer__card-desc" data-i18n-key="home.action.edit_desc">Make changes directly inside Allybi. AI-assisted editing grounded in your project context.</p>
-            <ul class="action-layer__card-list">
-              <li data-i18n-key="home.action.edit_bullet1">Inline document editing with AI suggestions</li>
-              <li data-i18n-key="home.action.edit_bullet2">Spreadsheet editing with formula support</li>
-              <li data-i18n-key="home.action.edit_bullet3">Version history preserved automatically</li>
-              <li data-i18n-key="home.action.edit_bullet4">Export to PDF, DOCX, or XLSX</li>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+          <!-- Left: trust points -->
+          <div>
+            <h2 class="allybi-section-h2" data-i18n-key="home.security_h2" style="font-size:var(--allybi-section-h2-size);line-height:var(--allybi-section-h2-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);letter-spacing:var(--allybi-tracking-tight);margin:0 0 40px;">Private by design.</h2>
+            <ul style="list-style:none;padding:0;margin:0 0 40px;display:flex;flex-direction:column;gap:20px;">
+              <li style="display:flex;align-items:center;gap:14px;font-size:var(--allybi-body-size);line-height:var(--allybi-body-lh);color:var(--allybi-text-secondary);">
+                <div style="width:40px;height:40px;border-radius:var(--allybi-radius-sm);background:var(--allybi-trust-subtle);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                </div>
+                <span data-i18n-key="home.sec_1">Encryption at rest and in transit</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:14px;font-size:var(--allybi-body-size);line-height:var(--allybi-body-lh);color:var(--allybi-text-secondary);">
+                <div style="width:40px;height:40px;border-radius:var(--allybi-radius-sm);background:var(--allybi-trust-subtle);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                </div>
+                <span data-i18n-key="home.sec_2">No model training on your data</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:14px;font-size:var(--allybi-body-size);line-height:var(--allybi-body-lh);color:var(--allybi-text-secondary);">
+                <div style="width:40px;height:40px;border-radius:var(--allybi-radius-sm);background:var(--allybi-trust-subtle);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span data-i18n-key="home.sec_3">Explicit send confirmation</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:14px;font-size:var(--allybi-body-size);line-height:var(--allybi-body-lh);color:var(--allybi-text-secondary);">
+                <div style="width:40px;height:40px;border-radius:var(--allybi-radius-sm);background:var(--allybi-trust-subtle);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span data-i18n-key="home.sec_4">Workspace isolation</span>
+              </li>
             </ul>
+            <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.sec_cta">View security overview</a>
           </div>
-
-          <!-- Connect card -->
-          <div class="action-layer__card">
-            <div class="action-layer__card-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-accent)" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <!-- Right: architecture diagram -->
+          <div style="background:var(--allybi-bg-surface);border-radius:var(--allybi-radius-lg);border:1px solid var(--allybi-border-default);padding:48px;display:flex;flex-direction:column;align-items:center;gap:24px;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;">
+              <div style="padding:14px 28px;border-radius:var(--allybi-radius-sm);background:var(--allybi-accent-subtle);border:1px solid var(--allybi-accent);color:var(--allybi-accent);font-size:13px;font-weight:600;text-align:center;">Your documents</div>
+              <svg width="2" height="32" viewBox="0 0 2 32"><line x1="1" y1="0" x2="1" y2="32" stroke="var(--allybi-border-strong)" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+              <div style="padding:14px 28px;border-radius:var(--allybi-radius-sm);background:var(--allybi-trust-subtle);border:1px solid var(--allybi-trust);color:var(--allybi-trust-muted);font-size:13px;font-weight:600;text-align:center;">Encrypted processing</div>
+              <svg width="2" height="32" viewBox="0 0 2 32"><line x1="1" y1="0" x2="1" y2="32" stroke="var(--allybi-border-strong)" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+              <div style="padding:14px 28px;border-radius:var(--allybi-radius-sm);background:var(--allybi-bg-alt-1);border:1px solid var(--allybi-border-default);color:var(--allybi-text-secondary);font-size:13px;font-weight:600;text-align:center;">Grounded answers</div>
+              <svg width="2" height="32" viewBox="0 0 2 32"><line x1="1" y1="0" x2="1" y2="32" stroke="var(--allybi-border-strong)" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+              <div style="padding:14px 28px;border-radius:var(--allybi-radius-sm);background:var(--allybi-bg-alt-2);border:1px solid var(--allybi-border-default);color:var(--allybi-text-secondary);font-size:13px;font-weight:600;text-align:center;">Confirm before send</div>
             </div>
-            <h3 class="action-layer__card-title" data-i18n-key="home.action.connect_title">Connect Inbox & Slack</h3>
-            <p class="action-layer__card-desc" data-i18n-key="home.action.connect_desc">Search across email and Slack alongside your documents. Draft and send responses with full project context.</p>
-            <ul class="action-layer__card-list">
-              <li data-i18n-key="home.action.connect_bullet1">Gmail and Outlook integration</li>
-              <li data-i18n-key="home.action.connect_bullet2">Slack channel and DM search</li>
-              <li data-i18n-key="home.action.connect_bullet3">Draft emails grounded in your files</li>
-              <li data-i18n-key="home.action.connect_bullet4">Explicit confirmation before every send</li>
-            </ul>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 8 · SECURITY TEASER
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="security-teaser allybi-section" id="security">
+    <!-- ============================================================
+         SECTION 7: INTEGRATIONS
+         ============================================================ -->
+    <section class="home-integrations" style="padding:var(--allybi-section-py) 0;">
       <div class="allybi-container">
-        <div class="security-teaser__header">
-          <h2 class="allybi-h2" data-i18n-key="home.security.title">Private by design. Clear by design.</h2>
-          <p class="allybi-body-lg" data-i18n-key="home.security.subtitle">Your data never trains models. Every action requires confirmation. Architecture built for trust.</p>
+        <div style="text-align:center;margin-bottom:16px;">
+          <h2 class="allybi-section-h2" data-i18n-key="home.integrations_h2" style="font-size:var(--allybi-section-h2-size);line-height:var(--allybi-section-h2-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);letter-spacing:var(--allybi-tracking-tight);">Works where your files already live.</h2>
         </div>
-        <div class="security-teaser__grid">
-          <div class="security-teaser__pillars">
-            <div class="security-teaser__pillar">
-              <div class="security-teaser__pillar-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              </div>
-              <div>
-                <h4 data-i18n-key="home.security.pillar1">End-to-end encryption</h4>
-                <p data-i18n-key="home.security.pillar1_desc">All data encrypted in transit and at rest. Your files are never readable by anyone but you.</p>
-              </div>
-            </div>
-            <div class="security-teaser__pillar">
-              <div class="security-teaser__pillar-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div>
-                <h4 data-i18n-key="home.security.pillar2">Zero model training</h4>
-                <p data-i18n-key="home.security.pillar2_desc">Your documents are never used to train AI models. Contractually guaranteed.</p>
-              </div>
-            </div>
-            <div class="security-teaser__pillar">
-              <div class="security-teaser__pillar-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              </div>
-              <div>
-                <h4 data-i18n-key="home.security.pillar3">Explicit confirmation</h4>
-                <p data-i18n-key="home.security.pillar3_desc">Nothing is sent, shared, or emailed without your explicit confirmation. Every time.</p>
-              </div>
-            </div>
-            <div class="security-teaser__pillar">
-              <div class="security-teaser__pillar-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              </div>
-              <div>
-                <h4 data-i18n-key="home.security.pillar4">EU & US hosting</h4>
-                <p data-i18n-key="home.security.pillar4_desc">Choose where your data lives. Meet regulatory requirements with region-specific infrastructure.</p>
-              </div>
-            </div>
+        <p style="text-align:center;font-size:var(--allybi-section-intro-size);line-height:var(--allybi-section-intro-lh);color:var(--allybi-text-secondary);margin:0 auto 64px;max-width:var(--allybi-max-reading);" data-i18n-key="home.integrations_sub">No migration required.</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+          <!-- Gmail -->
+          <div style="padding:40px 32px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);text-align:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-muted)" stroke-width="1.5" style="margin-bottom:20px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <h3 style="font-size:17px;font-weight:var(--allybi-weight-semibold);color:var(--allybi-text-strongest);margin:0;" data-i18n-key="home.int_gmail">Gmail</h3>
           </div>
-          <div class="security-teaser__diagram">
-            <div class="security-teaser__arch">
-              <div class="security-teaser__arch-row">
-                <div class="security-teaser__arch-box security-teaser__arch-box--user">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                  Your team
-                </div>
-              </div>
-              <div class="security-teaser__arch-line" aria-hidden="true"></div>
-              <div class="security-teaser__arch-row">
-                <div class="security-teaser__arch-box security-teaser__arch-box--encrypt">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                  Encrypted layer
-                </div>
-              </div>
-              <div class="security-teaser__arch-line" aria-hidden="true"></div>
-              <div class="security-teaser__arch-row security-teaser__arch-row--split">
-                <div class="security-teaser__arch-box security-teaser__arch-box--workspace">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                  Workspace A
-                </div>
-                <div class="security-teaser__arch-box security-teaser__arch-box--workspace">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-                  Workspace B
-                </div>
-              </div>
-              <div class="security-teaser__arch-line" aria-hidden="true"></div>
-              <div class="security-teaser__arch-row">
-                <div class="security-teaser__arch-box security-teaser__arch-box--ai">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                  AI layer (no training)
-                </div>
-              </div>
-            </div>
+          <!-- Outlook -->
+          <div style="padding:40px 32px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);text-align:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-muted)" stroke-width="1.5" style="margin-bottom:20px;"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+            <h3 style="font-size:17px;font-weight:var(--allybi-weight-semibold);color:var(--allybi-text-strongest);margin:0;" data-i18n-key="home.int_outlook">Outlook</h3>
+          </div>
+          <!-- Slack -->
+          <div style="padding:40px 32px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);text-align:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-muted)" stroke-width="1.5" style="margin-bottom:20px;"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M14 20.5c0 .83-.67 1.5-1.5 1.5S11 21.33 11 20.5V19h1.5c.83 0 1.5.67 1.5 1.5z"/><path d="M10 9.5C10 10.33 9.33 11 8.5 11h-5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z"/><path d="M10 3.5C10 2.67 10.67 2 11.5 2S13 2.67 13 3.5V5h-1.5C10.67 5 10 4.33 10 3.5z"/></svg>
+            <h3 style="font-size:17px;font-weight:var(--allybi-weight-semibold);color:var(--allybi-text-strongest);margin:0;" data-i18n-key="home.int_slack">Slack</h3>
+          </div>
+          <!-- Docs & Sheets -->
+          <div style="padding:40px 32px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);text-align:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-muted)" stroke-width="1.5" style="margin-bottom:20px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <h3 style="font-size:17px;font-weight:var(--allybi-weight-semibold);color:var(--allybi-text-strongest);margin:0;" data-i18n-key="home.int_docs">Docs &amp; Sheets</h3>
           </div>
         </div>
-        <div class="security-teaser__cta">
-          <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.security.cta">View security overview</a>
+        <div style="text-align:center;margin-top:48px;">
+          <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.integrations_cta">View all integrations</a>
         </div>
       </div>
     </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 9 · INTEGRATIONS TEASER
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="integrations-teaser allybi-section" id="integrations">
+    <!-- ============================================================
+         SECTION 8: CUSTOMER STORIES
+         ============================================================ -->
+    <section class="home-stories" style="padding:var(--allybi-section-py) 0;background:var(--allybi-bg-alt-1);">
       <div class="allybi-container">
-        <div class="integrations-teaser__header">
-          <h2 class="allybi-h2" data-i18n-key="home.integrations.title">Work where your files and conversations already live.</h2>
-          <p class="allybi-body-lg" data-i18n-key="home.integrations.subtitle">Connect the tools your team already uses. No migration required.</p>
+        <div style="text-align:center;margin-bottom:64px;">
+          <h2 class="allybi-section-h2" data-i18n-key="home.stories_h2" style="font-size:var(--allybi-section-h2-size);line-height:var(--allybi-section-h2-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);letter-spacing:var(--allybi-tracking-tight);">How teams work with Allybi.</h2>
         </div>
-        <div class="integrations-teaser__grid">
-
-          <div class="integrations-teaser__card">
-            <div class="integrations-teaser__card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2l10 7 10-7z" fill="#EA4335"/><path d="M2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6l-10 7L2 6z" fill="#FBBC05"/><path d="M2 6l10 7V6H2z" fill="#34A853"/><path d="M22 6l-10 7V6h10z" fill="#4285F4"/></svg>
-            </div>
-            <h3 class="integrations-teaser__card-title" data-i18n-key="home.integrations.gmail_title">Gmail</h3>
-            <p class="integrations-teaser__card-desc" data-i18n-key="home.integrations.gmail_desc">Search and draft emails alongside your documents. Send with one click and explicit confirmation.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+          <!-- Story 1 -->
+          <div style="padding:40px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);">
+            <span style="display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--allybi-text-subtle);margin-bottom:16px;" data-i18n-key="home.story_label">Representative workflow</span>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 12px;" data-i18n-key="home.story1_role">General Counsel</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.story1_outcome">Reduced contract review time by finding clauses across 200+ agreements in seconds instead of hours.</p>
           </div>
-
-          <div class="integrations-teaser__card">
-            <div class="integrations-teaser__card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M2 6l10 7 10-7v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z" fill="#0078D4"/><path d="M22 6l-10 7L2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" fill="#0078D4" opacity="0.8"/></svg>
-            </div>
-            <h3 class="integrations-teaser__card-title" data-i18n-key="home.integrations.outlook_title">Outlook</h3>
-            <p class="integrations-teaser__card-desc" data-i18n-key="home.integrations.outlook_desc">Connect your Outlook inbox. Search across emails and attachments inside your workspace.</p>
+          <!-- Story 2 -->
+          <div style="padding:40px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);">
+            <span style="display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--allybi-text-subtle);margin-bottom:16px;" data-i18n-key="home.story_label">Representative workflow</span>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 12px;" data-i18n-key="home.story2_role">CFO</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.story2_outcome">Pulled quarterly figures from financial models and compared year-over-year changes before board meetings.</p>
           </div>
-
-          <div class="integrations-teaser__card">
-            <div class="integrations-teaser__card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" fill="#E01E5A"/><path d="M14.5 2v5.5H20" fill="#ECE11A" opacity="0.6"/><rect x="8" y="8" width="4" height="2" rx="1" fill="#fff"/><rect x="8" y="12" width="8" height="2" rx="1" fill="#fff"/><rect x="8" y="16" width="6" height="2" rx="1" fill="#fff"/></svg>
-            </div>
-            <h3 class="integrations-teaser__card-title" data-i18n-key="home.integrations.slack_title">Slack</h3>
-            <p class="integrations-teaser__card-desc" data-i18n-key="home.integrations.slack_desc">Search Slack channels and DMs alongside your documents. Find the message and the file in one query.</p>
+          <!-- Story 3 -->
+          <div style="padding:40px;border:1px solid var(--allybi-border-default);border-radius:var(--allybi-radius-card);background:var(--allybi-bg-surface);">
+            <span style="display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--allybi-text-subtle);margin-bottom:16px;" data-i18n-key="home.story_label">Representative workflow</span>
+            <h3 style="font-size:var(--allybi-card-title-size);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-strongest);margin:0 0 12px;" data-i18n-key="home.story3_role">Head of Operations</h3>
+            <p style="font-size:var(--allybi-body-sm-size);line-height:var(--allybi-body-sm-lh);color:var(--allybi-text-secondary);margin:0;" data-i18n-key="home.story3_outcome">Organized project proposals and drafted responses grounded in the latest approved versions.</p>
           </div>
-
-          <div class="integrations-teaser__card">
-            <div class="integrations-teaser__card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#4285F4"/><polyline points="14 2 14 8 20 8" fill="#A1C2FA"/><rect x="8" y="12" width="8" height="1.5" rx="0.5" fill="#fff"/><rect x="8" y="15" width="6" height="1.5" rx="0.5" fill="#fff" opacity="0.7"/></svg>
-            </div>
-            <h3 class="integrations-teaser__card-title" data-i18n-key="home.integrations.docs_title">Docs & Sheets</h3>
-            <p class="integrations-teaser__card-desc" data-i18n-key="home.integrations.docs_desc">Edit documents and spreadsheets directly inside Allybi. AI-assisted, version-tracked, and always grounded.</p>
-          </div>
-
         </div>
-        <div class="integrations-teaser__cta">
-          <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.integrations.cta">View integrations</a>
+        <div style="text-align:center;margin-top:48px;">
+          <a href="customers.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="home.stories_cta">See customer stories</a>
         </div>
       </div>
     </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 10 · FAQ
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="faq allybi-section" id="faq">
+    <!-- ============================================================
+         SECTION 9: FINAL CTA
+         ============================================================ -->
+    <section class="home-final-cta" style="padding:var(--allybi-section-py) 0;background:var(--allybi-bg-dark);text-align:center;">
       <div class="allybi-container">
-        <div class="faq__header">
-          <h2 class="allybi-h2" data-i18n-key="home.faq.title">Frequently asked questions</h2>
-        </div>
-        <div class="faq__list allybi-accordion">
-
-          <!-- Q1 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q1">What is Allybi?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a1">Allybi is a private AI workspace for documents. It lets teams search, organize, edit, and act across files and messages with grounded answers, project-level control, and encryption by default. Think of it as your team's intelligent file system that actually understands what's inside every document.</p>
-            </div>
-          </div>
-
-          <!-- Q2 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q2">How are answers grounded?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a2">Every answer Allybi returns cites the exact source document, page number, and relevant passage. If the information doesn't exist in your files, Allybi will tell you — it never fabricates answers. Grounding is enforced at the architecture level, not just the prompt level.</p>
-            </div>
-          </div>
-
-          <!-- Q3 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q3">Is Allybi private?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a3">Yes. Allybi encrypts all data in transit and at rest. Your documents are never used to train AI models — this is contractually guaranteed. Workspaces are isolated, and no data leaks between projects. You choose where your data is hosted (EU or US).</p>
-            </div>
-          </div>
-
-          <!-- Q4 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q4">Which files and workflows does Allybi support?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a4">Allybi supports PDF, DOCX, XLSX, PPTX, and plain text files. You can also connect Gmail, Outlook, and Slack to search across emails and messages. Edit documents and spreadsheets directly inside the workspace.</p>
-            </div>
-          </div>
-
-          <!-- Q5 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q5">Can Allybi search email or Slack?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a5">Yes. Connect your Gmail, Outlook, or Slack account and Allybi will index messages alongside your documents. Search across everything in one query — find the email thread and the attached contract at the same time.</p>
-            </div>
-          </div>
-
-          <!-- Q6 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q6">What happens before a message is sent?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a6">Allybi always shows you a confirmation screen before anything is sent externally — whether it's an email, a Slack message, or a file share. You review the content, recipients, and attachments before confirming. Nothing leaves your workspace without your explicit approval.</p>
-            </div>
-          </div>
-
-          <!-- Q7 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q7">Do my documents train AI models?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a7">No. Your documents never train AI models. This is contractually guaranteed in our terms of service. Allybi uses your files only to generate answers for you during your session — nothing is retained for model improvement.</p>
-            </div>
-          </div>
-
-          <!-- Q8 -->
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="home.faq.q8">Who is Allybi for?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="home.faq.a8">Allybi is built for legal, finance, and business teams that handle sensitive documents daily. If your work involves contracts, agreements, financial models, board decks, proposals, or compliance documents — and privacy matters — Allybi is built for you.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         SECTION 11 · FINAL CTA
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="final-cta allybi-section" id="final-cta">
-      <div class="allybi-container">
-        <div class="final-cta__inner">
-          <h2 class="allybi-h2" data-i18n-key="home.final_cta.title">Your files, finally useful.</h2>
-          <p class="allybi-body-lg" data-i18n-key="home.final_cta.support">Bring your documents, messages, and version history into one private workspace.</p>
-          <div class="final-cta__buttons">
-            <a href="demo.html" class="allybi-btn allybi-btn--primary-inverse" data-i18n-key="nav.book_demo">Book demo</a>
-          </div>
-        </div>
+        <h2 style="font-size:var(--allybi-section-h2-size);line-height:var(--allybi-section-h2-lh);font-weight:var(--allybi-weight-bold);color:var(--allybi-text-inverse);letter-spacing:var(--allybi-tracking-tight);margin:0 0 16px;" data-i18n-key="home.final_h2">Your documents deserve better.</h2>
+        <p style="font-size:var(--allybi-section-intro-size);line-height:var(--allybi-section-intro-lh);color:var(--allybi-text-subtle);margin:0 auto 40px;max-width:var(--allybi-max-reading);" data-i18n-key="home.final_sub">See what Allybi can do for your team.</p>
+        <a href="request-demo.html" class="allybi-btn" style="background:#fff;color:var(--allybi-bg-dark);padding:14px 32px;border-radius:var(--allybi-radius-btn);font-size:16px;font-weight:var(--allybi-weight-semibold);text-decoration:none;display:inline-block;" data-i18n-key="home.final_cta">Request demo</a>
       </div>
     </section>
 
@@ -960,7 +632,6 @@
           <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
           <div class="footer-col-links">
             <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
             <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
           </div>
         </div>
@@ -988,7 +659,6 @@
 
       </div>
 
-            <!-- Bottom bar -->
       <!-- Mobile compact links (visible only on small screens) -->
       <div class="footer-mobile-links">
         <a href="/" data-i18n-key="footer.overview">Overview</a>
@@ -1002,12 +672,14 @@
         <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
         <a href="about.html" data-i18n-key="footer.about">About</a>
         <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="demo.html" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="request-demo.html" data-i18n-key="nav.request_demo">Request demo</a>
         <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
         <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
         <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>
-        <a href="security.html" data-i18n-key="footer.security_privacy">Security &amp; Privacy</a>
+        <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
       </div>
+
+      <!-- Bottom bar -->
       <div class="footer-bottom">
         <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
         <div class="footer-bottom-right">
@@ -1034,55 +706,7 @@
        ================================================================ -->
   <script src="language-switcher.js"></script>
   <script src="allybi-header.js"></script>
-  <script src="animations.js"></script>
   <script src="allybi-animations.js"></script>
-
-  <!-- Homepage tab switcher & FAQ accordion -->
-  <script>
-    (function () {
-      /* Use-case tabs */
-      var tabNav = document.querySelector('.use-cases__tabs .allybi-tabs__nav');
-      if (tabNav) {
-        var tabs = tabNav.querySelectorAll('.allybi-tabs__tab');
-        var panels = document.querySelectorAll('.use-cases__panel');
-
-        tabs.forEach(function (tab) {
-          tab.addEventListener('click', function () {
-            var target = this.getAttribute('data-tab');
-
-            tabs.forEach(function (t) {
-              t.classList.remove('is-active');
-              t.setAttribute('aria-selected', 'false');
-            });
-            this.classList.add('is-active');
-            this.setAttribute('aria-selected', 'true');
-
-            panels.forEach(function (p) {
-              p.classList.remove('is-active');
-              if (p.getAttribute('data-panel') === target) {
-                p.classList.add('is-active');
-              }
-            });
-          });
-        });
-      }
-
-      /* FAQ accordion */
-      var triggers = document.querySelectorAll('.allybi-accordion__trigger');
-      triggers.forEach(function (trigger) {
-        trigger.addEventListener('click', function () {
-          var expanded = this.getAttribute('aria-expanded') === 'true';
-          this.setAttribute('aria-expanded', String(!expanded));
-          var content = this.nextElementSibling;
-          if (!expanded) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-          } else {
-            content.style.maxHeight = '0';
-          }
-        });
-      });
-    })();
-  </script>
 
 </body>
 </html>

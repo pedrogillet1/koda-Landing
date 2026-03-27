@@ -1,0 +1,333 @@
+/* ==========================================================================
+   Request Demo Page
+   Requires: allybi-tokens.css, allybi-base.css, allybi-components.css
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.rdemo-hero {
+  padding-top: 160px;
+  padding-bottom: var(--allybi-space-12);
+  text-align: center;
+}
+
+.rdemo-hero__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.rdemo-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-4);
+}
+
+.rdemo-hero .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---------- Main grid ---------- */
+.rdemo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--allybi-space-16);
+  align-items: start;
+}
+
+/* ---------- Form column ---------- */
+.rdemo-form-col {
+  max-width: 520px;
+}
+
+.rdemo-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-6);
+}
+
+/* ---------- Field ---------- */
+.rdemo-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.rdemo-label {
+  font-size: 14px;
+  font-weight: var(--allybi-weight-medium);
+  color: var(--allybi-text-primary);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.rdemo-optional {
+  font-weight: var(--allybi-weight-regular);
+  color: var(--allybi-text-muted);
+}
+
+/* ---------- Inputs ---------- */
+.rdemo-input,
+.rdemo-select,
+.rdemo-textarea {
+  font-family: var(--allybi-font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--allybi-text-primary);
+  background-color: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-input);
+  padding: 0 var(--allybi-space-4);
+  height: 48px;
+  width: 100%;
+  transition: border-color var(--allybi-duration-hover) var(--allybi-ease),
+              box-shadow var(--allybi-duration-hover) var(--allybi-ease);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.rdemo-input::placeholder,
+.rdemo-textarea::placeholder {
+  color: var(--allybi-text-subtle);
+}
+
+.rdemo-input:hover,
+.rdemo-select:hover,
+.rdemo-textarea:hover {
+  border-color: var(--allybi-border-strong);
+}
+
+.rdemo-input:focus,
+.rdemo-select:focus,
+.rdemo-textarea:focus {
+  outline: none;
+  border-color: var(--allybi-border-focus);
+  box-shadow: 0 0 0 3px var(--allybi-accent-subtle);
+}
+
+/* Select arrow */
+.rdemo-select {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* Select placeholder color */
+.rdemo-select:invalid,
+.rdemo-select option[value=""][disabled] {
+  color: var(--allybi-text-subtle);
+}
+
+.rdemo-select option {
+  color: var(--allybi-text-primary);
+}
+
+/* Textarea */
+.rdemo-textarea {
+  height: auto;
+  min-height: 120px;
+  padding-top: var(--allybi-space-3);
+  padding-bottom: var(--allybi-space-3);
+  resize: vertical;
+}
+
+/* ---------- Submit button ---------- */
+.rdemo-submit {
+  width: 100%;
+  height: 52px;
+  font-size: 16px;
+  font-weight: var(--allybi-weight-semibold);
+  margin-top: var(--allybi-space-2);
+}
+
+/* ---------- Note below form ---------- */
+.rdemo-note {
+  margin-top: var(--allybi-space-6);
+  font-size: var(--allybi-meta-size);
+  line-height: var(--allybi-meta-lh);
+  color: var(--allybi-text-muted);
+  text-align: center;
+}
+
+.rdemo-note a {
+  color: var(--allybi-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.rdemo-note a:hover {
+  color: var(--allybi-accent-hover);
+}
+
+/* ---------- Preview column ---------- */
+.rdemo-preview-col {
+  display: flex;
+  justify-content: center;
+}
+
+.rdemo-preview {
+  position: sticky;
+  top: 160px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Preview window */
+.rdemo-preview__window {
+  border-radius: var(--allybi-radius-lg);
+  border: 1px solid var(--allybi-border-default);
+  overflow: hidden;
+  background-color: var(--allybi-bg-surface);
+  box-shadow: var(--allybi-shadow-xl);
+}
+
+.rdemo-preview__titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background-color: var(--allybi-bg-alt-1);
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.rdemo-preview__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--allybi-border-strong);
+}
+
+.rdemo-preview__dot:nth-child(1) { background-color: #FF605C; }
+.rdemo-preview__dot:nth-child(2) { background-color: #FFBD44; }
+.rdemo-preview__dot:nth-child(3) { background-color: #00CA4E; }
+
+.rdemo-preview__titlebar-text {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--allybi-text-muted);
+  font-weight: var(--allybi-weight-medium);
+}
+
+.rdemo-preview__body {
+  padding: var(--allybi-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-5);
+}
+
+.rdemo-preview__search {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-2);
+  padding: 10px 14px;
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-sm);
+  font-size: 13px;
+  color: var(--allybi-text-secondary);
+  line-height: 1.4;
+}
+
+.rdemo-preview__search svg {
+  flex-shrink: 0;
+  color: var(--allybi-text-muted);
+}
+
+.rdemo-preview__result {
+  padding: var(--allybi-space-4);
+  border-radius: var(--allybi-radius-sm);
+  background-color: var(--allybi-bg-alt-1);
+}
+
+.rdemo-preview__result-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-trust);
+  background-color: var(--allybi-trust-subtle);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: var(--allybi-space-2);
+}
+
+.rdemo-preview__result-text {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Reassurance list ---------- */
+.rdemo-reassurance {
+  list-style: none;
+  margin: var(--allybi-space-8) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--allybi-space-4);
+}
+
+.rdemo-reassurance__item {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-3);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--allybi-text-muted);
+}
+
+.rdemo-reassurance__icon {
+  flex-shrink: 0;
+  color: var(--allybi-trust);
+  width: 18px;
+  height: 18px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+/* Tablet / small desktop */
+@media (max-width: 960px) {
+  .rdemo-grid {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-12);
+  }
+
+  .rdemo-form-col {
+    max-width: 100%;
+  }
+
+  .rdemo-preview-col {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .rdemo-hero {
+    padding-top: 140px;
+    padding-bottom: var(--allybi-space-8);
+  }
+}
+
+@media (max-width: 600px) {
+  .rdemo-hero {
+    padding-top: 120px;
+    padding-bottom: var(--allybi-space-6);
+  }
+
+  /* Prevent iOS zoom on focus */
+  .rdemo-input,
+  .rdemo-select,
+  .rdemo-textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rdemo-hero {
+    padding-top: 110px;
+  }
+
+  .rdemo-submit {
+    height: 48px;
+  }
+}
