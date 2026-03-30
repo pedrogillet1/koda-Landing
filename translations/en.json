@@ -19,7 +19,8 @@
     "sign_in": "Sign in",
     "book_demo": "Request demo",
     "start_free": "Start free",
-    "open_app": "Open Allybi"
+    "open_app": "Open Allybi",
+    "customer_stories": "Customer Stories"
   },
   "footer": {
     "tagline": "Built for privacy-first teams handling sensitive work.",
@@ -55,12 +56,119 @@
     "terms_short": "Acceptable Use",
     "privacy_short": "Privacy Policy",
     "cookies_short": "Cookie Policy",
-    "security_short": "Security & Privacy"
+    "security_short": "Security & Privacy",
+    "pricing": "Pricing",
+    "privacy_link": "Privacy",
+    "request_demo": "Request demo",
+    "sec_overview": "Overview",
+    "security_link": "Security",
+    "stories": "Stories"
   },
   "hero": {
-    "eyebrow": "Private AI for high-stakes documents",
-    "title": "Find the exact file, clause, version, or attachment in seconds.",
-    "subtitle": "Allybi helps privacy-first teams search, organize, edit, and act across documents and messages — with grounded answers, project-level control, and explicit confirmation before anything is sent."
+    "eyebrow": "Private AI workspace",
+    "title": "The right file.<br>Found in seconds.",
+    "subtitle": "Find any clause, version, or attachment — with source-grounded answers and explicit send confirmation.",
+    "cta_primary": "Request demo",
+    "cta_secondary": "See how it works",
+    "chip1": "Grounded answers",
+    "chip2": "No model training",
+    "chip3": "Confirm before send",
+    "scene_query": "What changed in the indemnity clause?",
+    "scene_badge": "Grounded answer",
+    "scene_answer": "The indemnity cap was raised <strong>from $2M to $5M</strong> in Section 8.3(b). Survival period extended to 24 months.",
+    "scene_source": "SPA_Draft_v3.pdf — p. 14"
+  },
+  "trust": {
+    "item1": "End-to-end encrypted",
+    "item2": "Explicit confirmation",
+    "item3": "Region controls",
+    "item4": "No model training"
+  },
+  "story": {
+    "title": "Three moves. Total clarity.",
+    "find_num": "01",
+    "find_title": "Find",
+    "find_desc": "Locate the exact file, clause, or number across every document in your library.",
+    "compare_num": "02",
+    "compare_title": "Compare",
+    "compare_desc": "See what changed between versions — highlighted, sourced, and cited.",
+    "act_num": "03",
+    "act_title": "Act",
+    "act_desc": "Edit, reply, and send the right file — confirmed before it leaves."
+  },
+  "how": {
+    "title": "How Allybi works",
+    "subtitle": "Three steps. No learning curve.",
+    "step1_title": "Bring in your files",
+    "step1_desc": "Upload documents, connect email, or link Slack. Allybi indexes everything into sealed, private projects.",
+    "step2_title": "Ask naturally",
+    "step2_desc": "Ask any question. Allybi returns answers with exact file, page, and section references.",
+    "step3_title": "Act with certainty",
+    "step3_desc": "Edit documents, draft replies, attach the right file. You approve before anything goes out."
+  },
+  "cases": {
+    "title": "Built for sensitive work.",
+    "legal": {
+      "title": "Search clauses. Compare drafts.<br>Send the right version.",
+      "b1": "Search across contracts and memos instantly",
+      "b2": "Compare clause changes between drafts",
+      "b3": "Every answer cited to the source",
+      "cta": "See legal workflows",
+      "mock_q": "\"Show clause 12.4 changes between v2 and v3\"",
+      "mock_heading": "Section 12.4 — Limitation of Liability",
+      "mock_src": "NDA_v3_Final.pdf — p. 8",
+      "heading": "Search clauses. Compare drafts.<br>Send the right version.",
+      "mock_body": "Cap changed from <s style=\"color:#DC2626;background:rgba(220,38,38,0.08);padding:1px 3px;border-radius:2px\">$1M</s> to <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$3M</span>."
+    },
+    "finance": {
+      "title": "Find the number. Pull the deck.<br>Respond with confidence.",
+      "b1": "Pull revenue figures from any uploaded model",
+      "b2": "Compare numbers across quarterly versions",
+      "b3": "Answers with exact cell and slide references",
+      "cta": "See finance workflows",
+      "mock_q": "\"What was Q4 ARR in the latest board deck?\"",
+      "mock_heading": "Annual Recurring Revenue — Q4",
+      "mock_src": "Board_Deck_Q4.pdf — slide 7",
+      "heading": "Find the number. Pull the deck.<br>Respond with confidence.",
+      "mock_body": "Q4 ARR reached <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$4.2M</span>, up 38% from Q3."
+    },
+    "business": {
+      "title": "Organize proposals. Find answers.<br>Move forward safely.",
+      "b1": "Search across proposals and project plans",
+      "b2": "Get answers from the latest version",
+      "b3": "Draft responses from your own context",
+      "cta": "See business workflows",
+      "mock_q": "\"Summarize deliverables in the Acme SOW\"",
+      "mock_heading": "Acme Corp — Statement of Work",
+      "mock_src": "Acme_SOW_v2.docx — p. 3",
+      "heading": "Organize proposals. Find answers.<br>Move forward safely.",
+      "mock_body": "3 deliverables totaling <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$185K</span>."
+    }
+  },
+  "security": {
+    "title": "Private by design.",
+    "p1_title": "Encrypted at rest and in transit",
+    "p1_desc": "AES-256 encryption for all stored data.",
+    "p2_title": "No model training",
+    "p2_desc": "Your documents never train AI models.",
+    "p3_title": "Send confirmation",
+    "p3_desc": "Nothing leaves without your approval.",
+    "p4_title": "Workspace isolation",
+    "p4_desc": "Each project is a sealed environment.",
+    "cta": "Explore security"
+  },
+  "proof": {
+    "title": "How teams work with Allybi.",
+    "card1_meta": "Representative workflow",
+    "card1_role": "Legal Associate",
+    "card1_quote": "\"Found the exact clause change across 12 contract versions in 15 seconds — instead of 20 minutes of manual review.\"",
+    "card2_meta": "Representative workflow",
+    "card2_role": "Finance Analyst",
+    "card2_quote": "\"Pulled the right board deck and revenue figure with source citation. Sent to the partner — confirmed before it left.\"",
+    "card3_meta": "Representative workflow",
+    "card3_role": "Operations Lead",
+    "card3_quote": "\"Searched across proposals, emails, and Slack from a single search. Drafted the follow-up with the right file attached.\"",
+    "cta": "See customer stories"
   },
   "home": {
     "trust": {
@@ -776,26 +884,17 @@
     }
   },
   "integrations": {
+    "title": "Works where your files live.",
+    "subtitle": "No migration required.",
+    "gmail": "Gmail",
+    "outlook": "Outlook",
+    "slack": "Slack",
+    "docs": "Docs & Sheets",
+    "cta": "View integrations",
     "hero": {
       "eyebrow": "Integrations",
       "title": "Work where your files and conversations already live.",
       "support": "Connect your email and messaging tools to search, draft, and send — with explicit confirmation before anything goes out."
-    },
-    "gmail": {
-      "title": "Gmail",
-      "desc": "Search across your Gmail inbox and draft replies with the right file attached. Connect with OAuth, disconnect anytime."
-    },
-    "outlook": {
-      "title": "Outlook",
-      "desc": "Access Outlook emails and calendar. Search messages, find relevant context, draft responses — all from one workspace."
-    },
-    "slack": {
-      "title": "Slack",
-      "desc": "Search Slack channels and threads. Find decisions, discussions, and shared files without leaving your workspace."
-    },
-    "docs": {
-      "title": "Docs & Sheets",
-      "desc": "Edit .docx and .xlsx files directly in Allybi. Rewrite sections, update tables, create formulas — all with AI assistance."
     },
     "workflows": {
       "title": "Workflows that just work",
@@ -845,10 +944,6 @@
       "a4": "When you disconnect an integration, Allybi immediately loses access to that service. No data from the disconnected service is retained in your workspace.",
       "q5": "Are more integrations coming?",
       "a5": "Yes. We're actively building new integrations based on user feedback. If there's a service you'd like to see, reach out to us at info@allybi.co."
-    },
-    "cta": {
-      "title": "Connect your tools and start working.",
-      "support": "Search, draft, and send across all your connected services from one private workspace."
     }
   },
   "pricing": {
@@ -1108,5 +1203,10 @@
     "email_placeholder": "Enter your email",
     "occupation": "Occupation/Industry",
     "occupation_placeholder": "Enter your occupation/Industry"
+  },
+  "cta": {
+    "title": "Your documents deserve better.",
+    "subtitle": "See what Allybi can do for your team.",
+    "button": "Request demo"
   }
 }

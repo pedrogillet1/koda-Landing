@@ -19,7 +19,8 @@
     "sign_in": "Iniciar sesión",
     "book_demo": "Solicitar demo",
     "start_free": "Empezar gratis",
-    "open_app": "Abrir Allybi"
+    "open_app": "Abrir Allybi",
+    "customer_stories": "Historias de Clientes"
   },
   "footer": {
     "tagline": "Diseñado para equipos que priorizan la privacidad y manejan información sensible.",
@@ -55,12 +56,119 @@
     "terms_short": "Uso aceptable",
     "privacy_short": "Política de privacidad",
     "cookies_short": "Política de cookies",
-    "security_short": "Seguridad y Privacidad"
+    "security_short": "Seguridad y Privacidad",
+    "pricing": "Precios",
+    "privacy_link": "Privacidad",
+    "request_demo": "Solicitar demo",
+    "sec_overview": "Vista general",
+    "security_link": "Seguridad",
+    "stories": "Historias"
   },
   "hero": {
-    "eyebrow": "AI privada para documentos de alto impacto",
-    "title": "Encuentra el archivo, la cláusula, la versión o el adjunto exacto en segundos.",
-    "subtitle": "Allybi ayuda a equipos que priorizan la privacidad a buscar, organizar, editar y actuar sobre documentos y mensajes — con respuestas fundamentadas, control a nivel de proyecto y confirmación explícita antes de cualquier envío."
+    "eyebrow": "Workspace de IA privado",
+    "title": "El archivo correcto.<br>Encontrado en segundos.",
+    "subtitle": "Encuentra cualquier cláusula, versión o adjunto — con respuestas fundamentadas y confirmación explícita antes del envío.",
+    "cta_primary": "Solicitar demo",
+    "cta_secondary": "Ver cómo funciona",
+    "chip1": "Respuestas fundamentadas",
+    "chip2": "Sin entrenamiento de modelo",
+    "chip3": "Confirmación antes del envío",
+    "scene_query": "¿Qué cambió en la cláusula de indemnización?",
+    "scene_badge": "Respuesta fundamentada",
+    "scene_answer": "El límite de indemnización se elevó <strong>de $2M a $5M</strong> en la Sección 8.3(b). Período de supervivencia extendido a 24 meses.",
+    "scene_source": "SPA_Draft_v3.pdf — p. 14"
+  },
+  "trust": {
+    "item1": "Cifrado de extremo a extremo",
+    "item2": "Confirmación explícita",
+    "item3": "Controles de región",
+    "item4": "Sin entrenamiento de modelo"
+  },
+  "story": {
+    "title": "Tres movimientos. Claridad total.",
+    "find_num": "01",
+    "find_title": "Encontrar",
+    "find_desc": "Localiza el archivo, cláusula o número exacto en todos los documentos de tu biblioteca.",
+    "compare_num": "02",
+    "compare_title": "Comparar",
+    "compare_desc": "Observa qué cambió entre versiones — resaltado, referenciado y citado.",
+    "act_num": "03",
+    "act_title": "Actuar",
+    "act_desc": "Edita, responde y envía el archivo correcto — confirmado antes de salir."
+  },
+  "how": {
+    "title": "Cómo funciona Allybi",
+    "subtitle": "Tres pasos. Sin curva de aprendizaje.",
+    "step1_title": "Trae tus archivos",
+    "step1_desc": "Sube documentos, conecta el correo o vincula Slack. Allybi indexa todo en proyectos privados y sellados.",
+    "step2_title": "Pregunta de forma natural",
+    "step2_desc": "Haz cualquier pregunta. Allybi devuelve respuestas con referencias exactas de archivo, página y sección.",
+    "step3_title": "Actúa con certeza",
+    "step3_desc": "Edita documentos, redacta respuestas, adjunta el archivo correcto. Tú apruebas antes de que salga."
+  },
+  "cases": {
+    "title": "Diseñado para trabajo sensible.",
+    "legal": {
+      "title": "Busca cláusulas. Compara borradores.<br>Envía la versión correcta.",
+      "b1": "Busca en contratos y memorandos al instante",
+      "b2": "Compara cambios de cláusulas entre borradores",
+      "b3": "Cada respuesta citada con la fuente",
+      "cta": "Ver flujos legales",
+      "mock_q": "\"Mostrar cambios de la cláusula 12.4 entre v2 y v3\"",
+      "mock_heading": "Sección 12.4 — Limitación de Responsabilidad",
+      "mock_src": "NDA_v3_Final.pdf — p. 8",
+      "heading": "Busca cláusulas. Compara borradores.<br>Envía la versión correcta.",
+      "mock_body": "Cap cambió de <s style=\"color:#DC2626;background:rgba(220,38,38,0.08);padding:1px 3px;border-radius:2px\">$1M</s> a <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$3M</span>."
+    },
+    "finance": {
+      "title": "Encuentra el número. Accede a la presentación.<br>Responde con confianza.",
+      "b1": "Extrae cifras de ingresos de cualquier modelo cargado",
+      "b2": "Compara números entre versiones trimestrales",
+      "b3": "Respuestas con referencias exactas de celda y diapositiva",
+      "cta": "Ver flujos financieros",
+      "mock_q": "\"¿Cuál fue el ARR del Q4 en la última presentación al consejo?\"",
+      "mock_heading": "Ingresos Recurrentes Anuales — Q4",
+      "mock_src": "Board_Deck_Q4.pdf — slide 7",
+      "heading": "Encuentra el número. Obtén el deck.<br>Responde con confianza.",
+      "mock_body": "ARR Q4 alcanzó <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$4.2M</span>, +38% vs Q3."
+    },
+    "business": {
+      "title": "Organiza propuestas. Encuentra respuestas.<br>Avanza con seguridad.",
+      "b1": "Busca en propuestas y planes de proyecto",
+      "b2": "Obtén respuestas de la versión más reciente",
+      "b3": "Redacta respuestas desde tu propio contexto",
+      "cta": "Ver flujos de negocio",
+      "mock_q": "\"Resumir entregables en el SOW de Acme\"",
+      "mock_heading": "Acme Corp — Declaración de Trabajo",
+      "mock_src": "Acme_SOW_v2.docx — p. 3",
+      "heading": "Organiza propuestas. Encuentra respuestas.<br>Avanza con seguridad.",
+      "mock_body": "3 entregables por un total de <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$185K</span>."
+    }
+  },
+  "security": {
+    "title": "Privado por diseño.",
+    "p1_title": "Cifrado en reposo y en tránsito",
+    "p1_desc": "Cifrado AES-256 para todos los datos almacenados.",
+    "p2_title": "Sin entrenamiento de modelo",
+    "p2_desc": "Tus documentos nunca entrenan modelos de IA.",
+    "p3_title": "Confirmación de envío",
+    "p3_desc": "Nada sale sin tu aprobación.",
+    "p4_title": "Aislamiento de workspace",
+    "p4_desc": "Cada proyecto es un entorno sellado.",
+    "cta": "Explorar seguridad"
+  },
+  "proof": {
+    "title": "Cómo los equipos trabajan con Allybi.",
+    "card1_meta": "Flujo representativo",
+    "card1_role": "Asociado Legal",
+    "card1_quote": "\"Encontré el cambio exacto de cláusula en 12 versiones de contrato en 15 segundos — en lugar de 20 minutos de revisión manual.\"",
+    "card2_meta": "Flujo representativo",
+    "card2_role": "Analista Financiero",
+    "card2_quote": "\"Encontré la presentación correcta y la cifra de ingresos con cita de la fuente. Enviado al socio — confirmado antes de salir.\"",
+    "card3_meta": "Flujo representativo",
+    "card3_role": "Líder de Operaciones",
+    "card3_quote": "\"Busqué en propuestas, correos y Slack desde una sola búsqueda. Redacté el seguimiento con el archivo correcto adjunto.\"",
+    "cta": "Ver historias de clientes"
   },
   "home": {
     "trust": {
@@ -776,26 +884,17 @@
     }
   },
   "integrations": {
+    "title": "Funciona donde viven tus archivos.",
+    "subtitle": "Sin necesidad de migración.",
+    "gmail": "Gmail",
+    "outlook": "Outlook",
+    "slack": "Slack",
+    "docs": "Docs y Hojas",
+    "cta": "Ver integraciones",
     "hero": {
       "eyebrow": "Integraciones",
       "title": "Trabaja donde tus archivos y conversaciones ya están.",
       "support": "Conecta tus herramientas de correo y mensajería para buscar, redactar y enviar — con confirmación explícita antes de que cualquier cosa salga."
-    },
-    "gmail": {
-      "title": "Gmail",
-      "desc": "Busca en tu bandeja de Gmail y redacta respuestas con el archivo correcto adjunto. Conéctate con OAuth, desconecta en cualquier momento."
-    },
-    "outlook": {
-      "title": "Outlook",
-      "desc": "Accede a correos y calendario de Outlook. Busca mensajes, encuentra contexto relevante, redacta respuestas — todo desde un solo espacio de trabajo."
-    },
-    "slack": {
-      "title": "Slack",
-      "desc": "Busca en canales e hilos de Slack. Encuentra decisiones, discusiones y archivos compartidos sin salir de tu espacio de trabajo."
-    },
-    "docs": {
-      "title": "Documentos y hojas de cálculo",
-      "desc": "Edita archivos .docx y .xlsx directamente en Allybi. Reescribe secciones, actualiza tablas, crea fórmulas — todo con asistencia de AI."
     },
     "workflows": {
       "title": "Flujos de trabajo que simplemente funcionan",
@@ -845,10 +944,6 @@
       "a4": "Cuando desconectas una integración, Allybi pierde inmediatamente el acceso a ese servicio. No se retienen datos del servicio desconectado en tu espacio de trabajo.",
       "q5": "¿Vendrán más integraciones?",
       "a5": "Sí. Estamos construyendo activamente nuevas integraciones basadas en los comentarios de los usuarios. Si hay un servicio que te gustaría ver, contáctanos en info@allybi.co."
-    },
-    "cta": {
-      "title": "Conecta tus herramientas y comienza a trabajar.",
-      "support": "Busca, redacta y envía a través de todos tus servicios conectados desde un solo espacio de trabajo privado."
     }
   },
   "pricing": {
@@ -1108,5 +1203,10 @@
     "email_placeholder": "Ingresa tu correo electrónico",
     "occupation": "Ocupación/Industria",
     "occupation_placeholder": "Ingresa tu ocupación/industria"
+  },
+  "cta": {
+    "title": "Tus documentos merecen más.",
+    "subtitle": "Descubre lo que Allybi puede hacer por tu equipo.",
+    "button": "Solicitar demo"
   }
 }
