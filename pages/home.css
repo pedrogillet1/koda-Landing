@@ -30,10 +30,10 @@
 .s-trust__item{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:var(--allybi-text-muted);white-space:nowrap}
 
 /* ── 3 · PRODUCT STORY ── 180px top, white, editorial ── */
-.s-story{padding:180px 0 160px}
+.s-story{padding:200px 0 180px}
 .s-story__header{text-align:center;margin-bottom:100px}
 .s-story__header h2{font-size:clamp(26px,3vw,42px);font-weight:700;letter-spacing:-0.02em;color:var(--allybi-text-strongest)}
-.s-story__items{display:flex;align-items:flex-start;justify-content:center;gap:0;max-width:1000px;margin:0 auto}
+.s-story__items{display:flex;align-items:flex-start;justify-content:center;gap:8px;max-width:1000px;margin:0 auto}
 .s-story__item{flex:1;text-align:center;padding:0 40px}
 .s-story__number{font-size:13px;font-weight:600;color:var(--allybi-text-subtle);letter-spacing:0.04em;margin-bottom:20px}
 .s-story__item h3{font-size:28px;font-weight:700;color:var(--allybi-text-strongest);margin-bottom:12px;letter-spacing:-0.02em}
@@ -45,7 +45,7 @@
 .s-how__header{text-align:center;margin-bottom:80px}
 .s-how__header h2{font-size:clamp(26px,3vw,42px);font-weight:700;letter-spacing:-0.02em;margin-bottom:12px}
 .s-how__header p{font-size:16px;color:rgba(255,255,255,0.5)}
-.s-how__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.s-how__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .s-how__step{padding:40px 32px;background:var(--allybi-bg-dark-surface);border:1px solid rgba(255,255,255,0.08);border-radius:20px;text-align:center}
 .s-how__step-num{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);font-size:15px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px}
 .s-how__step h3{font-size:19px;font-weight:600;margin-bottom:10px}
@@ -91,11 +91,11 @@
 .s-security__cta{margin-top:8px}
 
 /* ── 7 · INTEGRATIONS ── 140px, white ── */
-.s-integrations{padding:140px 0}
+.s-integrations{padding:160px 0}
 .s-integrations__header{text-align:center;margin-bottom:56px}
 .s-integrations__header h2{font-size:clamp(26px,3vw,42px);font-weight:700;letter-spacing:-0.02em;color:var(--allybi-text-strongest);margin-bottom:8px}
 .s-integrations__header p{font-size:16px;color:var(--allybi-text-secondary)}
-.s-integrations__grid{display:flex;justify-content:center;gap:20px;margin-bottom:48px;flex-wrap:wrap}
+.s-integrations__grid{display:flex;justify-content:center;gap:28px;margin-bottom:48px;flex-wrap:wrap}
 .s-integrations__card{padding:28px 32px;background:var(--allybi-bg-surface);border:1px solid var(--allybi-border-default);border-radius:16px;text-align:center;min-width:140px}
 .s-integrations__card span{display:block;margin-top:12px;font-size:14px;font-weight:600;color:var(--allybi-text-strongest)}
 .s-integrations__cta{text-align:center}
@@ -104,15 +104,15 @@
 .s-proof{padding:160px 0;background:var(--allybi-bg-alt-1)}
 .s-proof__header{text-align:center;margin-bottom:56px}
 .s-proof__header h2{font-size:clamp(26px,3vw,42px);font-weight:700;letter-spacing:-0.02em;color:var(--allybi-text-strongest)}
-.s-proof__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
-.s-proof__card{padding:40px;background:#fff;border:1px solid var(--allybi-border-default);border-radius:20px}
+.s-proof__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:48px}
+.s-proof__card{padding:48px;background:#fff;border:1px solid var(--allybi-border-default);border-radius:20px}
 .s-proof__meta{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--allybi-text-muted);margin-bottom:16px}
 .s-proof__card h3{font-size:18px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px}
 .s-proof__card p{font-size:15px;line-height:1.6;color:var(--allybi-text-secondary);font-style:italic}
 .s-proof__cta{text-align:center}
 
 /* ── 9 · FINAL CTA ── 200px, dark ── */
-.s-cta{padding:200px 0;background:var(--allybi-bg-dark);text-align:center}
+.s-cta{padding:220px 0;background:var(--allybi-bg-dark);text-align:center}
 .s-cta__inner{max-width:520px;margin:0 auto}
 .s-cta h2{font-size:clamp(26px,3vw,42px);font-weight:700;letter-spacing:-0.02em;color:var(--allybi-text-inverse);margin-bottom:16px}
 .s-cta p{font-size:17px;color:rgba(255,255,255,0.5);margin-bottom:40px}
