@@ -338,6 +338,8 @@
     "principle_4_desc": "Good tools reduce anxiety, not add to it. Allybi is designed to feel quiet, organized, and predictable.",
     "principle_5_title": "Privacy by default",
     "principle_5_desc": "Your files are encrypted, isolated, and never used for model training. Privacy is not a feature toggle. It is the architecture.",
+    "principle_6_title": "Speed without recklessness",
+    "principle_6_desc": "Allybi helps you move faster — but never at the cost of accuracy. Every answer is sourced, every action is verified, every send is confirmed.",
     "grounded_title": "Privacy and grounded outputs",
     "grounded_p1": "Allybi grounds every AI response in the documents you have uploaded. This means answers come from your files, not from the open internet or from general model knowledge. When the AI references a clause, a number, or a date, you can trace it back to the exact source.",
     "grounded_p2": "You control what files are included, what connections are active, and what actions the AI can take. Before anything is sent, shared, or changed, Allybi asks for your explicit confirmation. Nothing leaves your workspace without your approval.",

@@ -71,14 +71,7 @@
   margin-bottom: var(--allybi-space-3);
 }
 
-/* 5 cards: 3 + 2 centered on second row */
-.about-principles-grid .allybi-card:nth-child(4) {
-  grid-column: 1 / 2;
-}
-
-.about-principles-grid .allybi-card:nth-child(5) {
-  grid-column: 2 / 3;
-}
+/* 6 cards: 3 columns x 2 rows — no special positioning needed */
 
 /* ---------- Privacy / Grounded Outputs ---------- */
 .about-grounded .allybi-h2 {
@@ -165,10 +158,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-principles-grid .allybi-card:nth-child(4),
-  .about-principles-grid .allybi-card:nth-child(5) {
-    grid-column: auto;
-  }
+  /* 6 cards flow naturally in 2-col on tablet */
 
   .about-build-grid {
     grid-template-columns: 1fr;
