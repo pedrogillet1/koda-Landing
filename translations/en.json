@@ -625,6 +625,22 @@
       "q6": "How does the send confirmation work?",
       "a6": "Before any file leaves your workspace — whether attached to an email or shared via link — Allybi shows you the exact file name, version, modification date, and recipient. You must explicitly confirm before the action completes. This prevents accidental sends of wrong versions."
     },
+    "mock": {
+      "compare_v2_label": "Draft v2 — Mar 12",
+      "compare_v2_text": "Section 8.1 — Indemnification. The Supplier shall indemnify the Client against all claims arising from <span class=\"ucl-compare__removed\">negligent acts</span> related to the Services...",
+      "compare_v3_label": "Draft v3 — Mar 18",
+      "compare_v3_text": "Section 8.1 — Indemnification. The Supplier shall indemnify the Client against all claims arising from <span class=\"ucl-compare__added\">any acts or omissions</span> related to the Services...",
+      "search_query": "\"What are the non-compete terms in the Anderson agreement?\"",
+      "search_source1": "Anderson_MSA_v4.pdf — Page 12, Section 9.3",
+      "search_text1": "The Contractor agrees not to engage in any <mark>competing business activities</mark> within a <mark>50-mile radius</mark> for a period of <mark>24 months</mark> following termination of this Agreement.",
+      "search_source2": "Anderson_Amendment_2.pdf — Page 3, Section 2.1",
+      "search_text2": "The non-compete period described in Section 9.3 is hereby amended to <mark>18 months</mark> with geographic scope reduced to <mark>25 miles</mark>.",
+      "send_badge": "Confirm before sending",
+      "send_file": "Anderson_MSA_v4_final.pdf",
+      "send_meta": "Version 4 — Last modified Mar 18, 2025 — 2.4 MB",
+      "send_cancel": "Cancel",
+      "send_confirm": "Confirm & Send"
+    },
     "final_cta": {
       "title": "Your matters, organized and searchable.",
       "support": "Bring your contracts, drafts, and evidence into one private workspace."
@@ -701,6 +717,23 @@
       "q6": "How does the send confirmation prevent wrong attachments?",
       "a6": "Before any file is sent, Allybi displays the exact file name, version date, size, and recipient. You must explicitly confirm before the action completes. This catches wrong-version mistakes before they happen."
     },
+    "mock": {
+      "query": "\"What is the fully diluted share count?\"",
+      "answer1_value": "12,450,000 shares",
+      "answer1_source": "Source: CapTable_Q4_2025.xlsx — Sheet \"Summary\", Cell D14",
+      "answer2_value": "Post-money valuation: $48M",
+      "answer2_source": "Source: Board_Deck_Q4.pptx — Slide 8",
+      "email_to_label": "To",
+      "email_subject_label": "Subject",
+      "email_subject": "Updated deck — Series B materials",
+      "email_body": "Hi Sarah, as discussed, please find attached the latest version of our pitch deck with updated Q4 financials. Happy to walk through the model on our call Thursday.",
+      "email_attachment": "Pitch_Deck_v4.pptx",
+      "email_badge": "Latest",
+      "col_investor": "Investor",
+      "col_shares": "Shares",
+      "col_ownership": "% Ownership",
+      "col_value": "Value ($)"
+    },
     "final_cta": {
       "title": "Your deals, organized and searchable.",
       "support": "Bring your decks, models, and cap tables into one private workspace."
@@ -776,6 +809,22 @@
       "a5": "Yes. All data is encrypted in transit and at rest. Your documents never train AI models. Workspaces are isolated, and you control access per project. You can choose EU or US data hosting.",
       "q6": "How does Allybi help with follow-ups?",
       "a6": "Ask Allybi to draft a follow-up message and it will find the relevant file, compose the email, and attach the correct version. You review everything — message, attachment, and recipient — before sending."
+    },
+    "mock": {
+      "search_query": "\"What was decided about the ACME pricing proposal?\"",
+      "source_doc": "Document",
+      "result1": "<strong>ACME_Proposal_v3.pdf</strong> — Page 4: Pricing tier set at <mark>$24,000/year</mark> for Enterprise, with 15% volume discount above 50 seats.",
+      "source_email": "Email",
+      "result2": "<strong>Re: ACME pricing review</strong> — Sarah confirmed <mark>approval of the Enterprise tier</mark> pricing on Feb 12. Attached revised proposal.",
+      "source_slack": "Slack",
+      "result3": "<strong>#deals channel</strong> — Marcus: \"Client is happy with the <mark>volume discount structure</mark>. Ready to move to contract stage.\"",
+      "email_to_label": "To",
+      "email_body": "Hi James, following up on our conversation last week. I have attached the updated proposal with the revised pricing tiers we discussed. Please review and let me know if you have any questions before our call on Thursday.",
+      "email_attachment": "Proposal_v3_final.pdf",
+      "doc_title": "ACME Enterprise Proposal — v3",
+      "doc_body1": "This proposal outlines the Enterprise tier service agreement between Allybi and ACME Corporation for a 12-month period beginning April 1, 2025.",
+      "doc_body2": "<strong>Pricing:</strong> $24,000/year for up to 50 seats, with a 15% volume discount for additional seats. Implementation support included at no additional cost for the first 90 days.<span class=\"ucb-doc-edit__cursor\"></span>",
+      "doc_ai_suggestion": "AI suggestion: Consider adding a section on renewal terms and early termination provisions."
     },
     "final_cta": {
       "title": "Your projects, organized and actionable.",
@@ -888,11 +937,27 @@
   "integrations": {
     "title": "Works where your files live.",
     "subtitle": "No migration required.",
-    "gmail": "Gmail",
-    "outlook": "Outlook",
-    "slack": "Slack",
-    "docs": "Docs & Sheets",
-    "cta": "View integrations",
+    "gmail": {
+      "title": "Gmail",
+      "desc": "Search across your Gmail inbox and draft replies with the right file attached. Connect with OAuth, disconnect anytime."
+    },
+    "outlook": {
+      "title": "Outlook",
+      "desc": "Access Outlook emails and calendar. Search messages, find relevant context, draft responses — all from one workspace."
+    },
+    "slack": {
+      "title": "Slack",
+      "desc": "Search Slack channels and threads. Find decisions, discussions, and shared files without leaving your workspace."
+    },
+    "docs": {
+      "title": "Docs & Sheets",
+      "desc": "Edit .docx and .xlsx files directly in Allybi. Rewrite sections, update tables, create formulas — all with AI assistance."
+    },
+    "cta": {
+      "title": "Connect your tools and start working.",
+      "support": "Search, draft, and send across all your connected services from one private workspace."
+    },
+    "cta_link": "View integrations",
     "hero": {
       "eyebrow": "Integrations",
       "title": "Work where your files and conversations already live.",
@@ -1039,8 +1104,12 @@
     }
   },
   "demo": {
+    "nav": {
+      "request_demo": "Request demo"
+    },
     "hero": {
       "title": "See Allybi in action.",
+      "subhead": "Tell us about your team and we'll set up a personalized walkthrough.",
       "support": "Book a personalized walkthrough. We'll show you how Allybi works for your specific workflow."
     },
     "covers": {
@@ -1087,6 +1156,24 @@
       "role_executive": "Executive",
       "role_it": "IT / Engineering",
       "role_other": "Other",
+      "role_engineering": "Engineering",
+      "team_size_label": "Team size",
+      "team_size_placeholder": "Select team size",
+      "team_1_10": "1-10",
+      "team_11_50": "11-50",
+      "team_51_200": "51-200",
+      "team_201_500": "201-500",
+      "team_500_plus": "500+",
+      "use_case_label": "Primary use case",
+      "use_case_placeholder": "Select a use case",
+      "uc_search": "Document search & Q&A",
+      "uc_contracts": "Contract analysis",
+      "uc_finance": "Financial analysis",
+      "uc_email": "Email & message search",
+      "uc_editing": "Document editing",
+      "uc_general": "General document management",
+      "optional": "(optional)",
+      "note": "We typically respond within one business day. Your information is handled according to our privacy policy.",
       "interest_label": "What are you most interested in?",
       "interest_placeholder": "Select an area",
       "interest_search": "AI document search",
@@ -1105,6 +1192,11 @@
       "query": "Find the latest revenue projections",
       "source": "Q4-Board-Deck-v3.pdf, p.12",
       "answer": "Revenue projections for Q4 show a 23% increase over Q3, driven by new enterprise contracts..."
+    },
+    "reassurance": {
+      "personalized": "Personalized to your workflow",
+      "real_product": "See real product, not slides",
+      "no_commitment": "No commitment required"
     },
     "faq": {
       "title": "Demo FAQ",

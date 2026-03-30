@@ -625,6 +625,22 @@
       "q6": "Como funciona a confirmação de envio?",
       "a6": "Antes que qualquer arquivo saia do seu workspace — seja anexado a um e-mail ou compartilhado via link — Allybi mostra o nome exato do arquivo, versão, data de modificação e destinatário. Você deve confirmar explicitamente antes que a ação seja concluída. Isso previne envios acidentais de versões erradas."
     },
+    "mock": {
+      "compare_v2_label": "Rascunho v2 — 12 Mar",
+      "compare_v2_text": "Seção 8.1 — Indenização. O Fornecedor indenizará o Cliente contra todas as reclamações decorrentes de <span class=\"ucl-compare__removed\">atos negligentes</span> relacionados aos Serviços...",
+      "compare_v3_label": "Rascunho v3 — 18 Mar",
+      "compare_v3_text": "Seção 8.1 — Indenização. O Fornecedor indenizará o Cliente contra todas as reclamações decorrentes de <span class=\"ucl-compare__added\">quaisquer atos ou omissões</span> relacionados aos Serviços...",
+      "search_query": "\"Quais são os termos de não concorrência no contrato Anderson?\"",
+      "search_source1": "Anderson_MSA_v4.pdf — Página 12, Seção 9.3",
+      "search_text1": "O Contratado concorda em não exercer quaisquer <mark>atividades comerciais concorrentes</mark> dentro de um <mark>raio de 80 km</mark> por um período de <mark>24 meses</mark> após o término deste Contrato.",
+      "search_source2": "Anderson_Amendment_2.pdf — Página 3, Seção 2.1",
+      "search_text2": "O período de não concorrência descrito na Seção 9.3 é alterado para <mark>18 meses</mark> com escopo geográfico reduzido para <mark>40 km</mark>.",
+      "send_badge": "Confirmar antes de enviar",
+      "send_file": "Anderson_MSA_v4_final.pdf",
+      "send_meta": "Versão 4 — Última modificação 18 Mar, 2025 — 2.4 MB",
+      "send_cancel": "Cancelar",
+      "send_confirm": "Confirmar e Enviar"
+    },
     "final_cta": {
       "title": "Seus casos, organizados e pesquisáveis.",
       "support": "Traga seus contratos, rascunhos e evidências para um único workspace privado."
@@ -701,6 +717,23 @@
       "q6": "Como a confirmação de envio previne anexos errados?",
       "a6": "Antes que qualquer arquivo seja enviado, Allybi exibe o nome exato do arquivo, data da versão, tamanho e destinatário. Você deve confirmar explicitamente antes que a ação seja concluída. Isso detecta erros de versão antes que aconteçam."
     },
+    "mock": {
+      "query": "\"Qual é a contagem de ações totalmente diluídas?\"",
+      "answer1_value": "12.450.000 ações",
+      "answer1_source": "Fonte: CapTable_Q4_2025.xlsx — Planilha \"Resumo\", Célula D14",
+      "answer2_value": "Avaliação post-money: $48M",
+      "answer2_source": "Fonte: Board_Deck_Q4.pptx — Slide 8",
+      "email_to_label": "Para",
+      "email_subject_label": "Assunto",
+      "email_subject": "Deck atualizado — Materiais Série B",
+      "email_body": "Olá Sarah, conforme conversamos, segue em anexo a versão mais recente do nosso pitch deck com os dados financeiros atualizados do Q4. Podemos revisar o modelo na nossa chamada de quinta.",
+      "email_attachment": "Pitch_Deck_v4.pptx",
+      "email_badge": "Mais recente",
+      "col_investor": "Investidor",
+      "col_shares": "Ações",
+      "col_ownership": "% Participação",
+      "col_value": "Valor ($)"
+    },
     "final_cta": {
       "title": "Suas negociações, organizadas e pesquisáveis.",
       "support": "Traga seus decks, modelos e cap tables para um único workspace privado."
@@ -776,6 +809,22 @@
       "a5": "Sim. Todos os dados são criptografados em trânsito e em repouso. Seus documentos nunca treinam modelos de AI. Workspaces são isolados e você controla o acesso por projeto. Você pode escolher hospedagem na UE ou nos EUA.",
       "q6": "Como Allybi ajuda com follow-ups?",
       "a6": "Peça ao Allybi para rascunhar uma mensagem de follow-up e ele encontrará o arquivo relevante, comporá o e-mail e anexará a versão correta. Você revisa tudo — mensagem, anexo e destinatário — antes de enviar."
+    },
+    "mock": {
+      "search_query": "\"O que foi decidido sobre a proposta de preços da ACME?\"",
+      "source_doc": "Documento",
+      "result1": "<strong>ACME_Proposal_v3.pdf</strong> — Página 4: Faixa de preço definida em <mark>$24.000/ano</mark> para Enterprise, com 15% de desconto por volume acima de 50 licenças.",
+      "source_email": "E-mail",
+      "result2": "<strong>Re: Revisão de preços ACME</strong> — Sarah confirmou <mark>aprovação da faixa Enterprise</mark> em 12 Fev. Proposta revisada em anexo.",
+      "source_slack": "Slack",
+      "result3": "<strong>#canal-negocios</strong> — Marcus: \"Cliente satisfeito com a <mark>estrutura de desconto por volume</mark>. Pronto para avançar para a fase de contrato.\"",
+      "email_to_label": "Para",
+      "email_body": "Olá James, dando seguimento à nossa conversa da semana passada. Anexei a proposta atualizada com as faixas de preço revisadas que discutimos. Por favor, revise e me avise se tiver dúvidas antes da nossa chamada de quinta.",
+      "email_attachment": "Proposal_v3_final.pdf",
+      "doc_title": "Proposta Enterprise ACME — v3",
+      "doc_body1": "Esta proposta descreve o contrato de serviço Enterprise entre Allybi e ACME Corporation por um período de 12 meses com início em 1 de abril de 2025.",
+      "doc_body2": "<strong>Preços:</strong> $24.000/ano para até 50 licenças, com desconto de 15% por volume para licenças adicionais. Suporte de implementação incluído sem custo adicional nos primeiros 90 dias.<span class=\"ucb-doc-edit__cursor\"></span>",
+      "doc_ai_suggestion": "Sugestão de AI: Considere adicionar uma seção sobre termos de renovação e disposições de rescisão antecipada."
     },
     "final_cta": {
       "title": "Seus projetos, organizados e acionáveis.",
@@ -888,11 +937,27 @@
   "integrations": {
     "title": "Funciona onde seus arquivos estão.",
     "subtitle": "Sem necessidade de migração.",
-    "gmail": "Gmail",
-    "outlook": "Outlook",
-    "slack": "Slack",
-    "docs": "Docs e Planilhas",
-    "cta": "Ver integrações",
+    "gmail": {
+      "title": "Gmail",
+      "desc": "Pesquise em toda a sua caixa de entrada do Gmail e redija respostas com o arquivo correto anexado. Conecte com OAuth, desconecte a qualquer momento."
+    },
+    "outlook": {
+      "title": "Outlook",
+      "desc": "Acesse e-mails e calendário do Outlook. Pesquise mensagens, encontre contexto relevante, redija respostas — tudo em um único workspace."
+    },
+    "slack": {
+      "title": "Slack",
+      "desc": "Pesquise canais e threads do Slack. Encontre decisões, discussões e arquivos compartilhados sem sair do seu workspace."
+    },
+    "docs": {
+      "title": "Docs e Planilhas",
+      "desc": "Edite arquivos .docx e .xlsx diretamente no Allybi. Reescreva seções, atualize tabelas, crie fórmulas — tudo com assistência de AI."
+    },
+    "cta": {
+      "title": "Conecte suas ferramentas e comece a trabalhar.",
+      "support": "Pesquise, rascunhe e envie em todos os seus serviços conectados a partir de um único workspace privado."
+    },
+    "cta_link": "Ver integrações",
     "hero": {
       "eyebrow": "Integrações",
       "title": "Trabalhe onde seus arquivos e conversas já estão.",
@@ -1039,8 +1104,12 @@
     }
   },
   "demo": {
+    "nav": {
+      "request_demo": "Solicitar demo"
+    },
     "hero": {
       "title": "Veja Allybi em ação.",
+      "subhead": "Conte-nos sobre sua equipe e configuraremos uma demonstração personalizada.",
       "support": "Agende uma demonstração personalizada. Mostraremos como Allybi funciona para seu fluxo de trabalho específico."
     },
     "covers": {
@@ -1087,6 +1156,24 @@
       "role_executive": "Executivo",
       "role_it": "TI / Engenharia",
       "role_other": "Outro",
+      "role_engineering": "Engenharia",
+      "team_size_label": "Tamanho da equipe",
+      "team_size_placeholder": "Selecione o tamanho da equipe",
+      "team_1_10": "1-10",
+      "team_11_50": "11-50",
+      "team_51_200": "51-200",
+      "team_201_500": "201-500",
+      "team_500_plus": "500+",
+      "use_case_label": "Caso de uso principal",
+      "use_case_placeholder": "Selecione um caso de uso",
+      "uc_search": "Busca e Q&A de documentos",
+      "uc_contracts": "Análise de contratos",
+      "uc_finance": "Análise financeira",
+      "uc_email": "Busca de e-mail e mensagens",
+      "uc_editing": "Edição de documentos",
+      "uc_general": "Gerenciamento geral de documentos",
+      "optional": "(opcional)",
+      "note": "Normalmente respondemos em um dia útil. Suas informações são tratadas de acordo com nossa política de privacidade.",
       "interest_label": "No que você tem mais interesse?",
       "interest_placeholder": "Selecione uma área",
       "interest_search": "Busca de documentos com AI",
@@ -1105,6 +1192,11 @@
       "query": "Encontre as últimas projeções de receita",
       "source": "Q4-Board-Deck-v3.pdf, p.12",
       "answer": "As projeções de receita para o Q4 mostram um aumento de 23% em relação ao Q3, impulsionado por novos contratos enterprise..."
+    },
+    "reassurance": {
+      "personalized": "Personalizada para seu fluxo de trabalho",
+      "real_product": "Veja o produto real, não slides",
+      "no_commitment": "Sem compromisso necessário"
     },
     "faq": {
       "title": "FAQ da Demo",
