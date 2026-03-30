@@ -1215,74 +1215,45 @@
       "eyebrow": "Customer Stories",
       "title": "How teams work better with Allybi.",
       "support": "Real workflows. Real outcomes. See how Allybi transforms document-heavy work."
+    }
+  },
+  "stories": {
+    "hero": {
+      "eyebrow": "Customer Stories",
+      "title": "Real work. Real pressure. Real clarity.",
+      "support": "See how teams use Allybi when it matters most."
     },
-    "outcomes": {
-      "title": "Representative workflows",
-      "support": "How different roles experience Allybi in their daily work.",
-      "before": "Before",
-      "after": "After",
-      "legal": {
-        "role": "Legal Associate",
-        "before": "20 minutes hunting for the right contract version.",
-        "after": "Found the exact clause and changes in 15 seconds."
-      },
-      "finance": {
-        "role": "Finance Analyst",
-        "before": "Sent the wrong board deck to the client.",
-        "after": "Right file attached with explicit confirmation."
-      },
-      "ops": {
-        "role": "Operations Lead",
-        "before": "Three tools open to find one proposal.",
-        "after": "One search across docs, emails, and Slack."
-      }
+    "card1": {
+      "time": "8:40 AM — Before partner review",
+      "role": "Legal Associate, M&A team",
+      "narrative": "The managing partner asks what changed in the indemnity clause since the last draft. Twelve versions in the folder. Twenty minutes of manual comparison — or one question to Allybi.",
+      "outcome": "Found the exact clause change, cited to page 14, in 15 seconds.",
+      "label": "Representative scenario"
     },
-    "transforms": {
-      "title": "Workflow transformations",
-      "support": "See what changes when your documents actually work for you.",
-      "before_label": "Before",
-      "after_label": "After",
-      "search": {
-        "before_title": "Search",
-        "before_desc": "Open 4 folders, scan filenames, open 3 wrong files before finding the right one.",
-        "after_title": "Search",
-        "after_desc": "Ask in plain language, get the answer with source citation in seconds."
-      },
-      "send": {
-        "before_title": "Send",
-        "before_desc": "Hope you attached the latest version. No way to confirm until it's too late.",
-        "after_title": "Send",
-        "after_desc": "Confirm the exact file, recipient, and content before it goes out."
-      },
-      "organize": {
-        "before_title": "Organize",
-        "before_desc": "Desktop chaos, email attachments, Slack files — everything scattered.",
-        "after_title": "Organize",
-        "after_desc": "One workspace, organized by project, searchable across all sources."
-      }
+    "card2": {
+      "time": "Minutes before sending the board deck",
+      "role": "Finance Analyst, Series B startup",
+      "narrative": "The CEO needs the latest revenue figures for the board meeting in 30 minutes. Three versions of the deck exist. The wrong attachment means lost credibility.",
+      "outcome": "Pulled the right deck with Q4 ARR cited to slide 7. Sent with explicit confirmation.",
+      "label": "Representative scenario"
+    },
+    "card3": {
+      "time": "Trying to find the approved proposal before the client call",
+      "role": "Operations Lead, consulting firm",
+      "narrative": "The client is on the phone in 5 minutes asking about the project timeline. The proposal is somewhere between email, Slack, and three project folders.",
+      "outcome": "Searched across proposals, emails, and Slack from one search. Found the approved SOW with deliverables and timeline.",
+      "label": "Representative scenario"
     },
     "trust": {
-      "title": "Why teams trust Allybi",
-      "point1": {
-        "title": "Encrypted by default",
-        "desc": "All data encrypted at rest and in transit."
-      },
-      "point2": {
-        "title": "Grounded answers",
-        "desc": "Every answer cites the source file and location."
-      },
-      "point3": {
-        "title": "Explicit confirmation",
-        "desc": "Nothing sent without your review and approval."
-      },
-      "point4": {
-        "title": "No model training",
-        "desc": "Your documents never train AI models."
-      }
+      "title": "Why teams trust Allybi.",
+      "p1": "Every answer cites the source file and location.",
+      "p2": "Your documents never train AI models.",
+      "p3": "Nothing sent without your review and approval.",
+      "p4": "Each workspace is fully isolated from others."
     },
     "cta": {
-      "title": "Try it yourself.",
-      "support": "See how Allybi transforms document-heavy work for your team."
+      "title": "See it for yourself.",
+      "button": "Request demo"
     }
   },
   "waitlist": {

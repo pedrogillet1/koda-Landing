@@ -1215,74 +1215,45 @@
       "eyebrow": "Histórias de Clientes",
       "title": "Como equipes trabalham melhor com Allybi.",
       "support": "Fluxos de trabalho reais. Resultados reais. Veja como Allybi transforma o trabalho pesado com documentos."
+    }
+  },
+  "stories": {
+    "hero": {
+      "eyebrow": "Histórias de Clientes",
+      "title": "Trabalho real. Pressão real. Clareza real.",
+      "support": "Veja como equipes usam o Allybi nos momentos que mais importam."
     },
-    "outcomes": {
-      "title": "Fluxos de trabalho representativos",
-      "support": "Como diferentes funções experimentam Allybi no trabalho diário.",
-      "before": "Antes",
-      "after": "Depois",
-      "legal": {
-        "role": "Advogado Associado",
-        "before": "20 minutos procurando a versão certa do contrato.",
-        "after": "Encontrou a cláusula exata e as alterações em 15 segundos."
-      },
-      "finance": {
-        "role": "Analista Financeiro",
-        "before": "Enviou o deck errado para o conselho ao cliente.",
-        "after": "Arquivo certo anexado com confirmação explícita."
-      },
-      "ops": {
-        "role": "Líder de Operações",
-        "before": "Três ferramentas abertas para encontrar uma proposta.",
-        "after": "Uma busca em documentos, e-mails e Slack."
-      }
+    "card1": {
+      "time": "8h40 — Antes da revisão do sócio",
+      "role": "Advogado Associado, equipe de M&A",
+      "narrative": "O sócio-diretor pergunta o que mudou na cláusula de indenização desde o último rascunho. Doze versões na pasta. Vinte minutos de comparação manual — ou uma pergunta ao Allybi.",
+      "outcome": "Encontrou a alteração exata na cláusula, com citação à página 14, em 15 segundos.",
+      "label": "Cenário representativo"
     },
-    "transforms": {
-      "title": "Transformações de fluxo de trabalho",
-      "support": "Veja o que muda quando seus documentos realmente trabalham para você.",
-      "before_label": "Antes",
-      "after_label": "Depois",
-      "search": {
-        "before_title": "Busca",
-        "before_desc": "Abrir 4 pastas, escanear nomes de arquivo, abrir 3 arquivos errados antes de encontrar o certo.",
-        "after_title": "Busca",
-        "after_desc": "Pergunte em linguagem natural, receba a resposta com citação de fonte em segundos."
-      },
-      "send": {
-        "before_title": "Envio",
-        "before_desc": "Torcer para ter anexado a versão mais recente. Sem como confirmar até ser tarde demais.",
-        "after_title": "Envio",
-        "after_desc": "Confirme o arquivo exato, destinatário e conteúdo antes do envio."
-      },
-      "organize": {
-        "before_title": "Organização",
-        "before_desc": "Caos na área de trabalho, anexos de e-mail, arquivos do Slack — tudo espalhado.",
-        "after_title": "Organização",
-        "after_desc": "Um workspace, organizado por projeto, pesquisável em todas as fontes."
-      }
+    "card2": {
+      "time": "Minutos antes de enviar o deck do conselho",
+      "role": "Analista Financeiro, startup Série B",
+      "narrative": "O CEO precisa dos números de receita mais recentes para a reunião do conselho em 30 minutos. Três versões do deck existem. O anexo errado significa perda de credibilidade.",
+      "outcome": "Encontrou o deck certo com ARR do Q4 citado no slide 7. Enviou com confirmação explícita.",
+      "label": "Cenário representativo"
+    },
+    "card3": {
+      "time": "Tentando encontrar a proposta aprovada antes da ligação com o cliente",
+      "role": "Líder de Operações, consultoria",
+      "narrative": "O cliente está ao telefone em 5 minutos perguntando sobre o cronograma do projeto. A proposta está em algum lugar entre e-mail, Slack e três pastas de projetos.",
+      "outcome": "Buscou propostas, e-mails e Slack em uma única pesquisa. Encontrou o SOW aprovado com entregáveis e cronograma.",
+      "label": "Cenário representativo"
     },
     "trust": {
-      "title": "Por que equipes confiam no Allybi",
-      "point1": {
-        "title": "Criptografado por padrão",
-        "desc": "Todos os dados criptografados em repouso e em trânsito."
-      },
-      "point2": {
-        "title": "Respostas fundamentadas",
-        "desc": "Cada resposta cita o arquivo e localização de origem."
-      },
-      "point3": {
-        "title": "Confirmação explícita",
-        "desc": "Nada é enviado sem sua revisão e aprovação."
-      },
-      "point4": {
-        "title": "Sem treinamento de modelos",
-        "desc": "Seus documentos nunca treinam modelos de AI."
-      }
+      "title": "Por que equipes confiam no Allybi.",
+      "p1": "Cada resposta cita o arquivo e a localização de origem.",
+      "p2": "Seus documentos nunca treinam modelos de IA.",
+      "p3": "Nada é enviado sem sua revisão e aprovação.",
+      "p4": "Cada workspace é totalmente isolado dos demais."
     },
     "cta": {
-      "title": "Experimente você mesmo.",
-      "support": "Veja como Allybi transforma o trabalho pesado com documentos para sua equipe."
+      "title": "Veja com seus próprios olhos.",
+      "button": "Solicitar demo"
     }
   },
   "waitlist": {

@@ -1215,74 +1215,45 @@
       "eyebrow": "Historias de clientes",
       "title": "Cómo los equipos trabajan mejor con Allybi.",
       "support": "Flujos de trabajo reales. Resultados reales. Descubre cómo Allybi transforma el trabajo intensivo con documentos."
+    }
+  },
+  "stories": {
+    "hero": {
+      "eyebrow": "Historias de Clientes",
+      "title": "Trabajo real. Presión real. Claridad real.",
+      "support": "Descubre cómo los equipos usan Allybi en los momentos que más importan."
     },
-    "outcomes": {
-      "title": "Flujos de trabajo representativos",
-      "support": "Cómo diferentes roles experimentan Allybi en su trabajo diario.",
-      "before": "Antes",
-      "after": "Después",
-      "legal": {
-        "role": "Asociado legal",
-        "before": "20 minutos buscando la versión correcta del contrato.",
-        "after": "Encontró la cláusula exacta y los cambios en 15 segundos."
-      },
-      "finance": {
-        "role": "Analista financiero",
-        "before": "Envió la presentación de junta incorrecta al cliente.",
-        "after": "Archivo correcto adjunto con confirmación explícita."
-      },
-      "ops": {
-        "role": "Líder de operaciones",
-        "before": "Tres herramientas abiertas para encontrar una propuesta.",
-        "after": "Una búsqueda en documentos, correos y Slack."
-      }
+    "card1": {
+      "time": "8:40 AM — Antes de la revisión del socio",
+      "role": "Asociado Legal, equipo de M&A",
+      "narrative": "El socio director pregunta qué cambió en la cláusula de indemnización desde el último borrador. Doce versiones en la carpeta. Veinte minutos de comparación manual — o una pregunta a Allybi.",
+      "outcome": "Encontró el cambio exacto en la cláusula, citando la página 14, en 15 segundos.",
+      "label": "Escenario representativo"
     },
-    "transforms": {
-      "title": "Transformaciones de flujo de trabajo",
-      "support": "Descubre qué cambia cuando tus documentos realmente trabajan para ti.",
-      "before_label": "Antes",
-      "after_label": "Después",
-      "search": {
-        "before_title": "Búsqueda",
-        "before_desc": "Abrir 4 carpetas, escanear nombres de archivo, abrir 3 archivos incorrectos antes de encontrar el correcto.",
-        "after_title": "Búsqueda",
-        "after_desc": "Pregunta en lenguaje natural, obtén la respuesta con cita de fuente en segundos."
-      },
-      "send": {
-        "before_title": "Envío",
-        "before_desc": "Esperar haber adjuntado la última versión. Sin forma de confirmar hasta que es demasiado tarde.",
-        "after_title": "Envío",
-        "after_desc": "Confirma el archivo exacto, destinatario y contenido antes de que salga."
-      },
-      "organize": {
-        "before_title": "Organización",
-        "before_desc": "Caos en el escritorio, adjuntos de correo, archivos de Slack — todo disperso.",
-        "after_title": "Organización",
-        "after_desc": "Un espacio de trabajo, organizado por proyecto, buscable en todas las fuentes."
-      }
+    "card2": {
+      "time": "Minutos antes de enviar el deck de junta",
+      "role": "Analista Financiero, startup Serie B",
+      "narrative": "El CEO necesita las cifras de ingresos más recientes para la reunión de junta en 30 minutos. Existen tres versiones del deck. El archivo adjunto equivocado significa perder credibilidad.",
+      "outcome": "Encontró el deck correcto con ARR del Q4 citado en el slide 7. Enviado con confirmación explícita.",
+      "label": "Escenario representativo"
+    },
+    "card3": {
+      "time": "Intentando encontrar la propuesta aprobada antes de la llamada con el cliente",
+      "role": "Líder de Operaciones, consultora",
+      "narrative": "El cliente está al teléfono en 5 minutos preguntando por el cronograma del proyecto. La propuesta está en algún lugar entre correo, Slack y tres carpetas de proyectos.",
+      "outcome": "Buscó propuestas, correos y Slack en una sola búsqueda. Encontró el SOW aprobado con entregables y cronograma.",
+      "label": "Escenario representativo"
     },
     "trust": {
-      "title": "Por qué los equipos confían en Allybi",
-      "point1": {
-        "title": "Cifrado por defecto",
-        "desc": "Todos los datos cifrados en reposo y en tránsito."
-      },
-      "point2": {
-        "title": "Respuestas fundamentadas",
-        "desc": "Cada respuesta cita el archivo fuente y ubicación."
-      },
-      "point3": {
-        "title": "Confirmación explícita",
-        "desc": "Nada se envía sin tu revisión y aprobación."
-      },
-      "point4": {
-        "title": "Sin entrenamiento de modelos",
-        "desc": "Tus documentos nunca entrenan modelos de AI."
-      }
+      "title": "Por qué los equipos confían en Allybi.",
+      "p1": "Cada respuesta cita el archivo fuente y su ubicación.",
+      "p2": "Tus documentos nunca entrenan modelos de IA.",
+      "p3": "Nada se envía sin tu revisión y aprobación.",
+      "p4": "Cada workspace está completamente aislado de los demás."
     },
     "cta": {
-      "title": "Pruébalo tú mismo.",
-      "support": "Descubre cómo Allybi transforma el trabajo intensivo con documentos para tu equipo."
+      "title": "Compruébalo por ti mismo.",
+      "button": "Solicitar demo"
     }
   },
   "waitlist": {
