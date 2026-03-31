@@ -150,11 +150,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ── Init ──
+  // ── Init — PT-BR is the default language ──
   const saved = localStorage.getItem('language');
-  if (saved && saved !== 'en') {
+  if (saved) {
     setLanguage(saved);
-  } else if (!saved) {
-    suggestLanguage();
+  } else {
+    // Default to PT-BR for first-time visitors
+    setLanguage('pt');
   }
 });

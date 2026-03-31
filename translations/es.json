@@ -17,22 +17,23 @@
     "contact": "Contacto",
     "about": "Nosotros",
     "sign_in": "Iniciar sesión",
-    "book_demo": "Solicitar demo",
+    "book_demo": "Agendar demostración",
     "start_free": "Empezar gratis",
     "open_app": "Abrir Allybi",
-    "customer_stories": "Historias de Clientes"
+    "customer_stories": "Historias de Clientes",
+    "for_lawyers": "Para abogados"
   },
   "footer": {
-    "tagline": "Diseñado para equipos que priorizan la privacidad y manejan información sensible.",
+    "tagline": "Hecho para profesionales que manejan documentos sensibles.",
     "col_product": "Producto",
     "overview": "Descripción general",
     "how_it_works": "Cómo funciona",
     "integrations": "Integraciones",
     "security": "Seguridad",
-    "col_use_cases": "Casos de uso",
-    "legal": "Legal",
-    "finance": "Finanzas",
-    "business": "Negocios",
+    "col_use_cases": "Para equipos",
+    "legal": "Para abogados",
+    "finance": "Para finanzas",
+    "business": "Para operaciones",
     "col_security": "Seguridad",
     "security_overview": "Descripción general de seguridad",
     "privacy_policy": "Política de privacidad",
@@ -59,19 +60,19 @@
     "security_short": "Seguridad y Privacidad",
     "pricing": "Precios",
     "privacy_link": "Privacidad",
-    "request_demo": "Solicitar demo",
+    "request_demo": "Agendar demostración",
     "sec_overview": "Vista general",
     "security_link": "Seguridad",
     "stories": "Historias"
   },
   "hero": {
-    "eyebrow": "Workspace de IA privado",
-    "title": "El archivo correcto.<br>Encontrado en segundos.",
-    "subtitle": "Encuentra cualquier cláusula, versión o adjunto — con respuestas fundamentadas y confirmación explícita antes del envío.",
-    "cta_primary": "Solicitar demo",
+    "eyebrow": "Para quienes trabajan con documentos sensibles",
+    "title": "La cláusula correcta. La versión correcta.<br>Encontradas en segundos.",
+    "subtitle": "Encuentre cualquier cláusula, versión o adjunto en sus archivos — con respuestas que citan la fuente y confirmación antes de cualquier envío.",
+    "cta_primary": "Agendar demostración",
     "cta_secondary": "Ver cómo funciona",
-    "chip1": "Respuestas fundamentadas",
-    "chip2": "Sin entrenamiento de modelo",
+    "chip1": "Respuestas con fuente citada",
+    "chip2": "Sin entrenamiento con sus datos",
     "chip3": "Confirmación antes del envío",
     "scene_query": "¿Qué cambió en la cláusula de indemnización?",
     "scene_badge": "Respuesta fundamentada",
@@ -80,47 +81,51 @@
   },
   "trust": {
     "item1": "Cifrado de extremo a extremo",
-    "item2": "Confirmación explícita",
-    "item3": "Controles de región",
-    "item4": "Sin entrenamiento de modelo"
+    "item2": "Fundamentado en sus archivos",
+    "item3": "Sin entrenamiento con sus datos",
+    "item4": "Confirmación antes de cada envío",
+    "item5": "Hospedaje en Brasil e internacional"
   },
   "story": {
-    "title": "Tres movimientos. Claridad total.",
+    "title": "Tres pasos. Claridad completa.",
     "find_num": "01",
     "find_title": "Encontrar",
-    "find_desc": "Localiza el archivo, cláusula o número exacto en todos los documentos de tu biblioteca.",
+    "find_desc": "Localice la cláusula, el adjunto o el número exacto en cualquier documento de su proyecto. Cada respuesta cita el archivo, la página y la sección.",
     "compare_num": "02",
     "compare_title": "Comparar",
-    "compare_desc": "Observa qué cambió entre versiones — resaltado, referenciado y citado.",
+    "compare_desc": "Vea qué cambió entre versiones — resaltado, referenciado y citado. Sin necesidad de abrir dos archivos lado a lado.",
     "act_num": "03",
     "act_title": "Actuar",
-    "act_desc": "Edita, responde y envía el archivo correcto — confirmado antes de salir."
+    "act_desc": "Edite el documento, prepare la respuesta, adjunte el archivo correcto. Usted confirma antes de cualquier envío."
   },
   "how": {
     "title": "Cómo funciona Allybi",
     "subtitle": "Tres pasos. Sin curva de aprendizaje.",
-    "step1_title": "Trae tus archivos",
-    "step1_desc": "Sube documentos, conecta el correo o vincula Slack. Allybi indexa todo en proyectos privados y sellados.",
+    "step1_title": "Traiga sus archivos",
+    "step1_desc": "Suba contratos, borradores, hojas de cálculo y presentaciones. Allybi organiza todo en proyectos privados y aislados.",
     "step2_title": "Pregunta de forma natural",
-    "step2_desc": "Haz cualquier pregunta. Allybi devuelve respuestas con referencias exactas de archivo, página y sección.",
-    "step3_title": "Actúa con certeza",
-    "step3_desc": "Edita documentos, redacta respuestas, adjunta el archivo correcto. Tú apruebas antes de que salga."
+    "step2_desc": "Pregunte como le preguntaría a un colega: \"¿Qué cambió en la cláusula de indemnización?\" Allybi responde con la fuente exacta.",
+    "step3_title": "Actúe con confianza",
+    "step3_desc": "Edite documentos, prepare respuestas, adjunte el archivo correcto. Revise y confirme antes de cualquier envío."
   },
   "cases": {
-    "title": "Diseñado para trabajo sensible.",
+    "title": "Hecho para quienes trabajan con documentos sensibles.",
+    "subtitle": "Los abogados son los primeros. Equipos de finanzas, compliance y operaciones son los siguientes.",
     "legal": {
+      "tab": "Legal",
       "title": "Busca cláusulas. Compara borradores.<br>Envía la versión correcta.",
       "b1": "Busca en contratos y memorandos al instante",
       "b2": "Compara cambios de cláusulas entre borradores",
       "b3": "Cada respuesta citada con la fuente",
-      "cta": "Ver flujos legales",
+      "cta": "Vea cómo los abogados usan Allybi",
       "mock_q": "\"Mostrar cambios de la cláusula 12.4 entre v2 y v3\"",
       "mock_heading": "Sección 12.4 — Limitación de Responsabilidad",
       "mock_src": "NDA_v3_Final.pdf — p. 8",
-      "heading": "Busca cláusulas. Compara borradores.<br>Envía la versión correcta.",
+      "heading": "Compare cláusulas. Rastree versiones.<br>Envíe el archivo correcto.",
       "mock_body": "Cap cambió de <s style=\"color:#DC2626;background:rgba(220,38,38,0.08);padding:1px 3px;border-radius:2px\">$1M</s> a <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$3M</span>."
     },
     "finance": {
+      "tab": "Finanzas",
       "title": "Encuentra el número. Accede a la presentación.<br>Responde con confianza.",
       "b1": "Extrae cifras de ingresos de cualquier modelo cargado",
       "b2": "Compara números entre versiones trimestrales",
@@ -133,6 +138,7 @@
       "mock_body": "ARR Q4 alcanzó <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$4.2M</span>, +38% vs Q3."
     },
     "business": {
+      "tab": "Negocios",
       "title": "Organiza propuestas. Encuentra respuestas.<br>Avanza con seguridad.",
       "b1": "Busca en propuestas y planes de proyecto",
       "b2": "Obtén respuestas de la versión más reciente",
@@ -158,14 +164,14 @@
     "cta": "Explorar seguridad"
   },
   "proof": {
-    "title": "Cómo los equipos trabajan con Allybi.",
-    "card1_meta": "Flujo representativo",
+    "title": "Cómo los profesionales usan Allybi.",
+    "card1_meta": "Ejemplo de uso",
     "card1_role": "Asociado Legal",
     "card1_quote": "\"Encontré el cambio exacto de cláusula en 12 versiones de contrato en 15 segundos — en lugar de 20 minutos de revisión manual.\"",
-    "card2_meta": "Flujo representativo",
+    "card2_meta": "Ejemplo de uso",
     "card2_role": "Analista Financiero",
     "card2_quote": "\"Encontré la presentación correcta y la cifra de ingresos con cita de la fuente. Enviado al socio — confirmado antes de salir.\"",
-    "card3_meta": "Flujo representativo",
+    "card3_meta": "Ejemplo de uso",
     "card3_role": "Líder de Operaciones",
     "card3_quote": "\"Busqué en propuestas, correos y Slack desde una sola búsqueda. Redacté el seguimiento con el archivo correcto adjunto.\"",
     "cta": "Ver historias de clientes"
@@ -179,14 +185,14 @@
       "item5": "Alojamiento en UE y EE. UU. disponible"
     },
     "pain": {
-      "title": "El costo oculto no es solo el tiempo de búsqueda.",
-      "subtitle": "Cada versión incorrecta, cláusula omitida o adjunto desactualizado se traduce en riesgo real.",
-      "card1_title": "Riesgo de versión incorrecta",
-      "card1_desc": "Alguien firma un borrador desactualizado, referencia un modelo reemplazado o envía términos obsoletos. El daño ya está hecho antes de que alguien lo note.",
-      "card2_title": "Interrupción por búsqueda",
-      "card2_desc": "Cada vez que pausas tu trabajo real para buscar un archivo, una cláusula o un número en cinco herramientas distintas, pierdes enfoque y ritmo en lo que realmente importa.",
-      "card3_title": "Riesgo de adjunto incorrecto",
-      "card3_desc": "Enviar el archivo equivocado a la persona equivocada. Allybi muestra la versión correcta y solicita confirmación explícita antes de que cualquier cosa salga de tu espacio de trabajo."
+      "title": "Momentos que todo abogado conoce.",
+      "subtitle": "El riesgo no está en el trabajo en sí — está en el archivo incorrecto, la versión desactualizada, el adjunto equivocado.",
+      "card1_title": "Enviar la versión incorrecta",
+      "card1_desc": "Alguien firma un borrador desactualizado. Alguien cita un contrato superado. El daño ya está hecho antes de que alguien lo note.",
+      "card2_title": "El cliente pregunta qué cambió",
+      "card2_desc": "Cuando un socio o cliente pregunta qué cambió entre versiones, necesita la respuesta en segundos — no después de 20 minutos revisando carpetas.",
+      "card3_title": "Encontrar el adjunto correcto bajo presión",
+      "card3_desc": "Sabe qué archivo necesita enviar, pero está en algún lugar entre cinco carpetas y tres versiones. El plazo no espera."
     },
     "usecase": {
       "title": "Diseñado para equipos donde la precisión importa",
@@ -264,16 +270,16 @@
     },
     "security": {
       "title": "Privado por diseño. Claro por diseño.",
-      "subtitle": "Tus datos nunca entrenan modelos. Cada acción requiere confirmación. Arquitectura construida para la confianza.",
-      "pillar1": "Cifrado de extremo a extremo",
-      "pillar1_desc": "Todos los datos cifrados en tránsito y en reposo. Tus archivos nunca son legibles por nadie más que tú.",
+      "subtitle": "Sus datos nunca entrenan modelos. Cada acción requiere confirmación. Arquitectura construida para la confianza.",
+      "pillar1": "Cifrado completo",
+      "pillar1_desc": "Todos los datos cifrados en tránsito y en reposo. Sus archivos nunca son legibles por nadie más que usted.",
       "pillar2": "Cero entrenamiento de modelos",
       "pillar2_desc": "Tus documentos nunca se usan para entrenar modelos de AI. Garantizado contractualmente.",
       "pillar3": "Confirmación explícita",
       "pillar3_desc": "Nada se envía, comparte o manda por correo sin tu confirmación explícita. Siempre.",
-      "pillar4": "Alojamiento en UE y EE. UU.",
-      "pillar4_desc": "Elige dónde residen tus datos. Cumple requisitos regulatorios con infraestructura específica por región.",
-      "cta": "Ver descripción general de seguridad"
+      "pillar4": "Hospedaje flexible",
+      "pillar4_desc": "Elija dónde residen sus datos. Cumpla requisitos regulatorios con infraestructura regional.",
+      "cta": "Conozca más sobre seguridad"
     },
     "integrations": {
       "title": "Trabaja donde tus archivos y conversaciones ya están.",
@@ -296,20 +302,21 @@
       "a2": "Cada respuesta de Allybi cita el documento fuente exacto, número de página y pasaje relevante. Si la información no existe en tus archivos, Allybi te lo indica — nunca fabrica respuestas. La fundamentación se aplica a nivel de arquitectura, no solo a nivel de prompt.",
       "q3": "¿Allybi es privado?",
       "a3": "Sí. Allybi cifra todos los datos en tránsito y en reposo. Tus documentos nunca se usan para entrenar modelos de AI — esto está garantizado contractualmente. Los espacios de trabajo están aislados y no hay fugas de datos entre proyectos. Tú eliges dónde se alojan tus datos (UE o EE. UU.).",
-      "q4": "¿Qué archivos y flujos de trabajo soporta Allybi?",
-      "a4": "Allybi soporta archivos PDF, DOCX, XLSX, PPTX y texto plano. También puedes conectar Gmail, Outlook y Slack para buscar en correos y mensajes. Edita documentos y hojas de cálculo directamente dentro del espacio de trabajo.",
+      "q4": "¿Es Allybi adecuado para trabajo legal?",
+      "a4": "Sí. Allybi fue diseñado para profesionales que manejan documentos sensibles diariamente. Compare cláusulas entre versiones, busque contratos en lenguaje natural y envíe con confirmación. Los proyectos están aislados y cifrados.",
       "q5": "¿Puede Allybi buscar en correo o Slack?",
       "a5": "Sí. Conecta tu cuenta de Gmail, Outlook o Slack y Allybi indexará los mensajes junto a tus documentos. Busca en todo con una sola consulta — encuentra el hilo de correo y el contrato adjunto al mismo tiempo.",
       "q6": "¿Qué pasa antes de enviar un mensaje?",
       "a6": "Allybi siempre te muestra una pantalla de confirmación antes de que cualquier cosa se envíe externamente — ya sea un correo, un mensaje de Slack o un archivo compartido. Revisas el contenido, los destinatarios y los adjuntos antes de confirmar. Nada sale de tu espacio de trabajo sin tu aprobación explícita.",
       "q7": "¿Mis documentos entrenan modelos de AI?",
       "a7": "No. Tus documentos nunca entrenan modelos de AI. Esto está garantizado contractualmente en nuestros términos de servicio. Allybi usa tus archivos solo para generar respuestas durante tu sesión — nada se retiene para mejora de modelos.",
-      "q8": "¿Para quién es Allybi?",
-      "a8": "Allybi está diseñado para equipos legales, financieros y de negocios que manejan documentos sensibles a diario. Si tu trabajo involucra contratos, acuerdos, modelos financieros, presentaciones para juntas directivas, propuestas o documentos de cumplimiento — y la privacidad importa — Allybi fue creado para ti."
+      "q8": "¿Para quién está hecho Allybi?",
+      "a8": "Para abogados y profesionales que manejan documentos sensibles diariamente. Si su trabajo involucra contratos, borradores, opiniones legales, hojas de cálculo financieras o documentos de compliance — y la privacidad importa — Allybi es para usted."
     },
     "final_cta": {
-      "title": "Tus archivos, finalmente útiles.",
-      "support": "Trae tus documentos, mensajes e historial de versiones a un solo espacio de trabajo privado."
+      "title": "Sus documentos merecen más claridad.",
+      "support": "Vea cómo Allybi puede ayudar en su trabajo diario.",
+      "cta": "Agendar demostración"
     }
   },
   "about": {
@@ -1270,8 +1277,8 @@
     "occupation_placeholder": "Ingresa tu ocupación/industria"
   },
   "cta": {
-    "title": "Tus documentos merecen más.",
-    "subtitle": "Descubre lo que Allybi puede hacer por tu equipo.",
-    "button": "Solicitar demo"
+    "title": "Sus documentos merecen más claridad.",
+    "subtitle": "Vea cómo Allybi puede ayudar en su trabajo diario.",
+    "button": "Agendar demostración"
   }
 }

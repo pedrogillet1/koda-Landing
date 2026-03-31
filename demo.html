@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,53 +46,19 @@
        ================================================================ -->
   <header id="allybi-header" class="allybi-header">
     <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo">
-        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
-      </a>
-
+      <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
       <nav class="allybi-nav desktop-only">
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-          <div class="nav-dropdown-menu">
-            <a href="/" data-i18n-key="nav.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
-          </div>
-        </div>
-
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
-          <div class="nav-dropdown-menu">
-            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
-          </div>
-        </div>
-
+        <a href="how-it-works.html" class="nav-link" data-i18n-key="nav.how_it_works">How it works</a>
+        <a href="use-case-legal.html" class="nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
         <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
         <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
-          <div class="nav-dropdown-menu">
-            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
-            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
-          </div>
-        </div>
-
-        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+        <a href="/#faq" class="nav-link" data-i18n-key="nav.faq_link">FAQ</a>
       </nav>
-
       <div class="header-ctas desktop-only">
         <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
       </div>
-
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -101,57 +67,17 @@
        ================================================================ -->
   <div id="allybi-mobile-menu" class="mobile-menu">
     <nav class="mobile-menu-nav">
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="mobile-dropdown-items">
-          <a href="/" data-i18n-key="nav.overview">Overview</a>
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
-        </div>
-      </div>
-
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
-        <div class="mobile-dropdown-items">
-          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
-        </div>
-      </div>
-
+      <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
+      <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
       <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
       <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
-        <div class="mobile-dropdown-items">
-          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
-          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
-        </div>
-      </div>
-
+      <a href="/#faq" class="mobile-nav-link" data-i18n-key="nav.faq_link">FAQ</a>
       <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+      <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
     </nav>
-
     <div class="mobile-ctas">
-      <a href="demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-    </div>
-
-    <div class="mobile-language-selector">
-      <div class="language-selector" id="mobile-language-selector">
-        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-          <span class="lang-label">English</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="language-menu hidden" role="listbox">
-          <li role="option" data-lang="en">English</li>
-          <li role="option" data-lang="pt">Portugues (BR)</li>
-          <li role="option" data-lang="es">Espanol</li>
-        </ul>
-      </div>
     </div>
   </div>
 
@@ -294,7 +220,7 @@
                 <textarea id="demo-message" name="message" class="allybi-textarea" rows="4" placeholder="Tell us about your workflow or specific needs" data-i18n-key="demo.form.message_placeholder"></textarea>
               </div>
 
-              <button type="submit" class="allybi-btn allybi-btn--primary demo-form__submit" data-i18n-key="demo.form.submit">Request demo</button>
+              <button type="submit" class="allybi-btn allybi-btn--primary demo-form__submit" data-i18n-key="demo.form.submit">Book demo</button>
             </form>
           </div>
 
@@ -475,7 +401,7 @@
         <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
         <a href="about.html" data-i18n-key="footer.about">About</a>
         <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="demo.html" data-i18n-key="nav.book_demo">Book demo</a>
+        <a href="request-demo.html" data-i18n-key="nav.book_demo">Book demo</a>
         <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
         <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
         <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +9,20 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
 
   <!-- SEO -->
-  <title>Request a Demo — Allybi</title>
-  <meta name="description" content="See Allybi in action. Tell us about your team and we'll set up a personalized walkthrough of the private AI workspace.">
+  <title>Book a Demo — Allybi</title>
+  <meta name="description" content="See Allybi in action. Tell us about your work and we'll set up a personalized demo.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Request a Demo — Allybi">
-  <meta property="og:description" content="See Allybi in action. Tell us about your team and we'll set up a personalized walkthrough of the private AI workspace.">
+  <meta property="og:title" content="Book a Demo — Allybi">
+  <meta property="og:description" content="See Allybi in action. Tell us about your work and we'll set up a personalized demo.">
   <meta property="og:url" content="https://allybi.co/request-demo.html">
   <meta property="og:site_name" content="Allybi">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Request a Demo — Allybi">
-  <meta name="twitter:description" content="See Allybi in action. Tell us about your team and we'll set up a personalized walkthrough of the private AI workspace.">
+  <meta name="twitter:title" content="Book a Demo — Allybi">
+  <meta name="twitter:description" content="See Allybi in action. Tell us about your work and we'll set up a personalized demo.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,53 +46,19 @@
        ================================================================ -->
   <header id="allybi-header" class="allybi-header">
     <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo">
-        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
-      </a>
-
+      <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
       <nav class="allybi-nav desktop-only">
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-          <div class="nav-dropdown-menu">
-            <a href="/" data-i18n-key="nav.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
-          </div>
-        </div>
-
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
-          <div class="nav-dropdown-menu">
-            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
-          </div>
-        </div>
-
+        <a href="how-it-works.html" class="nav-link" data-i18n-key="nav.how_it_works">How it works</a>
+        <a href="use-case-legal.html" class="nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
         <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
         <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
-          <div class="nav-dropdown-menu">
-            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
-            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
-          </div>
-        </div>
-
-        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+        <a href="/#faq" class="nav-link" data-i18n-key="nav.faq_link">FAQ</a>
       </nav>
-
       <div class="header-ctas desktop-only">
         <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="demo.nav.request_demo">Request demo</a>
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
       </div>
-
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -101,57 +67,17 @@
        ================================================================ -->
   <div id="allybi-mobile-menu" class="mobile-menu">
     <nav class="mobile-menu-nav">
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="mobile-dropdown-items">
-          <a href="/" data-i18n-key="nav.overview">Overview</a>
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
-        </div>
-      </div>
-
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
-        <div class="mobile-dropdown-items">
-          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
-        </div>
-      </div>
-
+      <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
+      <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
       <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
       <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
-        <div class="mobile-dropdown-items">
-          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
-          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
-        </div>
-      </div>
-
+      <a href="/#faq" class="mobile-nav-link" data-i18n-key="nav.faq_link">FAQ</a>
       <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+      <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
     </nav>
-
     <div class="mobile-ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="demo.nav.request_demo">Request demo</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-    </div>
-
-    <div class="mobile-language-selector">
-      <div class="language-selector" id="mobile-language-selector">
-        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-          <span class="lang-label">English</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="language-menu hidden" role="listbox">
-          <li role="option" data-lang="en">English</li>
-          <li role="option" data-lang="pt">Portugues (BR)</li>
-          <li role="option" data-lang="es">Espanol</li>
-        </ul>
-      </div>
     </div>
   </div>
 
@@ -166,14 +92,15 @@
     <section class="rdemo-hero">
       <div class="allybi-container">
         <div class="rdemo-hero__inner">
-          <h1 class="allybi-h1" data-i18n-key="demo.hero.title">See Allybi in action.</h1>
-          <p class="allybi-body-lg" data-i18n-key="demo.hero.subhead">Tell us about your team and we'll set up a personalized walkthrough.</p>
+          <span class="allybi-eyebrow">Demo</span>
+          <h1 class="allybi-h1" data-i18n-key="demo.hero.title">See Allybi in action</h1>
+          <p class="allybi-body-lg" data-i18n-key="demo.hero.support">Tell us about your work and we'll set up a personalized demo.</p>
         </div>
       </div>
     </section>
 
     <!-- ────────────────────────────────────────────────────────────────
-         FORM + PREVIEW (Two-column)
+         FORM + SIDE PANEL (Two-column)
          ──────────────────────────────────────────────────────────────── -->
     <section class="rdemo-main allybi-section">
       <div class="allybi-container">
@@ -185,114 +112,69 @@
 
               <!-- Name -->
               <div class="rdemo-field">
-                <label class="rdemo-label" for="rdemo-name" data-i18n-key="demo.form.name_label">Name</label>
-                <input type="text" id="rdemo-name" name="name" class="rdemo-input" required autocomplete="name" placeholder="Your full name" data-i18n-key="demo.form.name_placeholder">
+                <label class="rdemo-label" for="rdemo-name" data-i18n-key="demo.label_name">Name</label>
+                <input type="text" id="rdemo-name" name="name" class="rdemo-input" required autocomplete="name" placeholder="Your full name" data-i18n-key="demo.placeholder_name">
               </div>
 
               <!-- Work email -->
               <div class="rdemo-field">
-                <label class="rdemo-label" for="rdemo-email" data-i18n-key="demo.form.email_label">Work email</label>
-                <input type="email" id="rdemo-email" name="email" class="rdemo-input" required autocomplete="email" placeholder="you@company.com" data-i18n-key="demo.form.email_placeholder">
+                <label class="rdemo-label" for="rdemo-email" data-i18n-key="demo.label_email">Work email</label>
+                <input type="email" id="rdemo-email" name="email" class="rdemo-input" required autocomplete="email" placeholder="you@company.com" data-i18n-key="demo.placeholder_email">
               </div>
 
-              <!-- Company -->
+              <!-- Company (optional) -->
               <div class="rdemo-field">
-                <label class="rdemo-label" for="rdemo-company" data-i18n-key="demo.form.company_label">Company</label>
-                <input type="text" id="rdemo-company" name="company" class="rdemo-input" required autocomplete="organization" placeholder="Your company name" data-i18n-key="demo.form.company_placeholder">
+                <label class="rdemo-label" for="rdemo-company" data-i18n-key="demo.label_company">Company <span class="rdemo-optional">(optional)</span></label>
+                <input type="text" id="rdemo-company" name="company" class="rdemo-input" autocomplete="organization" placeholder="Your company or firm" data-i18n-key="demo.placeholder_company">
               </div>
 
-              <!-- Your role -->
+              <!-- Role / Area -->
               <div class="rdemo-field">
-                <label class="rdemo-label" for="rdemo-role" data-i18n-key="demo.form.role_label">Your role</label>
+                <label class="rdemo-label" for="rdemo-role" data-i18n-key="demo.label_role">Role / Area</label>
                 <select id="rdemo-role" name="role" class="rdemo-select" required>
-                  <option value="" disabled selected data-i18n-key="demo.form.role_placeholder">Select your role</option>
-                  <option value="legal" data-i18n-key="demo.form.role_legal">Legal</option>
-                  <option value="finance" data-i18n-key="demo.form.role_finance">Finance</option>
-                  <option value="operations" data-i18n-key="demo.form.role_operations">Operations</option>
-                  <option value="engineering" data-i18n-key="demo.form.role_engineering">Engineering</option>
-                  <option value="executive" data-i18n-key="demo.form.role_executive">Executive</option>
-                  <option value="other" data-i18n-key="demo.form.role_other">Other</option>
-                </select>
-              </div>
-
-              <!-- Team size -->
-              <div class="rdemo-field">
-                <label class="rdemo-label" for="rdemo-team-size" data-i18n-key="demo.form.team_size_label">Team size</label>
-                <select id="rdemo-team-size" name="team_size" class="rdemo-select" required>
-                  <option value="" disabled selected data-i18n-key="demo.form.team_size_placeholder">Select team size</option>
-                  <option value="1-10" data-i18n-key="demo.form.team_1_10">1-10</option>
-                  <option value="11-50" data-i18n-key="demo.form.team_11_50">11-50</option>
-                  <option value="51-200" data-i18n-key="demo.form.team_51_200">51-200</option>
-                  <option value="201-500" data-i18n-key="demo.form.team_201_500">201-500</option>
-                  <option value="500+" data-i18n-key="demo.form.team_500_plus">500+</option>
-                </select>
-              </div>
-
-              <!-- Primary use case -->
-              <div class="rdemo-field">
-                <label class="rdemo-label" for="rdemo-use-case" data-i18n-key="demo.form.use_case_label">Primary use case</label>
-                <select id="rdemo-use-case" name="use_case" class="rdemo-select" required>
-                  <option value="" disabled selected data-i18n-key="demo.form.use_case_placeholder">Select a use case</option>
-                  <option value="document-search" data-i18n-key="demo.form.uc_search">Document search & Q&A</option>
-                  <option value="contract-analysis" data-i18n-key="demo.form.uc_contracts">Contract analysis</option>
-                  <option value="financial-analysis" data-i18n-key="demo.form.uc_finance">Financial analysis</option>
-                  <option value="email-search" data-i18n-key="demo.form.uc_email">Email & message search</option>
-                  <option value="document-editing" data-i18n-key="demo.form.uc_editing">Document editing</option>
-                  <option value="general-management" data-i18n-key="demo.form.uc_general">General document management</option>
+                  <option value="" disabled selected data-i18n-key="demo.placeholder_role">Select your area</option>
+                  <option value="legal" data-i18n-key="demo.role_legal">Legal</option>
+                  <option value="finance" data-i18n-key="demo.role_finance">Finance</option>
+                  <option value="operations" data-i18n-key="demo.role_operations">Operations</option>
+                  <option value="other" data-i18n-key="demo.role_other">Other</option>
                 </select>
               </div>
 
               <!-- Message -->
               <div class="rdemo-field">
-                <label class="rdemo-label" for="rdemo-message" data-i18n-key="demo.form.message_label">Anything else we should know? <span class="rdemo-optional" data-i18n-key="demo.form.optional">(optional)</span></label>
-                <textarea id="rdemo-message" name="message" class="rdemo-textarea" rows="4" placeholder="Tell us about your workflow or specific needs" data-i18n-key="demo.form.message_placeholder"></textarea>
+                <label class="rdemo-label" for="rdemo-message" data-i18n-key="demo.label_message">Message</label>
+                <textarea id="rdemo-message" name="message" class="rdemo-textarea" rows="4" placeholder="Tell us about your work and what you're looking to solve..." data-i18n-key="demo.placeholder_message"></textarea>
               </div>
 
               <!-- Submit -->
-              <button type="submit" class="allybi-btn allybi-btn--primary rdemo-submit" data-i18n-key="demo.form.submit">Request demo</button>
+              <button type="submit" class="allybi-btn allybi-btn--primary rdemo-submit" data-i18n-key="nav.book_demo">Book demo</button>
             </form>
 
-            <!-- Below form note -->
-            <p class="rdemo-note" data-i18n-key="demo.form.note">We typically respond within one business day. Your information is handled according to our <a href="privacy.html">privacy policy</a>.</p>
+            <!-- Reassurance text -->
+            <p class="rdemo-note" data-i18n-key="demo.reassurance">We typically respond within one business day. Your information is handled according to our <a href="privacy.html">privacy policy</a>.</p>
           </div>
 
-          <!-- RIGHT: Product preview + Reassurance -->
+          <!-- RIGHT: Trust signals -->
           <div class="rdemo-preview-col">
             <div class="rdemo-preview">
 
-              <!-- Mini workspace preview -->
-              <div class="rdemo-preview__window">
-                <div class="rdemo-preview__titlebar">
-                  <span class="rdemo-preview__dot"></span>
-                  <span class="rdemo-preview__dot"></span>
-                  <span class="rdemo-preview__dot"></span>
-                  <span class="rdemo-preview__titlebar-text">Allybi Workspace</span>
-                </div>
-                <div class="rdemo-preview__body">
-                  <div class="rdemo-preview__search">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    <span data-i18n-key="demo.preview.query">What are the key terms in the NDA with Acme Corp?</span>
-                  </div>
-                  <div class="rdemo-preview__result">
-                    <div class="rdemo-preview__result-badge" data-i18n-key="demo.preview.source">Acme-NDA-2024.pdf, p.3</div>
-                    <p class="rdemo-preview__result-text" data-i18n-key="demo.preview.answer">The NDA includes a 2-year confidentiality period, covers all proprietary information shared during the partnership, and includes a mutual non-solicitation clause...</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Reassurance points -->
+              <!-- Trust signal points -->
               <ul class="rdemo-reassurance">
                 <li class="rdemo-reassurance__item">
-                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span data-i18n-key="demo.reassurance.personalized">Personalized to your workflow</span>
-                </li>
-                <li class="rdemo-reassurance__item">
-                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                  <span data-i18n-key="demo.reassurance.real_product">See real product, not slides</span>
+                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span data-i18n-key="demo.trust.walkthrough">Personalized walkthrough</span>
                 </li>
                 <li class="rdemo-reassurance__item">
                   <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span data-i18n-key="demo.reassurance.no_commitment">No commitment required</span>
+                  <span data-i18n-key="demo.trust.no_commitment">No commitment required</span>
+                </li>
+                <li class="rdemo-reassurance__item">
+                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span data-i18n-key="demo.trust.response_time">Response within one business day</span>
+                </li>
+                <li class="rdemo-reassurance__item">
+                  <svg class="rdemo-reassurance__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span data-i18n-key="demo.trust.sensitive">Questions about sensitive workflows welcome</span>
                 </li>
               </ul>
 
@@ -390,7 +272,7 @@
         <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
         <a href="about.html" data-i18n-key="footer.about">About</a>
         <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="request-demo.html" data-i18n-key="demo.nav.request_demo">Request demo</a>
+        <a href="request-demo.html" data-i18n-key="nav.book_demo">Book demo</a>
         <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
         <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
         <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>

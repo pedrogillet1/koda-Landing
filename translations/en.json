@@ -17,22 +17,23 @@
     "contact": "Contact",
     "about": "About",
     "sign_in": "Sign in",
-    "book_demo": "Request demo",
+    "book_demo": "Book demo",
+    "for_lawyers": "For lawyers",
     "start_free": "Start free",
     "open_app": "Open Allybi",
     "customer_stories": "Customer Stories"
   },
   "footer": {
-    "tagline": "Built for privacy-first teams handling sensitive work.",
+    "tagline": "Built for professionals handling sensitive documents.",
     "col_product": "Product",
     "overview": "Overview",
     "how_it_works": "How it works",
     "integrations": "Integrations",
     "security": "Security",
-    "col_use_cases": "Use Cases",
-    "legal": "Legal",
-    "finance": "Finance",
-    "business": "Business",
+    "col_use_cases": "For teams",
+    "legal": "For lawyers",
+    "finance": "For finance",
+    "business": "For operations",
     "col_security": "Security",
     "security_overview": "Security Overview",
     "privacy_policy": "Privacy Policy",
@@ -59,20 +60,20 @@
     "security_short": "Security & Privacy",
     "pricing": "Pricing",
     "privacy_link": "Privacy",
-    "request_demo": "Request demo",
+    "request_demo": "Book demo",
     "sec_overview": "Overview",
     "security_link": "Security",
     "stories": "Stories"
   },
   "hero": {
-    "eyebrow": "Private AI workspace",
-    "title": "The right file.<br>Found in seconds.",
-    "subtitle": "Find any clause, version, or attachment — with source-grounded answers and explicit send confirmation.",
-    "cta_primary": "Request demo",
+    "eyebrow": "For those who work with sensitive documents",
+    "title": "The right clause. The right version.<br>Found in seconds.",
+    "subtitle": "Find any clause, version, or attachment in your files — with answers that cite the source and confirmation before anything is sent.",
+    "cta_primary": "Book demo",
     "cta_secondary": "See how it works",
-    "chip1": "Grounded answers",
-    "chip2": "No model training",
-    "chip3": "Confirm before send",
+    "chip1": "Answers cite the source",
+    "chip2": "No training on your data",
+    "chip3": "Confirmation before send",
     "scene_query": "What changed in the indemnity clause?",
     "scene_badge": "Grounded answer",
     "scene_answer": "The indemnity cap was raised <strong>from $2M to $5M</strong> in Section 8.3(b). Survival period extended to 24 months.",
@@ -80,47 +81,51 @@
   },
   "trust": {
     "item1": "End-to-end encrypted",
-    "item2": "Explicit confirmation",
-    "item3": "Region controls",
-    "item4": "No model training"
+    "item2": "Grounded in your files",
+    "item3": "No training on your data",
+    "item4": "Confirmation before every send",
+    "item5": "Brazil and international hosting"
   },
   "story": {
-    "title": "Three moves. Total clarity.",
+    "title": "Three steps. Complete clarity.",
     "find_num": "01",
     "find_title": "Find",
-    "find_desc": "Locate the exact file, clause, or number across every document in your library.",
+    "find_desc": "Locate the exact clause, attachment, or number in any document in your project. Every answer cites the file, page, and section.",
     "compare_num": "02",
     "compare_title": "Compare",
-    "compare_desc": "See what changed between versions — highlighted, sourced, and cited.",
+    "compare_desc": "See what changed between versions — highlighted, referenced, and cited. No need to open two files side by side.",
     "act_num": "03",
     "act_title": "Act",
-    "act_desc": "Edit, reply, and send the right file — confirmed before it leaves."
+    "act_desc": "Edit the document, prepare the response, attach the right file. You confirm before anything is sent."
   },
   "how": {
     "title": "How Allybi works",
     "subtitle": "Three steps. No learning curve.",
-    "step1_title": "Bring in your files",
-    "step1_desc": "Upload documents, connect email, or link Slack. Allybi indexes everything into sealed, private projects.",
+    "step1_title": "Bring your files",
+    "step1_desc": "Upload contracts, drafts, spreadsheets, and presentations. Allybi organizes everything into private, isolated projects.",
     "step2_title": "Ask naturally",
-    "step2_desc": "Ask any question. Allybi returns answers with exact file, page, and section references.",
-    "step3_title": "Act with certainty",
-    "step3_desc": "Edit documents, draft replies, attach the right file. You approve before anything goes out."
+    "step2_desc": "Ask like you'd ask a colleague: \"What changed in the indemnity clause?\" Allybi answers with the exact source.",
+    "step3_title": "Act with confidence",
+    "step3_desc": "Edit documents, prepare responses, attach the right file. You review and confirm before anything is sent."
   },
   "cases": {
-    "title": "Built for sensitive work.",
+    "title": "Built for those who work with sensitive documents.",
+    "subtitle": "Lawyers are first. Finance, compliance, and operations teams are next.",
     "legal": {
+      "tab": "Legal",
       "title": "Search clauses. Compare drafts.<br>Send the right version.",
       "b1": "Search across contracts and memos instantly",
       "b2": "Compare clause changes between drafts",
-      "b3": "Every answer cited to the source",
-      "cta": "See legal workflows",
+      "b3": "Every answer cited to the source document and page",
+      "cta": "See how lawyers use Allybi",
       "mock_q": "\"Show clause 12.4 changes between v2 and v3\"",
       "mock_heading": "Section 12.4 — Limitation of Liability",
       "mock_src": "NDA_v3_Final.pdf — p. 8",
-      "heading": "Search clauses. Compare drafts.<br>Send the right version.",
+      "heading": "Compare clauses. Track versions.<br>Send the right file.",
       "mock_body": "Cap changed from <s style=\"color:#DC2626;background:rgba(220,38,38,0.08);padding:1px 3px;border-radius:2px\">$1M</s> to <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$3M</span>."
     },
     "finance": {
+      "tab": "Finance",
       "title": "Find the number. Pull the deck.<br>Respond with confidence.",
       "b1": "Pull revenue figures from any uploaded model",
       "b2": "Compare numbers across quarterly versions",
@@ -133,6 +138,7 @@
       "mock_body": "Q4 ARR reached <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$4.2M</span>, up 38% from Q3."
     },
     "business": {
+      "tab": "Business",
       "title": "Organize proposals. Find answers.<br>Move forward safely.",
       "b1": "Search across proposals and project plans",
       "b2": "Get answers from the latest version",
@@ -158,14 +164,14 @@
     "cta": "Explore security"
   },
   "proof": {
-    "title": "How teams work with Allybi.",
-    "card1_meta": "Representative workflow",
+    "title": "How professionals use Allybi.",
+    "card1_meta": "Example workflow",
     "card1_role": "Legal Associate",
     "card1_quote": "\"Found the exact clause change across 12 contract versions in 15 seconds — instead of 20 minutes of manual review.\"",
-    "card2_meta": "Representative workflow",
+    "card2_meta": "Example workflow",
     "card2_role": "Finance Analyst",
-    "card2_quote": "\"Pulled the right board deck and revenue figure with source citation. Sent to the partner — confirmed before it left.\"",
-    "card3_meta": "Representative workflow",
+    "card2_quote": "\"Found the right deck and revenue figure with source citation. Sent to the partner — confirmed before it left.\"",
+    "card3_meta": "Example workflow",
     "card3_role": "Operations Lead",
     "card3_quote": "\"Searched across proposals, emails, and Slack from a single search. Drafted the follow-up with the right file attached.\"",
     "cta": "See customer stories"
@@ -179,14 +185,14 @@
       "item5": "EU & US hosting available"
     },
     "pain": {
-      "title": "The hidden tax isn't just search time.",
-      "subtitle": "Every wrong version, missed clause, or stale attachment compounds into real risk.",
-      "card1_title": "Wrong version risk",
-      "card1_desc": "Someone signs an outdated draft, references a superseded model, or sends stale terms. The damage is already done before anyone notices.",
-      "card2_title": "Search interruption",
-      "card2_desc": "Every time you pause real work to hunt for a file, clause, or number across five tools, you lose focus and momentum on what actually matters.",
-      "card3_title": "Wrong attachment risk",
-      "card3_desc": "Sending the wrong file to the wrong person. Allybi surfaces the right version and asks for explicit confirmation before anything leaves your workspace."
+      "title": "Moments every lawyer knows.",
+      "subtitle": "The risk isn't in the work itself — it's in the wrong file, the outdated version, the swapped attachment.",
+      "card1_title": "Sending the wrong version",
+      "card1_desc": "Someone signs an outdated draft. Someone cites a superseded contract. The damage is done before anyone notices.",
+      "card2_title": "The client asks what changed",
+      "card2_desc": "When a partner or client asks what changed between versions, you need the answer in seconds — not after 20 minutes of folder diving.",
+      "card3_title": "Finding the right attachment under pressure",
+      "card3_desc": "You know which file you need to send, but it's somewhere between five folders and three versions. The deadline doesn't wait."
     },
     "usecase": {
       "title": "Built for teams where precision matters",
@@ -265,15 +271,15 @@
     "security": {
       "title": "Private by design. Clear by design.",
       "subtitle": "Your data never trains models. Every action requires confirmation. Architecture built for trust.",
-      "pillar1": "End-to-end encryption",
+      "pillar1": "Full encryption",
       "pillar1_desc": "All data encrypted in transit and at rest. Your files are never readable by anyone but you.",
-      "pillar2": "Zero model training",
-      "pillar2_desc": "Your documents are never used to train AI models. Contractually guaranteed.",
+      "pillar2": "No model training",
+      "pillar2_desc": "Your documents never train AI models. Contractually guaranteed.",
       "pillar3": "Explicit confirmation",
-      "pillar3_desc": "Nothing is sent, shared, or emailed without your explicit confirmation. Every time.",
-      "pillar4": "EU & US hosting",
-      "pillar4_desc": "Choose where your data lives. Meet regulatory requirements with region-specific infrastructure.",
-      "cta": "View security overview"
+      "pillar3_desc": "Nothing is sent without your approval. You see the file, version, and recipient before confirming.",
+      "pillar4": "Flexible hosting",
+      "pillar4_desc": "Choose where your data lives. Meet regulatory requirements with regional infrastructure.",
+      "cta": "Learn more about security"
     },
     "integrations": {
       "title": "Work where your files and conversations already live.",
@@ -296,20 +302,21 @@
       "a2": "Every answer Allybi returns cites the exact source document, page number, and relevant passage. If the information doesn't exist in your files, Allybi will tell you — it never fabricates answers. Grounding is enforced at the architecture level, not just the prompt level.",
       "q3": "Is Allybi private?",
       "a3": "Yes. Allybi encrypts all data in transit and at rest. Your documents are never used to train AI models — this is contractually guaranteed. Workspaces are isolated, and no data leaks between projects. You choose where your data is hosted (EU or US).",
-      "q4": "Which files and workflows does Allybi support?",
-      "a4": "Allybi supports PDF, DOCX, XLSX, PPTX, and plain text files. You can also connect Gmail, Outlook, and Slack to search across emails and messages. Edit documents and spreadsheets directly inside the workspace.",
+      "q4": "Is Allybi suitable for legal work?",
+      "a4": "Yes. Allybi was designed for professionals who handle sensitive documents daily. Compare clauses between versions, search contracts in natural language, and send with confirmation. Projects are isolated and encrypted.",
       "q5": "Can Allybi search email or Slack?",
       "a5": "Yes. Connect your Gmail, Outlook, or Slack account and Allybi will index messages alongside your documents. Search across everything in one query — find the email thread and the attached contract at the same time.",
       "q6": "What happens before a message is sent?",
       "a6": "Allybi always shows you a confirmation screen before anything is sent externally — whether it's an email, a Slack message, or a file share. You review the content, recipients, and attachments before confirming. Nothing leaves your workspace without your explicit approval.",
-      "q7": "Do my documents train AI models?",
-      "a7": "No. Your documents never train AI models. This is contractually guaranteed in our terms of service. Allybi uses your files only to generate answers for you during your session — nothing is retained for model improvement.",
-      "q8": "Who is Allybi for?",
-      "a8": "Allybi is built for legal, finance, and business teams that handle sensitive documents daily. If your work involves contracts, agreements, financial models, board decks, proposals, or compliance documents — and privacy matters — Allybi is built for you."
+      "q7": "Which files does Allybi support?",
+      "a7": "PDF, DOCX, XLSX, PPTX, and text files. You can also connect Gmail, Outlook, and Slack to search emails and messages in the same workspace.",
+      "q8": "Who is Allybi built for?",
+      "a8": "Lawyers and professionals who handle sensitive documents daily. If your work involves contracts, drafts, legal opinions, financial spreadsheets, or compliance documents — and privacy matters — Allybi is for you."
     },
     "final_cta": {
-      "title": "Your files, finally useful.",
-      "support": "Bring your documents, messages, and version history into one private workspace."
+      "title": "Your documents deserve more clarity.",
+      "support": "See how Allybi can help with your daily work.",
+      "cta": "Book demo"
     }
   },
   "about": {
@@ -500,10 +507,10 @@
     "faq_a5": "Allybi indexes the messages you authorize so you can search across them alongside your files. Access is permissioned and revocable. When you disconnect, your data is removed from the workspace.",
     "faq_q6": "What does \"send with confirmation\" mean?",
     "faq_a6": "Before any email, file share, or outbound action is executed, Allybi shows you exactly what will happen and requires your explicit approval. Nothing leaves your workspace without your confirmation.",
-    "cta_title": "Ready to try it?",
-    "cta_subtitle": "Start working with your documents in a calmer, faster, and more private way.",
-    "cta_start": "Start free",
-    "cta_demo": "Book a demo"
+    "cta_title": "See Allybi in action.",
+    "cta_subtitle": "Book a demo and we'll walk you through the product.",
+    "cta_start": "Book demo",
+    "cta_demo": "Book demo"
   },
   "uc_overview": {
     "hero": {
@@ -556,22 +563,22 @@
   },
   "uc_legal": {
     "hero": {
-      "eyebrow": "Legal Teams",
-      "title": "Find the clause, the draft, and the answer fast.",
-      "support": "Allybi gives legal teams a private workspace to search contracts, compare versions, and act on findings — without losing the thread or sending the wrong file."
+      "eyebrow": "For lawyers",
+      "title": "Find the right clause, draft, and answer.",
+      "support": "Allybi gives lawyers a private workspace to search contracts, compare drafts, and act on findings — without losing the thread or sending the wrong file."
     },
     "pains": {
       "drafts": {
-        "title": "Comparing drafts under pressure",
-        "desc": "When a partner asks what changed, you need the answer in seconds — not after 20 minutes of folder diving."
+        "title": "Comparing minutas under pressure",
+        "desc": "When a partner asks what changed in the latest draft, you need the answer in seconds — not after 20 minutes of folder diving."
       },
       "version": {
-        "title": "Answering questions with the wrong version",
-        "desc": "One outdated file sent to opposing counsel can cost trust that takes months to rebuild."
+        "title": "Sending the wrong contract version",
+        "desc": "One outdated contract sent to opposing counsel can cost trust that takes months to rebuild."
       },
       "search": {
-        "title": "Losing time in folder hunting",
-        "desc": "The search tax on legal work is invisible but massive. Every hunt breaks your concentration."
+        "title": "Hunting for the right clause across folders",
+        "desc": "The search tax on legal work is invisible but massive. Every hunt for a clause or contract breaks your concentration."
       }
     },
     "feature1": {
@@ -1015,8 +1022,24 @@
   },
   "pricing": {
     "hero": {
-      "title": "Simple, transparent pricing.",
-      "support": "Start free. Upgrade when you're ready."
+      "eyebrow": "Pricing",
+      "title": "Guided access. Personalized onboarding.",
+      "support": "Allybi is in guided access phase. Every team gets a personalized onboarding to ensure the product fits your workflow."
+    },
+    "included": {
+      "title": "What's included",
+      "f1": "Private workspace with unlimited projects",
+      "f2": "Search with grounded answers",
+      "f3": "Version comparison",
+      "f4": "Document and spreadsheet editing",
+      "f5": "Gmail, Outlook, and Slack integrations",
+      "f6": "Confirmation before every send",
+      "f7": "Encryption and project isolation",
+      "f8": "Personalized onboarding"
+    },
+    "trust": {
+      "title": "Security and privacy included",
+      "support": "Every plan includes end-to-end encryption, project isolation, no model training on your data, and explicit confirmation before anything is sent."
     },
     "starter": {
       "name": "Starter",
@@ -1084,23 +1107,19 @@
       "chip4": "No model training on your data"
     },
     "faq": {
-      "title": "Pricing FAQ",
+      "title": "Pricing questions",
       "q1": "Is there a free plan?",
-      "a1": "Yes. The Starter plan is completely free and includes up to 5 documents, AI search and Q&A, project organization, and basic document editing.",
-      "q2": "What's included in the free plan?",
-      "a2": "The free Starter plan includes 5 documents, AI-powered search and Q&A with grounded answers, project organization, basic document editing, and full encryption. No credit card required.",
-      "q3": "How do Team and Enterprise plans work?",
-      "a3": "Team and Enterprise plans are currently in development. Join the waitlist or contact sales to learn more about pricing and availability. We'll notify you as soon as they launch.",
-      "q4": "Can I upgrade later?",
-      "a4": "Absolutely. Start with the free Starter plan and upgrade to Team or Enterprise whenever you need more capacity, integrations, or team features.",
-      "q5": "Is there a commitment?",
-      "a5": "No long-term commitment. The Starter plan is free with no time limit. Paid plans will offer monthly and annual billing options with the ability to cancel anytime.",
-      "q6": "How does billing work?",
-      "a6": "Billing details for paid plans will be announced soon. The Starter plan requires no credit card and no payment. Contact us at info@allybi.co for Enterprise pricing discussions."
+      "a1": "Allybi is currently in guided access phase. We work directly with each team to ensure the product fits your workflow. Book a demo to learn about access options.",
+      "q2": "What does onboarding include?",
+      "a2": "Every team gets a dedicated walkthrough of Allybi, help setting up projects and integrations, and guidance on getting the most out of grounded search and version comparison.",
+      "q3": "Are there usage limits?",
+      "a3": "During guided access, we work with you to find the right plan for your team's needs. We'll discuss document volume, team size, and integration requirements during onboarding.",
+      "q4": "Is my data secure?",
+      "a4": "Yes. All data is encrypted in transit and at rest. Your documents never train AI models. Projects are isolated, and you control access. Security is included in every plan, not an add-on."
     },
-    "cta": {
-      "title": "Start free today",
-      "support": "No credit card required. Get started with 5 documents and full AI search."
+    "final": {
+      "title": "See Allybi in action.",
+      "support": "Book a demo and we'll walk you through the product."
     }
   },
   "demo": {
@@ -1270,8 +1289,8 @@
     "occupation_placeholder": "Enter your occupation/Industry"
   },
   "cta": {
-    "title": "Your documents deserve better.",
-    "subtitle": "See what Allybi can do for your team.",
-    "button": "Request demo"
+    "title": "Your documents deserve more clarity.",
+    "subtitle": "See how Allybi can help with your daily work.",
+    "button": "Book demo"
   }
 }
