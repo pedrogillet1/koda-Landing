@@ -2,6 +2,12 @@
    Pricing Page
    ========================================================================== */
 
+/* ---------- Included features grid ---------- */
+.pricing-included__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pricing-feature-item{display:flex;gap:12px;align-items:flex-start;padding:16px 0}
+.pricing-included__inner{max-width:680px;margin:0 auto}
+@media(max-width:600px){.pricing-included__grid{grid-template-columns:1fr;gap:12px}}
+
 /* ---------- Hero ---------- */
 .pricing-hero {
   text-align: center;
