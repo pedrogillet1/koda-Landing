@@ -469,4 +469,50 @@
   .ucf-spreadsheet td {
     padding: 6px 8px;
   }
+
+  .ucf-mockup {
+    max-width: 100%;
+  }
+
+  .ucf-pain-card {
+    padding: 24px;
+  }
+
+  .ucf-hero__ctas .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+  }
+
+  .ucf-final-cta__buttons .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+  }
+
+  .allybi-accordion__trigger {
+    font-size: 16px;
+    padding: 16px 0;
+    min-height: 44px;
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .ucf-hero {
+    padding-top: 100px;
+  }
+
+  .ucf-pain-card {
+    padding: 20px;
+  }
+
+  .ucf-spreadsheet {
+    font-size: 10px;
+  }
+
+  .ucf-spreadsheet th,
+  .ucf-spreadsheet td {
+    padding: 4px 6px;
+  }
 }

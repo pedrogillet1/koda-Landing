@@ -171,6 +171,14 @@
 }
 
 /* ---------- Mobile ---------- */
+/* ---------- Tablet landscape ---------- */
+@media (max-width: 1024px) {
+  .integ-control__inner {
+    gap: var(--allybi-space-10);
+  }
+}
+
+/* ---------- Tablet portrait ---------- */
 @media (max-width: 768px) {
   .integ-hero {
     padding-top: calc(var(--allybi-section-py-mobile) + 32px);
@@ -185,9 +193,28 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .integ-cta__buttons .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+  }
+
+  /* Integration cards: 2x2 on phone */
+  .integ-card-grid.allybi-grid-4,
+  .allybi-grid-4:has(.integ-card) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Workflow cards: single column */
+  .integ-workflow-grid.allybi-grid-3,
+  .allybi-grid-3:has(.integ-workflow-card) {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 480px) {
+/* ---------- Phone ---------- */
+@media (max-width: 600px) {
   .integ-card {
     padding: var(--allybi-space-6);
   }
@@ -198,5 +225,33 @@
 
   .integ-control__points {
     gap: var(--allybi-space-5);
+  }
+
+  .integ-card__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .integ-card__icon--docs {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .integ-card {
+    padding: var(--allybi-space-5);
+  }
+
+  .integ-card__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: var(--allybi-space-4);
+  }
+
+  .integ-workflow-number {
+    left: var(--allybi-space-5);
+    top: var(--allybi-space-5);
   }
 }

@@ -239,9 +239,14 @@
   }
 }
 
-@media (max-width: 480px) {
+/* ---------- Phone ---------- */
+@media (max-width: 600px) {
   .stories-hero {
-    padding: 100px 0 48px;
+    padding: 110px 0 48px;
+  }
+
+  .stories-scenarios {
+    padding: 16px 0 64px;
   }
 
   .scenario-card {
@@ -249,7 +254,47 @@
     border-radius: 16px;
   }
 
+  .scenario-card__narrative {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .stories-trust {
+    padding: 64px 0;
+  }
+
   .stories-cta {
     padding: 80px 0;
+  }
+
+  .stories-cta__btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+    text-align: center;
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .stories-hero {
+    padding: 100px 0 40px;
+  }
+
+  .scenario-card {
+    padding: 24px 16px;
+    border-radius: 14px;
+  }
+
+  .scenario-card__time {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+
+  .stories-cta {
+    padding: 64px 0;
+  }
+
+  .stories-trust__title {
+    margin-bottom: 32px;
   }
 }

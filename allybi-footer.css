@@ -215,28 +215,38 @@
     font-size: 12px;
   }
 
-  /* Show compact mobile links */
+  /* Show compact mobile links — organized grid */
   .footer-mobile-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 16px;
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .footer-mobile-links a {
-    font-size: 13px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+    padding: 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
-  .footer-mobile-links a:hover {
+  .footer-mobile-links a:hover,
+  .footer-mobile-links a:active {
     color: #FFFFFF;
   }
 
   .footer-bottom-right {
     flex-wrap: wrap;
     gap: 8px;
+  }
+
+  /* Extra bottom padding for sticky CTA clearance */
+  .allybi-footer {
+    padding-bottom: calc(24px + 72px + env(safe-area-inset-bottom, 0px));
   }
 }

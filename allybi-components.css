@@ -463,16 +463,19 @@
   }
 }
 
-/* 2-col at mobile for 2/3-col grids */
+/* 2-col at tablet for 2/3-col grids */
 @media (max-width: 768px) {
-  .allybi-grid-2,
   .allybi-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .allybi-grid-2 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
   .allybi-grid-4 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
 }
 

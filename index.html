@@ -468,13 +468,21 @@
   </div>
 </footer>
 
-<!-- Tab switching + Accordion -->
+<!-- Sticky mobile CTA -->
+<div class="sticky-mobile-cta" id="sticky-cta">
+  <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+</div>
+
+<!-- Tab switching + Accordion + Sticky CTA -->
 <script>
 // Tab switching
 document.querySelectorAll('.s-cases__tab').forEach(t=>{t.addEventListener('click',()=>{document.querySelectorAll('.s-cases__tab').forEach(x=>{x.classList.remove('is-active');x.setAttribute('aria-selected','false')});t.classList.add('is-active');t.setAttribute('aria-selected','true');document.querySelectorAll('.s-cases__panel').forEach(p=>p.classList.remove('is-active'));var p=document.querySelector('[data-panel="'+t.dataset.tab+'"]');if(p)p.classList.add('is-active')})});
 
 // FAQ accordion
 document.querySelectorAll('.allybi-accordion__trigger').forEach(btn=>{btn.addEventListener('click',()=>{const expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);const content=btn.nextElementSibling;if(!expanded){content.style.maxHeight=content.scrollHeight+'px'}else{content.style.maxHeight='0'}})});
+
+// Sticky mobile CTA — show after scrolling past hero
+(function(){var s=document.getElementById('sticky-cta');if(!s||window.innerWidth>768)return;var shown=false;var footer=document.querySelector('.allybi-footer');window.addEventListener('scroll',function(){var y=window.scrollY;var footerTop=footer?footer.getBoundingClientRect().top:Infinity;if(y>500&&footerTop>200){if(!shown){s.classList.add('is-visible');shown=true}}else{if(shown){s.classList.remove('is-visible');shown=false}}},{passive:true})})();
 </script>
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>

@@ -408,3 +408,31 @@
     display: block;
   }
 }
+
+/* Phone-specific mobile menu refinements */
+@media (max-width: 600px) {
+  .mobile-menu {
+    padding: 72px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-nav-link {
+    font-size: 17px;
+    padding: 14px 0;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-ctas {
+    margin-top: 24px;
+  }
+
+  .mobile-ctas .allybi-btn {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .allybi-header-inner {
+    padding: 0 20px;
+  }
+}

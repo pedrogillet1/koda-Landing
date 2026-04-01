@@ -153,39 +153,159 @@
 .allybi-btn--lg{height:56px;padding:0 36px;font-size:16px}
 
 /* ══════════════════════════════════════════════════════════════════
-   RESPONSIVE
+   RESPONSIVE — Tablet landscape (1024–1180)
    ══════════════════════════════════════════════════════════════════ */
-@media(max-width:960px){
-  .s-hero__grid{grid-template-columns:1fr;gap:48px}
+@media(max-width:1180px){
+  .s-hero__grid{gap:48px}
+  .s-story__item{padding:0 24px}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Tablet portrait / small tablets (768–1024)
+   ══════════════════════════════════════════════════════════════════ */
+@media(max-width:1024px){
+  .s-hero__grid{grid-template-columns:1fr;gap:40px}
   .s-hero__visual{order:2}
   .s-hero{min-height:auto;padding:120px 0 64px}
-  .s-story__items{flex-direction:column;gap:48px;align-items:center}
+  .s-hero__scene{max-width:520px;margin:0 auto}
+  .s-story__items{flex-direction:column;gap:40px;align-items:center}
   .s-story__divider{width:80px;height:1px;align-self:auto}
-  .s-story__item{padding:0;max-width:360px}
+  .s-story__item{padding:0;max-width:400px}
+  .s-story{padding:120px 0 100px}
+  .s-story__header{margin-bottom:64px}
   .s-cases__split{grid-template-columns:1fr;gap:32px}
-  .s-security__grid{grid-template-columns:1fr;gap:28px}
+  .s-cases__mock{max-width:520px;margin:0 auto}
+  .s-security__grid{grid-template-columns:1fr 1fr;gap:28px 36px}
+  .s-pain,.s-cases,.s-integrations,.s-proof,.s-faq{padding:100px 0}
+  .s-how,.s-security{padding:100px 0}
+  .s-cta{padding:140px 0}
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Phone / small tablet (<768)
+   ══════════════════════════════════════════════════════════════════ */
 @media(max-width:768px){
-  .s-pain .allybi-grid-3{grid-template-columns:1fr;max-width:440px;margin:0 auto}
-  .s-how__steps{grid-template-columns:1fr;max-width:400px;margin:0 auto}
-  .s-proof__grid{grid-template-columns:1fr;max-width:440px;margin:0 auto 48px}
-  .s-integrations__grid{gap:12px}
-  .s-integrations__card{min-width:120px;padding:20px 16px}
+  /* Pain cards — 1 column on phone, not 2 */
+  .s-pain .allybi-grid-3{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+  .s-pain .allybi-card{padding:28px}
+
+  /* How it works — stack steps */
+  .s-how__steps{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+  .s-how__step{padding:32px 24px}
+
+  /* Proof cards — 1 column, reduced padding */
+  .s-proof__grid{grid-template-columns:1fr;max-width:480px;margin:0 auto 32px}
+  .s-proof__card{padding:32px}
+
+  /* Integrations — 2x2 compact grid */
+  .s-integrations__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .s-integrations__card{min-width:0;padding:20px 16px}
+
+  /* Security — single column */
+  .s-security__grid{grid-template-columns:1fr;gap:24px}
+
+  /* Hero scene — scale down cleanly */
+  .s-hero__scene{max-width:100%}
+  .s-hero__scene-inner{padding:20px}
+  .s-hero__query{font-size:13px;padding:10px 14px}
+  .s-hero__result{font-size:14px}
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Phone (<600)
+   ══════════════════════════════════════════════════════════════════ */
 @media(max-width:600px){
-  .s-hero{padding:100px 0 48px}
-  .s-hero__ctas{flex-direction:column}
+  /* Hero */
+  .s-hero{padding:96px 0 40px}
+  .s-hero__h1{font-size:clamp(28px,8vw,36px);line-height:1.05;margin-bottom:20px}
+  .s-hero__sub{font-size:16px;margin-bottom:28px}
+  .s-hero__eyebrow{font-size:11px;margin-bottom:16px}
+  .s-hero__ctas{flex-direction:column;gap:10px}
   .s-hero__ctas .allybi-btn{width:100%;text-align:center;justify-content:center}
+
+  /* Trust chips — horizontal scroll snap on phone */
+  .s-trust{padding:20px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .s-trust__inner{gap:10px;justify-content:flex-start;flex-wrap:nowrap;padding:0 20px;min-width:max-content}
+  .s-trust__item{font-size:11px;padding:6px 12px;background:var(--allybi-bg-surface);border-radius:100px;white-space:nowrap;flex-shrink:0}
+
+  /* Hero proof chips */
   .s-hero__proof{gap:8px}
-  .s-hero__chip{font-size:11px;padding:4px 8px;background:var(--allybi-bg-alt-1);border-radius:100px}
-  .s-trust__inner{gap:8px}
-  .s-trust__item{font-size:11px;padding:4px 8px;background:var(--allybi-bg-surface);border-radius:100px}
-  .s-story{padding:100px 0 80px}
-  .s-story__header{margin-bottom:56px}
-  .s-cases__tabs{width:100%}
-  .s-cases__tab{flex:1;text-align:center;padding:10px 12px;font-size:13px}
-  .s-pain,.s-cases,.s-how,.s-security,.s-integrations,.s-proof,.s-faq{padding:80px 0}
-  .s-cta{padding:120px 0}
-  .s-security__inner h2{margin-bottom:36px}
+  .s-hero__chip{font-size:11px;padding:5px 10px;background:var(--allybi-bg-alt-1);border-radius:100px}
+
+  /* Section spacing — tight but premium */
+  .s-pain,.s-cases,.s-integrations,.s-proof,.s-faq{padding:64px 0}
+  .s-how,.s-security{padding:64px 0}
+  .s-story{padding:72px 0 64px}
+  .s-story__header{margin-bottom:40px}
+  .s-cta{padding:80px 0}
+
+  /* Pain section */
+  .s-pain__header{margin-bottom:40px}
+  .s-pain__header p{font-size:15px}
+  .s-pain__illustration{height:140px}
+
+  /* Cases tabs — full width, comfortable touch */
+  .s-cases__tabs{width:100%;border-radius:12px}
+  .s-cases__tab{flex:1;text-align:center;padding:12px 8px;font-size:13px;min-height:44px}
+  .s-cases__header{margin-bottom:32px}
+
+  /* How section */
+  .s-how__header{margin-bottom:40px}
+
+  /* Security */
+  .s-security__inner h2{margin-bottom:12px}
+  .s-security__subtitle{margin-bottom:32px;font-size:14px}
+
+  /* Integrations */
+  .s-integrations__header{margin-bottom:32px}
+
+  /* FAQ */
+  .s-faq__header{margin-bottom:32px}
+  .allybi-accordion__trigger{padding:20px 0;font-size:15px;min-height:48px}
+  .allybi-accordion__content p{font-size:14px;padding:0 0 20px}
+
+  /* Final CTA */
+  .s-cta h2{font-size:clamp(22px,6vw,32px)}
+  .s-cta p{font-size:15px;margin-bottom:28px}
+
+  /* Button */
   .allybi-btn--lg{height:50px;padding:0 28px;font-size:15px}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE — Small phone (<390)
+   ══════════════════════════════════════════════════════════════════ */
+@media(max-width:390px){
+  .s-hero{padding:88px 0 36px}
+  .s-hero__h1{font-size:26px}
+  .s-hero__sub{font-size:15px}
+  .s-pain .allybi-card{padding:24px}
+  .s-pain__illustration{height:120px}
+  .s-proof__card{padding:24px}
+  .s-how__step{padding:24px 20px}
+  .s-cases__tab{font-size:12px;padding:10px 6px}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   STICKY MOBILE CTA — appears after scroll on phone
+   ══════════════════════════════════════════════════════════════════ */
+.sticky-mobile-cta{display:none}
+@media(max-width:768px){
+  .sticky-mobile-cta{
+    display:none;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:100;
+    padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-top:1px solid var(--allybi-border-default);
+    transform:translateY(100%);
+    transition:transform 300ms ease
+  }
+  .sticky-mobile-cta.is-visible{display:block;transform:translateY(0)}
+  .sticky-mobile-cta .allybi-btn{width:100%;justify-content:center;height:48px;font-size:15px}
 }

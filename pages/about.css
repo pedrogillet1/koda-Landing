@@ -173,6 +173,7 @@
   }
 }
 
+/* ---------- Phone ---------- */
 @media (max-width: 600px) {
   .about-hero {
     padding-top: 110px;
@@ -182,17 +183,65 @@
     font-size: clamp(28px, 7vw, 38px);
   }
 
-  .about-narrative .allybi-body {
+  .about-narrative .allybi-body,
+  .about-grounded .allybi-body,
+  .about-building .allybi-body {
     font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-hero {
-    padding-top: 120px;
+    max-width: 100%;
   }
 
   .about-principles-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Conviction cards single column */
+  .about-convictions .allybi-grid-3,
+  .about-convictions .allybi-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-buttons .allybi-btn {
+    min-height: 44px;
+  }
+
+  .about-build-col {
+    padding-top: var(--allybi-space-5);
+  }
+
+  /* Readability: constrain paragraph width */
+  .about-narrative,
+  .about-grounded,
+  .about-building {
+    max-width: 100%;
+  }
+
+  .about-narrative .allybi-body,
+  .about-grounded .allybi-body,
+  .about-building .allybi-body {
+    line-height: 1.7;
+  }
+}
+
+/* ---------- Tablet readability ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .about-narrative .allybi-body,
+  .about-grounded .allybi-body,
+  .about-building .allybi-body {
+    max-width: 680px;
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .about-hero {
+    padding-top: 100px;
+  }
+
+  .about-principle-card {
+    padding: var(--allybi-space-5);
+  }
+
+  .about-build-grid {
+    gap: var(--allybi-space-5);
   }
 }

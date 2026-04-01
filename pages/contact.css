@@ -93,6 +93,15 @@
   }
 }
 
+/* ---------- Tablet portrait ---------- */
+@media (max-width: 768px) {
+  .contact-routing .allybi-grid-3 {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-6);
+  }
+}
+
+/* ---------- Phone ---------- */
 @media (max-width: 600px) {
   .contact-hero {
     padding-top: 110px;
@@ -103,10 +112,36 @@
   .contact-form .allybi-select {
     font-size: 16px; /* prevent iOS zoom */
   }
+
+  .contact-form-wrapper {
+    max-width: 100%;
+  }
+
+  .contact-submit-btn {
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .contact-route-btn {
+    min-height: 44px;
+  }
+
+  .contact-routing .allybi-card {
+    padding: var(--allybi-space-6);
+  }
+
+  .contact-form .allybi-input-group {
+    margin-bottom: var(--allybi-space-5);
+  }
 }
 
-@media (max-width: 480px) {
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
   .contact-hero {
-    padding-top: 120px;
+    padding-top: 100px;
+  }
+
+  .contact-routing .allybi-card {
+    padding: var(--allybi-space-5);
   }
 }

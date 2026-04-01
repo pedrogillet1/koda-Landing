@@ -495,5 +495,46 @@
   .allybi-accordion__trigger {
     font-size: 16px;
     padding: 16px 0;
+    min-height: 44px;
+  }
+
+  .ucl-mockup {
+    max-width: 100%;
+  }
+
+  .ucl-pain-card {
+    padding: 24px;
+  }
+
+  .ucl-hero__ctas .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+  }
+
+  .ucl-final-cta__buttons .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .ucl-hero {
+    padding-top: 100px;
+  }
+
+  .ucl-pain-card {
+    padding: 20px;
+  }
+
+  .ucl-compare__panel {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .ucl-search-result__item {
+    padding: 10px;
   }
 }

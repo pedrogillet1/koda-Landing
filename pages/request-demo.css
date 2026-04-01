@@ -322,6 +322,7 @@
   }
 }
 
+/* ---------- Phone specific ---------- */
 @media (max-width: 480px) {
   .rdemo-hero {
     padding-top: 110px;
@@ -329,5 +330,33 @@
 
   .rdemo-submit {
     height: 48px;
+    min-height: 44px;
+  }
+
+  .rdemo-form {
+    gap: var(--allybi-space-5);
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .rdemo-hero {
+    padding-top: 100px;
+  }
+
+  .rdemo-input,
+  .rdemo-select,
+  .rdemo-textarea {
+    font-size: 16px;
+    height: 44px;
+  }
+
+  .rdemo-textarea {
+    height: auto;
+    min-height: 100px;
+  }
+
+  .rdemo-label {
+    font-size: 14px;
   }
 }

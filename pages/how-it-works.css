@@ -517,8 +517,77 @@
   }
 }
 
-@media (max-width: 480px) {
+/* ---------- Tablet landscape ---------- */
+@media (max-width: 1024px) {
+  .hiw-feature-row {
+    gap: var(--allybi-space-10);
+  }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 600px) {
   .hiw-hero {
     padding-top: 120px;
+  }
+
+  .hiw-feature {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hiw-flow-step {
+    padding: var(--allybi-space-3) var(--allybi-space-4);
+    min-width: 0;
+  }
+
+  .hiw-flow-label {
+    white-space: normal;
+  }
+
+  .hiw-file-tree,
+  .hiw-query-visual,
+  .hiw-edit-visual,
+  .hiw-confirm-visual,
+  .hiw-version-visual,
+  .hiw-connect-visual {
+    max-width: 100%;
+  }
+
+  .hiw-final-cta .allybi-body-lg {
+    margin-bottom: var(--allybi-space-8);
+  }
+
+  .hiw-cta-buttons .allybi-btn {
+    min-height: 44px;
+  }
+
+  .hiw-confirm-cancel,
+  .hiw-confirm-send {
+    min-height: 44px;
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .hiw-hero {
+    padding-top: 110px;
+  }
+
+  .hiw-flow-step {
+    max-width: 100%;
+    padding: var(--allybi-space-2) var(--allybi-space-3);
+  }
+
+  .hiw-feature-row > .hiw-feature-text ~ * {
+    max-width: 100%;
+  }
+
+  .hiw-version-item {
+    flex-wrap: wrap;
+    gap: var(--allybi-space-2);
+  }
+
+  .hiw-version-date {
+    width: 100%;
   }
 }

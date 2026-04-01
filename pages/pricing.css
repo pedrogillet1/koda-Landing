@@ -235,7 +235,12 @@
   }
 }
 
+/* ---------- Phone ---------- */
 @media (max-width: 600px) {
+  .pricing-hero {
+    padding-top: calc(64px + 32px);
+  }
+
   .pricing-table-wrap {
     font-size: 13px;
   }
@@ -243,5 +248,46 @@
   .pricing-table th,
   .pricing-table td {
     padding: 10px 8px;
+  }
+
+  .pricing-plan-card {
+    padding: var(--allybi-space-8);
+  }
+
+  .pricing-plan-card__features {
+    gap: var(--allybi-space-3);
+  }
+
+  .pricing-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-cta__buttons .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+    text-align: center;
+  }
+
+  .pricing-security__chips {
+    gap: var(--allybi-space-2);
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .pricing-plan-card {
+    padding: var(--allybi-space-6);
+  }
+
+  .pricing-table {
+    min-width: 500px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 8px 6px;
+    font-size: 12px;
   }
 }

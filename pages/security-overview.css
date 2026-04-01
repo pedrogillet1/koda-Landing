@@ -212,7 +212,19 @@
   flex-wrap: wrap;
 }
 
-/* ---------- Mobile ---------- */
+/* ---------- Tablet landscape ---------- */
+@media (max-width: 1024px) {
+  .secov-arch-diagram {
+    max-width: 100%;
+  }
+
+  .secov-arch-node {
+    padding: var(--allybi-space-4) var(--allybi-space-6);
+    min-width: 160px;
+  }
+}
+
+/* ---------- Tablet portrait ---------- */
 @media (max-width: 768px) {
   .secov-hero {
     padding-top: calc(var(--allybi-section-py-mobile) + 32px);
@@ -228,12 +240,61 @@
   }
 
   .secov-data-grid.allybi-grid-4 {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--allybi-space-8);
   }
 
   .secov-cta__buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  .secov-cta__buttons .allybi-btn {
+    min-height: 44px;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 600px) {
+  .secov-data-grid.allybi-grid-4 {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-6);
+  }
+
+  .secov-arch-node {
+    padding: var(--allybi-space-4);
+    min-width: 0;
+    width: 100%;
+  }
+
+  .secov-arch-node--branch {
+    min-width: 0;
+  }
+
+  .secov-pillar-card {
+    padding: var(--allybi-space-6);
+  }
+
+  .secov-data-block {
+    padding-left: var(--allybi-space-4);
+  }
+
+  .allybi-accordion__trigger {
+    font-size: 16px;
+    padding: 16px 0;
+    min-height: 44px;
+  }
+}
+
+/* ---------- Small phone ---------- */
+@media (max-width: 390px) {
+  .secov-hero__inner {
+    max-width: 100%;
+  }
+
+  .secov-arch-connector__line {
+    height: 20px;
   }
 }
