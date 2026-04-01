@@ -52,7 +52,7 @@
     "privacy": "Política de privacidad",
     "cookies": "Política de cookies",
     "security_privacy": "Seguridad y Privacidad",
-    "copyright": "&copy; 2025 Allybi. Todos los derechos reservados.",
+    "copyright": "&copy; 2026 Allybi. Todos los derechos reservados.",
     "tos_short": "Términos de servicio",
     "terms_short": "Uso aceptable",
     "privacy_short": "Política de privacidad",
@@ -308,8 +308,8 @@
       "a5": "Sí. Conecta tu cuenta de Gmail, Outlook o Slack y Allybi indexará los mensajes junto a tus documentos. Busca en todo con una sola consulta — encuentra el hilo de correo y el contrato adjunto al mismo tiempo.",
       "q6": "¿Qué pasa antes de enviar un mensaje?",
       "a6": "Allybi siempre te muestra una pantalla de confirmación antes de que cualquier cosa se envíe externamente — ya sea un correo, un mensaje de Slack o un archivo compartido. Revisas el contenido, los destinatarios y los adjuntos antes de confirmar. Nada sale de tu espacio de trabajo sin tu aprobación explícita.",
-      "q7": "¿Mis documentos entrenan modelos de AI?",
-      "a7": "No. Tus documentos nunca entrenan modelos de AI. Esto está garantizado contractualmente en nuestros términos de servicio. Allybi usa tus archivos solo para generar respuestas durante tu sesión — nada se retiene para mejora de modelos.",
+      "q7": "¿Qué archivos soporta Allybi?",
+      "a7": "PDF, DOCX, XLSX, PPTX y archivos de texto. También puede conectar Gmail, Outlook y Slack para buscar correos y mensajes en el mismo espacio de trabajo.",
       "q8": "¿Para quién está hecho Allybi?",
       "a8": "Para abogados y profesionales que manejan documentos sensibles diariamente. Si su trabajo involucra contratos, borradores, opiniones legales, hojas de cálculo financieras o documentos de compliance — y la privacidad importa — Allybi es para usted."
     },
@@ -1023,7 +1023,8 @@
   "pricing": {
     "hero": {
       "title": "Precios simples y transparentes.",
-      "support": "Empieza gratis. Actualiza cuando estés listo."
+      "support": "Empieza gratis. Actualiza cuando estés listo.",
+      "eyebrow": "Precios"
     },
     "starter": {
       "name": "Starter",
@@ -1108,6 +1109,25 @@
     "cta": {
       "title": "Empieza gratis hoy",
       "support": "Sin tarjeta de crédito. Comienza con 5 documentos y búsqueda completa con AI."
+    },
+    "included": {
+      "title": "Qué está incluido",
+      "f1": "Espacio de trabajo privado con proyectos ilimitados",
+      "f2": "Búsqueda con respuestas fundamentadas",
+      "f3": "Comparación de versiones",
+      "f4": "Edición de documentos y hojas de cálculo",
+      "f5": "Integraciones con Gmail, Outlook y Slack",
+      "f6": "Confirmación antes de cada envío",
+      "f7": "Cifrado y aislamiento de proyectos",
+      "f8": "Onboarding personalizado"
+    },
+    "trust": {
+      "title": "Seguridad y privacidad incluidas",
+      "support": "Todos los planes incluyen cifrado de extremo a extremo, aislamiento de proyectos, sin entrenamiento con sus datos y confirmación explícita antes de cualquier envío."
+    },
+    "final": {
+      "title": "Vea Allybi en acción.",
+      "support": "Agende una demostración y haremos un recorrido personalizado del producto."
     }
   },
   "demo": {
@@ -1117,7 +1137,8 @@
     "hero": {
       "title": "Mira Allybi en acción.",
       "subhead": "Cuéntanos sobre tu equipo y configuraremos un recorrido personalizado.",
-      "support": "Agenda un recorrido personalizado. Te mostraremos cómo funciona Allybi para tu flujo de trabajo específico."
+      "support": "Agenda un recorrido personalizado. Te mostraremos cómo funciona Allybi para tu flujo de trabajo específico.",
+      "eyebrow": "Demostración"
     },
     "covers": {
       "title": "Qué cubre una demo",
@@ -1200,11 +1221,7 @@
       "source": "Q4-Board-Deck-v3.pdf, p.12",
       "answer": "Las proyecciones de ingresos para Q4 muestran un aumento del 23% respecto a Q3, impulsado por nuevos contratos empresariales..."
     },
-    "reassurance": {
-      "personalized": "Personalizada para tu flujo de trabajo",
-      "real_product": "Ve el producto real, no diapositivas",
-      "no_commitment": "Sin compromiso requerido"
-    },
+    "reassurance": "Preguntas sobre documentos sensibles son bienvenidas. Leemos cada mensaje con atención.",
     "faq": {
       "title": "Preguntas frecuentes sobre demos",
       "q1": "¿Cuánto dura una demo?",
@@ -1215,6 +1232,26 @@
       "a3": "Por supuesto. Fomentamos las demos en equipo para que todos vean cómo Allybi se integra en su flujo de trabajo compartido. Solo menciona el número de asistentes en el formulario.",
       "q4": "¿Tiene algún costo?",
       "a4": "No. Las demos son completamente gratuitas y sin compromiso. Solo queremos mostrarte cómo Allybi puede ayudar a tu equipo."
+    },
+    "label_name": "Nombre",
+    "label_email": "Correo profesional",
+    "label_company": "Empresa (opcional)",
+    "label_role": "Área de trabajo",
+    "label_message": "Mensaje",
+    "placeholder_name": "Su nombre completo",
+    "placeholder_email": "usted@empresa.com",
+    "placeholder_company": "Nombre de la empresa",
+    "placeholder_role": "Seleccione",
+    "placeholder_message": "Cuéntenos sobre su trabajo y lo que busca resolver...",
+    "role_legal": "Legal",
+    "role_finance": "Finanzas",
+    "role_operations": "Operaciones",
+    "role_other": "Otro",
+    "trust": {
+      "walkthrough": "Recorrido personalizado",
+      "no_commitment": "Sin compromiso",
+      "response_time": "Respuesta en un día hábil",
+      "sensitive": "Preguntas sobre documentos sensibles son bienvenidas"
     }
   },
   "customers": {

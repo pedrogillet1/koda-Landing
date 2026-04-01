@@ -52,7 +52,7 @@
     "privacy": "Privacy Policy",
     "cookies": "Cookie Policy",
     "security_privacy": "Security & Privacy",
-    "copyright": "&copy; 2025 Allybi. All rights reserved.",
+    "copyright": "&copy; 2026 Allybi. All rights reserved.",
     "tos_short": "Terms of Service",
     "terms_short": "Acceptable Use",
     "privacy_short": "Privacy Policy",
@@ -1129,7 +1129,8 @@
     "hero": {
       "title": "See Allybi in action.",
       "subhead": "Tell us about your team and we'll set up a personalized walkthrough.",
-      "support": "Book a personalized walkthrough. We'll show you how Allybi works for your specific workflow."
+      "support": "Book a personalized walkthrough. We'll show you how Allybi works for your specific workflow.",
+      "eyebrow": "Demo"
     },
     "covers": {
       "title": "What a demo covers",
@@ -1212,11 +1213,7 @@
       "source": "Q4-Board-Deck-v3.pdf, p.12",
       "answer": "Revenue projections for Q4 show a 23% increase over Q3, driven by new enterprise contracts..."
     },
-    "reassurance": {
-      "personalized": "Personalized to your workflow",
-      "real_product": "See real product, not slides",
-      "no_commitment": "No commitment required"
-    },
+    "reassurance": "Questions about sensitive document workflows are welcome. We read every message carefully.",
     "faq": {
       "title": "Demo FAQ",
       "q1": "How long is a demo?",
@@ -1227,6 +1224,26 @@
       "a3": "Absolutely. We encourage team demos so everyone can see how Allybi fits into your shared workflow. Just mention the number of attendees in the form.",
       "q4": "Is there any cost?",
       "a4": "No. Demos are completely free and come with no obligation. We just want to show you how Allybi can help your team."
+    },
+    "label_name": "Name",
+    "label_email": "Work email",
+    "label_company": "Company (optional)",
+    "label_role": "What best describes you?",
+    "label_message": "Message",
+    "placeholder_name": "Your full name",
+    "placeholder_email": "you@company.com",
+    "placeholder_company": "Company name",
+    "placeholder_role": "Select one",
+    "placeholder_message": "Tell us about your work and what you're looking to solve...",
+    "role_legal": "Legal",
+    "role_finance": "Finance",
+    "role_operations": "Operations",
+    "role_other": "Other",
+    "trust": {
+      "walkthrough": "Personalized walkthrough",
+      "no_commitment": "No commitment required",
+      "response_time": "Response within one business day",
+      "sensitive": "Questions about sensitive workflows welcome"
     }
   },
   "customers": {

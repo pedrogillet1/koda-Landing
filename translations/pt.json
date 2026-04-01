@@ -1129,7 +1129,8 @@
     "hero": {
       "title": "Veja Allybi em ação.",
       "subhead": "Conte-nos sobre sua equipe e configuraremos uma demonstração personalizada.",
-      "support": "Agende uma demonstração personalizada. Mostraremos como Allybi funciona para seu fluxo de trabalho específico."
+      "support": "Agende uma demonstração personalizada. Mostraremos como Allybi funciona para seu fluxo de trabalho específico.",
+      "eyebrow": "Demonstração"
     },
     "covers": {
       "title": "O que uma demo cobre",
@@ -1212,11 +1213,7 @@
       "source": "Q4-Board-Deck-v3.pdf, p.12",
       "answer": "As projeções de receita para o Q4 mostram um aumento de 23% em relação ao Q3, impulsionado por novos contratos enterprise..."
     },
-    "reassurance": {
-      "personalized": "Personalizada para seu fluxo de trabalho",
-      "real_product": "Veja o produto real, não slides",
-      "no_commitment": "Sem compromisso necessário"
-    },
+    "reassurance": "Perguntas sobre documentos sensíveis são bem-vindas. Lemos todas as mensagens com atenção.",
     "faq": {
       "title": "FAQ da Demo",
       "q1": "Quanto tempo dura uma demo?",
@@ -1227,6 +1224,26 @@
       "a3": "Com certeza. Encorajamos demos em equipe para que todos possam ver como Allybi se encaixa no fluxo de trabalho compartilhado. Basta mencionar o número de participantes no formulário.",
       "q4": "Tem algum custo?",
       "a4": "Não. As demos são totalmente gratuitas e sem compromisso. Apenas queremos mostrar como Allybi pode ajudar sua equipe."
+    },
+    "label_name": "Nome",
+    "label_email": "E-mail profissional",
+    "label_company": "Empresa (opcional)",
+    "label_role": "Área de atuação",
+    "label_message": "Mensagem",
+    "placeholder_name": "Seu nome completo",
+    "placeholder_email": "voce@empresa.com",
+    "placeholder_company": "Nome da empresa",
+    "placeholder_role": "Selecione",
+    "placeholder_message": "Conte-nos sobre seu trabalho e o que busca resolver...",
+    "role_legal": "Jurídico",
+    "role_finance": "Financeiro",
+    "role_operations": "Operações",
+    "role_other": "Outro",
+    "trust": {
+      "walkthrough": "Tour personalizado",
+      "no_commitment": "Sem compromisso",
+      "response_time": "Resposta em até um dia útil",
+      "sensitive": "Perguntas sobre documentos sensíveis são bem-vindas"
     }
   },
   "customers": {
