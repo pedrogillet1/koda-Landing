@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+
+  	<!-- Favicon -->
+  	<link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+  	<link rel="apple-touch-icon" href="assets/images/allybi-logo.svg">
+
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
+  	<link rel="stylesheet" href="./allybi-tokens.css">
+  	<link rel="stylesheet" href="./allybi-base.css">
+  	<link rel="stylesheet" href="./allybi-components.css">
+  	<link rel="stylesheet" href="./allybi-header.css">
+  	<link rel="stylesheet" href="./allybi-footer.css">
+  	<link rel="stylesheet" href="./design-system.css" />
+  	<link rel="stylesheet" href="./light-theme-overrides.css" />
+  	<link rel="stylesheet" href="./koda-design-system-final.css" />
+  	<link rel="stylesheet" href="./terms.css?v=1733620000" />
+
+  	<title>Integrations & Data Use - Allybi</title>
+</head>
+<body>
+  <header id="allybi-header" class="allybi-header">
+    <div class="allybi-header-inner">
+      <a href="/" class="allybi-logo">
+        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
+      </a>
+      <nav class="allybi-nav desktop-only">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+          <div class="nav-dropdown-menu">
+            <a href="/" data-i18n-key="nav.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+          <div class="nav-dropdown-menu">
+            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+          </div>
+        </div>
+        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
+        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+          <div class="nav-dropdown-menu">
+            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      </nav>
+      <div class="header-ctas desktop-only">
+        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Request demo</a>
+      </div>
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="allybi-mobile-menu" class="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="mobile-dropdown-items">
+          <a href="/" data-i18n-key="nav.overview">Overview</a>
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+        <div class="mobile-dropdown-items">
+          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+        </div>
+      </div>
+      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+        <div class="mobile-dropdown-items">
+          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    </nav>
+    <div class="mobile-ctas">
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Request demo</a>
+      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    </div>
+    <div class="mobile-language-selector">
+      <div class="language-selector" id="mobile-language-selector">
+        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-label">English</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="language-menu hidden" role="listbox">
+          <li role="option" data-lang="en">English</li>
+          <li role="option" data-lang="pt">Portugues (BR)</li>
+          <li role="option" data-lang="es">Espanol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="terms-page">
+      <div class="terms-content-section-wrapper">
+        <!-- Terms Content Section -->
+        <section class="terms-content-section">
+      			<div class="decorative-background">
+        				<div class="circle-large"></div>
+        				<div class="circle-small"></div>
+        				<div class="line horizontal-1"></div>
+        				<div class="line horizontal-2"></div>
+        				<div class="line horizontal-3"></div>
+        				<div class="line vertical-1"></div>
+        				<div class="line vertical-2"></div>
+      			</div>
+
+      			<!-- Terms Header -->
+      			<div class="terms-header">
+        				<h1>Integrations and Data Use</h1>
+        				<p class="last-updated">Effective Date: April 30, 2026 &middot; Version 1.0</p>
+        				<p class="intro">This page explains exactly what data each integration accesses, how it is used, and how to disconnect.</p>
+      			</div>
+
+      			<!-- Main Content Area -->
+      			<div class="terms-main">
+        				<!-- Left Column: Content -->
+        				<div class="terms-content">
+
+          					<!-- Section 1: Overview -->
+          					<div class="content-section">
+            						<h2 id="section-1">1. Overview</h2>
+            						<p>Allybi connects to external services to help you bring files, email context, and message handoff into one private workspace. This page explains exactly what data each integration accesses, how it is used, and how to disconnect.</p>
+          					</div>
+
+          					<!-- Section 2: Available Now -->
+          					<div class="content-section">
+            						<h2 id="section-2">2. Available Now</h2>
+
+            						<h3>Outlook</h3>
+            						<p><strong>Status:</strong> Live</p>
+            						<p><strong>Data accessed:</strong> Selected emails, threads, attachments, and metadata.</p>
+            						<p><strong>Used in:</strong> Ask, Integrations, and review-before-send workflows.</p>
+            						<p><strong>Storage:</strong> Stored in your workspace.</p>
+
+            						<h3>OneDrive</h3>
+            						<p><strong>Status:</strong> Live</p>
+            						<p><strong>Data accessed:</strong> Selected files, folders, and metadata.</p>
+            						<p><strong>Used in:</strong> Upload and Ask.</p>
+
+            						<h3>SharePoint</h3>
+            						<p><strong>Status:</strong> Live</p>
+            						<p><strong>Data accessed:</strong> Selected sites, libraries, folders, and files.</p>
+            						<p><strong>Used in:</strong> Upload and Ask.</p>
+
+            						<h3>WhatsApp</h3>
+            						<p><strong>Status:</strong> Ready</p>
+            						<p><strong>Data stored:</strong> Contacts, message drafts, and selected references.</p>
+            						<p><strong>Used for:</strong> Message handoff with review before opening WhatsApp. NOT a synced inbox.</p>
+            						<p>Allybi does not automatically send WhatsApp messages. You review and confirm before the message is handed off to WhatsApp.</p>
+          					</div>
+
+          					<!-- Section 3: Coming Soon -->
+          					<div class="content-section">
+            						<h2 id="section-3">3. Coming Soon</h2>
+
+            						<h3>Gmail</h3>
+            						<p><strong>Status:</strong> Coming soon</p>
+            						<p><strong>Data accessed (when enabled):</strong> Selected threads, messages, and attachments.</p>
+
+            						<h3>Google Drive</h3>
+            						<p><strong>Status:</strong> Coming soon</p>
+            						<p><strong>Data accessed (when enabled):</strong> Selected files and folders.</p>
+          					</div>
+
+          					<!-- Section 4: What Disconnect Does -->
+          					<div class="content-section">
+            						<h2 id="section-4">4. What Disconnect Does</h2>
+            						<p>When you disconnect an integration, Allybi stops using that connection to access new data from that service. Previously imported files, message drafts, metadata, or cached items may remain in Allybi until you delete them, your workspace settings delete them, or our retention rules require deletion. Disconnecting an integration does not automatically delete files or content already imported into Allybi unless the product specifically says so.</p>
+          					</div>
+
+          					<!-- Section 5: How to Delete Imported Content -->
+          					<div class="content-section">
+            						<h2 id="section-5">5. How to Delete Imported Content</h2>
+            						<p>You can remove imported content from Allybi in the following ways:</p>
+            						<ul>
+            						  <li><strong>Individual file deletion:</strong> Delete specific files directly from your workspace.</li>
+            						  <li><strong>Workspace deletion:</strong> Delete your entire workspace to remove all associated content.</li>
+            						  <li><strong>Account deletion request:</strong> Email <a href="mailto:info@allybi.co">info@allybi.co</a> to request full account and data deletion.</li>
+            						</ul>
+          					</div>
+
+          					<!-- Section 6: OAuth and Permissions -->
+          					<div class="content-section">
+            						<h2 id="section-6">6. OAuth and Permissions</h2>
+            						<p>Allybi uses OAuth 2.0 to authenticate with third-party services. We request least-privilege scopes, meaning we only ask for the minimum permissions required to provide the integration features you use. OAuth tokens are encrypted at rest.</p>
+            						<p>You can revoke access at any time by disconnecting the integration through your Allybi account settings.</p>
+          					</div>
+
+          					<!-- Section 7: No Training / No Ads / No Sale -->
+          					<div class="content-section">
+            						<h2 id="section-7">7. No Training, No Ads, No Sale</h2>
+            						<p>Your documents are yours. User documents never train AI models, are never sold to third parties, and are never used for advertising purposes.</p>
+          					</div>
+
+          					<!-- Section 8: Google API Services User Data Disclosure -->
+          					<div class="content-section">
+            						<h2 id="google-api-services-user-data">8. Google API Services User Data Disclosure</h2>
+            						<p>Allybi&rsquo;s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+            						<p>Specifically:</p>
+            						<ul>
+            						  <li>Allybi only uses access to Google user data to provide and improve user-facing features that are visible and prominent in the application&rsquo;s user interface.</li>
+            						  <li>Allybi does not transfer Google user data to third parties unless necessary to provide or improve user-facing features, to comply with applicable laws, or as part of a merger, acquisition, or asset sale with prior user notice.</li>
+            						  <li>Allybi does not use Google user data for serving advertisements, including retargeting, personalized advertising, or interest-based advertising.</li>
+            						  <li>Allybi does not allow humans to read Google user data unless the user has provided affirmative consent, it is necessary for security purposes, to comply with applicable law, or the data is aggregated and anonymized for internal operations.</li>
+            						</ul>
+          					</div>
+
+          					<!-- Section 9: Microsoft 365 / Microsoft Graph Data -->
+          					<div class="content-section">
+            						<h2 id="section-9">9. Microsoft 365 / Microsoft Graph Data</h2>
+            						<p>Outlook, OneDrive, and SharePoint integrations use Microsoft Graph API with delegated permissions. Allybi requests least-privilege scopes and only accesses data you explicitly select or authorize.</p>
+            						<p>When you disconnect a Microsoft integration, Allybi immediately stops accessing new data from that service. Previously imported content remains in your workspace until you manually delete it or request account deletion.</p>
+            						<p>Allybi does not use Microsoft 365 data for advertising, AI model training, or any purpose other than providing the integration features you use.</p>
+          					</div>
+
+          					<!-- Section 10: Contact -->
+          					<div class="content-section">
+            						<h2 id="section-10">10. Contact</h2>
+            						<p>For questions about integrations and data use, contact us at <a href="mailto:info@allybi.co">info@allybi.co</a>.</p>
+          					</div>
+
+        				</div>
+
+        				<!-- Right Column: Table of Contents -->
+        				<div class="terms-toc">
+          					<h3>Table of Contents</h3>
+          					<a href="#section-1">1. Overview</a>
+          					<a href="#section-2">2. Available Now</a>
+          					<a href="#section-3">3. Coming Soon</a>
+          					<a href="#section-4">4. What Disconnect Does</a>
+          					<a href="#section-5">5. How to Delete Imported Content</a>
+          					<a href="#section-6">6. OAuth and Permissions</a>
+          					<a href="#section-7">7. No Training, No Ads, No Sale</a>
+          					<a href="#google-api-services-user-data">8. Google API Services User Data</a>
+          					<a href="#section-9">9. Microsoft 365 / Graph Data</a>
+          					<a href="#section-10">10. Contact</a>
+        				</div>
+      			</div>
+    		</section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="allybi-footer">
+    <div class="allybi-footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-brand-logo">
+          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
+        </a>
+        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+          <div class="footer-col-links">
+            <a href="/" data-i18n-key="footer.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
+          <div class="footer-col-links">
+            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
+          <div class="footer-col-links">
+            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+          <div class="footer-col-links">
+            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
+            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
+          <div class="footer-col-links">
+            <a href="about.html" data-i18n-key="footer.about">About</a>
+            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+          <div class="footer-col-links">
+            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
+            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
+            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Allybi. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          <div class="language-selector" id="footer-language-selector">
+            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span class="lang-label">English</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="language-menu hidden" role="listbox">
+              <li role="option" data-lang="en">English</li>
+              <li role="option" data-lang="pt">Portugues (BR)</li>
+              <li role="option" data-lang="es">Espanol</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="language-switcher.js"></script>
+  <script src="allybi-header.js"></script>
+</body>
+</html>

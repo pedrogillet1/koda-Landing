@@ -3,603 +3,297 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0D0F12">
-
-  <!-- Favicon -->
+  <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
-
-  <!-- SEO -->
-  <title>How Allybi Works — From Upload to Action</title>
-  <meta name="description" content="Upload documents, ask questions in plain language, get grounded answers, edit files, and send with confirmation. See how Allybi works step by step.">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="How Allybi Works — From Upload to Action">
-  <meta property="og:description" content="Upload documents, ask questions in plain language, get grounded answers, edit files, and send with confirmation. See how Allybi works step by step.">
-  <meta property="og:image" content="assets/images/og-how-it-works.png">
-  <meta property="og:url" content="https://allybi.co/how-it-works.html">
-  <meta property="og:site_name" content="Allybi">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How Allybi Works — From Upload to Action">
-  <meta name="twitter:description" content="Upload documents, ask questions in plain language, get grounded answers, edit files, and send with confirmation. See how Allybi works step by step.">
-  <meta name="twitter:image" content="assets/images/og-how-it-works.png">
-
-  <!-- Fonts -->
+  <title>How it works — Allybi</title>
+  <meta name="description" content="From source to response, without losing the thread. See how Allybi helps you bring files, search, compare, prepare, and confirm before send.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Design System -->
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
-
-  <!-- Page-specific CSS -->
   <link rel="stylesheet" href="pages/how-it-works.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
 </head>
 <body>
 
-  <!-- ================================================================
-       HEADER
-       ================================================================ -->
-  <header id="allybi-header" class="allybi-header">
-    <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
-      <nav class="allybi-nav desktop-only">
-        <a href="how-it-works.html" class="nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="use-case-legal.html" class="nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
-        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="/#faq" class="nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      </nav>
-      <div class="header-ctas desktop-only">
-        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" class="is-active" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+        </div>
       </div>
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- ================================================================
-       MOBILE MENU
-       ================================================================ -->
-  <div id="allybi-mobile-menu" class="mobile-menu">
-    <nav class="mobile-menu-nav">
-      <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-      <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
-      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="/#faq" class="mobile-nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-      <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
-    <div class="mobile-ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <div class="header-ctas desktop-only">
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
+    <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
+    <a href="integrations.html" class="mobile-nav-link" data-i18n-key="nav.integrations">Integrations</a>
+    <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hiw-hero">
+  <div class="allybi-container allybi-reveal">
+    <span class="hiw-hero__eyebrow" data-i18n-key="hiw.hero_eyebrow">Product</span>
+    <h1 data-i18n-key="hiw.hero_h1">From source to response, without losing the thread.</h1>
+    <p data-i18n-key="hiw.hero_support">Bring in files and connected sources, ask naturally, compare versions, prepare the right response, and confirm before anything is sent.</p>
+    <div class="hiw-hero__ctas">
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hiw.cta_integrations">See integrations</a>
     </div>
   </div>
+</section>
 
-  <!-- ================================================================
-       MAIN CONTENT
-       ================================================================ -->
-  <main>
+<!-- STEPS -->
+<section class="hiw-steps">
+  <div class="allybi-container">
 
-    <!-- Hero -->
-    <section class="hiw-hero allybi-section">
-      <div class="allybi-container hiw-hero-inner">
-        <span class="allybi-hero-eyebrow allybi-reveal" data-i18n-key="hiw.hero_eyebrow">Product</span>
-        <h1 class="allybi-h1 allybi-reveal" data-i18n-key="hiw.hero_h1">How Allybi works</h1>
-        <p class="allybi-body-lg allybi-reveal" data-i18n-key="hiw.hero_support">From upload to action -- a calmer, faster way to work with documents.</p>
-      </div>
-    </section>
-
-    <!-- End-to-End Overview -->
-    <section class="allybi-section allybi-section--dense hiw-overview">
-      <div class="allybi-content">
-        <div class="hiw-flow allybi-reveal">
-          <div class="hiw-flow-step">
-            <div class="hiw-flow-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16V8M12 8l-3 3M12 8l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-            <span class="hiw-flow-label" data-i18n-key="hiw.flow_upload">Upload</span>
-          </div>
-          <div class="hiw-flow-arrow">
-            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M0 6h18M14 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="hiw-flow-step">
-            <div class="hiw-flow-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h4v10H3zM10 4h4v13h-4zM17 9h4v8h-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-            </div>
-            <span class="hiw-flow-label" data-i18n-key="hiw.flow_organize">Organize</span>
-          </div>
-          <div class="hiw-flow-arrow">
-            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M0 6h18M14 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="hiw-flow-step">
-            <div class="hiw-flow-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <span class="hiw-flow-label" data-i18n-key="hiw.flow_search">Search & Ask</span>
-          </div>
-          <div class="hiw-flow-arrow">
-            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M0 6h18M14 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="hiw-flow-step">
-            <div class="hiw-flow-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.232 5.232l3.536 3.536M9 13l-2 6 6-2 9.364-9.364a2.5 2.5 0 00-3.536-3.536L9 13z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <span class="hiw-flow-label" data-i18n-key="hiw.flow_edit">Edit</span>
-          </div>
-          <div class="hiw-flow-arrow">
-            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M0 6h18M14 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="hiw-flow-step">
-            <div class="hiw-flow-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-            <span class="hiw-flow-label" data-i18n-key="hiw.flow_connect">Connect</span>
-          </div>
-          <div class="hiw-flow-arrow">
-            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M0 6h18M14 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="hiw-flow-step hiw-flow-step--accent">
-            <div class="hiw-flow-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-            <span class="hiw-flow-label" data-i18n-key="hiw.flow_send">Send with Confirmation</span>
-          </div>
+    <!-- Step 1 -->
+    <div class="hiw-step allybi-reveal">
+      <div class="hiw-step__text">
+        <div class="hiw-step__num">1</div>
+        <h3 data-i18n-key="hiw.s1_title">Bring in sources</h3>
+        <p data-i18n-key="hiw.s1_desc">Upload from your device or import directly from connected sources. Everything goes into your private workspace.</p>
+        <div class="hiw-step__tags">
+          <span class="hiw-step__tag">Outlook</span>
+          <span class="hiw-step__tag">OneDrive</span>
+          <span class="hiw-step__tag">SharePoint</span>
+          <span class="hiw-step__tag">Local upload</span>
+          <span class="hiw-step__tag hiw-step__tag--coming">Gmail (soon)</span>
+          <span class="hiw-step__tag hiw-step__tag--coming">Google Drive (soon)</span>
         </div>
       </div>
-    </section>
-
-    <!-- Upload & Organization -->
-    <section class="allybi-section hiw-feature">
-      <div class="allybi-content">
-        <div class="hiw-feature-row">
-          <div class="hiw-feature-text allybi-reveal">
-            <span class="allybi-eyebrow" data-i18n-key="hiw.upload_eyebrow">Step 1</span>
-            <h2 class="allybi-h2" data-i18n-key="hiw.upload_title">Bring in the files that matter</h2>
-            <p class="allybi-body" data-i18n-key="hiw.upload_p1">Upload documents, decks, spreadsheets, and contracts. Allybi supports .docx, .xlsx, .pdf, .pptx, and more.</p>
-            <p class="allybi-body" data-i18n-key="hiw.upload_p2">Group files by project, client, case, or deal. Your workspace structure mirrors how you actually work, not how a filing system thinks you should.</p>
+      <div class="hiw-step__visual">
+        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="hiw-mock__body">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">NDA_v3_final.pdf</span>
+            <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">SPA_Draft.docx</span>
+            <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">Board_Deck_Q4.pptx</span>
           </div>
-          <div class="hiw-feature-visual allybi-reveal">
-            <div class="hiw-file-tree">
-              <div class="hiw-tree-folder">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4.5a1 1 0 011-1h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 00.707.293H13a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-7z" stroke="currentColor" stroke-width="1.2"/></svg>
-                <span data-i18n-key="hiw.tree_project">Acme Corp / Q4 Deal</span>
-              </div>
-              <div class="hiw-tree-file hiw-tree-indent">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M6 5h4M6 8h4M6 11h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span data-i18n-key="hiw.tree_file1">NDA_v3_final.docx</span>
-              </div>
-              <div class="hiw-tree-file hiw-tree-indent">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M6 5h4M6 8h4M6 11h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span data-i18n-key="hiw.tree_file2">Pricing_Model.xlsx</span>
-              </div>
-              <div class="hiw-tree-file hiw-tree-indent">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M6 5h4M6 8h4M6 11h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span data-i18n-key="hiw.tree_file3">Board_Deck_Oct.pptx</span>
-              </div>
-              <div class="hiw-tree-folder">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4.5a1 1 0 011-1h3.586a1 1 0 01.707.293l1.414 1.414a1 1 0 00.707.293H13a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-7z" stroke="currentColor" stroke-width="1.2"/></svg>
-                <span data-i18n-key="hiw.tree_folder2">Compliance / Annual Review</span>
-              </div>
-              <div class="hiw-tree-file hiw-tree-indent">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="1.5" width="10" height="13" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M6 5h4M6 8h4M6 11h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span data-i18n-key="hiw.tree_file4">Audit_Report_2024.pdf</span>
-              </div>
-            </div>
-          </div>
+          <div style="margin-top:14px;padding:12px;background:var(--allybi-trust-subtle);border-radius:8px;font-size:12px;color:var(--allybi-trust);font-weight:500;">3 files imported from OneDrive</div>
         </div>
       </div>
-    </section>
-
-    <!-- Search & Grounded Answers -->
-    <section class="allybi-section hiw-feature" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-content">
-        <div class="hiw-feature-row hiw-feature-row--reverse">
-          <div class="hiw-feature-text allybi-reveal">
-            <span class="allybi-eyebrow" data-i18n-key="hiw.search_eyebrow">Step 2</span>
-            <h2 class="allybi-h2" data-i18n-key="hiw.search_title">Ask in plain language. Get grounded answers.</h2>
-            <p class="allybi-body" data-i18n-key="hiw.search_p1">Type a question the way you would ask a colleague. Allybi searches across all your uploaded files and returns answers grounded in your documents, not general knowledge.</p>
-            <p class="allybi-body" data-i18n-key="hiw.search_p2">Every answer cites its source. Click to see the exact paragraph, cell, or slide the information came from. No hallucinations. No invented certainty.</p>
-          </div>
-          <div class="hiw-feature-visual allybi-reveal">
-            <div class="hiw-query-visual">
-              <div class="hiw-query-input">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M11 11l3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                <span data-i18n-key="hiw.query_example">"What is the non-compete clause in the Acme NDA?"</span>
-              </div>
-              <div class="hiw-query-answer">
-                <div class="hiw-answer-label" data-i18n-key="hiw.answer_label">Grounded answer</div>
-                <p class="hiw-answer-text" data-i18n-key="hiw.answer_text">Section 4.2 of NDA_v3_final.docx states: "Employee agrees not to engage in competing business activities for a period of 12 months following termination..."</p>
-                <div class="hiw-answer-source">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="2" y="1" width="8" height="10" rx="1" stroke="currentColor" stroke-width="1"/><path d="M4 4h4M4 6h4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
-                  <span data-i18n-key="hiw.answer_source">NDA_v3_final.docx, page 3, section 4.2</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Version Awareness -->
-    <section class="allybi-section hiw-feature">
-      <div class="allybi-content">
-        <div class="hiw-feature-row">
-          <div class="hiw-feature-text allybi-reveal">
-            <span class="allybi-eyebrow" data-i18n-key="hiw.version_eyebrow">Step 3</span>
-            <h2 class="allybi-h2" data-i18n-key="hiw.version_title">Always know which version you're working with.</h2>
-            <p class="allybi-body" data-i18n-key="hiw.version_p1">When multiple versions of a file exist, Allybi tracks them automatically. You can compare changes between versions, see what was added or removed, and always know you are working from the latest draft.</p>
-            <p class="allybi-body" data-i18n-key="hiw.version_p2">No more opening three files to figure out which is the "real" one. Version awareness is built into search, editing, and every action you take.</p>
-          </div>
-          <div class="hiw-feature-visual allybi-reveal">
-            <div class="hiw-version-visual">
-              <div class="hiw-version-item hiw-version-item--old">
-                <span class="hiw-version-tag" data-i18n-key="hiw.version_v1">v1</span>
-                <span class="hiw-version-name" data-i18n-key="hiw.version_name_v1">Contract_draft.docx</span>
-                <span class="hiw-version-date" data-i18n-key="hiw.version_date_v1">Oct 3</span>
-              </div>
-              <div class="hiw-version-item hiw-version-item--old">
-                <span class="hiw-version-tag" data-i18n-key="hiw.version_v2">v2</span>
-                <span class="hiw-version-name" data-i18n-key="hiw.version_name_v2">Contract_draft_v2.docx</span>
-                <span class="hiw-version-date" data-i18n-key="hiw.version_date_v2">Oct 8</span>
-              </div>
-              <div class="hiw-version-item hiw-version-item--current">
-                <span class="hiw-version-tag" data-i18n-key="hiw.version_v3">v3</span>
-                <span class="hiw-version-name" data-i18n-key="hiw.version_name_v3">Contract_final.docx</span>
-                <span class="hiw-version-date" data-i18n-key="hiw.version_date_v3">Oct 12</span>
-                <span class="hiw-version-badge" data-i18n-key="hiw.version_latest">Latest</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Edit Docs & Sheets -->
-    <section class="allybi-section hiw-feature" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-content">
-        <div class="hiw-feature-row hiw-feature-row--reverse">
-          <div class="hiw-feature-text allybi-reveal">
-            <span class="allybi-eyebrow" data-i18n-key="hiw.edit_eyebrow">Step 4</span>
-            <h2 class="allybi-h2" data-i18n-key="hiw.edit_title">Edit documents without leaving Allybi.</h2>
-            <p class="allybi-body" data-i18n-key="hiw.edit_p1">Rewrite paragraphs in .docx files. Create formulas and update tables in .xlsx spreadsheets. Make changes directly inside Allybi without downloading, editing externally, and re-uploading.</p>
-            <p class="allybi-body" data-i18n-key="hiw.edit_p2">AI-assisted editing suggests improvements, but you always review and approve before changes are saved. Every edit is traceable.</p>
-          </div>
-          <div class="hiw-feature-visual allybi-reveal">
-            <div class="hiw-edit-visual">
-              <div class="hiw-edit-bar">
-                <span class="hiw-edit-filename" data-i18n-key="hiw.edit_filename">Proposal_Q4.docx</span>
-                <span class="hiw-edit-status" data-i18n-key="hiw.edit_status">Editing</span>
-              </div>
-              <div class="hiw-edit-content">
-                <p class="hiw-edit-line hiw-edit-line--original" data-i18n-key="hiw.edit_original">"The proposed timeline is approximately 6-8 weeks depending on various factors."</p>
-                <div class="hiw-edit-suggestion">
-                  <span class="hiw-edit-suggestion-label" data-i18n-key="hiw.edit_ai_label">AI suggestion</span>
-                  <p class="hiw-edit-line hiw-edit-line--new" data-i18n-key="hiw.edit_suggestion_text">"The proposed timeline is 6 weeks, with a 2-week buffer for regulatory review. Milestones are outlined in Appendix B."</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Connect Inbox & Slack -->
-    <section class="allybi-section hiw-feature">
-      <div class="allybi-content">
-        <div class="hiw-feature-row">
-          <div class="hiw-feature-text allybi-reveal">
-            <span class="allybi-eyebrow" data-i18n-key="hiw.connect_eyebrow">Step 5</span>
-            <h2 class="allybi-h2" data-i18n-key="hiw.connect_title">Search across your messages.</h2>
-            <p class="allybi-body" data-i18n-key="hiw.connect_p1">Connect Gmail, Outlook, or Slack to bring your messages into the same workspace as your files. Search across emails and channels alongside your documents.</p>
-            <p class="allybi-body" data-i18n-key="hiw.connect_p2">Access is permissioned. You control exactly which accounts and channels are connected. Disconnect anytime, and your data is removed from the workspace.</p>
-          </div>
-          <div class="hiw-feature-visual allybi-reveal">
-            <div class="hiw-connect-visual">
-              <div class="hiw-connect-item">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.3"/></svg>
-                <span data-i18n-key="hiw.connect_gmail">Gmail</span>
-                <span class="hiw-connect-status hiw-connect-status--active" data-i18n-key="hiw.connect_active">Connected</span>
-              </div>
-              <div class="hiw-connect-item">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M2 6l8 5 8-5" stroke="currentColor" stroke-width="1.3"/></svg>
-                <span data-i18n-key="hiw.connect_outlook">Outlook</span>
-                <span class="hiw-connect-status" data-i18n-key="hiw.connect_available">Available</span>
-              </div>
-              <div class="hiw-connect-item">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.5 3H5.5a3 3 0 00-3 3v6a3 3 0 003 3h1v3l4-3h4a3 3 0 003-3V6a3 3 0 00-3-3z" stroke="currentColor" stroke-width="1.3"/></svg>
-                <span data-i18n-key="hiw.connect_slack">Slack</span>
-                <span class="hiw-connect-status hiw-connect-status--active" data-i18n-key="hiw.connect_active_slack">Connected</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Send with Confirmation -->
-    <section class="allybi-section hiw-feature hiw-feature--highlight" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-content">
-        <div class="hiw-feature-row hiw-feature-row--reverse">
-          <div class="hiw-feature-text allybi-reveal">
-            <span class="allybi-eyebrow" data-i18n-key="hiw.send_eyebrow">Step 6</span>
-            <h2 class="allybi-h2" data-i18n-key="hiw.send_title">Nothing leaves without your approval.</h2>
-            <p class="allybi-body" data-i18n-key="hiw.send_p1">Before any email is sent, any file is shared, or any action is taken outside your workspace, Allybi shows you exactly what will happen and asks for your explicit confirmation.</p>
-            <p class="allybi-body" data-i18n-key="hiw.send_p2">This is not optional. It is the core design principle. You are always in control of what leaves your workspace.</p>
-          </div>
-          <div class="hiw-feature-visual allybi-reveal">
-            <div class="hiw-confirm-visual">
-              <div class="hiw-confirm-header" data-i18n-key="hiw.confirm_header">Confirm before sending</div>
-              <div class="hiw-confirm-body">
-                <div class="hiw-confirm-row">
-                  <span class="hiw-confirm-label" data-i18n-key="hiw.confirm_to">To:</span>
-                  <span data-i18n-key="hiw.confirm_recipient">sarah@acmecorp.com</span>
-                </div>
-                <div class="hiw-confirm-row">
-                  <span class="hiw-confirm-label" data-i18n-key="hiw.confirm_subject">Subject:</span>
-                  <span data-i18n-key="hiw.confirm_subject_text">Q4 Proposal - Final Version</span>
-                </div>
-                <div class="hiw-confirm-row">
-                  <span class="hiw-confirm-label" data-i18n-key="hiw.confirm_attachment">Attachment:</span>
-                  <span data-i18n-key="hiw.confirm_attachment_name">Proposal_Q4_final.docx</span>
-                </div>
-              </div>
-              <div class="hiw-confirm-actions">
-                <button class="allybi-btn allybi-btn--secondary hiw-confirm-cancel" data-i18n-key="hiw.confirm_cancel">Cancel</button>
-                <button class="allybi-btn allybi-btn--primary hiw-confirm-send" data-i18n-key="hiw.confirm_approve">Confirm & Send</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Security Layer -->
-    <section class="allybi-section hiw-security">
-      <div class="allybi-content">
-        <div class="allybi-section-header">
-          <h2 class="allybi-h2 allybi-reveal" data-i18n-key="hiw.security_title">Security at every step.</h2>
-          <p class="allybi-body-lg allybi-reveal" data-i18n-key="hiw.security_subtitle">Your documents are protected from the moment they enter Allybi to the moment you choose to act on them.</p>
-        </div>
-        <div class="allybi-grid-4 allybi-stagger">
-          <div class="allybi-card allybi-reveal">
-            <div class="hiw-security-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="12" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M9 12V9a5 5 0 0110 0v3" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="hiw.security_1_title">Encryption</h3>
-            <p class="allybi-body" data-i18n-key="hiw.security_1_desc">Files encrypted at rest and in transit. Your data is isolated and inaccessible to other users or systems.</p>
-          </div>
-          <div class="allybi-card allybi-reveal">
-            <div class="hiw-security-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="5" y="4" width="18" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 10h8M10 14h8M10 18h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M19 20l3 3" stroke="var(--allybi-trust)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="hiw.security_2_title">Grounded outputs</h3>
-            <p class="allybi-body" data-i18n-key="hiw.security_2_desc">AI answers are sourced from your files. Every response includes citations so you can verify before you act.</p>
-          </div>
-          <div class="allybi-card allybi-reveal">
-            <div class="hiw-security-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3l9 4v7c0 5.523-3.954 10.392-9 12-5.046-1.608-9-6.477-9-12V7l9-4z" stroke="currentColor" stroke-width="1.5"/><path d="M10 14l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="hiw.security_3_title">Permissioned connections</h3>
-            <p class="allybi-body" data-i18n-key="hiw.security_3_desc">You control which accounts are connected. Revoke access anytime. Data is removed when you disconnect.</p>
-          </div>
-          <div class="allybi-card allybi-reveal">
-            <div class="hiw-security-icon">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M10 14l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="hiw.security_4_title">Explicit confirmation</h3>
-            <p class="allybi-body" data-i18n-key="hiw.security_4_desc">Nothing is sent, shared, or changed without your review and approval. Every outbound action requires confirmation.</p>
-          </div>
-        </div>
-        <div class="hiw-security-cta allybi-reveal">
-          <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hiw.security_cta">View full security overview</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="allybi-section hiw-faq" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-content">
-        <div class="allybi-section-header">
-          <h2 class="allybi-h2 allybi-reveal" data-i18n-key="hiw.faq_title">Frequently asked questions</h2>
-        </div>
-        <div class="hiw-faq-list allybi-narrow">
-
-          <div class="allybi-accordion allybi-reveal">
-            <button class="allybi-accordion__trigger" aria-expanded="false" data-i18n-key="hiw.faq_q1">What file types does Allybi support?</button>
-            <div class="allybi-accordion__content">
-              <div class="allybi-accordion__body" data-i18n-key="hiw.faq_a1">Allybi supports .docx, .xlsx, .pdf, .pptx, .csv, and .txt files. We are continuously adding support for more formats.</div>
-            </div>
-          </div>
-
-          <div class="allybi-accordion allybi-reveal">
-            <button class="allybi-accordion__trigger" aria-expanded="false" data-i18n-key="hiw.faq_q2">How does grounded search work?</button>
-            <div class="allybi-accordion__content">
-              <div class="allybi-accordion__body" data-i18n-key="hiw.faq_a2">When you ask a question, Allybi searches across all your uploaded files and returns answers sourced directly from your documents. Every answer includes a citation linking to the exact file, page, and section.</div>
-            </div>
-          </div>
-
-          <div class="allybi-accordion allybi-reveal">
-            <button class="allybi-accordion__trigger" aria-expanded="false" data-i18n-key="hiw.faq_q3">Can Allybi edit my documents?</button>
-            <div class="allybi-accordion__content">
-              <div class="allybi-accordion__body" data-i18n-key="hiw.faq_a3">Yes. You can rewrite paragraphs in .docx files and create formulas or update tables in .xlsx spreadsheets directly inside Allybi. AI suggests improvements, but you always approve changes before they are saved.</div>
-            </div>
-          </div>
-
-          <div class="allybi-accordion allybi-reveal">
-            <button class="allybi-accordion__trigger" aria-expanded="false" data-i18n-key="hiw.faq_q4">Is my data used to train AI models?</button>
-            <div class="allybi-accordion__content">
-              <div class="allybi-accordion__body" data-i18n-key="hiw.faq_a4">No. Your files are never used for model training. Your data is encrypted, isolated, and accessible only to you. This is an architecture decision, not a policy toggle.</div>
-            </div>
-          </div>
-
-          <div class="allybi-accordion allybi-reveal">
-            <button class="allybi-accordion__trigger" aria-expanded="false" data-i18n-key="hiw.faq_q5">What happens when I connect Gmail or Slack?</button>
-            <div class="allybi-accordion__content">
-              <div class="allybi-accordion__body" data-i18n-key="hiw.faq_a5">Allybi indexes the messages you authorize so you can search across them alongside your files. Access is permissioned and revocable. When you disconnect, your data is removed from the workspace.</div>
-            </div>
-          </div>
-
-          <div class="allybi-accordion allybi-reveal">
-            <button class="allybi-accordion__trigger" aria-expanded="false" data-i18n-key="hiw.faq_q6">What does "send with confirmation" mean?</button>
-            <div class="allybi-accordion__content">
-              <div class="allybi-accordion__body" data-i18n-key="hiw.faq_a6">Before any email, file share, or outbound action is executed, Allybi shows you exactly what will happen and requires your explicit approval. Nothing leaves your workspace without your confirmation.</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="allybi-section hiw-final-cta">
-      <div class="allybi-container hiw-final-cta-inner">
-        <h2 class="allybi-h2 allybi-reveal" data-i18n-key="hiw.cta_title">See Allybi in action.</h2>
-        <p class="allybi-body-lg allybi-reveal" data-i18n-key="hiw.cta_subtitle">Book a demo and we'll walk you through the product.</p>
-        <div class="hiw-cta-buttons allybi-reveal">
-          <a href="request-demo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="nav.book_demo">Book demo</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ================================================================
-       FOOTER
-       ================================================================ -->
-  <footer class="allybi-footer">
-    <div class="allybi-footer-inner">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="footer-brand-logo">
-          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
-        </a>
-        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for professionals handling sensitive documents.</p>
-      </div>
-
-      <!-- Column grid -->
-      <div class="footer-columns">
-
-        <!-- Product -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-          <div class="footer-col-links">
-            <a href="/" data-i18n-key="footer.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          </div>
-        </div>
-
-        <!-- Use Cases -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
-          <div class="footer-col-links">
-            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-          </div>
-        </div>
-
-        <!-- Security -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
-          <div class="footer-col-links">
-            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
-          </div>
-        </div>
-
-        <!-- Resources -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
-          <div class="footer-col-links">
-            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
-            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-          </div>
-        </div>
-
-        <!-- Company -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-          <div class="footer-col-links">
-            <a href="about.html" data-i18n-key="footer.about">About</a>
-            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
-          </div>
-        </div>
-
-        <!-- Legal -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-          <div class="footer-col-links">
-            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
-            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
-          </div>
-        </div>
-
-      </div>
-
-            <!-- Bottom bar -->
-      <!-- Mobile compact links (visible only on small screens) -->
-      <div class="footer-mobile-links">
-        <a href="/" data-i18n-key="footer.overview">Overview</a>
-        <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-        <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-        <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-        <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-        <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-        <a href="pricing.html" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-        <a href="about.html" data-i18n-key="footer.about">About</a>
-        <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="request-demo.html" data-i18n-key="nav.book_demo">Book demo</a>
-        <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-        <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-        <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>
-        <a href="security.html" data-i18n-key="footer.security_privacy">Security &amp; Privacy</a>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
-        <div class="footer-bottom-right">
-          <div class="language-selector" id="footer-language-selector">
-            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-              <span class="lang-label">English</span>
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <ul class="language-menu hidden" role="listbox">
-              <li role="option" data-lang="en">English</li>
-              <li role="option" data-lang="pt">Portugues (BR)</li>
-              <li role="option" data-lang="es">Espanol</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </footer>
 
-  <!-- ================================================================
-       SCRIPTS
-       ================================================================ -->
-  <script src="language-switcher.js"></script>
-  <script src="allybi-header.js"></script>
-  <script src="animations.js"></script>
-  <script src="allybi-animations.js"></script>
+    <!-- Step 2 -->
+    <div class="hiw-step allybi-reveal">
+      <div class="hiw-step__text">
+        <div class="hiw-step__num">2</div>
+        <h3 data-i18n-key="hiw.s2_title">Ask naturally</h3>
+        <p data-i18n-key="hiw.s2_desc">Ask in plain language across all your connected sources. Allybi returns answers that cite the exact document, page, and section.</p>
+      </div>
+      <div class="hiw-step__visual">
+        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="hiw-mock__body">
+          <div class="hiw-mock__query">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            What are the non-compete terms?
+          </div>
+          <div class="hiw-mock__result">
+            <span class="hiw-mock__badge">Grounded answer</span>
+            <p style="margin:0 0 8px">Section 9.3: Contractor agrees not to engage in competing activities within a <strong>50-mile radius</strong> for <strong>24 months</strong> following termination.</p>
+            <span class="hiw-mock__source">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Anderson_MSA_v4.pdf — p. 12
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Step 3 -->
+    <div class="hiw-step allybi-reveal">
+      <div class="hiw-step__text">
+        <div class="hiw-step__num">3</div>
+        <h3 data-i18n-key="hiw.s3_title">Compare versions</h3>
+        <p data-i18n-key="hiw.s3_desc">See exactly what changed between document versions — highlighted, referenced, and cited. Use it for clauses, drafts, and attachments.</p>
+      </div>
+      <div class="hiw-step__visual">
+        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="hiw-mock__body">
+          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;">Section 8.1 — Indemnification</div>
+          <div class="hiw-mock__diff">
+            The Supplier shall indemnify the Client against all claims arising from <span class="hiw-mock__diff-removed">negligent acts</span><span class="hiw-mock__diff-added">any acts or omissions</span> related to the Services, up to a cap of <span class="hiw-mock__diff-removed">$1M</span><span class="hiw-mock__diff-added">$3M</span>.
+          </div>
+          <span class="hiw-mock__source" style="margin-top:12px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Draft v2 vs v3 — Section 8.1
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="hiw-step allybi-reveal">
+      <div class="hiw-step__text">
+        <div class="hiw-step__num">4</div>
+        <h3 data-i18n-key="hiw.s4_title">Prepare the action</h3>
+        <p data-i18n-key="hiw.s4_desc">Choose the right file, prepare an email response, or select the right WhatsApp contact. Everything stays grounded in the source.</p>
+      </div>
+      <div class="hiw-step__visual">
+        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="hiw-mock__body">
+          <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;">Prepare response</div>
+          <div style="font-size:13px;color:var(--allybi-text-secondary);line-height:1.6;margin-bottom:12px;padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;">
+            "Hi Sarah, attached is the latest version of the SPA with updated indemnity terms as discussed. Please review Section 8.1."
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="hiw-step__tag" style="padding:5px 10px;font-size:11px;">SPA_Draft_v3.pdf</span>
+            <span class="hiw-step__tag" style="padding:5px 10px;font-size:11px;">via Outlook</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="hiw-step allybi-reveal">
+      <div class="hiw-step__text">
+        <div class="hiw-step__num">5</div>
+        <h3 data-i18n-key="hiw.s5_title">Confirm before send</h3>
+        <p data-i18n-key="hiw.s5_desc">Nothing leaves without your review. You see the recipient, file, version, and message before confirming. This is not optional.</p>
+      </div>
+      <div class="hiw-step__visual">
+        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="hiw-mock__body">
+          <div class="hiw-mock__confirm">
+            <div class="hiw-mock__confirm-label">Confirm before sending</div>
+            <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:12px;">
+              <strong style="color:var(--allybi-text-strongest)">To:</strong> sarah@acmecorp.com<br>
+              <strong style="color:var(--allybi-text-strongest)">File:</strong> SPA_Draft_v3.pdf (v3, Oct 12)<br>
+              <strong style="color:var(--allybi-text-strongest)">Via:</strong> Outlook
+            </div>
+            <div class="hiw-mock__confirm-row">
+              <span style="font-size:12px;color:var(--allybi-text-muted);cursor:pointer;">Cancel</span>
+              <span class="hiw-mock__confirm-btn">Confirm & Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHERE THIS HAPPENS -->
+<div class="hiw-strip">
+  <div class="allybi-container">
+    <div class="hiw-strip__inner allybi-reveal">
+      <div class="hiw-strip__item">
+        <div class="hiw-strip__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <span class="hiw-strip__label">Upload</span>
+      </div>
+      <div class="hiw-strip__item">
+        <div class="hiw-strip__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <span class="hiw-strip__label">Ask</span>
+      </div>
+      <div class="hiw-strip__item">
+        <div class="hiw-strip__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+        </div>
+        <span class="hiw-strip__label">Integrations</span>
+      </div>
+      <div class="hiw-strip__item">
+        <div class="hiw-strip__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="hiw-strip__label">Review before send</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="hiw-cta">
+  <div class="allybi-container allybi-reveal">
+    <h2 data-i18n-key="hiw.cta_title">See Allybi in action.</h2>
+    <p data-i18n-key="hiw.cta_subtitle">Book a demo and we'll walk you through the full workflow.</p>
+    <a href="request-demo.html" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="nav.book_demo">Book demo</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline" data-i18n-key="footer.tagline">Private AI workspace for sensitive document work.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4><div class="footer-col-links"><a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="footer.security">Security</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4><div class="footer-col-links"><a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a><a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a><a href="use-case-business.html" data-i18n-key="footer.business">For operations</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4><div class="footer-col-links"><a href="faq.html" data-i18n-key="footer.faq">FAQ</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a><a href="about.html" data-i18n-key="footer.about">About</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4><div class="footer-col-links"><a href="tos.html">Terms of Service</a><a href="terms.html">Acceptable Use</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a><a href="cookies.html">Cookies</a><a href="integration-data-use.html">Integrations & Data Use</a><a href="data-deletion.html">Data Deletion</a></div></div>
+    </div>
+    <div class="footer-mobile-links">
+      <a href="how-it-works.html">How it works</a><a href="use-case-legal.html">For lawyers</a><a href="security-overview.html">Security</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="request-demo.html">Book demo</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Portugues (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Espanol</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
 </body>
 </html>

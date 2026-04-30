@@ -56,245 +56,86 @@
   color: var(--allybi-text-secondary);
 }
 
-/* ---------- Architecture Diagram ---------- */
-.secov-arch-diagram {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  max-width: 800px;
+/* ---------- Will / Will Not ---------- */
+.secov-willwont__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--allybi-space-8);
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.secov-arch-node {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--allybi-space-2);
-  padding: var(--allybi-space-6) var(--allybi-space-8);
-  border: 2px solid var(--allybi-border-strong);
+.secov-willwont__col {
+  padding: var(--allybi-space-8);
   border-radius: var(--allybi-radius-lg);
   background-color: var(--allybi-bg-surface);
-  text-align: center;
-  min-width: 200px;
+  border: 1px solid var(--allybi-border-default);
 }
 
-.secov-arch-node--user {
-  border-color: var(--allybi-accent);
-  background-color: var(--allybi-accent-subtle);
+.secov-willwont__col--will {
+  border-color: rgba(5, 150, 105, 0.2);
+  background-color: rgba(5, 150, 105, 0.03);
 }
 
-.secov-arch-node--app {
-  border-color: var(--allybi-trust);
-  background-color: var(--allybi-trust-subtle);
+.secov-willwont__col--wont {
+  border-color: rgba(220, 38, 38, 0.15);
+  background-color: rgba(220, 38, 38, 0.02);
 }
 
-.secov-arch-node--branch {
-  min-width: 160px;
-  padding: var(--allybi-space-5) var(--allybi-space-5);
-}
-
-.secov-arch-node__icon {
-  color: var(--allybi-text-secondary);
-}
-
-.secov-arch-node--user .secov-arch-node__icon {
-  color: var(--allybi-accent);
-}
-
-.secov-arch-node--app .secov-arch-node__icon {
-  color: var(--allybi-trust);
-}
-
-.secov-arch-node__label {
-  font-size: var(--allybi-body-sm-size);
-  font-weight: var(--allybi-weight-semibold);
+.secov-willwont__heading {
+  font-size: var(--allybi-card-title-size);
+  font-weight: var(--allybi-weight-bold);
   color: var(--allybi-text-strongest);
+  margin-bottom: var(--allybi-space-6);
 }
 
-.secov-arch-node__detail {
-  font-size: var(--allybi-meta-size);
-  color: var(--allybi-text-muted);
-}
-
-.secov-arch-connector {
+.secov-willwont__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--allybi-space-1);
-  padding: var(--allybi-space-2) 0;
+  gap: var(--allybi-space-5);
 }
 
-.secov-arch-connector__line {
-  width: 2px;
-  height: 32px;
-  background-color: var(--allybi-border-strong);
-}
-
-.secov-arch-connector__label {
-  font-size: var(--allybi-meta-size);
-  font-weight: var(--allybi-weight-semibold);
-  color: var(--allybi-trust);
-  letter-spacing: var(--allybi-tracking-wide);
-  text-transform: uppercase;
-}
-
-.secov-arch-branches {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--allybi-space-6);
-  width: 100%;
-}
-
-/* Branch connector lines */
-.secov-arch-branches::before {
-  content: '';
-  display: block;
-  position: absolute;
-  /* we use relative positioning instead */
-}
-
-/* ---------- Data Handling ---------- */
-.secov-data-block {
-  padding-left: var(--allybi-space-5);
-  border-left: 3px solid var(--allybi-accent);
-}
-
-.secov-data-block__title {
-  font-size: var(--allybi-card-title-size);
-  line-height: var(--allybi-card-title-lh);
-  font-weight: var(--allybi-weight-semibold);
-  color: var(--allybi-text-strongest);
-  margin-bottom: var(--allybi-space-3);
-}
-
-.secov-data-block__desc {
-  font-size: var(--allybi-body-sm-size);
-  line-height: var(--allybi-body-sm-lh);
-  color: var(--allybi-text-secondary);
-}
-
-/* ---------- Integration Security ---------- */
-.secov-integ-card__title {
-  font-size: var(--allybi-card-title-size);
-  line-height: var(--allybi-card-title-lh);
-  font-weight: var(--allybi-weight-semibold);
-  color: var(--allybi-text-strongest);
-  margin-bottom: var(--allybi-space-3);
-}
-
-.secov-integ-card__desc {
-  font-size: var(--allybi-body-sm-size);
-  line-height: var(--allybi-body-sm-lh);
-  color: var(--allybi-text-secondary);
-}
-
-/* ---------- CTA ---------- */
-.secov-cta__inner {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.secov-cta__inner .allybi-h2 {
-  margin-bottom: var(--allybi-space-4);
-}
-
-.secov-cta__inner .allybi-body-lg {
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: var(--allybi-space-10);
-}
-
-.secov-cta__buttons {
+.secov-willwont__list li {
   display: flex;
-  justify-content: center;
-  gap: var(--allybi-space-4);
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--allybi-space-3);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--allybi-text-primary);
 }
 
-/* ---------- Tablet landscape ---------- */
-@media (max-width: 1024px) {
-  .secov-arch-diagram {
-    max-width: 100%;
-  }
-
-  .secov-arch-node {
-    padding: var(--allybi-space-4) var(--allybi-space-6);
-    min-width: 160px;
-  }
+.secov-willwont__list li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 
-/* ---------- Tablet portrait ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .secov-hero {
     padding-top: calc(var(--allybi-section-py-mobile) + 32px);
   }
 
-  .secov-arch-diagram {
-    flex-direction: column;
-  }
-
-  .secov-arch-branches {
-    grid-template-columns: 1fr;
-    gap: var(--allybi-space-4);
-  }
-
-  .secov-data-grid.allybi-grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--allybi-space-8);
-  }
-
-  .secov-cta__buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .secov-cta__buttons .allybi-btn {
-    min-height: 44px;
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-/* ---------- Phone ---------- */
-@media (max-width: 600px) {
-  .secov-data-grid.allybi-grid-4 {
+  .secov-willwont__grid {
     grid-template-columns: 1fr;
     gap: var(--allybi-space-6);
   }
+}
 
-  .secov-arch-node {
-    padding: var(--allybi-space-4);
-    min-width: 0;
-    width: 100%;
-  }
-
-  .secov-arch-node--branch {
-    min-width: 0;
-  }
-
+@media (max-width: 600px) {
   .secov-pillar-card {
     padding: var(--allybi-space-6);
   }
 
-  .secov-data-block {
-    padding-left: var(--allybi-space-4);
-  }
-
-  .allybi-accordion__trigger {
-    font-size: 16px;
-    padding: 16px 0;
-    min-height: 44px;
+  .secov-willwont__col {
+    padding: var(--allybi-space-6);
   }
 }
 
-/* ---------- Small phone ---------- */
 @media (max-width: 390px) {
   .secov-hero__inner {
     max-width: 100%;
-  }
-
-  .secov-arch-connector__line {
-    height: 20px;
   }
 }

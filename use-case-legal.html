@@ -3,572 +3,293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0D0F12">
-
-  <!-- Favicon -->
+  <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
-
-  <!-- SEO -->
-  <title>Allybi for Lawyers — Find the Right Clause in Seconds</title>
-  <meta name="description" content="Compare drafts, track versions, search evidence, and send the right file with confidence. Private AI for legal workflows.">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Allybi for Lawyers — Find the Right Clause in Seconds">
-  <meta property="og:description" content="Compare drafts, track versions, search evidence, and send the right file with confidence. Private AI for legal workflows.">
-  <meta property="og:image" content="assets/images/og-home.png">
-  <meta property="og:url" content="https://allybi.co/use-case-legal.html">
-  <meta property="og:site_name" content="Allybi">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Allybi for Lawyers — Find the Right Clause in Seconds">
-  <meta name="twitter:description" content="Compare drafts, track versions, search evidence, and send the right file with confidence. Private AI for legal workflows.">
-  <meta name="twitter:image" content="assets/images/og-home.png">
-
-  <!-- Fonts -->
+  <title>For lawyers — Allybi</title>
+  <meta name="description" content="For lawyers who cannot afford the wrong version. Search contracts, compare drafts, find clauses, and send with confirmation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Design System -->
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
-
-  <!-- Page-specific CSS -->
   <link rel="stylesheet" href="pages/use-case-legal.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
 </head>
 <body>
 
-  <!-- ================================================================
-       HEADER
-       ================================================================ -->
-  <header id="allybi-header" class="allybi-header">
-    <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
-      <nav class="allybi-nav desktop-only">
-        <a href="how-it-works.html" class="nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="use-case-legal.html" class="nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
-        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="/#faq" class="nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      </nav>
-      <div class="header-ctas desktop-only">
-        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+        </div>
       </div>
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- ================================================================
-       MOBILE MENU
-       ================================================================ -->
-  <div id="allybi-mobile-menu" class="mobile-menu">
-    <nav class="mobile-menu-nav">
-      <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-      <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
-      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="/#faq" class="mobile-nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-      <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" class="is-active" data-i18n-key="nav.for_lawyers">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
-    <div class="mobile-ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <div class="header-ctas desktop-only">
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
+    <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
+    <a href="integrations.html" class="mobile-nav-link" data-i18n-key="nav.integrations">Integrations</a>
+    <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="ucl-hero">
+  <div class="allybi-container allybi-reveal">
+    <span class="ucl-hero__eyebrow" data-i18n-key="legal.hero_eyebrow">For lawyers</span>
+    <h1 data-i18n-key="legal.hero_h1">For lawyers who cannot afford the wrong version.</h1>
+    <p data-i18n-key="legal.hero_support">Search contracts, compare drafts, find the exact clause, and prepare the right response — with source citations and confirmation before anything is sent.</p>
+    <div class="ucl-hero__ctas">
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hero.cta_secondary">See how it works</a>
     </div>
   </div>
+</section>
 
-  <!-- ================================================================
-       MAIN CONTENT
-       ================================================================ -->
-  <main>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         HERO
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-hero allybi-section">
-      <div class="allybi-container">
-        <span class="allybi-hero-eyebrow" data-i18n-key="uc_legal.hero.eyebrow">For lawyers</span>
-        <h1 class="allybi-h1" data-i18n-key="uc_legal.hero.title">Find the right clause, draft, and answer.</h1>
-        <p class="allybi-body-lg" data-i18n-key="uc_legal.hero.support">Allybi gives lawyers a private workspace to search contracts, compare drafts, and act on findings — without losing the thread or sending the wrong file.</p>
-        <div class="ucl-hero__ctas">
-          <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
-        </div>
+<!-- PRESSURE MOMENTS -->
+<section class="ucl-pressure">
+  <div class="allybi-container">
+    <div class="ucl-pressure__grid allybi-stagger">
+      <div class="ucl-pressure__card allybi-reveal">
+        <h3 data-i18n-key="legal.pressure1_title">Partner asks what changed</h3>
+        <p data-i18n-key="legal.pressure1_desc">You need the answer in seconds. Not after 20 minutes comparing two PDFs manually.</p>
       </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         PAIN SCENARIOS
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-pains allybi-section">
-      <div class="allybi-container">
-        <div class="ucl-pains__grid">
-
-          <div class="ucl-pain-card">
-            <h3 class="ucl-pain-card__title" data-i18n-key="uc_legal.pains.drafts.title">Comparing minutas under pressure</h3>
-            <p class="ucl-pain-card__desc" data-i18n-key="uc_legal.pains.drafts.desc">When a partner asks what changed in the latest draft, you need the answer in seconds — not after 20 minutes of folder diving.</p>
-          </div>
-
-          <div class="ucl-pain-card">
-            <h3 class="ucl-pain-card__title" data-i18n-key="uc_legal.pains.version.title">Sending the wrong contract version</h3>
-            <p class="ucl-pain-card__desc" data-i18n-key="uc_legal.pains.version.desc">One outdated contract sent to opposing counsel can cost trust that takes months to rebuild.</p>
-          </div>
-
-          <div class="ucl-pain-card">
-            <h3 class="ucl-pain-card__title" data-i18n-key="uc_legal.pains.search.title">Hunting for the right clause across folders</h3>
-            <p class="ucl-pain-card__desc" data-i18n-key="uc_legal.pains.search.desc">The search tax on legal work is invisible but massive. Every hunt for a clause or contract breaks your concentration.</p>
-          </div>
-
-        </div>
+      <div class="ucl-pressure__card allybi-reveal">
+        <h3 data-i18n-key="legal.pressure2_title">Client asks for the latest draft</h3>
+        <p data-i18n-key="legal.pressure2_desc">It must be the right one. One outdated contract sent to opposing counsel costs trust that takes months to rebuild.</p>
       </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FEATURE 1 · CONTRACT / VERSION COMPARISON
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-feature allybi-section">
-      <div class="allybi-container">
-        <div class="ucl-feature__grid">
-          <div class="ucl-feature__text">
-            <h2 class="allybi-h2" data-i18n-key="uc_legal.feature1.title">See what changed between drafts — instantly.</h2>
-            <p data-i18n-key="uc_legal.feature1.desc">Upload two versions of any contract and Allybi highlights exactly what changed — clause by clause. Compare indemnification language, liability caps, or termination provisions without manual redlining. Every difference is surfaced with full context so you can brief your team in seconds, not hours.</p>
-          </div>
-          <div class="ucl-mockup">
-            <div class="ucl-mockup__bar">
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-            </div>
-            <div class="ucl-mockup__body">
-              <div class="ucl-compare">
-                <div class="ucl-compare__panel">
-                  <div class="ucl-compare__panel-title" data-i18n-key="uc_legal.mock.compare_v2_label">Draft v2 — Mar 12</div>
-                  <p data-i18n-key="uc_legal.mock.compare_v2_text">Section 8.1 — Indemnification. The Supplier shall indemnify the Client against all claims arising from <span class="ucl-compare__removed">negligent acts</span> related to the Services...</p>
-                </div>
-                <div class="ucl-compare__panel">
-                  <div class="ucl-compare__panel-title" data-i18n-key="uc_legal.mock.compare_v3_label">Draft v3 — Mar 18</div>
-                  <p data-i18n-key="uc_legal.mock.compare_v3_text">Section 8.1 — Indemnification. The Supplier shall indemnify the Client against all claims arising from <span class="ucl-compare__added">any acts or omissions</span> related to the Services...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="ucl-pressure__card allybi-reveal">
+        <h3 data-i18n-key="legal.pressure3_title">Clause buried across versions</h3>
+        <p data-i18n-key="legal.pressure3_desc">The non-compete clause exists in five different drafts. Finding the latest version shouldn't be a research project.</p>
       </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FEATURE 2 · CLAUSE SEARCH
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-feature ucl-feature--alt allybi-section">
-      <div class="allybi-container">
-        <div class="ucl-feature__grid ucl-feature__grid--reverse">
-          <div class="ucl-feature__text">
-            <h2 class="allybi-h2" data-i18n-key="uc_legal.feature2.title">Search clauses across every document in your matter.</h2>
-            <p data-i18n-key="uc_legal.feature2.desc">Ask Allybi a natural-language question — "What are the termination provisions across all vendor contracts?" — and get grounded answers with exact citations. Every result links back to the source document, page, and passage. No fabricated answers. No missing context.</p>
-          </div>
-          <div class="ucl-mockup">
-            <div class="ucl-mockup__bar">
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-            </div>
-            <div class="ucl-mockup__body">
-              <div class="ucl-search-result">
-                <div class="ucl-search-result__query">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M10 10l3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                  <span data-i18n-key="uc_legal.mock.search_query">"What are the non-compete terms in the Anderson agreement?"</span>
-                </div>
-                <div class="ucl-search-result__item">
-                  <div class="ucl-search-result__source" data-i18n-key="uc_legal.mock.search_source1">Anderson_MSA_v4.pdf — Page 12, Section 9.3</div>
-                  <div class="ucl-search-result__text" data-i18n-key="uc_legal.mock.search_text1">The Contractor agrees not to engage in any <mark>competing business activities</mark> within a <mark>50-mile radius</mark> for a period of <mark>24 months</mark> following termination of this Agreement.</div>
-                </div>
-                <div class="ucl-search-result__item">
-                  <div class="ucl-search-result__source" data-i18n-key="uc_legal.mock.search_source2">Anderson_Amendment_2.pdf — Page 3, Section 2.1</div>
-                  <div class="ucl-search-result__text" data-i18n-key="uc_legal.mock.search_text2">The non-compete period described in Section 9.3 is hereby amended to <mark>18 months</mark> with geographic scope reduced to <mark>25 miles</mark>.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FEATURE 3 · MATTER ORGANIZATION
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-feature allybi-section">
-      <div class="allybi-container">
-        <div class="ucl-feature__grid">
-          <div class="ucl-feature__text">
-            <h2 class="allybi-h2" data-i18n-key="uc_legal.feature3.title">Organize by matter, client, or deal.</h2>
-            <p data-i18n-key="uc_legal.feature3.desc">Create project-level workspaces for each matter. Drag in contracts, correspondence, and evidence. Search stays scoped to the matter, so you never accidentally pull results from the wrong case. Share access with colleagues while keeping other matters private.</p>
-          </div>
-          <div class="ucl-mockup">
-            <div class="ucl-mockup__bar">
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-            </div>
-            <div class="ucl-mockup__body">
-              <div class="ucl-folder-tree">
-                <div class="ucl-folder-tree__item ucl-folder-tree__item--active">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
-                  Anderson v. TechCorp
-                </div>
-                <div class="ucl-folder-tree__nested">
-                  <div class="ucl-folder-tree__item">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
-                    MSA_v4_final.pdf
-                  </div>
-                  <div class="ucl-folder-tree__item">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
-                    Amendment_2.pdf
-                  </div>
-                  <div class="ucl-folder-tree__item">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
-                    Correspondence_Q1.pdf
-                  </div>
-                  <div class="ucl-folder-tree__item">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="10" height="12" rx="1" stroke="currentColor" stroke-width="1"/><path d="M5 4h4M5 6.5h4M5 9h2" stroke="currentColor" stroke-width="0.8"/></svg>
-                    Evidence_Exhibit_A.pdf
-                  </div>
-                </div>
-                <div class="ucl-folder-tree__item">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
-                  Smith Acquisition
-                </div>
-                <div class="ucl-folder-tree__item">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 13H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4l2 2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.2"/></svg>
-                  Board Compliance Review
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FEATURE 4 · DRAFT & SEND
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-feature ucl-feature--alt allybi-section">
-      <div class="allybi-container">
-        <div class="ucl-feature__grid ucl-feature__grid--reverse">
-          <div class="ucl-feature__text">
-            <h2 class="allybi-h2" data-i18n-key="uc_legal.feature4.title">Send the right version — with confirmation.</h2>
-            <p data-i18n-key="uc_legal.feature4.desc">When you draft a message or attach a file, Allybi shows you exactly which version you are sending — file name, date, and size — and asks for explicit confirmation before anything leaves your workspace. No more accidental sends. No more wrong attachments.</p>
-          </div>
-          <div class="ucl-mockup">
-            <div class="ucl-mockup__bar">
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-              <span class="ucl-mockup__dot"></span>
-            </div>
-            <div class="ucl-mockup__body">
-              <div class="ucl-send-confirm">
-                <div class="ucl-send-confirm__badge">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 7l2 2 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span data-i18n-key="uc_legal.mock.send_badge">Confirm before sending</span>
-                </div>
-                <div class="ucl-send-confirm__file" data-i18n-key="uc_legal.mock.send_file">Anderson_MSA_v4_final.pdf</div>
-                <div class="ucl-send-confirm__meta" data-i18n-key="uc_legal.mock.send_meta">Version 4 — Last modified Mar 18, 2025 — 2.4 MB</div>
-                <div class="ucl-send-confirm__actions">
-                  <button class="ucl-send-confirm__btn ucl-send-confirm__btn--cancel" data-i18n-key="uc_legal.mock.send_cancel">Cancel</button>
-                  <button class="ucl-send-confirm__btn ucl-send-confirm__btn--confirm" data-i18n-key="uc_legal.mock.send_confirm">Confirm &amp; Send</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         SECURITY
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-security allybi-section">
-      <div class="allybi-container">
-        <div class="ucl-security__header">
-          <h2 class="allybi-h2" data-i18n-key="uc_legal.security.title">Security posture for sensitive work.</h2>
-        </div>
-        <div class="ucl-security__grid">
-
-          <div class="ucl-security__item">
-            <div class="ucl-security__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <h3 class="ucl-security__item-title" data-i18n-key="uc_legal.security.encryption.title">Encryption by default</h3>
-            <p class="ucl-security__item-desc" data-i18n-key="uc_legal.security.encryption.desc">All data encrypted in transit and at rest. Your documents never train AI models.</p>
-          </div>
-
-          <div class="ucl-security__item">
-            <div class="ucl-security__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-            </div>
-            <h3 class="ucl-security__item-title" data-i18n-key="uc_legal.security.grounded.title">Grounded answers only</h3>
-            <p class="ucl-security__item-desc" data-i18n-key="uc_legal.security.grounded.desc">Every answer cites the source. If the information is not in your files, Allybi tells you.</p>
-          </div>
-
-          <div class="ucl-security__item">
-            <div class="ucl-security__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="ucl-security__item-title" data-i18n-key="uc_legal.security.permissions.title">Permissioned integrations</h3>
-            <p class="ucl-security__item-desc" data-i18n-key="uc_legal.security.permissions.desc">You choose which accounts to connect. Allybi never accesses data you have not explicitly authorized.</p>
-          </div>
-
-          <div class="ucl-security__item">
-            <div class="ucl-security__icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </div>
-            <h3 class="ucl-security__item-title" data-i18n-key="uc_legal.security.confirmation.title">Explicit confirmation</h3>
-            <p class="ucl-security__item-desc" data-i18n-key="uc_legal.security.confirmation.desc">Nothing leaves your workspace without your explicit approval. File, version, and recipient are always shown.</p>
-          </div>
-
-        </div>
-        <div class="ucl-security__cta">
-          <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="uc_legal.security.cta">View security overview</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FAQ
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-faq allybi-section" id="faq">
-      <div class="allybi-container">
-        <div class="ucl-faq__header">
-          <h2 class="allybi-h2" data-i18n-key="uc_legal.faq.title">Frequently asked questions</h2>
-        </div>
-        <div class="ucl-faq__list allybi-accordion">
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="uc_legal.faq.q1">How does Allybi handle attorney-client privilege?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="uc_legal.faq.a1">Allybi workspaces are isolated and encrypted. Your documents are never shared across accounts, never used for model training, and never accessible to Allybi staff. You control who has access to each project, and all data processing respects the confidentiality of your files.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="uc_legal.faq.q2">Can I compare specific clauses across documents?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="uc_legal.faq.a2">Yes. Upload multiple document versions and ask Allybi to compare specific sections. It will highlight additions, deletions, and modifications at the clause level, with full context from both versions side by side.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="uc_legal.faq.q3">How are search results grounded?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="uc_legal.faq.a3">Every answer Allybi provides cites the exact source document, page number, and relevant passage. Grounding is enforced at the architecture level — if the information does not exist in your uploaded files, Allybi will say so rather than fabricate an answer.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="uc_legal.faq.q4">Is my data encrypted?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="uc_legal.faq.a4">Yes. All data is encrypted in transit (TLS 1.2+) and at rest (AES-256). Your documents are never used to train AI models — this is contractually guaranteed. You can choose EU or US data hosting.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="uc_legal.faq.q5">Can I control who accesses my workspace?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="uc_legal.faq.a5">Yes. Each project workspace has its own access controls. You decide who can view, edit, or search within a matter. Workspaces are fully isolated — no data leaks between projects or accounts.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="uc_legal.faq.q6">How does the send confirmation work?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p data-i18n-key="uc_legal.faq.a6">Before any file leaves your workspace — whether attached to an email or shared via link — Allybi shows you the exact file name, version, modification date, and recipient. You must explicitly confirm before the action completes. This prevents accidental sends of wrong versions.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FINAL CTA
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="ucl-final-cta allybi-section">
-      <div class="allybi-container">
-        <h2 class="allybi-h2" data-i18n-key="uc_legal.final_cta.title">Your matters, organized and searchable.</h2>
-        <p data-i18n-key="uc_legal.final_cta.support">Bring your contracts, drafts, and evidence into one private workspace.</p>
-        <div class="ucl-final-cta__buttons">
-          <a href="request-demo.html" class="allybi-btn allybi-btn--primary-inverse" data-i18n-key="nav.book_demo">Book demo</a>
-          <a href="request-demo.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="nav.book_demo">Book demo</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ================================================================
-       FOOTER
-       ================================================================ -->
-  <footer class="allybi-footer">
-    <div class="allybi-footer-inner">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="footer-brand-logo">
-          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
-        </a>
-        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for professionals handling sensitive documents.</p>
-      </div>
-
-      <!-- Column grid -->
-      <div class="footer-columns">
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-          <div class="footer-col-links">
-            <a href="/" data-i18n-key="footer.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
-          <div class="footer-col-links">
-            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
-          <div class="footer-col-links">
-            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
-          <div class="footer-col-links">
-            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
-            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-          <div class="footer-col-links">
-            <a href="about.html" data-i18n-key="footer.about">About</a>
-            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-          <div class="footer-col-links">
-            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
-            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
-          </div>
-        </div>
-
-      </div>
-
-            <!-- Bottom bar -->
-      <!-- Mobile compact links (visible only on small screens) -->
-      <div class="footer-mobile-links">
-        <a href="/" data-i18n-key="footer.overview">Overview</a>
-        <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-        <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-        <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-        <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-        <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-        <a href="pricing.html" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-        <a href="about.html" data-i18n-key="footer.about">About</a>
-        <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="request-demo.html" data-i18n-key="nav.book_demo">Book demo</a>
-        <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-        <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-        <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>
-        <a href="security.html" data-i18n-key="footer.security_privacy">Security &amp; Privacy</a>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
-        <div class="footer-bottom-right">
-          <div class="language-selector" id="footer-language-selector">
-            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-              <span class="lang-label">English</span>
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <ul class="language-menu hidden" role="listbox">
-              <li role="option" data-lang="en">English</li>
-              <li role="option" data-lang="pt">Portugues (BR)</li>
-              <li role="option" data-lang="es">Espanol</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- ================================================================
-       SCRIPTS
-       ================================================================ -->
-  <script src="language-switcher.js"></script>
-  <script src="allybi-header.js"></script>
-  <script src="animations.js"></script>
-  <script src="allybi-animations.js"></script>
+<!-- FEATURE 1: Compare clauses -->
+<section class="ucl-feature">
+  <div class="allybi-container">
+    <div class="ucl-feature__grid allybi-reveal">
+      <div class="ucl-feature__text">
+        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f1_eyebrow">Version comparison</div>
+        <h3 data-i18n-key="legal.f1_title">Compare clause language across versions.</h3>
+        <p data-i18n-key="legal.f1_desc">Upload two versions and Allybi highlights exactly what changed — clause by clause. Compare indemnification language, liability caps, or termination provisions without manual redlining.</p>
+      </div>
+      <div class="ucl-feature__visual">
+        <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="ucl-mock__body">
+          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Section 8.1 — Indemnification</div>
+          <div style="font-size:13px;line-height:1.7;color:var(--allybi-text-primary);">
+            The Supplier shall indemnify the Client against all claims arising from <span class="ucl-compare__removed">negligent acts</span><span class="ucl-compare__added">any acts or omissions</span> related to the Services, up to a cap of <span class="ucl-compare__removed">$1M</span><span class="ucl-compare__added">$3M</span>.
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--allybi-text-muted);margin-top:12px;padding-top:10px;border-top:1px solid var(--allybi-border-subtle);">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Draft v2 vs v3 — Section 8.1
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- FAQ accordion -->
-  <script>
-    (function () {
-      var triggers = document.querySelectorAll('.allybi-accordion__trigger');
-      triggers.forEach(function (trigger) {
-        trigger.addEventListener('click', function () {
-          var expanded = this.getAttribute('aria-expanded') === 'true';
-          this.setAttribute('aria-expanded', String(!expanded));
-          var content = this.nextElementSibling;
-          if (!expanded) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-          } else {
-            content.style.maxHeight = '0';
-          }
-        });
-      });
-    })();
-  </script>
+<!-- FEATURE 2: Search across matter -->
+<section class="ucl-feature">
+  <div class="allybi-container">
+    <div class="ucl-feature__grid ucl-feature__grid--reverse allybi-reveal">
+      <div class="ucl-feature__text">
+        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f2_eyebrow">Cross-source search</div>
+        <h3 data-i18n-key="legal.f2_title">Search across contracts and matter files.</h3>
+        <p data-i18n-key="legal.f2_desc">Ask in natural language — "What are the termination provisions?" — and get grounded answers with exact citations. Every result links to the source document, page, and passage.</p>
+      </div>
+      <div class="ucl-feature__visual">
+        <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="ucl-mock__body">
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--allybi-text-muted);padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;margin-bottom:14px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            What are the non-compete terms in Anderson?
+          </div>
+          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--allybi-trust);margin-bottom:6px;display:flex;align-items:center;gap:4px;"><span style="width:5px;height:5px;border-radius:50%;background:var(--allybi-trust)"></span> Grounded answer</div>
+          <div style="font-size:13px;line-height:1.6;color:var(--allybi-text-primary);margin-bottom:8px;">
+            Section 9.3: Contractor agrees not to engage in competing activities within a <strong>50-mile radius</strong> for <strong>24 months</strong>.
+          </div>
+          <div style="font-size:11px;color:var(--allybi-text-muted);padding-top:8px;border-top:1px solid var(--allybi-border-subtle);">
+            Anderson_MSA_v4.pdf — p. 12, Section 9.3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- FEATURE 3: Send with confirmation -->
+<section class="ucl-feature">
+  <div class="allybi-container">
+    <div class="ucl-feature__grid allybi-reveal">
+      <div class="ucl-feature__text">
+        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f3_eyebrow">Confirmation before send</div>
+        <h3 data-i18n-key="legal.f3_title">Prepare the right send with confirmation.</h3>
+        <p data-i18n-key="legal.f3_desc">When you attach a file or prepare a response, Allybi shows you exactly which version you're sending — file name, date, and recipient — and asks for explicit confirmation.</p>
+      </div>
+      <div class="ucl-feature__visual">
+        <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="ucl-mock__body">
+          <div class="ucl-confirm">
+            <div class="ucl-confirm__label">Confirm before sending</div>
+            <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:12px;">
+              <strong style="color:var(--allybi-text-strongest)">To:</strong> opposing.counsel@firm.com<br>
+              <strong style="color:var(--allybi-text-strongest)">File:</strong> Anderson_MSA_v4_final.pdf<br>
+              <strong style="color:var(--allybi-text-strongest)">Version:</strong> v4 — Last modified Mar 18<br>
+              <strong style="color:var(--allybi-text-strongest)">Via:</strong> Outlook
+            </div>
+            <div class="ucl-confirm__row">
+              <span style="font-size:12px;color:var(--allybi-text-muted);">Cancel</span>
+              <span class="ucl-confirm__btn">Confirm & Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE 4: WhatsApp handoff -->
+<section class="ucl-feature">
+  <div class="allybi-container">
+    <div class="ucl-feature__grid ucl-feature__grid--reverse allybi-reveal">
+      <div class="ucl-feature__text">
+        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f4_eyebrow">WhatsApp handoff</div>
+        <h3 data-i18n-key="legal.f4_title">Prepare a WhatsApp message after Allybi drafts it.</h3>
+        <p data-i18n-key="legal.f4_desc">Allybi helps you prepare a message for the right contact — you review the content and recipient, then it opens WhatsApp with everything ready. No synced inbox. Full review before handoff.</p>
+      </div>
+      <div class="ucl-feature__visual">
+        <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="ucl-mock__body">
+          <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;">WhatsApp handoff</div>
+          <div style="font-size:13px;color:var(--allybi-text-secondary);padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;margin-bottom:12px;line-height:1.6;">
+            "Dr. Santos, attached is the latest version of the SPA with updated indemnity terms per our call. Please review Section 8.1."
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--allybi-trust-subtle);border-radius:8px;border:1px solid var(--allybi-trust-muted);">
+            <span style="font-size:12px;font-weight:500;color:var(--allybi-trust);">Contact: Dr. Santos</span>
+            <span style="font-size:11px;font-weight:600;padding:5px 12px;background:var(--allybi-trust);color:#fff;border-radius:6px;">Review & Open WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section class="ucl-security">
+  <div class="allybi-container">
+    <div class="ucl-security__header allybi-reveal">
+      <h2 data-i18n-key="legal.security_title">Security for sensitive legal work.</h2>
+      <p data-i18n-key="legal.security_sub">Your documents are protected from the moment they enter Allybi.</p>
+    </div>
+    <div class="ucl-security__grid allybi-reveal allybi-stagger">
+      <div class="ucl-security__point">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div><strong data-i18n-key="legal.sec1_title">Encrypted</strong><span data-i18n-key="legal.sec1_desc">All data encrypted in transit and at rest.</span></div>
+      </div>
+      <div class="ucl-security__point">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div><strong data-i18n-key="legal.sec2_title">No model training</strong><span data-i18n-key="legal.sec2_desc">Documents never train AI models. Guaranteed.</span></div>
+      </div>
+      <div class="ucl-security__point">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div><strong data-i18n-key="legal.sec3_title">Isolated workspaces</strong><span data-i18n-key="legal.sec3_desc">Each matter is a sealed environment.</span></div>
+      </div>
+      <div class="ucl-security__point">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div><strong data-i18n-key="legal.sec4_title">Explicit confirmation</strong><span data-i18n-key="legal.sec4_desc">Nothing leaves without your review and approval.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ucl-cta">
+  <div class="allybi-container allybi-reveal">
+    <h2 data-i18n-key="legal.cta_title">See what clarity looks like for your practice.</h2>
+    <p data-i18n-key="legal.cta_sub">Bring your contracts, drafts, and matter files into one private workspace.</p>
+    <a href="request-demo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="nav.book_demo">Book demo</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline" data-i18n-key="footer.tagline">Private AI workspace for sensitive document work.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4><div class="footer-col-links"><a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="footer.security">Security</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4><div class="footer-col-links"><a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a><a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a><a href="use-case-business.html" data-i18n-key="footer.business">For operations</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4><div class="footer-col-links"><a href="faq.html" data-i18n-key="footer.faq">FAQ</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a><a href="about.html" data-i18n-key="footer.about">About</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4><div class="footer-col-links"><a href="tos.html">Terms of Service</a><a href="terms.html">Acceptable Use</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a><a href="cookies.html">Cookies</a><a href="integration-data-use.html">Integrations & Data Use</a><a href="data-deletion.html">Data Deletion</a></div></div>
+    </div>
+    <div class="footer-mobile-links">
+      <a href="how-it-works.html">How it works</a><a href="use-case-legal.html">For lawyers</a><a href="security-overview.html">Security</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="request-demo.html">Book demo</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Portugues (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Espanol</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
 </body>
 </html>

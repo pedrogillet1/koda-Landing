@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Allybi Components
-   Reusable UI components for the Allybi marketing site.
+   Allybi Components v2.0
+   Premium reusable UI components.
    Requires: allybi-tokens.css, allybi-base.css
    ========================================================================== */
 
@@ -13,10 +13,10 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 50px;
+  height: 48px;
   padding: 0 28px;
   font-family: var(--allybi-font);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: var(--allybi-weight-semibold);
   line-height: 1;
   text-decoration: none;
@@ -31,7 +31,15 @@
     transform var(--allybi-duration-hover) var(--allybi-ease);
   white-space: nowrap;
   user-select: none;
-  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.allybi-btn--lg {
+  height: 52px;
+  padding: 0 32px;
+  font-size: 15px;
+  border-radius: 14px;
 }
 
 @media (max-width: 768px) {
@@ -39,6 +47,10 @@
     height: 46px;
     padding: 0 24px;
     font-size: 14px;
+  }
+  .allybi-btn--lg {
+    height: 48px;
+    padding: 0 28px;
   }
 }
 
@@ -51,11 +63,13 @@
 .allybi-btn--primary:hover {
   background-color: #1E2128;
   box-shadow: var(--allybi-shadow-md);
+  transform: translateY(-1px);
 }
 
 .allybi-btn--primary:active {
   background-color: var(--allybi-text-strongest);
   box-shadow: none;
+  transform: translateY(0);
 }
 
 /* Secondary */
@@ -67,10 +81,13 @@
 
 .allybi-btn--secondary:hover {
   background-color: var(--allybi-bg-alt-1);
+  border-color: rgba(16, 24, 40, 0.2);
+  transform: translateY(-1px);
 }
 
 .allybi-btn--secondary:active {
   background-color: var(--allybi-bg-alt-2);
+  transform: translateY(0);
 }
 
 /* Ghost */
@@ -82,69 +99,7 @@
 
 .allybi-btn--ghost:hover {
   color: var(--allybi-text-strongest);
-}
-
-.allybi-btn--ghost:active {
-  color: var(--allybi-text-primary);
-}
-
-/* ── Dark section button overrides ── */
-/* Use on any dark-bg parent: buttons auto-invert */
-[style*="--allybi-bg-dark"],
-[class*="final-cta"],
-[class*="dark-section"] {
-  --_btn-primary-bg: #FFFFFF;
-  --_btn-primary-color: var(--allybi-text-strongest);
-  --_btn-secondary-border: rgba(255,255,255,0.3);
-  --_btn-secondary-color: #FFFFFF;
-  --_btn-secondary-hover-bg: rgba(255,255,255,0.1);
-}
-
-[class*="final-cta"] .allybi-btn--primary,
-.dark-section .allybi-btn--primary {
-  background-color: #FFFFFF;
-  color: var(--allybi-text-strongest);
-}
-
-[class*="final-cta"] .allybi-btn--primary:hover,
-.dark-section .allybi-btn--primary:hover {
-  background-color: #F0F0F0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-[class*="final-cta"] .allybi-btn--secondary,
-.dark-section .allybi-btn--secondary {
-  background-color: transparent;
-  color: #FFFFFF;
-  border-color: rgba(255,255,255,0.3);
-}
-
-[class*="final-cta"] .allybi-btn--secondary:hover,
-.dark-section .allybi-btn--secondary:hover {
-  background-color: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.5);
-}
-
-/* ── Inverse button variants (for dark backgrounds) ── */
-.allybi-btn--primary-inverse {
-  background-color: #FFFFFF;
-  color: var(--allybi-text-strongest);
-}
-
-.allybi-btn--primary-inverse:hover {
-  background-color: #F0F0F0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.allybi-btn--secondary-inverse {
-  background-color: transparent;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.allybi-btn--secondary-inverse:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--allybi-bg-alt-1);
 }
 
 /* Accent */
@@ -155,12 +110,57 @@
 
 .allybi-btn--accent:hover {
   background-color: var(--allybi-accent-hover);
-  box-shadow: var(--allybi-shadow-md);
+  box-shadow: var(--allybi-shadow-glow-accent);
+  transform: translateY(-1px);
 }
 
-.allybi-btn--accent:active {
-  background-color: var(--allybi-accent-hover);
-  box-shadow: none;
+/* Dark section inverse variants */
+.allybi-btn--primary-inverse {
+  background-color: #FFFFFF;
+  color: var(--allybi-text-strongest);
+}
+
+.allybi-btn--primary-inverse:hover {
+  background-color: #F0F0F0;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.allybi-btn--secondary-inverse {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.allybi-btn--secondary-inverse:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Dark section auto-overrides */
+[class*="dark-section"] .allybi-btn--primary,
+.s-cta .allybi-btn--primary {
+  background-color: #FFFFFF;
+  color: var(--allybi-text-strongest);
+}
+
+[class*="dark-section"] .allybi-btn--primary:hover,
+.s-cta .allybi-btn--primary:hover {
+  background-color: #F0F0F0;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+[class*="dark-section"] .allybi-btn--secondary,
+.s-cta .allybi-btn--secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[class*="dark-section"] .allybi-btn--secondary:hover,
+.s-cta .allybi-btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 /* ==========================================================================
@@ -179,30 +179,35 @@
 }
 
 .allybi-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--allybi-shadow-card-hover);
   border-color: var(--allybi-border-strong);
 }
 
-/* Flat — no hover lift */
 .allybi-card--flat {
   transition: none;
 }
-
 .allybi-card--flat:hover {
   transform: none;
   box-shadow: none;
 }
 
-/* Dark variant */
+.allybi-card--glass {
+  background: var(--allybi-glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-color: var(--allybi-glass-border);
+}
+
 .allybi-card--dark {
-  background-color: var(--allybi-bg-dark);
-  border-color: rgba(255, 255, 255, 0.08);
+  background-color: var(--allybi-bg-dark-surface);
+  border-color: rgba(255, 255, 255, 0.06);
   color: var(--allybi-text-inverse);
 }
 
 .allybi-card--dark:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================
@@ -234,7 +239,9 @@
   background-color: var(--allybi-bg-surface);
   border: 1px solid var(--allybi-border-default);
   border-radius: var(--allybi-radius-input);
-  transition: border-color var(--allybi-duration-hover) var(--allybi-ease);
+  transition:
+    border-color var(--allybi-duration-hover) var(--allybi-ease),
+    box-shadow var(--allybi-duration-hover) var(--allybi-ease);
   appearance: none;
 }
 
@@ -246,9 +253,9 @@
 .allybi-input:focus,
 .allybi-textarea:focus,
 .allybi-select:focus {
-  outline: 2px solid var(--allybi-border-focus);
-  outline-offset: -1px;
-  border-color: var(--allybi-border-focus);
+  outline: none;
+  border-color: var(--allybi-accent);
+  box-shadow: 0 0 0 3px var(--allybi-accent-subtle);
 }
 
 .allybi-textarea {
@@ -266,7 +273,7 @@
 }
 
 /* ==========================================================================
-   Chips
+   Chips / Pills
    ========================================================================== */
 
 .allybi-chip {
@@ -275,10 +282,10 @@
   gap: 6px;
   padding: 6px 14px;
   font-family: var(--allybi-font);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: var(--allybi-weight-medium);
   line-height: 1;
-  border-radius: 100px;
+  border-radius: var(--allybi-radius-full);
   background-color: var(--allybi-bg-alt-1);
   color: var(--allybi-text-secondary);
   white-space: nowrap;
@@ -286,12 +293,43 @@
 
 .allybi-chip--trust {
   background-color: var(--allybi-trust-subtle);
-  color: var(--allybi-trust-muted);
+  color: var(--allybi-trust);
 }
 
 .allybi-chip--accent {
   background-color: var(--allybi-accent-subtle);
   color: var(--allybi-accent);
+}
+
+.allybi-chip--coming {
+  background-color: var(--allybi-coming-subtle);
+  color: var(--allybi-coming);
+}
+
+/* Status pill */
+.allybi-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.allybi-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.allybi-status--live {
+  color: var(--allybi-trust);
+}
+
+.allybi-status--coming {
+  color: var(--allybi-coming);
 }
 
 /* ==========================================================================
@@ -309,7 +347,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: var(--allybi-font);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: var(--allybi-weight-semibold);
   text-align: left;
   cursor: pointer;
@@ -344,14 +382,10 @@
   transition: max-height var(--allybi-duration-accordion) var(--allybi-ease);
 }
 
-.allybi-accordion__content.is-open {
-  /* max-height set via JS to match content height */
-}
-
 .allybi-accordion__body {
   padding: 0 0 24px;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.65;
   color: var(--allybi-text-secondary);
   max-width: var(--allybi-max-reading);
 }
@@ -367,11 +401,21 @@
   font-weight: var(--allybi-weight-semibold);
   letter-spacing: var(--allybi-tracking-wide);
   text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: var(--allybi-radius-xs);
   background-color: var(--allybi-accent-subtle);
   color: var(--allybi-accent);
-  line-height: 1.4;
+  line-height: 1.3;
+}
+
+.allybi-badge--trust {
+  background-color: var(--allybi-trust-subtle);
+  color: var(--allybi-trust);
+}
+
+.allybi-badge--coming {
+  background-color: var(--allybi-coming-subtle);
+  color: var(--allybi-coming);
 }
 
 /* ==========================================================================
@@ -418,12 +462,12 @@
 
 .allybi-section-header {
   text-align: center;
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto var(--allybi-space-16);
 }
 
 .allybi-section-header .allybi-eyebrow {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .allybi-section-header .allybi-h2 {
@@ -456,36 +500,121 @@
   gap: 24px;
 }
 
-/* 2-col at tablet for 4-col grids */
+.allybi-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
 @media (max-width: 1024px) {
   .allybi-grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .allybi-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-/* 2-col at tablet for 2/3-col grids */
 @media (max-width: 768px) {
   .allybi-grid-3 {
     grid-template-columns: 1fr;
     gap: 16px;
   }
   .allybi-grid-2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 16px;
   }
-  .allybi-grid-4 {
+  .allybi-grid-6 {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
 
-/* Single column at small mobile */
 @media (max-width: 480px) {
   .allybi-grid-2,
   .allybi-grid-3,
-  .allybi-grid-4 {
+  .allybi-grid-4,
+  .allybi-grid-6 {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+}
+
+/* ==========================================================================
+   Dark CTA block (reusable across pages)
+   ========================================================================== */
+
+.s-cta {
+  padding: clamp(80px, 12vw, 160px) 0;
+  background: var(--allybi-bg-dark);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.s-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.s-cta__inner {
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.s-cta h2,
+.s-cta__inner h2 {
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--allybi-text-inverse);
+  margin-bottom: 14px;
+}
+
+.s-cta p,
+.s-cta__inner p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 36px;
+}
+
+.s-cta__ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.s-cta .allybi-btn--primary,
+.s-cta__ctas .allybi-btn--primary {
+  background-color: #FFFFFF;
+  color: var(--allybi-text-strongest);
+}
+
+.s-cta .allybi-btn--primary:hover,
+.s-cta__ctas .allybi-btn--primary:hover {
+  background-color: #F0F0F0;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 600px) {
+  .s-cta__ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .s-cta__ctas .allybi-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
 }
 
@@ -503,6 +632,6 @@
   .allybi-input,
   .allybi-textarea,
   .allybi-select {
-    font-size: 16px; /* iOS won't zoom if >= 16px */
+    font-size: 16px;
   }
 }

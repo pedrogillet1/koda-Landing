@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+
+  	<!-- Favicon -->
+  	<link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+  	<link rel="apple-touch-icon" href="assets/images/allybi-logo.svg">
+
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
+  	<link rel="stylesheet" href="./allybi-tokens.css">
+  	<link rel="stylesheet" href="./allybi-base.css">
+  	<link rel="stylesheet" href="./allybi-components.css">
+  	<link rel="stylesheet" href="./allybi-header.css">
+  	<link rel="stylesheet" href="./allybi-footer.css">
+  	<link rel="stylesheet" href="./design-system.css" />
+  	<link rel="stylesheet" href="./light-theme-overrides.css" />
+  	<link rel="stylesheet" href="./koda-design-system-final.css" />
+  	<link rel="stylesheet" href="./terms.css?v=1733620000" />
+
+  	<title>Privacy Choices - Allybi</title>
+</head>
+<body>
+  <header id="allybi-header" class="allybi-header">
+    <div class="allybi-header-inner">
+      <a href="/" class="allybi-logo">
+        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="28">
+      </a>
+      <nav class="allybi-nav desktop-only">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+          <div class="nav-dropdown-menu">
+            <a href="/" data-i18n-key="nav.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+          <div class="nav-dropdown-menu">
+            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+          </div>
+        </div>
+        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
+        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+          <div class="nav-dropdown-menu">
+            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      </nav>
+      <div class="header-ctas desktop-only">
+        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Request demo</a>
+      </div>
+      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="allybi-mobile-menu" class="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="mobile-dropdown-items">
+          <a href="/" data-i18n-key="nav.overview">Overview</a>
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
+        <div class="mobile-dropdown-items">
+          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+        </div>
+      </div>
+      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
+      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
+        <div class="mobile-dropdown-items">
+          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
+          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
+          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    </nav>
+    <div class="mobile-ctas">
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Request demo</a>
+      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    </div>
+    <div class="mobile-language-selector">
+      <div class="language-selector" id="mobile-language-selector">
+        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-label">English</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="language-menu hidden" role="listbox">
+          <li role="option" data-lang="en">English</li>
+          <li role="option" data-lang="pt">Portugues (BR)</li>
+          <li role="option" data-lang="es">Espanol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="terms-page">
+      <div class="terms-content-section-wrapper">
+        <!-- Terms Content Section -->
+        <section class="terms-content-section">
+      			<div class="decorative-background">
+        				<div class="circle-large"></div>
+        				<div class="circle-small"></div>
+        				<div class="line horizontal-1"></div>
+        				<div class="line horizontal-2"></div>
+        				<div class="line horizontal-3"></div>
+        				<div class="line vertical-1"></div>
+        				<div class="line vertical-2"></div>
+      			</div>
+
+      			<!-- Terms Header -->
+      			<div class="terms-header">
+        				<h1>Privacy Choices</h1>
+        				<p class="last-updated">Effective Date: April 30, 2026</p>
+        				<p class="intro">Your privacy rights and how to exercise them.</p>
+      			</div>
+
+      			<!-- Main Content Area -->
+      			<div class="terms-main">
+        				<!-- Left Column: Content -->
+        				<div class="terms-content">
+
+          					<!-- Section 1 -->
+          					<div class="content-section">
+            						<h2 id="section-1">1. Cookie Preferences</h2>
+            						<p>Manage your cookie preferences through our cookie preference center. You can accept or reject non-essential cookies at any time.</p>
+            						<p><a href="cookies.html">View Cookie Policy</a></p>
+          					</div>
+
+          					<!-- Section 2 -->
+          					<div class="content-section">
+            						<h2 id="section-2">2. Analytics Opt-Out</h2>
+            						<p>You can disable analytics cookies through our cookie preference center. When disabled, Allybi will not collect analytics data about your usage of the Service.</p>
+          					</div>
+
+          					<!-- Section 3 -->
+          					<div class="content-section">
+            						<h2 id="section-3">3. Marketing Unsubscribe</h2>
+            						<p>Use the unsubscribe link included at the bottom of any marketing email to opt out of marketing communications. You will continue to receive transactional and account-related emails.</p>
+          					</div>
+
+          					<!-- Section 4 -->
+          					<div class="content-section">
+            						<h2 id="section-4">4. Data Access Request</h2>
+            						<p>You have the right to request a copy of the personal data we hold about you. To submit a data access request, email <a href="mailto:info@allybi.co">info@allybi.co</a>.</p>
+          					</div>
+
+          					<!-- Section 5 -->
+          					<div class="content-section">
+            						<h2 id="section-5">5. Correction Request</h2>
+            						<p>If your personal data is inaccurate or incomplete, you can update it in your account settings or email <a href="mailto:info@allybi.co">info@allybi.co</a> to request a correction.</p>
+          					</div>
+
+          					<!-- Section 6 -->
+          					<div class="content-section">
+            						<h2 id="section-6">6. Deletion Request</h2>
+            						<p>You have the right to request deletion of your personal data. Email <a href="mailto:info@allybi.co">info@allybi.co</a> or visit our <a href="data-deletion.html">Data Deletion</a> page for detailed instructions.</p>
+          					</div>
+
+          					<!-- Section 7 -->
+          					<div class="content-section">
+            						<h2 id="section-7">7. Objection / Restriction</h2>
+            						<p>You may object to or request restriction of certain processing of your personal data. To exercise this right, email <a href="mailto:info@allybi.co">info@allybi.co</a> with details about which processing you wish to object to or restrict.</p>
+          					</div>
+
+          					<!-- Section 8 -->
+          					<div class="content-section">
+            						<h2 id="section-8">8. Integration Disconnect</h2>
+            						<p>You can disconnect any third-party integration at any time. Go to Settings &gt; Integrations and click Disconnect next to the service you wish to remove. See our <a href="integration-data-use.html">Integrations and Data Use</a> page for more details.</p>
+          					</div>
+
+          					<!-- Section 9 -->
+          					<div class="content-section">
+            						<h2 id="section-9">9. Account Deletion</h2>
+            						<p>You can request complete deletion of your Allybi account and all associated data. Email <a href="mailto:info@allybi.co?subject=Data%20deletion%20request">info@allybi.co</a> with the subject &ldquo;Data deletion request.&rdquo;</p>
+          					</div>
+
+          					<!-- Section 10 -->
+          					<div class="content-section">
+            						<h2 id="section-10">10. Contact</h2>
+            						<p>For any privacy-related questions or to exercise your rights, contact us at <a href="mailto:info@allybi.co">info@allybi.co</a>.</p>
+          					</div>
+
+        				</div>
+
+        				<!-- Right Column: Table of Contents -->
+        				<div class="terms-toc">
+          					<h3>Table of Contents</h3>
+          					<a href="#section-1">1. Cookie Preferences</a>
+          					<a href="#section-2">2. Analytics Opt-Out</a>
+          					<a href="#section-3">3. Marketing Unsubscribe</a>
+          					<a href="#section-4">4. Data Access Request</a>
+          					<a href="#section-5">5. Correction Request</a>
+          					<a href="#section-6">6. Deletion Request</a>
+          					<a href="#section-7">7. Objection / Restriction</a>
+          					<a href="#section-8">8. Integration Disconnect</a>
+          					<a href="#section-9">9. Account Deletion</a>
+          					<a href="#section-10">10. Contact</a>
+        				</div>
+      			</div>
+    		</section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="allybi-footer">
+    <div class="allybi-footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-brand-logo">
+          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
+        </a>
+        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+          <div class="footer-col-links">
+            <a href="/" data-i18n-key="footer.overview">Overview</a>
+            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
+          <div class="footer-col-links">
+            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
+            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
+            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
+          <div class="footer-col-links">
+            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+          <div class="footer-col-links">
+            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
+            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
+            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
+          <div class="footer-col-links">
+            <a href="about.html" data-i18n-key="footer.about">About</a>
+            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+          <div class="footer-col-links">
+            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
+            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
+            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
+            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
+            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Allybi. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          <div class="language-selector" id="footer-language-selector">
+            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+              <span class="lang-label">English</span>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="language-menu hidden" role="listbox">
+              <li role="option" data-lang="en">English</li>
+              <li role="option" data-lang="pt">Portugues (BR)</li>
+              <li role="option" data-lang="es">Espanol</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="language-switcher.js"></script>
+  <script src="allybi-header.js"></script>
+</body>
+</html>

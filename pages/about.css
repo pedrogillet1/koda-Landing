@@ -1,6 +1,5 @@
 /* ==========================================================================
    About Page Styles
-   Requires: allybi-tokens.css, allybi-base.css, allybi-components.css
    ========================================================================== */
 
 /* ---------- Hero ---------- */
@@ -26,29 +25,37 @@
 .about-hero .allybi-body-lg {
   max-width: 580px;
   margin: 0 auto;
+  color: var(--allybi-text-secondary);
 }
 
-/* ---------- Narrative / Why Allybi Exists ---------- */
-.about-narrative .allybi-h2 {
+/* ---------- Narrative sections ---------- */
+.about-narrative .allybi-h2,
+.about-optimize .allybi-h2,
+.about-never .allybi-h2,
+.about-work .allybi-h2 {
   margin-bottom: var(--allybi-space-8);
 }
 
-.about-narrative .allybi-body {
+.about-narrative .allybi-body,
+.about-optimize .allybi-body,
+.about-never .allybi-body,
+.about-work .allybi-body {
   margin-bottom: var(--allybi-space-6);
+  color: var(--allybi-text-secondary);
+  line-height: 1.75;
 }
 
-.about-narrative .allybi-body:last-child {
+.about-narrative .allybi-body:last-of-type,
+.about-optimize .allybi-body:last-of-type,
+.about-never .allybi-body:last-of-type,
+.about-work .allybi-body:last-of-type {
   margin-bottom: 0;
 }
 
-/* ---------- Conviction Cards ---------- */
-.about-convictions .allybi-card .allybi-h3 {
-  margin-bottom: var(--allybi-space-3);
-}
-
-/* ---------- Product Principles ---------- */
-.about-principles-grid {
+/* ---------- Principles grid ---------- */
+.about-principles-grid.allybi-grid-3 {
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .about-principle-card {
@@ -62,8 +69,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--allybi-bg-alt-1);
-  border-radius: var(--allybi-radius-sm);
+  background-color: var(--allybi-bg-alt-2);
+  border-radius: var(--allybi-radius-md);
   margin-bottom: var(--allybi-space-5);
 }
 
@@ -71,109 +78,35 @@
   margin-bottom: var(--allybi-space-3);
 }
 
-/* 6 cards: 3 columns x 2 rows — no special positioning needed */
-
-/* ---------- Privacy / Grounded Outputs ---------- */
-.about-grounded .allybi-h2 {
-  margin-bottom: var(--allybi-space-8);
-}
-
-.about-grounded .allybi-body {
-  margin-bottom: var(--allybi-space-6);
-}
-
+/* ---------- CTA buttons ---------- */
 .about-grounded-cta {
   margin-top: var(--allybi-space-10);
-}
-
-/* ---------- What Allybi Is Building ---------- */
-.about-building .allybi-h2 {
-  margin-bottom: var(--allybi-space-8);
-}
-
-.about-building .allybi-body {
-  margin-bottom: var(--allybi-space-6);
-}
-
-.about-building .allybi-body:last-child {
-  margin-bottom: 0;
-}
-
-/* ---------- How We Build ---------- */
-.about-build-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--allybi-space-6);
-}
-
-.about-build-col {
-  padding-top: var(--allybi-space-6);
-  border-top: 3px solid var(--allybi-text-strongest);
-}
-
-.about-build-col .allybi-h3 {
-  margin-bottom: var(--allybi-space-3);
-}
-
-/* ---------- Final CTA ---------- */
-.about-final-cta {
-  text-align: center;
-}
-
-.about-final-cta-inner {
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.about-final-cta .allybi-h2 {
-  margin-bottom: var(--allybi-space-10);
-}
-
-.about-cta-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: var(--allybi-space-4);
   flex-wrap: wrap;
 }
 
-/* Make secondary and ghost buttons visible in this section */
-.about-cta-buttons .allybi-btn--secondary {
-  border: 1.5px solid var(--allybi-text-strongest);
-  color: var(--allybi-text-strongest);
-}
-
-.about-cta-buttons .allybi-btn--ghost {
-  border: 1.5px solid var(--allybi-border-strong);
-  color: var(--allybi-text-primary);
-}
-
-/* ---------- Mobile ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .about-hero {
     padding-top: 140px;
   }
 
-  .about-principles-grid {
+  .about-principles-grid.allybi-grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* 6 cards flow naturally in 2-col on tablet */
-
-  .about-build-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-cta-buttons {
+  .about-grounded-cta {
     flex-direction: column;
+    align-items: stretch;
   }
 
-  .about-cta-buttons .allybi-btn {
-    width: 100%;
+  .about-grounded-cta .allybi-btn {
+    text-align: center;
   }
 }
 
-/* ---------- Phone ---------- */
 @media (max-width: 600px) {
   .about-hero {
     padding-top: 110px;
@@ -183,55 +116,23 @@
     font-size: clamp(28px, 7vw, 38px);
   }
 
+  .about-principles-grid.allybi-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
   .about-narrative .allybi-body,
-  .about-grounded .allybi-body,
-  .about-building .allybi-body {
+  .about-optimize .allybi-body,
+  .about-never .allybi-body,
+  .about-work .allybi-body {
     font-size: 16px;
-    max-width: 100%;
-  }
-
-  .about-principles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Conviction cards single column */
-  .about-convictions .allybi-grid-3,
-  .about-convictions .allybi-grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .about-cta-buttons .allybi-btn {
-    min-height: 44px;
-  }
-
-  .about-build-col {
-    padding-top: var(--allybi-space-5);
-  }
-
-  /* Readability: constrain paragraph width */
-  .about-narrative,
-  .about-grounded,
-  .about-building {
-    max-width: 100%;
-  }
-
-  .about-narrative .allybi-body,
-  .about-grounded .allybi-body,
-  .about-building .allybi-body {
     line-height: 1.7;
   }
-}
 
-/* ---------- Tablet readability ---------- */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .about-narrative .allybi-body,
-  .about-grounded .allybi-body,
-  .about-building .allybi-body {
-    max-width: 680px;
+  .about-grounded-cta .allybi-btn {
+    min-height: 44px;
   }
 }
 
-/* ---------- Small phone ---------- */
 @media (max-width: 390px) {
   .about-hero {
     padding-top: 100px;
@@ -239,9 +140,5 @@
 
   .about-principle-card {
     padding: var(--allybi-space-5);
-  }
-
-  .about-build-grid {
-    gap: var(--allybi-space-5);
   }
 }

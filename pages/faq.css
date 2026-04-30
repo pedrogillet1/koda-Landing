@@ -1,0 +1,157 @@
+/* ==========================================================================
+   FAQ Page Styles
+   ========================================================================== */
+
+/* ---------- Hero ---------- */
+.faq-hero {
+  text-align: center;
+  padding-top: calc(var(--allybi-section-py) + 40px);
+  padding-bottom: var(--allybi-space-10);
+}
+
+.faq-hero__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.faq-hero .allybi-h1 {
+  margin-bottom: var(--allybi-space-6);
+}
+
+.faq-hero .allybi-body-lg {
+  color: var(--allybi-text-secondary);
+}
+
+/* ---------- Category Tabs ---------- */
+.faq-tabs-section {
+  position: sticky;
+  top: 64px;
+  z-index: 10;
+  background-color: var(--allybi-bg);
+  border-bottom: 1px solid var(--allybi-border-default);
+  padding: 0;
+}
+
+.faq-tabs {
+  display: flex;
+  gap: var(--allybi-space-1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: var(--allybi-space-3) 0;
+}
+
+.faq-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.faq-tab {
+  flex-shrink: 0;
+  padding: var(--allybi-space-2) var(--allybi-space-5);
+  font-size: 14px;
+  font-weight: var(--allybi-weight-medium);
+  color: var(--allybi-text-secondary);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.faq-tab:hover {
+  color: var(--allybi-text-strongest);
+  background-color: var(--allybi-bg-alt-1);
+}
+
+.faq-tab.is-active {
+  color: var(--allybi-accent);
+  background-color: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.15);
+  font-weight: var(--allybi-weight-semibold);
+}
+
+/* ---------- FAQ Panels ---------- */
+.faq-panels {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-panel {
+  display: none;
+}
+
+.faq-panel.is-active {
+  display: block;
+}
+
+/* ---------- Accordion overrides for FAQ ---------- */
+.faq-content .allybi-accordion {
+  border: none;
+}
+
+.faq-content .allybi-accordion__item {
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.faq-content .allybi-accordion__item:last-child {
+  border-bottom: none;
+}
+
+.faq-content .allybi-accordion__trigger {
+  padding: var(--allybi-space-5) 0;
+  font-size: 16px;
+  font-weight: var(--allybi-weight-medium);
+}
+
+.faq-content .allybi-accordion__content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--allybi-text-secondary);
+  padding-bottom: var(--allybi-space-5);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .faq-hero {
+    padding-top: calc(var(--allybi-section-py-mobile) + 32px);
+    padding-bottom: var(--allybi-space-8);
+  }
+
+  .faq-tabs-section {
+    top: 56px;
+  }
+
+  .faq-tabs {
+    padding: var(--allybi-space-2) 0;
+    gap: var(--allybi-space-1);
+  }
+
+  .faq-tab {
+    padding: var(--allybi-space-2) var(--allybi-space-4);
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-content .allybi-accordion__trigger {
+    font-size: 15px;
+    padding: var(--allybi-space-4) 0;
+    min-height: 44px;
+  }
+
+  .faq-content .allybi-accordion__content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .faq-hero__inner {
+    max-width: 100%;
+  }
+
+  .faq-tab {
+    padding: var(--allybi-space-2) var(--allybi-space-3);
+    font-size: 12px;
+  }
+}

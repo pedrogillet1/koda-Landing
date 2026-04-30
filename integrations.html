@@ -3,455 +3,603 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0D0F12">
-
-  <!-- Favicon -->
+  <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
-
-  <!-- SEO -->
-  <title>Integrations — Connect Gmail, Outlook, and Slack with Allybi</title>
-  <meta name="description" content="Search emails, Slack messages, and documents in one workspace. Connect and disconnect anytime with full control.">
-
-  <!-- Open Graph -->
+  <title>Integrations — Allybi</title>
+  <meta name="description" content="One workspace for files, inboxes, cloud folders, and message handoff. Connect Outlook, OneDrive, SharePoint, and WhatsApp to Allybi.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Integrations — Connect Gmail, Outlook, and Slack with Allybi">
-  <meta property="og:description" content="Search emails, Slack messages, and documents in one workspace. Connect and disconnect anytime with full control.">
+  <meta property="og:title" content="Integrations — Allybi">
+  <meta property="og:description" content="Bring the right context into Allybi, then prepare the right action from the same place.">
   <meta property="og:url" content="https://allybi.co/integrations.html">
   <meta property="og:site_name" content="Allybi">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Integrations — Connect Gmail, Outlook, and Slack with Allybi">
-  <meta name="twitter:description" content="Search emails, Slack messages, and documents in one workspace. Connect and disconnect anytime with full control.">
-
-  <!-- Fonts -->
+  <meta name="twitter:title" content="Integrations — Allybi">
+  <meta name="twitter:description" content="One workspace for files, inboxes, cloud folders, and message handoff.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Design System -->
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
-
-  <!-- Page-specific CSS -->
   <link rel="stylesheet" href="pages/integrations.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
 </head>
 <body>
 
-  <!-- ================================================================
-       HEADER
-       ================================================================ -->
-  <header id="allybi-header" class="allybi-header">
-    <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
-      <nav class="allybi-nav desktop-only">
-        <a href="how-it-works.html" class="nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="use-case-legal.html" class="nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
-        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="/#faq" class="nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      </nav>
-      <div class="header-ctas desktop-only">
-        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+        </div>
       </div>
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- ================================================================
-       MOBILE MENU
-       ================================================================ -->
-  <div id="allybi-mobile-menu" class="mobile-menu">
-    <nav class="mobile-menu-nav">
-      <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-      <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
-      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="/#faq" class="mobile-nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-      <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
-    <div class="mobile-ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <div class="header-ctas desktop-only">
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo" data-magnetic="0.2">Book demo</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+      <div class="mobile-dropdown-items">
+        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+      </div>
+    </div>
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+      <div class="mobile-dropdown-items">
+        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+        <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ================================================================
+     HERO
+     ================================================================ -->
+<section class="integ-hero allybi-section">
+  <div class="allybi-container">
+    <div class="integ-hero__inner allybi-reveal">
+      <span class="allybi-chip allybi-chip--accent" data-i18n-key="integ.hero.eyebrow">Integrations</span>
+      <h1 class="allybi-h1" data-i18n-key="integ.hero.title">One workspace for files, inboxes, cloud folders, and message handoff.</h1>
+      <p class="allybi-body-lg" data-i18n-key="integ.hero.sub">Bring the right context into Allybi, then prepare the right action from the same place.</p>
+      <div class="integ-hero__cta">
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="integ.hero.cta" data-magnetic="0.25">Book demo</a>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- ================================================================
-       MAIN CONTENT
-       ================================================================ -->
-  <main>
+<!-- ================================================================
+     SECTION A — AVAILABLE NOW
+     ================================================================ -->
+<section class="integ-live allybi-section" style="background-color: var(--allybi-bg-alt-1);">
+  <div class="allybi-container">
+    <div class="allybi-section-header allybi-reveal">
+      <span class="allybi-chip allybi-chip--trust" data-i18n-key="integ.live.eyebrow">Available now</span>
+      <h2 class="allybi-h2" data-i18n-key="integ.live.title">Connected and ready to use</h2>
+    </div>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         HERO
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="integ-hero allybi-section">
-      <div class="allybi-container">
-        <div class="integ-hero__inner">
-          <span class="allybi-eyebrow allybi-chip allybi-chip--accent" data-i18n-key="integrations.hero.eyebrow">Integrations</span>
-          <h1 class="allybi-h1" data-i18n-key="integrations.hero.title">Work where your files and conversations already live.</h1>
-          <p class="allybi-body-lg" data-i18n-key="integrations.hero.support">Connect your email and messaging tools to search, draft, and send — with explicit confirmation before anything goes out.</p>
+    <div class="integ-live__grid allybi-stagger">
+
+      <!-- Outlook -->
+      <div class="integ-premium-card allybi-reveal" data-accent="#0078D4">
+        <div class="integ-premium-card__header">
+          <div class="integ-premium-card__icon">
+            <img src="assets/images/outlook-icon.svg" alt="Outlook" width="48" height="48">
+          </div>
+          <div>
+            <h3 class="integ-premium-card__title" data-i18n-key="integ.outlook.title">Outlook</h3>
+            <span class="allybi-status allybi-status--live" data-i18n-key="integ.outlook.status">Live</span>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         INTEGRATION CARDS
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="integ-cards allybi-section" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-container">
-        <div class="allybi-grid-2">
-
-          <!-- Gmail -->
-          <div class="allybi-card integ-card">
-            <div class="integ-card__icon integ-card__icon--gmail">
-              <img src="assets/images/gmail-icon.svg" alt="Gmail" width="56" height="56">
-            </div>
-            <h3 class="integ-card__title" data-i18n-key="integrations.gmail.title">Gmail</h3>
-            <p class="integ-card__desc" data-i18n-key="integrations.gmail.desc">Search across your Gmail inbox and draft replies with the right file attached. Connect with OAuth, disconnect anytime.</p>
-          </div>
-
-          <!-- Outlook -->
-          <div class="allybi-card integ-card">
-            <div class="integ-card__icon integ-card__icon--outlook">
-              <img src="assets/images/outlook-icon.svg" alt="Outlook" width="56" height="56">
-            </div>
-            <h3 class="integ-card__title" data-i18n-key="integrations.outlook.title">Outlook</h3>
-            <p class="integ-card__desc" data-i18n-key="integrations.outlook.desc">Access Outlook emails and calendar. Search messages, find relevant context, draft responses — all from one workspace.</p>
-          </div>
-
-          <!-- Slack -->
-          <div class="allybi-card integ-card">
-            <div class="integ-card__icon integ-card__icon--slack">
-              <img src="assets/images/slack-icon.svg" alt="Slack" width="56" height="56">
-            </div>
-            <h3 class="integ-card__title" data-i18n-key="integrations.slack.title">Slack</h3>
-            <p class="integ-card__desc" data-i18n-key="integrations.slack.desc">Search Slack channels and threads. Find decisions, discussions, and shared files without leaving your workspace.</p>
-          </div>
-
-          <!-- Docs & Sheets -->
-          <div class="allybi-card integ-card">
-            <div class="integ-card__icon integ-card__icon--docs">
-              <img src="assets/images/docs-sheets-icon.svg" alt="Docs & Sheets" width="56" height="56">
-            </div>
-            <h3 class="integ-card__title" data-i18n-key="integrations.docs.title">Docs & Sheets</h3>
-            <p class="integ-card__desc" data-i18n-key="integrations.docs.desc">Edit .docx and .xlsx files directly in Allybi. Rewrite sections, update tables, create formulas — all with AI assistance.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         WORKFLOW EXAMPLES
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="integ-workflows allybi-section">
-      <div class="allybi-container">
-        <div class="allybi-section-header">
-          <h2 class="allybi-h2" data-i18n-key="integrations.workflows.title">Workflows that just work</h2>
-          <p class="allybi-body-lg" data-i18n-key="integrations.workflows.support">See how connected tools come together in real scenarios.</p>
-        </div>
-        <div class="allybi-grid-3">
-
-          <div class="allybi-card integ-workflow-card">
-            <span class="integ-workflow-number">01</span>
-            <h3 class="integ-workflow-title" data-i18n-key="integrations.workflow1.title">Find the latest file and draft a reply</h3>
-            <p class="integ-workflow-desc" data-i18n-key="integrations.workflow1.desc">A client emails asking for the updated proposal. Allybi finds the latest version, attaches it, and drafts a reply — you confirm before it sends.</p>
-          </div>
-
-          <div class="allybi-card integ-workflow-card">
-            <span class="integ-workflow-number">02</span>
-            <h3 class="integ-workflow-title" data-i18n-key="integrations.workflow2.title">Search a Slack thread and pull the right doc</h3>
-            <p class="integ-workflow-desc" data-i18n-key="integrations.workflow2.desc">Your team discussed pricing changes in Slack last week. Allybi searches the thread, finds the referenced spreadsheet, and opens it for review.</p>
-          </div>
-
-          <div class="allybi-card integ-workflow-card">
-            <span class="integ-workflow-number">03</span>
-            <h3 class="integ-workflow-title" data-i18n-key="integrations.workflow3.title">Edit a spreadsheet and send the update</h3>
-            <p class="integ-workflow-desc" data-i18n-key="integrations.workflow3.desc">Update quarterly numbers in a .xlsx file, then send the revised version to your manager. Allybi shows you exactly what will be sent before it goes.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         PERMISSIONS & CONTROL
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="integ-control allybi-section" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-container">
-        <div class="integ-control__inner">
-          <div class="integ-control__text">
-            <h2 class="allybi-h2" data-i18n-key="integrations.control.title">You stay in control.</h2>
-            <p class="allybi-body-lg" data-i18n-key="integrations.control.support">Every integration is designed with your privacy and control in mind.</p>
-          </div>
-          <div class="integ-control__points">
-            <div class="integ-control-point">
-              <div class="integ-control-point__icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div>
-                <h4 class="integ-control-point__title" data-i18n-key="integrations.control.point1.title">Connect and disconnect anytime</h4>
-                <p class="integ-control-point__desc" data-i18n-key="integrations.control.point1.desc">One click to connect, one click to disconnect. No lock-in, no friction.</p>
-              </div>
-            </div>
-            <div class="integ-control-point">
-              <div class="integ-control-point__icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div>
-                <h4 class="integ-control-point__title" data-i18n-key="integrations.control.point2.title">Permissioned access</h4>
-                <p class="integ-control-point__desc" data-i18n-key="integrations.control.point2.desc">OAuth scoped permissions mean Allybi only accesses what you authorize.</p>
-              </div>
-            </div>
-            <div class="integ-control-point">
-              <div class="integ-control-point__icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div>
-                <h4 class="integ-control-point__title" data-i18n-key="integrations.control.point3.title">Explicit confirmation</h4>
-                <p class="integ-control-point__desc" data-i18n-key="integrations.control.point3.desc">Nothing is sent without your review. You see and approve every outgoing message.</p>
-              </div>
-            </div>
-            <div class="integ-control-point">
-              <div class="integ-control-point__icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div>
-                <h4 class="integ-control-point__title" data-i18n-key="integrations.control.point4.title">No data retained after disconnect</h4>
-                <p class="integ-control-point__desc" data-i18n-key="integrations.control.point4.desc">Once you disconnect a service, Allybi no longer has access to that service's data.</p>
-              </div>
-            </div>
+        <ul class="integ-premium-card__features">
+          <li data-i18n-key="integ.outlook.f1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Search emails and attachments
+          </li>
+          <li data-i18n-key="integ.outlook.f2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Bring the right file into Ask
+          </li>
+          <li data-i18n-key="integ.outlook.f3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Prepare email responses with confirmation
+          </li>
+        </ul>
+        <div class="integ-premium-card__where">
+          <span class="allybi-meta" data-i18n-key="integ.outlook.where_label">Where:</span>
+          <div class="integ-premium-card__tags">
+            <span class="integ-tag" data-i18n-key="integ.outlook.t1">Ask</span>
+            <span class="integ-tag" data-i18n-key="integ.outlook.t2">Integrations</span>
+            <span class="integ-tag" data-i18n-key="integ.outlook.t3">Review-before-send</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ────────────────────────────────────────────────────────────────
-         FAQ
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="integ-faq allybi-section">
-      <div class="allybi-container">
-        <div class="allybi-section-header">
-          <h2 class="allybi-h2" data-i18n-key="integrations.faq.title">Integration FAQ</h2>
+      <!-- OneDrive -->
+      <div class="integ-premium-card allybi-reveal" data-accent="#0364B8">
+        <div class="integ-premium-card__header">
+          <div class="integ-premium-card__icon">
+            <!-- OneDrive icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.5 34h18.1a6.4 6.4 0 001.3-12.7 9.6 9.6 0 00-17.7-4.1A7.7 7.7 0 0013 25a7.7 7.7 0 006.5 9z" fill="#0364B8"/>
+              <path d="M19.5 34h18.1a6.4 6.4 0 001.3-12.7A9.6 9.6 0 0028 14.5a9.6 9.6 0 00-6.8 2.8" fill="#0078D4" opacity=".8"/>
+              <path d="M13 25a7.7 7.7 0 017.8-7.6 9.6 9.6 0 016.4-3 9.6 9.6 0 019.3 7.3" fill="#1490DF" opacity=".6"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="integ-premium-card__title" data-i18n-key="integ.onedrive.title">OneDrive</h3>
+            <span class="allybi-status allybi-status--live" data-i18n-key="integ.onedrive.status">Live</span>
+          </div>
         </div>
-        <div class="allybi-accordion" style="max-width: var(--allybi-max-reading); margin: 0 auto;">
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="integrations.faq.q1">Which services can I connect?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p class="allybi-accordion__body" data-i18n-key="integrations.faq.a1">Allybi currently supports Gmail, Outlook, and Slack integrations. You can also upload and edit .docx and .xlsx files directly in the workspace.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="integrations.faq.q2">How do I connect an integration?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p class="allybi-accordion__body" data-i18n-key="integrations.faq.a2">Go to your account settings and select the integration you want to connect. You'll be redirected to the service's OAuth page to authorize access with scoped permissions.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="integrations.faq.q3">Can Allybi send emails on my behalf?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p class="allybi-accordion__body" data-i18n-key="integrations.faq.a3">Allybi can draft emails, but nothing is ever sent without your explicit confirmation. You always see the full message, recipient, and attachments before approving.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="integrations.faq.q4">What happens when I disconnect?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p class="allybi-accordion__body" data-i18n-key="integrations.faq.a4">When you disconnect an integration, Allybi immediately loses access to that service. No data from the disconnected service is retained in your workspace.</p>
-            </div>
-          </div>
-
-          <div class="allybi-accordion__item">
-            <button class="allybi-accordion__trigger" aria-expanded="false">
-              <span data-i18n-key="integrations.faq.q5">Are more integrations coming?</span>
-              <svg class="allybi-accordion__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="allybi-accordion__content">
-              <p class="allybi-accordion__body" data-i18n-key="integrations.faq.a5">Yes. We're actively building new integrations based on user feedback. If there's a service you'd like to see, reach out to us at info@allybi.co.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         CTA
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="integ-cta allybi-section" style="background-color: var(--allybi-bg-dark); color: var(--allybi-text-inverse);">
-      <div class="allybi-container">
-        <div class="integ-cta__inner">
-          <h2 class="allybi-h2" data-i18n-key="integrations.cta.title">Connect your tools and start working.</h2>
-          <p class="allybi-body-lg" data-i18n-key="integrations.cta.support">Search, draft, and send across all your connected services from one private workspace.</p>
-          <div class="integ-cta__buttons">
-            <a href="request-demo.html" class="allybi-btn allybi-btn--primary" style="background-color: var(--allybi-text-inverse); color: var(--allybi-text-strongest);" data-i18n-key="nav.book_demo">Book demo</a>
-            <a href="request-demo.html" class="allybi-btn allybi-btn--secondary" style="border-color: rgba(255,255,255,0.3); color: var(--allybi-text-inverse);" data-i18n-key="nav.book_demo">Book demo</a>
+        <ul class="integ-premium-card__features">
+          <li data-i18n-key="integ.onedrive.f1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Import files and folders
+          </li>
+          <li data-i18n-key="integ.onedrive.f2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Bring cloud content into Upload or Ask
+          </li>
+        </ul>
+        <div class="integ-premium-card__where">
+          <span class="allybi-meta" data-i18n-key="integ.onedrive.where_label">Where:</span>
+          <div class="integ-premium-card__tags">
+            <span class="integ-tag" data-i18n-key="integ.onedrive.t1">Upload</span>
+            <span class="integ-tag" data-i18n-key="integ.onedrive.t2">Ask</span>
+            <span class="integ-tag" data-i18n-key="integ.onedrive.t3">Integrations</span>
           </div>
         </div>
       </div>
-    </section>
 
-  </main>
-
-  <!-- ================================================================
-       FOOTER
-       ================================================================ -->
-  <footer class="allybi-footer">
-    <div class="allybi-footer-inner">
-
-      <div class="footer-brand">
-        <a href="/" class="footer-brand-logo">
-          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
-        </a>
-        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for professionals handling sensitive documents.</p>
+      <!-- SharePoint -->
+      <div class="integ-premium-card allybi-reveal" data-accent="#036C70">
+        <div class="integ-premium-card__header">
+          <div class="integ-premium-card__icon">
+            <!-- SharePoint icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="18" r="10" fill="#036C70"/>
+              <circle cx="30" cy="26" r="8" fill="#1A9BA1" opacity=".85"/>
+              <circle cx="22" cy="32" r="6" fill="#37C6D0" opacity=".7"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="integ-premium-card__title" data-i18n-key="integ.sharepoint.title">SharePoint</h3>
+            <span class="allybi-status allybi-status--live" data-i18n-key="integ.sharepoint.status">Live</span>
+          </div>
+        </div>
+        <ul class="integ-premium-card__features">
+          <li data-i18n-key="integ.sharepoint.f1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Browse sites, libraries, and folders
+          </li>
+          <li data-i18n-key="integ.sharepoint.f2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Bring team documents into Allybi
+          </li>
+        </ul>
+        <div class="integ-premium-card__where">
+          <span class="allybi-meta" data-i18n-key="integ.sharepoint.where_label">Where:</span>
+          <div class="integ-premium-card__tags">
+            <span class="integ-tag" data-i18n-key="integ.sharepoint.t1">Upload</span>
+            <span class="integ-tag" data-i18n-key="integ.sharepoint.t2">Ask</span>
+            <span class="integ-tag" data-i18n-key="integ.sharepoint.t3">Integrations</span>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-columns">
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-          <div class="footer-col-links">
-            <a href="/" data-i18n-key="footer.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+      <!-- WhatsApp -->
+      <div class="integ-premium-card allybi-reveal" data-accent="#25D366">
+        <div class="integ-premium-card__header">
+          <div class="integ-premium-card__icon">
+            <!-- WhatsApp icon -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6C14.06 6 6 14.06 6 24c0 3.18.83 6.16 2.28 8.75L6 42l9.53-2.2A17.9 17.9 0 0024 42c9.94 0 18-8.06 18-18S33.94 6 24 6z" fill="#25D366"/>
+              <path d="M34.1 29.4c-.55 1.55-2.74 2.84-4.46 3.22-.47.1-1.08.18-3.15-.68-2.65-1.1-4.35-3.8-4.48-3.98-.13-.18-1.05-1.4-1.05-2.67s.66-1.9.9-2.16c.24-.26.53-.32.7-.32h.51c.16 0 .38-.06.6.46.22.53.76 1.85.83 1.98.06.13.1.29.02.46-.5 1.02-1.04 1-1.55 1.65-.14.17-.3.35-.13.69.17.33.76 1.26 1.64 2.04 1.13.99 2.08 1.3 2.38 1.44.3.14.47.12.65-.07.17-.2.74-.86.94-1.16.2-.3.4-.24.67-.15.27.1 1.73.82 2.03.96.3.15.5.22.57.34.08.12.08.7-.47 2.25z" fill="#fff"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="integ-premium-card__title" data-i18n-key="integ.whatsapp.title">WhatsApp</h3>
+            <span class="allybi-status allybi-status--live" data-i18n-key="integ.whatsapp.status">Ready</span>
           </div>
         </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
-          <div class="footer-col-links">
-            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
-          <div class="footer-col-links">
-            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
-          <div class="footer-col-links">
-            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
-            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-          <div class="footer-col-links">
-            <a href="about.html" data-i18n-key="footer.about">About</a>
-            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-          <div class="footer-col-links">
-            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
-            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Mobile compact links (visible only on small screens) -->
-      <div class="footer-mobile-links">
-        <a href="/" data-i18n-key="footer.overview">Overview</a>
-        <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-        <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-        <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-        <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-        <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-        <a href="pricing.html" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-        <a href="about.html" data-i18n-key="footer.about">About</a>
-        <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="request-demo.html" data-i18n-key="nav.book_demo">Book demo</a>
-        <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-        <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-        <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>
-        <a href="security.html" data-i18n-key="footer.security_privacy">Security &amp; Privacy</a>
-      </div>
-            <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
-        <div class="footer-bottom-right">
-          <div class="language-selector" id="footer-language-selector">
-            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-              <span class="lang-label">English</span>
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <ul class="language-menu hidden" role="listbox">
-              <li role="option" data-lang="en">English</li>
-              <li role="option" data-lang="pt">Portugues (BR)</li>
-              <li role="option" data-lang="es">Espanol</li>
-            </ul>
-          </div>
+        <ul class="integ-premium-card__features">
+          <li data-i18n-key="integ.whatsapp.f1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Manage contacts
+          </li>
+          <li data-i18n-key="integ.whatsapp.f2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Prepare message handoff after Allybi drafts response
+          </li>
+          <li data-i18n-key="integ.whatsapp.f3">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Review before opening WhatsApp
+          </li>
+        </ul>
+        <div class="integ-premium-card__notice">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span class="allybi-body-sm" data-i18n-key="integ.whatsapp.notice">Handoff only - not a synced inbox</span>
         </div>
       </div>
 
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- ================================================================
-       SCRIPTS
-       ================================================================ -->
-  <script src="language-switcher.js"></script>
-  <script src="allybi-header.js"></script>
-  <script src="animations.js"></script>
-  <script src="allybi-animations.js"></script>
+<!-- ================================================================
+     SECTION B — COMING SOON
+     ================================================================ -->
+<section class="integ-coming allybi-section">
+  <div class="allybi-container">
+    <div class="allybi-section-header allybi-reveal">
+      <span class="allybi-chip allybi-chip--coming" data-i18n-key="integ.coming.eyebrow">Coming soon</span>
+      <h2 class="allybi-h2" data-i18n-key="integ.coming.title">On the roadmap</h2>
+    </div>
 
-  <!-- FAQ accordion -->
-  <script>
-    (function () {
-      var triggers = document.querySelectorAll('.allybi-accordion__trigger');
-      triggers.forEach(function (trigger) {
-        trigger.addEventListener('click', function () {
-          var expanded = this.getAttribute('aria-expanded') === 'true';
-          this.setAttribute('aria-expanded', String(!expanded));
-          var content = this.nextElementSibling;
-          if (!expanded) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-          } else {
-            content.style.maxHeight = '0';
-          }
-        });
-      });
-    })();
-  </script>
+    <div class="integ-coming__grid allybi-stagger">
 
+      <!-- Gmail -->
+      <div class="integ-coming-card allybi-card allybi-reveal">
+        <div class="integ-coming-card__header">
+          <div class="integ-coming-card__icon">
+            <img src="assets/images/gmail-icon.svg" alt="Gmail" width="40" height="40">
+          </div>
+          <div>
+            <h3 class="integ-coming-card__title" data-i18n-key="integ.gmail.title">Gmail</h3>
+            <span class="allybi-status allybi-status--coming" data-i18n-key="integ.gmail.status">Coming soon</span>
+          </div>
+        </div>
+        <p class="integ-coming-card__desc" data-i18n-key="integ.gmail.desc">Search threads, import attachments</p>
+      </div>
+
+      <!-- Google Drive -->
+      <div class="integ-coming-card allybi-card allybi-reveal">
+        <div class="integ-coming-card__header">
+          <div class="integ-coming-card__icon">
+            <!-- Google Drive icon -->
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 26.5L13.5 14h13l-7 12.5H6.5z" fill="#0066DA"/>
+              <path d="M26.5 14h-13L20.5 2h13L26.5 14z" fill="#00AC47"/>
+              <path d="M33.5 26.5H19.5l7-12.5 14 0-7 12.5z" fill="#FFBA00"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="integ-coming-card__title" data-i18n-key="integ.gdrive.title">Google Drive</h3>
+            <span class="allybi-status allybi-status--coming" data-i18n-key="integ.gdrive.status">Coming soon</span>
+          </div>
+        </div>
+        <p class="integ-coming-card__desc" data-i18n-key="integ.gdrive.desc">Import files and folders</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SECTION C — HOW ALLYBI USES CONNECTED SOURCES
+     ================================================================ -->
+<section class="integ-flow allybi-section" style="background-color: var(--allybi-bg-alt-1);">
+  <div class="allybi-container">
+    <div class="allybi-section-header allybi-reveal">
+      <h2 class="allybi-h2" data-i18n-key="integ.flow.title">How Allybi uses connected sources</h2>
+      <p class="allybi-body-lg" data-i18n-key="integ.flow.sub">From source to action, every step is grounded and confirmed.</p>
+    </div>
+
+    <div class="integ-flow__pipeline allybi-reveal">
+      <div class="integ-flow__step">
+        <div class="integ-flow__step-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <span class="integ-flow__step-label" data-i18n-key="integ.flow.s1">Sources</span>
+        <span class="integ-flow__step-detail" data-i18n-key="integ.flow.s1d">Outlook, OneDrive, SharePoint, WhatsApp</span>
+      </div>
+      <div class="integ-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="integ-flow__step">
+        <div class="integ-flow__step-icon integ-flow__step-icon--accent">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span class="integ-flow__step-label" data-i18n-key="integ.flow.s2">Allybi</span>
+        <span class="integ-flow__step-detail" data-i18n-key="integ.flow.s2d">Process and ground in your files</span>
+      </div>
+      <div class="integ-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="integ-flow__step">
+        <div class="integ-flow__step-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <span class="integ-flow__step-label" data-i18n-key="integ.flow.s3">Grounded answer</span>
+        <span class="integ-flow__step-detail" data-i18n-key="integ.flow.s3d">Source-cited, version-aware</span>
+      </div>
+      <div class="integ-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="integ-flow__step">
+        <div class="integ-flow__step-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <span class="integ-flow__step-label" data-i18n-key="integ.flow.s4">Prepared action</span>
+        <span class="integ-flow__step-detail" data-i18n-key="integ.flow.s4d">Draft email or message</span>
+      </div>
+      <div class="integ-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="integ-flow__step">
+        <div class="integ-flow__step-icon integ-flow__step-icon--trust">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="integ-flow__step-label" data-i18n-key="integ.flow.s5">Confirmation</span>
+        <span class="integ-flow__step-detail" data-i18n-key="integ.flow.s5d">Review before anything goes out</span>
+      </div>
+      <div class="integ-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="integ-flow__step">
+        <div class="integ-flow__step-icon integ-flow__step-icon--trust">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </div>
+        <span class="integ-flow__step-label" data-i18n-key="integ.flow.s6">Send / Handoff</span>
+        <span class="integ-flow__step-detail" data-i18n-key="integ.flow.s6d">Email sent or WhatsApp opened</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SECTION D — CAPABILITY MATRIX
+     ================================================================ -->
+<section class="integ-matrix allybi-section">
+  <div class="allybi-container">
+    <div class="allybi-section-header allybi-reveal">
+      <h2 class="allybi-h2" data-i18n-key="integ.matrix.title">Capability matrix</h2>
+      <p class="allybi-body-lg" data-i18n-key="integ.matrix.sub">What you can do with each connected source.</p>
+    </div>
+
+    <div class="integ-matrix__wrap allybi-reveal">
+      <table class="integ-matrix__table">
+        <thead>
+          <tr>
+            <th class="integ-matrix__capability" data-i18n-key="integ.matrix.col_capability">Capability</th>
+            <th data-i18n-key="integ.matrix.col_outlook">
+              <span class="integ-matrix__col-icon"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24"></span>
+              Outlook
+            </th>
+            <th data-i18n-key="integ.matrix.col_onedrive">
+              <span class="integ-matrix__col-icon">
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M19.5 34h18.1a6.4 6.4 0 001.3-12.7 9.6 9.6 0 00-17.7-4.1A7.7 7.7 0 0013 25a7.7 7.7 0 006.5 9z" fill="#0364B8"/><path d="M19.5 34h18.1a6.4 6.4 0 001.3-12.7A9.6 9.6 0 0028 14.5a9.6 9.6 0 00-6.8 2.8" fill="#0078D4" opacity=".8"/></svg>
+              </span>
+              OneDrive
+            </th>
+            <th data-i18n-key="integ.matrix.col_sharepoint">
+              <span class="integ-matrix__col-icon">
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="10" fill="#036C70"/><circle cx="30" cy="26" r="8" fill="#1A9BA1" opacity=".85"/><circle cx="22" cy="32" r="6" fill="#37C6D0" opacity=".7"/></svg>
+              </span>
+              SharePoint
+            </th>
+            <th data-i18n-key="integ.matrix.col_whatsapp">
+              <span class="integ-matrix__col-icon">
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M24 6C14.06 6 6 14.06 6 24c0 3.18.83 6.16 2.28 8.75L6 42l9.53-2.2A17.9 17.9 0 0024 42c9.94 0 18-8.06 18-18S33.94 6 24 6z" fill="#25D366"/></svg>
+              </span>
+              WhatsApp
+            </th>
+            <th class="integ-matrix__coming-col" data-i18n-key="integ.matrix.col_gmail">
+              <span class="integ-matrix__col-icon"><img src="assets/images/gmail-icon.svg" alt="" width="24" height="24"></span>
+              Gmail
+            </th>
+            <th class="integ-matrix__coming-col" data-i18n-key="integ.matrix.col_gdrive">
+              <span class="integ-matrix__col-icon">
+                <svg width="24" height="24" viewBox="0 0 40 40" fill="none"><path d="M6.5 26.5L13.5 14h13l-7 12.5H6.5z" fill="#0066DA"/><path d="M26.5 14h-13L20.5 2h13L26.5 14z" fill="#00AC47"/><path d="M33.5 26.5H19.5l7-12.5 14 0-7 12.5z" fill="#FFBA00"/></svg>
+              </span>
+              Google Drive
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="integ-matrix__capability" data-i18n-key="integ.matrix.r1">Search source content</td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__check integ-matrix__coming-col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-coming)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x integ-matrix__coming-col"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+          </tr>
+          <tr>
+            <td class="integ-matrix__capability" data-i18n-key="integ.matrix.r2">Import files</td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__check integ-matrix__coming-col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-coming)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__check integ-matrix__coming-col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-coming)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+          </tr>
+          <tr>
+            <td class="integ-matrix__capability" data-i18n-key="integ.matrix.r3">Use in Ask</td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__check integ-matrix__coming-col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-coming)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__check integ-matrix__coming-col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-coming)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+          </tr>
+          <tr>
+            <td class="integ-matrix__capability" data-i18n-key="integ.matrix.r4">Use in Upload</td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x integ-matrix__coming-col"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__check integ-matrix__coming-col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-coming)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+          </tr>
+          <tr>
+            <td class="integ-matrix__capability" data-i18n-key="integ.matrix.r5">Prepare email response</td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__check integ-matrix__coming-col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-coming)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x integ-matrix__coming-col"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+          </tr>
+          <tr>
+            <td class="integ-matrix__capability" data-i18n-key="integ.matrix.r6">Prepare WhatsApp handoff</td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-trust)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+            <td class="integ-matrix__x integ-matrix__coming-col"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+            <td class="integ-matrix__x integ-matrix__coming-col"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--allybi-text-subtle)" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+          </tr>
+          <tr class="integ-matrix__status-row">
+            <td class="integ-matrix__capability" data-i18n-key="integ.matrix.r7">Status</td>
+            <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Available</span></td>
+            <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Available</span></td>
+            <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Available</span></td>
+            <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.ready">Ready</span></td>
+            <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming" data-i18n-key="integ.matrix.coming">Coming soon</span></td>
+            <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming" data-i18n-key="integ.matrix.coming">Coming soon</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FINAL CTA
+     ================================================================ -->
+<section class="s-cta">
+  <div class="allybi-container">
+    <div class="s-cta__inner allybi-reveal">
+      <h2 data-i18n-key="integ.cta.title">See Allybi in action</h2>
+      <p data-i18n-key="integ.cta.sub">Connect your sources, ground your answers, and send with confidence.</p>
+      <div class="s-cta__ctas">
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="integ.cta.btn" data-magnetic="0.2">Book demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline" data-i18n-key="footer.tagline">Private AI workspace for sensitive document work.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+        <div class="footer-col-links">
+          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
+        <div class="footer-col-links">
+          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="footer.business">For operations</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+        <div class="footer-col-links">
+          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
+          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          <a href="about.html" data-i18n-key="footer.about">About</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+        <div class="footer-col-links">
+          <a href="tos.html">Terms of Service</a>
+          <a href="terms.html">Acceptable Use</a>
+          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="integration-data-use.html">Integrations & Data Use</a>
+          <a href="data-deletion.html">Data Deletion</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-mobile-links">
+      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+      <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
+      <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+      <a href="about.html" data-i18n-key="footer.about">About</a>
+      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <a href="request-demo.html" data-i18n-key="footer.request_demo">Book demo</a>
+      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+      <a href="terms.html" data-i18n-key="footer.terms">Terms</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Portugues (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Espanol</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
 </body>
 </html>

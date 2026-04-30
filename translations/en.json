@@ -19,18 +19,20 @@
     "sign_in": "Sign in",
     "book_demo": "Book demo",
     "for_lawyers": "For lawyers",
+    "for_finance": "For finance",
+    "for_business": "For business",
     "start_free": "Start free",
     "open_app": "Open Allybi",
     "customer_stories": "Customer Stories"
   },
   "footer": {
-    "tagline": "Built for professionals handling sensitive documents.",
+    "tagline": "Private AI workspace for sensitive document work.",
     "col_product": "Product",
     "overview": "Overview",
     "how_it_works": "How it works",
     "integrations": "Integrations",
     "security": "Security",
-    "col_use_cases": "For teams",
+    "col_use_cases": "Use cases",
     "legal": "For lawyers",
     "finance": "For finance",
     "business": "For operations",
@@ -47,7 +49,7 @@
     "careers": "Careers <span class=\"coming-soon\" data-i18n-key=\"footer.coming_soon\">Coming soon</span>",
     "coming_soon": "Coming soon",
     "col_legal": "Legal",
-    "terms": "Terms of Service",
+    "terms": "Terms",
     "acceptable_use": "Acceptable Use",
     "privacy": "Privacy Policy",
     "cookies": "Cookie Policy",
@@ -62,29 +64,32 @@
     "privacy_link": "Privacy",
     "request_demo": "Book demo",
     "sec_overview": "Overview",
-    "security_link": "Security",
+    "security_link": "Security & Privacy",
     "stories": "Stories"
   },
   "hero": {
-    "eyebrow": "For those who work with sensitive documents",
-    "title": "The right clause. The right version.<br>Found in seconds.",
-    "subtitle": "Find any clause, version, or attachment in your files — with answers that cite the source and confirmation before anything is sent.",
+    "eyebrow": "Private AI for sensitive document work",
+    "title": "The right clause. The right version. The right attachment. In seconds.",
+    "subtitle": "Allybi brings documents, cloud folders, email context, and message handoff into one private workspace — so you can search, compare, verify, prepare, and send with confidence.",
     "cta_primary": "Book demo",
     "cta_secondary": "See how it works",
-    "chip1": "Answers cite the source",
-    "chip2": "No training on your data",
-    "chip3": "Confirmation before send",
-    "scene_query": "What changed in the indemnity clause?",
+    "chip1": "Source-cited answers",
+    "chip2": "Confirmation before send",
+    "chip3": "No training on your data",
+    "scene_query": "What changed in the indemnity clause between v2 and v3?",
     "scene_badge": "Grounded answer",
     "scene_answer": "The indemnity cap was raised <strong>from $2M to $5M</strong> in Section 8.3(b). Survival period extended to 24 months.",
-    "scene_source": "SPA_Draft_v3.pdf — p. 14"
+    "scene_source": "SPA_Draft_v3.pdf — p. 14",
+    "scene_confirm_label": "Confirm before send",
+    "scene_confirm_detail": "SPA_Draft_v3.pdf<br><span style=\"color:var(--allybi-text-subtle)\">To: Partner — via Outlook</span>",
+    "scene_confirm_btn": "Confirm"
   },
   "trust": {
     "item1": "End-to-end encrypted",
-    "item2": "Grounded in your files",
+    "item2": "Source-cited answers",
     "item3": "No training on your data",
     "item4": "Confirmation before every send",
-    "item5": "Brazil and international hosting"
+    "item5": "Outlook, OneDrive & SharePoint live"
   },
   "story": {
     "title": "Three steps. Complete clarity.",
@@ -109,19 +114,19 @@
     "step3_desc": "Edit documents, prepare responses, attach the right file. You review and confirm before anything is sent."
   },
   "cases": {
-    "title": "Built for those who work with sensitive documents.",
-    "subtitle": "Lawyers are first. Finance, compliance, and operations teams are next.",
+    "title": "When someone asks what changed, answer in seconds.",
+    "subtitle": "Built for lawyers first. Finance and business teams next.",
     "legal": {
       "tab": "Legal",
       "title": "Search clauses. Compare drafts.<br>Send the right version.",
-      "b1": "Search across contracts and memos instantly",
-      "b2": "Compare clause changes between drafts",
-      "b3": "Every answer cited to the source document and page",
+      "b1": "Compare indemnity language across contract versions",
+      "b2": "Find the non-compete clause and see the source",
+      "b3": "Prepare the correct file before it leaves your workspace",
       "cta": "See how lawyers use Allybi",
       "mock_q": "\"Show clause 12.4 changes between v2 and v3\"",
       "mock_heading": "Section 12.4 — Limitation of Liability",
       "mock_src": "NDA_v3_Final.pdf — p. 8",
-      "heading": "Compare clauses. Track versions.<br>Send the right file.",
+      "heading": "Compare clauses across versions. Send the right file with confirmation.",
       "mock_body": "Cap changed from <s style=\"color:#DC2626;background:rgba(220,38,38,0.08);padding:1px 3px;border-radius:2px\">$1M</s> to <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$3M</span>."
     },
     "finance": {
@@ -129,12 +134,12 @@
       "title": "Find the number. Pull the deck.<br>Respond with confidence.",
       "b1": "Pull revenue figures from any uploaded model",
       "b2": "Compare numbers across quarterly versions",
-      "b3": "Answers with exact cell and slide references",
+      "b3": "Answers with exact file and page references",
       "cta": "See finance workflows",
       "mock_q": "\"What was Q4 ARR in the latest board deck?\"",
       "mock_heading": "Annual Recurring Revenue — Q4",
       "mock_src": "Board_Deck_Q4.pdf — slide 7",
-      "heading": "Find the number. Pull the deck.<br>Respond with confidence.",
+      "heading": "Find the right deck, model, or metric. Respond with confidence.",
       "mock_body": "Q4 ARR reached <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$4.2M</span>, up 38% from Q3."
     },
     "business": {
@@ -142,12 +147,12 @@
       "title": "Organize proposals. Find answers.<br>Move forward safely.",
       "b1": "Search across proposals and project plans",
       "b2": "Get answers from the latest version",
-      "b3": "Draft responses from your own context",
+      "b3": "Draft responses grounded in your own documents",
       "cta": "See business workflows",
       "mock_q": "\"Summarize deliverables in the Acme SOW\"",
       "mock_heading": "Acme Corp — Statement of Work",
       "mock_src": "Acme_SOW_v2.docx — p. 3",
-      "heading": "Organize proposals. Find answers.<br>Move forward safely.",
+      "heading": "Find the approved proposal, plan, or follow-up. Move forward safely.",
       "mock_body": "3 deliverables totaling <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$185K</span>."
     }
   },
@@ -164,17 +169,21 @@
     "cta": "Explore security"
   },
   "proof": {
-    "title": "How professionals use Allybi.",
-    "card1_meta": "Example workflow",
+    "title": "Representative workflows",
+    "subtitle": "How professionals use Allybi in real pressure moments.",
+    "card1_meta": "Before partner review",
     "card1_role": "Legal Associate",
-    "card1_quote": "\"Found the exact clause change across 12 contract versions in 15 seconds — instead of 20 minutes of manual review.\"",
-    "card2_meta": "Example workflow",
+    "card1_context": "12 contract versions, 15 seconds",
+    "card1_quote": "Found the exact clause change across 12 contract versions in 15 seconds — instead of 20 minutes of manual review. Sent the right version with confirmation.",
+    "card2_meta": "Before board meeting",
     "card2_role": "Finance Analyst",
-    "card2_quote": "\"Found the right deck and revenue figure with source citation. Sent to the partner — confirmed before it left.\"",
-    "card3_meta": "Example workflow",
+    "card2_context": "Right deck, source citation",
+    "card2_quote": "Found the right deck and revenue figure with source citation. Prepared the email response and confirmed before it left.",
+    "card3_meta": "Before client follow-up",
     "card3_role": "Operations Lead",
-    "card3_quote": "\"Searched across proposals, emails, and Slack from a single search. Drafted the follow-up with the right file attached.\"",
-    "cta": "See customer stories"
+    "card3_context": "Cross-source search, right file",
+    "card3_quote": "Searched across proposals and email threads. Drafted the follow-up with the right file attached and confirmed via WhatsApp handoff.",
+    "cta": "See all workflows"
   },
   "home": {
     "trust": {
@@ -185,14 +194,27 @@
       "item5": "EU & US hosting available"
     },
     "pain": {
-      "title": "Moments every lawyer knows.",
-      "subtitle": "The risk isn't in the work itself — it's in the wrong file, the outdated version, the swapped attachment.",
-      "card1_title": "Sending the wrong version",
+      "title": "The risk is rarely the work. It's the wrong file, the outdated version, the buried answer.",
+      "card1_title": "Wrong version sent",
       "card1_desc": "Someone signs an outdated draft. Someone cites a superseded contract. The damage is done before anyone notices.",
-      "card2_title": "The client asks what changed",
-      "card2_desc": "When a partner or client asks what changed between versions, you need the answer in seconds — not after 20 minutes of folder diving.",
-      "card3_title": "Finding the right attachment under pressure",
-      "card3_desc": "You know which file you need to send, but it's somewhere between five folders and three versions. The deadline doesn't wait."
+      "card2_title": "Clause buried across drafts",
+      "card2_desc": "When a partner asks what changed between versions, you need the answer in seconds — not after 20 minutes of folder diving.",
+      "card3_title": "Attachment lost between inbox and folders",
+      "card3_desc": "The right file exists somewhere between five folders and three email threads. The deadline doesn't wait."
+    },
+    "workflow": {
+      "title": "One workspace from source to response.",
+      "subtitle": "Five steps. Complete clarity. Nothing sent without your confirmation.",
+      "s1_title": "Bring in sources",
+      "s1_desc": "Import from Outlook, OneDrive, SharePoint, or your device.",
+      "s2_title": "Ask naturally",
+      "s2_desc": "Find answers across connected sources in plain language.",
+      "s3_title": "Compare versions",
+      "s3_desc": "See what changed without manual digging.",
+      "s4_title": "Prepare the response",
+      "s4_desc": "Choose the right file, draft the reply, select the right contact.",
+      "s5_title": "Confirm before send",
+      "s5_desc": "Nothing goes out until you review it."
     },
     "usecase": {
       "title": "Built for teams where precision matters",
@@ -253,70 +275,69 @@
       "action_bullet3": "Confirmation step before every external action"
     },
     "action": {
-      "title": "Do more without leaving Allybi",
-      "subtitle": "Search is just the start. Edit, draft, and send — all from one workspace.",
-      "edit_title": "Edit Docs & Sheets",
-      "edit_desc": "Make changes directly inside Allybi. AI-assisted editing grounded in your project context.",
-      "edit_bullet1": "Inline document editing with AI suggestions",
-      "edit_bullet2": "Spreadsheet editing with formula support",
-      "edit_bullet3": "Version history preserved automatically",
-      "edit_bullet4": "Export to PDF, DOCX, or XLSX",
-      "connect_title": "Connect Inbox & Slack",
-      "connect_desc": "Search across email and Slack alongside your documents. Draft and send responses with full project context.",
-      "connect_bullet1": "Gmail and Outlook integration",
-      "connect_bullet2": "Slack channel and DM search",
+      "title": "Do more from the same workspace",
+      "subtitle": "Search is the start. Compare, prepare, and send — all from one place.",
+      "connect_title": "Connected sources",
+      "connect_desc": "Search across Outlook, OneDrive, and SharePoint alongside your uploaded files.",
+      "connect_bullet1": "Outlook, OneDrive, and SharePoint live",
+      "connect_bullet2": "WhatsApp message handoff ready",
       "connect_bullet3": "Draft emails grounded in your files",
       "connect_bullet4": "Explicit confirmation before every send"
     },
     "security": {
-      "title": "Private by design. Clear by design.",
-      "subtitle": "Your data never trains models. Every action requires confirmation. Architecture built for trust.",
+      "title": "Private by design. Grounded by default.",
+      "subtitle": "Your data never trains models. Every answer cites the source. Nothing is sent without your approval.",
       "pillar1": "Full encryption",
-      "pillar1_desc": "All data encrypted in transit and at rest. Your files are never readable by anyone but you.",
+      "pillar1_desc": "All data encrypted in transit and at rest.",
       "pillar2": "No model training",
-      "pillar2_desc": "Your documents never train AI models. Contractually guaranteed.",
+      "pillar2_desc": "Your documents never train AI models. Guaranteed.",
       "pillar3": "Explicit confirmation",
-      "pillar3_desc": "Nothing is sent without your approval. You see the file, version, and recipient before confirming.",
-      "pillar4": "Flexible hosting",
-      "pillar4_desc": "Choose where your data lives. Meet regulatory requirements with regional infrastructure.",
+      "pillar3_desc": "You review file, version, and recipient before anything is sent.",
+      "pillar4": "Source-cited answers",
+      "pillar4_desc": "Every answer references the exact document, page, and section.",
+      "pillar5": "Isolated workspaces",
+      "pillar5_desc": "Projects are isolated. No data leakage between workspaces.",
+      "pillar6": "Flexible hosting",
+      "pillar6_desc": "Meet regulatory requirements with regional infrastructure.",
       "cta": "Learn more about security"
     },
     "integrations": {
-      "title": "Work where your files and conversations already live.",
-      "subtitle": "Connect the tools your team already uses. No migration required.",
-      "gmail_title": "Gmail",
-      "gmail_desc": "Search and draft emails alongside your documents. Send with one click and explicit confirmation.",
-      "outlook_title": "Outlook",
-      "outlook_desc": "Connect your Outlook inbox. Search across emails and attachments inside your workspace.",
-      "slack_title": "Slack",
-      "slack_desc": "Search Slack channels and DMs alongside your documents. Find the message and the file in one query.",
-      "docs_title": "Docs & Sheets",
-      "docs_desc": "Edit documents and spreadsheets directly inside Allybi. AI-assisted, version-tracked, and always grounded.",
-      "cta": "View integrations"
+      "title": "Bring in the right context. Act from the same place.",
+      "subtitle": "Search across connected sources, attach the right file, prepare replies, and hand off messages — without losing the thread.",
+      "live": "Available now",
+      "coming": "Coming soon",
+      "badge_live": "Live",
+      "badge_ready": "Ready",
+      "badge_coming": "Soon",
+      "outlook_desc": "Search email threads and bring the right attachment into Allybi.",
+      "onedrive_desc": "Import files and folders directly into Ask or Upload.",
+      "sharepoint_desc": "Pull team documents from the right site or library.",
+      "whatsapp_desc": "Prepare a message for the right contact and review before opening WhatsApp.",
+      "gmail_desc": "Search threads and bring attachments into Allybi.",
+      "gdrive_desc": "Import files and folders from Drive into Allybi.",
+      "cta": "See all integrations"
     },
     "faq": {
       "title": "Frequently asked questions",
-      "q1": "What is Allybi?",
-      "a1": "Allybi is a private AI workspace for documents. It lets teams search, organize, edit, and act across files and messages with grounded answers, project-level control, and encryption by default. Think of it as your team's intelligent file system that actually understands what's inside every document.",
-      "q2": "How are answers grounded?",
-      "a2": "Every answer Allybi returns cites the exact source document, page number, and relevant passage. If the information doesn't exist in your files, Allybi will tell you — it never fabricates answers. Grounding is enforced at the architecture level, not just the prompt level.",
-      "q3": "Is Allybi private?",
-      "a3": "Yes. Allybi encrypts all data in transit and at rest. Your documents are never used to train AI models — this is contractually guaranteed. Workspaces are isolated, and no data leaks between projects. You choose where your data is hosted (EU or US).",
-      "q4": "Is Allybi suitable for legal work?",
-      "a4": "Yes. Allybi was designed for professionals who handle sensitive documents daily. Compare clauses between versions, search contracts in natural language, and send with confirmation. Projects are isolated and encrypted.",
-      "q5": "Can Allybi search email or Slack?",
-      "a5": "Yes. Connect your Gmail, Outlook, or Slack account and Allybi will index messages alongside your documents. Search across everything in one query — find the email thread and the attached contract at the same time.",
-      "q6": "What happens before a message is sent?",
-      "a6": "Allybi always shows you a confirmation screen before anything is sent externally — whether it's an email, a Slack message, or a file share. You review the content, recipients, and attachments before confirming. Nothing leaves your workspace without your explicit approval.",
-      "q7": "Which files does Allybi support?",
-      "a7": "PDF, DOCX, XLSX, PPTX, and text files. You can also connect Gmail, Outlook, and Slack to search emails and messages in the same workspace.",
-      "q8": "Who is Allybi built for?",
-      "a8": "Lawyers and professionals who handle sensitive documents daily. If your work involves contracts, drafts, legal opinions, financial spreadsheets, or compliance documents — and privacy matters — Allybi is for you."
+      "q1": "What does Allybi actually do?",
+      "a1": "Allybi is a private AI workspace for sensitive document work. It brings files, cloud folders, email context, and message handoff into one place — so you can search, compare versions, prepare responses, and send with source-cited answers and confirmation before anything goes out.",
+      "q2": "Which integrations are available now?",
+      "a2": "Outlook, OneDrive, and SharePoint are live now. WhatsApp is ready for message handoff. Gmail and Google Drive are coming soon.",
+      "q3": "Does my data train AI models?",
+      "a3": "No. Your documents never train AI models. This is contractually guaranteed. Allybi uses your files only to generate answers during your session.",
+      "q4": "What happens before something is sent?",
+      "a4": "Allybi always shows a confirmation screen before anything is sent. You review the content, recipient, attachments, and version before confirming. Nothing leaves without your explicit approval.",
+      "q5": "Is Allybi suitable for legal work?",
+      "a5": "Yes. Allybi was designed for professionals handling sensitive documents. Compare clauses between contract versions, search across matter files, and send the right version with confirmation. All projects are isolated and encrypted.",
+      "q6": "How does WhatsApp work in Allybi?",
+      "a6": "Allybi helps you prepare a message for the right contact — you review the content and recipient, then Allybi opens WhatsApp with everything ready. It is a review-before-send handoff, not a synced inbox connection.",
+      "see_all": "See all questions &rarr;"
     },
     "final_cta": {
       "title": "Your documents deserve more clarity.",
-      "support": "See how Allybi can help with your daily work.",
-      "cta": "Book demo"
+      "support": "See how Allybi fits the way your team already works.",
+      "cta": "Book demo",
+      "cta2": "Contact sales"
     }
   },
   "about": {
@@ -365,7 +386,50 @@
     "cta_title": "See what calmer document work looks like.",
     "cta_explore": "Explore the product",
     "cta_security": "View security overview",
-    "cta_contact": "Contact us"
+    "cta_contact": "Contact us",
+    "hero": {
+      "eyebrow": "About Allybi",
+      "title": "We built Allybi for teams that cannot afford chaos or surveillance.",
+      "subtitle": "Sensitive work deserves tools that feel calm, clear, private, and trustworthy."
+    },
+    "why": {
+      "title": "Why Allybi exists",
+      "p1": "Every day, professionals in legal, finance, and business handle hundreds of documents they did not create. Contracts arrive in different formats. Spreadsheets get duplicated. Slide decks proliferate across inboxes. Finding the right file at the right time becomes a tax on every decision you make.",
+      "p2": "Most AI tools promise to fix this, but they introduce a new problem: they require you to hand over your data with no transparency about how it is used, stored, or trained on. For teams working with sensitive information, that tradeoff is not acceptable.",
+      "p3": "Allybi was built to eliminate both problems. One workspace where you can search, compare versions, prepare responses, and send with source-cited answers and confirmation before anything goes out."
+    },
+    "beliefs": {
+      "title": "What we believe",
+      "clarity_title": "Clarity over clutter",
+      "clarity_desc": "Every screen, every result, and every action should be immediately understandable. No feature bloat. No noise.",
+      "control_title": "Control over black-box magic",
+      "control_desc": "You decide what gets shared, sent, or changed. AI assists; you confirm. No silent automation, no hidden side effects.",
+      "evidence_title": "Evidence over vague output",
+      "evidence_desc": "Every AI answer cites its source. You can trace the reasoning, check the file, and verify before acting.",
+      "calm_title": "Calm over chaos",
+      "calm_desc": "Good tools reduce anxiety, not add to it. Allybi is designed to feel quiet, organized, and predictable.",
+      "speed_title": "Speed without recklessness",
+      "speed_desc": "Allybi helps you move faster -- but never at the cost of accuracy. Every answer is sourced, every action is verified, every send is confirmed.",
+      "privacy_title": "Privacy by default",
+      "privacy_desc": "Your files are encrypted, isolated, and never used for model training. Privacy is not a feature toggle. It is the architecture."
+    },
+    "optimize": {
+      "title": "What we optimize for",
+      "p1": "Speed to clarity. Grounded answers that cite sources. User control at every step. We measure success by how quickly you can move from question to confident action -- without sacrificing accuracy or privacy.",
+      "p2": "One private workspace where you can search across all your documents, compare versions, and take action -- all without switching between five different tools or worrying about where your data ends up."
+    },
+    "never": {
+      "title": "What we will never do",
+      "p1": "Sell your data. Train models on your files. Hide where AI-generated answers come from. Send anything without your confirmation. Access connections you have not authorized.",
+      "p2": "These are not future commitments. They are current architecture decisions baked into how Allybi is built."
+    },
+    "work": {
+      "title": "The kind of work Allybi is built for",
+      "p1": "Contract review and clause comparison. Regulatory filings where the wrong version can cost millions. Due diligence across hundreds of documents. Client communications that demand the right attachment, the right data, the right tone.",
+      "p2": "If your work involves sensitive files, high-stakes decisions, and time pressure, Allybi was built for you.",
+      "cta": "Book demo",
+      "cta_security": "View security overview"
+    }
   },
   "contact": {
     "hero_h1": "Talk to Allybi",
@@ -407,12 +471,45 @@
     "label_message": "Message",
     "placeholder_message": "Tell us how we can help...",
     "submit": "Send message",
-    "reassurance": "Sensitive workflow questions welcome. We read every message and route inquiries carefully."
+    "reassurance": "Sensitive workflow questions welcome. We read every message and route inquiries carefully.",
+    "hero": {
+      "title": "Talk to Allybi",
+      "subtitle": "Questions about the product, security, demos, or partnerships? We will point you to the right place."
+    },
+    "path": {
+      "demo_title": "Book a demo",
+      "demo_desc": "See Allybi in action with a personalized walkthrough.",
+      "product_title": "Product question",
+      "product_desc": "Ask about features, integrations, or how Allybi works.",
+      "security_title": "Security question",
+      "security_desc": "Encryption, data handling, compliance, or privacy inquiries.",
+      "support_title": "Support",
+      "support_desc": "Technical help, account questions, or troubleshooting.",
+      "partner_title": "Partnership",
+      "partner_desc": "Integrations, reselling, or co-development opportunities."
+    },
+    "form": {
+      "title": "Send us a message",
+      "subtitle": "We will get back to you within one business day.",
+      "label_name": "Name",
+      "label_email": "Work email",
+      "label_company": "Company",
+      "optional": "(optional)",
+      "label_category": "Category",
+      "select_placeholder": "Select a category",
+      "cat_demo": "Book a demo",
+      "cat_product": "Product question",
+      "cat_security": "Security question",
+      "cat_support": "Support",
+      "cat_partnership": "Partnership",
+      "label_message": "Message",
+      "submit": "Send message"
+    }
   },
   "hiw": {
     "hero_eyebrow": "Product",
-    "hero_h1": "How Allybi works",
-    "hero_support": "From upload to action -- a calmer, faster way to work with documents.",
+    "hero_h1": "From source to response, without losing the thread.",
+    "hero_support": "Bring in files and connected sources, ask naturally, compare versions, prepare the right response, and confirm before anything is sent.",
     "flow_upload": "Upload",
     "flow_organize": "Organize",
     "flow_search": "Search & Ask",
@@ -510,7 +607,20 @@
     "cta_title": "See Allybi in action.",
     "cta_subtitle": "Book a demo and we'll walk you through the product.",
     "cta_start": "Book demo",
-    "cta_demo": "Book demo"
+    "cta_demo": "Book demo",
+    "s1_title": "Bring in sources",
+    "s1_desc": "Upload from your device or import directly from connected sources. Everything goes into your private workspace.",
+    "s2_title": "Ask naturally",
+    "s2_desc": "Ask in plain language across all your connected sources. Allybi returns answers that cite the exact document, page, and section.",
+    "s3_title": "Compare versions",
+    "s3_desc": "See exactly what changed between document versions — highlighted, referenced, and cited. Use it for clauses, drafts, and attachments.",
+    "s4_title": "Prepare the action",
+    "s4_desc": "Choose the right file, prepare an email response, or select the right WhatsApp contact. Everything stays grounded in the source.",
+    "s5_title": "Confirm before send",
+    "s5_desc": "Nothing leaves without your review. You see the recipient, file, version, and message before confirming. This is not optional.",
+    "cta_integrations": "See integrations",
+    "cta_title2": "See Allybi in action.",
+    "cta_subtitle2": "Book a demo and we'll walk you through the full workflow."
   },
   "uc_overview": {
     "hero": {
@@ -1023,17 +1133,18 @@
   "pricing": {
     "hero": {
       "eyebrow": "Pricing",
-      "title": "Guided access. Personalized onboarding.",
-      "support": "Allybi is in guided access phase. Every team gets a personalized onboarding to ensure the product fits your workflow."
+      "title": "Guided access for teams handling sensitive documents.",
+      "support": "Allybi is in guided access phase. Every team gets a personalized onboarding to ensure the product fits your workflow.",
+      "subtitle": "Allybi is rolled out with hands-on onboarding so your team gets real value fast -- with the right sources, workflows, and controls in place."
     },
     "included": {
       "title": "What's included",
-      "f1": "Private workspace with unlimited projects",
-      "f2": "Search with grounded answers",
-      "f3": "Version comparison",
-      "f4": "Document and spreadsheet editing",
-      "f5": "Gmail, Outlook, and Slack integrations",
-      "f6": "Confirmation before every send",
+      "f1": "Private workspace, source-grounded answers, version comparison",
+      "f2": "Outlook, OneDrive, and SharePoint support",
+      "f3": "WhatsApp handoff for message preparation",
+      "f4": "Confirmation before every send",
+      "f5": "Security by default -- encryption, isolation, no model training",
+      "f6": "Guided onboarding with your team",
       "f7": "Encryption and project isolation",
       "f8": "Personalized onboarding"
     },
@@ -1120,6 +1231,32 @@
     "final": {
       "title": "See Allybi in action.",
       "support": "Book a demo and we'll walk you through the product."
+    },
+    "who": {
+      "title": "Who Allybi is for",
+      "legal_title": "Legal teams",
+      "legal_desc": "Compare clauses across versions, find the right attachment, and send with confirmation. Built for contract-heavy workflows.",
+      "docs_title": "Document-heavy workflows",
+      "docs_desc": "Search across hundreds of files, get source-cited answers, and act from one workspace. Less time hunting, more time deciding.",
+      "sensitive_title": "Sensitive information",
+      "sensitive_desc": "For teams that cannot afford to send the wrong file, cite the wrong version, or lose control of their data. Privacy is the architecture."
+    },
+    "rollout": {
+      "title": "How rollout works",
+      "s1_title": "Demo",
+      "s1_desc": "See the product in action. We walk through your workflow and answer every question.",
+      "s2_title": "Guided setup",
+      "s2_desc": "We configure your workspace, connect your sources, and set up your integrations with you.",
+      "s3_title": "Live workspace",
+      "s3_desc": "Your team starts using Allybi with real documents. We are available for questions and support.",
+      "s4_title": "Workflow tuning",
+      "s4_desc": "We review how your team uses Allybi and optimize the setup for maximum value."
+    },
+    "cta": {
+      "title": "See Allybi in action.",
+      "subtitle": "Book a demo and we will walk you through the product.",
+      "book_demo": "Book demo",
+      "talk_sales": "Talk to sales"
     }
   },
   "demo": {
@@ -1255,30 +1392,51 @@
   },
   "stories": {
     "hero": {
-      "eyebrow": "Customer Stories",
-      "title": "Real work. Real pressure. Real clarity.",
-      "support": "See how teams use Allybi when it matters most."
+      "eyebrow": "Workflows",
+      "title": "Representative workflows",
+      "support": "How professionals use Allybi in real pressure moments."
     },
     "card1": {
       "time": "8:40 AM — Before partner review",
-      "role": "Legal Associate, M&A team",
+      "role": "Legal Associate",
       "narrative": "The managing partner asks what changed in the indemnity clause since the last draft. Twelve versions in the folder. Twenty minutes of manual comparison — or one question to Allybi.",
-      "outcome": "Found the exact clause change, cited to page 14, in 15 seconds.",
-      "label": "Representative scenario"
+      "outcome": "Found the exact clause change in 15 seconds. Sent the right version with confirmation.",
+      "label": "Representative scenario",
+      "timing": "Before partner review",
+      "scenario_label": "Scenario",
+      "scenario": "The partner asks what changed in the indemnity clause between the last two drafts. Twelve versions in the folder. The partner needs the answer before the call in ten minutes.",
+      "pressure_label": "Pressure",
+      "pressure": "20 minutes of folder diving, comparing documents side by side, version confusion. Risk of citing the wrong draft.",
+      "allybi_label": "With Allybi",
+      "allybi": "Asked \"What changed in the indemnity clause between v2 and v3?\" Found the change in 15 seconds, cited to Section 8.3(b), page 14. Sent the correct version to the partner with confirmation before send."
     },
     "card2": {
       "time": "Minutes before sending the board deck",
-      "role": "Finance Analyst, Series B startup",
+      "role": "Finance Analyst",
       "narrative": "The CEO needs the latest revenue figures for the board meeting in 30 minutes. Three versions of the deck exist. The wrong attachment means lost credibility.",
-      "outcome": "Pulled the right deck with Q4 ARR cited to slide 7. Sent with explicit confirmation.",
-      "label": "Representative scenario"
+      "outcome": "Found the exact figure with slide reference. Prepared email. Confirmed before send.",
+      "label": "Representative scenario",
+      "timing": "Before board meeting",
+      "scenario_label": "Scenario",
+      "scenario": "The CFO needs Q4 ARR from the latest board deck. Three versions exist across OneDrive and email. The board meeting starts in 30 minutes.",
+      "pressure_label": "Pressure",
+      "pressure": "Searching across slide decks, risk of pulling a number from the wrong version. The wrong figure in front of the board costs credibility.",
+      "allybi_label": "With Allybi",
+      "allybi": "Asked \"What was Q4 ARR in the latest board deck?\" Found the exact figure — $4.2M — cited to slide 7 of Board_Deck_Q4.pdf. Prepared the email to the CFO with the deck attached and confirmed before send."
     },
     "card3": {
       "time": "Trying to find the approved proposal before the client call",
-      "role": "Operations Lead, consulting firm",
+      "role": "Operations Lead",
       "narrative": "The client is on the phone in 5 minutes asking about the project timeline. The proposal is somewhere between email, Slack, and three project folders.",
-      "outcome": "Searched across proposals, emails, and Slack from one search. Found the approved SOW with deliverables and timeline.",
-      "label": "Representative scenario"
+      "outcome": "Found the right file. Prepared WhatsApp handoff with review before send.",
+      "label": "Representative scenario",
+      "timing": "Before client follow-up",
+      "scenario_label": "Scenario",
+      "scenario": "The client asks for the updated SOW. The proposal is in email, the latest attachment is in a folder somewhere, and the wrong version was sent once before.",
+      "pressure_label": "Pressure",
+      "pressure": "Proposal in email, attachment in folders, version confusion. Last time the wrong version was sent, it took a week to recover trust.",
+      "allybi_label": "With Allybi",
+      "allybi": "Cross-source search found the right file across email and folders. Identified the latest version (Acme_SOW_v2.docx). Prepared the WhatsApp handoff with the right file — reviewed content and recipient before opening WhatsApp."
     },
     "trust": {
       "title": "Why teams trust Allybi.",
@@ -1288,8 +1446,9 @@
       "p4": "Each workspace is fully isolated from others."
     },
     "cta": {
-      "title": "See it for yourself.",
-      "button": "Request demo"
+      "title": "See how Allybi works.",
+      "button": "Request demo",
+      "how": "See how Allybi works"
     }
   },
   "waitlist": {
@@ -1309,5 +1468,380 @@
     "title": "Your documents deserve more clarity.",
     "subtitle": "See how Allybi can help with your daily work.",
     "button": "Book demo"
+  },
+  "legal": {
+    "hero_eyebrow": "For lawyers",
+    "hero_h1": "For lawyers who cannot afford the wrong version.",
+    "hero_support": "Search contracts, compare drafts, find the exact clause, and prepare the right response — with source citations and confirmation before anything is sent.",
+    "pressure1_title": "Partner asks what changed",
+    "pressure1_desc": "You need the answer in seconds. Not after 20 minutes comparing two PDFs manually.",
+    "pressure2_title": "Client asks for the latest draft",
+    "pressure2_desc": "It must be the right one. One outdated contract sent to opposing counsel costs trust that takes months to rebuild.",
+    "pressure3_title": "Clause buried across versions",
+    "pressure3_desc": "The non-compete clause exists in five different drafts. Finding the latest version shouldn't be a research project.",
+    "f1_eyebrow": "Version comparison",
+    "f1_title": "Compare clause language across versions.",
+    "f1_desc": "Upload two versions and Allybi highlights exactly what changed — clause by clause. Compare indemnification language, liability caps, or termination provisions without manual redlining.",
+    "f2_eyebrow": "Cross-source search",
+    "f2_title": "Search across contracts and matter files.",
+    "f2_desc": "Ask in natural language — \"What are the termination provisions?\" — and get grounded answers with exact citations. Every result links to the source document, page, and passage.",
+    "f3_eyebrow": "Confirmation before send",
+    "f3_title": "Prepare the right send with confirmation.",
+    "f3_desc": "When you attach a file or prepare a response, Allybi shows you exactly which version you're sending — file name, date, and recipient — and asks for explicit confirmation.",
+    "f4_eyebrow": "WhatsApp handoff",
+    "f4_title": "Prepare a WhatsApp message after Allybi drafts it.",
+    "f4_desc": "Allybi helps you prepare a message for the right contact — you review the content and recipient, then it opens WhatsApp with everything ready. No synced inbox. Full review before handoff.",
+    "security_title": "Security for sensitive legal work.",
+    "security_sub": "Your documents are protected from the moment they enter Allybi.",
+    "sec1_title": "Encrypted",
+    "sec1_desc": "All data encrypted in transit and at rest.",
+    "sec2_title": "No model training",
+    "sec2_desc": "Documents never train AI models. Guaranteed.",
+    "sec3_title": "Isolated workspaces",
+    "sec3_desc": "Each matter is a sealed environment.",
+    "sec4_title": "Explicit confirmation",
+    "sec4_desc": "Nothing leaves without your review and approval.",
+    "cta_title": "See what clarity looks like for your practice.",
+    "cta_sub": "Bring your contracts, drafts, and matter files into one private workspace."
+  },
+  "integ": {
+    "hero": {
+      "eyebrow": "Integrations",
+      "title": "One workspace for files, inboxes, cloud folders, and message handoff.",
+      "sub": "Bring the right context into Allybi, then prepare the right action from the same place.",
+      "cta": "Book demo"
+    },
+    "live": {
+      "eyebrow": "Available now",
+      "title": "Connected and ready to use"
+    },
+    "outlook": {
+      "title": "Outlook",
+      "status": "Live",
+      "f1": "Search emails and attachments",
+      "f2": "Bring the right file into Ask",
+      "f3": "Prepare email responses with confirmation",
+      "where_label": "Where:",
+      "t1": "Ask",
+      "t2": "Integrations",
+      "t3": "Review-before-send"
+    },
+    "onedrive": {
+      "title": "OneDrive",
+      "status": "Live",
+      "f1": "Import files and folders",
+      "f2": "Bring cloud content into Upload or Ask",
+      "where_label": "Where:",
+      "t1": "Upload",
+      "t2": "Ask",
+      "t3": "Integrations"
+    },
+    "sharepoint": {
+      "title": "SharePoint",
+      "status": "Live",
+      "f1": "Browse sites, libraries, and folders",
+      "f2": "Bring team documents into Allybi",
+      "where_label": "Where:",
+      "t1": "Upload",
+      "t2": "Ask",
+      "t3": "Integrations"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "status": "Ready",
+      "f1": "Manage contacts",
+      "f2": "Prepare message handoff after Allybi drafts response",
+      "f3": "Review before opening WhatsApp",
+      "notice": "Handoff only - not a synced inbox"
+    },
+    "coming": {
+      "eyebrow": "Coming soon",
+      "title": "On the roadmap"
+    },
+    "gmail": {
+      "title": "Gmail",
+      "status": "Coming soon",
+      "desc": "Search threads, import attachments"
+    },
+    "gdrive": {
+      "title": "Google Drive",
+      "status": "Coming soon",
+      "desc": "Import files and folders"
+    },
+    "flow": {
+      "title": "How Allybi uses connected sources",
+      "sub": "From source to action, every step is grounded and confirmed.",
+      "s1": "Sources",
+      "s1d": "Outlook, OneDrive, SharePoint, WhatsApp",
+      "s2": "Allybi",
+      "s2d": "Process and ground in your files",
+      "s3": "Grounded answer",
+      "s3d": "Source-cited, version-aware",
+      "s4": "Prepared action",
+      "s4d": "Draft email or message",
+      "s5": "Confirmation",
+      "s5d": "Review before anything goes out",
+      "s6": "Send / Handoff",
+      "s6d": "Email sent or WhatsApp opened"
+    },
+    "matrix": {
+      "title": "Capability matrix",
+      "sub": "What you can do with each connected source.",
+      "col_capability": "Capability",
+      "col_outlook": "Outlook",
+      "col_onedrive": "OneDrive",
+      "col_sharepoint": "SharePoint",
+      "col_whatsapp": "WhatsApp",
+      "col_gmail": "Gmail",
+      "col_gdrive": "Google Drive",
+      "r1": "Search source content",
+      "r2": "Import files",
+      "r3": "Use in Ask",
+      "r4": "Use in Upload",
+      "r5": "Prepare email response",
+      "r6": "Prepare WhatsApp handoff",
+      "r7": "Status",
+      "available": "Available",
+      "ready": "Ready",
+      "coming": "Coming soon"
+    },
+    "cta": {
+      "title": "See Allybi in action",
+      "sub": "Connect your sources, ground your answers, and send with confidence.",
+      "btn": "Book demo"
+    }
+  },
+  "sec": {
+    "hero": {
+      "eyebrow": "Security",
+      "title": "Security and privacy, made visible.",
+      "subtitle": "Allybi is built for sensitive document workflows: grounded answers, permissioned connections, and confirmation before anything goes out."
+    },
+    "pillars": {
+      "title": "Built on six trust pillars",
+      "encryption": {
+        "title": "Encryption at rest and in transit",
+        "desc": "All data is encrypted with TLS in transit and AES-256-GCM at rest. Your documents are protected at every stage of their lifecycle."
+      },
+      "notraining": {
+        "title": "No training on user documents",
+        "desc": "Your documents are never used to train AI models. This is contractually guaranteed in our terms of service -- your data stays yours."
+      },
+      "permissioned": {
+        "title": "Permissioned integrations",
+        "desc": "Every connection requires explicit OAuth authorization. You choose exactly which services Allybi can access, and you revoke access anytime."
+      },
+      "cited": {
+        "title": "Source-cited answers",
+        "desc": "Every AI answer references the exact document, page, and section. If the answer is not in your documents, Allybi tells you instead of guessing."
+      },
+      "confirmation": {
+        "title": "Explicit confirmation before every send",
+        "desc": "Nothing leaves Allybi without your review. Every email, message, and file share requires explicit confirmation before it is sent."
+      },
+      "isolated": {
+        "title": "Isolated workspaces",
+        "desc": "Projects are isolated. No data leakage between workspaces. Each workspace is encrypted and access-controlled independently."
+      }
+    },
+    "willwont": {
+      "title": "What Allybi will and will not do",
+      "will_heading": "What Allybi will do",
+      "will_1": "Cite sources for every answer -- file, page, and section",
+      "will_2": "Require your explicit confirmation before anything is sent",
+      "will_3": "Keep your data private, encrypted, and isolated",
+      "wont_heading": "What Allybi will not do",
+      "wont_1": "Train models on your files",
+      "wont_2": "Send anything without your review and approval",
+      "wont_3": "Access connections you have not authorized"
+    },
+    "cta": {
+      "title": "See how Allybi protects your work.",
+      "subtitle": "Book a demo and we will walk you through our security architecture.",
+      "book_demo": "Book demo"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Questions, answered clearly.",
+      "subtitle": "Everything you need to know about Allybi, organized by topic."
+    },
+    "tab": {
+      "product": "Product",
+      "integrations": "Integrations",
+      "security": "Security",
+      "sending": "Sending & confirmation",
+      "pricing": "Pricing & access",
+      "usecases": "Use cases"
+    },
+    "product": {
+      "q1": "What does Allybi actually do?",
+      "a1": "Allybi is a private AI workspace for sensitive document work. It brings files, cloud folders, email context, and message handoff into one place -- so you can search, compare versions, prepare responses, and send with source-cited answers and confirmation before anything goes out.",
+      "q2": "How does version comparison work?",
+      "a2": "Upload two or more versions of a document and ask Allybi what changed. It identifies specific differences -- clauses, numbers, dates, language -- and cites the exact page and section in each version.",
+      "q3": "What file types are supported?",
+      "a3": "Allybi supports PDF, DOCX, XLSX, PPTX, and common text formats. You can upload files directly or import them from connected integrations like OneDrive or SharePoint."
+    },
+    "integrations": {
+      "q1": "Which integrations are live now?",
+      "a1": "Outlook, OneDrive, and SharePoint are live now. WhatsApp is ready for message handoff. All connections use OAuth with scoped permissions.",
+      "q2": "What is coming soon?",
+      "a2": "Gmail and Google Drive are coming soon. We prioritize integrations based on customer needs during guided onboarding.",
+      "q3": "How does WhatsApp work in Allybi?",
+      "a3": "Allybi helps you prepare a message for the right contact -- you review the content and recipient, then Allybi opens WhatsApp with everything ready. It is a review-before-send handoff, not a synced inbox connection."
+    },
+    "security": {
+      "q1": "Does Allybi train on my documents?",
+      "a1": "No. Your documents are never used to train AI models. This is contractually guaranteed. Allybi uses your files only to generate answers during your session.",
+      "q2": "How is data encrypted?",
+      "a2": "All data is encrypted with TLS in transit and AES-256-GCM at rest. Encryption keys are managed separately from document storage. Workspaces are isolated so no data leaks between projects or users."
+    },
+    "sending": {
+      "q1": "What happens before an email is sent?",
+      "a1": "Allybi always shows a confirmation screen before anything is sent. You review the content, recipient, attachments, and version before confirming. Nothing leaves without your explicit approval.",
+      "q2": "Can I review before WhatsApp handoff?",
+      "a2": "Yes. WhatsApp handoff follows the same review-before-send pattern. You see the message content and recipient before Allybi opens WhatsApp. Nothing is sent automatically."
+    },
+    "pricing": {
+      "q1": "How do I get access?",
+      "a1": "Allybi is currently in guided access phase. Book a demo and we will walk you through the product, set up your workspace, and configure your integrations with you.",
+      "q2": "Is there a free trial?",
+      "a2": "We work directly with each team during the guided access phase to ensure Allybi fits your workflow. Book a demo to discuss access options and onboarding."
+    },
+    "usecases": {
+      "q1": "Is Allybi built for legal work?",
+      "a1": "Yes. Allybi was designed for professionals handling sensitive documents. Compare clauses between contract versions, search across matter files, and send the right version with confirmation. All projects are isolated and encrypted.",
+      "q2": "Can finance teams use Allybi?",
+      "a2": "Absolutely. Finance teams use Allybi to search across board decks, models, and reports. Pull revenue figures, compare quarterly data, and get answers with exact file and page references."
+    },
+    "cta": {
+      "title": "Still have questions?",
+      "subtitle": "We are happy to help. Book a demo or reach out directly.",
+      "book_demo": "Book demo",
+      "contact": "Contact us"
+    }
+  },
+  "finance": {
+    "hero": {
+      "eyebrow": "For finance",
+      "title": "Find the right deck, model, or metric — without digging.",
+      "subtitle": "Search across financial documents, compare versions, and prepare responses grounded in your actual data — with source citations and confirmation before send."
+    },
+    "pressure": {
+      "title": "Before board meetings, quarterly reviews, investor updates.",
+      "subtitle": "The pressure is not the analysis. It is finding the right file, the right number, and the right version before the window closes.",
+      "card1_title": "Three versions of the deck",
+      "card1_desc": "Board_Deck_Q4_v2, Board_Deck_Q4_final, Board_Deck_Q4_final_updated. Which one has the right ARR figure?",
+      "card2_title": "Numbers buried across files",
+      "card2_desc": "Revenue in the model, ARR in the deck, burn rate in the board memo. The CFO needs one number, from the right source, now.",
+      "card3_title": "Wrong attachment sent",
+      "card3_desc": "Sending last quarter's model to the board erodes trust instantly. The mistake is invisible until it is too late."
+    },
+    "feature1": {
+      "title": "Find numbers across documents.",
+      "desc": "Ask \"What was Q4 ARR in the latest board deck?\" and get the exact figure with a citation to the source file and slide. Revenue figures, metrics, KPIs — all searchable across your uploaded documents, with references you can verify."
+    },
+    "feature2": {
+      "title": "Compare across quarterly versions.",
+      "desc": "Upload multiple versions and ask what changed. Allybi will show you the differences between Q3 and Q4 figures with exact source references for both files — so you can verify before presenting."
+    },
+    "feature3": {
+      "title": "Prepare the response with confirmation.",
+      "desc": "Draft an email to the board with the latest deck attached. Allybi finds the correct version, composes the message, and shows you exactly which file, recipient, and content will be sent — nothing goes out until you confirm."
+    },
+    "mock1": {
+      "query": "\"What was Q4 ARR in the latest board deck?\"",
+      "badge": "Grounded answer",
+      "answer": "Q4 ARR reached <strong>$4.2M</strong>, up 38% from Q3.",
+      "source": "Board_Deck_Q4.pdf — slide 7"
+    },
+    "mock2": {
+      "query": "\"Compare ARR between Q3 and Q4 board decks\"",
+      "src_q3": "Board_Deck_Q3.pdf — slide 7",
+      "src_q4": "Board_Deck_Q4.pdf — slide 7"
+    },
+    "mock3": {
+      "confirm_label": "Confirm before send",
+      "to": "To",
+      "attachment": "Attachment",
+      "via": "Via",
+      "btn": "Confirm"
+    },
+    "security": {
+      "title": "Private by design. Grounded by default.",
+      "subtitle": "Your financial data never trains models. Every answer cites the source. Nothing is sent without your approval.",
+      "p1_title": "Encrypted at rest and in transit",
+      "p1_desc": "Financial models and board decks stay fully encrypted.",
+      "p2_title": "No model training",
+      "p2_desc": "Your data never trains AI models. Contractually guaranteed.",
+      "p3_title": "Isolated workspaces",
+      "p3_desc": "Each project is isolated. No data leakage between workspaces.",
+      "p4_title": "Confirmation before every send",
+      "p4_desc": "You review file, version, and recipient before anything leaves.",
+      "cta": "Learn more about security"
+    },
+    "cta": {
+      "title": "Your financial documents deserve more clarity.",
+      "subtitle": "See how Allybi fits the way your finance team already works."
+    }
+  },
+  "business": {
+    "hero": {
+      "eyebrow": "For operations",
+      "title": "Find the approved proposal, plan, or follow-up.",
+      "subtitle": "Search across operational documents, find the latest version, and prepare responses — with source-cited answers and confirmation before anything is sent."
+    },
+    "pressure": {
+      "title": "Client follow-ups, proposal tracking, compliance checks.",
+      "subtitle": "The bottleneck is not the decision. It is finding the right document, the latest version, and the right context to act on.",
+      "card1_title": "Client waiting for the follow-up",
+      "card1_desc": "The client asked for the updated SOW two days ago. The file is somewhere between email, folders, and three Slack threads.",
+      "card2_title": "Proposal_final_v2_updated",
+      "card2_desc": "Version confusion wastes time and erodes trust. Sending the wrong version to a client or partner is invisible until it causes damage.",
+      "card3_title": "Compliance without the paper trail",
+      "card3_desc": "When a compliance check lands, you need to trace back to the approved proposal and the decision trail. Scattered files make this harder than it should be."
+    },
+    "feature1": {
+      "title": "Search across proposals and project plans.",
+      "desc": "Ask \"What are the deliverables in the Acme SOW?\" and get the answer with a citation to the exact file and page. Search across all your uploaded documents in one query — proposals, project plans, meeting notes, budgets."
+    },
+    "feature2": {
+      "title": "Find the latest version.",
+      "desc": "When you ask for a document, Allybi searches across all uploaded versions and identifies which one is the most recent. No more opening five folders to guess which \"final\" is actually final."
+    },
+    "feature3": {
+      "title": "Draft responses from your own context.",
+      "desc": "Tell Allybi to draft a follow-up with the latest SOW attached. It composes the message grounded in your documents — no fabricated content — and shows you exactly what will be sent before you confirm."
+    },
+    "feature4": {
+      "title": "Confirmation before send.",
+      "desc": "Whether it is an email via Outlook or a message handoff to WhatsApp, Allybi always shows you the content, the file, and the recipient before anything goes out. Nothing is sent without your explicit approval."
+    },
+    "mock1": {
+      "query": "\"What are the deliverables in the Acme SOW?\"",
+      "badge": "Grounded answer",
+      "answer": "3 deliverables totaling <strong>$185K</strong>: Phase 1 discovery ($45K), Phase 2 implementation ($95K), Phase 3 training ($45K).",
+      "source": "Acme_SOW_v2.docx — p. 3"
+    },
+    "mock2": {
+      "latest": "Latest"
+    },
+    "mock3": {
+      "to": "To",
+      "body": "Hi James, following up on our conversation. Attached is the updated SOW with the revised deliverable timeline we discussed. Please review Section 3 for the updated milestones.",
+      "attachment": "Acme_SOW_v2.docx",
+      "badge": "Latest"
+    },
+    "mock4": {
+      "confirm_label": "Confirm before send",
+      "to": "To",
+      "attachment": "Attachment",
+      "via": "Via",
+      "btn": "Confirm"
+    },
+    "cta": {
+      "title": "Your projects deserve more clarity.",
+      "subtitle": "See how Allybi fits the way your operations team already works."
+    }
   }
 }

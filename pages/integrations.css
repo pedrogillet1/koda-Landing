@@ -1,180 +1,474 @@
 /* ==========================================================================
-   Integrations Page
+   Integrations Page — Redesigned
    ========================================================================== */
 
 /* ---------- Hero ---------- */
 .integ-hero {
   text-align: center;
-  padding-top: calc(var(--allybi-section-py) + 40px);
+  padding-top: calc(var(--allybi-section-py) + 48px);
 }
 
 .integ-hero__inner {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
-.integ-hero .allybi-eyebrow {
-  margin-bottom: var(--allybi-space-4);
+.integ-hero .allybi-chip {
+  margin-bottom: var(--allybi-space-5);
 }
 
 .integ-hero .allybi-h1 {
   margin-bottom: var(--allybi-space-6);
+  text-wrap: balance;
 }
 
 .integ-hero .allybi-body-lg {
   color: var(--allybi-text-secondary);
+  margin-bottom: var(--allybi-space-10);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ---------- Integration Cards ---------- */
-.integ-card {
+.integ-hero__cta {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Premium Integration Cards (Available Now) ---------- */
+.integ-live__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--allybi-space-8);
+}
+
+.integ-premium-card {
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-xl);
+  padding: var(--allybi-space-10);
+  transition:
+    transform var(--allybi-duration-ui) var(--allybi-ease),
+    box-shadow var(--allybi-duration-ui) var(--allybi-ease),
+    border-color var(--allybi-duration-ui) var(--allybi-ease);
   display: flex;
   flex-direction: column;
-  padding: var(--allybi-space-10);
+  gap: var(--allybi-space-6);
+  position: relative;
+  overflow: hidden;
 }
 
-.integ-card__icon {
-  width: 56px;
-  height: 56px;
+.integ-premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: attr(data-accent);
+  border-radius: var(--allybi-radius-xl) var(--allybi-radius-xl) 0 0;
+  opacity: 0;
+  transition: opacity var(--allybi-duration-ui) var(--allybi-ease);
+}
+
+.integ-premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--allybi-shadow-lg);
+  border-color: var(--allybi-border-strong);
+}
+
+.integ-premium-card:hover::before {
+  opacity: 1;
+}
+
+/* Color accents via nth-child */
+.integ-live__grid .integ-premium-card:nth-child(1)::before { background: #0078D4; }
+.integ-live__grid .integ-premium-card:nth-child(2)::before { background: #0364B8; }
+.integ-live__grid .integ-premium-card:nth-child(3)::before { background: #036C70; }
+.integ-live__grid .integ-premium-card:nth-child(4)::before { background: #25D366; }
+
+.integ-premium-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-4);
+}
+
+.integ-premium-card__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--allybi-space-6);
 }
 
-.integ-card__icon img {
+.integ-premium-card__icon img,
+.integ-premium-card__icon svg {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.integ-card__icon--docs {
-  width: 72px;
-  height: 72px;
-}
-
-.integ-card__title {
+.integ-premium-card__title {
   font-size: var(--allybi-card-title-size);
   line-height: var(--allybi-card-title-lh);
-  font-weight: var(--allybi-weight-semibold);
-  color: var(--allybi-text-strongest);
-  margin-bottom: var(--allybi-space-3);
-}
-
-.integ-card__desc {
-  font-size: var(--allybi-body-sm-size);
-  line-height: var(--allybi-body-sm-lh);
-  color: var(--allybi-text-secondary);
-}
-
-/* ---------- Workflow Cards ---------- */
-.integ-workflow-card {
-  position: relative;
-  padding-top: var(--allybi-space-12);
-}
-
-.integ-workflow-number {
-  position: absolute;
-  top: var(--allybi-space-8);
-  left: var(--allybi-space-8);
-  font-size: 13px;
   font-weight: var(--allybi-weight-bold);
-  color: var(--allybi-accent);
-  letter-spacing: var(--allybi-tracking-wide);
-}
-
-.integ-workflow-title {
-  font-size: var(--allybi-card-title-size);
-  line-height: var(--allybi-card-title-lh);
-  font-weight: var(--allybi-weight-semibold);
   color: var(--allybi-text-strongest);
-  margin-bottom: var(--allybi-space-3);
+  margin-bottom: 2px;
 }
 
-.integ-workflow-desc {
-  font-size: var(--allybi-body-sm-size);
-  line-height: var(--allybi-body-sm-lh);
-  color: var(--allybi-text-secondary);
-}
-
-/* ---------- Permissions & Control ---------- */
-.integ-control__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--allybi-space-16);
-  align-items: start;
-}
-
-.integ-control__text .allybi-h2 {
-  margin-bottom: var(--allybi-space-4);
-}
-
-.integ-control__text .allybi-body-lg {
-  color: var(--allybi-text-secondary);
-}
-
-.integ-control__points {
+.integ-premium-card__features {
   display: flex;
   flex-direction: column;
-  gap: var(--allybi-space-8);
+  gap: var(--allybi-space-3);
+  flex: 1;
 }
 
-.integ-control-point {
+.integ-premium-card__features li {
   display: flex;
-  gap: var(--allybi-space-4);
   align-items: flex-start;
+  gap: var(--allybi-space-3);
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-secondary);
 }
 
-.integ-control-point__icon {
+.integ-premium-card__features li svg {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 2px;
 }
 
-.integ-control-point__title {
+.integ-premium-card__where {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-3);
+  padding-top: var(--allybi-space-4);
+  border-top: 1px solid var(--allybi-border-subtle);
+}
+
+.integ-premium-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--allybi-space-2);
+}
+
+.integ-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-muted);
+  background: var(--allybi-bg-alt-1);
+  border-radius: var(--allybi-radius-full);
+  letter-spacing: 0.01em;
+}
+
+.integ-premium-card__notice {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-2);
+  padding: var(--allybi-space-3) var(--allybi-space-4);
+  background: var(--allybi-bg-alt-1);
+  border-radius: var(--allybi-radius-sm);
+}
+
+.integ-premium-card__notice .allybi-body-sm {
+  font-style: italic;
+}
+
+/* ---------- Coming Soon Cards ---------- */
+.integ-coming__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--allybi-space-6);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.integ-coming-card {
+  padding: var(--allybi-space-8);
+  border-style: dashed;
+  border-color: var(--allybi-border-strong);
+  position: relative;
+}
+
+.integ-coming-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--allybi-shadow-sm);
+}
+
+.integ-coming-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-3);
+  margin-bottom: var(--allybi-space-4);
+}
+
+.integ-coming-card__icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.integ-coming-card__icon img,
+.integ-coming-card__icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.integ-coming-card__title {
   font-size: var(--allybi-body-size);
   font-weight: var(--allybi-weight-semibold);
   color: var(--allybi-text-strongest);
-  margin-bottom: var(--allybi-space-1);
+  margin-bottom: 2px;
 }
 
-.integ-control-point__desc {
+.integ-coming-card__desc {
   font-size: var(--allybi-body-sm-size);
   line-height: var(--allybi-body-sm-lh);
-  color: var(--allybi-text-secondary);
+  color: var(--allybi-text-muted);
 }
 
-/* ---------- CTA ---------- */
-.integ-cta__inner {
+/* ---------- Flow Pipeline ---------- */
+.integ-flow__pipeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  padding: var(--allybi-space-10) 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.integ-flow__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--allybi-space-2);
+  min-width: 120px;
+  max-width: 150px;
+  flex-shrink: 0;
+}
+
+.integ-flow__step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--allybi-radius-lg);
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--allybi-text-secondary);
+  box-shadow: var(--allybi-shadow-sm);
+  transition: all var(--allybi-duration-ui) var(--allybi-ease);
+}
+
+.integ-flow__step:hover .integ-flow__step-icon {
+  transform: translateY(-2px);
+  box-shadow: var(--allybi-shadow-md);
+}
+
+.integ-flow__step-icon--accent {
+  background: var(--allybi-accent-subtle);
+  border-color: var(--allybi-accent);
+  color: var(--allybi-accent);
+}
+
+.integ-flow__step-icon--trust {
+  background: var(--allybi-trust-subtle);
+  border-color: var(--allybi-trust);
+  color: var(--allybi-trust);
+}
+
+.integ-flow__step-label {
+  font-size: 13px;
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-top: var(--allybi-space-1);
+}
+
+.integ-flow__step-detail {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--allybi-text-muted);
+  max-width: 130px;
+}
+
+.integ-flow__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--allybi-text-subtle);
+  padding: 0 var(--allybi-space-1);
+  margin-top: 16px; /* align with icon center */
+  flex-shrink: 0;
+}
+
+.integ-flow__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- Capability Matrix ---------- */
+.integ-matrix__wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--allybi-radius-lg);
+  border: 1px solid var(--allybi-border-default);
+  background: var(--allybi-bg-surface);
+  box-shadow: var(--allybi-shadow-sm);
+}
+
+.integ-matrix__table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-size: var(--allybi-body-sm-size);
+}
+
+.integ-matrix__table thead {
+  background: var(--allybi-bg-alt-1);
+}
+
+.integ-matrix__table th {
+  padding: var(--allybi-space-4) var(--allybi-space-4);
+  font-weight: var(--allybi-weight-semibold);
+  font-size: 13px;
+  color: var(--allybi-text-strongest);
+  text-align: center;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--allybi-border-default);
+  vertical-align: middle;
+}
+
+.integ-matrix__table th:first-child {
+  text-align: left;
+  padding-left: var(--allybi-space-6);
+  min-width: 180px;
+}
+
+.integ-matrix__col-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--allybi-space-1);
+}
+
+.integ-matrix__col-icon img,
+.integ-matrix__col-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.integ-matrix__table td {
+  padding: var(--allybi-space-4);
+  text-align: center;
+  border-bottom: 1px solid var(--allybi-border-subtle);
+  vertical-align: middle;
+}
+
+.integ-matrix__table td:first-child {
+  text-align: left;
+  padding-left: var(--allybi-space-6);
+  font-weight: var(--allybi-weight-medium);
+  color: var(--allybi-text-primary);
+}
+
+.integ-matrix__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.integ-matrix__table tbody tr:hover {
+  background: var(--allybi-bg-alt-1);
+}
+
+.integ-matrix__check,
+.integ-matrix__x {
+  display: table-cell;
+}
+
+.integ-matrix__check svg,
+.integ-matrix__x svg {
+  display: inline-block;
+}
+
+.integ-matrix__coming-col {
+  background: var(--allybi-coming-subtle);
+}
+
+.integ-matrix__table thead th.integ-matrix__coming-col {
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.integ-matrix__status-row td {
+  padding-top: var(--allybi-space-5);
+  padding-bottom: var(--allybi-space-5);
+  border-top: 1px solid var(--allybi-border-default);
+}
+
+/* ---------- Final CTA (reuse s-cta pattern from home) ---------- */
+.s-cta {
+  background: var(--allybi-bg-dark);
+  color: var(--allybi-text-inverse);
+  padding: var(--allybi-section-py) 0;
+}
+
+.s-cta__inner {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.integ-cta__inner .allybi-h2 {
+.s-cta__inner h2 {
+  font-size: var(--allybi-section-h2-size);
+  font-weight: var(--allybi-weight-bold);
+  letter-spacing: var(--allybi-tracking-tighter);
   margin-bottom: var(--allybi-space-4);
 }
 
-.integ-cta__inner .allybi-body-lg {
-  color: rgba(255, 255, 255, 0.7);
+.s-cta__inner p {
+  font-size: var(--allybi-section-intro-size);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: var(--allybi-space-10);
+  line-height: var(--allybi-section-intro-lh);
 }
 
-.integ-cta__buttons {
+.s-cta__ctas {
   display: flex;
   justify-content: center;
   gap: var(--allybi-space-4);
   flex-wrap: wrap;
 }
 
-/* ---------- Mobile ---------- */
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
 /* ---------- Tablet landscape ---------- */
 @media (max-width: 1024px) {
-  .integ-control__inner {
-    gap: var(--allybi-space-10);
+  .integ-flow__pipeline {
+    gap: 0;
+    padding: var(--allybi-space-8) 0;
+  }
+
+  .integ-flow__step {
+    min-width: 100px;
+    max-width: 130px;
+  }
+
+  .integ-flow__step-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .integ-flow__arrow {
+    margin-top: 12px;
   }
 }
 
@@ -184,74 +478,123 @@
     padding-top: calc(var(--allybi-section-py-mobile) + 32px);
   }
 
-  .integ-control__inner {
+  .integ-live__grid {
     grid-template-columns: 1fr;
-    gap: var(--allybi-space-10);
+    gap: var(--allybi-space-5);
   }
 
-  .integ-cta__buttons {
+  .integ-premium-card {
+    padding: var(--allybi-space-8);
+  }
+
+  .integ-coming__grid {
+    grid-template-columns: 1fr;
+    gap: var(--allybi-space-4);
+  }
+
+  /* Flow pipeline: scroll horizontally */
+  .integ-flow__pipeline {
+    justify-content: flex-start;
+    padding-bottom: var(--allybi-space-4);
+  }
+
+  .integ-flow__step {
+    min-width: 90px;
+    max-width: 110px;
+  }
+
+  .integ-flow__step-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .integ-flow__step-label {
+    font-size: 12px;
+  }
+
+  .integ-flow__step-detail {
+    font-size: 10px;
+  }
+
+  .integ-flow__arrow {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .integ-flow__arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Matrix table: ensure scroll */
+  .integ-matrix__wrap {
+    margin-left: calc(-1 * var(--allybi-gutter));
+    margin-right: calc(-1 * var(--allybi-gutter));
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .s-cta__ctas {
     flex-direction: column;
     align-items: center;
   }
 
-  .integ-cta__buttons .allybi-btn {
+  .s-cta__ctas .allybi-btn {
     width: 100%;
     max-width: 320px;
-    min-height: 44px;
-  }
-
-  /* Integration cards: 2x2 on phone */
-  .integ-card-grid.allybi-grid-4,
-  .allybi-grid-4:has(.integ-card) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Workflow cards: single column */
-  .integ-workflow-grid.allybi-grid-3,
-  .allybi-grid-3:has(.integ-workflow-card) {
-    grid-template-columns: 1fr;
   }
 }
 
 /* ---------- Phone ---------- */
 @media (max-width: 600px) {
-  .integ-card {
+  .integ-premium-card {
     padding: var(--allybi-space-6);
+    gap: var(--allybi-space-4);
   }
 
-  .integ-workflow-card {
-    padding-top: var(--allybi-space-8);
+  .integ-premium-card__icon {
+    width: 40px;
+    height: 40px;
   }
 
-  .integ-control__points {
-    gap: var(--allybi-space-5);
+  .integ-premium-card__where {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--allybi-space-2);
   }
 
-  .integ-card__icon {
-    width: 44px;
-    height: 44px;
-  }
-
-  .integ-card__icon--docs {
-    width: 56px;
-    height: 56px;
+  .integ-coming-card {
+    padding: var(--allybi-space-6);
   }
 }
 
 /* ---------- Small phone ---------- */
 @media (max-width: 390px) {
-  .integ-card {
+  .integ-premium-card {
     padding: var(--allybi-space-5);
   }
 
-  .integ-card__icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: var(--allybi-space-4);
+  .integ-premium-card__icon {
+    width: 36px;
+    height: 36px;
   }
 
-  .integ-workflow-number {
-    left: var(--allybi-space-5);
-    top: var(--allybi-space-5);
+  .integ-coming-card {
+    padding: var(--allybi-space-5);
+  }
+
+  .integ-flow__step {
+    min-width: 80px;
+  }
+
+  .integ-flow__step-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .integ-matrix__wrap {
+    margin-left: calc(-1 * var(--allybi-gutter-mobile));
+    margin-right: calc(-1 * var(--allybi-gutter-mobile));
   }
 }

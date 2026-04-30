@@ -3,412 +3,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0D0F12">
-
-  <!-- Favicon -->
+  <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
-
-  <!-- SEO -->
   <title>About Allybi — Private AI for Teams That Can't Afford Chaos</title>
-  <meta name="description" content="We built Allybi for people who work with sensitive files and can't afford chaos — or surveillance. Learn about our mission, values, and product philosophy.">
-
-  <!-- Open Graph -->
+  <meta name="description" content="We built Allybi for teams that cannot afford chaos or surveillance. Learn about our mission, principles, and product philosophy.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="About Allybi — Private AI for Teams That Can't Afford Chaos">
-  <meta property="og:description" content="We built Allybi for people who work with sensitive files and can't afford chaos — or surveillance. Learn about our mission, values, and product philosophy.">
-  <meta property="og:image" content="assets/images/og-about.png">
+  <meta property="og:description" content="We built Allybi for teams that cannot afford chaos or surveillance. Learn about our mission, principles, and product philosophy.">
   <meta property="og:url" content="https://allybi.co/about.html">
   <meta property="og:site_name" content="Allybi">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Allybi — Private AI for Teams That Can't Afford Chaos">
-  <meta name="twitter:description" content="We built Allybi for people who work with sensitive files and can't afford chaos — or surveillance. Learn about our mission, values, and product philosophy.">
-  <meta name="twitter:image" content="assets/images/og-about.png">
-
-  <!-- Fonts -->
+  <meta name="twitter:description" content="We built Allybi for teams that cannot afford chaos or surveillance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Design System -->
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
-
-  <!-- Page-specific CSS -->
   <link rel="stylesheet" href="pages/about.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
 </head>
 <body>
 
-  <!-- ================================================================
-       HEADER
-       ================================================================ -->
-  <header id="allybi-header" class="allybi-header">
-    <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
-      <nav class="allybi-nav desktop-only">
-        <a href="how-it-works.html" class="nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="use-case-legal.html" class="nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
-        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="/#faq" class="nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      </nav>
-      <div class="header-ctas desktop-only">
-        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+        </div>
       </div>
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- ================================================================
-       MOBILE MENU
-       ================================================================ -->
-  <div id="allybi-mobile-menu" class="mobile-menu">
-    <nav class="mobile-menu-nav">
-      <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-      <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
-      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="/#faq" class="mobile-nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-      <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
-    <div class="mobile-ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <div class="header-ctas desktop-only">
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo" data-magnetic="0.2">Book demo</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+      <div class="mobile-dropdown-items">
+        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+      </div>
+    </div>
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+      <div class="mobile-dropdown-items">
+        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+        <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="about-hero allybi-section">
+  <div class="allybi-container about-hero-inner">
+    <span class="allybi-hero-eyebrow allybi-reveal" data-i18n-key="about.hero.eyebrow">About Allybi</span>
+    <h1 class="allybi-h1 allybi-reveal" data-i18n-key="about.hero.title">We built Allybi for teams that cannot afford chaos or surveillance.</h1>
+    <p class="allybi-body-lg allybi-reveal" data-i18n-key="about.hero.subtitle">Sensitive work deserves tools that feel calm, clear, private, and trustworthy.</p>
+  </div>
+</section>
+
+<!-- WHY ALLYBI EXISTS -->
+<section class="allybi-section about-narrative">
+  <div class="allybi-narrow">
+    <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.why.title">Why Allybi exists</h2>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.why.p1">Every day, professionals in legal, finance, and business handle hundreds of documents they did not create. Contracts arrive in different formats. Spreadsheets get duplicated. Slide decks proliferate across inboxes. Finding the right file at the right time becomes a tax on every decision you make.</p>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.why.p2">Most AI tools promise to fix this, but they introduce a new problem: they require you to hand over your data with no transparency about how it is used, stored, or trained on. For teams working with sensitive information, that tradeoff is not acceptable.</p>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.why.p3">Allybi was built to eliminate both problems. One workspace where you can search, compare versions, prepare responses, and send with source-cited answers and confirmation before anything goes out.</p>
+  </div>
+</section>
+
+<!-- WHAT WE BELIEVE -->
+<section class="allybi-section about-principles" style="background-color: var(--allybi-bg-alt-1);">
+  <div class="allybi-content">
+    <div class="allybi-section-header">
+      <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.beliefs.title">What we believe</h2>
+    </div>
+    <div class="allybi-grid-3 about-principles-grid allybi-stagger">
+
+      <div class="allybi-card about-principle-card allybi-reveal">
+        <div class="about-principle-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="10" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
+            <circle cx="16" cy="16" r="4" fill="var(--allybi-text-strongest)"/>
+          </svg>
+        </div>
+        <h3 class="allybi-h3" data-i18n-key="about.beliefs.clarity_title">Clarity over clutter</h3>
+        <p class="allybi-body" data-i18n-key="about.beliefs.clarity_desc">Every screen, every result, and every action should be immediately understandable. No feature bloat. No noise.</p>
+      </div>
+
+      <div class="allybi-card about-principle-card allybi-reveal">
+        <div class="about-principle-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="6" y="8" width="20" height="16" rx="3" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
+            <circle cx="12" cy="16" r="2.5" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
+            <line x1="14.5" y1="16" x2="22" y2="16" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="allybi-h3" data-i18n-key="about.beliefs.control_title">Control over black-box magic</h3>
+        <p class="allybi-body" data-i18n-key="about.beliefs.control_desc">You decide what gets shared, sent, or changed. AI assists; you confirm. No silent automation, no hidden side effects.</p>
+      </div>
+
+      <div class="allybi-card about-principle-card allybi-reveal">
+        <div class="about-principle-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="8" y="5" width="16" height="22" rx="2" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
+            <path d="M12 12h8M12 16h8M12 20h5" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M21 22l3 3" stroke="var(--allybi-trust)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="allybi-h3" data-i18n-key="about.beliefs.evidence_title">Evidence over vague output</h3>
+        <p class="allybi-body" data-i18n-key="about.beliefs.evidence_desc">Every AI answer cites its source. You can trace the reasoning, check the file, and verify before acting.</p>
+      </div>
+
+      <div class="allybi-card about-principle-card allybi-reveal">
+        <div class="about-principle-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M8 22c2-4 5-6 8-6s6 2 8 6" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 14c1-3 2.5-5 4-5s3 2 4 5" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="16" y1="8" x2="16" y2="6" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="allybi-h3" data-i18n-key="about.beliefs.calm_title">Calm over chaos</h3>
+        <p class="allybi-body" data-i18n-key="about.beliefs.calm_desc">Good tools reduce anxiety, not add to it. Allybi is designed to feel quiet, organized, and predictable.</p>
+      </div>
+
+      <div class="allybi-card about-principle-card allybi-reveal">
+        <div class="about-principle-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M18 4L8 18h7l-1 10 10-14h-7l1-10z" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="allybi-h3" data-i18n-key="about.beliefs.speed_title">Speed without recklessness</h3>
+        <p class="allybi-body" data-i18n-key="about.beliefs.speed_desc">Allybi helps you move faster -- but never at the cost of accuracy. Every answer is sourced, every action is verified, every send is confirmed.</p>
+      </div>
+
+      <div class="allybi-card about-principle-card allybi-reveal">
+        <div class="about-principle-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 27s8-4 8-10V10l-8-3-8 3v7c0 6 8 10 8 10z" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="12 16 15 19 20 13" stroke="var(--allybi-trust)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="allybi-h3" data-i18n-key="about.beliefs.privacy_title">Privacy by default</h3>
+        <p class="allybi-body" data-i18n-key="about.beliefs.privacy_desc">Your files are encrypted, isolated, and never used for model training. Privacy is not a feature toggle. It is the architecture.</p>
+      </div>
+
     </div>
   </div>
+</section>
 
-  <!-- ================================================================
-       MAIN CONTENT
-       ================================================================ -->
-  <main>
+<!-- WHAT WE OPTIMIZE FOR -->
+<section class="allybi-section about-optimize">
+  <div class="allybi-narrow">
+    <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.optimize.title">What we optimize for</h2>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.optimize.p1">Speed to clarity. Grounded answers that cite sources. User control at every step. We measure success by how quickly you can move from question to confident action -- without sacrificing accuracy or privacy.</p>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.optimize.p2">One private workspace where you can search across all your documents, compare versions, and take action -- all without switching between five different tools or worrying about where your data ends up.</p>
+  </div>
+</section>
 
-    <!-- Hero -->
-    <section class="about-hero allybi-section">
-      <div class="allybi-container about-hero-inner">
-        <span class="allybi-hero-eyebrow allybi-reveal" data-i18n-key="about.hero_eyebrow">About Allybi</span>
-        <h1 class="allybi-h1 allybi-reveal" data-i18n-key="about.hero_h1">We built Allybi for people who can't afford chaos or surveillance.</h1>
-        <p class="allybi-body-lg allybi-reveal" data-i18n-key="about.hero_support">Sensitive work deserves tools that feel calm, clear, private, and trustworthy.</p>
-      </div>
-    </section>
+<!-- WHAT WE WILL NEVER DO -->
+<section class="allybi-section about-never" style="background-color: var(--allybi-bg-alt-1);">
+  <div class="allybi-narrow">
+    <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.never.title">What we will never do</h2>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.never.p1">Sell your data. Train models on your files. Hide where AI-generated answers come from. Send anything without your confirmation. Access connections you have not authorized.</p>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.never.p2">These are not future commitments. They are current architecture decisions baked into how Allybi is built.</p>
+  </div>
+</section>
 
-    <!-- Why Allybi Exists -->
-    <section class="allybi-section about-narrative">
-      <div class="allybi-narrow">
-        <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.why_title">Why Allybi exists</h2>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.why_p1">Every day, professionals in legal, finance, and business handle hundreds of documents they did not create. Contracts arrive in different formats. Spreadsheets get duplicated. Slide decks proliferate across inboxes. Finding the right file at the right time becomes a tax on every decision you make.</p>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.why_p2">Most AI tools promise to fix this, but they introduce a new problem: they require you to hand over your data with no transparency about how it is used, stored, or trained on. For teams working with sensitive information, that tradeoff is not acceptable.</p>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.why_p3">Allybi was built to eliminate both problems. One workspace where you can search, organize, edit, and act on your documents, with AI that is grounded in your files and respects your privacy at every step.</p>
-      </div>
-    </section>
-
-    <!-- The Problem We Refuse to Accept -->
-    <section class="allybi-section about-convictions" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-content">
-        <div class="allybi-section-header">
-          <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.convictions_title">The problem we refuse to accept</h2>
-        </div>
-        <div class="allybi-grid-3 allybi-stagger">
-          <div class="allybi-card allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="about.conviction_1_title">You should not have to trade privacy for speed.</h3>
-            <p class="allybi-body" data-i18n-key="about.conviction_1_desc">Fast answers should not come at the cost of exposing your most sensitive files to opaque systems. Privacy and performance belong together.</p>
-          </div>
-          <div class="allybi-card allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="about.conviction_2_title">You should not have to remember every filename to act quickly.</h3>
-            <p class="allybi-body" data-i18n-key="about.conviction_2_desc">Searching by exact name is a relic. You should be able to ask for what you need in plain language and find it instantly.</p>
-          </div>
-          <div class="allybi-card allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="about.conviction_3_title">AI should help without inventing certainty.</h3>
-            <p class="allybi-body" data-i18n-key="about.conviction_3_desc">When AI answers your question, it should cite the source. When it does not know, it should say so. Grounded outputs are the only outputs worth trusting.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Principles -->
-    <section class="allybi-section about-principles">
-      <div class="allybi-content">
-        <div class="allybi-section-header">
-          <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.principles_title">Product principles</h2>
-        </div>
-        <div class="allybi-grid-3 about-principles-grid allybi-stagger">
-
-          <!-- Clarity -->
-          <div class="allybi-card about-principle-card allybi-reveal">
-            <div class="about-principle-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="10" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
-                <circle cx="16" cy="16" r="4" fill="var(--allybi-text-strongest)"/>
-              </svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="about.principle_1_title">Clarity over clutter</h3>
-            <p class="allybi-body" data-i18n-key="about.principle_1_desc">Every screen, every result, and every action should be immediately understandable. No feature bloat. No noise.</p>
-          </div>
-
-          <!-- Control -->
-          <div class="allybi-card about-principle-card allybi-reveal">
-            <div class="about-principle-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="8" width="20" height="16" rx="3" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
-                <circle cx="12" cy="16" r="2.5" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
-                <line x1="14.5" y1="16" x2="22" y2="16" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="about.principle_2_title">Control over black-box magic</h3>
-            <p class="allybi-body" data-i18n-key="about.principle_2_desc">You decide what gets shared, sent, or changed. AI assists; you confirm. No silent automation, no hidden side effects.</p>
-          </div>
-
-          <!-- Evidence -->
-          <div class="allybi-card about-principle-card allybi-reveal">
-            <div class="about-principle-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="8" y="5" width="16" height="22" rx="2" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
-                <path d="M12 12h8M12 16h8M12 20h5" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M21 22l3 3" stroke="var(--allybi-trust)" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="about.principle_3_title">Evidence over vague output</h3>
-            <p class="allybi-body" data-i18n-key="about.principle_3_desc">Every AI answer cites its source. You can trace the reasoning, check the file, and verify before acting.</p>
-          </div>
-
-          <!-- Calm -->
-          <div class="allybi-card about-principle-card allybi-reveal">
-            <div class="about-principle-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 22c2-4 5-6 8-6s6 2 8 6" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M12 14c1-3 2.5-5 4-5s3 2 4 5" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="16" y1="8" x2="16" y2="6" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="about.principle_4_title">Calm over workflow chaos</h3>
-            <p class="allybi-body" data-i18n-key="about.principle_4_desc">Good tools reduce anxiety, not add to it. Allybi is designed to feel quiet, organized, and predictable.</p>
-          </div>
-
-          <!-- Privacy -->
-          <div class="allybi-card about-principle-card allybi-reveal">
-            <div class="about-principle-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="14" width="12" height="10" rx="2" stroke="var(--allybi-text-strongest)" stroke-width="1.5"/>
-                <path d="M12 14v-3a4 4 0 118 0v3" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="16" cy="19.5" r="1.5" fill="var(--allybi-text-strongest)"/>
-              </svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="about.principle_5_title">Privacy by default</h3>
-            <p class="allybi-body" data-i18n-key="about.principle_5_desc">Your files are encrypted, isolated, and never used for model training. Privacy is not a feature toggle. It is the architecture.</p>
-          </div>
-
-          <!-- Speed -->
-          <div class="allybi-card about-principle-card allybi-reveal">
-            <div class="about-principle-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 4L8 18h7l-1 10 10-14h-7l1-10z" stroke="var(--allybi-text-strongest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="allybi-h3" data-i18n-key="about.principle_6_title">Speed without recklessness</h3>
-            <p class="allybi-body" data-i18n-key="about.principle_6_desc">Allybi helps you move faster — but never at the cost of accuracy. Every answer is sourced, every action is verified, every send is confirmed.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Privacy and Grounded Outputs -->
-    <section class="allybi-section about-grounded" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-narrow">
-        <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.grounded_title">Privacy and grounded outputs</h2>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.grounded_p1">Allybi grounds every AI response in the documents you have uploaded. This means answers come from your files, not from the open internet or from general model knowledge. When the AI references a clause, a number, or a date, you can trace it back to the exact source.</p>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.grounded_p2">You control what files are included, what connections are active, and what actions the AI can take. Before anything is sent, shared, or changed, Allybi asks for your explicit confirmation. Nothing leaves your workspace without your approval.</p>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.grounded_p3">This is not a privacy policy add-on. It is how the product is built.</p>
-        <div class="about-grounded-cta allybi-reveal">
-          <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="about.grounded_cta">View security overview</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- What Allybi Is Building -->
-    <section class="allybi-section about-building">
-      <div class="allybi-narrow">
-        <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.building_title">What Allybi is building</h2>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.building_p1">One private workspace where you can search across all your documents, organize them by project or client, edit files directly, and take action, all without switching between five different tools.</p>
-        <p class="allybi-body allybi-reveal" data-i18n-key="about.building_p2">Less time hunting for the right file. Fewer wrong-version mistakes. Faster, calmer work on the things that actually matter.</p>
-      </div>
-    </section>
-
-    <!-- How We Build -->
-    <section class="allybi-section about-how-we-build" style="background-color: var(--allybi-bg-alt-1);">
-      <div class="allybi-content">
-        <div class="allybi-section-header">
-          <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.how_title">How we build</h2>
-        </div>
-        <div class="about-build-grid allybi-stagger">
-
-          <div class="about-build-col allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="about.build_1_title">What we optimize for</h3>
-            <p class="allybi-body" data-i18n-key="about.build_1_desc">Speed to clarity. Grounded answers that cite sources. User control at every step. We measure success by how quickly you can move from question to confident action.</p>
-          </div>
-
-          <div class="about-build-col allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="about.build_2_title">What we will never do</h3>
-            <p class="allybi-body" data-i18n-key="about.build_2_desc">Sell your data. Train models on your files without explicit consent. Hide where AI-generated answers come from. These are not future commitments. They are current architecture decisions.</p>
-          </div>
-
-          <div class="about-build-col allybi-reveal">
-            <h3 class="allybi-h3" data-i18n-key="about.build_3_title">How we make decisions</h3>
-            <p class="allybi-body" data-i18n-key="about.build_3_desc">Privacy first. Evidence over opinion. Ship and iterate. Every feature ships with the question: does this make sensitive work calmer and more trustworthy?</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="allybi-section about-final-cta">
-      <div class="allybi-container about-final-cta-inner">
-        <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.cta_title">See what calmer document work looks like.</h2>
-        <div class="about-cta-buttons allybi-reveal">
-          <a href="index.html" class="allybi-btn allybi-btn--primary" data-i18n-key="about.cta_explore">Explore the product</a>
-          <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="about.cta_security">View security overview</a>
-          <a href="contact.html" class="allybi-btn allybi-btn--ghost" data-i18n-key="about.cta_contact">Contact us</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ================================================================
-       FOOTER
-       ================================================================ -->
-  <footer class="allybi-footer">
-    <div class="allybi-footer-inner">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="/" class="footer-brand-logo">
-          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
-        </a>
-        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for professionals handling sensitive documents.</p>
-      </div>
-
-      <!-- Column grid -->
-      <div class="footer-columns">
-
-        <!-- Product -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-          <div class="footer-col-links">
-            <a href="/" data-i18n-key="footer.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          </div>
-        </div>
-
-        <!-- Use Cases -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
-          <div class="footer-col-links">
-            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-          </div>
-        </div>
-
-        <!-- Security -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
-          <div class="footer-col-links">
-            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
-          </div>
-        </div>
-
-        <!-- Resources -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
-          <div class="footer-col-links">
-            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
-            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-          </div>
-        </div>
-
-        <!-- Company -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-          <div class="footer-col-links">
-            <a href="about.html" data-i18n-key="footer.about">About</a>
-            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
-          </div>
-        </div>
-
-        <!-- Legal -->
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-          <div class="footer-col-links">
-            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
-            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
-          </div>
-        </div>
-
-      </div>
-
-            <!-- Bottom bar -->
-      <!-- Mobile compact links (visible only on small screens) -->
-      <div class="footer-mobile-links">
-        <a href="/" data-i18n-key="footer.overview">Overview</a>
-        <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-        <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-        <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-        <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-        <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-        <a href="pricing.html" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-        <a href="about.html" data-i18n-key="footer.about">About</a>
-        <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="request-demo.html" data-i18n-key="nav.book_demo">Book demo</a>
-        <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-        <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-        <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>
-        <a href="security.html" data-i18n-key="footer.security_privacy">Security &amp; Privacy</a>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
-        <div class="footer-bottom-right">
-          <div class="language-selector" id="footer-language-selector">
-            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-              <span class="lang-label">English</span>
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <ul class="language-menu hidden" role="listbox">
-              <li role="option" data-lang="en">English</li>
-              <li role="option" data-lang="pt">Portugues (BR)</li>
-              <li role="option" data-lang="es">Espanol</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
+<!-- THE KIND OF WORK -->
+<section class="allybi-section about-work">
+  <div class="allybi-narrow">
+    <h2 class="allybi-h2 allybi-reveal" data-i18n-key="about.work.title">The kind of work Allybi is built for</h2>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.work.p1">Contract review and clause comparison. Regulatory filings where the wrong version can cost millions. Due diligence across hundreds of documents. Client communications that demand the right attachment, the right data, the right tone.</p>
+    <p class="allybi-body allybi-reveal" data-i18n-key="about.work.p2">If your work involves sensitive files, high-stakes decisions, and time pressure, Allybi was built for you.</p>
+    <div class="about-grounded-cta allybi-reveal">
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="about.work.cta">Book demo</a>
+      <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="about.work.cta_security">View security overview</a>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- ================================================================
-       SCRIPTS
-       ================================================================ -->
-  <script src="language-switcher.js"></script>
-  <script src="allybi-header.js"></script>
-  <script src="animations.js"></script>
-  <script src="allybi-animations.js"></script>
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline" data-i18n-key="footer.tagline">Private AI workspace for sensitive document work.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+        <div class="footer-col-links">
+          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
+        <div class="footer-col-links">
+          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="footer.business">For operations</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+        <div class="footer-col-links">
+          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
+          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          <a href="about.html" data-i18n-key="footer.about">About</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+        <div class="footer-col-links">
+          <a href="tos.html">Terms of Service</a>
+          <a href="terms.html">Acceptable Use</a>
+          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="integration-data-use.html">Integrations & Data Use</a>
+          <a href="data-deletion.html">Data Deletion</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-mobile-links">
+      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+      <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
+      <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+      <a href="about.html" data-i18n-key="footer.about">About</a>
+      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <a href="request-demo.html" data-i18n-key="footer.request_demo">Book demo</a>
+      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+      <a href="terms.html" data-i18n-key="footer.terms">Terms</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Portugues (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Espanol</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
 
 </body>
 </html>

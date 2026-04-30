@@ -1,7 +1,6 @@
 /* ==========================================================================
-   Allybi Base
-   Global reset, typography classes, layout containers, section spacing,
-   utility classes, and scroll-reveal animation system.
+   Allybi Base v2.0
+   Global reset, typography, layout, section spacing, reveal animations.
    Requires: allybi-tokens.css
    ========================================================================== */
 
@@ -80,14 +79,14 @@ ol {
   font-weight: var(--allybi-hero-eyebrow-weight);
   letter-spacing: var(--allybi-tracking-wide);
   text-transform: uppercase;
-  color: var(--allybi-text-muted);
+  color: var(--allybi-accent);
 }
 
 .allybi-h1 {
   font-size: var(--allybi-hero-h1-size);
   line-height: var(--allybi-hero-h1-lh);
-  font-weight: var(--allybi-weight-bold);
-  letter-spacing: var(--allybi-tracking-tight);
+  font-weight: var(--allybi-hero-h1-weight);
+  letter-spacing: var(--allybi-tracking-tighter);
   color: var(--allybi-text-strongest);
 }
 
@@ -95,7 +94,7 @@ ol {
   font-size: var(--allybi-section-h2-size);
   line-height: var(--allybi-section-h2-lh);
   font-weight: var(--allybi-weight-bold);
-  letter-spacing: var(--allybi-tracking-tight);
+  letter-spacing: var(--allybi-tracking-tighter);
   color: var(--allybi-text-strongest);
 }
 
@@ -119,6 +118,12 @@ ol {
   line-height: var(--allybi-body-lh);
   font-weight: var(--allybi-weight-regular);
   color: var(--allybi-text-secondary);
+}
+
+.allybi-body-sm {
+  font-size: var(--allybi-body-sm-size);
+  line-height: var(--allybi-body-sm-lh);
+  color: var(--allybi-text-muted);
 }
 
 .allybi-meta {
@@ -160,11 +165,16 @@ ol {
 .allybi-section {
   padding-top: var(--allybi-section-py);
   padding-bottom: var(--allybi-section-py);
+  position: relative;
 }
 
 .allybi-section--dense {
   padding-top: var(--allybi-section-py-dense);
   padding-bottom: var(--allybi-section-py-dense);
+}
+
+.allybi-section--flush-top {
+  padding-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -174,22 +184,15 @@ ol {
   }
 
   .allybi-section--dense {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .allybi-container {
-    padding-left: var(--allybi-gutter);
-    padding-right: var(--allybi-gutter);
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
 @media (max-width: 480px) {
   .allybi-container {
-    padding-left: var(--allybi-gutter-mobile, 20px);
-    padding-right: var(--allybi-gutter-mobile, 20px);
+    padding-left: var(--allybi-gutter-mobile);
+    padding-right: var(--allybi-gutter-mobile);
   }
 }
 
@@ -216,7 +219,7 @@ ol {
 /* ---------- Scroll-reveal animations ---------- */
 .allybi-reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(24px);
   transition:
     opacity var(--allybi-duration-section) var(--allybi-ease-out),
     transform var(--allybi-duration-section) var(--allybi-ease-out);
@@ -227,15 +230,41 @@ ol {
   transform: translateY(0);
 }
 
-/* Stagger children — up to 6 */
+/* Slide from left */
+.allybi-reveal--left {
+  transform: translateX(-32px) translateY(0);
+}
+.allybi-reveal--left.is-visible {
+  transform: translateX(0) translateY(0);
+}
+
+/* Slide from right */
+.allybi-reveal--right {
+  transform: translateX(32px) translateY(0);
+}
+.allybi-reveal--right.is-visible {
+  transform: translateX(0) translateY(0);
+}
+
+/* Scale up */
+.allybi-reveal--scale {
+  transform: scale(0.95) translateY(0);
+}
+.allybi-reveal--scale.is-visible {
+  transform: scale(1) translateY(0);
+}
+
+/* Stagger children — up to 8 */
 .allybi-stagger > :nth-child(1) { transition-delay: 0ms; }
 .allybi-stagger > :nth-child(2) { transition-delay: 80ms; }
 .allybi-stagger > :nth-child(3) { transition-delay: 160ms; }
 .allybi-stagger > :nth-child(4) { transition-delay: 240ms; }
 .allybi-stagger > :nth-child(5) { transition-delay: 320ms; }
 .allybi-stagger > :nth-child(6) { transition-delay: 400ms; }
+.allybi-stagger > :nth-child(7) { transition-delay: 480ms; }
+.allybi-stagger > :nth-child(8) { transition-delay: 560ms; }
 
-/* Reduced motion: instant reveal, no transforms */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .allybi-reveal {
     opacity: 1;
@@ -246,4 +275,17 @@ ol {
   .allybi-stagger > * {
     transition-delay: 0ms !important;
   }
+}
+
+/* ---------- Text utilities ---------- */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-balance { text-wrap: balance; }
+
+/* ---------- Gradient text ---------- */
+.allybi-gradient-text {
+  background: linear-gradient(135deg, var(--allybi-text-strongest) 0%, var(--allybi-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

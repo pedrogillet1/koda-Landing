@@ -3,304 +3,314 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0D0F12">
-
-  <!-- Favicon -->
+  <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
-
-  <!-- SEO -->
-  <title>Customer Stories — How Teams Use Allybi</title>
-  <meta name="description" content="See how legal, finance, and operations teams use Allybi when it matters most. Real work, real pressure, real clarity.">
-
-  <!-- Open Graph -->
+  <title>Representative Workflows — How Teams Use Allybi</title>
+  <meta name="description" content="How legal, finance, and operations professionals use Allybi in real pressure moments. Cinematic workflow stories with real outcomes.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Customer Stories — How Teams Use Allybi">
-  <meta property="og:description" content="See how legal, finance, and operations teams use Allybi when it matters most. Real work, real pressure, real clarity.">
+  <meta property="og:title" content="Representative Workflows — How Teams Use Allybi">
+  <meta property="og:description" content="How professionals use Allybi in real pressure moments. Real work, real clarity.">
   <meta property="og:url" content="https://allybi.co/customers.html">
   <meta property="og:site_name" content="Allybi">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Customer Stories — How Teams Use Allybi">
-  <meta name="twitter:description" content="See how legal, finance, and operations teams use Allybi when it matters most. Real work, real pressure, real clarity.">
-
-  <!-- Fonts -->
+  <meta name="twitter:title" content="Representative Workflows — How Teams Use Allybi">
+  <meta name="twitter:description" content="How professionals use Allybi in real pressure moments. Real work, real clarity.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Design System -->
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
-
-  <!-- Page-specific CSS -->
   <link rel="stylesheet" href="pages/customers.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
 </head>
 <body>
 
-  <!-- ================================================================
-       HEADER
-       ================================================================ -->
-  <header id="allybi-header" class="allybi-header">
-    <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
-      <nav class="allybi-nav desktop-only">
-        <a href="how-it-works.html" class="nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="use-case-legal.html" class="nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
-        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="/#faq" class="nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      </nav>
-      <div class="header-ctas desktop-only">
-        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo">Book demo</a>
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+        </div>
       </div>
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- ================================================================
-       MOBILE MENU
-       ================================================================ -->
-  <div id="allybi-mobile-menu" class="mobile-menu">
-    <nav class="mobile-menu-nav">
-      <a href="how-it-works.html" class="mobile-nav-link" data-i18n-key="nav.how_it_works">How it works</a>
-      <a href="use-case-legal.html" class="mobile-nav-link" data-i18n-key="nav.for_lawyers">For lawyers</a>
-      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
-      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="/#faq" class="mobile-nav-link" data-i18n-key="nav.faq_link">FAQ</a>
-      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-      <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
-    <div class="mobile-ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <div class="header-ctas desktop-only">
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+      <a href="request-demo.html" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.book_demo" data-magnetic="0.2">Book demo</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+      <div class="mobile-dropdown-items">
+        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+      </div>
+    </div>
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+      <div class="mobile-dropdown-items">
+        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+        <a href="use-case-business.html" data-i18n-key="nav.for_business">For business</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="stories-hero">
+  <div class="allybi-container">
+    <div class="stories-hero__inner allybi-reveal">
+      <span class="stories-eyebrow" data-i18n-key="stories.hero.eyebrow">Workflows</span>
+      <h1 class="stories-hero__title" data-i18n-key="stories.hero.title">Representative workflows</h1>
+      <p class="stories-hero__support" data-i18n-key="stories.hero.support">How professionals use Allybi in real pressure moments.</p>
     </div>
   </div>
+</section>
 
-  <!-- ================================================================
-       MAIN CONTENT
-       ================================================================ -->
-  <main>
+<!-- STORY CARDS -->
+<section class="stories-cards">
+  <div class="allybi-container">
+    <div class="stories-cards__stack allybi-stagger">
 
-    <!-- ────────────────────────────────────────────────────────────────
-         HERO
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="stories-hero">
-      <div class="allybi-container">
-        <div class="stories-hero__inner">
-          <span class="stories-eyebrow" data-i18n-key="stories.hero.eyebrow">Customer Stories</span>
-          <h1 class="stories-hero__title" data-i18n-key="stories.hero.title">Real work. Real pressure. Real clarity.</h1>
-          <p class="stories-hero__support" data-i18n-key="stories.hero.support">See how teams use Allybi when it matters most.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         SCENARIO CARDS
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="stories-scenarios">
-      <div class="allybi-container">
-        <div class="stories-scenarios__stack">
-
-          <!-- Card 1 -->
-          <article class="scenario-card">
-            <h2 class="scenario-card__time" data-i18n-key="stories.card1.time">8:40 AM — Before partner review</h2>
-            <p class="scenario-card__role" data-i18n-key="stories.card1.role">Legal Associate, M&amp;A team</p>
-            <p class="scenario-card__narrative" data-i18n-key="stories.card1.narrative">The managing partner asks what changed in the indemnity clause since the last draft. Twelve versions in the folder. Twenty minutes of manual comparison — or one question to Allybi.</p>
-            <p class="scenario-card__outcome" data-i18n-key="stories.card1.outcome">Found the exact clause change, cited to page 14, in 15 seconds.</p>
-            <div class="scenario-card__separator"></div>
-            <span class="scenario-card__label" data-i18n-key="stories.card1.label">Representative scenario</span>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="scenario-card">
-            <h2 class="scenario-card__time" data-i18n-key="stories.card2.time">Minutes before sending the board deck</h2>
-            <p class="scenario-card__role" data-i18n-key="stories.card2.role">Finance Analyst, Series B startup</p>
-            <p class="scenario-card__narrative" data-i18n-key="stories.card2.narrative">The CEO needs the latest revenue figures for the board meeting in 30 minutes. Three versions of the deck exist. The wrong attachment means lost credibility.</p>
-            <p class="scenario-card__outcome" data-i18n-key="stories.card2.outcome">Pulled the right deck with Q4 ARR cited to slide 7. Sent with explicit confirmation.</p>
-            <div class="scenario-card__separator"></div>
-            <span class="scenario-card__label" data-i18n-key="stories.card2.label">Representative scenario</span>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="scenario-card">
-            <h2 class="scenario-card__time" data-i18n-key="stories.card3.time">Trying to find the approved proposal before the client call</h2>
-            <p class="scenario-card__role" data-i18n-key="stories.card3.role">Operations Lead, consulting firm</p>
-            <p class="scenario-card__narrative" data-i18n-key="stories.card3.narrative">The client is on the phone in 5 minutes asking about the project timeline. The proposal is somewhere between email, Slack, and three project folders.</p>
-            <p class="scenario-card__outcome" data-i18n-key="stories.card3.outcome">Searched across proposals, emails, and Slack from one search. Found the approved SOW with deliverables and timeline.</p>
-            <div class="scenario-card__separator"></div>
-            <span class="scenario-card__label" data-i18n-key="stories.card3.label">Representative scenario</span>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         TRUST SECTION
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="stories-trust">
-      <div class="allybi-container">
-        <h2 class="stories-trust__title" data-i18n-key="stories.trust.title">Why teams trust Allybi.</h2>
-        <div class="stories-trust__grid">
-          <div class="stories-trust__point">
-            <svg class="stories-trust__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <p data-i18n-key="stories.trust.p1">Every answer cites the source file and location.</p>
+      <!-- Card 1: Legal Associate -->
+      <article class="story-card allybi-reveal">
+        <div class="story-card__header">
+          <div class="story-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
-          <div class="stories-trust__point">
-            <svg class="stories-trust__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-            <p data-i18n-key="stories.trust.p2">Your documents never train AI models.</p>
-          </div>
-          <div class="stories-trust__point">
-            <svg class="stories-trust__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            <p data-i18n-key="stories.trust.p3">Nothing sent without your review and approval.</p>
-          </div>
-          <div class="stories-trust__point">
-            <svg class="stories-trust__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <p data-i18n-key="stories.trust.p4">Each workspace is fully isolated from others.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ────────────────────────────────────────────────────────────────
-         FINAL CTA
-         ──────────────────────────────────────────────────────────────── -->
-    <section class="stories-cta">
-      <div class="allybi-container">
-        <div class="stories-cta__inner">
-          <h2 class="stories-cta__title" data-i18n-key="stories.cta.title">See it for yourself.</h2>
-          <a href="request-demo.html" class="allybi-btn allybi-btn--primary stories-cta__btn" data-i18n-key="stories.cta.button">Book demo</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ================================================================
-       FOOTER
-       ================================================================ -->
-  <footer class="allybi-footer">
-    <div class="allybi-footer-inner">
-
-      <div class="footer-brand">
-        <a href="/" class="footer-brand-logo">
-          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
-        </a>
-        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for professionals handling sensitive documents.</p>
-      </div>
-
-      <div class="footer-columns">
-
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-          <div class="footer-col-links">
-            <a href="/" data-i18n-key="footer.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          <div>
+            <h2 class="story-card__role" data-i18n-key="stories.card1.role">Legal Associate</h2>
+            <span class="story-card__timing" data-i18n-key="stories.card1.timing">Before partner review</span>
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
-          <div class="footer-col-links">
-            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
+        <div class="story-card__section">
+          <span class="story-card__label" data-i18n-key="stories.card1.scenario_label">Scenario</span>
+          <p data-i18n-key="stories.card1.scenario">The partner asks what changed in the indemnity clause between the last two drafts. Twelve versions in the folder. The partner needs the answer before the call in ten minutes.</p>
+        </div>
+
+        <div class="story-card__section">
+          <span class="story-card__label story-card__label--pressure" data-i18n-key="stories.card1.pressure_label">Pressure</span>
+          <p data-i18n-key="stories.card1.pressure">20 minutes of folder diving, comparing documents side by side, version confusion. Risk of citing the wrong draft.</p>
+        </div>
+
+        <div class="story-card__section story-card__section--highlight">
+          <span class="story-card__label story-card__label--allybi" data-i18n-key="stories.card1.allybi_label">With Allybi</span>
+          <p data-i18n-key="stories.card1.allybi">Asked "What changed in the indemnity clause between v2 and v3?" Found the change in 15 seconds, cited to Section 8.3(b), page 14. Sent the correct version to the partner with confirmation before send.</p>
+        </div>
+
+        <div class="story-card__outcome">
+          <div class="story-card__outcome-dot"></div>
+          <p data-i18n-key="stories.card1.outcome">Found the exact clause change in 15 seconds. Sent the right version with confirmation.</p>
+        </div>
+      </article>
+
+      <!-- Card 2: Finance Analyst -->
+      <article class="story-card allybi-reveal">
+        <div class="story-card__header">
+          <div class="story-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div>
+            <h2 class="story-card__role" data-i18n-key="stories.card2.role">Finance Analyst</h2>
+            <span class="story-card__timing" data-i18n-key="stories.card2.timing">Before board meeting</span>
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
-          <div class="footer-col-links">
-            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
+        <div class="story-card__section">
+          <span class="story-card__label" data-i18n-key="stories.card2.scenario_label">Scenario</span>
+          <p data-i18n-key="stories.card2.scenario">The CFO needs Q4 ARR from the latest board deck. Three versions exist across OneDrive and email. The board meeting starts in 30 minutes.</p>
+        </div>
+
+        <div class="story-card__section">
+          <span class="story-card__label story-card__label--pressure" data-i18n-key="stories.card2.pressure_label">Pressure</span>
+          <p data-i18n-key="stories.card2.pressure">Searching across slide decks, risk of pulling a number from the wrong version. The wrong figure in front of the board costs credibility.</p>
+        </div>
+
+        <div class="story-card__section story-card__section--highlight">
+          <span class="story-card__label story-card__label--allybi" data-i18n-key="stories.card2.allybi_label">With Allybi</span>
+          <p data-i18n-key="stories.card2.allybi">Asked "What was Q4 ARR in the latest board deck?" Found the exact figure — $4.2M — cited to slide 7 of Board_Deck_Q4.pdf. Prepared the email to the CFO with the deck attached and confirmed before send.</p>
+        </div>
+
+        <div class="story-card__outcome">
+          <div class="story-card__outcome-dot"></div>
+          <p data-i18n-key="stories.card2.outcome">Found the exact figure with slide reference. Prepared email. Confirmed before send.</p>
+        </div>
+      </article>
+
+      <!-- Card 3: Operations Lead -->
+      <article class="story-card allybi-reveal">
+        <div class="story-card__header">
+          <div class="story-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h2 class="story-card__role" data-i18n-key="stories.card3.role">Operations Lead</h2>
+            <span class="story-card__timing" data-i18n-key="stories.card3.timing">Before client follow-up</span>
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
-          <div class="footer-col-links">
-            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
-            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-          </div>
+        <div class="story-card__section">
+          <span class="story-card__label" data-i18n-key="stories.card3.scenario_label">Scenario</span>
+          <p data-i18n-key="stories.card3.scenario">The client asks for the updated SOW. The proposal is in email, the latest attachment is in a folder somewhere, and the wrong version was sent once before.</p>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-          <div class="footer-col-links">
-            <a href="about.html" data-i18n-key="footer.about">About</a>
-            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
-          </div>
+        <div class="story-card__section">
+          <span class="story-card__label story-card__label--pressure" data-i18n-key="stories.card3.pressure_label">Pressure</span>
+          <p data-i18n-key="stories.card3.pressure">Proposal in email, attachment in folders, version confusion. Last time the wrong version was sent, it took a week to recover trust.</p>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-          <div class="footer-col-links">
-            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
-            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
-          </div>
+        <div class="story-card__section story-card__section--highlight">
+          <span class="story-card__label story-card__label--allybi" data-i18n-key="stories.card3.allybi_label">With Allybi</span>
+          <p data-i18n-key="stories.card3.allybi">Cross-source search found the right file across email and folders. Identified the latest version (Acme_SOW_v2.docx). Prepared the WhatsApp handoff with the right file — reviewed content and recipient before opening WhatsApp.</p>
         </div>
 
-      </div>
-
-      <!-- Mobile compact links (visible only on small screens) -->
-      <div class="footer-mobile-links">
-        <a href="/" data-i18n-key="footer.overview">Overview</a>
-        <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-        <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-        <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-        <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-        <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-        <a href="pricing.html" data-i18n-key="nav.pricing">Pricing</a>
-        <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-        <a href="about.html" data-i18n-key="footer.about">About</a>
-        <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        <a href="request-demo.html" data-i18n-key="nav.book_demo">Book demo</a>
-        <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-        <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-        <a href="tos.html" data-i18n-key="footer.terms">Terms of Service</a>
-        <a href="security.html" data-i18n-key="footer.security_privacy">Security &amp; Privacy</a>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2025 Allybi. All rights reserved.</p>
-        <div class="footer-bottom-right">
-          <div class="language-selector" id="footer-language-selector">
-            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-              <span class="lang-label">English</span>
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <ul class="language-menu hidden" role="listbox">
-              <li role="option" data-lang="en">English</li>
-              <li role="option" data-lang="pt">Portugues (BR)</li>
-              <li role="option" data-lang="es">Espanol</li>
-            </ul>
-          </div>
+        <div class="story-card__outcome">
+          <div class="story-card__outcome-dot"></div>
+          <p data-i18n-key="stories.card3.outcome">Found the right file. Prepared WhatsApp handoff with review before send.</p>
         </div>
-      </div>
+      </article>
 
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- ================================================================
-       SCRIPTS
-       ================================================================ -->
-  <script src="language-switcher.js"></script>
-  <script src="allybi-header.js"></script>
-  <script src="animations.js"></script>
-  <script src="allybi-animations.js"></script>
+<!-- FINAL CTA -->
+<section class="stories-cta">
+  <div class="allybi-container">
+    <div class="stories-cta__inner allybi-reveal">
+      <h2 class="stories-cta__title" data-i18n-key="stories.cta.title">See how Allybi works.</h2>
+      <div class="stories-cta__buttons">
+        <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="stories.cta.how">See how Allybi works</a>
+        <a href="request-demo.html" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="nav.book_demo" data-magnetic="0.2">Book demo</a>
+      </div>
+    </div>
+  </div>
+</section>
 
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline" data-i18n-key="footer.tagline">Private AI workspace for sensitive document work.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+        <div class="footer-col-links">
+          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
+        <div class="footer-col-links">
+          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="footer.business">For operations</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
+        <div class="footer-col-links">
+          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
+          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+          <a href="about.html" data-i18n-key="footer.about">About</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+        <div class="footer-col-links">
+          <a href="tos.html">Terms of Service</a>
+          <a href="terms.html">Acceptable Use</a>
+          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="integration-data-use.html">Integrations & Data Use</a>
+          <a href="data-deletion.html">Data Deletion</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-mobile-links">
+      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+      <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
+      <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+      <a href="about.html" data-i18n-key="footer.about">About</a>
+      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <a href="request-demo.html" data-i18n-key="footer.request_demo">Book demo</a>
+      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+      <a href="terms.html" data-i18n-key="footer.terms">Terms</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Portugues (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Espanol</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<div class="sticky-mobile-cta" id="sticky-cta">
+  <a href="request-demo.html" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.book_demo">Book demo</a>
+</div>
+
+<!-- Scripts -->
+<script>
+(function(){var s=document.getElementById('sticky-cta');if(!s||window.innerWidth>768)return;var shown=false;var footer=document.querySelector('.allybi-footer');window.addEventListener('scroll',function(){var y=window.scrollY;var footerTop=footer?footer.getBoundingClientRect().top:Infinity;if(y>500&&footerTop>200){if(!shown){s.classList.add('is-visible');shown=true}}else{if(shown){s.classList.remove('is-visible');shown=false}}},{passive:true})})();
+</script>
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
 </body>
 </html>

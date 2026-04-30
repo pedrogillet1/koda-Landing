@@ -1,6 +1,5 @@
 /* ==========================================================================
    Contact Page Styles
-   Requires: allybi-tokens.css, allybi-base.css, allybi-components.css
    ========================================================================== */
 
 /* ---------- Hero ---------- */
@@ -21,35 +20,101 @@
 .contact-hero .allybi-body-lg {
   max-width: 540px;
   margin: 0 auto;
+  color: var(--allybi-text-secondary);
 }
 
-/* ---------- Routing Cards ---------- */
-.contact-routing .allybi-card {
+/* ---------- Segmented Path Cards ---------- */
+.contact-paths {
   display: flex;
   flex-direction: column;
+  gap: var(--allybi-space-3);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.contact-routing .allybi-card .allybi-h3 {
-  margin-bottom: var(--allybi-space-3);
+.contact-path-card {
+  display: flex;
+  align-items: center;
+  gap: var(--allybi-space-5);
+  padding: var(--allybi-space-5) var(--allybi-space-6);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-md);
+  background-color: var(--allybi-bg-surface);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
-.contact-routing .allybi-card .allybi-body {
-  margin-bottom: var(--allybi-space-6);
+.contact-path-card:hover {
+  border-color: var(--allybi-accent);
+  box-shadow: var(--allybi-shadow-sm);
+  transform: translateY(-1px);
+}
+
+.contact-path-card--primary {
+  border-color: var(--allybi-accent);
+  background-color: rgba(37, 99, 235, 0.03);
+}
+
+.contact-path-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--allybi-radius-sm);
+  background-color: var(--allybi-bg-alt-1);
+  color: var(--allybi-text-secondary);
+  flex-shrink: 0;
+}
+
+.contact-path-card--primary .contact-path-icon {
+  background-color: var(--allybi-accent);
+  color: #fff;
+}
+
+.contact-path-card h3 {
+  font-size: 16px;
+  font-weight: var(--allybi-weight-semibold);
+  color: var(--allybi-text-strongest);
+  margin-bottom: 2px;
+}
+
+.contact-path-card p {
+  font-size: 14px;
+  color: var(--allybi-text-secondary);
+  line-height: 1.4;
+}
+
+.contact-path-card > div:nth-child(2) {
   flex: 1;
 }
 
-.contact-route-btn {
-  align-self: flex-start;
+.contact-path-arrow {
+  flex-shrink: 0;
+  color: var(--allybi-text-muted);
+  transition: transform 0.2s;
+}
+
+.contact-path-card:hover .contact-path-arrow {
+  transform: translateX(3px);
+  color: var(--allybi-accent);
 }
 
 /* ---------- Contact Form ---------- */
 .contact-form-wrapper {
-  max-width: 640px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .contact-form-wrapper .allybi-section-header {
   margin-bottom: var(--allybi-space-10);
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--allybi-space-5);
 }
 
 .contact-form .allybi-input-group {
@@ -82,10 +147,14 @@
   margin: 0 auto;
 }
 
-/* ---------- Mobile ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .contact-hero {
     padding-top: 140px;
+  }
+
+  .contact-form__row {
+    grid-template-columns: 1fr;
   }
 
   .contact-reassurance {
@@ -93,24 +162,24 @@
   }
 }
 
-/* ---------- Tablet portrait ---------- */
-@media (max-width: 768px) {
-  .contact-routing .allybi-grid-3 {
-    grid-template-columns: 1fr;
-    gap: var(--allybi-space-6);
-  }
-}
-
-/* ---------- Phone ---------- */
 @media (max-width: 600px) {
   .contact-hero {
     padding-top: 110px;
   }
 
+  .contact-path-card {
+    padding: var(--allybi-space-4) var(--allybi-space-5);
+    gap: var(--allybi-space-4);
+  }
+
+  .contact-path-card p {
+    display: none;
+  }
+
   .contact-form .allybi-input,
   .contact-form .allybi-textarea,
   .contact-form .allybi-select {
-    font-size: 16px; /* prevent iOS zoom */
+    font-size: 16px;
   }
 
   .contact-form-wrapper {
@@ -119,15 +188,6 @@
 
   .contact-submit-btn {
     min-height: 44px;
-    width: 100%;
-  }
-
-  .contact-route-btn {
-    min-height: 44px;
-  }
-
-  .contact-routing .allybi-card {
-    padding: var(--allybi-space-6);
   }
 
   .contact-form .allybi-input-group {
@@ -135,13 +195,13 @@
   }
 }
 
-/* ---------- Small phone ---------- */
 @media (max-width: 390px) {
   .contact-hero {
     padding-top: 100px;
   }
 
-  .contact-routing .allybi-card {
-    padding: var(--allybi-space-5);
+  .contact-path-icon {
+    width: 36px;
+    height: 36px;
   }
 }
