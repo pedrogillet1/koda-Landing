@@ -1,161 +1,350 @@
-// Language Switcher — Allybi
-// Handles ALL language selectors (mobile menu, footer, legacy header)
-// and applies translations from /translations/{lang}.json
-
-document.addEventListener('DOMContentLoaded', () => {
+// Allybi domain locale and language switcher.
+// Production domains decide language; localhost can use ?lang= or localStorage.
+(function (root) {
   'use strict';
 
-  // ── Language names ──
+  const SUPPORTED_LANGS = ['en', 'pt', 'es'];
+  const HOST_LOCALES = {
+    'allybi.co': 'en',
+    'www.allybi.co': 'en',
+    'allybi.com.br': 'pt',
+    'www.allybi.com.br': 'pt'
+  };
+  const CANONICAL_ORIGINS = {
+    en: 'https://allybi.co',
+    pt: 'https://allybi.com.br'
+  };
+  const LANGUAGE_HOSTS = {
+    en: 'allybi.co',
+    pt: 'allybi.com.br'
+  };
+  const APP_ORIGINS = {
+    en: 'https://app.allybi.co',
+    pt: 'https://app.allybi.com.br',
+    es: 'https://app.allybi.co'
+  };
+  const HTML_LANGS = {
+    en: 'en',
+    pt: 'pt-BR',
+    es: 'es'
+  };
   const LANG_NAMES = {
     en: 'English',
     pt: 'Português (BR)',
     es: 'Español'
   };
-
-  // ── Collect every language-selector widget on the page ──
-  // Each widget has: a .language-toggle button, a .language-menu list, and optionally a label span
-  const selectors = [];
-
-  document.querySelectorAll('.language-selector').forEach(container => {
-    const toggle = container.querySelector('.language-toggle');
-    const menu = container.querySelector('.language-menu');
-    const label = container.querySelector('[id$="current-language"], .lang-label');
-    if (toggle && menu) {
-      selectors.push({ container, toggle, menu, label });
+  const HOME_META = {
+    en: {
+      title: 'Allybi - Private AI workspace for sensitive documents',
+      description: 'Find the right clause, version, and attachment in seconds. Source-cited answers, confirmation before every send, no training on your data.',
+      ogTitle: 'Allybi - The right clause. The right version. In seconds.',
+      ogDescription: 'Private AI workspace to find, compare, and act on sensitive documents. Grounded in your files. No training on your data.',
+      twitterTitle: 'Allybi - Private AI workspace for sensitive documents',
+      twitterDescription: 'Find the right clause, version, and attachment in seconds. Source-cited answers, confirmation before every send.'
+    },
+    pt: {
+      title: 'Allybi - Workspace privado de IA para documentos sensíveis',
+      description: 'Encontre a cláusula, a versão e o anexo certos em segundos. Respostas com fonte citada, confirmação antes de cada envio e sem treinamento com seus dados.',
+      ogTitle: 'Allybi - A cláusula certa. A versão certa. Em segundos.',
+      ogDescription: 'Workspace privado de IA para encontrar, comparar e agir sobre documentos sensíveis. Fundamentado nos seus arquivos. Sem treinamento com seus dados.',
+      twitterTitle: 'Allybi - Workspace privado de IA para documentos sensíveis',
+      twitterDescription: 'Encontre a cláusula, a versão e o anexo certos em segundos. Respostas com fonte citada e confirmação antes de cada envio.'
     }
-  });
+  };
 
-  // ── Dropdown open/close for every selector ──
-  selectors.forEach(({ container, toggle, menu }) => {
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const wasOpen = !menu.classList.contains('hidden');
-      closeAllMenus();
-      if (!wasOpen) {
-        menu.classList.remove('hidden');
-        toggle.setAttribute('aria-expanded', 'true');
+  function normalizeHost(host) {
+    return String(host || '')
+      .trim()
+      .toLowerCase()
+      .replace(/^https?:\/\//, '')
+      .split('/')[0]
+      .split(':')[0];
+  }
+
+  function isSupportedLang(lang) {
+    return SUPPORTED_LANGS.includes(lang);
+  }
+
+  function localeForHost(host) {
+    return HOST_LOCALES[normalizeHost(host)] || null;
+  }
+
+  function queryLang(search) {
+    try {
+      const params = new URLSearchParams(search || '');
+      const lang = params.get('lang') || params.get('locale');
+      return isSupportedLang(lang) ? lang : null;
+    } catch (_err) {
+      return null;
+    }
+  }
+
+  function storageLang(storage) {
+    try {
+      const lang = storage && storage.getItem('language');
+      return isSupportedLang(lang) ? lang : null;
+    } catch (_err) {
+      return null;
+    }
+  }
+
+  function getInitialLocale(locationLike, storage) {
+    const hostLocale = localeForHost(locationLike && (locationLike.hostname || locationLike.host));
+    if (hostLocale) return hostLocale;
+    return queryLang(locationLike && locationLike.search) || storageLang(storage) || 'en';
+  }
+
+  function htmlLangForLocale(locale) {
+    return HTML_LANGS[locale] || HTML_LANGS.en;
+  }
+
+  function canonicalPath(pathname) {
+    const path = pathname || '/';
+    if (path === '/' || path.endsWith('/index.html')) return '';
+    return path.charAt(0) === '/' ? path : '/' + path;
+  }
+
+  function canonicalUrlForLocale(locale, pathname) {
+    const origin = CANONICAL_ORIGINS[locale] || CANONICAL_ORIGINS.en;
+    return origin + canonicalPath(pathname);
+  }
+
+  function localizedPageUrl(locale, pathname, hash) {
+    if (!LANGUAGE_HOSTS[locale]) return null;
+    return canonicalUrlForLocale(locale, pathname) + (hash || '');
+  }
+
+  function appUrlForLocale(locale, href) {
+    const origin = APP_ORIGINS[locale] || APP_ORIGINS.en;
+    try {
+      const url = new URL(href || origin, origin);
+      const target = new URL(origin);
+      url.protocol = target.protocol;
+      url.host = target.host;
+      return url.toString();
+    } catch (_err) {
+      return origin;
+    }
+  }
+
+  const DomainLocale = {
+    SUPPORTED_LANGS,
+    HOST_LOCALES,
+    APP_ORIGINS,
+    HOME_META,
+    normalizeHost,
+    localeForHost,
+    queryLang,
+    getInitialLocale,
+    htmlLangForLocale,
+    canonicalPath,
+    canonicalUrlForLocale,
+    localizedPageUrl,
+    appUrlForLocale
+  };
+
+  root.AllybiDomainLocale = DomainLocale;
+  if (typeof module === 'object' && module.exports) {
+    module.exports = DomainLocale;
+  }
+
+  if (typeof document === 'undefined') return;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const selectors = [];
+
+    document.querySelectorAll('.language-selector').forEach((container) => {
+      const toggle = container.querySelector('.language-toggle');
+      const menu = container.querySelector('.language-menu');
+      const label = container.querySelector('[id$="current-language"], .lang-label');
+      if (toggle && menu) {
+        selectors.push({ container, toggle, menu, label });
       }
     });
-  });
 
-  function closeAllMenus() {
     selectors.forEach(({ toggle, menu }) => {
-      menu.classList.add('hidden');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  // Close all on outside click
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.language-selector')) {
-      closeAllMenus();
-    }
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAllMenus();
-  });
-
-  // ── Language selection (click on any [data-lang] inside any menu) ──
-  selectors.forEach(({ menu }) => {
-    menu.addEventListener('click', (e) => {
-      const item = e.target.closest('[data-lang]');
-      if (item) {
-        e.preventDefault();
-        e.stopPropagation();
-        const lang = item.getAttribute('data-lang');
-        setLanguage(lang);
-      }
-    });
-  });
-
-  // ── Set language ──
-  async function setLanguage(lang) {
-    try {
-      localStorage.setItem('language', lang);
-
-      // Update all labels
-      const displayName = LANG_NAMES[lang] || 'English';
-      selectors.forEach(({ label }) => {
-        if (label) label.textContent = displayName;
-      });
-
-      // Apply translations
-      await applyTranslations(lang);
-
-      // Close all menus
-      closeAllMenus();
-    } catch (err) {
-      console.error('Language switch error:', err);
-    }
-  }
-
-  // ── Apply translations ──
-  async function applyTranslations(lang) {
-    try {
-      // Detect base path: if served under /homepage/, use that prefix
-      const basePath = window.location.pathname.includes('/homepage/') ? '/homepage/' : '';
-      const resp = await fetch(basePath + 'translations/' + lang + '.json');
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const translations = await resp.json();
-
-      document.documentElement.setAttribute('lang', lang);
-
-      document.querySelectorAll('[data-i18n-key]').forEach(el => {
-        const key = el.getAttribute('data-i18n-key');
-        const value = resolve(translations, key);
-        if (value != null) {
-          if (el.hasAttribute('placeholder')) {
-            el.setAttribute('placeholder', value);
-          } else {
-            el.innerHTML = value;
-          }
+      toggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const wasOpen = !menu.classList.contains('hidden');
+        closeAllMenus();
+        if (!wasOpen) {
+          menu.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
         }
       });
-    } catch (err) {
-      console.error('Translation error:', err);
-    }
-  }
+    });
 
-  // ── Resolve dot-notated key from nested object ──
-  function resolve(obj, key) {
-    return key.split('.').reduce((o, k) => (o && typeof o === 'object' && k in o ? o[k] : null), obj);
-  }
-
-  // ── Browser language suggestion (first visit) ──
-  function suggestLanguage() {
-    const browserLang = navigator.language.split('-')[0];
-    const supported = ['pt', 'es'];
-    if (!localStorage.getItem('language') && supported.includes(browserLang)) {
-      const names = { pt: 'Português', es: 'Español' };
-      const bar = document.createElement('div');
-      bar.className = 'language-suggestion-bar';
-      bar.innerHTML =
-        '<span>Detected ' + names[browserLang] + ' — Switch?</span>' +
-        '<div>' +
-        '<button id="lang-yes">Yes</button>' +
-        '<button id="lang-no">No</button>' +
-        '</div>';
-      document.body.appendChild(bar);
-
-      document.getElementById('lang-yes').addEventListener('click', () => {
-        setLanguage(browserLang);
-        bar.remove();
-      });
-      document.getElementById('lang-no').addEventListener('click', () => {
-        localStorage.setItem('language', 'en');
-        bar.remove();
+    function closeAllMenus() {
+      selectors.forEach(({ toggle, menu }) => {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
       });
     }
-  }
 
-  // ── Init — PT-BR is the default language ──
-  const saved = localStorage.getItem('language');
-  if (saved) {
-    setLanguage(saved);
-  } else {
-    // Default to PT-BR for first-time visitors
-    setLanguage('pt');
-  }
-});
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.language-selector')) closeAllMenus();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeAllMenus();
+    });
+
+    selectors.forEach(({ menu }) => {
+      menu.addEventListener('click', (event) => {
+        const item = event.target.closest('[data-lang]');
+        if (!item) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const lang = item.getAttribute('data-lang');
+        const hostLocale = localeForHost(window.location.hostname);
+        if (hostLocale && lang !== hostLocale) {
+          const destination = localizedPageUrl(lang, window.location.pathname, window.location.hash);
+          if (destination) {
+            window.location.assign(destination);
+            return;
+          }
+          setLanguage(hostLocale, { persist: false });
+          return;
+        }
+
+        setLanguage(lang, { persist: !hostLocale });
+      });
+    });
+
+    async function setLanguage(lang, options = {}) {
+      if (!isSupportedLang(lang)) lang = 'en';
+      try {
+        if (options.persist) localStorage.setItem('language', lang);
+      } catch (_err) {
+        // localStorage can be unavailable in private browsing or test contexts.
+      }
+
+      selectors.forEach(({ label }) => {
+        if (label) label.textContent = LANG_NAMES[lang] || LANG_NAMES.en;
+      });
+
+      const translations = await applyTranslations(lang);
+      applyAppLinks(lang);
+      applyMetadata(lang, translations);
+      closeAllMenus();
+    }
+
+    async function applyTranslations(lang) {
+      try {
+        const basePath = window.location.pathname.includes('/homepage/') ? '/homepage/' : '';
+        const response = await fetch(basePath + 'translations/' + lang + '.json');
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const translations = await response.json();
+
+        document.documentElement.setAttribute('lang', htmlLangForLocale(lang));
+
+        document.querySelectorAll('[data-i18n-key]').forEach((element) => {
+          const key = element.getAttribute('data-i18n-key');
+          const value = resolve(translations, key);
+          if (value == null) return;
+
+          if (element.hasAttribute('placeholder')) {
+            element.setAttribute('placeholder', value);
+          } else {
+            element.innerHTML = value;
+          }
+        });
+
+        return translations;
+      } catch (err) {
+        console.error('Translation error:', err);
+        document.documentElement.setAttribute('lang', htmlLangForLocale(lang));
+        return null;
+      }
+    }
+
+    function resolve(obj, key) {
+      return key.split('.').reduce((value, part) => (
+        value && typeof value === 'object' && part in value ? value[part] : null
+      ), obj);
+    }
+
+    function applyAppLinks(lang) {
+      document.querySelectorAll('a[href*="app.allybi.co"], a[href*="app.allybi.com.br"]').forEach((anchor) => {
+        anchor.href = appUrlForLocale(lang, anchor.getAttribute('href'));
+      });
+    }
+
+    function applyMetadata(lang, translations) {
+      const canonicalUrl = canonicalUrlForLocale(lang, window.location.pathname);
+      ensureLink('canonical', canonicalUrl);
+      ensureAlternate('en', canonicalUrlForLocale('en', window.location.pathname));
+      ensureAlternate('pt-BR', canonicalUrlForLocale('pt', window.location.pathname));
+      ensureAlternate('x-default', canonicalUrlForLocale('en', window.location.pathname));
+      setMeta('property', 'og:url', canonicalUrl);
+      setMeta('name', 'twitter:url', canonicalUrl);
+
+      const homeMeta = isHomePage() ? resolve(translations || {}, 'meta.home') || HOME_META[lang] : null;
+      if (!homeMeta) return;
+
+      document.title = homeMeta.title;
+      setMeta('name', 'description', homeMeta.description);
+      setMeta('property', 'og:title', homeMeta.ogTitle || homeMeta.title);
+      setMeta('property', 'og:description', homeMeta.ogDescription || homeMeta.description);
+      setMeta('name', 'twitter:title', homeMeta.twitterTitle || homeMeta.ogTitle || homeMeta.title);
+      setMeta('name', 'twitter:description', homeMeta.twitterDescription || homeMeta.ogDescription || homeMeta.description);
+      updateStructuredDataUrl(canonicalUrl, homeMeta.description);
+    }
+
+    function isHomePage() {
+      const path = window.location.pathname || '/';
+      return path === '/' || path.endsWith('/index.html');
+    }
+
+    function setMeta(attributeName, attributeValue, content) {
+      if (!content) return;
+      let element = document.head.querySelector(`meta[${attributeName}="${attributeValue}"]`);
+      if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute(attributeName, attributeValue);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    }
+
+    function ensureLink(rel, href) {
+      let element = document.head.querySelector(`link[rel="${rel}"]`);
+      if (!element) {
+        element = document.createElement('link');
+        element.setAttribute('rel', rel);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('href', href);
+    }
+
+    function ensureAlternate(hreflang, href) {
+      let element = document.head.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+      if (!element) {
+        element = document.createElement('link');
+        element.setAttribute('rel', 'alternate');
+        element.setAttribute('hreflang', hreflang);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('href', href);
+    }
+
+    function updateStructuredDataUrl(url, description) {
+      const element = document.head.querySelector('script[type="application/ld+json"]');
+      if (!element) return;
+      try {
+        const data = JSON.parse(element.textContent);
+        data.url = url;
+        if (description) data.description = description;
+        element.textContent = JSON.stringify(data);
+      } catch (_err) {
+        // Leave hand-written structured data untouched if it is not parseable.
+      }
+    }
+
+    const hostLocale = localeForHost(window.location.hostname);
+    const initialLang = getInitialLocale(window.location, localStorage);
+    setLanguage(initialLang, { persist: !hostLocale && Boolean(queryLang(window.location.search)) });
+  });
+}(typeof globalThis !== 'undefined' ? globalThis : window));

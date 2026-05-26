@@ -1,0 +1,13 @@
+.git
+.gitignore
+.DS_Store
+.claude/
+screenshots/
+screenshot-*.png
+docs/
+tests/
+*.log
+*.sh
+ngrok-config.yml
+SETUP-GUIDE.md
+backend-server.js
