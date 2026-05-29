@@ -35,20 +35,20 @@
   };
   const HOME_META = {
     en: {
-      title: 'Allybi - Private AI workspace for sensitive documents',
-      description: 'Find the right clause, version, and attachment in seconds. Source-cited answers, confirmation before every send, no training on your data.',
-      ogTitle: 'Allybi - The right clause. The right version. In seconds.',
-      ogDescription: 'Private AI workspace to find, compare, and act on sensitive documents. Grounded in your files. No training on your data.',
-      twitterTitle: 'Allybi - Private AI workspace for sensitive documents',
-      twitterDescription: 'Find the right clause, version, and attachment in seconds. Source-cited answers, confirmation before every send.'
+      title: 'Allybi — 6 places. One message. The right answer, with sources.',
+      description: 'Connect sources, upload documents, and ask in chat. Allybi finds source-cited answers and prepares the handoff. 30 days free.',
+      ogTitle: 'Allybi — 6 places. One message. The right answer, with sources.',
+      ogDescription: 'Connect sources, upload documents, and ask in chat. Allybi finds, compares, cites the source, and prepares the handoff — always with your confirmation.',
+      twitterTitle: 'Allybi — 6 places. One message. The right answer, with sources.',
+      twitterDescription: 'Connect sources, upload documents, and ask in chat. Source-cited answers. 30 days free.'
     },
     pt: {
-      title: 'Allybi - Workspace privado de IA para documentos sensíveis',
-      description: 'Encontre a cláusula, a versão e o anexo certos em segundos. Respostas com fonte citada, confirmação antes de cada envio e sem treinamento com seus dados.',
-      ogTitle: 'Allybi - A cláusula certa. A versão certa. Em segundos.',
-      ogDescription: 'Workspace privado de IA para encontrar, comparar e agir sobre documentos sensíveis. Fundamentado nos seus arquivos. Sem treinamento com seus dados.',
-      twitterTitle: 'Allybi - Workspace privado de IA para documentos sensíveis',
-      twitterDescription: 'Encontre a cláusula, a versão e o anexo certos em segundos. Respostas com fonte citada e confirmação antes de cada envio.'
+      title: 'Allybi — 6 lugares. 1 mensagem. A resposta certa, com fonte.',
+      description: 'Conecte fontes, suba documentos e pergunte no chat. O Allybi encontra respostas com fonte e prepara o envio. 30 dias grátis, depois R$170/mês.',
+      ogTitle: 'Allybi — 6 lugares. 1 mensagem. A resposta certa, com fonte.',
+      ogDescription: 'Conecte fontes, suba documentos e pergunte no chat. O Allybi encontra, compara, mostra a fonte e prepara o envio — sempre com sua confirmação.',
+      twitterTitle: 'Allybi — 6 lugares. 1 mensagem. A resposta certa, com fonte.',
+      twitterDescription: 'Conecte fontes, suba documentos e pergunte no chat. Respostas com fonte. 30 dias grátis.'
     }
   };
 
