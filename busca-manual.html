@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFAF8">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+  <title>Busca Manual — Allybi</title>
+  <meta name="description" content="Faça o raio-x da busca manual, calcule tempo perdido e participe do Cemitério dos Arquivos Finais. Ferramentas anônimas da Allybi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
+  <style>
+    .bm-hero { padding: 160px 0 80px; text-align: center; }
+    .bm-hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 20px; text-wrap: balance; }
+    .bm-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
+    .bm-hero__ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+    .bm-trust { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; font-size: 12px; color: var(--allybi-text-muted); font-weight: 500; }
+    .bm-trust span { display: flex; align-items: center; gap: 6px; }
+    .bm-trust span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--allybi-trust); }
+    .bm-what { padding: var(--allybi-section-py) 0; }
+    .bm-what h2 { font-size: clamp(24px, 3vw, 40px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); margin-bottom: 16px; }
+    .bm-what > .allybi-container > p { font-size: 16px; color: var(--allybi-text-secondary); max-width: 560px; margin-bottom: 48px; line-height: 1.6; }
+    .bm-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .bm-step { padding: 28px; background: var(--allybi-bg-surface); border: 1px solid var(--allybi-border-default); border-radius: var(--allybi-radius-card); }
+    .bm-step__num { font-size: 12px; font-weight: 700; color: var(--allybi-text-muted); margin-bottom: 12px; }
+    .bm-step h3 { font-size: 16px; font-weight: 600; color: var(--allybi-text-strongest); margin-bottom: 6px; }
+    .bm-step p { font-size: 14px; color: var(--allybi-text-secondary); line-height: 1.5; }
+    .bm-tools { padding: var(--allybi-section-py) 0; background: var(--allybi-bg-alt-1); }
+    .bm-tools h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); text-align: center; margin-bottom: 48px; }
+    .bm-tools__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 800px; margin: 0 auto; }
+    .bm-tool-card { padding: 32px; background: var(--allybi-bg-surface); border: 1px solid var(--allybi-border-default); border-radius: var(--allybi-radius-card); transition: border-color 0.2s, box-shadow 0.2s; }
+    .bm-tool-card:hover { border-color: var(--allybi-accent); box-shadow: var(--allybi-shadow-sm); }
+    .bm-tool-card h3 { font-size: 18px; font-weight: 600; color: var(--allybi-text-strongest); margin-bottom: 8px; }
+    .bm-tool-card p { font-size: 14px; color: var(--allybi-text-secondary); line-height: 1.5; margin-bottom: 16px; }
+    .bm-tool-card .allybi-btn { font-size: 13px; height: 40px; padding: 0 20px; }
+    .bm-bridge { padding: var(--allybi-section-py) 0; text-align: center; }
+    .bm-bridge h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: var(--allybi-text-strongest); margin-bottom: 16px; }
+    .bm-bridge p { font-size: 16px; color: var(--allybi-text-secondary); max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
+    @media (max-width: 768px) {
+      .bm-hero { padding: 120px 0 48px; }
+      .bm-steps { grid-template-columns: 1fr 1fr; }
+      .bm-tools__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .bm-steps { grid-template-columns: 1fr; }
+      .bm-hero__ctas { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Produto</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">Como funciona</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrações</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Segurança</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Casos de uso</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">Para advogados</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">Para financeiro</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">Para operações</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Preços</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">Sobre</a>
+    </nav>
+    <div class="header-ctas desktop-only">
+      <a href="https://app.allybi.com.br/login" class="header-signin">Entrar</a>
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary header-btn">Começar grátis</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <a href="how-it-works.html" class="mobile-nav-link">Como funciona</a>
+    <a href="integrations.html" class="mobile-nav-link">Integrações</a>
+    <a href="security-overview.html" class="mobile-nav-link">Segurança</a>
+    <a href="pricing.html" class="mobile-nav-link">Preços</a>
+    <a href="busca-manual.html" class="mobile-nav-link">Busca Manual</a>
+    <a href="about.html" class="mobile-nav-link">Sobre</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary">Começar grátis</a>
+    <a href="https://app.allybi.com.br/login" class="header-signin">Entrar</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="bm-hero">
+  <div class="allybi-container">
+    <h1>quanto do seu trabalho ainda é busca manual?</h1>
+    <p>Faça o raio-x, calcule o tempo perdido e veja como empresas ainda dependem de procurar, confirmar e reenviar informação manualmente.</p>
+    <div class="bm-hero__ctas">
+      <a href="raio-x.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="rayox_started">Fazer o raio-x</a>
+      <a href="tempo.html" class="allybi-btn allybi-btn--secondary" data-event="calculator_started">Calcular tempo perdido</a>
+    </div>
+    <div class="bm-trust">
+      <span>anônimo</span>
+      <span>sem upload de documentos</span>
+      <span>sem nomes de clientes</span>
+      <span>menos de 2 minutos</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS MANUAL SEARCH -->
+<section class="bm-what">
+  <div class="allybi-container">
+    <h2>O que é busca manual?</h2>
+    <p>É o trabalho invisível de abrir Drive, e-mail, pastas, anexos e conversas para encontrar, confirmar e reenviar uma informação que já existe.</p>
+    <div class="bm-steps">
+      <div class="bm-step">
+        <div class="bm-step__num">01</div>
+        <h3>Procurar</h3>
+        <p>Abrir lugares demais para achar um arquivo.</p>
+      </div>
+      <div class="bm-step">
+        <div class="bm-step__num">02</div>
+        <h3>Confirmar</h3>
+        <p>Descobrir se é a versão certa.</p>
+      </div>
+      <div class="bm-step">
+        <div class="bm-step__num">03</div>
+        <h3>Provar</h3>
+        <p>Encontrar fonte, aprovação ou contexto.</p>
+      </div>
+      <div class="bm-step">
+        <div class="bm-step__num">04</div>
+        <h3>Enviar</h3>
+        <p>Preparar e mandar o arquivo certo sem errar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="bm-tools">
+  <div class="allybi-container">
+    <h2>Ferramentas</h2>
+    <div class="bm-tools__grid">
+      <div class="bm-tool-card">
+        <h3>Raio-X da Busca Manual</h3>
+        <p>Descubra o quanto seu fluxo depende de busca manual. 10 perguntas, sem digitar.</p>
+        <a href="raio-x.html" class="allybi-btn allybi-btn--primary" data-event="rayox_started">Fazer o raio-x</a>
+      </div>
+      <div class="bm-tool-card">
+        <h3>Calculadora do Tempo Perdido</h3>
+        <p>Veja quantas horas por mês somem procurando e confirmando arquivos.</p>
+        <a href="tempo.html" class="allybi-btn allybi-btn--primary" data-event="calculator_started">Calcular agora</a>
+      </div>
+      <div class="bm-tool-card">
+        <h3>Cemitério dos Arquivos Finais</h3>
+        <p>Monte ou envie o nome de arquivo mais absurdo — sem dados sensíveis.</p>
+        <a href="finais.html" class="allybi-btn allybi-btn--secondary" data-event="cemiterio_name_created">Entrar no cemitério</a>
+      </div>
+      <div class="bm-tool-card">
+        <h3>Índice Allybi da Busca Manual</h3>
+        <p>Veja dados anônimos sobre como empresas perdem tempo procurando o que já existe.</p>
+        <a href="indice.html" class="allybi-btn allybi-btn--secondary" data-event="indice_viewed">Ver índice</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDGE TO PRODUCT -->
+<section class="bm-bridge">
+  <div class="allybi-container">
+    <h2>Como o Allybi resolve</h2>
+    <p>O Allybi troca busca manual por uma conversa: conecte fontes, suba documentos, pergunte no chat, receba resposta com fonte e confirme antes de enviar.</p>
+    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="start_free_clicked">Começar grátis por 30 dias</a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="s-cta">
+  <div class="allybi-container">
+    <div class="s-cta__inner">
+      <h2>Pare de transformar informação em caça ao tesouro.</h2>
+      <p>Conecte suas fontes, pergunte no chat e envie o arquivo certo com fonte.</p>
+      <div class="s-cta__ctas">
+        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="start_free_clicked">Começar grátis por 30 dias</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Produto</h4>
+        <div class="footer-col-links">
+          <a href="how-it-works.html">Como funciona</a>
+          <a href="integrations.html">Integrações</a>
+          <a href="security-overview.html">Segurança</a>
+          <a href="pricing.html">Preços</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Para quem</h4>
+        <div class="footer-col-links">
+          <a href="use-case-legal.html">Para advogados</a>
+          <a href="use-case-finance.html">Para financeiro</a>
+          <a href="use-case-business.html">Para operações</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Recursos</h4>
+        <div class="footer-col-links">
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contato</a>
+          <a href="about.html">Sobre</a>
+          <a href="raio-x.html">Raio-X da Busca Manual</a>
+          <a href="tempo.html">Calculadora do Tempo Perdido</a>
+          <a href="finais.html">Cemitério dos Arquivos Finais</a>
+          <a href="indice.html">Índice Allybi</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Jurídico</h4>
+        <div class="footer-col-links">
+          <a href="tos.html">Termos de Serviço</a>
+          <a href="terms.html">Uso Aceitável</a>
+          <a href="privacy.html">Privacidade</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="integration-data-use.html">Integrações e Uso de Dados</a>
+          <a href="data-deletion.html">Exclusão de Dados</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Português (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Español</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
+</body>
+</html>

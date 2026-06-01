@@ -69,7 +69,11 @@
     "stories": "Stories",
     "tos": "Terms of Service",
     "data_use": "Integrations & Data Use",
-    "data_deletion": "Data Deletion"
+    "data_deletion": "Data Deletion",
+    "rayox": "Manual Search X-Ray",
+    "calculator": "Time Lost Calculator",
+    "cemetery": "Final Files Cemetery",
+    "indice": "Allybi Index"
   },
   "hero": {
     "eyebrow": "Private AI for documents, email context, and handoffs",

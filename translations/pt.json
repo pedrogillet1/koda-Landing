@@ -69,7 +69,11 @@
     "stories": "Histórias",
     "tos": "Termos de Serviço",
     "data_use": "Integrações e Uso de Dados",
-    "data_deletion": "Exclusão de Dados"
+    "data_deletion": "Exclusão de Dados",
+    "rayox": "Raio-X da Busca Manual",
+    "calculator": "Calculadora do Tempo Perdido",
+    "cemetery": "Cemitério dos Arquivos Finais",
+    "indice": "Índice Allybi"
   },
   "hero": {
     "eyebrow": "IA privada para documentos, e-mails e envios",
@@ -123,8 +127,8 @@
     "step5_desc": "Você revisa conteúdo, arquivo, fonte e destinatário. Nada sai sem confirmação."
   },
   "cases": {
-    "title": "Quando alguém pergunta o que mudou, responda em segundos.",
-    "subtitle": "Advogados são os primeiros. Equipes de finanças e negócios são as próximas.",
+    "title": "Feito para trabalho onde errar arquivo custa caro.",
+    "subtitle": "",
     "legal": {
       "tab": "Jurídico",
       "title": "Pesquise cláusulas. Compare minutas.<br>Envie a versão certa.",
@@ -133,10 +137,10 @@
       "b2": "Encontre a cláusula de não concorrência e veja a fonte",
       "b3": "Prepare o arquivo correto antes que saia do seu workspace",
       "cta": "Veja como advogados usam o Allybi",
-      "mock_q": "\"Mostrar alterações da cláusula 12.4 entre v2 e v3\"",
-      "mock_heading": "Seção 12.4 — Limitação de Responsabilidade",
-      "mock_src": "NDA_v3_Final.pdf — p. 8",
-      "mock_body": "Cap alterado de <s style=\"color:#DC2626;background:rgba(220,38,38,0.08);padding:1px 3px;border-radius:2px\">$1M</s> para <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$3M</span>."
+      "mock_q": "\"mostrar alterações da cláusula 12.4 entre v2 e v3\"",
+      "mock_heading": "Cláusula 12.4 — Limitação de responsabilidade",
+      "mock_src": "NDA_v3_final.pdf — p. 8",
+      "mock_body": "Limite alterado de <s style=\"color:#DC2626;background:rgba(220,38,38,0.06);padding:1px 3px;border-radius:2px\">R$1M</s> para <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">R$3M</span>."
     },
     "finance": {
       "tab": "Financeiro",
@@ -145,11 +149,11 @@
       "b2": "Compare números entre versões trimestrais",
       "b3": "Respostas com referências exatas de célula e slide",
       "cta": "Ver fluxos financeiros",
-      "mock_q": "\"Qual foi o ARR do Q4 na última apresentação ao conselho?\"",
+      "mock_q": "\"qual foi a receita recorrente no último deck do conselho?\"",
       "mock_heading": "Receita Recorrente Anual — Q4",
-      "mock_src": "Board_Deck_Q4.pdf — slide 7",
+      "mock_src": "Deck_Conselho_Q4.pdf — slide 7",
       "heading": "Encontre o deck, modelo ou métrica certo. Responda com confiança.",
-      "mock_body": "ARR Q4 atingiu <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$4.2M</span>, alta de 38% vs Q3."
+      "mock_body": "ARR Q4 atingiu <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">R$4,2M</span>, alta de 38% vs Q3."
     },
     "business": {
       "tab": "Negócios",
@@ -158,11 +162,11 @@
       "b2": "Obtenha respostas da versão mais recente",
       "b3": "Redija respostas a partir do seu próprio contexto",
       "cta": "Ver fluxos de negócios",
-      "mock_q": "\"Resumir entregas no SOW da Acme\"",
-      "mock_heading": "Acme Corp — Declaração de Trabalho",
-      "mock_src": "Acme_SOW_v2.docx — p. 3",
+      "mock_q": "\"resumir entregas do escopo aprovado\"",
+      "mock_heading": "Escopo — Cliente Alfa",
+      "mock_src": "Escopo_Cliente_Alfa_v2.docx — p. 3",
       "heading": "Encontre a proposta aprovada, plano ou follow-up. Avance com segurança.",
-      "mock_body": "3 entregas totalizando <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$185K</span>."
+      "mock_body": "3 entregas no escopo aprovado, totalizando <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">R$185K</span>."
     }
   },
   "security": {
@@ -305,8 +309,8 @@
       "subtitle": "Seus documentos não treinam modelos. Cada resposta mostra a fonte. Nada é enviado sem sua aprovação.",
       "pillar1": "Seus documentos não treinam modelos",
       "pillar1_desc": "Usados apenas para gerar respostas no seu workspace.",
-      "pillar2": "Respostas com fonte",
-      "pillar2_desc": "Cada resposta referencia documento, página e seção.",
+      "pillar2": "Sem treinamento com documentos",
+      "pillar2_desc": "Seus documentos não são usados para treinar modelos de IA.",
       "pillar3": "Confirmação antes do envio",
       "pillar3_desc": "Você revisa arquivo, versão e destinatário antes de qualquer envio.",
       "pillar4": "Criptografia em trânsito e em repouso",
@@ -325,7 +329,7 @@
       "badge_live": "Ativo",
       "badge_ready": "Pronto",
       "badge_coming": "Em breve",
-      "outlook_desc": "Pesquise threads de e-mail e traga o anexo certo.",
+      "outlook_desc": "Pesquise threads, encontre anexos. Prepare e envie e-mails com confirmação.",
       "onedrive_desc": "Importe arquivos e pastas para o chat.",
       "sharepoint_desc": "Traga documentos do site ou biblioteca da equipe.",
       "whatsapp_desc": "O Allybi prepara a mensagem e abre o WhatsApp para você revisar e enviar.",
@@ -336,11 +340,11 @@
     "faq": {
       "title": "Perguntas frequentes",
       "q1": "O que o Allybi faz?",
-      "a1": "O Allybi conecta fontes, recebe uploads e transforma seus documentos em um chat. Você pergunta, recebe resposta com fonte e prepara o envio com confirmação.",
-      "q2": "O Allybi pesquisa no WhatsApp?",
-      "a2": "Não. WhatsApp funciona como handoff revisado: o Allybi prepara a mensagem e abre o WhatsApp para você revisar e enviar. Ele não lê sua caixa de entrada do WhatsApp.",
-      "q3": "Meus documentos treinam modelos de IA?",
-      "a3": "Não. Seus documentos não treinam modelos. Eles são usados apenas para gerar respostas dentro do seu workspace.",
+      "a1": "O Allybi conecta fontes, recebe uploads e transforma seus documentos em um chat. Você pergunta, recebe resposta com fonte e prepara o envio por e-mail ou WhatsApp com confirmação.",
+      "q2": "O Allybi envia e-mail?",
+      "a2": "Sim. Com Outlook conectado, o Allybi pode preparar e enviar e-mails depois da sua confirmação. Antes de enviar, você revisa destinatário, mensagem, fonte e anexo.",
+      "q3": "O Allybi pesquisa no WhatsApp?",
+      "a3": "Não. WhatsApp funciona como handoff: o Allybi prepara a mensagem e abre o WhatsApp para você revisar e enviar. Ele não lê nem sincroniza sua caixa de entrada do WhatsApp.",
       "q4": "Quanto custa?",
       "a4": "30 dias grátis. Depois, R$170/mês.",
       "q5": "Preciso agendar uma demonstração?",
@@ -647,7 +651,7 @@
     "mock_query": "quais são os termos de não concorrência?",
     "mock_answer": "Cláusula 9.3: o contratado não pode atuar em atividade concorrente por <strong>24 meses</strong> após o término.",
     "mock_diff_title": "Cláusula 8.1 — Indenização",
-    "mock_diff_body": "O fornecedor indenizará o cliente por <span class=\"hiw-mock__diff-removed\">atos negligentes</span><span class=\"hiw-mock__diff-added\">quaisquer atos ou omissões</span> relacionados aos serviços, até o limite de <span class=\"hiw-mock__diff-removed\">R$1M</span><span class=\"hiw-mock__diff-added\">R$3M</span>.",
+    "mock_diff_body": "A obrigação de indenização foi ampliada de <span class=\"hiw-mock__diff-removed\">atos negligentes</span> para <span class=\"hiw-mock__diff-added\">quaisquer atos ou omissões</span> relacionados aos serviços. O limite mudou de <span class=\"hiw-mock__diff-removed\">R$1M</span> para <span class=\"hiw-mock__diff-added\">R$3M</span>.",
     "mock_diff_source": "<svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/></svg> Minuta v2 vs v3 — Cláusula 8.1",
     "mock_prepare_title": "Preparar envio",
     "mock_prepare_body": "\"Olá, segue a versão final confirmada do SPA com os termos de indenização atualizados. Por favor revise a Cláusula 8.1.\"",
@@ -983,9 +987,10 @@
       "f3": "Upload de arquivos (PDF, DOCX, XLSX, PPTX)",
       "f4": "Respostas com fonte",
       "f5": "Comparação de versões",
-      "f6": "Preparação de e-mail e WhatsApp handoff",
-      "f7": "Confirmação antes de envio",
-      "f8": "Seus documentos não treinam modelos"
+      "f6": "Preparação e envio de e-mail via Outlook com confirmação",
+      "f7": "WhatsApp handoff com revisão",
+      "f8": "Confirmação antes de qualquer envio",
+      "f9": "Seus documentos não treinam modelos"
     },
     "who": {
       "title": "Para quem é o Allybi",
@@ -1885,5 +1890,9 @@
     "title": "Seus documentos merecem mais clareza.",
     "subtitle": "Veja como o Allybi pode ajudar no seu trabalho diário.",
     "button": "Agendar demonstração"
+  },
+  "ucl": {
+    "mock_cancel": "Cancelar",
+    "mock_confirm_btn": "Confirmar envio"
   }
 }

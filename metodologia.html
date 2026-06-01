@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFAF8">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+  <title>Como calculamos — Allybi</title>
+  <meta name="description" content="Como calculamos o Índice Allybi da Busca Manual. Fontes, fórmulas e critérios de privacidade.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
+  <style>
+    .met-hero { padding: 160px 0 80px; text-align: center; }
+    .met-hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 20px; text-wrap: balance; }
+    .met-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 640px; margin: 0 auto; line-height: 1.6; }
+
+    .met-sections { padding: 0 0 var(--allybi-section-py); }
+    .met-sections .allybi-container { max-width: 760px; }
+
+    .met-card {
+      padding: 32px;
+      background: var(--allybi-bg-surface);
+      border: 1px solid var(--allybi-border-default);
+      border-radius: var(--allybi-radius-card);
+      margin-bottom: 20px;
+    }
+    .met-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--allybi-text-strongest);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .met-card p {
+      font-size: 15px;
+      color: var(--allybi-text-secondary);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .met-card p:last-child { margin-bottom: 0; }
+    .met-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+    }
+    .met-card ul li {
+      font-size: 14px;
+      color: var(--allybi-text-secondary);
+      line-height: 1.6;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .met-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--allybi-border-default, #d0d0d0);
+    }
+    .met-card code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      background: var(--allybi-bg-alt-1, #f5f5f5);
+      padding: 3px 8px;
+      border-radius: 4px;
+      color: var(--allybi-text-strongest);
+    }
+    .met-card .met-formula {
+      padding: 16px 20px;
+      background: var(--allybi-bg-alt-1, #f5f5f5);
+      border-radius: 8px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 14px;
+      color: var(--allybi-text-strongest);
+      margin: 12px 0;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .met-microcopy {
+      font-size: 12px !important;
+      color: var(--allybi-text-muted) !important;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    .met-cta-section { padding: var(--allybi-section-py) 0; text-align: center; }
+    .met-cta-section .met-cta__buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 768px) {
+      .met-hero { padding: 120px 0 48px; }
+      .met-card { padding: 24px; }
+    }
+    @media (max-width: 480px) {
+      .met-cta-section .met-cta__buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Produto</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">Como funciona</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrações</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Segurança</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Casos de uso</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">Para advogados</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">Para financeiro</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">Para operações</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Preços</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">Sobre</a>
+    </nav>
+    <div class="header-ctas desktop-only">
+      <a href="https://app.allybi.com.br/login" class="header-signin">Entrar</a>
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary header-btn">Começar grátis</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <a href="how-it-works.html" class="mobile-nav-link">Como funciona</a>
+    <a href="integrations.html" class="mobile-nav-link">Integrações</a>
+    <a href="security-overview.html" class="mobile-nav-link">Segurança</a>
+    <a href="pricing.html" class="mobile-nav-link">Preços</a>
+    <a href="busca-manual.html" class="mobile-nav-link">Busca Manual</a>
+    <a href="about.html" class="mobile-nav-link">Sobre</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary">Começar grátis</a>
+    <a href="https://app.allybi.com.br/login" class="header-signin">Entrar</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="met-hero">
+  <div class="allybi-container">
+    <h1>como calculamos a Busca Manual</h1>
+    <p>O índice combina fontes abertas, respostas anônimas e cálculos simples para estimar o esforço invisível de procurar, confirmar e reenviar informação.</p>
+  </div>
+</section>
+
+<!-- SECTIONS -->
+<section class="met-sections">
+  <div class="allybi-container">
+
+    <!-- 1. O que medimos -->
+    <div class="met-card">
+      <h2>O que medimos</h2>
+      <ul>
+        <li>Fontes abertas (Drive, e-mail, pastas, Slack, WhatsApp)</li>
+        <li>Tempo de busca por arquivo ou informação</li>
+        <li>Confirmação de versão (é o arquivo certo?)</li>
+        <li>Procura por fonte (quem aprovou, onde está a referência)</li>
+        <li>Esforço de envio (preparar e mandar sem errar)</li>
+        <li>Retrabalho (refazer porque a versão estava errada)</li>
+      </ul>
+    </div>
+
+    <!-- 2. O que não pedimos -->
+    <div class="met-card">
+      <h2>O que não pedimos</h2>
+      <ul>
+        <li>Documentos</li>
+        <li>Nomes de clientes</li>
+        <li>Dados sensíveis</li>
+        <li>CPFs, CNPJs ou valores reais</li>
+        <li>Acesso ao workspace</li>
+        <li>Login para responder</li>
+      </ul>
+    </div>
+
+    <!-- 3. Como o Raio-X funciona -->
+    <div class="met-card">
+      <h2>Como o Raio-X funciona</h2>
+      <p>O Raio-X da Busca Manual é um questionário de 10 perguntas sobre o fluxo de busca, confirmação e envio de informação. Cada resposta usa uma escala de 1 a 5.</p>
+      <p>O score final é calculado com normalização min-max:</p>
+      <div class="met-formula">score = ((total - min) / (max - min)) * 100</div>
+      <p>O resultado é um número de 0 a 100 que indica o quanto o fluxo de trabalho depende de busca manual. Quanto mais alto, maior a dependência.</p>
+    </div>
+
+    <!-- 4. Como a Calculadora funciona -->
+    <div class="met-card">
+      <h2>Como a Calculadora funciona</h2>
+      <p>A Calculadora do Tempo Perdido estima quantas horas por mês somem em busca manual. O cálculo combina quatro componentes informados pelo participante:</p>
+      <div class="met-formula">horas/mês = busca + reenvio + confirmação + retrabalho</div>
+      <p>Cada componente é estimado a partir de frequência e duração média informadas. O resultado mostra o tempo mensal invisível gasto procurando, confirmando e reenviando informação.</p>
+    </div>
+
+    <!-- 5. Como o Cemitério funciona -->
+    <div class="met-card">
+      <h2>Como o Cemitério funciona</h2>
+      <p>O Cemitério dos Arquivos Finais é um construtor de nomes de arquivo absurdos. O participante monta o nome usando chips pré-definidos ou digita livremente, e a comunidade vota nos melhores.</p>
+      <p>Nenhum dado sensível é coletado. Nomes criados não contêm informações reais de clientes, projetos ou valores.</p>
+    </div>
+
+    <!-- 6. Como o Índice funciona -->
+    <div class="met-card">
+      <h2>Como o Índice funciona</h2>
+      <p>O Índice Allybi da Busca Manual agrega dados anônimos do Raio-X, da Calculadora e do Cemitério para mostrar padrões sobre como empresas perdem tempo procurando informação.</p>
+      <p>Apenas dados anônimos e agregados são exibidos. Nenhuma resposta individual é identificável.</p>
+    </div>
+
+    <!-- 7. Privacidade e LGPD -->
+    <div class="met-card">
+      <h2>Privacidade e LGPD</h2>
+      <p>A LGPD é a Lei nº 13.709/2018. Dados anonimizados não são considerados dados pessoais quando não permitem identificação ou reversão razoável. Mesmo assim, a Allybi evita coletar documentos, nomes de clientes e dados sensíveis nessas ferramentas.</p>
+      <p class="met-microcopy">Isso é uma explicação de privacidade, não aconselhamento jurídico.</p>
+    </div>
+
+    <!-- 8. Como o Allybi entra -->
+    <div class="met-card">
+      <h2>Como o Allybi entra</h2>
+      <p>A busca manual é o problema. O Allybi é o produto que resolve: conecte fontes, suba documentos, pergunte no chat, receba resposta com fonte e confirme antes de enviar.</p>
+      <p>As ferramentas de diagnóstico (Raio-X, Calculadora, Cemitério e Índice) ajudam a entender o problema. O Allybi ajuda a resolver.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTAs -->
+<section class="met-cta-section">
+  <div class="allybi-container">
+    <div class="met-cta__buttons">
+      <a href="raio-x.html" class="allybi-btn allybi-btn--primary allybi-btn--lg">Fazer o raio-x</a>
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Começar grátis por 30 dias</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="s-cta">
+  <div class="allybi-container">
+    <div class="s-cta__inner">
+      <h2>Pare de transformar informação em caça ao tesouro.</h2>
+      <p>Conecte suas fontes, pergunte no chat e envie o arquivo certo com fonte.</p>
+      <div class="s-cta__ctas">
+        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="start_free_clicked">Começar grátis por 30 dias</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Produto</h4>
+        <div class="footer-col-links">
+          <a href="how-it-works.html">Como funciona</a>
+          <a href="integrations.html">Integrações</a>
+          <a href="security-overview.html">Segurança</a>
+          <a href="pricing.html">Preços</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Para quem</h4>
+        <div class="footer-col-links">
+          <a href="use-case-legal.html">Para advogados</a>
+          <a href="use-case-finance.html">Para financeiro</a>
+          <a href="use-case-business.html">Para operações</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Recursos</h4>
+        <div class="footer-col-links">
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contato</a>
+          <a href="about.html">Sobre</a>
+          <a href="raio-x.html">Raio-X da Busca Manual</a>
+          <a href="tempo.html">Calculadora do Tempo Perdido</a>
+          <a href="finais.html">Cemitério dos Arquivos Finais</a>
+          <a href="indice.html">Índice Allybi</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Jurídico</h4>
+        <div class="footer-col-links">
+          <a href="tos.html">Termos de Serviço</a>
+          <a href="terms.html">Uso Aceitável</a>
+          <a href="privacy.html">Privacidade</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="integration-data-use.html">Integrações e Uso de Dados</a>
+          <a href="data-deletion.html">Exclusão de Dados</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Português (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Español</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
+</body>
+</html>

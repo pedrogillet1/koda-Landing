@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFAF8">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+  <title>Cemitério dos Arquivos Finais — Allybi</title>
+  <meta name="description" content="Monte o nome de arquivo mais absurdo da sua empresa. Sem documentos, sem dados sensíveis. Ferramenta anônima da Allybi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
+  <style>
+    .cf-hero { padding: 160px 0 48px; text-align: center; }
+    .cf-hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 16px; text-wrap: balance; }
+    .cf-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 580px; margin: 0 auto 32px; line-height: 1.6; }
+
+    .cf-warning { max-width: 640px; margin: 0 auto 56px; padding: 20px 24px; background: #fef9ec; border: 1px solid #f5d06b; border-radius: var(--allybi-radius-card, 12px); text-align: left; }
+    .cf-warning__title { font-size: 14px; font-weight: 700; color: #92600a; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .cf-warning__title svg { flex-shrink: 0; }
+    .cf-warning p { font-size: 13px; color: #78510d; line-height: 1.6; margin: 0; }
+
+    .cf-builder { max-width: 720px; margin: 0 auto; padding: 0 0 80px; }
+    .cf-builder h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); margin-bottom: 8px; text-align: center; }
+    .cf-builder > p { font-size: 15px; color: var(--allybi-text-secondary); text-align: center; margin-bottom: 40px; }
+
+    .cf-category { margin-bottom: 28px; }
+    .cf-category__label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--allybi-text-muted, #999); margin-bottom: 10px; }
+    .cf-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cf-chip { padding: 10px 16px; background: var(--allybi-bg-surface, #fff); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--allybi-text-strongest, #111); cursor: pointer; transition: border-color 0.2s, background 0.2s; user-select: none; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .cf-chip:hover { border-color: var(--allybi-accent, #111); }
+    .cf-chip.selected { background: var(--allybi-text-strongest, #111); color: #fff; border-color: var(--allybi-text-strongest, #111); }
+
+    .cf-preview { margin-top: 36px; padding: 28px 24px; background: var(--allybi-bg-alt-1, #f7f7f5); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: var(--allybi-radius-card, 12px); text-align: center; }
+    .cf-preview__label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--allybi-text-muted, #999); margin-bottom: 12px; }
+    .cf-preview__name { font-size: clamp(16px, 2.5vw, 22px); font-weight: 700; font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace; color: var(--allybi-text-strongest, #111); word-break: break-all; min-height: 28px; margin-bottom: 16px; }
+    .cf-preview__placeholder { color: var(--allybi-text-muted, #ccc); font-style: italic; font-weight: 400; }
+
+    .cf-risk { display: flex; align-items: center; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cf-risk__bar-wrap { width: 200px; height: 8px; background: #e5e5e5; border-radius: 4px; overflow: hidden; }
+    .cf-risk__bar { height: 100%; border-radius: 4px; transition: width 0.4s, background 0.4s; width: 0%; background: #22c55e; }
+    .cf-risk__score { font-size: 14px; font-weight: 700; color: var(--allybi-text-strongest, #111); }
+    .cf-risk__label { font-size: 12px; color: var(--allybi-text-muted, #999); }
+
+    /* Gallery */
+    .cf-gallery { padding: var(--allybi-section-py, 80px) 0; background: var(--allybi-bg-alt-1, #f7f7f5); }
+    .cf-gallery h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); text-align: center; margin-bottom: 12px; }
+    .cf-gallery > .allybi-container > p { font-size: 14px; color: var(--allybi-text-muted); text-align: center; margin-bottom: 36px; }
+    .cf-gallery__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; max-width: 800px; margin: 0 auto; }
+    .cf-gallery__card { padding: 20px 24px; background: var(--allybi-bg-surface, #fff); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: var(--allybi-radius-card, 12px); font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace; font-size: 14px; font-weight: 600; color: var(--allybi-text-strongest, #111); word-break: break-all; line-height: 1.5; }
+
+    /* Bridge */
+    .cf-bridge { padding: var(--allybi-section-py, 80px) 0; text-align: center; }
+    .cf-bridge h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 700; color: var(--allybi-text-strongest); margin-bottom: 16px; letter-spacing: -0.02em; }
+    .cf-bridge p { font-size: 16px; color: var(--allybi-text-secondary); max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
+
+    @media (max-width: 768px) {
+      .cf-hero { padding: 120px 0 36px; }
+      .cf-gallery__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .cf-chip { padding: 8px 12px; font-size: 13px; }
+      .cf-chips { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Produto</button>
+        <div class="nav-dropdown-menu">
+          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">Como funciona</a>
+          <a href="integrations.html" data-i18n-key="nav.integrations">Integrações</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Segurança</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Casos de uso</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">Para advogados</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">Para financeiro</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_business">Para operações</a>
+        </div>
+      </div>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Preços</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">Sobre</a>
+    </nav>
+    <div class="header-ctas desktop-only">
+      <a href="https://app.allybi.com.br/login" class="header-signin">Entrar</a>
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary header-btn">Começar grátis</a>
+    </div>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <a href="how-it-works.html" class="mobile-nav-link">Como funciona</a>
+    <a href="integrations.html" class="mobile-nav-link">Integrações</a>
+    <a href="security-overview.html" class="mobile-nav-link">Segurança</a>
+    <a href="pricing.html" class="mobile-nav-link">Preços</a>
+    <a href="busca-manual.html" class="mobile-nav-link">Busca Manual</a>
+    <a href="about.html" class="mobile-nav-link">Sobre</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary">Começar grátis</a>
+    <a href="https://app.allybi.com.br/login" class="header-signin">Entrar</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="cf-hero">
+  <div class="allybi-container">
+    <h1>o cemitério dos arquivos finais</h1>
+    <p>Monte ou envie o nome de arquivo mais absurdo da sua empresa. Sem documentos. Sem nomes de clientes.</p>
+  </div>
+</section>
+
+<!-- SAFETY WARNING -->
+<div class="allybi-container">
+  <div class="cf-warning">
+    <div class="cf-warning__title">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L1 14h14L8 1z" stroke="#92600a" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 6v4" stroke="#92600a" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="12" r="0.7" fill="#92600a"/></svg>
+      Aviso de segurança
+    </div>
+    <p>Não envie documentos. Não envie nomes de clientes. Não envie CPFs, CNPJs, valores reais ou dados sensíveis. Use CLIENTE, EMPRESA ou PROJETO no lugar de nomes reais.</p>
+  </div>
+</div>
+
+<!-- BUILDER -->
+<section class="cf-builder" id="builder">
+  <div class="allybi-container">
+    <h2>Monte seu arquivo final</h2>
+    <p>Selecione uma opção de cada categoria para construir o nome.</p>
+
+    <div class="cf-category" data-cat="prefix">
+      <div class="cf-category__label">Prefixo</div>
+      <div class="cf-chips">
+        <div class="cf-chip" data-value="CLIENTE">CLIENTE</div>
+        <div class="cf-chip" data-value="EMPRESA">EMPRESA</div>
+        <div class="cf-chip" data-value="PROJETO">PROJETO</div>
+        <div class="cf-chip" data-value="CONTRATO">CONTRATO</div>
+        <div class="cf-chip" data-value="PROPOSTA">PROPOSTA</div>
+        <div class="cf-chip" data-value="RELATORIO">RELATORIO</div>
+        <div class="cf-chip" data-value="ATA">ATA</div>
+        <div class="cf-chip" data-value="MINUTA">MINUTA</div>
+        <div class="cf-chip" data-value="PLANILHA">PLANILHA</div>
+        <div class="cf-chip" data-value="DECK">DECK</div>
+      </div>
+    </div>
+
+    <div class="cf-category" data-cat="middle">
+      <div class="cf-category__label">Meio</div>
+      <div class="cf-chips">
+        <div class="cf-chip" data-value="final">final</div>
+        <div class="cf-chip" data-value="final_final">final_final</div>
+        <div class="cf-chip" data-value="v2">v2</div>
+        <div class="cf-chip" data-value="v3">v3</div>
+        <div class="cf-chip" data-value="revisado">revisado</div>
+        <div class="cf-chip" data-value="corrigido">corrigido</div>
+        <div class="cf-chip" data-value="assinado">assinado</div>
+        <div class="cf-chip" data-value="aprovado">aprovado</div>
+        <div class="cf-chip" data-value="novo">novo</div>
+        <div class="cf-chip" data-value="certo">certo</div>
+      </div>
+    </div>
+
+    <div class="cf-category" data-cat="panic">
+      <div class="cf-category__label">Pânico</div>
+      <div class="cf-chips">
+        <div class="cf-chip" data-value="AGORA">AGORA</div>
+        <div class="cf-chip" data-value="AGORA_MESMO">AGORA_MESMO</div>
+        <div class="cf-chip" data-value="usar_esse">usar_esse</div>
+        <div class="cf-chip" data-value="nao_mandar">nao_mandar</div>
+        <div class="cf-chip" data-value="ultimo">ultimo</div>
+        <div class="cf-chip" data-value="valendo">valendo</div>
+        <div class="cf-chip" data-value="enviado">enviado</div>
+        <div class="cf-chip" data-value="cliente">cliente</div>
+        <div class="cf-chip" data-value="novo_novo">novo_novo</div>
+        <div class="cf-chip" data-value="real_final">real_final</div>
+      </div>
+    </div>
+
+    <div class="cf-category" data-cat="ext">
+      <div class="cf-category__label">Extensão</div>
+      <div class="cf-chips">
+        <div class="cf-chip" data-value=".pdf">.pdf</div>
+        <div class="cf-chip" data-value=".docx">.docx</div>
+        <div class="cf-chip" data-value=".xlsx">.xlsx</div>
+        <div class="cf-chip" data-value=".pptx">.pptx</div>
+      </div>
+    </div>
+
+    <!-- Preview -->
+    <div class="cf-preview" id="preview">
+      <div class="cf-preview__label">Pré-visualização</div>
+      <div class="cf-preview__name" id="preview-name">
+        <span class="cf-preview__placeholder">Selecione chips acima para montar o nome</span>
+      </div>
+      <div class="cf-risk">
+        <div class="cf-risk__label">Nível de risco</div>
+        <div class="cf-risk__bar-wrap"><div class="cf-risk__bar" id="risk-bar"></div></div>
+        <div class="cf-risk__score" id="risk-score">0</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SEED GALLERY -->
+<section class="cf-gallery">
+  <div class="allybi-container">
+    <h2>Curadoria inicial</h2>
+    <p>Alguns clássicos que já encontramos por aí.</p>
+    <div class="cf-gallery__grid">
+      <div class="cf-gallery__card">CLIENTE_contrato_final_v3_AGORA.pdf</div>
+      <div class="cf-gallery__card">PROPOSTA_final_final_enviada.pdf</div>
+      <div class="cf-gallery__card">RELATORIO_v7_usar_esse.pdf</div>
+      <div class="cf-gallery__card">MINUTA_final_revisada_AGORA_MESMO.docx</div>
+      <div class="cf-gallery__card">PLANILHA_certa_v2_novo_novo.xlsx</div>
+      <div class="cf-gallery__card">CONTRATO_assinado_corrigido_real_final.pdf</div>
+      <div class="cf-gallery__card">DECK_aprovado_final_final_valendo.pptx</div>
+      <div class="cf-gallery__card">ATA_revisada_ultimo_AGORA.docx</div>
+      <div class="cf-gallery__card">EMPRESA_proposta_v3_nao_mandar.pdf</div>
+      <div class="cf-gallery__card">PROJETO_final_enviado_usar_esse.xlsx</div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDGE -->
+<section class="cf-bridge">
+  <div class="allybi-container">
+    <h2>Se o nome do arquivo precisa explicar tudo, o sistema já falhou.</h2>
+    <p>O Allybi organiza seus documentos por conversa, fonte e contexto. Você pergunta, ele responde com o arquivo certo.</p>
+    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg">Começar grátis por 30 dias</a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="s-cta">
+  <div class="allybi-container">
+    <div class="s-cta__inner">
+      <h2>Pare de transformar informação em caça ao tesouro.</h2>
+      <p>Conecte suas fontes, pergunte no chat e envie o arquivo certo com fonte.</p>
+      <div class="s-cta__ctas">
+        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg">Começar grátis por 30 dias</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="footer-col-title">Produto</h4>
+        <div class="footer-col-links">
+          <a href="how-it-works.html">Como funciona</a>
+          <a href="integrations.html">Integrações</a>
+          <a href="security-overview.html">Segurança</a>
+          <a href="pricing.html">Preços</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Para quem</h4>
+        <div class="footer-col-links">
+          <a href="use-case-legal.html">Para advogados</a>
+          <a href="use-case-finance.html">Para financeiro</a>
+          <a href="use-case-business.html">Para operações</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Recursos</h4>
+        <div class="footer-col-links">
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contato</a>
+          <a href="about.html">Sobre</a>
+          <a href="raio-x.html">Raio-X da Busca Manual</a>
+          <a href="tempo.html">Calculadora do Tempo Perdido</a>
+          <a href="finais.html">Cemitério dos Arquivos Finais</a>
+          <a href="indice.html">Índice Allybi</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Jurídico</h4>
+        <div class="footer-col-links">
+          <a href="tos.html">Termos de Serviço</a>
+          <a href="terms.html">Uso Aceitável</a>
+          <a href="privacy.html">Privacidade</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="integration-data-use.html">Integrações e Uso de Dados</a>
+          <a href="data-deletion.html">Exclusão de Dados</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">Português (BR)</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Español</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="language-switcher.js"></script>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
+<script>
+(function() {
+  var selections = { prefix: null, middle: null, panic: null, ext: null };
+
+  // Confusing-element weights for risk score
+  var RISK_WEIGHTS = {
+    middle: { 'final': 10, 'final_final': 25, 'v2': 8, 'v3': 12, 'revisado': 12, 'corrigido': 14, 'assinado': 6, 'aprovado': 6, 'novo': 10, 'certo': 10 },
+    panic: { 'AGORA': 18, 'AGORA_MESMO': 25, 'usar_esse': 20, 'nao_mandar': 22, 'ultimo': 15, 'valendo': 14, 'enviado': 10, 'cliente': 12, 'novo_novo': 20, 'real_final': 22 }
+  };
+
+  document.querySelectorAll('.cf-category').forEach(function(catEl) {
+    var cat = catEl.getAttribute('data-cat');
+    catEl.querySelectorAll('.cf-chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        // Single select per category
+        catEl.querySelectorAll('.cf-chip').forEach(function(c) { c.classList.remove('selected'); });
+        chip.classList.add('selected');
+        selections[cat] = chip.getAttribute('data-value');
+        updatePreview();
+      });
+    });
+  });
+
+  function updatePreview() {
+    var parts = [];
+    if (selections.prefix) parts.push(selections.prefix);
+    if (selections.middle) parts.push(selections.middle);
+    if (selections.panic) parts.push(selections.panic);
+
+    var nameEl = document.getElementById('preview-name');
+    var riskBar = document.getElementById('risk-bar');
+    var riskScore = document.getElementById('risk-score');
+
+    if (parts.length === 0) {
+      nameEl.innerHTML = '<span class="cf-preview__placeholder">Selecione chips acima para montar o nome</span>';
+      riskBar.style.width = '0%';
+      riskScore.textContent = '0';
+      return;
+    }
+
+    var name = parts.join('_') + (selections.ext || '');
+    nameEl.textContent = name;
+
+    // Calculate risk
+    var score = 0;
+    var confusingCount = 0;
+    if (selections.middle) {
+      score += (RISK_WEIGHTS.middle[selections.middle] || 8);
+      confusingCount++;
+    }
+    if (selections.panic) {
+      score += (RISK_WEIGHTS.panic[selections.panic] || 12);
+      confusingCount++;
+    }
+    // Combo bonus
+    if (selections.middle && selections.panic) {
+      score += 20;
+    }
+    // Having a prefix that implies client data
+    if (selections.prefix && ['CLIENTE', 'EMPRESA', 'CONTRATO'].indexOf(selections.prefix) >= 0) {
+      score += 8;
+    }
+    // Extension mismatch bonus (everything is confusing)
+    if (selections.ext) {
+      score += 5;
+    }
+
+    score = Math.min(100, Math.max(0, score));
+
+    riskBar.style.width = score + '%';
+    riskScore.textContent = score;
+
+    // Color based on score
+    if (score < 30) {
+      riskBar.style.background = '#22c55e';
+    } else if (score < 60) {
+      riskBar.style.background = '#f59e0b';
+    } else {
+      riskBar.style.background = '#ef4444';
+    }
+  }
+})();
+</script>
+</body>
+</html>
