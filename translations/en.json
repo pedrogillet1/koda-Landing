@@ -358,6 +358,16 @@
       "support": "Allybi connects your sources, answers with source, and prepares the right send.",
       "cta": "Start free for 30 days",
       "cta2": "Talk to sales"
+    },
+    "tools": {
+      "title": "Measure before you try.",
+      "subtitle": "Take the X-Ray, calculate time lost, or build a fictitious final_final to see where manual search shows up.",
+      "rayox_title": "Manual Search X-Ray",
+      "rayox_desc": "10 questions to find where your workflow breaks.",
+      "calc_title": "Time Lost Calculator",
+      "calc_desc": "Turn search, confirmation, and resends into hours per month.",
+      "cemetery_title": "Final Files Cemetery",
+      "cemetery_desc": "Build absurd file names without real documents."
     }
   },
   "about": {

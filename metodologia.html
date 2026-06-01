@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
-  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
-  <title>Como calculamos — Allybi</title>
-  <meta name="description" content="Como calculamos o Índice Allybi da Busca Manual. Fontes, fórmulas e critérios de privacidade.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>Metodologia — Indice Allybi da Busca Manual</title>
+  <meta name="description" content="Como calculamos a Busca Manual. Fontes, formulas, faixas, privacidade e criterios de amostra.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,24 @@
   <style>
     .met-hero { padding: 160px 0 80px; text-align: center; }
     .met-hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 20px; text-wrap: balance; }
-    .met-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 640px; margin: 0 auto; line-height: 1.6; }
+    .met-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 680px; margin: 0 auto; line-height: 1.6; }
+
+    .met-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 0 48px;
+    }
+    .met-intro h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--allybi-text-strongest);
+      margin-bottom: 12px;
+    }
+    .met-intro p {
+      font-size: 15px;
+      color: var(--allybi-text-secondary);
+      line-height: 1.7;
+    }
 
     .met-sections { padding: 0 0 var(--allybi-section-py); }
     .met-sections .allybi-container { max-width: 760px; }
@@ -85,6 +102,14 @@
       margin: 12px 0;
       text-align: center;
       line-height: 1.6;
+    }
+    .met-card .met-bands {
+      margin: 12px 0;
+      padding: 0;
+    }
+    .met-card .met-bands li {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
     }
 
     .met-microcopy {
@@ -195,7 +220,15 @@
 <section class="met-hero">
   <div class="allybi-container">
     <h1>Como calculamos a Busca Manual</h1>
-    <p>O índice combina fontes abertas, respostas anônimas e cálculos simples para estimar o esforço invisível de procurar, confirmar e reenviar informação.</p>
+    <p>A metodologia e simples: medimos onde a informacao se espalha, onde a confianca quebra e quanto tempo o time perde.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="met-intro">
+  <div class="allybi-container">
+    <h2>Por que isso existe?</h2>
+    <p>Toda empresa tem um custo invisivel: o tempo que o time gasta procurando informacao que ja existe em algum lugar. Ninguem mede isso porque nao aparece em nenhum relatorio. O Raio-X, a Calculadora e o Cemiterio existem para tornar esse custo visivel -- sem pedir documentos, sem login, sem dados sensiveis. Apenas perguntas simples sobre o fluxo de trabalho.</p>
   </div>
 </section>
 
@@ -207,71 +240,84 @@
     <div class="met-card">
       <h2>O que medimos</h2>
       <ul>
-        <li>Fontes abertas (Drive, e-mail, pastas, Slack, WhatsApp)</li>
-        <li>Tempo de busca por arquivo ou informação</li>
-        <li>Confirmação de versão (é o arquivo certo?)</li>
-        <li>Procura por fonte (quem aprovou, onde está a referência)</li>
-        <li>Esforço de envio (preparar e mandar sem errar)</li>
-        <li>Retrabalho (refazer porque a versão estava errada)</li>
+        <li>Quantidade de fontes abertas ao mesmo tempo (Drive, e-mail, pastas, Slack, WhatsApp)</li>
+        <li>Tempo medio para encontrar um arquivo ou informacao especifica</li>
+        <li>Frequencia de duvida sobre versao ("e o arquivo certo?")</li>
+        <li>Necessidade de procurar a fonte original (quem aprovou, onde esta a referencia)</li>
+        <li>Esforco de preparacao e envio (montar, conferir e mandar sem errar)</li>
+        <li>Retrabalho causado por versao errada ou informacao desatualizada</li>
       </ul>
     </div>
 
-    <!-- 2. O que não pedimos -->
+    <!-- 2. O que nao pedimos -->
     <div class="met-card">
-      <h2>O que não pedimos</h2>
+      <h2>O que nao pedimos</h2>
       <ul>
-        <li>Documentos</li>
-        <li>Nomes de clientes</li>
-        <li>Dados sensíveis</li>
-        <li>CPFs, CNPJs ou valores reais</li>
-        <li>Acesso ao workspace</li>
-        <li>Login para responder</li>
+        <li>Documentos reais ou arquivos do workspace</li>
+        <li>Nomes de clientes, projetos ou fornecedores</li>
+        <li>Dados sensiveis ou confidenciais</li>
+        <li>CPFs, CNPJs, valores financeiros ou contratos</li>
+        <li>Acesso ao Google Drive, Slack, e-mail ou qualquer ferramenta</li>
+        <li>Login, cadastro ou identificacao pessoal para responder</li>
       </ul>
     </div>
 
     <!-- 3. Como o Raio-X funciona -->
     <div class="met-card">
       <h2>Como o Raio-X funciona</h2>
-      <p>O Raio-X da Busca Manual é um questionário de 10 perguntas sobre o fluxo de busca, confirmação e envio de informação. Cada resposta usa uma escala de 1 a 5.</p>
-      <p>O score final é calculado com normalização min-max:</p>
-      <div class="met-formula">score = ((total - min) / (max - min)) * 100</div>
-      <p>O resultado é um número de 0 a 100 que indica o quanto o fluxo de trabalho depende de busca manual. Quanto mais alto, maior a dependência.</p>
+      <p>O Raio-X da Busca Manual e um questionario de 10 perguntas sobre o fluxo de busca, confirmacao e envio de informacao. Cada resposta usa uma escala de 1 a 5.</p>
+      <p>O score final e calculado com normalizacao min-max:</p>
+      <div class="met-formula">score = ((total - min) / (max - min)) x 100</div>
+      <p>Faixas de resultado:</p>
+      <ul class="met-bands">
+        <li>0-25: Sob controle -- fluxo organizado</li>
+        <li>26-50: Alerta leve -- sinais de dispersao</li>
+        <li>51-75: Critico -- busca manual constante</li>
+        <li>76-100: Emergencia -- dependencia total de busca manual</li>
+      </ul>
+      <p>Quanto mais alto o score, maior a dependencia de busca manual no dia a dia.</p>
     </div>
 
     <!-- 4. Como a Calculadora funciona -->
     <div class="met-card">
       <h2>Como a Calculadora funciona</h2>
-      <p>A Calculadora do Tempo Perdido estima quantas horas por mês somem em busca manual. O cálculo combina quatro componentes informados pelo participante:</p>
-      <div class="met-formula">horas/mês = busca + reenvio + confirmação + retrabalho</div>
-      <p>Cada componente é estimado a partir de frequência e duração média informadas. O resultado mostra o tempo mensal invisível gasto procurando, confirmando e reenviando informação.</p>
+      <p>A Calculadora do Tempo Perdido estima quantas horas por mes o time perde em busca manual. O calculo combina quatro componentes informados pelo participante:</p>
+      <div class="met-formula">horas/mes = busca + reenvio + confirmacao + retrabalho</div>
+      <p>Cada componente e estimado a partir de frequencia semanal e duracao media por ocorrencia. O resultado mostra o tempo mensal invisivel gasto procurando, confirmando e reenviando informacao que ja existe em algum lugar.</p>
     </div>
 
-    <!-- 5. Como o Cemitério funciona -->
+    <!-- 5. Como o Cemiterio funciona -->
     <div class="met-card">
-      <h2>Como o Cemitério funciona</h2>
-      <p>O Cemitério dos Arquivos Finais é um construtor de nomes de arquivo absurdos. O participante monta o nome usando chips pré-definidos ou digita livremente, e a comunidade vota nos melhores.</p>
-      <p>Nenhum dado sensível é coletado. Nomes criados não contêm informações reais de clientes, projetos ou valores.</p>
+      <h2>Como o Cemiterio funciona</h2>
+      <p>O Cemiterio dos Arquivos Finais e um construtor de nomes de arquivo absurdos. O participante monta o nome usando chips pre-definidos ou digita livremente, e a comunidade vota nos piores.</p>
+      <p>O risco de versao e calculado com base na quantidade de sufixos acumulados:</p>
+      <div class="met-formula">risco = (sufixos acumulados / maximo possivel) x 100</div>
+      <p>Nenhum dado sensivel e coletado. Nomes criados nao contem informacoes reais de clientes, projetos ou valores.</p>
     </div>
 
-    <!-- 6. Como o Índice funciona -->
+    <!-- 6. Regra de amostra minima -->
     <div class="met-card">
-      <h2>Como o Índice funciona</h2>
-      <p>O Índice Allybi da Busca Manual agrega dados anônimos do Raio-X, da Calculadora e do Cemitério para mostrar padrões sobre como empresas perdem tempo procurando informação.</p>
-      <p>Apenas dados anônimos e agregados são exibidos. Nenhuma resposta individual é identificável.</p>
+      <h2>Regra de amostra minima</h2>
+      <p>O Indice Allybi so publica dados quando a amostra minima de 30 respostas e atingida. Ate la, cada indicador mostra "Em coleta".</p>
+      <p>Esse limite existe para evitar que poucas respostas distorcam os resultados. Com 30 respostas, a media e o desvio padrao comecam a ter significancia estatistica suficiente para mostrar padroes reais.</p>
+      <p>Nenhum dado individual e publicado. Apenas medias, distribuicoes e rankings agregados aparecem no Indice.</p>
     </div>
 
     <!-- 7. Privacidade e LGPD -->
     <div class="met-card">
       <h2>Privacidade e LGPD</h2>
-      <p>A LGPD é a Lei nº 13.709/2018. Dados anonimizados não são considerados dados pessoais quando não permitem identificação ou reversão razoável. Mesmo assim, a Allybi evita coletar documentos, nomes de clientes e dados sensíveis nessas ferramentas.</p>
-      <p class="met-microcopy">Isso é uma explicação de privacidade, não aconselhamento jurídico.</p>
+      <p>A LGPD e a Lei n. 13.709/2018. Segundo a lei, dados anonimizados nao sao considerados dados pessoais quando nao permitem identificacao do titular, direta ou indiretamente, considerando os meios razoaveis disponiveis.</p>
+      <p>As ferramentas do Indice Allybi (Raio-X, Calculadora e Cemiterio) nao coletam documentos, nomes de clientes, CPFs, CNPJs ou qualquer dado que permita identificacao. Nao exigem login. Nao acessam ferramentas do participante.</p>
+      <p>Os dados sao armazenados de forma agregada. Nenhuma resposta individual e exibida ou identificavel no Indice.</p>
+      <p class="met-microcopy">Esta e uma explicacao de privacidade, nao aconselhamento juridico. Para duvidas sobre a LGPD, consulte um advogado.</p>
     </div>
 
     <!-- 8. Como o Allybi entra -->
     <div class="met-card">
       <h2>Como o Allybi entra</h2>
-      <p>A busca manual é o problema. O Allybi é o produto que resolve: conecte fontes, suba documentos, pergunte no chat, receba resposta com fonte e confirme antes de enviar.</p>
-      <p>As ferramentas de diagnóstico (Raio-X, Calculadora, Cemitério e Índice) ajudam a entender o problema. O Allybi ajuda a resolver.</p>
+      <p>A busca manual e o problema. O Allybi e o produto que resolve.</p>
+      <p>Com o Allybi, o time conecta suas fontes (Drive, e-mail, uploads), pergunta no chat e recebe a resposta com o arquivo certo e a fonte original. Sem procurar em 5 abas. Sem perguntar "qual e a versao certa?" no grupo. Sem reenviar porque mandou o errado.</p>
+      <p>As ferramentas de diagnostico (Raio-X, Calculadora, Cemiterio e Indice) ajudam a entender o tamanho do problema. O Allybi ajuda a resolver o fluxo.</p>
     </div>
 
   </div>
@@ -281,8 +327,8 @@
 <section class="met-cta-section">
   <div class="allybi-container">
     <div class="met-cta__buttons">
-      <a href="raio-x.html" class="allybi-btn allybi-btn--primary allybi-btn--lg">Fazer o raio-x</a>
-      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Começar grátis por 30 dias</a>
+      <a href="raio-x.html" class="allybi-btn allybi-btn--primary allybi-btn--lg">Fazer o Raio-X</a>
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Comecar gratis por 30 dias</a>
     </div>
   </div>
 </section>
@@ -291,10 +337,10 @@
 <section class="s-cta">
   <div class="allybi-container">
     <div class="s-cta__inner">
-      <h2>Pare de transformar informação em caça ao tesouro.</h2>
+      <h2>Pare de transformar informacao em caca ao tesouro.</h2>
       <p>Conecte suas fontes, pergunte no chat e envie o arquivo certo com fonte.</p>
       <div class="s-cta__ctas">
-        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="start_free_clicked">Começar grátis por 30 dias</a>
+        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="start_free_clicked">Comecar gratis por 30 dias</a>
       </div>
     </div>
   </div>
@@ -375,9 +421,9 @@
             <span class="lang-label">English</span>
           </button>
           <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="pt">Portugues (BR)</li>
             <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
+            <li role="option" data-lang="es">Espanol</li>
           </ul>
         </div>
       </div>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
-  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
-  <title>Cemitério dos Arquivos Finais — Allybi</title>
-  <meta name="description" content="Monte o nome de arquivo mais absurdo da sua empresa. Sem documentos, sem dados sensíveis. Ferramenta anônima da Allybi.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>Quantas versoes finais cabem em um arquivo? — Allybi</title>
+  <meta name="description" content="Crie um final_final absurdo em 20 segundos. Sem documento real. Sem nome de cliente. Ferramenta anonima da Allybi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,51 +17,57 @@
   <link rel="stylesheet" href="allybi-footer.css">
   <link rel="stylesheet" href="allybi-responsive.css">
   <style>
-    .cf-hero { padding: 160px 0 48px; text-align: center; }
-    .cf-hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 16px; text-wrap: balance; }
-    .cf-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 580px; margin: 0 auto 32px; line-height: 1.6; }
+    /* Hero */
+    .cf-hero { padding: 160px 0 24px; text-align: center; }
+    .cf-hero h1 { font-size: clamp(30px, 4.5vw, 54px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 16px; text-wrap: balance; }
+    .cf-hero .cf-sub { font-size: 17px; color: var(--allybi-text-secondary); max-width: 600px; margin: 0 auto 24px; line-height: 1.6; }
+    .cf-hero .cf-cta-primary { margin-bottom: 20px; }
 
-    .cf-warning { max-width: 640px; margin: 0 auto 56px; padding: 20px 24px; background: #fef9ec; border: 1px solid #f5d06b; border-radius: var(--allybi-radius-card, 12px); text-align: left; }
-    .cf-warning__title { font-size: 14px; font-weight: 700; color: #92600a; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .cf-warning__title svg { flex-shrink: 0; }
-    .cf-warning p { font-size: 13px; color: #78510d; line-height: 1.6; margin: 0; }
+    /* Trust strip */
+    .cf-trust-strip { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 12px; color: var(--allybi-text-muted); font-weight: 500; padding-bottom: 48px; }
+    .cf-trust-strip span { display: flex; align-items: center; gap: 6px; }
+    .cf-trust-strip span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--allybi-trust, #22c55e); }
 
-    .cf-builder { max-width: 720px; margin: 0 auto; padding: 0 0 80px; }
-    .cf-builder h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); margin-bottom: 8px; text-align: center; }
-    .cf-builder > p { font-size: 15px; color: var(--allybi-text-secondary); text-align: center; margin-bottom: 40px; }
+    /* Builder layout */
+    .cf-builder-wrap { padding: 0 0 var(--allybi-section-py, 80px); }
+    .cf-builder-layout { display: grid; grid-template-columns: 1fr 380px; gap: 32px; align-items: start; }
 
-    .cf-category { margin-bottom: 28px; }
+    /* Chip groups */
+    .cf-chips-col { display: flex; flex-direction: column; gap: 24px; }
     .cf-category__label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--allybi-text-muted, #999); margin-bottom: 10px; }
     .cf-chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .cf-chip { padding: 10px 16px; background: var(--allybi-bg-surface, #fff); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--allybi-text-strongest, #111); cursor: pointer; transition: border-color 0.2s, background 0.2s; user-select: none; font-family: 'Plus Jakarta Sans', sans-serif; }
     .cf-chip:hover { border-color: var(--allybi-accent, #111); }
     .cf-chip.selected { background: var(--allybi-text-strongest, #111); color: #fff; border-color: var(--allybi-text-strongest, #111); }
 
-    .cf-preview { margin-top: 36px; padding: 28px 24px; background: var(--allybi-bg-alt-1, #f7f7f5); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: var(--allybi-radius-card, 12px); text-align: center; }
+    /* Preview card (sticky on desktop) */
+    .cf-preview-col { position: sticky; top: 100px; }
+    .cf-preview { padding: 28px 24px; background: var(--allybi-bg-alt-1, #f7f7f5); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: var(--allybi-radius-card, 12px); text-align: center; }
     .cf-preview__label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--allybi-text-muted, #999); margin-bottom: 12px; }
-    .cf-preview__name { font-size: clamp(16px, 2.5vw, 22px); font-weight: 700; font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace; color: var(--allybi-text-strongest, #111); word-break: break-all; min-height: 28px; margin-bottom: 16px; }
+    .cf-preview__name { font-size: clamp(15px, 2vw, 20px); font-weight: 700; font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace; color: var(--allybi-text-strongest, #111); word-break: break-all; min-height: 28px; margin-bottom: 20px; }
     .cf-preview__placeholder { color: var(--allybi-text-muted, #ccc); font-style: italic; font-weight: 400; }
-
-    .cf-risk { display: flex; align-items: center; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .cf-risk__bar-wrap { width: 200px; height: 8px; background: #e5e5e5; border-radius: 4px; overflow: hidden; }
+    .cf-risk { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .cf-risk__bar-wrap { width: 100%; height: 8px; background: #e5e5e5; border-radius: 4px; overflow: hidden; }
     .cf-risk__bar { height: 100%; border-radius: 4px; transition: width 0.4s, background 0.4s; width: 0%; background: #22c55e; }
-    .cf-risk__score { font-size: 14px; font-weight: 700; color: var(--allybi-text-strongest, #111); }
-    .cf-risk__label { font-size: 12px; color: var(--allybi-text-muted, #999); }
+    .cf-risk__meta { display: flex; align-items: center; gap: 12px; }
+    .cf-risk__score { font-size: 28px; font-weight: 700; color: var(--allybi-text-strongest, #111); line-height: 1; }
+    .cf-risk__label { font-size: 13px; color: var(--allybi-text-muted, #999); font-weight: 500; }
 
     /* Gallery */
     .cf-gallery { padding: var(--allybi-section-py, 80px) 0; background: var(--allybi-bg-alt-1, #f7f7f5); }
-    .cf-gallery h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); text-align: center; margin-bottom: 12px; }
-    .cf-gallery > .allybi-container > p { font-size: 14px; color: var(--allybi-text-muted); text-align: center; margin-bottom: 36px; }
+    .cf-gallery h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); text-align: center; margin-bottom: 36px; }
     .cf-gallery__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; max-width: 800px; margin: 0 auto; }
     .cf-gallery__card { padding: 20px 24px; background: var(--allybi-bg-surface, #fff); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: var(--allybi-radius-card, 12px); font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace; font-size: 14px; font-weight: 600; color: var(--allybi-text-strongest, #111); word-break: break-all; line-height: 1.5; }
 
     /* Bridge */
     .cf-bridge { padding: var(--allybi-section-py, 80px) 0; text-align: center; }
-    .cf-bridge h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 700; color: var(--allybi-text-strongest); margin-bottom: 16px; letter-spacing: -0.02em; }
+    .cf-bridge h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 700; color: var(--allybi-text-strongest); margin-bottom: 16px; letter-spacing: -0.02em; max-width: 600px; margin-left: auto; margin-right: auto; }
     .cf-bridge p { font-size: 16px; color: var(--allybi-text-secondary); max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
 
     @media (max-width: 768px) {
-      .cf-hero { padding: 120px 0 36px; }
+      .cf-hero { padding: 120px 0 20px; }
+      .cf-builder-layout { grid-template-columns: 1fr; }
+      .cf-preview-col { position: static; }
       .cf-gallery__grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
@@ -158,118 +164,129 @@
 <!-- HERO -->
 <section class="cf-hero">
   <div class="allybi-container">
-    <h1>O Cemitério dos Arquivos Finais</h1>
-    <p>Monte ou envie o nome de arquivo mais absurdo da sua empresa. Sem documentos. Sem nomes de clientes.</p>
+    <h1>Quantas versoes finais cabem em um arquivo?</h1>
+    <p class="cf-sub">Crie um final_final absurdo em 20 segundos. Sem documento real. Sem nome de cliente. So o caos do nome.</p>
+    <div class="cf-cta-primary">
+      <a href="#builder" class="allybi-btn allybi-btn--primary allybi-btn--lg">Montar meu final_final</a>
+    </div>
+    <div class="cf-trust-strip">
+      <span>100% ficticio</span>
+      <span>Sem arquivo real</span>
+      <span>Use CLIENTE/EMPRESA/PROJETO</span>
+    </div>
   </div>
 </section>
 
-<!-- SAFETY WARNING -->
-<div class="allybi-container">
-  <div class="cf-warning">
-    <div class="cf-warning__title">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L1 14h14L8 1z" stroke="#92600a" stroke-width="1.3" stroke-linejoin="round"/><path d="M8 6v4" stroke="#92600a" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="12" r="0.7" fill="#92600a"/></svg>
-      Aviso de segurança
-    </div>
-    <p>Não envie documentos. Não envie nomes de clientes. Não envie CPFs, CNPJs, valores reais ou dados sensíveis. Use CLIENTE, EMPRESA ou PROJETO no lugar de nomes reais.</p>
-  </div>
-</div>
-
 <!-- BUILDER -->
-<section class="cf-builder" id="builder">
+<section class="cf-builder-wrap" id="builder">
   <div class="allybi-container">
-    <h2>Monte seu arquivo final</h2>
-    <p>Selecione uma opção de cada categoria para construir o nome.</p>
+    <div class="cf-builder-layout">
 
-    <div class="cf-category" data-cat="prefix">
-      <div class="cf-category__label">Prefixo</div>
-      <div class="cf-chips">
-        <div class="cf-chip" data-value="CLIENTE">CLIENTE</div>
-        <div class="cf-chip" data-value="EMPRESA">EMPRESA</div>
-        <div class="cf-chip" data-value="PROJETO">PROJETO</div>
-        <div class="cf-chip" data-value="CONTRATO">CONTRATO</div>
-        <div class="cf-chip" data-value="PROPOSTA">PROPOSTA</div>
-        <div class="cf-chip" data-value="RELATORIO">RELATORIO</div>
-        <div class="cf-chip" data-value="ATA">ATA</div>
-        <div class="cf-chip" data-value="MINUTA">MINUTA</div>
-        <div class="cf-chip" data-value="PLANILHA">PLANILHA</div>
-        <div class="cf-chip" data-value="DECK">DECK</div>
+      <!-- Chips column -->
+      <div class="cf-chips-col">
+
+        <div class="cf-category" data-cat="tipo">
+          <div class="cf-category__label">Tipo</div>
+          <div class="cf-chips">
+            <div class="cf-chip" data-value="contrato">contrato</div>
+            <div class="cf-chip" data-value="proposta">proposta</div>
+            <div class="cf-chip" data-value="relatorio">relatorio</div>
+            <div class="cf-chip" data-value="ata">ata</div>
+            <div class="cf-chip" data-value="minuta">minuta</div>
+            <div class="cf-chip" data-value="planilha">planilha</div>
+            <div class="cf-chip" data-value="deck">deck</div>
+            <div class="cf-chip" data-value="escopo">escopo</div>
+          </div>
+        </div>
+
+        <div class="cf-category" data-cat="estado">
+          <div class="cf-category__label">Estado</div>
+          <div class="cf-chips">
+            <div class="cf-chip" data-value="final">final</div>
+            <div class="cf-chip" data-value="final_final">final_final</div>
+            <div class="cf-chip" data-value="revisado">revisado</div>
+            <div class="cf-chip" data-value="corrigido">corrigido</div>
+            <div class="cf-chip" data-value="assinado">assinado</div>
+            <div class="cf-chip" data-value="aprovado">aprovado</div>
+            <div class="cf-chip" data-value="novo">novo</div>
+            <div class="cf-chip" data-value="certo">certo</div>
+          </div>
+        </div>
+
+        <div class="cf-category" data-cat="versao">
+          <div class="cf-category__label">Versao</div>
+          <div class="cf-chips">
+            <div class="cf-chip" data-value="v2">v2</div>
+            <div class="cf-chip" data-value="v3">v3</div>
+            <div class="cf-chip" data-value="v4">v4</div>
+            <div class="cf-chip" data-value="ultima">ultima</div>
+            <div class="cf-chip" data-value="novo_novo">novo_novo</div>
+            <div class="cf-chip" data-value="agora">agora</div>
+            <div class="cf-chip" data-value="AGORA_MESMO">AGORA_MESMO</div>
+            <div class="cf-chip" data-value="real_final">real_final</div>
+          </div>
+        </div>
+
+        <div class="cf-category" data-cat="panico">
+          <div class="cf-category__label">Panico</div>
+          <div class="cf-chips">
+            <div class="cf-chip" data-value="usar_esse">usar_esse</div>
+            <div class="cf-chip" data-value="nao_mandar">nao_mandar</div>
+            <div class="cf-chip" data-value="valendo">valendo</div>
+            <div class="cf-chip" data-value="cliente_aprovou">cliente_aprovou</div>
+            <div class="cf-chip" data-value="enviado">enviado</div>
+            <div class="cf-chip" data-value="com_ajuste">com_ajuste</div>
+            <div class="cf-chip" data-value="pra_assinar">pra_assinar</div>
+            <div class="cf-chip" data-value="nao_apagar">nao_apagar</div>
+          </div>
+        </div>
+
+        <div class="cf-category" data-cat="ext">
+          <div class="cf-category__label">Extensao</div>
+          <div class="cf-chips">
+            <div class="cf-chip" data-value=".pdf">.pdf</div>
+            <div class="cf-chip" data-value=".docx">.docx</div>
+            <div class="cf-chip" data-value=".xlsx">.xlsx</div>
+            <div class="cf-chip" data-value=".pptx">.pptx</div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Preview column -->
+      <div class="cf-preview-col">
+        <div class="cf-preview" id="preview">
+          <div class="cf-preview__label">Pre-visualizacao</div>
+          <div class="cf-preview__name" id="preview-name">
+            <span class="cf-preview__placeholder">Selecione chips para montar o nome</span>
+          </div>
+          <div class="cf-risk">
+            <div class="cf-risk__bar-wrap"><div class="cf-risk__bar" id="risk-bar"></div></div>
+            <div class="cf-risk__meta">
+              <div class="cf-risk__score" id="risk-score">0</div>
+              <div class="cf-risk__label" id="risk-label">quase confiavel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <div class="cf-category" data-cat="middle">
-      <div class="cf-category__label">Meio</div>
-      <div class="cf-chips">
-        <div class="cf-chip" data-value="final">final</div>
-        <div class="cf-chip" data-value="final_final">final_final</div>
-        <div class="cf-chip" data-value="v2">v2</div>
-        <div class="cf-chip" data-value="v3">v3</div>
-        <div class="cf-chip" data-value="revisado">revisado</div>
-        <div class="cf-chip" data-value="corrigido">corrigido</div>
-        <div class="cf-chip" data-value="assinado">assinado</div>
-        <div class="cf-chip" data-value="aprovado">aprovado</div>
-        <div class="cf-chip" data-value="novo">novo</div>
-        <div class="cf-chip" data-value="certo">certo</div>
-      </div>
-    </div>
-
-    <div class="cf-category" data-cat="panic">
-      <div class="cf-category__label">Pânico</div>
-      <div class="cf-chips">
-        <div class="cf-chip" data-value="AGORA">AGORA</div>
-        <div class="cf-chip" data-value="AGORA_MESMO">AGORA_MESMO</div>
-        <div class="cf-chip" data-value="usar_esse">usar_esse</div>
-        <div class="cf-chip" data-value="nao_mandar">nao_mandar</div>
-        <div class="cf-chip" data-value="ultimo">ultimo</div>
-        <div class="cf-chip" data-value="valendo">valendo</div>
-        <div class="cf-chip" data-value="enviado">enviado</div>
-        <div class="cf-chip" data-value="cliente">cliente</div>
-        <div class="cf-chip" data-value="novo_novo">novo_novo</div>
-        <div class="cf-chip" data-value="real_final">real_final</div>
-      </div>
-    </div>
-
-    <div class="cf-category" data-cat="ext">
-      <div class="cf-category__label">Extensão</div>
-      <div class="cf-chips">
-        <div class="cf-chip" data-value=".pdf">.pdf</div>
-        <div class="cf-chip" data-value=".docx">.docx</div>
-        <div class="cf-chip" data-value=".xlsx">.xlsx</div>
-        <div class="cf-chip" data-value=".pptx">.pptx</div>
-      </div>
-    </div>
-
-    <!-- Preview -->
-    <div class="cf-preview" id="preview">
-      <div class="cf-preview__label">Pré-visualização</div>
-      <div class="cf-preview__name" id="preview-name">
-        <span class="cf-preview__placeholder">Selecione chips acima para montar o nome</span>
-      </div>
-      <div class="cf-risk">
-        <div class="cf-risk__label">Nível de risco</div>
-        <div class="cf-risk__bar-wrap"><div class="cf-risk__bar" id="risk-bar"></div></div>
-        <div class="cf-risk__score" id="risk-score">0</div>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <!-- SEED GALLERY -->
 <section class="cf-gallery">
   <div class="allybi-container">
-    <h2>Curadoria inicial</h2>
-    <p>Alguns clássicos que já encontramos por aí.</p>
+    <h2>Exemplos ficticios para comecar</h2>
     <div class="cf-gallery__grid">
-      <div class="cf-gallery__card">CLIENTE_contrato_final_v3_AGORA.pdf</div>
-      <div class="cf-gallery__card">PROPOSTA_final_final_enviada.pdf</div>
-      <div class="cf-gallery__card">RELATORIO_v7_usar_esse.pdf</div>
-      <div class="cf-gallery__card">MINUTA_final_revisada_AGORA_MESMO.docx</div>
-      <div class="cf-gallery__card">PLANILHA_certa_v2_novo_novo.xlsx</div>
-      <div class="cf-gallery__card">CONTRATO_assinado_corrigido_real_final.pdf</div>
-      <div class="cf-gallery__card">DECK_aprovado_final_final_valendo.pptx</div>
-      <div class="cf-gallery__card">ATA_revisada_ultimo_AGORA.docx</div>
-      <div class="cf-gallery__card">EMPRESA_proposta_v3_nao_mandar.pdf</div>
-      <div class="cf-gallery__card">PROJETO_final_enviado_usar_esse.xlsx</div>
+      <div class="cf-gallery__card">contrato_final_final_v3_usar_esse.pdf</div>
+      <div class="cf-gallery__card">proposta_revisado_AGORA_MESMO_valendo.pdf</div>
+      <div class="cf-gallery__card">relatorio_corrigido_v4_nao_mandar.xlsx</div>
+      <div class="cf-gallery__card">minuta_final_novo_novo_cliente_aprovou.docx</div>
+      <div class="cf-gallery__card">planilha_aprovado_ultima_com_ajuste.xlsx</div>
+      <div class="cf-gallery__card">deck_assinado_real_final_pra_assinar.pptx</div>
+      <div class="cf-gallery__card">escopo_certo_agora_nao_apagar.docx</div>
+      <div class="cf-gallery__card">ata_final_final_AGORA_MESMO_enviado.pdf</div>
     </div>
   </div>
 </section>
@@ -277,22 +294,9 @@
 <!-- BRIDGE -->
 <section class="cf-bridge">
   <div class="allybi-container">
-    <h2>Se o nome do arquivo precisa explicar tudo, o sistema já falhou.</h2>
-    <p>O Allybi organiza seus documentos por conversa, fonte e contexto. Você pergunta, ele responde com o arquivo certo.</p>
-    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg">Começar grátis por 30 dias</a>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="s-cta">
-  <div class="allybi-container">
-    <div class="s-cta__inner">
-      <h2>Pare de transformar informação em caça ao tesouro.</h2>
-      <p>Conecte suas fontes, pergunte no chat e envie o arquivo certo com fonte.</p>
-      <div class="s-cta__ctas">
-        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg">Começar grátis por 30 dias</a>
-      </div>
-    </div>
+    <h2>Quando o nome tenta explicar tudo, o sistema ja falhou.</h2>
+    <p>O Allybi organiza seus documentos por conversa, fonte e contexto. Voce pergunta, ele responde com o arquivo certo.</p>
+    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="start_free_clicked">Comecar gratis por 30 dias</a>
   </div>
 </section>
 
@@ -371,9 +375,9 @@
             <span class="lang-label">English</span>
           </button>
           <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="pt">Portugues (BR)</li>
             <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
+            <li role="option" data-lang="es">Espanol</li>
           </ul>
         </div>
       </div>
@@ -387,22 +391,21 @@
 <script src="allybi-animations.js"></script>
 <script>
 (function() {
-  var selections = { prefix: null, middle: null, panic: null, ext: null };
-
-  // Confusing-element weights for risk score
-  var RISK_WEIGHTS = {
-    middle: { 'final': 10, 'final_final': 25, 'v2': 8, 'v3': 12, 'revisado': 12, 'corrigido': 14, 'assinado': 6, 'aprovado': 6, 'novo': 10, 'certo': 10 },
-    panic: { 'AGORA': 18, 'AGORA_MESMO': 25, 'usar_esse': 20, 'nao_mandar': 22, 'ultimo': 15, 'valendo': 14, 'enviado': 10, 'cliente': 12, 'novo_novo': 20, 'real_final': 22 }
-  };
+  var selections = { tipo: null, estado: null, versao: null, panico: null, ext: null };
 
   document.querySelectorAll('.cf-category').forEach(function(catEl) {
     var cat = catEl.getAttribute('data-cat');
     catEl.querySelectorAll('.cf-chip').forEach(function(chip) {
       chip.addEventListener('click', function() {
-        // Single select per category
-        catEl.querySelectorAll('.cf-chip').forEach(function(c) { c.classList.remove('selected'); });
-        chip.classList.add('selected');
-        selections[cat] = chip.getAttribute('data-value');
+        // Toggle: clicking selected chip deselects it
+        if (chip.classList.contains('selected')) {
+          chip.classList.remove('selected');
+          selections[cat] = null;
+        } else {
+          catEl.querySelectorAll('.cf-chip').forEach(function(c) { c.classList.remove('selected'); });
+          chip.classList.add('selected');
+          selections[cat] = chip.getAttribute('data-value');
+        }
         updatePreview();
       });
     });
@@ -410,61 +413,72 @@
 
   function updatePreview() {
     var parts = [];
-    if (selections.prefix) parts.push(selections.prefix);
-    if (selections.middle) parts.push(selections.middle);
-    if (selections.panic) parts.push(selections.panic);
+    if (selections.tipo) parts.push(selections.tipo);
+    if (selections.estado) parts.push(selections.estado);
+    if (selections.versao) parts.push(selections.versao);
+    if (selections.panico) parts.push(selections.panico);
 
     var nameEl = document.getElementById('preview-name');
     var riskBar = document.getElementById('risk-bar');
-    var riskScore = document.getElementById('risk-score');
+    var riskScoreEl = document.getElementById('risk-score');
+    var riskLabelEl = document.getElementById('risk-label');
 
     if (parts.length === 0) {
-      nameEl.innerHTML = '<span class="cf-preview__placeholder">Selecione chips acima para montar o nome</span>';
+      nameEl.innerHTML = '<span class="cf-preview__placeholder">Selecione chips para montar o nome</span>';
       riskBar.style.width = '0%';
-      riskScore.textContent = '0';
+      riskScoreEl.textContent = '0';
+      riskLabelEl.textContent = 'quase confiavel';
+      riskBar.style.background = '#22c55e';
       return;
     }
 
     var name = parts.join('_') + (selections.ext || '');
     nameEl.textContent = name;
 
-    // Calculate risk
-    var score = 0;
-    var confusingCount = 0;
-    if (selections.middle) {
-      score += (RISK_WEIGHTS.middle[selections.middle] || 8);
-      confusingCount++;
-    }
-    if (selections.panic) {
-      score += (RISK_WEIGHTS.panic[selections.panic] || 12);
-      confusingCount++;
-    }
-    // Combo bonus
-    if (selections.middle && selections.panic) {
-      score += 20;
-    }
-    // Having a prefix that implies client data
-    if (selections.prefix && ['CLIENTE', 'EMPRESA', 'CONTRATO'].indexOf(selections.prefix) >= 0) {
-      score += 8;
-    }
-    // Extension mismatch bonus (everything is confusing)
-    if (selections.ext) {
-      score += 5;
-    }
+    // Risk scoring
+    var score = 20; // base
 
-    score = Math.min(100, Math.max(0, score));
+    // Estado
+    if (selections.estado === 'final') score += 10;
+    if (selections.estado === 'final_final') score += 15;
+    if (selections.estado && ['revisado','corrigido','assinado','aprovado','novo','certo'].indexOf(selections.estado) >= 0) score += 10;
+
+    // Versao
+    if (selections.versao && ['v2','v3','v4','ultima'].indexOf(selections.versao) >= 0) score += 10;
+    if (selections.versao === 'AGORA_MESMO') score += 15;
+    if (selections.versao === 'agora') score += 10;
+    if (selections.versao === 'novo_novo') score += 10;
+    if (selections.versao === 'real_final') score += 12;
+
+    // Panico
+    if (selections.panico && ['cliente_aprovou','enviado'].indexOf(selections.panico) >= 0) score += 10;
+    if (selections.panico && ['usar_esse','nao_mandar','valendo','com_ajuste','pra_assinar','nao_apagar'].indexOf(selections.panico) >= 0) score += 15;
+
+    // Contradiction bonus: estado + versao both present
+    if (selections.estado && selections.versao) score += 20;
+
+    // Cap at 99
+    score = Math.min(99, Math.max(0, score));
 
     riskBar.style.width = score + '%';
-    riskScore.textContent = score;
+    riskScoreEl.textContent = score;
 
-    // Color based on score
-    if (score < 30) {
+    // Label
+    var label;
+    if (score <= 30) {
+      label = 'quase confiavel';
       riskBar.style.background = '#22c55e';
-    } else if (score < 60) {
+    } else if (score <= 60) {
+      label = 'atencao';
       riskBar.style.background = '#f59e0b';
-    } else {
+    } else if (score <= 80) {
+      label = 'alto risco';
       riskBar.style.background = '#ef4444';
+    } else {
+      label = 'ninguem deveria confiar so no nome';
+      riskBar.style.background = '#dc2626';
     }
+    riskLabelEl.textContent = label;
   }
 })();
 </script>

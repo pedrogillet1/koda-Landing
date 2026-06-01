@@ -176,7 +176,7 @@
       "mock_heading": "Escopo — Cliente Alfa",
       "mock_src": "Escopo_Cliente_Alfa_v2.docx — p. 3",
       "heading": "Encontre a proposta aprovada, plano ou follow-up. Avance com segurança.",
-      "mock_body": "3 entregas no escopo aprovado, totalizando <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">R$185K</span>."
+      "mock_body": "3 entregas no escopo aprovado, totalizando <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">RR$185 mil</span>."
     }
   },
   "security": {
@@ -368,6 +368,16 @@
       "support": "O Allybi conecta suas fontes, responde com fonte e prepara o envio certo.",
       "cta": "Começar grátis por 30 dias",
       "cta2": "Falar com vendas"
+    },
+    "tools": {
+      "title": "Meça antes de testar.",
+      "subtitle": "Faça o Raio-X, calcule tempo perdido ou monte um final_final fictício para ver onde a busca manual aparece.",
+      "rayox_title": "Raio-X da Busca Manual",
+      "rayox_desc": "10 perguntas para descobrir onde seu fluxo trava.",
+      "calc_title": "Calculadora do Tempo Perdido",
+      "calc_desc": "Transforme busca, confirmação e reenvio em horas por mês.",
+      "cemetery_title": "Cemitério dos Arquivos Finais",
+      "cemetery_desc": "Monte nomes absurdos sem enviar documentos reais."
     }
   },
   "about": {
@@ -567,7 +577,7 @@
     "upload_title": "Traga os arquivos que importam",
     "upload_p1": "Carregue documentos, decks, planilhas e contratos. Allybi suporta .docx, .xlsx, .pdf, .pptx e mais.",
     "upload_p2": "Agrupe arquivos por projeto, cliente, caso ou negociação. A estrutura do seu workspace reflete como você realmente trabalha, não como um sistema de arquivos acha que você deveria.",
-    "tree_project": "Acme Corp / Negociação Q4",
+    "tree_project": "Cliente Alfa / Negociação Q4",
     "tree_file1": "NDA_v3_final.docx",
     "tree_file2": "Modelo_Precos.xlsx",
     "tree_file3": "Deck_Conselho_Out.pptx",
@@ -577,7 +587,7 @@
     "search_title": "Pergunte em linguagem natural. Receba respostas fundamentadas.",
     "search_p1": "Digite uma pergunta da forma como você perguntaria a um colega. Allybi pesquisa todos os seus arquivos carregados e retorna respostas fundamentadas nos seus documentos, não em conhecimento geral.",
     "search_p2": "Cada resposta cita sua fonte. Clique para ver o parágrafo, célula ou slide exato de onde a informação veio. Sem alucinações. Sem certezas inventadas.",
-    "query_example": "\"Qual é a cláusula de não concorrência no NDA da Acme?\"",
+    "query_example": "\"Qual é a cláusula de não concorrência no NDA da Cliente Alfa?\"",
     "answer_label": "Resposta com fonte",
     "answer_text": "A Seção 4.2 do NDA_v3_final.docx declara: \"O funcionário concorda em não exercer atividades comerciais concorrentes por um período de 12 meses após o término...\"",
     "answer_source": "NDA_v3_final.docx, página 3, seção 4.2",
@@ -666,7 +676,8 @@
     "mock_prepare_title": "Preparar envio",
     "mock_prepare_body": "\"Olá, segue a versão final confirmada do SPA com os termos de indenização atualizados. Por favor revise a Cláusula 8.1.\"",
     "mock_confirm_label": "Revisar antes de enviar",
-    "mock_confirm_details": "<strong style=\"color:var(--allybi-text-strongest)\">Para:</strong> cliente@empresa.com<br><strong style=\"color:var(--allybi-text-strongest)\">Arquivo:</strong> SPA_Draft_v3.pdf (v3)<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook"
+    "mock_confirm_details": "<strong style=\"color:var(--allybi-text-strongest)\">Para:</strong> cliente@empresa.com<br><strong style=\"color:var(--allybi-text-strongest)\">Arquivo:</strong> SPA_Draft_v3.pdf (v3)<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook",
+    "strip_upload": "Subir arquivo"
   },
   "legal": {
     "hero_eyebrow": "Para advogados",
@@ -713,7 +724,7 @@
       "title": "Antes de reuniões do conselho, revisões trimestrais, atualizações para investidores.",
       "subtitle": "A pressão não é a análise. É encontrar o arquivo certo, o número certo e a versão certa antes que a janela feche.",
       "card1_title": "Três versões do deck",
-      "card1_desc": "Board_Deck_Q4_v2, Board_Deck_Q4_final, Board_Deck_Q4_final_atualizado. Qual tem o ARR correto?",
+      "card1_desc": "Deck_Conselho_Q4_v2, Deck_Conselho_Q4_final, Deck_Conselho_Q4_atualizado. Qual tem o ARR correto?",
       "card2_title": "Números espalhados entre arquivos",
       "card2_desc": "Receita no modelo, ARR no deck, burn rate no memo do conselho. O CFO precisa de um número, da fonte certa, agora.",
       "card3_title": "Anexo errado enviado",
@@ -734,13 +745,14 @@
     "mock1": {
       "query": "\"Qual foi o ARR do Q4 no último deck do conselho?\"",
       "badge": "Resposta com fonte",
-      "answer": "ARR Q4 atingiu <strong>$4.2M</strong>, alta de 38% vs Q3.",
-      "source": "Board_Deck_Q4.pdf — slide 7"
+      "answer": "ARR Q4 atingiu <strong>R$4,2M</strong>, alta de 38% vs Q3.",
+      "source": "Deck_Conselho_Q4.pdf — slide 7",
+      "src": "Deck_Conselho_Q4.pdf — slide 7"
     },
     "mock2": {
       "query": "\"Comparar receita entre Q3 e Q4\"",
-      "src_q3": "Board_Deck_Q3.pdf — slide 7",
-      "src_q4": "Board_Deck_Q4.pdf — slide 7"
+      "src_q3": "Deck_Conselho_Q3.pdf — slide 7",
+      "src_q4": "Deck_Conselho_Q4.pdf — slide 7"
     },
     "mock3": {
       "confirm_label": "Confirmar antes de enviar",
@@ -785,7 +797,7 @@
     },
     "feature1": {
       "title": "Pesquise em propostas e planos de projeto.",
-      "desc": "Pergunte \"Quais são as entregas no SOW da Acme?\" e receba a resposta com citação do arquivo e página exatos. Pesquise em todos os seus documentos em uma única consulta — propostas, planos de projeto, notas de reunião, orçamentos."
+      "desc": "Pergunte \"quais são as entregas no escopo aprovado?\" e receba a resposta com citação do arquivo e página exatos. Pesquise em todos os documentos de uma vez — propostas, planos de projeto, atas e orçamentos."
     },
     "feature2": {
       "title": "Encontre a versão mais recente.",
@@ -800,18 +812,20 @@
       "desc": "Seja um e-mail via Outlook ou um envio via WhatsApp, Allybi sempre mostra o conteúdo, o arquivo e o destinatário antes que qualquer coisa saia. Nada é enviado sem sua aprovação explícita."
     },
     "mock1": {
-      "query": "\"Quais são as entregas no SOW da Acme?\"",
+      "query": "\"quais são as entregas no escopo aprovado?\"",
       "badge": "Resposta com fonte",
-      "answer": "3 entregas totalizando <strong>$185K</strong>: Fase 1 descoberta ($45K), Fase 2 implementação ($95K), Fase 3 treinamento ($45K).",
-      "source": "Acme_SOW_v2.docx — p. 3"
+      "answer": "3 entregas no escopo aprovado: diagnóstico (R$45 mil), implementação (R$95 mil) e treinamento (R$45 mil).",
+      "source": "Escopo_Cliente_Alfa_v2.docx — p. 3",
+      "heading": "Escopo — Cliente Alfa",
+      "src": "Escopo_Cliente_Alfa_v2.docx — p. 3"
     },
     "mock2": {
       "latest": "Mais recente"
     },
     "mock3": {
       "to": "Para",
-      "body": "Olá James, dando seguimento à nossa conversa. Anexei o SOW atualizado com o cronograma de entregas revisado que discutimos. Revise a Seção 3 para os marcos atualizados.",
-      "attachment": "Acme_SOW_v2.docx",
+      "body": "Olá cliente, dando seguimento à nossa conversa. Anexei o SOW atualizado com o cronograma de entregas revisado que discutimos. Revise a Seção 3 para os marcos atualizados.",
+      "attachment": "Escopo_Cliente_Alfa_v2.docx",
       "badge": "Mais recente"
     },
     "mock4": {
@@ -854,7 +868,7 @@
       "f1": "Importe arquivos e pastas para seu workspace",
       "f2": "Use em Ask e Upload",
       "where_label": "Onde:",
-      "t1": "Upload",
+      "t1": "Importar",
       "t2": "Ask",
       "t3": "Integrações"
     },
@@ -864,7 +878,7 @@
       "f1": "Traga documentos de sites e bibliotecas",
       "f2": "Pesquise em documentos da equipe",
       "where_label": "Onde:",
-      "t1": "Upload",
+      "t1": "Importar",
       "t2": "Ask",
       "t3": "Integrações"
     },
@@ -1212,7 +1226,7 @@
       "pressure_label": "Pressão",
       "pressure": "Pesquisando em slides, risco de pegar um número da versão errada. O número errado na frente do conselho custa credibilidade.",
       "allybi_label": "Com Allybi",
-      "allybi": "Perguntou \"Qual foi o ARR do Q4 no último deck do conselho?\" Encontrou o número exato — $4.2M — citado no slide 7 do Board_Deck_Q4.pdf. Preparou o e-mail para o CFO com o deck anexado e confirmou antes do envio.",
+      "allybi": "Perguntou \"Qual foi o ARR do Q4 no último deck do conselho?\" Encontrou o número exato — R$4,2M — citado no slide 7 do Deck_Conselho_Q4.pdf. Preparou o e-mail para o CFO com o deck anexado e confirmou antes do envio.",
       "outcome": "Encontrou o número exato com referência ao slide. Preparou o e-mail. Confirmou antes de enviar.",
       "narrative": "O CEO precisa dos números de receita mais recentes para a reunião do conselho em 30 minutos. Três versões do deck existem. O anexo errado significa perda de credibilidade.",
       "label": "Cenário representativo"
@@ -1226,7 +1240,7 @@
       "pressure_label": "Pressão",
       "pressure": "Proposta no e-mail, anexo nas pastas, confusão de versões. Da última vez que a versão errada foi enviada, levou uma semana para recuperar a confiança.",
       "allybi_label": "Com Allybi",
-      "allybi": "Busca multi-fonte encontrou o arquivo certo entre e-mail e pastas. Identificou a versão mais recente (Acme_SOW_v2.docx). Preparou o envio via WhatsApp com o arquivo certo — revisou conteúdo e destinatário antes de abrir o WhatsApp.",
+      "allybi": "Busca multi-fonte encontrou o arquivo certo entre e-mail e pastas. Identificou a versão mais recente (Escopo_Cliente_Alfa_v2.docx). Preparou o envio via WhatsApp com o arquivo certo — revisou conteúdo e destinatário antes de abrir o WhatsApp.",
       "outcome": "Encontrou o arquivo certo. Preparou o envio via WhatsApp com revisão antes de enviar.",
       "narrative": "O cliente está ao telefone em 5 minutos perguntando sobre o cronograma do projeto. A proposta está em algum lugar entre e-mail, Slack e três pastas de projetos.",
       "label": "Cenário representativo"
@@ -1461,7 +1475,7 @@
       "answer1_value": "12.450.000 ações",
       "answer1_source": "Fonte: CapTable_Q4_2025.xlsx — Planilha \"Resumo\", Célula D14",
       "answer2_value": "Avaliação post-money: $48M",
-      "answer2_source": "Fonte: Board_Deck_Q4.pptx — Slide 8",
+      "answer2_source": "Fonte: Deck_Conselho_Q4.pptx — Slide 8",
       "email_to_label": "Para",
       "email_subject_label": "Assunto",
       "email_subject": "Deck atualizado — Materiais Série B",
@@ -1558,7 +1572,7 @@
       "source_slack": "Slack",
       "result3": "<strong>#canal-negocios</strong> — Marcus: \"Cliente satisfeito com a <mark>estrutura de desconto por volume</mark>. Pronto para avançar para a fase de contrato.\"",
       "email_to_label": "Para",
-      "email_body": "Olá James, dando seguimento à nossa conversa da semana passada. Anexei a proposta atualizada com as faixas de preço revisadas que discutimos. Por favor, revise e me avise se tiver dúvidas antes da nossa chamada de quinta.",
+      "email_body": "Olá cliente, dando seguimento à nossa conversa da semana passada. Anexei a proposta atualizada com as faixas de preço revisadas que discutimos. Por favor, revise e me avise se tiver dúvidas antes da nossa chamada de quinta.",
       "email_attachment": "Proposal_v3_final.pdf",
       "doc_title": "Proposta Enterprise ACME — v3",
       "doc_body1": "Esta proposta descreve o contrato de serviço Enterprise entre Allybi e ACME Corporation por um período de 12 meses com início em 1 de abril de 2025.",

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
-  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Calculadora do Tempo Perdido — Allybi</title>
   <meta name="description" content="Descubra quantas horas por mes seu time perde procurando arquivos. Calculadora anonima da Allybi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,60 +17,351 @@
   <link rel="stylesheet" href="allybi-footer.css">
   <link rel="stylesheet" href="allybi-responsive.css">
   <style>
-    .tp-hero { padding: 160px 0 80px; text-align: center; }
-    .tp-hero h1 { font-size: clamp(28px, 4vw, 48px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 20px; text-wrap: balance; }
-    .tp-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
-    .tp-trust { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; font-size: 12px; color: var(--allybi-text-muted); font-weight: 500; margin-bottom: 48px; }
-    .tp-trust span { display: flex; align-items: center; gap: 6px; }
-    .tp-trust span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--allybi-trust, #22c55e); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* Wizard */
-    .tp-wizard { max-width: 640px; margin: 0 auto; padding: 0 0 80px; }
-    .tp-progress { display: flex; gap: 6px; margin-bottom: 40px; }
-    .tp-progress__bar { flex: 1; height: 4px; border-radius: 2px; background: var(--allybi-border-default, #e5e5e5); transition: background 0.3s; }
-    .tp-progress__bar.active { background: var(--allybi-accent, #111); }
+    :root {
+      --text-strongest: #0D0F12;
+      --text-primary: #1A1D23;
+      --text-secondary: #454B57;
+      --text-muted: #6B7280;
+      --text-subtle: #9CA3AF;
+      --bg-page: #FAFAF8;
+      --bg-surface: #FFFFFF;
+      --bg-alt: #F5F6F7;
+      --border-default: rgba(16, 24, 40, 0.08);
+      --border-strong: rgba(16, 24, 40, 0.14);
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --accent-subtle: rgba(37, 99, 235, 0.06);
+      --accent-muted: rgba(37, 99, 235, 0.12);
+      --trust: #059669;
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-    .tp-step { display: none; }
-    .tp-step.active { display: block; }
-    .tp-step h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.02em; color: var(--allybi-text-strongest); margin-bottom: 32px; text-align: center; }
+    body {
+      font-family: var(--font);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-    .tp-chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-    .tp-chip { padding: 14px 24px; background: var(--allybi-bg-surface, #fff); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: var(--allybi-radius-card, 12px); font-size: 15px; font-weight: 500; color: var(--allybi-text-strongest, #111); cursor: pointer; transition: border-color 0.2s, background 0.2s, box-shadow 0.2s; user-select: none; }
-    .tp-chip:hover { border-color: var(--allybi-accent, #111); box-shadow: var(--allybi-shadow-sm, 0 1px 3px rgba(0,0,0,0.08)); }
-    .tp-chip.selected { background: var(--allybi-text-strongest, #111); color: #fff; border-color: var(--allybi-text-strongest, #111); }
+    .tp-container {
+      max-width: 1120px; width: 100%; margin: 0 auto; padding: 0 24px;
+    }
 
-    .tp-nav { display: flex; justify-content: center; gap: 12px; margin-top: 32px; }
-    .tp-nav button { padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: background 0.2s, opacity 0.2s; }
-    .tp-back { background: transparent; color: var(--allybi-text-secondary, #666); }
-    .tp-back:hover { background: var(--allybi-bg-alt-1, #f5f5f5); }
-    .tp-next { background: var(--allybi-text-strongest, #111); color: #fff; opacity: 0.3; pointer-events: none; }
-    .tp-next.enabled { opacity: 1; pointer-events: auto; }
-    .tp-next.enabled:hover { background: #333; }
+    /* Hero */
+    .tp-hero {
+      padding: 140px 0 64px;
+    }
+    .tp-hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .tp-hero__badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--accent-subtle); border: 1px solid var(--accent-muted);
+      border-radius: 100px; padding: 6px 14px;
+      font-size: 12px; font-weight: 600; color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .tp-hero h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-strongest);
+      margin-bottom: 16px;
+      text-wrap: balance;
+      line-height: 1.15;
+    }
+    .tp-hero__sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .tp-hero__start {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 48px; padding: 0 32px;
+      background: var(--text-strongest); color: #fff;
+      font-family: var(--font); font-size: 15px; font-weight: 600;
+      border: none; border-radius: 100px; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+    .tp-hero__start:hover { background: #000; transform: translateY(-1px); }
+    .tp-trust {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      font-size: 12px; color: var(--text-muted); font-weight: 500;
+      margin-top: 24px;
+    }
+    .tp-trust span {
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tp-trust span::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--trust);
+    }
 
-    .tp-multi-hint { font-size: 13px; color: var(--allybi-text-muted, #999); text-align: center; margin-bottom: 16px; }
+    /* Preview card */
+    .tp-preview {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    .tp-preview__title {
+      font-size: 13px; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      margin-bottom: 20px;
+    }
+    .tp-preview__hours {
+      font-size: 56px; font-weight: 700; color: var(--text-strongest);
+      letter-spacing: -0.04em; line-height: 1;
+      margin-bottom: 4px;
+    }
+    .tp-preview__hours-label {
+      font-size: 14px; font-weight: 500; color: var(--text-subtle);
+      margin-bottom: 16px;
+    }
+    .tp-preview__cost {
+      font-size: 28px; font-weight: 700; color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .tp-preview__cost-label {
+      font-size: 13px; font-weight: 500; color: var(--text-muted);
+    }
+
+    /* Pre-quiz section */
+    .tp-section {
+      padding: 64px 0;
+    }
+    .tp-section__title {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700; color: var(--text-strongest);
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .tp-cards-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .tp-info-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+    }
+    .tp-info-card__icon {
+      width: 40px; height: 40px;
+      background: var(--accent-subtle);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      color: var(--accent); font-size: 18px;
+    }
+    .tp-info-card__label {
+      font-size: 15px; font-weight: 700; color: var(--text-strongest);
+      margin-bottom: 6px;
+    }
+    .tp-info-card__desc {
+      font-size: 13px; color: var(--text-secondary); line-height: 1.5;
+    }
+
+    /* Quiz wrapper */
+    .tp-quiz-wrapper {
+      display: none;
+      max-width: 600px; width: 100%; margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    /* Progress */
+    .tp-progress {
+      height: 4px; background: var(--bg-alt); border-radius: 100px;
+      margin-bottom: 12px; overflow: hidden;
+    }
+    .tp-progress__bar {
+      height: 100%; background: var(--accent); border-radius: 100px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0%;
+    }
+    .tp-progress__label {
+      font-size: 13px; font-weight: 600; color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+
+    /* Quiz screen */
+    .tp-quiz {
+      display: none;
+      padding: 8px 0 60px;
+    }
+    .tp-quiz.active { display: block; animation: fadeInUp 0.35s ease-out; }
+
+    .tp-quiz__question {
+      font-size: clamp(20px, 4vw, 26px);
+      font-weight: 700;
+      color: var(--text-strongest);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .tp-quiz__hint {
+      font-size: 13px; color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .tp-quiz__chips {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .tp-quiz__chips--multi .tp-chip.selected {
+      border-color: var(--accent);
+      background: var(--accent-subtle);
+      box-shadow: 0 0 0 2px var(--accent-muted);
+    }
+    .tp-chip {
+      display: flex; align-items: center;
+      min-height: 52px; padding: 14px 20px;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-default);
+      border-radius: var(--radius);
+      font-family: var(--font); font-size: 15px; font-weight: 500;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      text-align: left;
+      width: 100%;
+    }
+    .tp-chip:hover {
+      border-color: var(--accent);
+      background: var(--accent-subtle);
+      box-shadow: var(--shadow-sm);
+    }
+    .tp-chip.selected {
+      border-color: var(--accent);
+      background: var(--accent-subtle);
+      box-shadow: 0 0 0 2px var(--accent-muted);
+    }
+
+    .tp-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 24px; padding: 8px 0;
+      background: none; border: none;
+      font-family: var(--font); font-size: 13px; font-weight: 500;
+      color: var(--text-muted); cursor: pointer;
+      transition: color 0.2s;
+    }
+    .tp-back:hover { color: var(--text-primary); }
+    .tp-back svg { width: 14px; height: 14px; }
+
+    .tp-next-wrap {
+      margin-top: 24px;
+    }
+    .tp-next-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 48px; padding: 0 32px;
+      background: var(--text-strongest); color: #fff;
+      font-family: var(--font); font-size: 15px; font-weight: 600;
+      border: none; border-radius: 100px; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .tp-next-btn:hover { background: #000; transform: translateY(-1px); }
 
     /* Result */
-    .tp-result { display: none; text-align: center; padding: 0 0 80px; max-width: 640px; margin: 0 auto; }
-    .tp-result.visible { display: block; }
-    .tp-result__card { background: var(--allybi-bg-surface, #fff); border: 1px solid var(--allybi-border-default, #e5e5e5); border-radius: var(--allybi-radius-card, 12px); padding: 48px 32px; margin-bottom: 32px; }
-    .tp-result__hours { font-size: clamp(36px, 5vw, 56px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest, #111); margin-bottom: 8px; }
-    .tp-result__label { font-size: 17px; color: var(--allybi-text-secondary, #666); margin-bottom: 24px; line-height: 1.5; }
-    .tp-result__cost { font-size: 20px; font-weight: 600; color: var(--allybi-text-strongest, #111); margin-bottom: 4px; }
-    .tp-result__cost-label { font-size: 14px; color: var(--allybi-text-muted, #999); }
-    .tp-result__cta { margin-top: 32px; }
+    .tp-result {
+      display: none;
+      max-width: 600px; width: 100%; margin: 0 auto;
+      padding: 120px 24px 40px;
+      text-align: center;
+    }
+    .tp-result.active { display: block; animation: fadeInUp 0.4s ease-out; }
 
-    .tp-bridge { padding: var(--allybi-section-py, 80px) 0; text-align: center; }
-    .tp-bridge h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: var(--allybi-text-strongest); margin-bottom: 16px; }
-    .tp-bridge p { font-size: 16px; color: var(--allybi-text-secondary); max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
+    .tp-result__card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius);
+      padding: 48px 32px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-md);
+    }
+    .tp-result__hours {
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 700; color: var(--text-strongest);
+      letter-spacing: -0.04em; line-height: 1;
+      margin-bottom: 8px;
+    }
+    .tp-result__label {
+      font-size: 17px; color: var(--text-secondary);
+      margin-bottom: 24px; line-height: 1.5;
+    }
+    .tp-result__cost {
+      font-size: 28px; font-weight: 700; color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .tp-result__cost-label {
+      font-size: 14px; color: var(--text-muted);
+    }
+    .tp-result__cost-note {
+      font-size: 12px; color: var(--text-subtle); font-style: italic;
+      margin-top: 8px;
+    }
+
+    /* Bridge */
+    .tp-bridge {
+      max-width: 600px; margin: 0 auto;
+      padding: 0 24px 48px;
+      text-align: center;
+    }
+    .tp-bridge.active { display: block; }
+    .tp-bridge__card {
+      background: var(--text-strongest); color: #fff;
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      margin-bottom: 32px;
+    }
+    .tp-bridge__title {
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 700; margin-bottom: 12px;
+    }
+    .tp-bridge__desc {
+      font-size: 15px; color: rgba(255,255,255,0.7);
+      line-height: 1.6; margin-bottom: 28px;
+    }
+    .tp-bridge__cta {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 48px; padding: 0 32px;
+      background: #fff; color: var(--text-strongest);
+      font-family: var(--font); font-size: 15px; font-weight: 600;
+      border: none; border-radius: 100px; cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .tp-bridge__cta:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
     @media (max-width: 768px) {
       .tp-hero { padding: 120px 0 48px; }
-      .tp-chip { padding: 12px 18px; font-size: 14px; }
+      .tp-hero__grid { grid-template-columns: 1fr; gap: 40px; }
+      .tp-cards-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 480px) {
-      .tp-chips { gap: 8px; }
-      .tp-chip { padding: 10px 14px; font-size: 13px; }
-      .tp-trust { flex-direction: column; align-items: center; gap: 8px; }
+      .tp-hero { padding: 100px 0 32px; }
+      .tp-hero h1 { font-size: 26px; }
+      .tp-cards-grid { grid-template-columns: 1fr; }
+      .tp-chip { min-height: 48px; padding: 12px 16px; font-size: 14px; }
+      .tp-result { padding: 100px 20px 40px; }
+      .tp-result__card { padding: 32px 20px; }
+      .tp-preview { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -156,195 +447,99 @@
 </div>
 
 
-
 <main>
 
 <!-- HERO -->
-<section class="tp-hero">
-  <div class="allybi-container">
-    <h1>Descubra quantas horas por mês seu time perde procurando arquivos.</h1>
-    <p>Responda 7 perguntas rápidas e veja o custo invisível da busca manual no seu time.</p>
-    <div class="tp-trust">
-      <span>anônimo</span>
-      <span>sem upload</span>
-      <span>sem nomes de clientes</span>
-      <span>menos de 2 minutos</span>
+<section class="tp-hero" id="hero">
+  <div class="tp-container">
+    <div class="tp-hero__grid">
+      <div>
+        <div class="tp-hero__badge">Calculadora do Tempo Perdido</div>
+        <h1>Quantas horas por mes somem procurando arquivo?</h1>
+        <p class="tp-hero__sub">Calcule o custo invisivel de procurar, confirmar, explicar e reenviar informacao que ja existe.</p>
+        <button class="tp-hero__start" onclick="startCalc()">Calcular meu tempo perdido</button>
+        <div class="tp-trust">
+          <span>7 perguntas</span>
+          <span>sem cadastro</span>
+          <span>resultado imediato</span>
+        </div>
+      </div>
+      <div class="tp-preview">
+        <div class="tp-preview__title">Exemplo de resultado</div>
+        <div class="tp-preview__hours">42h</div>
+        <div class="tp-preview__hours-label">/mes</div>
+        <div class="tp-preview__cost">R$4.200</div>
+        <div class="tp-preview__cost-label">/mes</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WIZARD -->
-<section class="tp-wizard" id="wizard">
-  <div class="allybi-container">
-
-    <!-- Progress -->
-    <div class="tp-progress" id="progress">
-      <div class="tp-progress__bar active"></div>
-      <div class="tp-progress__bar"></div>
-      <div class="tp-progress__bar"></div>
-      <div class="tp-progress__bar"></div>
-      <div class="tp-progress__bar"></div>
-      <div class="tp-progress__bar"></div>
-      <div class="tp-progress__bar"></div>
-    </div>
-
-    <!-- Step 1 -->
-    <div class="tp-step active" data-step="1" data-mode="single">
-      <h2>Quantas pessoas lidam com documentos toda semana?</h2>
-      <div class="tp-chips">
-        <div class="tp-chip" data-value="0">1–3</div>
-        <div class="tp-chip" data-value="1">4–10</div>
-        <div class="tp-chip" data-value="2">11–25</div>
-        <div class="tp-chip" data-value="3">26–50</div>
-        <div class="tp-chip" data-value="4">50+</div>
+<!-- O QUE ENTRA NO CALCULO -->
+<section class="tp-section" id="pre-calc">
+  <div class="tp-container">
+    <h2 class="tp-section__title">O que entra no calculo?</h2>
+    <div class="tp-cards-grid">
+      <div class="tp-info-card">
+        <div class="tp-info-card__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 7v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="tp-info-card__label">Busca</div>
+        <div class="tp-info-card__desc">Tempo gasto abrindo pastas, e-mails e chats ate encontrar o arquivo.</div>
       </div>
-      <div class="tp-nav">
-        <button class="tp-next" id="next-1">Próxima</button>
+      <div class="tp-info-card">
+        <div class="tp-info-card__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4h12v12H4V4z" stroke="currentColor" stroke-width="1.5"/><path d="M8 4v12M4 10h12" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="tp-info-card__label">Tempo</div>
+        <div class="tp-info-card__desc">Minutos por busca multiplicados pelas buscas diarias do time.</div>
       </div>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="tp-step" data-step="2" data-mode="single">
-      <h2>Quantas buscas ou confirmações acontecem por dia?</h2>
-      <div class="tp-chips">
-        <div class="tp-chip" data-value="0">1–3</div>
-        <div class="tp-chip" data-value="1">4–7</div>
-        <div class="tp-chip" data-value="2">8–15</div>
-        <div class="tp-chip" data-value="3">16–30</div>
-        <div class="tp-chip" data-value="4">30+</div>
+      <div class="tp-info-card">
+        <div class="tp-info-card__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17l4-4m0 0l4-4m-4 4l4 4m-4-4L3 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="tp-info-card__label">Retrabalho</div>
+        <div class="tp-info-card__desc">Pedidos de "manda de novo" que geram envio duplicado toda semana.</div>
       </div>
-      <div class="tp-nav">
-        <button class="tp-back" id="back-2">Voltar</button>
-        <button class="tp-next" id="next-2">Próxima</button>
+      <div class="tp-info-card">
+        <div class="tp-info-card__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M10 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="tp-info-card__label">Etapas extras</div>
+        <div class="tp-info-card__desc">Confirmar versao, achar fonte, explicar contexto e reenviar.</div>
       </div>
     </div>
-
-    <!-- Step 3 -->
-    <div class="tp-step" data-step="3" data-mode="single">
-      <h2>Cada busca costuma levar quanto?</h2>
-      <div class="tp-chips">
-        <div class="tp-chip" data-value="0">1–2 min</div>
-        <div class="tp-chip" data-value="1">3–5 min</div>
-        <div class="tp-chip" data-value="2">6–10 min</div>
-        <div class="tp-chip" data-value="3">11–20 min</div>
-        <div class="tp-chip" data-value="4">20+ min</div>
-      </div>
-      <div class="tp-nav">
-        <button class="tp-back" id="back-3">Voltar</button>
-        <button class="tp-next" id="next-3">Próxima</button>
-      </div>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="tp-step" data-step="4" data-mode="multi">
-      <h2>Onde os arquivos vivem?</h2>
-      <p class="tp-multi-hint">Selecione todos que se aplicam</p>
-      <div class="tp-chips">
-        <div class="tp-chip" data-value="drive">Drive</div>
-        <div class="tp-chip" data-value="email">E-mail</div>
-        <div class="tp-chip" data-value="whatsapp">WhatsApp</div>
-        <div class="tp-chip" data-value="slack">Slack/Teams</div>
-        <div class="tp-chip" data-value="uploads">Uploads</div>
-        <div class="tp-chip" data-value="desktop">Desktop</div>
-        <div class="tp-chip" data-value="servidor">Servidor</div>
-        <div class="tp-chip" data-value="pastas">Pastas antigas</div>
-      </div>
-      <div class="tp-nav">
-        <button class="tp-back" id="back-4">Voltar</button>
-        <button class="tp-next" id="next-4">Próxima</button>
-      </div>
-    </div>
-
-    <!-- Step 5 -->
-    <div class="tp-step" data-step="5" data-mode="multi">
-      <h2>Depois de achar, o que ainda falta?</h2>
-      <p class="tp-multi-hint">Selecione todos que se aplicam</p>
-      <div class="tp-chips">
-        <div class="tp-chip" data-value="versao">Confirmar versão</div>
-        <div class="tp-chip" data-value="fonte">Achar fonte</div>
-        <div class="tp-chip" data-value="baixar">Baixar</div>
-        <div class="tp-chip" data-value="contexto">Explicar contexto</div>
-        <div class="tp-chip" data-value="reenviar">Reenviar</div>
-        <div class="tp-chip" data-value="perguntar">Perguntar para alguém</div>
-      </div>
-      <div class="tp-nav">
-        <button class="tp-back" id="back-5">Voltar</button>
-        <button class="tp-next" id="next-5">Próxima</button>
-      </div>
-    </div>
-
-    <!-- Step 6 -->
-    <div class="tp-step" data-step="6" data-mode="single">
-      <h2>Quantas vezes por semana alguém pede "manda de novo"?</h2>
-      <div class="tp-chips">
-        <div class="tp-chip" data-value="0">0</div>
-        <div class="tp-chip" data-value="1">1–2</div>
-        <div class="tp-chip" data-value="2">3–5</div>
-        <div class="tp-chip" data-value="3">6–10</div>
-        <div class="tp-chip" data-value="4">10+</div>
-      </div>
-      <div class="tp-nav">
-        <button class="tp-back" id="back-6">Voltar</button>
-        <button class="tp-next" id="next-6">Próxima</button>
-      </div>
-    </div>
-
-    <!-- Step 7 -->
-    <div class="tp-step" data-step="7" data-mode="single">
-      <h2>Custo médio/hora aproximado do time</h2>
-      <div class="tp-chips">
-        <div class="tp-chip" data-value="0">R$30</div>
-        <div class="tp-chip" data-value="1">R$60</div>
-        <div class="tp-chip" data-value="2">R$100</div>
-        <div class="tp-chip" data-value="3">R$150</div>
-        <div class="tp-chip" data-value="4">R$250+</div>
-        <div class="tp-chip" data-value="5">Não sei</div>
-      </div>
-      <div class="tp-nav">
-        <button class="tp-back" id="back-7">Voltar</button>
-        <button class="tp-next" id="next-7">Ver resultado</button>
-      </div>
-    </div>
-
   </div>
 </section>
+
+<!-- QUIZ -->
+<div class="tp-quiz-wrapper" id="quiz-wrapper">
+  <div class="tp-progress">
+    <div class="tp-progress__bar" id="progress-bar"></div>
+  </div>
+  <div class="tp-progress__label" id="progress-label">Pergunta 1 de 7</div>
+  <div id="quiz-screens"></div>
+</div>
 
 <!-- RESULT -->
-<section class="tp-result" id="result">
-  <div class="allybi-container">
-    <div class="tp-result__card">
-      <div class="tp-result__hours" id="result-hours">—</div>
-      <div class="tp-result__label">Seu time perde cerca de <strong id="result-hours-text">—</strong> por mês em busca manual.</div>
-      <div class="tp-result__cost" id="result-cost">—</div>
-      <div class="tp-result__cost-label">Isso equivale a aproximadamente <span id="result-cost-text">—</span> por mês.</div>
-    </div>
-    <div class="tp-result__cta">
-      <a href="how-it-works.html" class="allybi-btn allybi-btn--primary allybi-btn--lg">Ver como reduzir isso com Allybi</a>
-    </div>
+<section id="result" class="tp-result">
+  <div class="tp-result__card">
+    <div class="tp-result__hours" id="result-hours">--</div>
+    <div class="tp-result__label" id="result-label">Seu time perde cerca de <strong id="result-hours-text">--</strong> por mes em busca manual.</div>
+    <div class="tp-result__cost" id="result-cost"></div>
+    <div class="tp-result__cost-label" id="result-cost-label"></div>
+    <div class="tp-result__cost-note" id="result-cost-note" style="display:none;"></div>
   </div>
 </section>
 
 <!-- BRIDGE -->
-<section class="tp-bridge">
-  <div class="allybi-container">
-    <h2>O Allybi substitui busca manual por conversa.</h2>
-    <p>Conecte suas fontes, pergunte no chat e receba a resposta com fonte. Sem abrir pasta, sem reenviar, sem confirmar versão.</p>
-    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg">Começar grátis por 30 dias</a>
+<div class="tp-bridge" id="bridge" style="display:none;">
+  <div class="tp-bridge__card">
+    <div class="tp-bridge__title">O Allybi troca busca manual por conversa</div>
+    <div class="tp-bridge__desc">Conecte suas fontes, pergunte no chat e receba a resposta com fonte. Sem abrir pasta, sem reenviar, sem confirmar versao.</div>
+    <a href="how-it-works.html" class="tp-bridge__cta">Ver como reduzir isso com Allybi</a>
   </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="s-cta">
-  <div class="allybi-container">
-    <div class="s-cta__inner">
-      <h2>Pare de transformar informação em caça ao tesouro.</h2>
-      <p>Conecte suas fontes, pergunte no chat e envie o arquivo certo com fonte.</p>
-      <div class="s-cta__ctas">
-        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg">Começar grátis por 30 dias</a>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 
 </main>
 
@@ -421,9 +616,9 @@
             <span class="lang-label">English</span>
           </button>
           <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="pt">Portugues (BR)</li>
             <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
+            <li role="option" data-lang="es">Espanol</li>
           </ul>
         </div>
       </div>
@@ -436,111 +631,176 @@
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
 <script>
-(function() {
-  const PEOPLE    = [2, 7, 18, 38, 60];
-  const SEARCHES  = [2, 5.5, 11.5, 23, 35];
-  const MINUTES   = [1.5, 4, 8, 15.5, 25];
-  const RESENDS   = [0, 1.5, 4, 8, 12];
-  const COSTS     = [30, 60, 100, 150, 250, 60];
-  const WORKING_DAYS = 22;
+(function(){
+  // Midpoint arrays for calculation
+  var PEOPLE_MID    = [2, 7, 18, 38, 60];
+  var SEARCHES_MID  = [2, 5.5, 11.5, 23, 35];
+  var MINUTES_MID   = [1.5, 4, 8, 15.5, 25];
+  var RESENDS_MID   = [0, 1.5, 4, 8, 12];
+  var COSTS_MAP     = [30, 60, 100, 150, 250, 60]; // last = "Nao sei" default
+  var WORKING_DAYS  = 22;
 
-  const answers = {};
-  let current = 1;
-  const totalSteps = 7;
-
-  function updateProgress() {
-    const bars = document.querySelectorAll('.tp-progress__bar');
-    bars.forEach(function(bar, i) {
-      bar.classList.toggle('active', i < current);
-    });
-  }
-
-  function updateNextButton(step) {
-    var btn = document.getElementById('next-' + step);
-    if (!btn) return;
-    var stepEl = document.querySelector('[data-step="' + step + '"]');
-    var mode = stepEl.getAttribute('data-mode');
-    var hasSelection;
-    if (mode === 'multi') {
-      hasSelection = stepEl.querySelectorAll('.tp-chip.selected').length > 0;
-    } else {
-      hasSelection = stepEl.querySelector('.tp-chip.selected') !== null;
+  var questions = [
+    {
+      q: 'Quantas pessoas lidam com documentos toda semana?',
+      mode: 'single',
+      opts: ['1-3', '4-10', '11-25', '26-50', '50+']
+    },
+    {
+      q: 'Quantas buscas ou confirmacoes acontecem por dia?',
+      mode: 'single',
+      opts: ['1-3', '4-7', '8-15', '16-30', '30+']
+    },
+    {
+      q: 'Cada busca costuma levar quanto?',
+      mode: 'single',
+      opts: ['1-2 min', '3-5 min', '6-10 min', '11-20 min', '20+ min']
+    },
+    {
+      q: 'Onde os arquivos vivem?',
+      mode: 'multi',
+      hint: 'Selecione todos que se aplicam',
+      opts: ['Drive', 'E-mail', 'WhatsApp', 'Slack/Teams', 'Uploads', 'Desktop', 'Servidor', 'Pastas antigas']
+    },
+    {
+      q: 'Depois de achar, o que ainda falta?',
+      mode: 'multi',
+      hint: 'Selecione todos que se aplicam',
+      opts: ['Confirmar versao', 'Achar fonte', 'Baixar', 'Explicar contexto', 'Reenviar', 'Perguntar para alguem']
+    },
+    {
+      q: 'Quantas vezes por semana alguem pede "manda de novo"?',
+      mode: 'single',
+      opts: ['0', '1-2', '3-5', '6-10', '10+']
+    },
+    {
+      q: 'Custo medio/hora aproximado do time',
+      mode: 'single',
+      opts: ['R$30', 'R$60', 'R$100', 'R$150', 'R$250+', 'Nao sei']
     }
-    btn.classList.toggle('enabled', hasSelection);
-  }
+  ];
 
-  // Chip clicks
-  document.querySelectorAll('.tp-step').forEach(function(stepEl) {
-    var step = parseInt(stepEl.getAttribute('data-step'));
-    var mode = stepEl.getAttribute('data-mode');
-    stepEl.querySelectorAll('.tp-chip').forEach(function(chip) {
-      chip.addEventListener('click', function() {
-        if (mode === 'single') {
-          stepEl.querySelectorAll('.tp-chip').forEach(function(c) { c.classList.remove('selected'); });
-          chip.classList.add('selected');
-          answers[step] = parseInt(chip.getAttribute('data-value'));
-        } else {
-          chip.classList.toggle('selected');
-          var sel = [];
-          stepEl.querySelectorAll('.tp-chip.selected').forEach(function(c) {
-            sel.push(c.getAttribute('data-value'));
-          });
-          answers[step] = sel;
-        }
-        updateNextButton(step);
-      });
-    });
+  var answers = {};
+  var totalSteps = 7;
+
+  // Build quiz screens
+  var container = document.getElementById('quiz-screens');
+  questions.forEach(function(qData, i) {
+    var screen = document.createElement('div');
+    screen.className = 'tp-quiz';
+    screen.id = 'tq' + i;
+
+    var chipsClass = 'tp-quiz__chips' + (qData.mode === 'multi' ? ' tp-quiz__chips--multi' : '');
+    var chipsHtml = '';
+    for (var j = 0; j < qData.opts.length; j++) {
+      chipsHtml += '<button class="tp-chip" data-q="' + i + '" data-v="' + j + '">' + qData.opts[j] + '</button>';
+    }
+
+    var hintHtml = qData.hint ? '<p class="tp-quiz__hint">' + qData.hint + '</p>' : '';
+
+    var backHtml = '';
+    if (i > 0) {
+      backHtml = '<button class="tp-back" onclick="tpGoBack(' + i + ')">' +
+        '<svg viewBox="0 0 14 14" fill="none"><path d="M8.5 3L4.5 7L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        'Voltar</button>';
+    }
+
+    var nextHtml = '';
+    if (qData.mode === 'multi') {
+      nextHtml = '<div class="tp-next-wrap"><button class="tp-next-btn" id="tp-next-' + i + '" onclick="tpAdvance(' + i + ')">Proxima</button></div>';
+    }
+
+    screen.innerHTML =
+      '<h2 class="tp-quiz__question">' + qData.q + '</h2>' +
+      hintHtml +
+      '<div class="' + chipsClass + '">' + chipsHtml + '</div>' +
+      nextHtml +
+      backHtml;
+
+    container.appendChild(screen);
   });
 
-  function goTo(step) {
-    document.querySelectorAll('.tp-step').forEach(function(s) { s.classList.remove('active'); });
-    var el = document.querySelector('[data-step="' + step + '"]');
-    if (el) {
-      el.classList.add('active');
-      current = step;
-      updateProgress();
-      updateNextButton(step);
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Chip click handler
+  container.addEventListener('click', function(e) {
+    var chip = e.target.closest('.tp-chip');
+    if (!chip) return;
+    var qi = parseInt(chip.dataset.q);
+    var vi = parseInt(chip.dataset.v);
+    var mode = questions[qi].mode;
+
+    if (mode === 'single') {
+      var siblings = chip.parentElement.querySelectorAll('.tp-chip');
+      for (var k = 0; k < siblings.length; k++) siblings[k].classList.remove('selected');
+      chip.classList.add('selected');
+      answers[qi] = vi;
+
+      setTimeout(function() {
+        if (qi < totalSteps - 1) {
+          tpShowQuestion(qi + 1);
+        } else {
+          tpShowResult();
+        }
+      }, 250);
+    } else {
+      chip.classList.toggle('selected');
+      var sel = [];
+      var selected = chip.parentElement.querySelectorAll('.tp-chip.selected');
+      for (var s = 0; s < selected.length; s++) {
+        sel.push(parseInt(selected[s].dataset.v));
+      }
+      answers[qi] = sel;
     }
+  });
+
+  window.tpAdvance = function(qi) {
+    if (!answers[qi] || (Array.isArray(answers[qi]) && answers[qi].length === 0)) return;
+    if (qi < totalSteps - 1) {
+      tpShowQuestion(qi + 1);
+    } else {
+      tpShowResult();
+    }
+  };
+
+  function tpShowQuestion(idx) {
+    var allScreens = document.querySelectorAll('.tp-quiz');
+    for (var i = 0; i < allScreens.length; i++) allScreens[i].classList.remove('active');
+    var target = document.getElementById('tq' + idx);
+    void target.offsetWidth;
+    target.classList.add('active');
+    tpUpdateProgress(idx + 1);
   }
 
-  // Next buttons
-  for (var i = 1; i <= totalSteps; i++) {
-    (function(s) {
-      var btn = document.getElementById('next-' + s);
-      if (btn) {
-        btn.addEventListener('click', function() {
-          if (!btn.classList.contains('enabled')) return;
-          if (s < totalSteps) {
-            goTo(s + 1);
-          } else {
-            showResult();
-          }
-        });
-      }
-    })(i);
+  window.tpGoBack = function(currentIdx) {
+    tpShowQuestion(currentIdx - 1);
+  };
+
+  window.startCalc = function() {
+    document.getElementById('hero').style.display = 'none';
+    document.getElementById('pre-calc').style.display = 'none';
+    document.getElementById('quiz-wrapper').style.display = 'block';
+    tpShowQuestion(0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  function tpUpdateProgress(step) {
+    var pct = (step / totalSteps) * 100;
+    document.getElementById('progress-bar').style.width = pct + '%';
+    document.getElementById('progress-label').textContent = 'Pergunta ' + step + ' de ' + totalSteps;
   }
 
-  // Back buttons
-  for (var j = 2; j <= totalSteps; j++) {
-    (function(s) {
-      var btn = document.getElementById('back-' + s);
-      if (btn) {
-        btn.addEventListener('click', function() {
-          goTo(s - 1);
-        });
-      }
-    })(j);
-  }
+  function tpShowResult() {
+    document.getElementById('quiz-wrapper').style.display = 'none';
 
-  function showResult() {
-    var people = PEOPLE[answers[1]] || 7;
-    var searches = SEARCHES[answers[2]] || 5.5;
-    var minutes = MINUTES[answers[3]] || 4;
-    var resends = RESENDS[answers[6]] || 1.5;
-    var costHour = COSTS[answers[7]] || 60;
+    var people = PEOPLE_MID[answers[0]] || 7;
+    var searches = SEARCHES_MID[answers[1]] || 5.5;
+    var minutes = MINUTES_MID[answers[2]] || 4;
+    var resends = RESENDS_MID[answers[5]] || 1.5;
+    var costIdx = answers[6] !== undefined ? answers[6] : 5;
+    var costHour = COSTS_MAP[costIdx] || 60;
+    var usedDefault = (costIdx === 5);
 
-    var afterFindCount = Array.isArray(answers[5]) ? answers[5].length : 0;
+    // Count multi-select items for after-find extras
+    var afterFindCount = Array.isArray(answers[4]) ? answers[4].length : 0;
 
     var searchHours = (people * searches * minutes * WORKING_DAYS) / 60;
     var resendHours = (people * resends * 4 * 4) / 60;
@@ -548,15 +808,26 @@
     var totalHours = Math.round((searchHours + resendHours) * extraMultiplier);
     var totalCost = totalHours * costHour;
 
-    document.getElementById('result-hours').textContent = totalHours + 'h';
+    document.getElementById('result-hours').textContent = totalHours + 'h/mes';
     document.getElementById('result-hours-text').textContent = totalHours + ' horas';
-    document.getElementById('result-cost').textContent = 'R$' + totalCost.toLocaleString('pt-BR');
-    document.getElementById('result-cost-text').textContent = 'R$' + totalCost.toLocaleString('pt-BR');
+    document.getElementById('result-label').innerHTML = 'Seu time perde cerca de <strong>' + totalHours + ' horas</strong> por mes em busca manual.';
 
-    document.getElementById('wizard').style.display = 'none';
+    document.getElementById('result-cost').textContent = 'R$' + totalCost.toLocaleString('pt-BR') + '/mes';
+    document.getElementById('result-cost-label').textContent = 'Custo estimado em tempo perdido';
+
+    if (usedDefault) {
+      var noteEl = document.getElementById('result-cost-note');
+      noteEl.textContent = 'Custo calculado com R$60/h (valor padrao usado quando a resposta e "Nao sei").';
+      noteEl.style.display = 'block';
+    }
+
     var resultEl = document.getElementById('result');
-    resultEl.classList.add('visible');
-    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    resultEl.classList.add('active');
+
+    var bridgeEl = document.getElementById('bridge');
+    bridgeEl.style.display = 'block';
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 })();
 </script>
