@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Calculadora do Tempo Perdido — Allybi</title>
-  <meta name="description" content="Descubra quantas horas por mes seu time perde procurando arquivos. Calculadora anonima da Allybi.">
+  <meta name="description" content="Descubra quantas horas por mês seu time perde procurando arquivos. Calculadora anonima da Allybi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -455,8 +455,8 @@
     <div class="tp-hero__grid">
       <div>
         <div class="tp-hero__badge">Calculadora do Tempo Perdido</div>
-        <h1>Quantas horas por mes somem procurando arquivo?</h1>
-        <p class="tp-hero__sub">Calcule o custo invisivel de procurar, confirmar, explicar e reenviar informacao que ja existe.</p>
+        <h1>Quantas horas por mês somem procurando arquivo?</h1>
+        <p class="tp-hero__sub">Calcule o custo invisível de procurar, confirmar, explicar e reenviar informação que ja existe.</p>
         <button class="tp-hero__start" onclick="startCalc()">Calcular meu tempo perdido</button>
         <div class="tp-trust">
           <span>7 perguntas</span>
@@ -467,9 +467,9 @@
       <div class="tp-preview">
         <div class="tp-preview__title">Exemplo de resultado</div>
         <div class="tp-preview__hours">42h</div>
-        <div class="tp-preview__hours-label">/mes</div>
+        <div class="tp-preview__hours-label">/mês</div>
         <div class="tp-preview__cost">R$4.200</div>
-        <div class="tp-preview__cost-label">/mes</div>
+        <div class="tp-preview__cost-label">/mês</div>
       </div>
     </div>
   </div>
@@ -478,14 +478,14 @@
 <!-- O QUE ENTRA NO CALCULO -->
 <section class="tp-section" id="pre-calc">
   <div class="tp-container">
-    <h2 class="tp-section__title">O que entra no calculo?</h2>
+    <h2 class="tp-section__title">O que entra no cálculo?</h2>
     <div class="tp-cards-grid">
       <div class="tp-info-card">
         <div class="tp-info-card__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 7v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="tp-info-card__label">Busca</div>
-        <div class="tp-info-card__desc">Tempo gasto abrindo pastas, e-mails e chats ate encontrar o arquivo.</div>
+        <div class="tp-info-card__desc">Tempo gasto abrindo pastas, e-mails e chats até encontrar o arquivo.</div>
       </div>
       <div class="tp-info-card">
         <div class="tp-info-card__icon">
@@ -506,7 +506,7 @@
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M10 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
         <div class="tp-info-card__label">Etapas extras</div>
-        <div class="tp-info-card__desc">Confirmar versao, achar fonte, explicar contexto e reenviar.</div>
+        <div class="tp-info-card__desc">Confirmar versão, achar fonte, explicar contexto e reenviar.</div>
       </div>
     </div>
   </div>
@@ -525,7 +525,7 @@
 <section id="result" class="tp-result">
   <div class="tp-result__card">
     <div class="tp-result__hours" id="result-hours">--</div>
-    <div class="tp-result__label" id="result-label">Seu time perde cerca de <strong id="result-hours-text">--</strong> por mes em busca manual.</div>
+    <div class="tp-result__label" id="result-label">Seu time perde cerca de <strong id="result-hours-text">--</strong> por mês em busca manual.</div>
     <div class="tp-result__cost" id="result-cost"></div>
     <div class="tp-result__cost-label" id="result-cost-label"></div>
     <div class="tp-result__cost-note" id="result-cost-note" style="display:none;"></div>
@@ -536,7 +536,7 @@
 <div class="tp-bridge" id="bridge" style="display:none;">
   <div class="tp-bridge__card">
     <div class="tp-bridge__title">O Allybi troca busca manual por conversa</div>
-    <div class="tp-bridge__desc">Conecte suas fontes, pergunte no chat e receba a resposta com fonte. Sem abrir pasta, sem reenviar, sem confirmar versao.</div>
+    <div class="tp-bridge__desc">Conecte suas fontes, pergunte no chat e receba a resposta com fonte. Sem abrir pasta, sem reenviar, sem confirmar versão.</div>
     <a href="how-it-works.html" class="tp-bridge__cta">Ver como reduzir isso com Allybi</a>
   </div>
 </div>
@@ -666,15 +666,15 @@
       q: 'Depois de achar, o que ainda falta?',
       mode: 'multi',
       hint: 'Selecione todos que se aplicam',
-      opts: ['Confirmar versao', 'Achar fonte', 'Baixar', 'Explicar contexto', 'Reenviar', 'Perguntar para alguem']
+      opts: ['Confirmar versão', 'Achar fonte', 'Baixar', 'Explicar contexto', 'Reenviar', 'Perguntar para alguém']
     },
     {
-      q: 'Quantas vezes por semana alguem pede "manda de novo"?',
+      q: 'Quantas vezes por semana alguém pede "manda de novo"?',
       mode: 'single',
       opts: ['0', '1-2', '3-5', '6-10', '10+']
     },
     {
-      q: 'Custo medio/hora aproximado do time',
+      q: 'Custo médio/hora aproximado do time',
       mode: 'single',
       opts: ['R$30', 'R$60', 'R$100', 'R$150', 'R$250+', 'Nao sei']
     }
@@ -707,7 +707,7 @@
 
     var nextHtml = '';
     if (qData.mode === 'multi') {
-      nextHtml = '<div class="tp-next-wrap"><button class="tp-next-btn" id="tp-next-' + i + '" onclick="tpAdvance(' + i + ')">Proxima</button></div>';
+      nextHtml = '<div class="tp-next-wrap"><button class="tp-next-btn" id="tp-next-' + i + '" onclick="tpAdvance(' + i + ')">Próxima</button></div>';
     }
 
     screen.innerHTML =
@@ -808,16 +808,16 @@
     var totalHours = Math.round((searchHours + resendHours) * extraMultiplier);
     var totalCost = totalHours * costHour;
 
-    document.getElementById('result-hours').textContent = totalHours + 'h/mes';
+    document.getElementById('result-hours').textContent = totalHours + 'h/mês';
     document.getElementById('result-hours-text').textContent = totalHours + ' horas';
-    document.getElementById('result-label').innerHTML = 'Seu time perde cerca de <strong>' + totalHours + ' horas</strong> por mes em busca manual.';
+    document.getElementById('result-label').innerHTML = 'Seu time perde cerca de <strong>' + totalHours + ' horas</strong> por mês em busca manual.';
 
-    document.getElementById('result-cost').textContent = 'R$' + totalCost.toLocaleString('pt-BR') + '/mes';
+    document.getElementById('result-cost').textContent = 'R$' + totalCost.toLocaleString('pt-BR') + '/mês';
     document.getElementById('result-cost-label').textContent = 'Custo estimado em tempo perdido';
 
     if (usedDefault) {
       var noteEl = document.getElementById('result-cost-note');
-      noteEl.textContent = 'Custo calculado com R$60/h (valor padrao usado quando a resposta e "Nao sei").';
+      noteEl.textContent = 'Custo calculado com R$60/h (valor padrão usado quando a resposta e "Nao sei").';
       noteEl.style.display = 'block';
     }
 

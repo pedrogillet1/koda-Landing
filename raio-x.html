@@ -553,15 +553,15 @@
       <div>
         <div class="rx-hero__badge">Raio-X da Busca Manual</div>
         <h1>Sua empresa trabalha no fluxo... ou na busca manual?</h1>
-        <p class="rx-hero__sub">Responda 10 perguntas rapidas e veja seu score de Busca Manual. Sem cadastro. Sem planilha. Resultado imediato.</p>
+        <p class="rx-hero__sub">Responda 10 perguntas rápidas e veja seu score de Busca Manual. Sem cadastro. Sem planilha. Resultado imediato.</p>
         <div class="rx-hero__ctas">
-          <button class="rx-hero__start" onclick="startQuiz()">Comecar o Raio-X</button>
+          <button class="rx-hero__start" onclick="startQuiz()">Começar o Raio-X</button>
           <a href="metodologia.html" class="rx-hero__secondary">Ver como calculamos</a>
         </div>
         <div class="rx-trust">
           <span>10 perguntas</span>
           <span>2 minutos</span>
-          <span>nada sensivel</span>
+          <span>nada sensível</span>
         </div>
       </div>
       <div class="rx-preview">
@@ -589,21 +589,21 @@
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4h5v5H4V4zm7 0h5v5h-5V4zM4 11h5v5H4v-5zm7 0h5v5h-5v-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="rx-info-card__label">Fontes</div>
-        <div class="rx-info-card__desc">Quantos lugares voce precisa abrir para encontrar uma informacao.</div>
+        <div class="rx-info-card__desc">Quantos lugares você precisa abrir para encontrar uma informação.</div>
       </div>
       <div class="rx-info-card">
         <div class="rx-info-card__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 3v14m4-14v14m4-14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
         <div class="rx-info-card__label">Versao</div>
-        <div class="rx-info-card__desc">Se voce confia que o arquivo encontrado e o mais atual.</div>
+        <div class="rx-info-card__desc">Se você confia que o arquivo encontrado e o mais atual.</div>
       </div>
       <div class="rx-info-card">
         <div class="rx-info-card__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="rx-info-card__label">Fonte</div>
-        <div class="rx-info-card__desc">Se voce consegue rastrear a origem de um documento quando pedem.</div>
+        <div class="rx-info-card__desc">Se você consegue rastrear a origem de um documento quando pedem.</div>
       </div>
       <div class="rx-info-card">
         <div class="rx-info-card__icon">
@@ -661,7 +661,7 @@
 
   <div class="rx-share-card" id="share-card">
     <div class="rx-share-card__score" id="share-score"></div>
-    <div class="rx-share-card__label">Indice de busca manual</div>
+    <div class="rx-share-card__label">Índice de busca manual</div>
     <div class="rx-share-card__band" id="share-band"></div>
     <div class="rx-share-card__brand">allybi.co/raio-x</div>
     <button class="rx-share-btn" onclick="shareResult()">
@@ -672,7 +672,7 @@
 
   <div class="rx-ctas">
     <a href="how-it-works.html" class="rx-cta-primary">Ver como o Allybi reduz isso</a>
-    <a href="https://app.allybi.co/signup" class="rx-cta-secondary">Comecar gratis por 30 dias</a>
+    <a href="https://app.allybi.co/signup" class="rx-cta-secondary">Começar gratis por 30 dias</a>
   </div>
 </section>
 
@@ -766,13 +766,13 @@
 (function(){
   var questions = [
     {
-      q: 'Quando precisa encontrar uma informacao, quantos lugares voce costuma abrir?',
+      q: 'Quando precisa encontrar uma informação, quantos lugares você costuma abrir?',
       opts: ['1 lugar','2 lugares','3 lugares','4 lugares','5 ou mais'],
       scores: [1,2,3,4,5],
       dim: 'fontes'
     },
     {
-      q: 'Onde essa informacao costuma estar?',
+      q: 'Onde essa informação costuma estar?',
       opts: ['No arquivo','Na pasta','No e-mail','No grupo','Espalhada'],
       scores: [1,2,3,4,5],
       dim: 'fontes'
@@ -784,26 +784,26 @@
       dim: 'envio'
     },
     {
-      q: 'Antes de enviar, quantas pessoas costumam passar pela confirmacao?',
+      q: 'Antes de enviar, quantas pessoas costumam passar pela confirmação?',
       opts: ['So eu','2 pessoas','3 pessoas','4 pessoas','5+'],
       scores: [1,2,3,4,5],
       dim: 'envio'
     },
     {
-      q: 'Quando encontra um arquivo, voce confia que e a versao certa?',
+      q: 'Quando encontra um arquivo, você confia que e a versão certa?',
       opts: ['Sim','Quase sempre','As vezes','Raramente','Preciso confirmar'],
       scores: [1,2,3,4,5],
-      dim: 'versao'
+      dim: 'versão'
     },
     {
-      q: 'Quantas versoes "final" costumam existir?',
+      q: 'Quantas versões "final" costumam existir?',
       opts: ['1','2','3','4','Perdi a conta'],
       scores: [1,2,3,4,5],
-      dim: 'versao'
+      dim: 'versão'
     },
     {
       q: 'No caminho entre achar e enviar, onde o processo mais trava?',
-      opts: ['Achar','Confirmar versao','Achar fonte','Explicar contexto','Enviar certo'],
+      opts: ['Achar','Confirmar versão','Achar fonte','Explicar contexto','Enviar certo'],
       scores: [3,4,4,4,5],
       dim: 'fonte'
     },
@@ -814,7 +814,7 @@
       dim: 'envio'
     },
     {
-      q: 'Quando alguem pergunta "tem fonte?", o que acontece?',
+      q: 'Quando alguém pergunta "tem fonte?", o que acontece?',
       opts: ['Esta facil','Sei onde esta','Procuro','Pergunto','Vira investigacao'],
       scores: [1,2,3,4,5],
       dim: 'fonte'
@@ -934,30 +934,30 @@
 
   var dimLabels = {
     fontes: 'Dispersao de fontes',
-    versao: 'Controle de versao',
+    versão: 'Controle de versão',
     fonte: 'Rastreabilidade de fonte',
     envio: 'Custo de envio'
   };
 
   var dimInsights = {
-    fontes: 'Sua informacao esta espalhada em muitos lugares. Cada busca exige abrir varias ferramentas antes de encontrar o que precisa. Com o Allybi, todos os seus arquivos ficam acessiveis em um unico ponto de busca.',
-    versao: 'A confianca na versao certa esta baixa. Multiplos "finais" geram inseguranca e retrabalho. O Allybi identifica a versao mais recente e mostra a fonte, eliminando a duvida.',
+    fontes: 'Sua informação esta espalhada em muitos lugares. Cada busca exige abrir varias ferramentas antes de encontrar o que precisa. Com o Allybi, todos os seus arquivos ficam acessiveis em um unico ponto de busca.',
+    versão: 'A confianca na versão certa esta baixa. Multiplos "finais" geram inseguranca e retrabalho. O Allybi identifica a versão mais recente e mostra a fonte, eliminando a dúvida.',
     fonte: 'Quando pedem a fonte, comeca uma investigacao. Isso sinaliza que a rastreabilidade dos documentos e fragil. O Allybi cita a fonte em cada resposta, automaticamente.',
     envio: 'Mesmo depois de encontrar o arquivo, o trabalho nao acaba -- confirmar, baixar, explicar, reenviar. Esse retrabalho consome tempo silenciosamente. O Allybi entrega a resposta ja contextualizada.'
   };
 
   var generalInsights = [
-    'Quanto mais lugares sua equipe precisa abrir, mais tempo se perde antes de comecar o trabalho real.',
-    'Processos que dependem de memoria institucional quebram quando alguem sai ou muda de funcao.',
-    'Cada confirmacao manual adiciona minutos que, somados, viram horas por semana.'
+    'Quanto mais lugares sua equipe precisa abrir, mais tempo se perde antes de começar o trabalho real.',
+    'Processos que dependem de memoria institucional quebram quando alguém sai ou muda de funcao.',
+    'Cada confirmação manual adiciona minutos que, somados, viram horas por semana.'
   ];
 
   function getBand(score) {
     if (score <= 20) return { label: 'Busca manual baixa', cls: 'low', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Voce tem poucos sinais de busca manual. Ainda assim, pode haver oportunidades de ganhar velocidade com respostas automaticas e rastreabilidade de fontes.' };
-    if (score <= 40) return { label: 'Processo parcialmente claro', cls: 'medium-low', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Algumas etapas ainda dependem de busca manual ou confirmacao humana. Sao pontos que, resolvidos, podem liberar horas por semana.' };
+    if (score <= 40) return { label: 'Processo parcialmente claro', cls: 'medium-low', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Algumas etapas ainda dependem de busca manual ou confirmação humana. Sao pontos que, resolvidos, podem liberar horas por semana.' };
     if (score <= 60) return { label: 'Busca manual ativa', cls: 'medium', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Boa parte do seu fluxo depende de encontrar, confirmar e reenviar manualmente. Isso cria atrasos e aumenta o risco de erro.' };
     if (score <= 80) return { label: 'Alto atrito operacional', cls: 'high', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'A busca manual e parte do dia a dia. Versoes se perdem, fontes somem e cada envio exige conferencia. Ha muito espaco para automacao.' };
-    return { label: 'Processo no improviso', cls: 'critical', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Quase tudo depende de memoria, busca manual e confirmacao humana. O risco de erro e alto e a produtividade esta comprometida. Automacao e urgente.' };
+    return { label: 'Processo no improviso', cls: 'critical', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Quase tudo depende de memoria, busca manual e confirmação humana. O risco de erro e alto e a produtividade esta comprometida. Automacao e urgente.' };
   }
 
   window.showResult = function() {
@@ -969,7 +969,7 @@
     var score = calcScore();
     var band = getBand(score);
 
-    // Animate score
+    // Animaté score
     var scoreNum = document.getElementById('score-num');
     var current = 0;
     var step = Math.ceil(score / 40);
