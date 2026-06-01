@@ -24,7 +24,13 @@
     "for_lawyers": "Para advogados",
     "for_finance": "Para financeiro",
     "for_business": "Para negócios",
-    "start_free_30": "Começar grátis por 30 dias"
+    "start_free_30": "Começar grátis por 30 dias",
+    "tools": "Ferramentas",
+    "busca_manual": "Busca Manual",
+    "rayox": "Raio-X da Busca Manual",
+    "calculator": "Calculadora do Tempo Perdido",
+    "cemetery": "Cemitério dos Arquivos Finais",
+    "for_operations": "Para operações"
   },
   "footer": {
     "tagline": "Um chat para encontrar, confirmar e enviar o documento certo.",
@@ -73,7 +79,11 @@
     "rayox": "Raio-X da Busca Manual",
     "calculator": "Calculadora do Tempo Perdido",
     "cemetery": "Cemitério dos Arquivos Finais",
-    "indice": "Índice Allybi"
+    "indice": "Índice Allybi",
+    "col_tools": "Ferramentas",
+    "busca_manual": "Busca Manual",
+    "methodology": "Como calculamos",
+    "operations": "Para operações"
   },
   "hero": {
     "eyebrow": "IA privada para documentos, e-mails e envios",

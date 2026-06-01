@@ -22,102 +22,88 @@
   	<title>Security &amp; Privacy Policy - Allybi</title>
 </head>
 <body>
-  <header id="allybi-header" class="allybi-header">
-    <div class="allybi-header-inner">
-      <a href="/" class="allybi-logo">
-        <img src="assets/images/allybi-logo.svg" alt="Allybi" height="24">
-      </a>
-      <nav class="allybi-nav desktop-only">
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-          <div class="nav-dropdown-menu">
-            <a href="/" data-i18n-key="nav.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
-          <div class="nav-dropdown-menu">
-            <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
-          </div>
-        </div>
-        <a href="security-overview.html" class="nav-link" data-i18n-key="nav.security">Security</a>
-        <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
-          <div class="nav-dropdown-menu">
-            <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
-            <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
-          </div>
-        </div>
-        <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
-      </nav>
-      <div class="header-ctas desktop-only">
-        <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free">Start free</a>
-      </div>
-      <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <div id="allybi-mobile-menu" class="mobile-menu">
-    <nav class="mobile-menu-nav">
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="mobile-dropdown-items">
-          <a href="/" data-i18n-key="nav.overview">Overview</a>
+  <!-- HEADER -->
+<header id="allybi-header" class="allybi-header">
+  <div class="allybi-header-inner">
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
+    <nav class="allybi-nav desktop-only">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+        <div class="nav-dropdown-menu">
           <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
           <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security_overview">Security</a>
+          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
         </div>
       </div>
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use Cases</button>
-        <div class="mobile-dropdown-items">
-          <a href="use-case-legal.html" data-i18n-key="nav.legal">Legal</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.finance">Finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.business">Business</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+        <div class="nav-dropdown-menu">
+          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
         </div>
       </div>
-      <a href="security-overview.html" class="mobile-nav-link" data-i18n-key="nav.security">Security</a>
-      <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-trigger" data-i18n-key="nav.resources">Resources</button>
-        <div class="mobile-dropdown-items">
-          <a href="customers.html" data-i18n-key="nav.customers">Customer Stories</a>
-          <a href="/#faq" data-i18n-key="nav.faq_link">FAQ</a>
-          <a href="contact.html" data-i18n-key="nav.contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
+        <div class="nav-dropdown-menu">
+          <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
+          <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
+          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
+          <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
         </div>
       </div>
-      <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
+      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
-    <div class="mobile-ctas">
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+    <div class="header-ctas desktop-only">
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
     </div>
-    <div class="mobile-language-selector">
-      <div class="language-selector" id="mobile-language-selector">
-        <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-          <span class="lang-label">English</span>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="language-menu hidden" role="listbox">
-          <li role="option" data-lang="en">English</li>
-          <li role="option" data-lang="pt">Português (BR)</li>
-          <li role="option" data-lang="es">Español</li>
-        </ul>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="allybi-mobile-menu" class="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
+      <div class="mobile-dropdown-items">
+        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
+        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
+        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
       </div>
     </div>
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
+      <div class="mobile-dropdown-items">
+        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
+        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
+        <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      </div>
+    </div>
+    <div class="mobile-dropdown">
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
+      <div class="mobile-dropdown-items">
+        <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
+        <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
+        <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
+        <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
+    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
+    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
+  </nav>
+  <div class="mobile-ctas">
+    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
   </div>
+</div>
 
-  <main>
+
+
+<main>
     <div class="terms-page">
       <div class="terms-content-section-wrapper">
         <!-- Security & Privacy Policy Content Section -->
@@ -633,85 +619,89 @@
     </div>
   </main>
 
-  <footer class="allybi-footer">
-    <div class="allybi-footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="footer-brand-logo">
-          <span style="font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.02em;font-family:var(--allybi-font,sans-serif)">Allybi</span>
-        </a>
-        <p class="footer-tagline" data-i18n-key="footer.tagline">Built for privacy-first teams handling sensitive work.</p>
-      </div>
-      <div class="footer-columns">
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-          <div class="footer-col-links">
-            <a href="/" data-i18n-key="footer.overview">Overview</a>
-            <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-            <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-            <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use Cases</h4>
-          <div class="footer-col-links">
-            <a href="use-case-legal.html" data-i18n-key="footer.legal">Legal</a>
-            <a href="use-case-finance.html" data-i18n-key="footer.finance">Finance</a>
-            <a href="use-case-business.html" data-i18n-key="footer.business">Business</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_security">Security</h4>
-          <div class="footer-col-links">
-            <a href="security-overview.html" data-i18n-key="footer.security_overview">Security Overview</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy_policy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookie_policy">Cookie Policy</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4>
-          <div class="footer-col-links">
-            <a href="customers.html" data-i18n-key="footer.customers">Customer Stories</a>
-            <a href="/#faq" data-i18n-key="footer.faq">FAQ</a>
-            <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-          <div class="footer-col-links">
-            <a href="about.html" data-i18n-key="footer.about">About</a>
-            <a href="#" data-i18n-key="footer.careers">Careers <span class="coming-soon" data-i18n-key="footer.coming_soon">Coming soon</span></a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-          <div class="footer-col-links">
-            <a href="terms.html" data-i18n-key="footer.terms">Terms of Service</a>
-            <a href="tos.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-            <a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a>
-            <a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a>
-            <a href="security.html" data-i18n-key="footer.security_privacy">Security & Privacy</a>
-          </div>
+  <!-- FOOTER -->
+<footer class="allybi-footer">
+  <div class="allybi-footer-inner">
+    <div class="footer-brand">
+      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
+      <p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p>
+    </div>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
+        <div class="footer-col-links">
+          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
+          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
+          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-        <div class="footer-bottom-right">
-          <div class="language-selector" id="footer-language-selector">
-            <button class="language-toggle" aria-expanded="false" aria-haspopup="listbox">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-              <span class="lang-label">English</span>
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <ul class="language-menu hidden" role="listbox">
-              <li role="option" data-lang="en">English</li>
-              <li role="option" data-lang="pt">Português (BR)</li>
-              <li role="option" data-lang="es">Español</li>
-            </ul>
-          </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
+        <div class="footer-col-links">
+          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
+          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
+          <a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
+        <div class="footer-col-links">
+          <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
+          <a href="raio-x.html" data-i18n-key="footer.rayox">X-Ray Diagnostic</a>
+          <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
+          <a href="finais.html" data-i18n-key="footer.cemetery">Final Files Cemetery</a>
+          <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
+          <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
+        <div class="footer-col-links">
+          <a href="about.html" data-i18n-key="footer.about">About</a>
+          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
+          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
+        <div class="footer-col-links">
+          <a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a>
+          <a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
+          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+          <a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a>
+          <a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a>
+          <a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a>
         </div>
       </div>
     </div>
-  </footer>
+    <div class="footer-mobile-links">
+      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
+      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+      <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
+      <a href="about.html" data-i18n-key="footer.about">About</a>
+      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
+      <div class="footer-bottom-right">
+        <div class="language-selector" id="footer-language-selector">
+          <button class="language-toggle" aria-expanded="false">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span class="lang-label">English</span>
+          </button>
+          <ul class="language-menu hidden" role="listbox">
+            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="en">English</li>
+            <li role="option" data-lang="es">Español</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
   <script src="language-switcher.js"></script>
   <script src="allybi-header.js"></script>

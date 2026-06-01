@@ -24,7 +24,13 @@
     "start_free": "Start free",
     "open_app": "Open Allybi",
     "customer_stories": "Customer Stories",
-    "start_free_30": "Start free for 30 days"
+    "start_free_30": "Start free for 30 days",
+    "tools": "Tools",
+    "busca_manual": "Manual Search",
+    "rayox": "Manual Search X-Ray",
+    "calculator": "Time Lost Calculator",
+    "cemetery": "Final Files Cemetery",
+    "for_operations": "For operations"
   },
   "footer": {
     "tagline": "A chat for finding, confirming, and sending the right document.",
@@ -73,7 +79,11 @@
     "rayox": "Manual Search X-Ray",
     "calculator": "Time Lost Calculator",
     "cemetery": "Final Files Cemetery",
-    "indice": "Allybi Index"
+    "indice": "Allybi Index",
+    "col_tools": "Tools",
+    "busca_manual": "Manual Search",
+    "methodology": "Methodology",
+    "operations": "For operations"
   },
   "hero": {
     "eyebrow": "Private AI for documents, email context, and handoffs",
