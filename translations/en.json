@@ -53,7 +53,7 @@
     "terms": "Terms",
     "acceptable_use": "Acceptable Use",
     "privacy": "Privacy Policy",
-    "cookies": "Cookie Policy",
+    "cookies": "Cookies",
     "security_privacy": "Security & Privacy",
     "copyright": "&copy; 2026 Allybi. All rights reserved.",
     "tos_short": "Terms of Service",
@@ -66,12 +66,15 @@
     "request_demo": "Start free",
     "sec_overview": "Overview",
     "security_link": "Security & Privacy",
-    "stories": "Stories"
+    "stories": "Stories",
+    "tos": "Terms of Service",
+    "data_use": "Integrations & Data Use",
+    "data_deletion": "Data Deletion"
   },
   "hero": {
     "eyebrow": "Private AI for documents, email context, and handoffs",
     "title": "6 places. One message.<br>The right answer, with sources.",
-    "subtitle": "Connect your sources, upload documents, and ask in chat. Allybi finds, compares, cites the source, and prepares the handoff — always with your confirmation.",
+    "subtitle": "Connect your sources, upload documents, and ask in chat. Allybi finds the answer, shows the source, prepares the email or WhatsApp, and asks for your confirmation before sending.",
     "cta_primary": "Start free for 30 days",
     "cta_secondary": "See how it works",
     "chip1": "Source-cited answers",
@@ -88,9 +91,9 @@
   },
   "trust": {
     "item1": "Source-cited answers",
-    "item2": "No send without confirmation",
-    "item3": "Your documents never train models",
-    "item4": "Confirmation before every send",
+    "item2": "Email with confirmation",
+    "item3": "WhatsApp without synced inbox",
+    "item4": "Your documents never train models",
     "item5": "Outlook, OneDrive & SharePoint live"
   },
   "story": {
@@ -206,8 +209,8 @@
       "subtitle": "The real cost is confirming it is the right one, explaining where it came from, and sending without reopening everything."
     },
     "workflow": {
-      "title": "From 6 places to one message.",
-      "subtitle": "Connect, ask, see the source, and review before sending.",
+      "title": "How work changes",
+      "subtitle": "Instead of searching, downloading, explaining, and resending — you ask and review before sending.",
       "s1_title": "Connect or upload",
       "s1_desc": "Connect Outlook, OneDrive, and SharePoint. Or upload files directly.",
       "s2_title": "Ask in chat",
@@ -337,8 +340,8 @@
       "see_all": "See all questions →"
     },
     "final_cta": {
-      "title": "Stop opening 6 places to send 1 file.",
-      "support": "Connect your sources, ask in chat, and send the right answer with source.",
+      "title": "Stop searching, confirming, and resending manually.",
+      "support": "Allybi connects your sources, answers with source, and prepares the right send.",
       "cta": "Start free for 30 days",
       "cta2": "Talk to sales"
     }
@@ -474,29 +477,31 @@
     "label_message": "Message",
     "placeholder_message": "Tell us how we can help...",
     "submit": "Send message",
-    "reassurance": "Sensitive workflow questions welcome. We read every message and route inquiries carefully.",
+    "reassurance": "Product, security, and sensitive workflow questions are welcome. We read every message carefully.",
     "hero": {
       "title": "Talk to Allybi",
-      "subtitle": "Questions about the product, security, demos, or partnerships? We will point you to the right place."
+      "subtitle": "Pick a topic and send your message. We will route it to the right place."
     },
     "path": {
       "demo_title": "Book a demo",
       "demo_desc": "See Allybi in action with a personalized walkthrough.",
       "product_title": "Product question",
-      "product_desc": "Ask about features, integrations, or how Allybi works.",
+      "product_desc": "Features, integrations, uploads, chat, sources, and sending.",
       "security_title": "Security question",
-      "security_desc": "Encryption, data handling, compliance, or privacy inquiries.",
+      "security_desc": "Privacy, encryption, permissions, data, and compliance.",
       "support_title": "Support",
-      "support_desc": "Technical help, account questions, or troubleshooting.",
+      "support_desc": "Account, access, technical errors, or product usage.",
       "partner_title": "Partnership",
-      "partner_desc": "Integrations, reselling, or co-development opportunities."
+      "partner_desc": "Integrations, reselling, or co-development opportunities.",
+      "sales_title": "Talk to sales",
+      "sales_desc": "For teams, onboarding, security, or commercial questions."
     },
     "form": {
       "title": "Send us a message",
-      "subtitle": "We will get back to you within one business day.",
+      "subtitle": "We respond within one business day.",
       "label_name": "Name",
       "label_email": "Work email",
-      "label_company": "Company",
+      "label_company": "Company <span class=\"contact-optional\">(optional)</span>",
       "optional": "(optional)",
       "label_category": "Category",
       "select_placeholder": "Select a category",
@@ -506,13 +511,18 @@
       "cat_support": "Support",
       "cat_partnership": "Partnership",
       "label_message": "Message",
-      "submit": "Send message"
+      "submit": "Send message",
+      "placeholder_name": "Your name",
+      "placeholder_email": "you@company.com",
+      "placeholder_company": "Company name",
+      "cat_sales": "Talk to sales",
+      "placeholder_message": "Briefly tell us how we can help..."
     }
   },
   "hiw": {
     "hero_eyebrow": "Product",
-    "hero_h1": "From source to response, without losing the thread.",
-    "hero_support": "Bring in files and connected sources, ask naturally, compare versions, prepare the right response, and confirm before anything is sent.",
+    "hero_h1": "Ask, confirm, and send without reopening everything.",
+    "hero_support": "Connect sources, upload documents, ask in chat, and review before sending via email or WhatsApp.",
     "flow_upload": "Upload",
     "flow_organize": "Organize",
     "flow_search": "Search & Ask",
@@ -607,23 +617,36 @@
     "faq_a5": "Allybi indexes the messages you authorize so you can search across them alongside your files. Access is permissioned and revocable. When you disconnect, your data is removed from the workspace.",
     "faq_q6": "What does \"send with confirmation\" mean?",
     "faq_a6": "Before any email, file share, or outbound action is executed, Allybi shows you exactly what will happen and requires your explicit approval. Nothing leaves your workspace without your confirmation.",
-    "cta_title": "See Allybi in action.",
-    "cta_subtitle": "Book a demo and we'll walk you through the product.",
+    "cta_title": "Start with a real document.",
+    "cta_subtitle": "Upload a file, ask a question, and see the answer with source.",
     "cta_start": "Book demo",
     "cta_demo": "Book demo",
-    "s1_title": "Bring in sources",
-    "s1_desc": "Upload from your device or import directly from connected sources. Everything goes into your private workspace.",
+    "s1_title": "Connect or upload",
+    "s1_desc": "Connect Outlook, OneDrive, and SharePoint. Or upload PDFs, DOCX, XLSX, PPTX, and other files.",
     "s2_title": "Ask naturally",
-    "s2_desc": "Ask in plain language across all your connected sources. Allybi returns answers that cite the exact document, page, and section.",
-    "s3_title": "Compare versions",
-    "s3_desc": "See exactly what changed between document versions — highlighted, referenced, and cited. Use it for clauses, drafts, and attachments.",
+    "s2_desc": "Ask like you would ask a teammate: \"which version was sent to the client?\" or \"what changed in this clause?\"",
+    "s3_title": "Compare and confirm",
+    "s3_desc": "See differences between versions and confirm the right file before using it.",
     "s4_title": "Prepare the action",
-    "s4_desc": "Choose the right file, prepare an email response, or select the right WhatsApp contact. Everything stays grounded in the source.",
-    "s5_title": "Confirm before send",
-    "s5_desc": "Nothing leaves without your review. You see the recipient, file, version, and message before confirming. This is not optional.",
+    "s4_desc": "Allybi prepares an email via Outlook or a message for WhatsApp handoff.",
+    "s5_title": "Review before sending",
+    "s5_desc": "You see recipient, message, source, and file. Nothing goes out without confirmation.",
     "cta_integrations": "See integrations",
     "cta_title2": "See Allybi in action.",
-    "cta_subtitle2": "Book a demo and we'll walk you through the full workflow."
+    "cta_subtitle2": "Book a demo and we'll walk you through the full workflow.",
+    "mock_imported": "3 files imported from OneDrive",
+    "mock_query": "What are the non-compete terms?",
+    "mock_badge": "Answer with source",
+    "mock_answer": "Section 9.3: Contractor agrees not to engage in competing activities for <strong>24 months</strong> following termination.",
+    "mock_diff_title": "Section 8.1 — Indemnification",
+    "mock_diff_body": "The Supplier shall indemnify the Client against all claims arising from <span class=\"hiw-mock__diff-removed\">negligent acts</span><span class=\"hiw-mock__diff-added\">any acts or omissions</span> related to the Services, up to a cap of <span class=\"hiw-mock__diff-removed\">$1M</span><span class=\"hiw-mock__diff-added\">$3M</span>.",
+    "mock_diff_source": "<svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/></svg> Draft v2 vs v3 — Section 8.1",
+    "mock_prepare_title": "Prepare send",
+    "mock_prepare_body": "\"Hi, attached is the confirmed final version of the SPA with updated indemnity terms. Please review Section 8.1.\"",
+    "mock_confirm_label": "Review before sending",
+    "mock_confirm_details": "<strong style=\"color:var(--allybi-text-strongest)\">To:</strong> client@company.com<br><strong style=\"color:var(--allybi-text-strongest)\">File:</strong> SPA_Draft_v3.pdf (v3)<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook",
+    "mock_cancel": "Cancel",
+    "mock_confirm_btn": "Confirm & Send"
   },
   "uc_overview": {
     "hero": {

@@ -53,7 +53,7 @@
     "terms": "Termos de Serviço",
     "acceptable_use": "Uso Aceitável",
     "privacy": "Política de Privacidade",
-    "cookies": "Política de Cookies",
+    "cookies": "Cookies",
     "security_privacy": "Segurança e Privacidade",
     "copyright": "&copy; 2026 Allybi. Todos os direitos reservados.",
     "tos_short": "Termos de Serviço",
@@ -66,12 +66,15 @@
     "request_demo": "Começar grátis",
     "sec_overview": "Visão geral",
     "security_link": "Segurança",
-    "stories": "Histórias"
+    "stories": "Histórias",
+    "tos": "Termos de Serviço",
+    "data_use": "Integrações e Uso de Dados",
+    "data_deletion": "Exclusão de Dados"
   },
   "hero": {
     "eyebrow": "IA privada para documentos, e-mails e envios",
     "title": "6 lugares. 1 mensagem.<br>A resposta certa, com fonte.",
-    "subtitle": "Conecte suas fontes, suba documentos e pergunte no chat. O Allybi encontra, compara, mostra a fonte e prepara o envio — sempre com sua confirmação.",
+    "subtitle": "Conecte suas fontes, suba documentos e pergunte no chat. O Allybi encontra a resposta, mostra a fonte, prepara o e-mail ou WhatsApp e pede sua confirmação antes de qualquer envio.",
     "cta_primary": "Começar grátis por 30 dias",
     "cta_secondary": "Ver como funciona",
     "chip1": "Respostas com fonte",
@@ -88,9 +91,9 @@
   },
   "trust": {
     "item1": "Respostas com fonte",
-    "item2": "Nada enviado sem confirmação",
-    "item3": "Seus documentos não treinam modelos",
-    "item4": "Confirmação antes de cada envio",
+    "item2": "E-mail com confirmação",
+    "item3": "WhatsApp sem caixa sincronizada",
+    "item4": "Seus documentos não treinam modelos",
     "item5": "Outlook, OneDrive e SharePoint disponíveis"
   },
   "story": {
@@ -210,8 +213,8 @@
       "subtitle": "É confirmar se é o certo, entender de onde veio e enviar sem abrir tudo de novo."
     },
     "workflow": {
-      "title": "De 6 lugares para 1 mensagem.",
-      "subtitle": "Conecte, pergunte, veja a fonte e revise antes de enviar.",
+      "title": "Como o trabalho muda",
+      "subtitle": "Em vez de procurar, baixar, explicar e reenviar, você pergunta e revisa antes de enviar.",
       "s1_title": "Conecte ou suba",
       "s1_desc": "Conecte Outlook, OneDrive e SharePoint. Ou suba arquivos direto no Allybi.",
       "s2_title": "Pergunte no chat",
@@ -347,8 +350,8 @@
       "see_all": "Ver todas as perguntas →"
     },
     "final_cta": {
-      "title": "Pare de abrir 6 lugares para mandar 1 arquivo.",
-      "support": "Conecte suas fontes, pergunte no chat e envie a resposta certa com fonte.",
+      "title": "Pare de procurar, confirmar e reenviar manualmente.",
+      "support": "O Allybi conecta suas fontes, responde com fonte e prepara o envio certo.",
       "cta": "Começar grátis por 30 dias",
       "cta2": "Falar com vendas"
     }
@@ -448,39 +451,43 @@
     "hero_h1": "Fale com Allybi",
     "hero_support": "Perguntas sobre o produto, segurança, demos ou parcerias? Vamos direcioná-lo ao lugar certo.",
     "hero": {
-      "title": "Fale com Allybi",
-      "subtitle": "Perguntas sobre o produto, segurança, demos ou parcerias? Vamos direcioná-lo ao lugar certo."
+      "title": "Fale com a Allybi",
+      "subtitle": "Escolha o assunto e mande sua mensagem. Vamos direcionar para o lugar certo."
     },
     "path": {
-      "demo_title": "Agendar uma demo",
-      "demo_desc": "Veja o Allybi em ação com um tour personalizado.",
       "product_title": "Dúvida sobre o produto",
-      "product_desc": "Pergunte sobre funcionalidades, integrações ou como o Allybi funciona.",
+      "product_desc": "Funcionalidades, integrações, uploads, chat, fontes e envio.",
       "security_title": "Dúvida de segurança",
-      "security_desc": "Criptografia, tratamento de dados, conformidade ou questões de privacidade.",
+      "security_desc": "Privacidade, criptografia, permissões, dados e conformidade.",
       "support_title": "Suporte",
-      "support_desc": "Ajuda técnica, dúvidas sobre conta ou solução de problemas.",
+      "support_desc": "Conta, acesso, erros técnicos ou uso do produto.",
       "partner_title": "Parceria",
-      "partner_desc": "Integrações, revenda ou oportunidades de co-desenvolvimento."
+      "partner_desc": "Integrações, revenda ou oportunidades de co-desenvolvimento.",
+      "sales_title": "Falar com vendas",
+      "sales_desc": "Para equipes, onboarding, segurança ou dúvidas comerciais."
     },
     "form": {
-      "title": "Envie-nos uma mensagem",
-      "subtitle": "Responderemos em até um dia útil.",
+      "title": "Envie uma mensagem",
+      "subtitle": "Respondemos em até um dia útil.",
       "label_name": "Nome",
       "label_email": "E-mail corporativo",
-      "label_company": "Empresa <span class=\"contact-optional\" data-i18n-key=\"contact.form.optional\">(opcional)</span>",
+      "label_company": "Empresa <span class=\"contact-optional\">(opcional)</span>",
       "optional": "(opcional)",
       "label_category": "Categoria",
       "select_placeholder": "Selecione uma categoria",
-      "cat_demo": "Agendar uma demo",
       "cat_product": "Dúvida sobre o produto",
       "cat_security": "Dúvida de segurança",
       "cat_support": "Suporte",
       "cat_partnership": "Parceria",
       "label_message": "Mensagem",
-      "submit": "Enviar mensagem"
+      "submit": "Enviar mensagem",
+      "placeholder_name": "Seu nome",
+      "placeholder_email": "voce@empresa.com",
+      "placeholder_company": "Nome da empresa",
+      "cat_sales": "Falar com vendas",
+      "placeholder_message": "Conte rapidamente como podemos ajudar..."
     },
-    "reassurance": "Perguntas sobre fluxos sensíveis são bem-vindas. Lemos cada mensagem e direcionamos as consultas com cuidado.",
+    "reassurance": "Perguntas sobre produto, segurança e fluxos sensíveis são bem-vindas. Lemos cada mensagem com cuidado.",
     "route_sales_title": "Vendas e Demos",
     "route_sales_desc": "Veja Allybi em ação. Faremos um tour pelo produto e responderemos qualquer dúvida sobre adequação, preços ou implementação.",
     "route_sales_cta": "Agendar demo",
@@ -521,21 +528,21 @@
   },
   "hiw": {
     "hero_eyebrow": "Produto",
-    "hero_h1": "Da fonte à resposta, sem perder o fio.",
-    "hero_support": "Traga arquivos e fontes conectadas, pergunte naturalmente, compare versões, prepare a resposta certa e confirme antes de qualquer envio.",
+    "hero_h1": "Pergunte, confirme e envie sem abrir tudo de novo.",
+    "hero_support": "Conecte fontes, suba documentos, pergunte no chat e revise antes de enviar por e-mail ou WhatsApp.",
     "cta_integrations": "Ver integrações",
-    "s1_title": "Traga as fontes",
-    "s1_desc": "Faça upload do seu dispositivo ou importe diretamente de fontes conectadas. Tudo vai para seu workspace privado.",
+    "s1_title": "Conecte ou suba",
+    "s1_desc": "Conecte Outlook, OneDrive e SharePoint. Ou suba PDFs, DOCX, XLSX, PPTX e outros arquivos.",
     "s2_title": "Pergunte naturalmente",
-    "s2_desc": "Pergunte em linguagem natural em todas as suas fontes conectadas. Allybi retorna respostas que citam o documento, página e seção exatos.",
-    "s3_title": "Compare versões",
-    "s3_desc": "Veja exatamente o que mudou entre versões de documentos — destacado, referenciado e citado. Use para cláusulas, minutas e anexos.",
+    "s2_desc": "Pergunte como falaria com alguém do time: \"qual versão foi enviada ao cliente?\" ou \"o que mudou nessa cláusula?\"",
+    "s3_title": "Compare e confirme",
+    "s3_desc": "Veja diferenças entre versões e confirme se o arquivo é o certo antes de usar.",
     "s4_title": "Prepare a ação",
-    "s4_desc": "Escolha o arquivo certo, prepare uma resposta por e-mail ou selecione o contato certo do WhatsApp. Tudo permanece com fonte na fonte.",
-    "s5_title": "Confirme antes de enviar",
-    "s5_desc": "Nada sai sem sua revisão. Você vê o destinatário, arquivo, versão e mensagem antes de confirmar. Isso não é opcional.",
-    "cta_title": "Veja o Allybi em ação.",
-    "cta_subtitle": "Agende uma demonstração e faremos um tour personalizado do produto.",
+    "s4_desc": "O Allybi prepara um e-mail via Outlook ou uma mensagem para WhatsApp handoff.",
+    "s5_title": "Revise antes de enviar",
+    "s5_desc": "Você vê destinatário, mensagem, fonte e arquivo. Nada sai sem confirmação.",
+    "cta_title": "Comece com um documento real.",
+    "cta_subtitle": "Suba um arquivo, faça uma pergunta e veja a resposta com fonte.",
     "flow_upload": "Upload",
     "flow_organize": "Organizar",
     "flow_search": "Pesquisar e Perguntar",
@@ -635,7 +642,17 @@
     "mock_badge": "Resposta com fonte",
     "mock_confirm": "Confirmar antes de enviar",
     "mock_confirm_btn": "Confirmar envio",
-    "mock_cancel": "Cancelar"
+    "mock_cancel": "Cancelar",
+    "mock_imported": "3 arquivos importados do OneDrive",
+    "mock_query": "quais são os termos de não concorrência?",
+    "mock_answer": "Cláusula 9.3: o contratado não pode atuar em atividade concorrente por <strong>24 meses</strong> após o término.",
+    "mock_diff_title": "Cláusula 8.1 — Indenização",
+    "mock_diff_body": "O fornecedor indenizará o cliente por <span class=\"hiw-mock__diff-removed\">atos negligentes</span><span class=\"hiw-mock__diff-added\">quaisquer atos ou omissões</span> relacionados aos serviços, até o limite de <span class=\"hiw-mock__diff-removed\">R$1M</span><span class=\"hiw-mock__diff-added\">R$3M</span>.",
+    "mock_diff_source": "<svg width=\"11\" height=\"11\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><polyline points=\"14 2 14 8 20 8\"/></svg> Minuta v2 vs v3 — Cláusula 8.1",
+    "mock_prepare_title": "Preparar envio",
+    "mock_prepare_body": "\"Olá, segue a versão final confirmada do SPA com os termos de indenização atualizados. Por favor revise a Cláusula 8.1.\"",
+    "mock_confirm_label": "Revisar antes de enviar",
+    "mock_confirm_details": "<strong style=\"color:var(--allybi-text-strongest)\">Para:</strong> cliente@empresa.com<br><strong style=\"color:var(--allybi-text-strongest)\">Arquivo:</strong> SPA_Draft_v3.pdf (v3)<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook"
   },
   "legal": {
     "hero_eyebrow": "Para advogados",
@@ -928,7 +945,7 @@
       },
       "confirmation": {
         "title": "Confirmação explícita antes de cada envio",
-        "desc": "Nada sai do Allybi sem sua revis��o. Cada e-mail, mensagem e compartilhamento de arquivo exige confirmação explícita antes de ser enviado."
+        "desc": "Nada sai do Allybi sem sua revisão. Cada e-mail, mensagem e compartilhamento de arquivo exige confirmação explícita antes de ser enviado."
       },
       "isolated": {
         "title": "Workspaces isolados",

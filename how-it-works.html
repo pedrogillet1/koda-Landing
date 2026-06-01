@@ -23,7 +23,7 @@
 <!-- HEADER -->
 <header id="allybi-header" class="allybi-header">
   <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="28"></a>
+    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
     <nav class="allybi-nav desktop-only">
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
@@ -46,7 +46,7 @@
     </nav>
     <div class="header-ctas desktop-only">
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free">Book demo</a>
+      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free">Start free</a>
     </div>
     <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -63,7 +63,7 @@
     <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
   </nav>
   <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Book demo</a>
+    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
     <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
   </div>
 </div>
@@ -77,7 +77,7 @@
     <h1 data-i18n-key="hiw.hero_h1">From source to response, without losing the thread.</h1>
     <p data-i18n-key="hiw.hero_support">Bring in files and connected sources, ask naturally, compare versions, prepare the right response, and confirm before anything is sent.</p>
     <div class="hiw-hero__ctas">
-      <a href="request-demo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="nav.book_demo">Book demo</a>
+      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
       <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hiw.cta_integrations">See integrations</a>
     </div>
   </div>
@@ -110,7 +110,7 @@
             <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">SPA_Draft.docx</span>
             <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">Board_Deck_Q4.pptx</span>
           </div>
-          <div style="margin-top:14px;padding:12px;background:var(--allybi-trust-subtle);border-radius:8px;font-size:12px;color:var(--allybi-trust);font-weight:500;">3 files imported from OneDrive</div>
+          <div style="margin-top:14px;padding:12px;background:var(--allybi-trust-subtle);border-radius:8px;font-size:12px;color:var(--allybi-trust);font-weight:500;" data-i18n-key="hiw.mock_imported">3 files imported from OneDrive</div>
         </div>
       </div>
     </div>
@@ -127,11 +127,11 @@
         <div class="hiw-mock__body">
           <div class="hiw-mock__query">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            What are the non-compete terms?
+            <span data-i18n-key="hiw.mock_query">What are the non-compete terms?</span>
           </div>
           <div class="hiw-mock__result">
-            <span class="hiw-mock__badge">Answer with source</span>
-            <p style="margin:0 0 8px">Section 9.3: Contractor agrees not to engage in competing activities within a <strong>50-mile radius</strong> for <strong>24 months</strong> following termination.</p>
+            <span class="hiw-mock__badge" data-i18n-key="hiw.mock_badge">Answer with source</span>
+            <p style="margin:0 0 8px" data-i18n-key="hiw.mock_answer">Section 9.3: Contractor agrees not to engage in competing activities within a <strong>50-mile radius</strong> for <strong>24 months</strong> following termination.</p>
             <span class="hiw-mock__source">
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
               Anderson_MSA_v4.pdf — p. 12
@@ -151,11 +151,11 @@
       <div class="hiw-step__visual">
         <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
         <div class="hiw-mock__body">
-          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;">Section 8.1 — Indemnification</div>
-          <div class="hiw-mock__diff">
+          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;" data-i18n-key="hiw.mock_diff_title">Section 8.1 — Indemnification</div>
+          <div class="hiw-mock__diff" data-i18n-key="hiw.mock_diff_body">
             The Supplier shall indemnify the Client against all claims arising from <span class="hiw-mock__diff-removed">negligent acts</span><span class="hiw-mock__diff-added">any acts or omissions</span> related to the Services, up to a cap of <span class="hiw-mock__diff-removed">$1M</span><span class="hiw-mock__diff-added">$3M</span>.
           </div>
-          <span class="hiw-mock__source" style="margin-top:12px;">
+          <span class="hiw-mock__source" style="margin-top:12px;" data-i18n-key="hiw.mock_diff_source">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Draft v2 vs v3 — Section 8.1
           </span>
@@ -173,8 +173,8 @@
       <div class="hiw-step__visual">
         <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
         <div class="hiw-mock__body">
-          <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;">Prepare send</div>
-          <div style="font-size:13px;color:var(--allybi-text-secondary);line-height:1.6;margin-bottom:12px;padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;">
+          <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;" data-i18n-key="hiw.mock_prepare_title">Prepare send</div>
+          <div style="font-size:13px;color:var(--allybi-text-secondary);line-height:1.6;margin-bottom:12px;padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;" data-i18n-key="hiw.mock_prepare_body">
             "Hi Sarah, attached is the latest version of the SPA with updated indemnity terms as discussed. Please review Section 8.1."
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
@@ -196,15 +196,15 @@
         <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
         <div class="hiw-mock__body">
           <div class="hiw-mock__confirm">
-            <div class="hiw-mock__confirm-label">Review before sending</div>
-            <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:12px;">
+            <div class="hiw-mock__confirm-label" data-i18n-key="hiw.mock_confirm_label">Review before sending</div>
+            <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:12px;" data-i18n-key="hiw.mock_confirm_details">
               <strong style="color:var(--allybi-text-strongest)">To:</strong> sarah@acmecorp.com<br>
               <strong style="color:var(--allybi-text-strongest)">File:</strong> SPA_Draft_v3.pdf (v3, Oct 12)<br>
               <strong style="color:var(--allybi-text-strongest)">Via:</strong> Outlook
             </div>
             <div class="hiw-mock__confirm-row">
-              <span style="font-size:12px;color:var(--allybi-text-muted);cursor:pointer;">Cancel</span>
-              <span class="hiw-mock__confirm-btn">Confirm & Send</span>
+              <span style="font-size:12px;color:var(--allybi-text-muted);cursor:pointer;" data-i18n-key="hiw.mock_cancel">Cancel</span>
+              <span class="hiw-mock__confirm-btn" data-i18n-key="hiw.mock_confirm_btn">Confirm &amp; Send</span>
             </div>
           </div>
         </div>
@@ -249,9 +249,9 @@
 <!-- FINAL CTA -->
 <section class="hiw-cta">
   <div class="allybi-container allybi-reveal">
-    <h2 data-i18n-key="hiw.cta_title">See Allybi in action.</h2>
-    <p data-i18n-key="hiw.cta_subtitle">Book a demo and we'll walk you through the full workflow.</p>
-    <a href="request-demo.html" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="nav.book_demo">Book demo</a>
+    <h2 data-i18n-key="hiw.cta_title">Start with a real document.</h2>
+    <p data-i18n-key="hiw.cta_subtitle">Upload a file, ask a question, and see the answer with source.</p>
+    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
   </div>
 </section>
 
@@ -268,10 +268,10 @@
       <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4><div class="footer-col-links"><a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="footer.security">Security</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a></div></div>
       <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4><div class="footer-col-links"><a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a><a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a><a href="use-case-business.html" data-i18n-key="footer.business">For operations</a></div></div>
       <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_resources">Resources</h4><div class="footer-col-links"><a href="faq.html" data-i18n-key="footer.faq">FAQ</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a><a href="about.html" data-i18n-key="footer.about">About</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4><div class="footer-col-links"><a href="tos.html">Terms of Service</a><a href="terms.html">Acceptable Use</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a><a href="cookies.html">Cookies</a><a href="integration-data-use.html">Integrations & Data Use</a><a href="data-deletion.html">Data Deletion</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4><div class="footer-col-links"><a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a><a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a><a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a><a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a><a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a></div></div>
     </div>
     <div class="footer-mobile-links">
-      <a href="how-it-works.html">How it works</a><a href="use-case-legal.html">For lawyers</a><a href="security-overview.html">Security</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="request-demo.html">Book demo</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a><a href="security-overview.html" data-i18n-key="footer.security">Security</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a><a href="about.html" data-i18n-key="footer.about">About</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a><a href="terms.html" data-i18n-key="footer.terms">Terms</a>
     </div>
     <div class="footer-bottom">
       <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
@@ -279,12 +279,12 @@
         <div class="language-selector" id="footer-language-selector">
           <button class="language-toggle" aria-expanded="false">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-            <span class="lang-label">Portugues (BR)</span>
+            <span class="lang-label">Português (BR)</span>
           </button>
           <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="pt">Português (BR)</li>
             <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Espanol</li>
+            <li role="option" data-lang="es">Español</li>
           </ul>
         </div>
       </div>
