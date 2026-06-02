@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Raio-X da Busca Manual — Allybi</title>
-  <meta name="description" content="Descubra quanto do seu trabalho ainda e busca manual. Diagnostico interativo e gratuito da Allybi.">
+  <meta name="description" content="Descubra quanto do seu trabalho ainda é busca manual. Diagnóstico interativo e gratuito da Allybi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -58,22 +58,13 @@
       max-width: 1120px; width: 100%; margin: 0 auto; padding: 0 24px;
     }
 
-    /* Hero */
-    .rx-hero {
-      padding: 140px 0 64px;
-    }
+    /* ── HERO ── */
+    .rx-hero { padding: 140px 0 64px; }
     .rx-hero__grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
       align-items: center;
-    }
-    .rx-hero__badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent-subtle); border: 1px solid var(--accent-muted);
-      border-radius: 100px; padding: 6px 14px;
-      font-size: 12px; font-weight: 600; color: var(--accent);
-      margin-bottom: 24px;
     }
     .rx-hero h1 {
       font-size: clamp(28px, 4vw, 42px);
@@ -131,34 +122,36 @@
       text-align: center;
       box-shadow: var(--shadow-md);
     }
-    .rx-preview__title {
-      font-size: 13px; font-weight: 600; color: var(--text-muted);
-      text-transform: uppercase; letter-spacing: 0.06em;
-      margin-bottom: 20px;
+    .rx-preview__badge {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 24px;
+      background: var(--bg-alt);
+      padding: 6px 14px;
+      border-radius: 100px;
     }
     .rx-preview__score {
-      font-size: 72px; font-weight: 700; color: var(--text-strongest);
+      font-size: 64px; font-weight: 700; color: var(--text-strongest);
       letter-spacing: -0.04em; line-height: 1;
       margin-bottom: 4px;
     }
     .rx-preview__max {
       font-size: 16px; font-weight: 500; color: var(--text-subtle);
-      margin-bottom: 28px;
+      margin-bottom: 20px;
     }
-    .rx-preview__dims {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-    }
-    .rx-preview__dim {
+    .rx-preview__detail {
+      font-size: 14px; color: var(--text-secondary);
+      padding: 12px 16px;
       background: var(--bg-alt);
       border-radius: var(--radius-sm);
-      padding: 10px 12px;
-      font-size: 12px; font-weight: 600; color: var(--text-muted);
+    }
+    .rx-preview__detail strong {
+      color: var(--text-strongest);
     }
 
-    /* Pre-quiz sections */
-    .rx-section {
-      padding: 64px 0;
-    }
+    /* ── PRE-QUIZ SECTIONS ── */
+    .rx-section { padding: 64px 0; }
     .rx-section__title {
       font-size: clamp(22px, 3vw, 30px);
       font-weight: 700; color: var(--text-strongest);
@@ -214,7 +207,7 @@
     }
     .rx-score-explain a:hover { text-decoration: underline; }
 
-    /* Quiz wrapper */
+    /* ── QUIZ ── */
     .rx-quiz-wrapper {
       display: none;
       max-width: 600px; width: 100%; margin: 0 auto;
@@ -278,10 +271,23 @@
       box-shadow: 0 0 0 2px var(--accent-muted);
     }
 
+    /* Next button */
+    .rx-next {
+      display: none; align-items: center; justify-content: center;
+      height: 48px; padding: 0 32px;
+      background: var(--text-strongest); color: #fff;
+      font-family: var(--font); font-size: 15px; font-weight: 600;
+      border: none; border-radius: 100px; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .rx-next.visible { display: inline-flex; }
+    .rx-next:hover { background: #000; transform: translateY(-1px); }
+    .rx-next:active { transform: translateY(0); }
+
     /* Back button */
     .rx-back {
       display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 24px; padding: 8px 0;
+      padding: 8px 0;
       background: none; border: none;
       font-family: var(--font); font-size: 13px; font-weight: 500;
       color: var(--text-muted); cursor: pointer;
@@ -290,7 +296,12 @@
     .rx-back:hover { color: var(--text-primary); }
     .rx-back svg { width: 14px; height: 14px; }
 
-    /* Result */
+    .rx-quiz__nav {
+      display: flex; align-items: center; gap: 16px;
+      margin-top: 24px;
+    }
+
+    /* ── RESULT ── */
     .rx-result {
       display: none;
       max-width: 600px; width: 100%; margin: 0 auto;
@@ -389,19 +400,19 @@
       background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
       opacity: 0.15;
     }
-    .rx-share-card__score {
-      font-size: 56px; font-weight: 700; letter-spacing: -0.04em; line-height: 1;
-      margin-bottom: 4px;
-    }
-    .rx-share-card__label {
-      font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.6);
-      margin-bottom: 12px;
-    }
-    .rx-share-card__band {
-      font-size: 16px; font-weight: 600; margin-bottom: 16px;
+    .rx-share-card__text {
+      font-size: 18px; font-weight: 600; line-height: 1.4;
+      margin-bottom: 20px;
+      position: relative;
     }
     .rx-share-card__brand {
       font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 500;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .rx-share-btns {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      position: relative;
     }
     .rx-share-btn {
       display: inline-flex; align-items: center; gap: 6px;
@@ -410,7 +421,6 @@
       border: 1px solid var(--border-default); border-radius: 100px;
       font-family: var(--font); font-size: 13px; font-weight: 600;
       cursor: pointer; transition: background 0.2s, box-shadow 0.2s;
-      margin-top: 8px;
     }
     .rx-share-btn:hover { box-shadow: var(--shadow-sm); }
 
@@ -443,6 +453,14 @@
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(16px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
 
     /* Responsive */
@@ -551,29 +569,23 @@
   <div class="rx-container">
     <div class="rx-hero__grid">
       <div>
-        <div class="rx-hero__badge">Raio-X da Busca Manual</div>
-        <h1>Sua empresa trabalha no fluxo... ou na busca manual?</h1>
-        <p class="rx-hero__sub">Responda 10 perguntas rápidas e veja seu score de Busca Manual. Sem cadastro. Sem planilha. Resultado imediato.</p>
+        <h1>Seu time procura informação ou trabalha com ela?</h1>
+        <p class="rx-hero__sub">Responda 6 perguntas rápidas e veja seu score de Busca Manual. Sem cadastro. Resultado imediato.</p>
         <div class="rx-hero__ctas">
           <button class="rx-hero__start" onclick="startQuiz()">Começar o Raio-X</button>
           <a href="metodologia.html" class="rx-hero__secondary">Ver como calculamos</a>
         </div>
         <div class="rx-trust">
-          <span>10 perguntas</span>
-          <span>2 minutos</span>
+          <span>6 perguntas</span>
+          <span>1 minuto</span>
           <span>nada sensível</span>
         </div>
       </div>
       <div class="rx-preview">
-        <div class="rx-preview__title">Score de Busca Manual</div>
-        <div class="rx-preview__score">??</div>
-        <div class="rx-preview__max">/ 100</div>
-        <div class="rx-preview__dims">
-          <div class="rx-preview__dim">Fontes</div>
-          <div class="rx-preview__dim">Versao</div>
-          <div class="rx-preview__dim">Fonte</div>
-          <div class="rx-preview__dim">Envio</div>
-        </div>
+        <div class="rx-preview__badge">Exemplo de resultado</div>
+        <div class="rx-preview__score">68</div>
+        <div class="rx-preview__max">Busca Manual / 100</div>
+        <div class="rx-preview__detail"><strong>Maior atrito:</strong> versão e confirmação</div>
       </div>
     </div>
   </div>
@@ -589,39 +601,39 @@
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4h5v5H4V4zm7 0h5v5h-5V4zM4 11h5v5H4v-5zm7 0h5v5h-5v-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="rx-info-card__label">Fontes</div>
-        <div class="rx-info-card__desc">Quantos lugares você precisa abrir para encontrar uma informação.</div>
+        <div class="rx-info-card__desc">Quantos lugares você abre para encontrar uma informação.</div>
       </div>
       <div class="rx-info-card">
         <div class="rx-info-card__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 3v14m4-14v14m4-14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <div class="rx-info-card__label">Versao</div>
-        <div class="rx-info-card__desc">Se você confia que o arquivo encontrado e o mais atual.</div>
+        <div class="rx-info-card__label">Versão</div>
+        <div class="rx-info-card__desc">Se encontrar já basta — ou se ainda precisa confirmar.</div>
       </div>
       <div class="rx-info-card">
         <div class="rx-info-card__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="rx-info-card__label">Fonte</div>
-        <div class="rx-info-card__desc">Se você consegue rastrear a origem de um documento quando pedem.</div>
+        <div class="rx-info-card__desc">Se a resposta tem prova — ou se vira investigação.</div>
       </div>
       <div class="rx-info-card">
         <div class="rx-info-card__icon">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10l7-7 7 7M5 8v8h10V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="rx-info-card__label">Envio</div>
-        <div class="rx-info-card__desc">Quantas etapas extras existem entre achar e enviar o arquivo certo.</div>
+        <div class="rx-info-card__desc">Quanto falta entre achar e enviar o documento certo.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- COMO O SCORE FUNCIONA -->
-<section class="rx-section" style="padding-top: 0;">
+<section class="rx-section" id="score-explain" style="padding-top: 0;">
   <div class="rx-container">
     <div class="rx-score-explain">
       <h3>Como o score funciona</h3>
-      <p>Cada pergunta mede um aspecto do seu fluxo de documentos. O score final vai de 0 a 100: quanto maior, mais o seu time depende de busca manual. As respostas sao convertidas em pontos e normalizadas para uma escala unica.</p>
+      <p>Cada resposta vale de 1 a 5. O resultado final vai de 0 a 100: quanto maior, mais o seu time depende de busca manual.</p>
       <a href="metodologia.html">Ver metodologia completa &rarr;</a>
     </div>
   </div>
@@ -632,7 +644,7 @@
   <div class="rx-progress">
     <div class="rx-progress__bar" id="progress-bar"></div>
   </div>
-  <div class="rx-progress__label" id="progress-label">Pergunta 1 de 10</div>
+  <div class="rx-progress__label" id="progress-label">Pergunta 1 de 6</div>
   <div id="quiz-screens"></div>
 </div>
 
@@ -650,29 +662,28 @@
   </div>
   <div id="result-band" class="rx-result__band"></div>
   <h2 class="rx-result__title" id="result-title"></h2>
-  <p class="rx-result__desc" id="result-desc"></p>
-
-  <div class="rx-insight" id="pain-card" style="margin-bottom: 16px;">
-    <div class="rx-insight__label">Maior ponto de atrito</div>
-    <p class="rx-insight__text" id="pain-text"></p>
-  </div>
+  <p class="rx-result__desc">O problema não é só achar. É confiar, provar e enviar sem errar.</p>
 
   <div class="rx-insights-list" id="insights-list"></div>
 
   <div class="rx-share-card" id="share-card">
-    <div class="rx-share-card__score" id="share-score"></div>
-    <div class="rx-share-card__label">Índice de busca manual</div>
-    <div class="rx-share-card__band" id="share-band"></div>
-    <div class="rx-share-card__brand">allybi.co/raio-x</div>
-    <button class="rx-share-btn" onclick="shareResult()">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M10.5 5C11.6046 5 12.5 4.10457 12.5 3C12.5 1.89543 11.6046 1 10.5 1C9.39543 1 8.5 1.89543 8.5 3C8.5 3.16 8.52 3.315 8.555 3.465L5.05 5.465C4.665 5.175 4.2 5 3.5 5C2.395 5 1.5 5.895 1.5 7C1.5 8.105 2.395 9 3.5 9C4.2 9 4.665 8.825 5.05 8.535L8.555 10.535C8.52 10.685 8.5 10.84 8.5 11C8.5 12.105 9.395 13 10.5 13C11.605 13 12.5 12.105 12.5 11C12.5 9.895 11.605 9 10.5 9C9.8 9 9.335 9.175 8.95 9.465L5.445 7.465C5.48 7.315 5.5 7.16 5.5 7C5.5 6.84 5.48 6.685 5.445 6.535L8.95 4.535C9.335 4.825 9.8 5 10.5 5Z" fill="currentColor"/></svg>
-      Compartilhar resultado
-    </button>
+    <div class="rx-share-card__text" id="share-text"></div>
+    <div class="rx-share-card__brand">allybi.com.br/raio-x.html</div>
+    <div class="rx-share-btns">
+      <button class="rx-share-btn" id="btn-copy" onclick="copyResult()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="4" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M10 4V2.5A1.5 1.5 0 008.5 1h-6A1.5 1.5 0 001 2.5v6A1.5 1.5 0 002.5 10H4" stroke="currentColor" stroke-width="1.3"/></svg>
+        Copiar resultado
+      </button>
+      <button class="rx-share-btn" id="btn-share" onclick="shareResult()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M10.5 5C11.6046 5 12.5 4.10457 12.5 3C12.5 1.89543 11.6046 1 10.5 1C9.39543 1 8.5 1.89543 8.5 3C8.5 3.16 8.52 3.315 8.555 3.465L5.05 5.465C4.665 5.175 4.2 5 3.5 5C2.395 5 1.5 5.895 1.5 7C1.5 8.105 2.395 9 3.5 9C4.2 9 4.665 8.825 5.05 8.535L8.555 10.535C8.52 10.685 8.5 10.84 8.5 11C8.5 12.105 9.395 13 10.5 13C11.605 13 12.5 12.105 12.5 11C12.5 9.895 11.605 9 10.5 9C9.8 9 9.335 9.175 8.95 9.465L5.445 7.465C5.48 7.315 5.5 7.16 5.5 7C5.5 6.84 5.48 6.685 5.445 6.535L8.95 4.535C9.335 4.825 9.8 5 10.5 5Z" fill="currentColor"/></svg>
+        Compartilhar
+      </button>
+    </div>
   </div>
 
   <div class="rx-ctas">
-    <a href="how-it-works.html" class="rx-cta-primary">Ver como o Allybi reduz isso</a>
-    <a href="https://app.allybi.co/signup" class="rx-cta-secondary">Começar gratis por 30 dias</a>
+    <a href="how-it-works.html" class="rx-cta-primary">Ver como o Allybi resolve</a>
+    <a href="https://app.allybi.co/signup" class="rx-cta-secondary">Começar grátis por 30 dias</a>
   </div>
 </section>
 
@@ -751,9 +762,9 @@
             <span class="lang-label">English</span>
           </button>
           <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="pt">Português (BR)</li>
             <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Espanol</li>
+            <li role="option" data-lang="es">Español</li>
           </ul>
         </div>
       </div>
@@ -764,70 +775,42 @@
 
 <script>
 (function(){
+  var TOTAL_QUESTIONS = 6;
+
   var questions = [
     {
-      q: 'Quando precisa encontrar uma informação, quantos lugares você costuma abrir?',
-      opts: ['1 lugar','2 lugares','3 lugares','4 lugares','5 ou mais'],
-      scores: [1,2,3,4,5],
+      q: 'Para responder algo simples, quantos lugares você costuma abrir?',
+      opts: ['1 lugar', '2 lugares', '3 lugares', '4 lugares', '5 ou mais'],
       dim: 'fontes'
     },
     {
-      q: 'Onde essa informação costuma estar?',
-      opts: ['No arquivo','Na pasta','No e-mail','No grupo','Espalhada'],
-      scores: [1,2,3,4,5],
-      dim: 'fontes'
+      q: 'Quando encontra o arquivo, você confia que é a versão certa?',
+      opts: ['Sim', 'Quase sempre', 'Depende', 'Quase nunca', 'Só depois de perguntar'],
+      dim: 'versão'
     },
     {
       q: 'Depois de achar o arquivo, o que normalmente ainda falta?',
-      opts: ['Nada','Confirmar','Baixar','Explicar','Reenviar'],
-      scores: [1,2,3,4,5],
+      opts: ['Nada', 'Confirmar versão', 'Achar fonte', 'Explicar contexto', 'Reenviar'],
       dim: 'envio'
     },
     {
-      q: 'Antes de enviar, quantas pessoas costumam passar pela confirmação?',
-      opts: ['So eu','2 pessoas','3 pessoas','4 pessoas','5+'],
-      scores: [1,2,3,4,5],
+      q: 'Antes de enviar algo importante, quantas pessoas entram na confirmação?',
+      opts: ['Só eu', '2 pessoas', '3 pessoas', '4 pessoas', '5 ou mais'],
       dim: 'envio'
     },
     {
-      q: 'Quando encontra um arquivo, você confia que e a versão certa?',
-      opts: ['Sim','Quase sempre','As vezes','Raramente','Preciso confirmar'],
-      scores: [1,2,3,4,5],
-      dim: 'versão'
-    },
-    {
-      q: 'Quantas versões "final" costumam existir?',
-      opts: ['1','2','3','4','Perdi a conta'],
-      scores: [1,2,3,4,5],
-      dim: 'versão'
-    },
-    {
-      q: 'No caminho entre achar e enviar, onde o processo mais trava?',
-      opts: ['Achar','Confirmar versão','Achar fonte','Explicar contexto','Enviar certo'],
-      scores: [3,4,4,4,5],
+      q: 'Quando alguém pergunta \u201Ctem fonte?\u201D, o que acontece?',
+      opts: ['Está fácil', 'Sei onde está', 'Preciso procurar', 'Preciso perguntar', 'Vira investigação'],
       dim: 'fonte'
     },
     {
-      q: 'Com que frequencia o mesmo arquivo e pedido de novo?',
-      opts: ['Nunca','Raramente','As vezes','Toda semana','Todo dia'],
-      scores: [1,2,3,4,5],
-      dim: 'envio'
-    },
-    {
-      q: 'Quando alguém pergunta "tem fonte?", o que acontece?',
-      opts: ['Esta facil','Sei onde esta','Procuro','Pergunto','Vira investigacao'],
-      scores: [1,2,3,4,5],
-      dim: 'fonte'
-    },
-    {
-      q: 'Uma pessoa nova no time conseguiria achar e enviar o documento certo sem ajuda?',
-      opts: ['Sim','Provavelmente','Depende','Dificilmente','Impossivel'],
-      scores: [1,2,3,4,5],
+      q: 'Uma pessoa nova conseguiria achar, confirmar e enviar o documento certo sem ajuda?',
+      opts: ['Sim', 'Provavelmente', 'Depende', 'Dificilmente', 'Impossível'],
       dim: 'fontes'
     }
   ];
 
-  var answers = new Array(10).fill(null);
+  var answers = new Array(TOTAL_QUESTIONS).fill(null);
 
   // Build quiz screens
   var container = document.getElementById('quiz-screens');
@@ -835,20 +818,26 @@
     var screen = document.createElement('div');
     screen.className = 'rx-quiz';
     screen.id = 'q' + i;
+
     var chipsHtml = '';
     for (var j = 0; j < qData.opts.length; j++) {
       chipsHtml += '<button class="rx-chip" data-q="' + i + '" data-v="' + j + '">' + qData.opts[j] + '</button>';
     }
-    var backHtml = '';
+
+    var navHtml = '<div class="rx-quiz__nav">';
     if (i > 0) {
-      backHtml = '<button class="rx-back" onclick="goBack(' + i + ')">' +
+      navHtml += '<button class="rx-back" onclick="goBack(' + i + ')">' +
         '<svg viewBox="0 0 14 14" fill="none"><path d="M8.5 3L4.5 7L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
         'Voltar</button>';
     }
+    navHtml += '<button class="rx-next" id="next-' + i + '" onclick="goNext(' + i + ')">' + (i < TOTAL_QUESTIONS - 1 ? 'Próxima' : 'Ver resultado') + '</button>';
+    navHtml += '</div>';
+
     screen.innerHTML =
       '<h2 class="rx-quiz__question">' + qData.q + '</h2>' +
       '<div class="rx-quiz__chips">' + chipsHtml + '</div>' +
-      backHtml;
+      navHtml;
+
     container.appendChild(screen);
   });
 
@@ -865,14 +854,19 @@
 
     answers[qi] = vi;
 
-    setTimeout(function() {
-      if (qi < 9) {
-        showQuestion(qi + 1);
-      } else {
-        showResult();
-      }
-    }, 250);
+    // Show next button
+    var nextBtn = document.getElementById('next-' + qi);
+    if (nextBtn) nextBtn.classList.add('visible');
   });
+
+  window.goNext = function(currentIdx) {
+    if (answers[currentIdx] === null) return;
+    if (currentIdx < TOTAL_QUESTIONS - 1) {
+      showQuestion(currentIdx + 1);
+    } else {
+      showResult();
+    }
+  };
 
   window.showQuestion = function(idx) {
     var allScreens = document.querySelectorAll('.rx-quiz');
@@ -886,6 +880,8 @@
       var chips = target.querySelectorAll('.rx-chip');
       for (var j = 0; j < chips.length; j++) chips[j].classList.remove('selected');
       chips[answers[idx]].classList.add('selected');
+      var nextBtn = document.getElementById('next-' + idx);
+      if (nextBtn) nextBtn.classList.add('visible');
     }
   };
 
@@ -896,33 +892,32 @@
   window.startQuiz = function() {
     document.getElementById('hero').style.display = 'none';
     document.getElementById('pre-quiz').style.display = 'none';
-    var explainSection = document.querySelector('.rx-score-explain');
-    if (explainSection) explainSection.closest('.rx-section').style.display = 'none';
+    document.getElementById('score-explain').style.display = 'none';
     document.getElementById('quiz-wrapper').style.display = 'block';
     showQuestion(0);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   function updateProgress(step) {
-    var pct = (step / 10) * 100;
+    var pct = (step / TOTAL_QUESTIONS) * 100;
     document.getElementById('progress-bar').style.width = pct + '%';
-    document.getElementById('progress-label').textContent = 'Pergunta ' + step + ' de 10';
+    document.getElementById('progress-label').textContent = 'Pergunta ' + step + ' de ' + TOTAL_QUESTIONS;
   }
 
   function calcScore() {
     var total = 0;
-    for (var i = 0; i < 10; i++) {
-      total += questions[i].scores[answers[i]];
+    for (var i = 0; i < TOTAL_QUESTIONS; i++) {
+      total += (answers[i] + 1);
     }
-    return Math.round(((total - 10) / 40) * 100);
+    return Math.round(((total - 6) / 24) * 100);
   }
 
   function getDimScores() {
     var dims = {};
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < TOTAL_QUESTIONS; i++) {
       var d = questions[i].dim;
       if (!dims[d]) dims[d] = { total: 0, count: 0 };
-      dims[d].total += questions[i].scores[answers[i]];
+      dims[d].total += (answers[i] + 1);
       dims[d].count++;
     }
     var avgs = {};
@@ -933,31 +928,33 @@
   }
 
   var dimLabels = {
-    fontes: 'Dispersao de fontes',
-    versão: 'Controle de versão',
+    fontes: 'Dispersão de fontes',
+    'versão': 'Confiança na versão',
     fonte: 'Rastreabilidade de fonte',
     envio: 'Custo de envio'
   };
 
-  var dimInsights = {
-    fontes: 'Sua informação esta espalhada em muitos lugares. Cada busca exige abrir varias ferramentas antes de encontrar o que precisa. Com o Allybi, todos os seus arquivos ficam acessiveis em um unico ponto de busca.',
-    versão: 'A confianca na versão certa esta baixa. Multiplos "finais" geram inseguranca e retrabalho. O Allybi identifica a versão mais recente e mostra a fonte, eliminando a dúvida.',
-    fonte: 'Quando pedem a fonte, comeca uma investigacao. Isso sinaliza que a rastreabilidade dos documentos e fragil. O Allybi cita a fonte em cada resposta, automaticamente.',
-    envio: 'Mesmo depois de encontrar o arquivo, o trabalho nao acaba -- confirmar, baixar, explicar, reenviar. Esse retrabalho consome tempo silenciosamente. O Allybi entrega a resposta ja contextualizada.'
+  var dimInsightsShort = {
+    fontes: 'Sua informação está espalhada em muitos lugares. Cada busca exige abrir várias ferramentas antes de encontrar o que precisa.',
+    'versão': 'A confiança na versão certa está baixa. Múltiplos \u201Cfinais\u201D geram insegurança e retrabalho.',
+    fonte: 'Quando pedem a fonte, começa uma investigação. A rastreabilidade dos documentos é frágil.',
+    envio: 'Mesmo depois de encontrar o arquivo, o trabalho não acaba \u2014 confirmar, explicar, reenviar. Esse retrabalho consome tempo silenciosamente.'
   };
 
-  var generalInsights = [
-    'Quanto mais lugares sua equipe precisa abrir, mais tempo se perde antes de começar o trabalho real.',
-    'Processos que dependem de memoria institucional quebram quando alguém sai ou muda de funcao.',
-    'Cada confirmação manual adiciona minutos que, somados, viram horas por semana.'
-  ];
+  var bandMeanings = {
+    low: 'Seu time tem processos claros e pouca dependência de busca manual.',
+    'medium-low': 'Algumas etapas ainda dependem de busca manual ou confirmação humana.',
+    medium: 'Boa parte do fluxo depende de encontrar, confirmar e reenviar manualmente.',
+    high: 'A busca manual é parte do dia a dia. Versões se perdem e cada envio exige conferência.',
+    critical: 'Quase tudo depende de memória, busca manual e confirmação humana. Automação é urgente.'
+  };
 
   function getBand(score) {
-    if (score <= 20) return { label: 'Busca manual baixa', cls: 'low', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Voce tem poucos sinais de busca manual. Ainda assim, pode haver oportunidades de ganhar velocidade com respostas automaticas e rastreabilidade de fontes.' };
-    if (score <= 40) return { label: 'Processo parcialmente claro', cls: 'medium-low', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Algumas etapas ainda dependem de busca manual ou confirmação humana. Sao pontos que, resolvidos, podem liberar horas por semana.' };
-    if (score <= 60) return { label: 'Busca manual ativa', cls: 'medium', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Boa parte do seu fluxo depende de encontrar, confirmar e reenviar manualmente. Isso cria atrasos e aumenta o risco de erro.' };
-    if (score <= 80) return { label: 'Alto atrito operacional', cls: 'high', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'A busca manual e parte do dia a dia. Versoes se perdem, fontes somem e cada envio exige conferencia. Ha muito espaco para automacao.' };
-    return { label: 'Processo no improviso', cls: 'critical', title: 'Sua empresa marcou ' + score + '/100 em Busca Manual.', desc: 'Quase tudo depende de memoria, busca manual e confirmação humana. O risco de erro e alto e a produtividade esta comprometida. Automacao e urgente.' };
+    if (score <= 20) return { label: 'Busca manual baixa', cls: 'low' };
+    if (score <= 40) return { label: 'Processo parcialmente claro', cls: 'medium-low' };
+    if (score <= 60) return { label: 'Busca manual ativa', cls: 'medium' };
+    if (score <= 80) return { label: 'Alto atrito operacional', cls: 'high' };
+    return { label: 'Processo no improviso', cls: 'critical' };
   }
 
   window.showResult = function() {
@@ -969,22 +966,28 @@
     var score = calcScore();
     var band = getBand(score);
 
-    // Animaté score
+    // Animate score count-up
     var scoreNum = document.getElementById('score-num');
     var current = 0;
-    var step = Math.ceil(score / 40);
-    var counter = setInterval(function() {
-      current += step;
-      if (current >= score) { current = score; clearInterval(counter); }
-      scoreNum.textContent = current;
-    }, 25);
+    var step = Math.max(1, Math.ceil(score / 40));
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Ring
+    if (prefersReduced) {
+      scoreNum.textContent = score;
+    } else {
+      var counter = setInterval(function() {
+        current += step;
+        if (current >= score) { current = score; clearInterval(counter); }
+        scoreNum.textContent = current;
+      }, 25);
+    }
+
+    // Ring animation
     var circumference = 2 * Math.PI * 70;
     var offset = circumference - (score / 100) * circumference;
     setTimeout(function() {
       document.getElementById('ring-fill').style.strokeDashoffset = offset;
-    }, 100);
+    }, prefersReduced ? 0 : 100);
 
     var ringFill = document.getElementById('ring-fill');
     if (score <= 20) ringFill.style.stroke = '#059669';
@@ -998,9 +1001,8 @@
     bandEl.className = 'rx-result__band rx-result__band--' + band.cls;
     bandEl.textContent = band.label;
 
-    // Title & desc
-    document.getElementById('result-title').textContent = band.title;
-    document.getElementById('result-desc').textContent = band.desc;
+    // Title
+    document.getElementById('result-title').textContent = 'Seu time marcou ' + score + '/100 em Busca Manual.';
 
     // Biggest pain dimension
     var dimScores = getDimScores();
@@ -1008,37 +1010,62 @@
     for (var k in dimScores) {
       if (dimScores[k] > maxVal) { maxVal = dimScores[k]; maxDim = k; }
     }
-    document.getElementById('pain-text').textContent = dimInsights[maxDim] || dimInsights.fontes;
 
-    // 3 insights
+    // 3 insight cards
     var insightsList = document.getElementById('insights-list');
     insightsList.innerHTML = '';
-    for (var g = 0; g < 3; g++) {
-      var card = document.createElement('div');
-      card.className = 'rx-insight';
-      card.innerHTML = '<div class="rx-insight__label">Insight ' + (g + 1) + '</div><p class="rx-insight__text">' + generalInsights[g] + '</p>';
-      insightsList.appendChild(card);
-    }
+
+    // Card 1: Maior atrito
+    var card1 = document.createElement('div');
+    card1.className = 'rx-insight';
+    card1.innerHTML = '<div class="rx-insight__label">Maior atrito</div>' +
+      '<p class="rx-insight__text"><strong>' + dimLabels[maxDim] + '.</strong> ' + dimInsightsShort[maxDim] + '</p>';
+    insightsList.appendChild(card1);
+
+    // Card 2: O que isso significa
+    var card2 = document.createElement('div');
+    card2.className = 'rx-insight';
+    card2.innerHTML = '<div class="rx-insight__label">O que isso significa</div>' +
+      '<p class="rx-insight__text">' + bandMeanings[band.cls] + '</p>';
+    insightsList.appendChild(card2);
+
+    // Card 3: Como o Allybi reduz isso
+    var card3 = document.createElement('div');
+    card3.className = 'rx-insight';
+    card3.innerHTML = '<div class="rx-insight__label">Como o Allybi reduz isso</div>' +
+      '<p class="rx-insight__text">Conecte fontes, pergunte no chat e envie com fonte. Sem abrir pastas, sem confirmar versão, sem investigar origem.</p>';
+    insightsList.appendChild(card3);
 
     // Share card
-    document.getElementById('share-score').textContent = score;
-    document.getElementById('share-band').textContent = band.label;
+    var shareText = 'Minha empresa marcou ' + score + '/100 em Busca Manual.';
+    document.getElementById('share-text').textContent = shareText;
+
+    // Store for share functions
+    window._rxScore = score;
+    window._rxBand = band.label;
+    window._rxShareText = shareText;
   };
 
-  window.shareResult = function() {
-    var score = document.getElementById('share-score').textContent;
-    var band = document.getElementById('share-band').textContent;
-    var text = 'Meu indice de busca manual e ' + score + '/100 -- "' + band + '". Faca o seu: allybi.co/raio-x';
-
-    if (navigator.share) {
-      navigator.share({ title: 'Raio-X da Busca Manual', text: text, url: 'https://allybi.co/raio-x' }).catch(function(){});
-    } else if (navigator.clipboard) {
+  window.copyResult = function() {
+    var text = window._rxShareText + ' Faça o seu: https://allybi.com.br/raio-x.html';
+    if (navigator.clipboard) {
       navigator.clipboard.writeText(text).then(function() {
-        var btn = document.querySelector('.rx-share-btn');
+        var btn = document.getElementById('btn-copy');
         var original = btn.innerHTML;
         btn.textContent = 'Copiado!';
         setTimeout(function() { btn.innerHTML = original; }, 2000);
       });
+    }
+  };
+
+  window.shareResult = function() {
+    var text = window._rxShareText + ' Faça o seu:';
+    var url = 'https://allybi.com.br/raio-x.html';
+
+    if (navigator.share) {
+      navigator.share({ title: 'Raio-X da Busca Manual', text: text, url: url }).catch(function(){});
+    } else {
+      copyResult();
     }
   };
 })();

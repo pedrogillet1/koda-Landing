@@ -370,14 +370,14 @@
       "cta2": "Falar com vendas"
     },
     "tools": {
-      "title": "Meça antes de testar.",
-      "subtitle": "Faça o Raio-X, calcule tempo perdido ou monte um final_final fictício para ver onde a busca manual aparece.",
+      "title": "Antes de testar, veja onde o trabalho quebra.",
+      "subtitle": "Três ferramentas rápidas para enxergar o que todo time sente, mas quase ninguém mede.",
       "rayox_title": "Raio-X da Busca Manual",
-      "rayox_desc": "10 perguntas para descobrir onde seu fluxo trava.",
+      "rayox_desc": "Descubra em 6 perguntas onde seu fluxo trava.",
       "calc_title": "Calculadora do Tempo Perdido",
       "calc_desc": "Transforme busca, confirmação e reenvio em horas por mês.",
       "cemetery_title": "Cemitério dos Arquivos Finais",
-      "cemetery_desc": "Monte nomes absurdos sem enviar documentos reais."
+      "cemetery_desc": "Monte o nome de arquivo que ninguém teria coragem de confiar."
     }
   },
   "about": {
@@ -437,7 +437,7 @@
     "optimize": {
       "title": "Para o que otimizamos",
       "p1": "Velocidade até a clareza. Respostas fundamentadas que citam fontes. Controle do usuário em cada etapa. Medimos sucesso pela rapidez com que você pode ir da pergunta à ação confiante — sem sacrificar precisão ou privacidade.",
-      "p2": "Um workspace privado onde você pode pesquisar todos os seus documentos, comparar versões e agir — tudo sem alternar entre cinco ferramentas diferentes ou se preocupar com o destino dos seus dados."
+      "p2": "Um workspace seguro onde você pode pesquisar todos os seus documentos, comparar versões e agir — tudo sem alternar entre cinco ferramentas diferentes ou se preocupar com o destino dos seus dados."
     },
     "never": {
       "title": "O que nunca faremos",
@@ -457,7 +457,7 @@
     "grounded_p3": "Isso não é um complemento de política de privacidade. É como o produto foi construído.",
     "grounded_cta": "Ver visão geral de segurança",
     "building_title": "O que Allybi está construindo",
-    "building_p1": "Um workspace privado onde você pode pesquisar todos os seus documentos, organizá-los por projeto ou cliente, editar arquivos diretamente e agir, tudo sem alternar entre cinco ferramentas diferentes.",
+    "building_p1": "Um workspace seguro onde você pode pesquisar todos os seus documentos, organizá-los por projeto ou cliente, editar arquivos diretamente e agir, tudo sem alternar entre cinco ferramentas diferentes.",
     "building_p2": "Menos tempo procurando o arquivo certo. Menos erros de versão errada. Trabalho mais rápido e tranquilo nas coisas que realmente importam.",
     "how_title": "Como construímos",
     "build_1_title": "Para o que otimizamos",
@@ -712,7 +712,7 @@
     "sec4_title": "Confirmação explícita",
     "sec4_desc": "Nada sai sem sua revisão e aprovação.",
     "cta_title": "Veja como é a clareza para sua prática.",
-    "cta_sub": "Traga seus contratos, minutas e arquivos de casos para um único workspace privado."
+    "cta_sub": "Traga seus contratos, minutas e arquivos de casos para um único workspace seguro."
   },
   "finance": {
     "hero": {
@@ -728,7 +728,7 @@
       "card2_title": "Números espalhados entre arquivos",
       "card2_desc": "Receita no modelo, ARR no deck, burn rate no memo do conselho. O CFO precisa de um número, da fonte certa, agora.",
       "card3_title": "Anexo errado enviado",
-      "card3_desc": "Enviar o modelo do trimestre passado para o conselho erode a confiança instantaneamente. O erro é invisível até ser tarde demais."
+      "card3_desc": "Enviar o modelo do trimestre passado para o conselho destruir a confiança instantaneamente. O erro é invisível até ser tarde demais."
     },
     "feature1": {
       "title": "Encontre números em todos os documentos.",
@@ -791,7 +791,7 @@
       "card1_title": "Cliente esperando o follow-up",
       "card1_desc": "O cliente pediu o SOW atualizado há dois dias. O arquivo está em algum lugar entre e-mail, pastas e três threads do Slack.",
       "card2_title": "Proposta_final_v2_atualizada",
-      "card2_desc": "Confusão de versões desperdiça tempo e erode confiança. Enviar a versão errada para um cliente ou parceiro é invisível até causar dano.",
+      "card2_desc": "Confusão de versões desperdiça tempo e destruir confiança. Enviar a versão errada para um cliente ou parceiro é invisível até causar dano.",
       "card3_title": "Conformidade sem o rastro documental",
       "card3_desc": "Quando uma verificação de conformidade chega, você precisa rastrear até a proposta aprovada e o rastro de decisão. Arquivos espalhados tornam isso mais difícil do que deveria."
     },
@@ -1152,7 +1152,7 @@
     },
     "product": {
       "q1": "O que o Allybi realmente faz?",
-      "a1": "O Allybi é um workspace privado de IA para trabalho com documentos sensíveis. Ele reúne arquivos, pastas na nuvem, contexto de e-mail e envio de mensagens em um só lugar — para que você possa buscar, comparar versões, preparar respostas e enviar com respostas citando a fonte e confirmação antes de qualquer envio.",
+      "a1": "O Allybi é um workspace seguro de IA para trabalho com documentos sensíveis. Ele reúne arquivos, pastas na nuvem, contexto de e-mail e envio de mensagens em um só lugar — para que você possa buscar, comparar versões, preparar respostas e enviar com respostas citando a fonte e confirmação antes de qualquer envio.",
       "q2": "Como funciona a comparação de versões?",
       "a2": "Carregue duas ou mais versões de um documento e pergunte ao Allybi o que mudou. Ele identifica diferenças específicas — cláusulas, números, datas, linguagem — e cita a página e seção exatas em cada versão.",
       "q3": "Quais tipos de arquivo são suportados?",
@@ -1311,7 +1311,7 @@
     "hero": {
       "eyebrow": "Para advogados",
       "title": "Encontre a cláusula, a minuta e a resposta certa.",
-      "support": "Allybi oferece aos advogados um workspace privado para pesquisar contratos, comparar minutas e agir sobre as descobertas — sem perder o fio ou enviar o arquivo errado."
+      "support": "Allybi oferece aos advogados um workspace seguro para pesquisar contratos, comparar minutas e agir sobre as descobertas — sem perder o fio ou enviar o arquivo errado."
     },
     "pains": {
       "drafts": {
@@ -1396,14 +1396,14 @@
     },
     "final_cta": {
       "title": "Seus casos, organizados e pesquisáveis.",
-      "support": "Traga seus contratos, rascunhos e evidências para um único workspace privado."
+      "support": "Traga seus contratos, rascunhos e evidências para um único workspace seguro."
     }
   },
   "uc_finance": {
     "hero": {
       "eyebrow": "Equipes Financeiras",
       "title": "Encontre o deck, modelo, métrica ou cap table exato em segundos.",
-      "support": "Allybi oferece às equipes financeiras e de negociações um workspace privado para pesquisar materiais de negociação, encontrar números exatos e enviar o anexo certo — sem caos de pastas ou confusão de versões."
+      "support": "Allybi oferece às equipes financeiras e de negociações um workspace seguro para pesquisar materiais de negociação, encontrar números exatos e enviar o anexo certo — sem caos de pastas ou confusão de versões."
     },
     "pains": {
       "chaos": {
@@ -1489,14 +1489,14 @@
     },
     "final_cta": {
       "title": "Suas negociações, organizadas e pesquisáveis.",
-      "support": "Traga seus decks, modelos e cap tables para um único workspace privado."
+      "support": "Traga seus decks, modelos e cap tables para um único workspace seguro."
     }
   },
   "uc_business": {
     "hero": {
       "eyebrow": "Negócios e Operações",
       "title": "Mantenha propostas, planos e decisões fáceis de encontrar e de agir.",
-      "support": "Allybi oferece às equipes de negócios e operações um workspace privado para pesquisar documentos e mensagens, organizar por projeto e dar seguimento com o arquivo certo anexado — sem o caos interfuncional."
+      "support": "Allybi oferece às equipes de negócios e operações um workspace seguro para pesquisar documentos e mensagens, organizar por projeto e dar seguimento com o arquivo certo anexado — sem o caos interfuncional."
     },
     "pains": {
       "chaos": {
@@ -1505,7 +1505,7 @@
       },
       "latest": {
         "title": "Encontrar o arquivo mais recente",
-        "desc": "Era \"Proposta_final\" ou \"Proposta_final_v2_atualizada\"? A confusão de versões desperdiça tempo e erode a confiança quando o documento errado chega a um cliente ou parceiro."
+        "desc": "Era \"Proposta_final\" ou \"Proposta_final_v2_atualizada\"? A confusão de versões desperdiça tempo e destruir a confiança quando o documento errado chega a um cliente ou parceiro."
       },
       "followup": {
         "title": "Dar seguimento sem o documento certo",
@@ -1581,7 +1581,7 @@
     },
     "final_cta": {
       "title": "Seus projetos, organizados e acionáveis.",
-      "support": "Traga suas propostas, planos e decisões para um único workspace privado."
+      "support": "Traga suas propostas, planos e decisões para um único workspace seguro."
     }
   },
   "security_ov": {
@@ -1708,7 +1708,7 @@
     },
     "cta": {
       "title": "Conecte suas ferramentas e comece a trabalhar.",
-      "support": "Pesquise, rascunhe e envie em todos os seus serviços conectados a partir de um único workspace privado."
+      "support": "Pesquise, rascunhe e envie em todos os seus serviços conectados a partir de um único workspace seguro."
     },
     "cta_link": "Ver integrações",
     "hero": {
