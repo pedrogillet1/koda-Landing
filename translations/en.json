@@ -26,11 +26,11 @@
     "customer_stories": "Customer Stories",
     "start_free_30": "Start free for 30 days",
     "tools": "Tools",
-    "busca_manual": "Manual Search",
-    "rayox": "Manual Search X-Ray",
-    "calculator": "Time Lost Calculator",
-    "cemetery": "Final Files Cemetery",
-    "for_operations": "For operations"
+    "calculator": "Time Calculator",
+    "for_operations": "For operations",
+    "diagnostic": "Flow Diagnostic",
+    "indice": "Allybi Index",
+    "methodology": "Methodology"
   },
   "footer": {
     "tagline": "A chat for finding, confirming, and sending the right document.",
@@ -76,19 +76,17 @@
     "tos": "Terms of Service",
     "data_use": "Integrations & Data Use",
     "data_deletion": "Data Deletion",
-    "rayox": "Manual Search X-Ray",
-    "calculator": "Time Lost Calculator",
-    "cemetery": "Final Files Cemetery",
+    "calculator": "Time Calculator",
     "indice": "Allybi Index",
     "col_tools": "Tools",
-    "busca_manual": "Manual Search",
     "methodology": "Methodology",
-    "operations": "For operations"
+    "operations": "For operations",
+    "diagnostic": "Flow Diagnostic"
   },
   "hero": {
     "eyebrow": "Private AI for documents, email context, and handoffs",
-    "title": "6 places. One message.<br>The right answer, with sources.",
-    "subtitle": "Connect your sources, upload documents, and ask in chat. Allybi finds the answer, shows the source, prepares the email or WhatsApp, and asks for your confirmation before sending.",
+    "title": "Ask your documents, emails, and company files.",
+    "subtitle": "Connect Outlook, OneDrive, SharePoint, and your uploads. Allybi finds the answer, shows the source, and prepares the email or WhatsApp — always with your confirmation.",
     "cta_primary": "Start free for 30 days",
     "cta_secondary": "See how it works",
     "chip1": "Source-cited answers",
@@ -360,14 +358,12 @@
       "cta2": "Talk to sales"
     },
     "tools": {
-      "title": "Measure before you try.",
-      "subtitle": "Take the X-Ray, calculate time lost, or build a fictitious final_final to see where manual search shows up.",
-      "rayox_title": "Manual Search X-Ray",
-      "rayox_desc": "10 questions to find where your workflow breaks.",
-      "calc_title": "Time Lost Calculator",
-      "calc_desc": "Turn search, confirmation, and resends into hours per month.",
-      "cemetery_title": "Final Files Cemetery",
-      "cemetery_desc": "Build absurd file names without real documents."
+      "title": "Before trying, measure what is costing you time.",
+      "subtitle": "Two quick tools. One shows your time lost. The other shows where the team flow breaks.",
+      "rayox_title": "Time Lost Calculator",
+      "rayox_desc": "Find out how many hours per month you lose searching, confirming, and resending files.",
+      "calc_title": "Flow Diagnostic",
+      "calc_desc": "Map where the team loses certainty between request and send."
     }
   },
   "about": {

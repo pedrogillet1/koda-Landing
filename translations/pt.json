@@ -26,11 +26,11 @@
     "for_business": "Para negócios",
     "start_free_30": "Começar grátis por 30 dias",
     "tools": "Ferramentas",
-    "busca_manual": "Busca Manual",
-    "rayox": "Raio-X da Busca Manual",
     "calculator": "Calculadora do Tempo Perdido",
-    "cemetery": "Cemitério dos Arquivos Finais",
-    "for_operations": "Para operações"
+    "for_operations": "Para operações",
+    "diagnostic": "Diagnóstico do Fluxo",
+    "indice": "Índice Allybi",
+    "methodology": "Metodologia"
   },
   "footer": {
     "tagline": "Um chat para encontrar, confirmar e enviar o documento certo.",
@@ -76,19 +76,17 @@
     "tos": "Termos de Serviço",
     "data_use": "Integrações e Uso de Dados",
     "data_deletion": "Exclusão de Dados",
-    "rayox": "Raio-X da Busca Manual",
     "calculator": "Calculadora do Tempo Perdido",
-    "cemetery": "Cemitério dos Arquivos Finais",
     "indice": "Índice Allybi",
     "col_tools": "Ferramentas",
-    "busca_manual": "Busca Manual",
     "methodology": "Como calculamos",
-    "operations": "Para operações"
+    "operations": "Para operações",
+    "diagnostic": "Diagnóstico do Fluxo"
   },
   "hero": {
     "eyebrow": "IA privada para documentos, e-mails e envios",
-    "title": "6 lugares. 1 mensagem.<br>A resposta certa, com fonte.",
-    "subtitle": "Conecte suas fontes, suba documentos e pergunte no chat. O Allybi encontra a resposta, mostra a fonte, prepara o e-mail ou WhatsApp e pede sua confirmação antes de qualquer envio.",
+    "title": "Pergunte aos seus documentos, e-mails e arquivos da empresa.",
+    "subtitle": "Conecte Outlook, OneDrive, SharePoint e seus uploads. O Allybi encontra a resposta, mostra a fonte e prepara o envio por e-mail ou WhatsApp — sempre com sua confirmação.",
     "cta_primary": "Começar grátis por 30 dias",
     "cta_secondary": "Ver como funciona",
     "chip1": "Respostas com fonte",
@@ -217,18 +215,18 @@
       "item5": "Outlook, OneDrive e SharePoint disponíveis"
     },
     "pain": {
-      "title": "O problema não é só achar o arquivo.",
-      "card1_title": "Abrir 6 lugares",
-      "card1_desc": "Drive, e-mail, pasta, anexo, upload, conversa. Cada lugar tem uma parte da resposta.",
-      "card2_title": "Confiar na versão",
-      "card2_desc": "Achar o arquivo não basta se ninguém sabe se é o último, aprovado ou enviado.",
-      "card3_title": "Enviar sem chute",
-      "card3_desc": "Depois de encontrar, ainda falta preparar a resposta, anexar o certo e confirmar antes de enviar.",
-      "subtitle": "É confirmar se é o certo, entender de onde veio e enviar sem abrir tudo de novo."
+      "title": "O trabalho não termina quando você acha o arquivo.",
+      "card1_title": "Encontrar",
+      "card1_desc": "A resposta pode estar no e-mail, na pasta, no anexo, no upload ou em uma conversa antiga.",
+      "card2_title": "Confirmar",
+      "card2_desc": "Achar o arquivo não basta se ninguém sabe se ele é o último, aprovado ou seguro para usar.",
+      "card3_title": "Enviar",
+      "card3_desc": "Antes de mandar, ainda falta preparar a resposta, conferir destinatário, arquivo e contexto.",
+      "subtitle": "Depois de encontrar, ainda falta saber se é a versão certa, de onde saiu, se foi aprovada e como enviar sem erro."
     },
     "workflow": {
-      "title": "Como o trabalho muda",
-      "subtitle": "Em vez de procurar, baixar, explicar e reenviar, você pergunta e revisa antes de enviar.",
+      "title": "Do pedido ao envio, sem abrir tudo de novo.",
+      "subtitle": "O Allybi transforma o caminho inteiro em uma conversa com fonte.",
       "s1_title": "Conecte ou suba",
       "s1_desc": "Conecte Outlook, OneDrive e SharePoint. Ou suba arquivos direto no Allybi.",
       "s2_title": "Pergunte no chat",
@@ -364,20 +362,18 @@
       "see_all": "Ver todas as perguntas →"
     },
     "final_cta": {
-      "title": "Pare de procurar, confirmar e reenviar manualmente.",
-      "support": "O Allybi conecta suas fontes, responde com fonte e prepara o envio certo.",
+      "title": "Comece com uma pergunta real.",
+      "support": "Conecte uma fonte, suba um arquivo e veja a resposta com fonte antes de enviar.",
       "cta": "Começar grátis por 30 dias",
       "cta2": "Falar com vendas"
     },
     "tools": {
-      "title": "Antes de testar, veja onde o trabalho quebra.",
-      "subtitle": "Três ferramentas rápidas para enxergar o que todo time sente, mas quase ninguém mede.",
-      "rayox_title": "Raio-X da Busca Manual",
-      "rayox_desc": "Descubra em 6 perguntas onde seu fluxo trava.",
-      "calc_title": "Calculadora do Tempo Perdido",
-      "calc_desc": "Transforme busca, confirmação e reenvio em horas por mês.",
-      "cemetery_title": "Cemitério dos Arquivos Finais",
-      "cemetery_desc": "Monte o nome de arquivo que ninguém teria coragem de confiar."
+      "title": "Antes de testar, meça o que está custando tempo.",
+      "subtitle": "Duas ferramentas rápidas. Uma mostra o seu tempo perdido. A outra mostra onde o fluxo do time trava.",
+      "rayox_title": "Calculadora do Tempo Perdido",
+      "rayox_desc": "Descubra quantas horas por mês você perde procurando, confirmando e reenviando arquivos.",
+      "calc_title": "Diagnóstico do Fluxo",
+      "calc_desc": "Mapeie onde o time perde certeza entre o pedido e o envio."
     }
   },
   "about": {
