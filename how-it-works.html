@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Como funciona — Allybi</title>
-  <meta name="description" content="From source to response, without losing the thread. See how Allybi helps you bring files, search, compare, prepare, and confirm before send.">
+  <meta name="description" content="Conecte fontes, suba arquivos, pergunte no chat e receba respostas com fonte. O Allybi prepara e-mail ou WhatsApp com revisão antes do envio.">
+  <meta property="og:title" content="Como funciona — Allybi">
+  <meta property="og:description" content="Do pedido ao envio: conecte fontes, pergunte no chat, receba com fonte e revise antes de enviar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -102,188 +104,324 @@
 
 <main>
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════════════════════════════════
+     1. HERO
+     ═══════════════════════════════════════════════════════════════ -->
 <section class="hiw-hero">
-  <div class="allybi-container allybi-reveal">
-    <span class="hiw-hero__eyebrow" data-i18n-key="hiw.hero_eyebrow">Product</span>
-    <h1 data-i18n-key="hiw.hero_h1">From source to response, without losing the thread.</h1>
-    <p data-i18n-key="hiw.hero_support">Bring in files and connected sources, ask naturally, compare versions, prepare the right response, and confirm before anything is sent.</p>
-    <div class="hiw-hero__ctas">
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
-      <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hiw.cta_integrations">See integrations</a>
+  <div class="allybi-container">
+    <div class="hiw-hero__inner hiw-reveal">
+      <span class="hiw-hero__eyebrow">Produto</span>
+      <h1>Pergunte, confirme e envie sem abrir tudo de novo.</h1>
+      <p class="hiw-hero__sub">Conecte fontes, suba arquivos e pergunte no chat. O Allybi responde com fonte, prepara e-mail ou WhatsApp e pede sua revisão antes de qualquer envio.</p>
+      <div class="hiw-hero__ctas">
+        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Começar grátis por 30 dias</a>
+        <a href="integrations.html" class="allybi-btn allybi-btn--secondary">Ver integrações</a>
+      </div>
+      <p class="hiw-hero__pricing">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+      <div class="hiw-hero__trust">
+        <span>Respostas com fonte</span>
+        <span>Nada enviado sem confirmação</span>
+        <span>WhatsApp sem caixa sincronizada</span>
+      </div>
+    </div>
+
+    <!-- Workflow preview rail -->
+    <div class="hiw-rail hiw-reveal" aria-hidden="true">
+      <div class="hiw-rail__step">
+        <span class="hiw-rail__label">Fontes conectadas</span>
+        <span class="hiw-rail__detail">Outlook · OneDrive · SharePoint · Uploads</span>
+      </div>
+      <span class="hiw-rail__arrow">&rarr;</span>
+      <div class="hiw-rail__step">
+        <span class="hiw-rail__label">Pergunta no chat</span>
+      </div>
+      <span class="hiw-rail__arrow">&rarr;</span>
+      <div class="hiw-rail__step hiw-rail__step--source">
+        <span class="hiw-rail__label">Resposta com fonte</span>
+      </div>
+      <span class="hiw-rail__arrow">&rarr;</span>
+      <div class="hiw-rail__step">
+        <span class="hiw-rail__label">Mensagem preparada</span>
+      </div>
+      <span class="hiw-rail__arrow">&rarr;</span>
+      <div class="hiw-rail__step hiw-rail__step--confirm">
+        <span class="hiw-rail__label">Revisão antes do envio</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- STEPS -->
-<section class="hiw-steps">
+<!-- ═══════════════════════════════════════════════════════════════
+     2. WORKFLOW — STICKY MOCKUP + STEPS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hiw-flow">
   <div class="allybi-container">
+    <div class="hiw-flow__header hiw-reveal">
+      <h2>Do pedido ao envio, em uma conversa com fonte.</h2>
+      <p>O Allybi não substitui sua revisão. Ele reduz o caminho até a resposta certa.</p>
+    </div>
 
-    <!-- Step 1 -->
-    <div class="hiw-step allybi-reveal">
-      <div class="hiw-step__text">
-        <div class="hiw-step__num">1</div>
-        <h3 data-i18n-key="hiw.s1_title">Bring in sources</h3>
-        <p data-i18n-key="hiw.s1_desc">Upload from your device or import directly from connected sources. Everything goes into your private workspace.</p>
-        <div class="hiw-step__tags">
-          <span class="hiw-step__tag">Outlook</span>
-          <span class="hiw-step__tag">OneDrive</span>
-          <span class="hiw-step__tag">SharePoint</span>
-          <span class="hiw-step__tag">Upload local</span>
-          <span class="hiw-step__tag hiw-step__tag--coming">Gmail — em breve</span>
-          <span class="hiw-step__tag hiw-step__tag--coming">Google Drive — em breve</span>
-        </div>
-      </div>
-      <div class="hiw-step__visual">
-        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
-        <div class="hiw-mock__body">
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">NDA_v3_final.pdf</span>
-            <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">SPA_Draft.docx</span>
-            <span class="hiw-step__tag" style="padding:8px 14px;font-size:12px;">Deck_Conselho_Q4.pptx</span>
+    <div class="hiw-flow__layout">
+      <!-- Left: steps -->
+      <div class="hiw-flow__steps">
+
+        <!-- Step 1 -->
+        <div class="hiw-flow__step hiw-reveal" data-step="1">
+          <div class="hiw-flow__step-num">1</div>
+          <h3>Conecte ou suba</h3>
+          <p>Conecte Outlook, OneDrive e SharePoint. Ou suba arquivos e pastas para usar no chat.</p>
+          <div class="hiw-flow__tags">
+            <span class="hiw-tag">Outlook</span>
+            <span class="hiw-tag">OneDrive</span>
+            <span class="hiw-tag">SharePoint</span>
+            <span class="hiw-tag">Uploads</span>
           </div>
-          <div style="margin-top:14px;padding:12px;background:var(--allybi-trust-subtle);border-radius:8px;font-size:12px;color:var(--allybi-trust);font-weight:500;" data-i18n-key="hiw.mock_imported">3 files imported from OneDrive</div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="hiw-flow__step hiw-reveal" data-step="2">
+          <div class="hiw-flow__step-num">2</div>
+          <h3>Pergunte no chat</h3>
+          <p>Pergunte como falaria com alguém do time. Sem comando técnico.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="hiw-flow__step hiw-reveal" data-step="3">
+          <div class="hiw-flow__step-num hiw-flow__step-num--source">3</div>
+          <h3>Receba com fonte</h3>
+          <p>O Allybi mostra a resposta e de onde ela veio: arquivo, página, seção, trecho ou data.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="hiw-flow__step hiw-reveal" data-step="4">
+          <div class="hiw-flow__step-num">4</div>
+          <h3>Compare e confirme</h3>
+          <p>Veja diferenças entre versões e confirme se o arquivo é o certo antes de usar.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="hiw-flow__step hiw-reveal" data-step="5">
+          <div class="hiw-flow__step-num">5</div>
+          <h3>Prepare a mensagem</h3>
+          <p>O Allybi monta um e-mail via Outlook ou uma mensagem para WhatsApp handoff, com contexto e arquivo certo.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="hiw-flow__step hiw-reveal" data-step="6">
+          <div class="hiw-flow__step-num hiw-flow__step-num--confirm">6</div>
+          <h3>Revise antes de enviar</h3>
+          <p>Você vê destinatário, mensagem, fonte e arquivo. Nada sai sem confirmação.</p>
+        </div>
+
+      </div>
+
+      <!-- Right: sticky mockup -->
+      <div class="hiw-flow__mockup-wrap">
+        <div class="hiw-flow__mockup" id="hiw-mockup">
+          <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
+          <div class="hiw-mock__body" id="hiw-mock-body">
+
+            <!-- State 1: Connect/Upload -->
+            <div class="hiw-mock__state is-active" data-mock="1">
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
+                <span class="hiw-tag" style="padding:8px 14px;font-size:12px;">Contrato_Anderson_v4.pdf</span>
+                <span class="hiw-tag" style="padding:8px 14px;font-size:12px;">Deck_Conselho_Q4.pptx</span>
+                <span class="hiw-tag" style="padding:8px 14px;font-size:12px;">Escopo_Cliente_Alfa_v2.docx</span>
+              </div>
+              <div class="hiw-mock__status hiw-mock__status--success">3 arquivos importados do OneDrive</div>
+            </div>
+
+            <!-- State 2: Ask -->
+            <div class="hiw-mock__state" data-mock="2">
+              <div class="hiw-mock__query">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>qual versão foi enviada ao cliente?</span>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+                <span class="hiw-mock__prompt-chip">Comparar versões</span>
+                <span class="hiw-mock__prompt-chip">Encontrar fonte</span>
+                <span class="hiw-mock__prompt-chip">Preparar e-mail</span>
+                <span class="hiw-mock__prompt-chip">Preparar WhatsApp</span>
+              </div>
+            </div>
+
+            <!-- State 3: Source answer -->
+            <div class="hiw-mock__state" data-mock="3">
+              <div class="hiw-mock__result">
+                <span class="hiw-mock__badge">Resposta com fonte</span>
+                <p style="margin:0 0 8px">A versão enviada foi <strong>Contrato_Anderson_v4.pdf</strong>.</p>
+                <span class="hiw-mock__source">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Fonte: Clientes / Contratos / 14 mar · p. 12
+                </span>
+              </div>
+            </div>
+
+            <!-- State 4: Compare -->
+            <div class="hiw-mock__state" data-mock="4">
+              <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;">Cláusula 8.1 — Indenização</div>
+              <div class="hiw-mock__diff">
+                O Fornecedor deverá indenizar o Cliente contra todas as reclamações decorrentes de <span class="hiw-mock__diff-removed">atos negligentes</span><span class="hiw-mock__diff-added">quaisquer atos ou omissões</span> relacionados aos Serviços, até o limite de <span class="hiw-mock__diff-removed">R$1M</span><span class="hiw-mock__diff-added">R$3M</span>.
+              </div>
+              <span class="hiw-mock__source" style="margin-top:12px;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Contrato v3 vs v4 — Cláusula 8.1
+              </span>
+            </div>
+
+            <!-- State 5: Prepare message -->
+            <div class="hiw-mock__state" data-mock="5">
+              <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;">Mensagem preparada</div>
+              <div style="display:flex;gap:8px;margin-bottom:12px;">
+                <span class="hiw-mock__channel-chip"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14"> E-mail via Outlook</span>
+                <span class="hiw-mock__channel-chip"><img src="assets/images/whatsapp-icon.svg" alt="" width="14" height="14"> WhatsApp handoff</span>
+              </div>
+              <div style="font-size:13px;color:var(--allybi-text-secondary);line-height:1.6;padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;margin-bottom:12px;">
+                "Olá, segue a versão confirmada do contrato com os termos de indenização atualizados. Por favor, revise a cláusula 8.1."
+              </div>
+              <div style="display:flex;gap:8px;">
+                <span class="hiw-tag" style="padding:5px 10px;font-size:11px;">Contrato_Anderson_v4.pdf</span>
+                <span class="hiw-tag" style="padding:5px 10px;font-size:11px;">via Outlook</span>
+              </div>
+            </div>
+
+            <!-- State 6: Review -->
+            <div class="hiw-mock__state" data-mock="6">
+              <div class="hiw-mock__confirm">
+                <div class="hiw-mock__confirm-label">Revisar antes de enviar</div>
+                <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:12px;">
+                  <strong style="color:var(--allybi-text-strongest)">Para:</strong> cliente@empresa.com.br<br>
+                  <strong style="color:var(--allybi-text-strongest)">Arquivo:</strong> Contrato_Anderson_v4.pdf<br>
+                  <strong style="color:var(--allybi-text-strongest)">Fonte:</strong> Clientes / Contratos / 14 mar<br>
+                  <strong style="color:var(--allybi-text-strongest)">Via:</strong> Outlook
+                </div>
+                <div class="hiw-mock__confirm-row">
+                  <span style="font-size:12px;color:var(--allybi-text-muted);">Cancelar</span>
+                  <span class="hiw-mock__confirm-btn">Confirmar envio</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Step 2 -->
-    <div class="hiw-step allybi-reveal">
-      <div class="hiw-step__text">
-        <div class="hiw-step__num">2</div>
-        <h3 data-i18n-key="hiw.s2_title">Perguntar no chat</h3>
-        <p data-i18n-key="hiw.s2_desc">Ask in plain language across all your connected sources. Allybi returns answers that cite the exact document, page, and section.</p>
-      </div>
-      <div class="hiw-step__visual">
-        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
-        <div class="hiw-mock__body">
-          <div class="hiw-mock__query">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <span data-i18n-key="hiw.mock_query">What are the non-compete terms?</span>
-          </div>
-          <div class="hiw-mock__result">
-            <span class="hiw-mock__badge" data-i18n-key="hiw.mock_badge">Answer with source</span>
-            <p style="margin:0 0 8px" data-i18n-key="hiw.mock_answer">Section 9.3: Contractor agrees not to engage in competing activities within a <strong>50-mile radius</strong> for <strong>24 months</strong> following termination.</p>
-            <span class="hiw-mock__source">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Contrato_Anderson_v4.pdf — p. 12
-            </span>
-          </div>
+<!-- ═══════════════════════════════════════════════════════════════
+     3. O QUE FICA SIMPLES POR FORA
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hiw-simple allybi-section" style="background:var(--allybi-bg-alt-1);">
+  <div class="allybi-container">
+    <div class="hiw-simple__header hiw-reveal">
+      <h2>O que fica simples por fora.</h2>
+      <p>Para o usuário, tudo vira quatro ações.</p>
+    </div>
+    <div class="hiw-simple__grid hiw-reveal">
+      <div class="hiw-simple__card">
+        <div class="hiw-simple__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
+        <h3>Conectar</h3>
+        <p>Outlook, OneDrive, SharePoint ou uploads.</p>
+      </div>
+      <div class="hiw-simple__card">
+        <div class="hiw-simple__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Perguntar</h3>
+        <p>Use linguagem normal no chat.</p>
+      </div>
+      <div class="hiw-simple__card hiw-simple__card--accent">
+        <div class="hiw-simple__icon hiw-simple__icon--source">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Confirmar</h3>
+        <p>Veja resposta, versão e fonte.</p>
+      </div>
+      <div class="hiw-simple__card">
+        <div class="hiw-simple__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </div>
+        <h3>Enviar</h3>
+        <p>Prepare e-mail ou WhatsApp e revise antes.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Step 3 -->
-    <div class="hiw-step allybi-reveal">
-      <div class="hiw-step__text">
-        <div class="hiw-step__num">3</div>
-        <h3 data-i18n-key="hiw.s3_title">Compare versions</h3>
-        <p data-i18n-key="hiw.s3_desc">See exactly what changed between document versions — highlighted, referenced, and cited. Use it for clauses, drafts, and attachments.</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     4. POR BAIXO, O FLUXO INTEIRO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hiw-power allybi-section">
+  <div class="allybi-container">
+    <div class="hiw-power__header hiw-reveal">
+      <h2>Por fora, uma pergunta. Por baixo, o fluxo inteiro.</h2>
+      <p>O Allybi conecta fontes, encontra contexto, compara versões e prepara a resposta sem tirar você do controle.</p>
+    </div>
+    <div class="hiw-power__grid hiw-reveal">
+      <div class="hiw-power__card">
+        <h3>Fontes conectadas</h3>
+        <p>E-mails, anexos, pastas e uploads no mesmo chat.</p>
       </div>
-      <div class="hiw-step__visual">
-        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
-        <div class="hiw-mock__body">
-          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;" data-i18n-key="hiw.mock_diff_title">Section 8.1 — Indemnification</div>
-          <div class="hiw-mock__diff" data-i18n-key="hiw.mock_diff_body">
-            The Supplier shall indemnify the Client against all claims arising from <span class="hiw-mock__diff-removed">negligent acts</span><span class="hiw-mock__diff-added">any acts or omissions</span> related to the Services, up to a cap of <span class="hiw-mock__diff-removed">R$1M</span><span class="hiw-mock__diff-added">R$3M</span>.
-          </div>
-          <span class="hiw-mock__source" style="margin-top:12px;" data-i18n-key="hiw.mock_diff_source">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Draft v2 vs v3 — Section 8.1
+      <div class="hiw-power__card">
+        <h3>Resposta com fonte</h3>
+        <p>A resposta aponta para arquivo, página, trecho ou data.</p>
+      </div>
+      <div class="hiw-power__card">
+        <h3>Versão e contexto</h3>
+        <p>Compare arquivos e entenda o que mudou antes de usar.</p>
+      </div>
+      <div class="hiw-power__card">
+        <h3>Envio com revisão</h3>
+        <p>Mensagem pronta, arquivo certo e confirmação antes de enviar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     5. SOURCE / ACTION TRUST
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hiw-trust" style="background:var(--allybi-bg-alt-1);border-top:1px solid var(--allybi-border-default);border-bottom:1px solid var(--allybi-border-default);">
+  <div class="allybi-container">
+    <div class="hiw-trust__inner hiw-reveal">
+      <div class="hiw-trust__group">
+        <span class="hiw-trust__label">Fontes</span>
+        <div class="hiw-trust__items">
+          <span><img src="assets/images/outlook-icon.svg" alt="" width="16" height="16"> Outlook</span>
+          <span><img src="assets/images/onedrive-icon.svg" alt="" width="16" height="16"> OneDrive</span>
+          <span><img src="assets/images/sharepoint-icon.svg" alt="" width="16" height="16"> SharePoint</span>
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Uploads
           </span>
         </div>
       </div>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="hiw-step allybi-reveal">
-      <div class="hiw-step__text">
-        <div class="hiw-step__num">4</div>
-        <h3 data-i18n-key="hiw.s4_title">Prepare the action</h3>
-        <p data-i18n-key="hiw.s4_desc">Choose the right file, prepare an email response, or select the right WhatsApp contact. Everything stays linked to the source.</p>
-      </div>
-      <div class="hiw-step__visual">
-        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
-        <div class="hiw-mock__body">
-          <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;" data-i18n-key="hiw.mock_prepare_title">Prepare send</div>
-          <div style="font-size:13px;color:var(--allybi-text-secondary);line-height:1.6;margin-bottom:12px;padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;" data-i18n-key="hiw.mock_prepare_body">
-            "Olá, segue a versão mais recente do SPA com os termos de indenização atualizados conforme discutido. Favor revisar a Seção 8.1."
-          </div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <span class="hiw-step__tag" style="padding:5px 10px;font-size:11px;">SPA_Draft_v3.pdf</span>
-            <span class="hiw-step__tag" style="padding:5px 10px;font-size:11px;">via Outlook</span>
-          </div>
+      <div class="hiw-trust__divider"></div>
+      <div class="hiw-trust__group">
+        <span class="hiw-trust__label">Envios</span>
+        <div class="hiw-trust__items">
+          <span><img src="assets/images/outlook-icon.svg" alt="" width="16" height="16"> E-mail via Outlook</span>
+          <span><img src="assets/images/whatsapp-icon.svg" alt="" width="16" height="16"> WhatsApp handoff</span>
         </div>
       </div>
     </div>
-
-    <!-- Step 5 -->
-    <div class="hiw-step allybi-reveal">
-      <div class="hiw-step__text">
-        <div class="hiw-step__num">5</div>
-        <h3 data-i18n-key="hiw.s5_title">Confirm before send</h3>
-        <p data-i18n-key="hiw.s5_desc">Nothing leaves without your review. You see the recipient, file, version, and message before confirming. This is not optional.</p>
-      </div>
-      <div class="hiw-step__visual">
-        <div class="hiw-mock__chrome"><span></span><span></span><span></span></div>
-        <div class="hiw-mock__body">
-          <div class="hiw-mock__confirm">
-            <div class="hiw-mock__confirm-label" data-i18n-key="hiw.mock_confirm_label">Review before sending</div>
-            <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:12px;" data-i18n-key="hiw.mock_confirm_details">
-              <strong style="color:var(--allybi-text-strongest)">To:</strong> cliente@empresa.com.br<br>
-              <strong style="color:var(--allybi-text-strongest)">File:</strong> SPA_Draft_v3.pdf (v3, Oct 12)<br>
-              <strong style="color:var(--allybi-text-strongest)">Via:</strong> Outlook
-            </div>
-            <div class="hiw-mock__confirm-row">
-              <span style="font-size:12px;color:var(--allybi-text-muted);cursor:pointer;" data-i18n-key="hiw.mock_cancel">Cancel</span>
-              <span class="hiw-mock__confirm-btn" data-i18n-key="hiw.mock_confirm_btn">Confirm &amp; Send</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- WHERE THIS HAPPENS -->
-<div class="hiw-strip">
-  <div class="allybi-container">
-    <div class="hiw-strip__inner allybi-reveal">
-      <div class="hiw-strip__item">
-        <div class="hiw-strip__icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-        </div>
-        <span class="hiw-strip__label" data-i18n-key="hiw.strip_upload">Upload</span>
-      </div>
-      <div class="hiw-strip__item">
-        <div class="hiw-strip__icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
-        <span class="hiw-strip__label" data-i18n-key="hiw.strip_ask">Chat</span>
-      </div>
-      <div class="hiw-strip__item">
-        <div class="hiw-strip__icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
-        </div>
-        <span class="hiw-strip__label" data-i18n-key="hiw.strip_integrations">Integrações</span>
-      </div>
-      <div class="hiw-strip__item">
-        <div class="hiw-strip__icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <span class="hiw-strip__label" data-i18n-key="hiw.strip_review">Revisar antes de enviar</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FINAL CTA -->
+<!-- ═══════════════════════════════════════════════════════════════
+     6. FINAL CTA
+     ═══════════════════════════════════════════════════════════════ -->
 <section class="hiw-cta">
-  <div class="allybi-container allybi-reveal">
-    <h2 data-i18n-key="hiw.cta_title">Veja uma resposta com fonte em minutos.</h2>
-    <p data-i18n-key="hiw.cta_subtitle">Conecte uma fonte ou suba um arquivo. Faça uma pergunta e revise antes de enviar.</p>
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
+  <div class="allybi-container hiw-reveal">
+    <h2>Faça o primeiro fluxo completo em minutos.</h2>
+    <p>Conecte uma fonte ou suba um arquivo. Pergunte no chat, receba com fonte e revise antes de enviar.</p>
+    <div class="hiw-cta__btns">
+      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="hero.cta_primary">Começar grátis por 30 dias</a>
+      <a href="integrations.html" class="allybi-btn allybi-btn--secondary-inverse">Ver integrações</a>
+    </div>
   </div>
 </section>
 
@@ -346,7 +484,6 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
@@ -370,9 +507,59 @@
   </div>
 </footer>
 
-
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script>
+/* ── Sticky mockup state switching ── */
+(function(){
+  var mockup = document.getElementById('hiw-mockup');
+  if (!mockup) return;
+  var steps = document.querySelectorAll('.hiw-flow__step');
+  var states = document.querySelectorAll('.hiw-mock__state');
+  var current = 1;
+
+  function showState(n) {
+    if (n === current) return;
+    current = n;
+    states.forEach(function(s) {
+      var isTarget = parseInt(s.getAttribute('data-mock')) === n;
+      s.classList.toggle('is-active', isTarget);
+    });
+  }
+
+  if (window.matchMedia('(max-width: 1024px)').matches) return;
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+        var step = parseInt(entry.target.getAttribute('data-step'));
+        if (step) showState(step);
+      }
+    });
+  }, { threshold: [0.4], rootMargin: '-20% 0px -30% 0px' });
+
+  steps.forEach(function(s) { observer.observe(s); });
+})();
+
+/* ── Scroll reveal ── */
+(function(){
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.hiw-reveal');
+  if (prefersReduced) {
+    els.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'none'; });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function(el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>

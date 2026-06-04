@@ -35,20 +35,20 @@
   };
   const HOME_META = {
     en: {
-      title: 'Allybi — 6 places. One message. The right answer, with sources.',
-      description: 'Connect sources, upload documents, and ask in chat. Allybi finds source-cited answers and prepares the handoff. 30 days free.',
-      ogTitle: 'Allybi — 6 places. One message. The right answer, with sources.',
-      ogDescription: 'Connect sources, upload documents, and ask in chat. Allybi finds, compares, cites the source, and prepares the handoff — always with your confirmation.',
-      twitterTitle: 'Allybi — 6 places. One message. The right answer, with sources.',
-      twitterDescription: 'Connect sources, upload documents, and ask in chat. Source-cited answers. 30 days free.'
+      title: 'Allybi — find answers with source and send with confirmation',
+      description: 'Connect Outlook, OneDrive, SharePoint and uploads. Ask in chat, get source-cited answers, and prepare email or WhatsApp with confirmation.',
+      ogTitle: 'Allybi — source-cited answers, ready to send',
+      ogDescription: 'A chat for finding, confirming, and sending the right document.',
+      twitterTitle: 'Allybi — source-cited answers, ready to send',
+      twitterDescription: 'Connect sources, ask in chat, get answers with source. Prepare email or WhatsApp with confirmation.'
     },
     pt: {
-      title: 'Allybi — 6 lugares. 1 mensagem. A resposta certa, com fonte.',
-      description: 'Conecte fontes, suba documentos e pergunte no chat. O Allybi encontra respostas com fonte e prepara o envio. 30 dias grátis, depois R$170/mês.',
-      ogTitle: 'Allybi — 6 lugares. 1 mensagem. A resposta certa, com fonte.',
-      ogDescription: 'Conecte fontes, suba documentos e pergunte no chat. O Allybi encontra, compara, mostra a fonte e prepara o envio — sempre com sua confirmação.',
-      twitterTitle: 'Allybi — 6 lugares. 1 mensagem. A resposta certa, com fonte.',
-      twitterDescription: 'Conecte fontes, suba documentos e pergunte no chat. Respostas com fonte. 30 dias grátis.'
+      title: 'Allybi — encontre respostas com fonte e envie com confirmação',
+      description: 'Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, receba resposta com fonte e prepare e-mail ou WhatsApp com confirmação.',
+      ogTitle: 'Allybi — resposta com fonte, pronta para enviar',
+      ogDescription: 'Um chat para encontrar, confirmar e enviar o documento certo.',
+      twitterTitle: 'Allybi — resposta com fonte, pronta para enviar',
+      twitterDescription: 'Conecte fontes, pergunte no chat e receba respostas com fonte. 30 dias grátis.'
     }
   };
 
