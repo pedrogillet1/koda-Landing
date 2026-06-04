@@ -152,10 +152,10 @@
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
         <div class="nav-dropdown-menu">
-          <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
-          <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
           <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
+          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
+          <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
+          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
         </div>
       </div>
       <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
@@ -191,10 +191,10 @@
     <div class="mobile-dropdown">
       <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
       <div class="mobile-dropdown-items">
-        <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
-        <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
         <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
+        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
+        <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
+        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
       </div>
     </div>
     <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
@@ -237,21 +237,14 @@
               <span class="diag-flow__arrow">&rarr;</span>
             </div>
             <div class="diag-flow__node">
-              <span class="diag-flow__label diag-flow__label--uncertain">Vers&atilde;o</span>
-              <span class="diag-flow__arrow">&rarr;</span>
-            </div>
-            <div class="diag-flow__node">
-              <span class="diag-flow__label diag-flow__label--uncertain">Fonte</span>
-              <span class="diag-flow__arrow">&rarr;</span>
-            </div>
-            <div class="diag-flow__node">
-              <span class="diag-flow__label">Resposta</span>
+              <span class="diag-flow__label diag-flow__label--uncertain">Confirma&ccedil;&atilde;o</span>
               <span class="diag-flow__arrow">&rarr;</span>
             </div>
             <div class="diag-flow__node">
               <span class="diag-flow__label">Envio</span>
             </div>
           </div>
+          <p style="font-size:12px;color:#92400E;margin-top:12px;text-align:center">Vers&atilde;o? Fonte? Quem confirmou?</p>
         </div>
       </div>
     </div>
@@ -290,21 +283,22 @@
 
     <div class="diag-insights" id="diag-insights">
       <div class="diag-insight">
-        <div class="diag-insight__title">Onde trava mais</div>
-        <div class="diag-insight__text" id="diag-insight-1"></div>
+        <div class="diag-insight__title" id="diag-card1-value" style="font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.02em"></div>
+        <div class="diag-insight__text">Atrito no fluxo</div>
+      </div>
+      <div class="diag-insight" style="border-color:#F59E0B">
+        <div class="diag-insight__title" id="diag-card2-value"></div>
+        <div class="diag-insight__text">Maior gargalo</div>
       </div>
       <div class="diag-insight">
-        <div class="diag-insight__title">O risco invis&iacute;vel</div>
-        <div class="diag-insight__text" id="diag-insight-2"></div>
-      </div>
-      <div class="diag-insight">
-        <div class="diag-insight__title">Como o Allybi resolve</div>
-        <div class="diag-insight__text" id="diag-insight-3"></div>
+        <div class="diag-insight__title" id="diag-card3-value"></div>
+        <div class="diag-insight__text">O que o Allybi faria</div>
       </div>
     </div>
+    <p style="text-align:center;font-size:14px;color:var(--allybi-text-secondary,#6B7280);max-width:560px;margin:0 auto 40px" id="diag-detail-text"></p>
 
     <div class="diag-share">
-      <div class="diag-share__text">Fizemos um diagn&oacute;stico r&aacute;pido do fluxo de documentos.</div>
+      <div class="diag-share__text">Compartilhar resultado</div>
       <div class="diag-share__url">allybi.com.br/diagnostico.html</div>
       <div class="diag-share__btns">
         <button class="diag-share__btn" onclick="navigator.clipboard.writeText('https://allybi.com.br/diagnostico.html').then(function(){alert('Link copiado!')})">Copiar link</button>
@@ -332,7 +326,7 @@
       </div>
       <div class="diag-form__field">
         <label for="diag-email">E-mail corporativo</label>
-        <input type="email" id="diag-email" placeholder="voce@empresa.com">
+        <input type="email" id="diag-email" placeholder="você@empresa.com">
       </div>
       <div class="diag-form__field">
         <label for="diag-area">&Aacute;rea</label>
@@ -414,10 +408,8 @@
       <div class="footer-col">
         <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
         <div class="footer-col-links">
-          <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
-          <a href="raio-x.html" data-i18n-key="footer.rayox">X-Ray Diagnostic</a>
           <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="finais.html" data-i18n-key="footer.cemetery">Final Files Cemetery</a>
+          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
           <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
         </div>
@@ -445,7 +437,7 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
+      <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
@@ -490,14 +482,13 @@
     },
     {
       q: 'Onde o time normalmente procura primeiro?',
-      opts: ['E-mail', 'OneDrive', 'SharePoint', 'Drive', 'WhatsApp', 'Pasta local', 'Pergunta para algu\u00e9m', 'V\u00e1rios lugares ao mesmo tempo'],
+      opts: ['E-mail', 'OneDrive', 'SharePoint', 'Pasta local', 'WhatsApp', 'Pergunta para algu\u00e9m', 'V\u00e1rios lugares ao mesmo tempo'],
       weights: [
         [3, 2, 1, 2, 1],
         [1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1],
-        [2, 1, 1, 1, 1],
-        [4, 2, 2, 3, 3],
         [3, 3, 1, 2, 1],
+        [4, 2, 2, 3, 3],
         [2, 2, 3, 2, 5],
         [5, 3, 2, 3, 2]
       ]
@@ -690,37 +681,16 @@
     document.getElementById('diag-score-label').textContent = 'Seu time marcou ' + overall + '/100 em atrito no fluxo.';
     document.getElementById('diag-badge').innerHTML = '<span class="diag-result__badge ' + badgeClass + '">' + band + '</span>';
 
-    // Insights
-    var dimNames = ['fontes espalhadas', 'vers\u00e3o fr\u00e1gil', 'aprova\u00e7\u00e3o invis\u00edvel', 'envio manual', 'depend\u00eancia humana'];
+    // Populate result cards
+    var dimLabels = ['Fontes espalhadas', 'Vers\u00e3o fr\u00e1gil', 'Fonte invis\u00edvel', 'Envio manual', 'Confirma\u00e7\u00e3o demais'];
+    var allybiActions = ['Resposta com fonte', 'Vers\u00e3o confirmada', 'Mensagem preparada', 'Envio com revis\u00e3o', 'Menos ida e volta'];
     var dimSorted = normalised.map(function(v, i) { return { v: v, i: i }; }).sort(function(a, b) { return b.v - a.v; });
-
     var topDim = dimSorted[0];
-    var insightTexts1 = [
-      'O time gasta mais tempo procurando o arquivo em fontes diferentes. A busca \u00e9 o maior gargalo.',
-      'A confirma\u00e7\u00e3o de vers\u00e3o \u00e9 o ponto mais fr\u00e1gil. O time n\u00e3o tem um padr\u00e3o claro para saber se o arquivo \u00e9 o certo.',
-      'A aprova\u00e7\u00e3o \u00e9 invis\u00edvel: n\u00e3o h\u00e1 registro claro de quem autorizou ou confirmou o documento.',
-      'O envio ainda depende de montar a resposta manualmente, com risco de erro no anexo ou destinat\u00e1rio.',
-      'O fluxo depende de pessoas espec\u00edficas. Se algu\u00e9m sai ou est\u00e1 indispon\u00edvel, o processo trava.'
-    ];
-    document.getElementById('diag-insight-1').textContent = insightTexts1[topDim.i];
 
-    var riskTexts = [
-      'Quando as fontes est\u00e3o espalhadas, a chance de enviar o arquivo errado aumenta com cada lugar extra que o time precisa consultar.',
-      'Uma vers\u00e3o errada enviada pode gerar retrabalho, exposi\u00e7\u00e3o jur\u00eddica ou perda de confian\u00e7a do cliente.',
-      'Sem registro de aprova\u00e7\u00e3o, qualquer envio pode ser questionado depois \u2014 e n\u00e3o h\u00e1 como provar quem confirmou.',
-      'O envio manual multiplica o risco: anexo trocado, destinat\u00e1rio errado, dados desatualizados.',
-      'A depend\u00eancia de uma pessoa cria um ponto \u00fanico de falha. Se essa pessoa n\u00e3o estiver dispon\u00edvel, o time para.'
-    ];
-    document.getElementById('diag-insight-2').textContent = riskTexts[topDim.i];
-
-    var solveTexts = [
-      'O Allybi conecta todas as fontes em um s\u00f3 lugar. O time pergunta em linguagem natural e recebe a resposta com fonte.',
-      'O Allybi identifica a vers\u00e3o mais recente e mostra exatamente de onde veio, com refer\u00eancia ao arquivo e p\u00e1gina.',
-      'O Allybi registra a fonte de cada resposta. Toda a\u00e7\u00e3o tem rastreabilidade, sem depender de e-mails avulsos.',
-      'O Allybi prepara o envio com arquivo, destinat\u00e1rio e mensagem \u2014 e pede confirma\u00e7\u00e3o antes de enviar.',
-      'O Allybi elimina a depend\u00eancia de pessoas. Qualquer membro do time pode encontrar, confirmar e enviar com seguran\u00e7a.'
-    ];
-    document.getElementById('diag-insight-3').textContent = solveTexts[topDim.i];
+    document.getElementById('diag-card1-value').textContent = overall + '/100';
+    document.getElementById('diag-card2-value').textContent = dimLabels[topDim.i];
+    document.getElementById('diag-card3-value').textContent = allybiActions[topDim.i];
+    document.getElementById('diag-detail-text').textContent = 'Isso aparece quando o time encontra informa\u00e7\u00e3o, mas ainda precisa confirmar vers\u00e3o, fonte e contexto antes de enviar.';
   }
 
   // Lead form toggle

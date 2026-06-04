@@ -61,10 +61,10 @@
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
         <div class="nav-dropdown-menu">
-          <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
-          <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
           <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
+          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
+          <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
+          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
         </div>
       </div>
       <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
@@ -100,10 +100,10 @@
     <div class="mobile-dropdown">
       <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
       <div class="mobile-dropdown-items">
-        <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
-        <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
         <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
+        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
+        <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
+        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
       </div>
     </div>
     <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
@@ -150,7 +150,7 @@
       <h3>2.1 Information You Provide Directly</h3>
       <p><strong>Account Information:</strong> When you create an Allybi account, we collect information necessary to establish and maintain your account, including your full name, email address, phone number (if provided), and password. If you subscribe to a paid plan, we also collect billing information such as your payment method details, billing address, and transaction history. This information is essential for account authentication, service provision, and billing purposes.</p>
       <p><strong>Profile Information:</strong> You may choose to provide additional profile information to enhance your experience with our Service, such as a profile picture, job title, organization name, and preferences for notifications and Service features. This information helps personalize your experience and facilitates collaboration with other users when you choose to share documents or insights.</p>
-      <p><strong>User Content and Documents:</strong> Our Service is designed to help you manage, organize, and analyze your documents and files. When you upload, create, or store content through our Service ("Your Content"), we collect and store this information to provide our core functionality. This includes documents in various formats (PDF, Word, Excel, PowerPoint, images, and others), any text or data you input into our Service, comments and annotations you make on documents, and metadata associated with your files such as creation dates, file sizes, and modification history. Allybi processes the documents, files, prompts, and outputs you provide or import so we can deliver the Service, including search, retrieval, summarization, comparison, source-grounded answers, response preparation, and review-before-send workflows.</p>
+      <p><strong>User Content and Documents:</strong> Our Service is designed to help you manage, organize, and analyze your documents and files. When you upload, create, or store content through our Service ("Your Content"), we collect and store this information to provide our core functionality. This includes documents in various formats (PDF, Word, Excel, PowerPoint, images, and others), any text or data you input into our Service, comments and annotations you make on documents, and metadata associated with your files such as creation dates, file sizes, and modification history. Allybi processes the documents, files, prompts, and outputs you provide or import so we can deliver the Service, including search, retrieval, summarization, comparison, source-cited answers, response preparation, and review-before-send workflows.</p>
       <p><strong>Communications:</strong> When you contact us for support, provide feedback, or communicate with us through any channel, we collect the information you provide in these communications, including your contact details, the content of your messages, and any attachments you send. We use this information to respond to your inquiries, provide support, and improve our Service.</p>
 
       <h3>2.2 Information We Collect Automatically</h3>
@@ -183,7 +183,7 @@
         <li>If applicable, calendar metadata used for productivity and scheduling features</li>
         <li>We maintain strict data minimization practices and only access data necessary for the requested integration features.</li>
       </ul>
-      <p><strong>OneDrive Integration Data:</strong> When you connect OneDrive, Allybi may access selected files, folders, and file metadata so you can import them into Upload or Ask.</p>
+      <p><strong>OneDrive Integration Data:</strong> When you connect OneDrive, Allybi may access selected files, folders, and file metadata so you can import them into the chat.</p>
       <p><strong>SharePoint Integration Data:</strong> When you connect SharePoint, Allybi may access selected sites, libraries, folders, and files you are authorized to use.</p>
       <p><strong>WhatsApp Handoff and Contacts:</strong> Allybi's WhatsApp workflow prepares a message for user review and handoff. Allybi may store contact name, nickname, phone number, optional email, message draft, and selected files or references. Allybi does not automatically send WhatsApp messages. You review before opening WhatsApp. WhatsApp is not a full synced inbox integration.</p>
       <p><strong>Integration Authentication Tokens:</strong> To maintain the connection between Allybi and third-party services, we store and use OAuth tokens and refresh tokens. These tokens allow Allybi to access your authorized data on your behalf. You can revoke access at any time by disconnecting the integration through your Allybi account settings, which will prevent further data access and syncing.</p>
@@ -434,7 +434,7 @@
       <h2 id="section-15">15. Google API Services User Data Disclosure</h2>
       <p>Allybi uses Google API Services only when a user chooses to connect a Google account or use a Google-powered feature. Gmail and Google Drive are currently marked as coming soon and are not treated as live integrations unless enabled in your workspace.</p>
       <p>When enabled, Allybi may access: name, email, profile identifier (Google Sign-In); email headers, selected threads, message content, attachments, labels (Gmail); file/folder metadata, selected files, file content (Google Drive).</p>
-      <p>Allybi uses Google data to: authenticate users, let users search and import selected content, generate source-grounded answers, prepare user-reviewed drafts, maintain security and audit logs.</p>
+      <p>Allybi uses Google data to: authenticate users, let users search and import selected content, generate source-cited answers, prepare user-reviewed drafts, maintain security and audit logs.</p>
       <p>Allybi does not: sell Google user data, use it for advertising, use it for creditworthiness decisions, use it to train general AI models unless explicitly agreed in writing, allow humans to read it except for user-approved support, security, legal compliance, or aggregated operations.</p>
       <p>OAuth tokens are encrypted at rest. Imported content may be stored to provide the workspace. Users can delete imported content. Disconnecting stops new access; imported content remains until deleted or retention rules apply.</p>
       <p>Allybi shares Google user data only with subprocessors needed to provide the service, for security, legal compliance, or as permitted by the Google API Services User Data Policy.</p>
@@ -479,10 +479,8 @@
       <div class="footer-col">
         <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
         <div class="footer-col-links">
-          <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
-          <a href="raio-x.html" data-i18n-key="footer.rayox">X-Ray Diagnostic</a>
           <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="finais.html" data-i18n-key="footer.cemetery">Final Files Cemetery</a>
+          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
           <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
         </div>
@@ -510,7 +508,7 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
+      <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>

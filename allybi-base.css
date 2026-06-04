@@ -281,6 +281,13 @@ ol {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-balance { text-wrap: balance; }
+.no-break { white-space: nowrap; }
+.hero-title-wrap {
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
 
 /* ---------- Gradient text ---------- */
 .allybi-gradient-text {

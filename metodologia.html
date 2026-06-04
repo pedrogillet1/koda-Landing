@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Metodologia — Índice Allybi da Calculadora e Diagnóstico</title>
-  <meta name="description" content="Como calculamos a Calculadora e Diagnóstico. Fontes, formulas, faixas, privacidade e criterios de amostra.">
+  <meta name="description" content="Como calculamos a Calculadora e o Diagnóstico. Fontes, fórmulas, faixas, privacidade e critérios de amostra.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -111,12 +111,38 @@
       font-family: 'SF Mono', 'Fira Code', monospace;
       font-size: 13px;
     }
+    .met-card .met-flow {
+      padding: 16px 20px;
+      background: var(--allybi-bg-alt-1, #f5f5f5);
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--allybi-text-strongest);
+      margin: 12px 0;
+      text-align: center;
+      line-height: 1.8;
+    }
 
     .met-microcopy {
       font-size: 12px !important;
       color: var(--allybi-text-muted) !important;
       font-style: italic;
       margin-top: 8px;
+    }
+
+    .met-inline-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    @media (min-width: 769px) {
+      .met-inline-ctas { margin-top: 40px; }
+    }
+    @media (max-width: 768px) {
+      .met-inline-ctas { margin-top: 28px; }
+    }
+    @media (max-width: 480px) {
+      .met-inline-ctas { flex-direction: column; align-items: stretch; text-align: center; }
     }
 
     .met-cta-section { padding: var(--allybi-section-py) 0; text-align: center; }
@@ -157,18 +183,18 @@
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
         <div class="nav-dropdown-menu">
-          <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
-          <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
           <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
+          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
+          <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
+          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
         </div>
       </div>
       <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
       <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
     <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+      <a href="https://app.allybi.com.br/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
     </div>
     <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -196,10 +222,10 @@
     <div class="mobile-dropdown">
       <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
       <div class="mobile-dropdown-items">
-        <a href="busca-manual.html" data-i18n-key="nav.busca_manual">Manual Search</a>
-        <a href="raio-x.html" data-i18n-key="nav.rayox">X-Ray Diagnostic</a>
         <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="finais.html" data-i18n-key="nav.cemetery">Final Files Cemetery</a>
+        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
+        <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
+        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
       </div>
     </div>
     <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
@@ -207,11 +233,10 @@
     <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
   </nav>
   <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
+    <a href="https://app.allybi.com.br/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
   </div>
 </div>
-
 
 
 <main>
@@ -219,8 +244,8 @@
 <!-- HERO -->
 <section class="met-hero">
   <div class="allybi-container">
-    <h1>Como calculamos a Calculadora e Diagnóstico</h1>
-    <p>A metodologia é simples: medimos onde a informação se espalha, onde a confiança quebra e quanto tempo o time perde.</p>
+    <h1>Como calculamos a Calculadora<br>e o Diagnóstico do Fluxo</h1>
+    <p>A metodologia é simples: estimamos tempo perdido individual e atrito do time entre pedir, encontrar, confirmar e enviar.</p>
   </div>
 </section>
 
@@ -228,7 +253,7 @@
 <section class="met-intro">
   <div class="allybi-container">
     <h2>Por que isso existe?</h2>
-    <p>Toda empresa tem um custo invisível: o tempo que o time gasta procurando informação que já existe em algum lugar. Ninguem mede isso porque não aparece em nenhum relatório. O Diagnóstico, a Calculadora e o Diagnóstico existem para tornar esse custo visivel -- sem pedir documentos, sem login, sem dados sensiveis. Apenas perguntas simples sobre o fluxo de trabalho.</p>
+    <p>Toda equipe tem informação espalhada. O custo aparece quando alguém precisa procurar, confirmar versão, encontrar fonte, preparar resposta e enviar sem erro. A Calculadora e o Diagnóstico tornam esse custo visível sem pedir documentos, login ou dados sensíveis.</p>
   </div>
 </section>
 
@@ -240,96 +265,76 @@
     <div class="met-card">
       <h2>O que medimos</h2>
       <ul>
-        <li>Quantidade de fontes abertas ao mesmo tempo (Drive, e-mail, pastas, Slack, WhatsApp)</li>
-        <li>Tempo médio para encontrar um arquivo ou informação especifica</li>
-        <li>Frequencia de dúvida sobre versão ("e o arquivo certo?")</li>
-        <li>Necessidade de procurar a fonte original (quem aprovou, onde esta a referencia)</li>
-        <li>Esforco de preparacao e envio (montar, conferir e mandar sem errar)</li>
-        <li>Retrabalho causado por versão errada ou informação desatualizada</li>
+        <li>Quantidade de lugares abertos para encontrar informação.</li>
+        <li>Tempo médio para achar ou confirmar um arquivo.</li>
+        <li>Dúvida sobre versão correta.</li>
+        <li>Procura por fonte, aprovação ou contexto.</li>
+        <li>Esforço de preparar resposta e envio.</li>
+        <li>Retrabalho causado por versão errada ou informação desatualizada.</li>
       </ul>
+      <p>Fontes consideradas: Outlook, OneDrive, SharePoint, uploads, e-mails, anexos e pastas.</p>
     </div>
 
     <!-- 2. O que não pedimos -->
     <div class="met-card">
       <h2>O que não pedimos</h2>
       <ul>
-        <li>Documentos reais ou arquivos do workspace</li>
-        <li>Nomes de clientes, projetos ou fornecedores</li>
-        <li>Dados sensiveis ou confidenciais</li>
-        <li>CPFs, CNPJs, valores financeiros ou contratos</li>
-        <li>Acesso ao Google Drive, Slack, e-mail ou qualquer ferramenta</li>
-        <li>Login, cadastro ou identificacao pessoal para responder</li>
+        <li>Documentos reais.</li>
+        <li>Nomes de clientes.</li>
+        <li>CPFs, CNPJs ou dados sensíveis.</li>
+        <li>Valores financeiros reais.</li>
+        <li>Acesso a ferramentas.</li>
+        <li>Login para responder.</li>
       </ul>
     </div>
 
-    <!-- 3. Como o Diagnóstico funciona -->
-    <div class="met-card">
-      <h2>Como o Diagnóstico funciona</h2>
-      <p>O Diagnóstico da Calculadora e Diagnóstico e um questionario de 10 perguntas sobre o fluxo de busca, confirmação e envio de informação. Cada resposta usa uma escala de 1 a 5.</p>
-      <p>O score final e calculado com normalizacao min-max:</p>
-      <div class="met-formula">score = ((total - min) / (max - min)) x 100</div>
-      <p>Faixas de resultado:</p>
-      <ul class="met-bands">
-        <li>0-25: Sob controle -- fluxo organizado</li>
-        <li>26-50: Alerta leve -- sinais de dispersao</li>
-        <li>51-75: Critico -- busca manual constante</li>
-        <li>76-100: Emergencia -- dependencia total de busca manual</li>
-      </ul>
-      <p>Quanto mais alto o score, maior a dependencia de busca manual no dia a dia.</p>
-    </div>
-
-    <!-- 4. Como a Calculadora funciona -->
+    <!-- 3. Como a Calculadora funciona -->
     <div class="met-card">
       <h2>Como a Calculadora funciona</h2>
-      <p>A Calculadora do Tempo Perdido estima quantas horas por mês o time perde em busca manual. O cálculo combina quatro componentes informados pelo participante:</p>
-      <div class="met-formula">horas/mês = busca + reenvio + confirmação + retrabalho</div>
-      <p>Cada componente e estimado a partir de frequencia semanal e duracao media por ocorrencia. O resultado mostra o tempo mensal invisível gasto procurando, confirmando e reenviando informação que já existe em algum lugar.</p>
+      <p>A Calculadora estima tempo perdido individual. Ela combina frequência semanal, tempo médio por busca, etapas extras depois de encontrar o arquivo e retrabalho.</p>
+      <div class="met-formula">tempo mensal = (busca + confirmação + retrabalho + preparação) × 4,33 semanas</div>
+      <p>É uma estimativa conservadora, não uma auditoria financeira.</p>
     </div>
 
-    <!-- 5. Como o Diagnóstico funciona -->
+    <!-- 4. Como o Diagnóstico do Fluxo funciona -->
     <div class="met-card">
-      <h2>Como o Diagnóstico funciona</h2>
-      <p>O Diagnóstico do Fluxo e um construtor de nomes de arquivo absurdos. O participante monta o nome usando chips pre-definidos ou digita livremente, e a comunidade vota nos piores.</p>
-      <p>O risco de versão e calculado com base na quantidade de sufixos acumulados:</p>
-      <div class="met-formula">risco = (sufixos acumulados / maximo possível) x 100</div>
-      <p>Nenhum dado sensível e coletado. Nomes criados não contem informacoes reais de clientes, projetos ou valores.</p>
+      <h2>Como o Diagnóstico do Fluxo funciona</h2>
+      <p>O Diagnóstico mede onde o time perde certeza entre pedido e envio. Cada resposta alimenta dimensões de atrito: fontes espalhadas, versão frágil, fonte/aprovação invisível, envio manual e dependência de confirmação.</p>
+      <p>Faixas de resultado:</p>
+      <ul class="met-bands">
+        <li>0–25: Fluxo claro</li>
+        <li>26–50: Fluxo parcialmente manual</li>
+        <li>51–75: Fluxo com alto atrito</li>
+        <li>76–100: Fluxo dependente de confirmação manual</li>
+      </ul>
     </div>
 
-    <!-- 6. Regra de amostra mínima -->
+    <!-- 5. Como o Índice Allybi funciona -->
     <div class="met-card">
-      <h2>Regra de amostra mínima</h2>
-      <p>O Índice Allybi so publica dados quando a amostra mínima de 30 respostas e atingida. Até la, cada indicador mostra "Em coleta".</p>
-      <p>Esse limite existe para evitar que poucas respostas distorcam os resultados. Com 30 respostas, a media e o desvio padrão comecam a ter significancia estatistica suficiente para mostrar padroes reais.</p>
-      <p>Nenhum dado individual e publicado. Apenas medias, distribuicoes e rankings agregados aparecem no Índice.</p>
+      <h2>Como o Índice Allybi funciona</h2>
+      <p>O Índice mostra apenas dados agregados dos diagnósticos. Se a amostra for pequena, mostramos "Em coleta" em vez de inventar números.</p>
+      <p>30 respostas é a amostra mínima que usamos para evitar mostrar padrões com base em poucos casos. O Índice não é pesquisa nacional nem auditoria estatística.</p>
     </div>
 
-    <!-- 7. Privacidade e LGPD -->
+    <!-- 6. Privacidade e LGPD -->
     <div class="met-card">
       <h2>Privacidade e LGPD</h2>
-      <p>A LGPD e a Lei n. 13.709/2018. Segundo a lei, dados anonimizados nao sao considerados dados pessoais quando nao permitem identificacao do titular, direta ou indiretamente, considerando os meios razoaveis disponiveis.</p>
-      <p>As ferramentas do Índice Allybi (Diagnóstico, Calculadora e Diagnóstico) nao coletam documentos, nomes de clientes, CPFs, CNPJs ou qualquer dado que permita identificacao. Nao exigem login. Nao acessam ferramentas do participante.</p>
-      <p>Os dados sao armazenados de forma agregada. Nenhuma resposta individual e exibida ou identificavel no Índice.</p>
-      <p class="met-microcopy">Esta é uma explicacao de privacidade, nao aconselhamento juridico. Para duvidas sobre a LGPD, consulte um advogado.</p>
+      <p>A LGPD é a Lei nº 13.709/2018. Dados anonimizados não são considerados dados pessoais quando não permitem identificação razoável do titular. Mesmo assim, a Allybi evita coletar documentos, nomes de clientes e dados sensíveis nessas ferramentas.</p>
+      <p class="met-microcopy">Isso é uma explicação de privacidade, não aconselhamento jurídico.</p>
     </div>
 
-    <!-- 8. Como o Allybi entra -->
+    <!-- 7. Como o Allybi entra -->
     <div class="met-card">
       <h2>Como o Allybi entra</h2>
-      <p>A busca manual e o problema. O Allybi e o produto que resolve.</p>
-      <p>Com o Allybi, o time conecta suas fontes (Drive, e-mail, uploads), pergunta no chat e recebe a resposta com o arquivo certo e a fonte original. Sem procurar em 5 abas. Sem perguntar "qual e a versão certa?" no grupo. Sem reenviar porque mandou o errado.</p>
-      <p>As ferramentas de diagnostico (Diagnóstico, Calculadora, Diagnóstico e Índice) ajudam a entender o tamanho do problema. O Allybi ajuda a resolver o fluxo.</p>
+      <p>Os diagnósticos mostram o tamanho do atrito. O Allybi reduz o fluxo: conecte fontes, suba arquivos, pergunte no chat, receba resposta com fonte e revise antes de enviar.</p>
+      <div class="met-flow">Fonte conectada → pergunta no chat → resposta com fonte → mensagem preparada → confirmação</div>
+      <div class="met-inline-ctas">
+        <a href="tempo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg">Calcular meu tempo perdido</a>
+        <a href="diagnostico.html" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Mapear fluxo do time</a>
+        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Começar grátis por 30 dias</a>
+      </div>
     </div>
 
-  </div>
-</section>
-
-<!-- CTAs -->
-<section class="met-cta-section">
-  <div class="allybi-container">
-    <div class="met-cta__buttons">
-      <a href="raio-x.html" class="allybi-btn allybi-btn--primary allybi-btn--lg">Fazer o Raio-X</a>
-      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Começar grátis por 30 dias</a>
-    </div>
   </div>
 </section>
 
@@ -337,10 +342,11 @@
 <section class="s-cta">
   <div class="allybi-container">
     <div class="s-cta__inner">
-      <h2>Pare de transformar informação em caca ao tesouro.</h2>
-      <p>Conecte suas fontes, pergunte no chat e envie o arquivo certo com fonte.</p>
+      <h2>Pare de procurar em tudo para responder uma coisa.</h2>
+      <p>Conecte suas fontes, pergunte no chat e envie com fonte.</p>
       <div class="s-cta__ctas">
         <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="start_free_clicked">Começar grátis por 30 dias</a>
+        <a href="contact.html" class="allybi-btn allybi-btn--secondary-inverse allybi-btn--lg">Falar com vendas</a>
       </div>
     </div>
   </div>
@@ -376,10 +382,8 @@
       <div class="footer-col">
         <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
         <div class="footer-col-links">
-          <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
-          <a href="raio-x.html" data-i18n-key="footer.rayox">X-Ray Diagnostic</a>
           <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="finais.html" data-i18n-key="footer.cemetery">Final Files Cemetery</a>
+          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
           <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
         </div>
@@ -407,7 +411,7 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="busca-manual.html" data-i18n-key="footer.busca_manual">Manual Search</a>
+      <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
@@ -421,9 +425,9 @@
             <span class="lang-label">English</span>
           </button>
           <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Portugues (BR)</li>
+            <li role="option" data-lang="pt">Português (BR)</li>
             <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Espanol</li>
+            <li role="option" data-lang="es">Español</li>
           </ul>
         </div>
       </div>
