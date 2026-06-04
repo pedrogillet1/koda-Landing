@@ -15,8 +15,8 @@
 
 .s-hero__grid {
   display: grid;
-  grid-template-columns: 46fr 54fr;
-  gap: clamp(40px, 5vw, 56px);
+  grid-template-columns: 52fr 48fr;
+  gap: clamp(32px, 3.5vw, 48px);
   align-items: center;
 }
 
@@ -58,7 +58,7 @@
   color: var(--allybi-text-strongest);
   margin-bottom: 24px;
   text-wrap: balance;
-  max-width: 540px;
+  max-width: 620px;
   hyphens: none;
   word-break: normal;
   overflow-wrap: normal;
@@ -68,7 +68,7 @@
   font-size: clamp(15px, 1.15vw, 17px);
   line-height: 1.6;
   color: var(--allybi-text-secondary);
-  max-width: 460px;
+  max-width: 540px;
   margin-bottom: 32px;
 }
 
@@ -106,8 +106,7 @@
 
 .hero-scene {
   position: relative;
-  max-width: 540px;
-  margin-left: auto;
+  max-width: 520px;
 }
 
 .hero-scene__workspace {
