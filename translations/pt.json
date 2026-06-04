@@ -26,9 +26,9 @@
     "for_business": "Para operações",
     "start_free_30": "Começar grátis por 30 dias",
     "tools": "Ferramentas",
-    "calculator": "Calculadora do Tempo Perdido",
+    "calculator": "Tempo perdido",
     "for_operations": "Para operações",
-    "diagnostic": "Diagnóstico do Fluxo",
+    "diagnostic": "Diagnóstico do fluxo",
     "indice": "Índice Allybi",
     "methodology": "Metodologia"
   },
@@ -76,12 +76,12 @@
     "tos": "Termos de Serviço",
     "data_use": "Integrações e Uso de Dados",
     "data_deletion": "Exclusão de Dados",
-    "calculator": "Calculadora do Tempo Perdido",
+    "calculator": "Tempo perdido",
     "indice": "Índice Allybi",
     "col_tools": "Ferramentas",
     "methodology": "Como calculamos",
     "operations": "Para operações",
-    "diagnostic": "Diagnóstico do Fluxo"
+    "diagnostic": "Diagnóstico do fluxo"
   },
   "hero": {
     "eyebrow": "IA privada para documentos, e-mails e envios",

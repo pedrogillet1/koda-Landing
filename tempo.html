@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Calculadora do Tempo Perdido — Allybi</title>
-  <meta name="description" content="Descubra quantas horas por mês você perde procurando, confirmando e reenviando arquivos. Calculadora individual e anônima da Allybi.">
+  <meta name="description" content="Calcule em menos de 1 minuto quanto tempo você perde procurando, confirmando versão, achando fonte e preparando envio. Sem cadastro, sem upload.">
+  <link rel="canonical" href="https://allybi.co/tempo.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,486 +16,8 @@
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="pages/tools.css">
   <link rel="stylesheet" href="allybi-responsive.css">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --text-strongest: #0D0F12;
-      --text-primary: #1A1D23;
-      --text-secondary: #454B57;
-      --text-muted: #6B7280;
-      --text-subtle: #9CA3AF;
-      --bg-page: #FAFAF8;
-      --bg-surface: #FFFFFF;
-      --bg-alt: #F5F6F7;
-      --border-default: rgba(16, 24, 40, 0.08);
-      --border-strong: rgba(16, 24, 40, 0.14);
-      --accent: #181818;
-      --accent-hover: #000000;
-      --accent-subtle: rgba(24, 24, 24, 0.04);
-      --accent-muted: rgba(24, 24, 24, 0.10);
-      --trust: #059669;
-      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --radius: 12px;
-      --radius-sm: 8px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    body {
-      font-family: var(--font);
-      background: var(--bg-page);
-      color: var(--text-primary);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .tp-container {
-      max-width: 1120px; width: 100%; margin: 0 auto; padding: 0 24px;
-    }
-
-    /* Hero */
-    .tp-hero {
-      padding: 140px 0 64px;
-    }
-    .tp-hero__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .tp-hero__badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent-subtle); border: 1px solid var(--accent-muted);
-      border-radius: 100px; padding: 6px 14px;
-      font-size: 12px; font-weight: 600; color: var(--accent);
-      margin-bottom: 24px;
-    }
-    .tp-hero h1 {
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--text-strongest);
-      margin-bottom: 16px;
-      text-wrap: balance;
-      line-height: 1.15;
-    }
-    .tp-hero__sub {
-      font-size: 17px;
-      color: var(--text-secondary);
-      margin-bottom: 32px;
-      line-height: 1.6;
-    }
-    .tp-hero__actions {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 16px;
-    }
-    .tp-hero__start {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 48px; padding: 0 32px;
-      background: var(--text-strongest); color: #fff;
-      font-family: var(--font); font-size: 15px; font-weight: 600;
-      border: none; border-radius: 100px; cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      text-decoration: none;
-    }
-    .tp-hero__start:hover { background: #000; transform: translateY(-1px); }
-    .tp-hero__secondary {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 48px; padding: 0 24px;
-      background: transparent; color: var(--text-secondary);
-      font-family: var(--font); font-size: 14px; font-weight: 600;
-      border: 1.5px solid var(--border-strong); border-radius: 100px;
-      cursor: pointer; text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .tp-hero__secondary:hover { border-color: var(--accent); color: var(--accent); }
-    .tp-trust {
-      display: flex; gap: 20px; flex-wrap: wrap;
-      font-size: 12px; color: var(--text-muted); font-weight: 500;
-      margin-top: 24px;
-    }
-    .tp-trust span {
-      display: flex; align-items: center; gap: 6px;
-    }
-    .tp-trust span::before {
-      content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--trust);
-    }
-
-    /* Preview card */
-    .tp-preview {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-default);
-      border-radius: var(--radius);
-      padding: 40px 32px;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-    }
-    .tp-preview__title {
-      font-size: 13px; font-weight: 600; color: var(--text-muted);
-      text-transform: uppercase; letter-spacing: 0.06em;
-      margin-bottom: 24px;
-    }
-    .tp-preview__row {
-      display: flex; justify-content: center; gap: 32px;
-      margin-bottom: 20px; flex-wrap: wrap;
-    }
-    .tp-preview__metric {
-      text-align: center;
-    }
-    .tp-preview__value {
-      font-size: 36px; font-weight: 700; color: var(--text-strongest);
-      letter-spacing: -0.03em; line-height: 1.1;
-    }
-    .tp-preview__label {
-      font-size: 13px; font-weight: 500; color: var(--text-muted);
-      margin-top: 4px;
-    }
-    .tp-preview__divider {
-      width: 100%; height: 1px; background: var(--border-default);
-      margin: 4px 0 16px;
-    }
-    .tp-preview__bottleneck {
-      font-size: 14px; font-weight: 600; color: var(--accent);
-    }
-    .tp-preview__bottleneck-label {
-      font-size: 12px; color: var(--text-subtle); margin-top: 2px;
-    }
-
-    /* Quiz wrapper */
-    .tp-quiz-wrapper {
-      display: none;
-      max-width: 600px; width: 100%; margin: 0 auto;
-      padding: 120px 24px 80px;
-    }
-
-    /* Progress */
-    .tp-progress {
-      height: 4px; background: var(--bg-alt); border-radius: 100px;
-      margin-bottom: 12px; overflow: hidden;
-    }
-    .tp-progress__bar {
-      height: 100%; background: var(--accent); border-radius: 100px;
-      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      width: 0%;
-    }
-    .tp-progress__label {
-      font-size: 13px; font-weight: 600; color: var(--text-muted);
-      margin-bottom: 32px;
-    }
-
-    /* Quiz screen */
-    .tp-quiz {
-      display: none;
-      padding: 8px 0 60px;
-    }
-    .tp-quiz.active { display: block; animation: fadeInUp 0.35s ease-out; }
-
-    .tp-quiz__question {
-      font-size: clamp(20px, 4vw, 26px);
-      font-weight: 700;
-      color: var(--text-strongest);
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-      line-height: 1.25;
-    }
-    .tp-quiz__hint {
-      font-size: 13px; color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-    .tp-quiz__chips {
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .tp-quiz__chips--multi .tp-chip.selected {
-      border-color: var(--accent);
-      background: var(--accent-subtle);
-      box-shadow: 0 0 0 2px var(--accent-muted);
-    }
-    .tp-chip {
-      display: flex; align-items: center;
-      min-height: 52px; padding: 14px 20px;
-      background: var(--bg-surface);
-      border: 1.5px solid var(--border-default);
-      border-radius: var(--radius);
-      font-family: var(--font); font-size: 15px; font-weight: 500;
-      color: var(--text-primary);
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
-      text-align: left;
-      width: 100%;
-    }
-    .tp-chip:hover {
-      border-color: var(--accent);
-      background: var(--accent-subtle);
-      box-shadow: var(--shadow-sm);
-    }
-    .tp-chip.selected {
-      border-color: var(--accent);
-      background: var(--accent-subtle);
-      box-shadow: 0 0 0 2px var(--accent-muted);
-    }
-
-    .tp-action-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 28px;
-      gap: 16px;
-    }
-    .tp-back {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 10px 0;
-      background: none; border: none;
-      font-family: var(--font); font-size: 14px; font-weight: 500;
-      color: var(--text-muted); cursor: pointer;
-      transition: color 0.2s;
-    }
-    .tp-back:hover { color: var(--text-primary); }
-    .tp-back svg { width: 14px; height: 14px; }
-    .tp-back--hidden { visibility: hidden; }
-
-    .tp-next-btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 48px; padding: 0 32px;
-      background: var(--text-strongest); color: #fff;
-      font-family: var(--font); font-size: 15px; font-weight: 600;
-      border: none; border-radius: 100px; cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .tp-next-btn:hover { background: #000; transform: translateY(-1px); }
-
-    /* Result */
-    .tp-result {
-      display: none;
-      max-width: 720px; width: 100%; margin: 0 auto;
-      padding: 120px 24px 40px;
-    }
-    .tp-result.active { display: block; animation: fadeInUp 0.4s ease-out; }
-
-    .tp-result__headline {
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 700; color: var(--text-strongest);
-      letter-spacing: -0.03em; line-height: 1.15;
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    .tp-result__sub {
-      font-size: 16px; color: var(--text-secondary);
-      text-align: center; line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 540px; margin-left: auto; margin-right: auto;
-    }
-
-    .tp-result__cards {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 16px; margin-bottom: 24px;
-    }
-    .tp-result__card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-default);
-      border-radius: var(--radius);
-      padding: 28px 20px;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-    }
-    .tp-result__card-value {
-      font-size: 32px; font-weight: 700; color: var(--text-strongest);
-      letter-spacing: -0.03em; line-height: 1;
-      margin-bottom: 6px;
-    }
-    .tp-result__card-label {
-      font-size: 13px; color: var(--text-muted); font-weight: 500;
-      line-height: 1.4;
-    }
-    .tp-result__card--accent .tp-result__card-value {
-      color: var(--accent);
-    }
-
-    .tp-result__days {
-      font-size: 15px; color: var(--text-secondary);
-      text-align: center; margin-bottom: 32px;
-      line-height: 1.6;
-    }
-
-    /* Share */
-    .tp-share {
-      text-align: center; margin-bottom: 32px;
-    }
-    .tp-share__label {
-      font-size: 13px; color: var(--text-muted); font-weight: 500;
-      margin-bottom: 12px;
-    }
-    .tp-share__buttons {
-      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
-    }
-    .tp-share__btn {
-      display: inline-flex; align-items: center; gap: 6px;
-      height: 40px; padding: 0 18px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-default);
-      border-radius: 100px;
-      font-family: var(--font); font-size: 13px; font-weight: 500;
-      color: var(--text-secondary);
-      cursor: pointer; text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .tp-share__btn:hover {
-      border-color: var(--accent); background: var(--accent-subtle);
-    }
-    .tp-share__btn svg { width: 16px; height: 16px; }
-
-    /* CTAs row */
-    .tp-result__ctas {
-      display: flex; justify-content: center; gap: 16px;
-      flex-wrap: wrap; margin-bottom: 24px;
-    }
-    .tp-result__cta-primary {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 48px; padding: 0 32px;
-      background: var(--text-strongest); color: #fff;
-      font-family: var(--font); font-size: 15px; font-weight: 600;
-      border: none; border-radius: 100px; cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .tp-result__cta-primary:hover { background: #000; transform: translateY(-1px); }
-    .tp-result__cta-secondary {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 48px; padding: 0 24px;
-      background: transparent; color: var(--text-secondary);
-      font-family: var(--font); font-size: 14px; font-weight: 600;
-      border: 1.5px solid var(--border-strong); border-radius: 100px;
-      cursor: pointer; text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .tp-result__cta-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* Diagnosis form */
-    .tp-lead-card {
-      background: var(--bg-surface); border: 1px solid var(--border-default);
-      border-radius: var(--radius); padding: 32px;
-      text-align: center; margin-bottom: 40px;
-      box-shadow: var(--shadow-sm);
-    }
-    .tp-lead-card__head { margin-bottom: 20px; }
-    .tp-lead-card__title {
-      font-size: 18px; font-weight: 700; color: var(--text-strongest);
-      margin-bottom: 8px;
-    }
-    .tp-lead-card__sub {
-      font-size: 14px; color: var(--text-secondary); line-height: 1.5;
-      max-width: 400px; margin: 0 auto;
-    }
-    .tp-lead-card__btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 48px; padding: 0 32px;
-      background: var(--text-strongest); color: #fff;
-      font-family: var(--font); font-size: 15px; font-weight: 600;
-      border: none; border-radius: 100px; cursor: pointer;
-      transition: background 0.2s;
-    }
-    .tp-lead-card__btn:hover { background: #000; }
-    .tp-lead-card__btn.is-hidden { display: none; }
-    .tp-diagnosis__form {
-      display: none;
-      max-width: 400px; margin: 24px auto 0;
-      text-align: left;
-    }
-    .tp-diagnosis__form.active { display: block; animation: fadeInUp 0.3s ease-out; }
-    .tp-diagnosis__field {
-      margin-bottom: 16px;
-    }
-    .tp-diagnosis__field label {
-      display: block; font-size: 13px; font-weight: 600;
-      color: var(--text-secondary); margin-bottom: 6px;
-    }
-    .tp-diagnosis__field input {
-      width: 100%; height: 44px; padding: 0 16px;
-      background: var(--bg-surface);
-      border: 1.5px solid var(--border-default);
-      border-radius: var(--radius-sm);
-      font-family: var(--font); font-size: 14px;
-      color: var(--text-primary);
-      transition: border-color 0.2s;
-    }
-    .tp-diagnosis__field input:focus {
-      outline: none; border-color: var(--accent);
-    }
-    .tp-diagnosis__submit {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 44px; padding: 0 28px;
-      background: var(--accent); color: #fff;
-      font-family: var(--font); font-size: 14px; font-weight: 600;
-      border: none; border-radius: 100px; cursor: pointer;
-      transition: background 0.2s;
-      margin-top: 4px;
-    }
-    .tp-diagnosis__submit:hover { background: var(--accent-hover); }
-    .tp-diagnosis__success {
-      display: none; padding: 20px;
-      background: rgba(5,150,105,0.06);
-      border: 1px solid rgba(5,150,105,0.2);
-      border-radius: var(--radius-sm);
-      font-size: 14px; color: var(--trust); font-weight: 500;
-      text-align: center; margin-top: 16px;
-    }
-
-    /* Bridge */
-    .tp-bridge {
-      display: none;
-      max-width: 720px; margin: 0 auto;
-      padding: 0 24px 48px;
-      text-align: center;
-    }
-    .tp-bridge.active { display: block; }
-    .tp-bridge__card {
-      background: var(--text-strongest); color: #fff;
-      border-radius: var(--radius);
-      padding: 40px 32px;
-    }
-    .tp-bridge__title {
-      font-size: clamp(20px, 3vw, 26px);
-      font-weight: 700; margin-bottom: 12px;
-    }
-    .tp-bridge__desc {
-      font-size: 15px; color: rgba(255,255,255,0.7);
-      line-height: 1.6; margin-bottom: 28px;
-      max-width: 480px; margin-left: auto; margin-right: auto;
-    }
-    .tp-bridge__cta {
-      display: inline-flex; align-items: center; justify-content: center;
-      height: 48px; padding: 0 32px;
-      background: #fff; color: var(--text-strongest);
-      font-family: var(--font); font-size: 15px; font-weight: 600;
-      border: none; border-radius: 100px; cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .tp-bridge__cta:hover { background: #f0f0f0; transform: translateY(-1px); }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .tp-hero { padding: 120px 0 48px; }
-      .tp-hero__grid { grid-template-columns: 1fr; gap: 40px; }
-      .tp-result__cards { grid-template-columns: 1fr; }
-      .tp-preview__row { gap: 24px; }
-    }
-    @media (max-width: 480px) {
-      .tp-hero { padding: 100px 0 32px; }
-      .tp-hero h1 { font-size: 26px; }
-      .tp-chip { min-height: 48px; padding: 12px 16px; font-size: 14px; }
-      .tp-result { padding: 100px 20px 40px; }
-      .tp-result__card { padding: 24px 16px; }
-      .tp-preview { padding: 28px 20px; }
-      .tp-preview__value { font-size: 28px; }
-      .tp-result__ctas { flex-direction: column; align-items: stretch; }
-      .tp-result__cta-primary, .tp-result__cta-secondary { width: 100%; }
-    }
-  </style>
 </head>
 <body>
 
@@ -577,141 +100,78 @@
   </div>
 </div>
 
-
 <main>
 
 <!-- HERO -->
-<section class="tp-hero" id="hero">
-  <div class="tp-container">
-    <div class="tp-hero__grid">
-      <div>
-        <div class="tp-hero__badge">Calculadora individual</div>
-        <h1>Quanto tempo você perde até ter certeza do arquivo?</h1>
-        <p class="tp-hero__sub">Calcule em menos de 1 minuto o tempo que some procurando, confirmando versão, achando fonte e preparando envio.</p>
-        <div class="tp-hero__actions">
-          <button class="tp-hero__start" onclick="startCalc()">Calcular meu tempo perdido</button>
-          <a href="metodologia.html" class="tp-hero__secondary">Ver como calculamos</a>
+<section class="tool-hero">
+  <div class="tool-hero__grid">
+    <div class="tool-hero__copy">
+      <span class="tool-hero__eyebrow">Calculadora individual</span>
+      <h1>Quanto do seu m&ecirc;s some antes de voc&ecirc; ter certeza?</h1>
+      <p class="tool-hero__sub">Em menos de 1 minuto, veja quanto tempo vai embora procurando, confirmando vers&atilde;o, achando fonte e preparando envio.</p>
+      <div class="tool-hero__ctas">
+        <a href="tempo-questionario.html" class="tool-btn tool-btn--primary">Calcular meu tempo</a>
+        <a href="metodologia.html" class="tool-btn tool-btn--secondary">Ver como calculamos</a>
+      </div>
+      <div class="tool-hero__trust">
+        <span>Sem cadastro</span>
+        <span>Sem upload</span>
+        <span>Resultado imediato</span>
+      </div>
+    </div>
+
+    <div class="tool-preview">
+      <p class="tool-preview__label">Seu resultado aparece assim</p>
+      <p class="tool-preview__metric">14h/m&ecirc;s</p>
+      <p class="tool-preview__metric-sub">quase 2 dias &uacute;teis</p>
+      <div class="tool-preview__bars">
+        <div class="tool-preview__bar">
+          <span class="tool-preview__bar-label">Procurar</span>
+          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:65%"></div></div>
         </div>
-        <div class="tp-trust">
-          <span>Sem cadastro</span>
-          <span>Sem upload</span>
-          <span>Resultado imediato</span>
+        <div class="tool-preview__bar">
+          <span class="tool-preview__bar-label">Confirmar vers&atilde;o</span>
+          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:80%"></div></div>
+        </div>
+        <div class="tool-preview__bar">
+          <span class="tool-preview__bar-label">Achar fonte</span>
+          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:50%"></div></div>
+        </div>
+        <div class="tool-preview__bar">
+          <span class="tool-preview__bar-label">Preparar envio</span>
+          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:45%"></div></div>
         </div>
       </div>
-      <div class="tp-preview">
-        <div class="tp-preview__title">Exemplo de resultado</div>
-        <div class="tp-preview__row">
-          <div class="tp-preview__metric">
-            <div class="tp-preview__value">3h40</div>
-            <div class="tp-preview__label">por semana</div>
-          </div>
-          <div class="tp-preview__metric">
-            <div class="tp-preview__value">14h</div>
-            <div class="tp-preview__label">por mês</div>
-          </div>
-        </div>
-        <div class="tp-preview__divider"></div>
-        <div class="tp-preview__bottleneck">Maior perda: confirmar versão</div>
-        <div class="tp-preview__bottleneck-label">Gargalo identificado</div>
-      </div>
+      <span class="tool-preview__highlight">Maior gargalo: confirmar vers&atilde;o</span>
+      <p class="tool-preview__footer">Baseado nas suas respostas. Sem enviar arquivos.</p>
     </div>
   </div>
 </section>
 
-<!-- QUIZ -->
-<div class="tp-quiz-wrapper" id="quiz-wrapper">
-  <div class="tp-progress">
-    <div class="tp-progress__bar" id="progress-bar"></div>
+<!-- SECTION: A BUSCA NAO TERMINA -->
+<section class="tool-section tool-section--alt">
+  <div class="tool-section__header">
+    <h2>A busca n&atilde;o termina quando o arquivo aparece.</h2>
   </div>
-  <div class="tp-progress__label" id="progress-label">Pergunta 1 de 7</div>
-  <div id="quiz-screens"></div>
-</div>
-
-<!-- RESULT -->
-<section id="result" class="tp-result">
-  <h2 class="tp-result__headline" id="result-headline"></h2>
-  <p class="tp-result__sub">A maior parte não é "procurar". É encontrar, confirmar e preparar sem erro.</p>
-
-  <div class="tp-result__cards">
-    <div class="tp-result__card">
-      <div class="tp-result__card-value" id="result-time"></div>
-      <div class="tp-result__card-label">Tempo perdido por mês</div>
+  <div class="tool-cards" style="padding:0 24px;">
+    <div class="tool-card">
+      <h3>Procurar</h3>
+      <p>E-mail, pasta, anexo, nuvem, desktop, algu&eacute;m do time.</p>
     </div>
-    <div class="tp-result__card tp-result__card--accent">
-      <div class="tp-result__card-value" id="result-bottleneck"></div>
-      <div class="tp-result__card-label">Maior gargalo</div>
+    <div class="tool-card">
+      <h3>Confirmar</h3>
+      <p>Vers&atilde;o certa, fonte, aprova&ccedil;&atilde;o, contexto.</p>
     </div>
-    <div class="tp-result__card">
-      <div class="tp-result__card-value" id="result-allybi"></div>
-      <div class="tp-result__card-label">O que o Allybi faria</div>
+    <div class="tool-card">
+      <h3>Preparar</h3>
+      <p>Mensagem, anexo, destinat&aacute;rio e envio sem erro.</p>
     </div>
   </div>
-
-  <p class="tp-result__days" id="result-days"></p>
-
-  <!-- Share -->
-  <div class="tp-share">
-    <div class="tp-share__label">Compartilhar resultado</div>
-    <div class="tp-share__buttons">
-      <a class="tp-share__btn" id="share-whatsapp" href="#" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.278 0-4.381-.762-6.063-2.045l-.423-.336-2.645.887.887-2.645-.336-.423A9.709 9.709 0 012.25 12 9.75 9.75 0 0112 2.25 9.75 9.75 0 0121.75 12 9.75 9.75 0 0112 21.75z"/></svg>
-        WhatsApp
-      </a>
-      <a class="tp-share__btn" id="share-linkedin" href="#" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-      <button class="tp-share__btn" id="share-copy" onclick="tpCopyResult()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-        Copiar
-      </button>
-    </div>
-  </div>
-
-  <!-- CTAs -->
-  <div class="tp-result__ctas">
-    <a href="how-it-works.html" class="tp-result__cta-primary">Ver como o Allybi reduz isso</a>
-    <a href="https://app.allybi.co/signup" class="tp-result__cta-secondary">Começar grátis por 30 dias</a>
-  </div>
-
-  <!-- Lead capture card -->
-  <div class="tp-lead-card">
-    <div class="tp-lead-card__head">
-      <h3 class="tp-lead-card__title">Quer a leitura completa?</h3>
-      <p class="tp-lead-card__sub">Enviamos uma leitura com seus gargalos, estimativa anual e onde o Allybi reduz esse fluxo.</p>
-    </div>
-    <button class="tp-lead-card__btn" onclick="tpToggleDiagnosis()">Receber diagnóstico completo</button>
-    <div class="tp-diagnosis__form" id="diagnosis-form">
-      <div class="tp-diagnosis__field">
-        <label for="diag-nome">Nome</label>
-        <input type="text" id="diag-nome" placeholder="Seu nome">
-      </div>
-      <div class="tp-diagnosis__field">
-        <label for="diag-whatsapp">WhatsApp</label>
-        <input type="tel" id="diag-whatsapp" placeholder="+55 11 99999-9999">
-      </div>
-      <div class="tp-diagnosis__field">
-        <label for="diag-email">E-mail corporativo</label>
-        <input type="email" id="diag-email" placeholder="você@empresa.com">
-      </div>
-      <div class="tp-diagnosis__field">
-        <label for="diag-area">Área</label>
-        <input type="text" id="diag-area" placeholder="Ex.: Jurídico, Financeiro, Operações">
-      </div>
-      <button class="tp-diagnosis__submit" onclick="tpSubmitDiagnosis()">Enviar diagnóstico</button>
-      <div class="tp-diagnosis__success" id="diagnosis-success">Recebemos. Vamos enviar sua leitura completa em breve.</div>
-    </div>
+  <div style="text-align:center;margin-top:36px;">
+    <a href="tempo-questionario.html" class="tool-btn tool-btn--primary">Come&ccedil;ar agora</a>
+    <p style="font-size:13px;color:var(--tool-gray-500);margin-top:14px;">N&atilde;o pedimos documentos. S&oacute; perguntas sobre o fluxo.</p>
   </div>
 </section>
-
-<!-- BRIDGE -->
-<div class="tp-bridge" id="bridge">
-  <div class="tp-bridge__card">
-    <div class="tp-bridge__title">O Allybi reduz o caminho entre procurar e enviar.</div>
-    <div class="tp-bridge__desc">Conecte suas fontes, pergunte no chat e receba a resposta com fonte. Sem abrir várias abas. Sem reenviar por versão errada.</div>
-    <a href="https://app.allybi.co/signup" class="tp-bridge__cta">Começar grátis por 30 dias</a>
-  </div>
-</div>
 
 </main>
 
@@ -772,7 +232,6 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
@@ -786,9 +245,9 @@
             <span class="lang-label">English</span>
           </button>
           <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
+            <li role="option" data-lang="pt">Portugu&ecirc;s (BR)</li>
             <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
+            <li role="option" data-lang="es">Espa&ntilde;ol</li>
           </ul>
         </div>
       </div>
@@ -796,273 +255,9 @@
   </div>
 </footer>
 
-
+<!-- Scripts -->
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
-<script>
-(function(){
-  /* ── Questions ── */
-  var questions = [
-    {
-      q: 'Em uma semana normal, quantas vezes você precisa encontrar ou confirmar um documento?',
-      mode: 'single',
-      opts: ['1\u20132', '3\u20135', '6\u201310', '11\u201320', '20+']
-    },
-    {
-      q: 'Quando isso acontece, onde você costuma procurar?',
-      mode: 'multi',
-      hint: 'Selecione todos que se aplicam',
-      opts: ['E-mail', 'OneDrive', 'SharePoint', 'Google Drive', 'WhatsApp', 'Pasta local', 'Desktop', 'Alguém do time']
-    },
-    {
-      q: 'Quanto tempo uma busca costuma levar?',
-      mode: 'single',
-      opts: ['Menos de 1 min', '1\u20133 min', '4\u20137 min', '8\u201315 min', 'Mais de 15 min']
-    },
-    {
-      q: 'Depois que você encontra o arquivo, o que ainda falta antes de usar ou enviar?',
-      mode: 'multi',
-      hint: 'Selecione todos que se aplicam',
-      opts: ['Confirmar versão', 'Achar fonte ou aprovação', 'Baixar ou anexar', 'Explicar contexto', 'Preparar resposta', 'Conferir destinatário', 'Perguntar para alguém']
-    },
-    {
-      q: 'Quantas vezes por semana alguém pede "manda de novo", "qual é a última?" ou "tem fonte?"',
-      mode: 'single',
-      opts: ['0', '1\u20132', '3\u20135', '6\u201310', '10+']
-    },
-    {
-      q: 'Onde isso pesa mais para você?',
-      mode: 'single',
-      opts: ['Cliente esperando', 'Sócio/gestor perguntando', 'Reunião chegando', 'Follow-up pendente', 'Auditoria/conformidade', 'Rotina do time']
-    },
-    {
-      q: 'Quando precisa enviar rápido, o que mais te preocupa?',
-      mode: 'single',
-      opts: ['Mandar versão errada', 'Não achar a fonte', 'Demorar demais', 'Mandar sem contexto', 'Anexar arquivo errado', 'Perguntar para a pessoa errada']
-    }
-  ];
-
-  /* ── Formula midpoints ── */
-  var FREQ_MID      = [1.5, 4, 8, 15, 25];        // Q1
-  var MIN_PER_SEARCH = [0.75, 2, 5.5, 11.5, 18];   // Q3
-  var REWORK_MIN     = [0, 4, 10, 20, 35];          // Q5
-
-  /* ── Bottleneck maps ── */
-  var CONTEXT_LABELS = [
-    'Cliente esperando',
-    'Sócio/gestor perguntando',
-    'Reunião chegando',
-    'Follow-up pendente',
-    'Auditoria/conformidade',
-    'Rotina do time'
-  ];
-  var WORRY_LABELS = [
-    'Mandar versão errada',
-    'Não achar a fonte',
-    'Demorar demais',
-    'Mandar sem contexto',
-    'Anexar arquivo errado',
-    'Perguntar para a pessoa errada'
-  ];
-  var ALLYBI_ACTIONS = [
-    'Versão certa, sempre',
-    'Fonte encontrada em segundos',
-    'Resposta em 1 clique',
-    'Contexto já incluso',
-    'Anexo correto automático',
-    'Sem depender de ninguém'
-  ];
-
-  var answers = {};
-  var totalSteps = 7;
-
-  /* ── Build quiz screens ── */
-  var container = document.getElementById('quiz-screens');
-  questions.forEach(function(qData, i) {
-    var screen = document.createElement('div');
-    screen.className = 'tp-quiz';
-    screen.id = 'tq' + i;
-
-    var chipsClass = 'tp-quiz__chips' + (qData.mode === 'multi' ? ' tp-quiz__chips--multi' : '');
-    var chipsHtml = '';
-    for (var j = 0; j < qData.opts.length; j++) {
-      chipsHtml += '<button class="tp-chip" data-q="' + i + '" data-v="' + j + '">' + qData.opts[j] + '</button>';
-    }
-
-    var hintHtml = qData.hint ? '<p class="tp-quiz__hint">' + qData.hint + '</p>' : '';
-
-    var backBtn = i > 0
-      ? '<button class="tp-back" onclick="tpGoBack(' + i + ')"><svg viewBox="0 0 14 14" fill="none"><path d="M8.5 3L4.5 7L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Voltar</button>'
-      : '<span class="tp-back tp-back--hidden">Voltar</span>';
-
-    var nextBtn = qData.mode === 'multi'
-      ? '<button class="tp-next-btn" onclick="tpAdvance(' + i + ')">' + (i === totalSteps - 1 ? 'Ver resultado' : 'Próxima') + '</button>'
-      : '';
-
-    var actionRow = '<div class="tp-action-row">' + backBtn + nextBtn + '</div>';
-
-    screen.innerHTML =
-      '<h2 class="tp-quiz__question">' + qData.q + '</h2>' +
-      hintHtml +
-      '<div class="' + chipsClass + '">' + chipsHtml + '</div>' +
-      actionRow;
-
-    container.appendChild(screen);
-  });
-
-  /* ── Chip click handler ── */
-  container.addEventListener('click', function(e) {
-    var chip = e.target.closest('.tp-chip');
-    if (!chip) return;
-    var qi = parseInt(chip.dataset.q);
-    var vi = parseInt(chip.dataset.v);
-    var mode = questions[qi].mode;
-
-    if (mode === 'single') {
-      var siblings = chip.parentElement.querySelectorAll('.tp-chip');
-      for (var k = 0; k < siblings.length; k++) siblings[k].classList.remove('selected');
-      chip.classList.add('selected');
-      answers[qi] = vi;
-
-      setTimeout(function() {
-        if (qi < totalSteps - 1) {
-          tpShowQuestion(qi + 1);
-        } else {
-          tpShowResult();
-        }
-      }, 250);
-    } else {
-      chip.classList.toggle('selected');
-      var sel = [];
-      var selected = chip.parentElement.querySelectorAll('.tp-chip.selected');
-      for (var s = 0; s < selected.length; s++) {
-        sel.push(parseInt(selected[s].dataset.v));
-      }
-      answers[qi] = sel;
-    }
-  });
-
-  window.tpAdvance = function(qi) {
-    if (!answers[qi] || (Array.isArray(answers[qi]) && answers[qi].length === 0)) return;
-    if (qi < totalSteps - 1) {
-      tpShowQuestion(qi + 1);
-    } else {
-      tpShowResult();
-    }
-  };
-
-  function tpShowQuestion(idx) {
-    var allScreens = document.querySelectorAll('.tp-quiz');
-    for (var i = 0; i < allScreens.length; i++) allScreens[i].classList.remove('active');
-    var target = document.getElementById('tq' + idx);
-    void target.offsetWidth;
-    target.classList.add('active');
-    tpUpdateProgress(idx + 1);
-  }
-
-  window.tpGoBack = function(currentIdx) {
-    tpShowQuestion(currentIdx - 1);
-  };
-
-  window.startCalc = function() {
-    document.getElementById('hero').style.display = 'none';
-    document.getElementById('quiz-wrapper').style.display = 'block';
-    tpShowQuestion(0);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  function tpUpdateProgress(step) {
-    var pct = (step / totalSteps) * 100;
-    document.getElementById('progress-bar').style.width = pct + '%';
-    document.getElementById('progress-label').textContent = 'Pergunta ' + step + ' de ' + totalSteps;
-  }
-
-  /* ── Calculate & show result ── */
-  function tpShowResult() {
-    document.getElementById('quiz-wrapper').style.display = 'none';
-
-    // Q1: frequency per week
-    var frequency = FREQ_MID[answers[0]] || 4;
-    // Q3: minutes per search
-    var minutes = MIN_PER_SEARCH[answers[2]] || 2;
-    // Q4: extra steps multiplier
-    var q4Count = Array.isArray(answers[3]) ? answers[3].length : 0;
-    var multiplier = 1 + (q4Count * 0.08);
-    // Q5: rework minutes per week
-    var rework = REWORK_MIN[answers[4]] || 4;
-
-    var weeklyMinutes = (frequency * minutes * multiplier) + rework;
-    var monthlyHours = Math.round((weeklyMinutes * 4.33) / 60 * 10) / 10;
-    if (monthlyHours < 0.1) monthlyHours = 0.1;
-    var days = Math.round((monthlyHours / 8) * 10) / 10;
-
-    // Determine bottleneck from Q4 selected items
-    var q4Labels = ['Confirmar versão', 'Encontrar fonte', 'Preparar envio', 'Reconstruir contexto', 'Preparar resposta', 'Revisar envio', 'Dependência de confirmação'];
-    var q4AllybiMap = ['Versão confirmada', 'Resposta com fonte', 'Mensagem pronta com fonte', 'Contexto já visível', 'Resposta com fonte', 'Envio com revisão', 'Menos ida e volta'];
-    var bottleneck = 'Confirmar versão';
-    var allybiAction = 'Versão confirmada';
-    if (Array.isArray(answers[3]) && answers[3].length > 0) {
-      bottleneck = q4Labels[answers[3][0]];
-      allybiAction = q4AllybiMap[answers[3][0]];
-    } else {
-      // Fallback from Q7
-      var worryIdx = answers[6] !== undefined ? answers[6] : 0;
-      allybiAction = ALLYBI_ACTIONS[worryIdx] || ALLYBI_ACTIONS[0];
-    }
-
-    // Populate result
-    document.getElementById('result-headline').textContent = 'Você perde cerca de ' + monthlyHours + 'h/mês nesse fluxo.';
-    document.getElementById('result-time').textContent = monthlyHours + 'h';
-    document.getElementById('result-bottleneck').textContent = bottleneck;
-    document.getElementById('result-allybi').textContent = allybiAction;
-    document.getElementById('result-days').innerHTML = 'Isso dá quase <strong>' + days + ' dias úteis por mês</strong> só procurando, confirmando e reenviando.';
-
-    // Share links
-    var shareText = encodeURIComponent('Perco cerca de' + monthlyHours + 'h/mês só entre procurar, confirmar e preparar arquivo. Fiz a calculadora da Allybi:https://allybi.com.br/tempo.html');
-    document.getElementById('share-whatsapp').href = 'https://wa.me/?text=' + shareText;
-    document.getElementById('share-linkedin').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://allybi.com.br/tempo.html');
-
-    // Store for copy
-    window._tpShareText = 'Perco cerca de' + monthlyHours + 'h/mês só entre procurar, confirmar e preparar arquivo. Fiz a calculadora da Allybi:https://allybi.com.br/tempo.html';
-
-    // Show result & bridge
-    document.getElementById('result').classList.add('active');
-    document.getElementById('bridge').classList.add('active');
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  /* ── Share: copy ── */
-  window.tpCopyResult = function() {
-    if (navigator.clipboard && window._tpShareText) {
-      navigator.clipboard.writeText(window._tpShareText).then(function() {
-        var btn = document.getElementById('share-copy');
-        var orig = btn.innerHTML;
-        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';
-        setTimeout(function() { btn.innerHTML = orig; }, 2000);
-      });
-    }
-  };
-
-  /* ── Diagnosis form ── */
-  window.tpToggleDiagnosis = function() {
-    var form = document.getElementById('diagnosis-form');
-    form.classList.add('active');
-    var btn = document.querySelector('.tp-lead-card__btn');
-    if (btn) btn.classList.add('is-hidden');
-  };
-
-  window.tpSubmitDiagnosis = function() {
-    var nome = document.getElementById('diag-nome').value.trim();
-    var whatsapp = document.getElementById('diag-whatsapp').value.trim();
-    var email = document.getElementById('diag-email').value.trim();
-    if (!nome || !email) return;
-    // In production this would POST to an API
-    document.getElementById('diagnosis-success').style.display = 'block';
-    document.querySelector('.tp-diagnosis__submit').style.display = 'none';
-  };
-})();
-</script>
 </body>
 </html>
