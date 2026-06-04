@@ -30,10 +30,10 @@
       --bg-alt: #F5F6F7;
       --border-default: rgba(16, 24, 40, 0.08);
       --border-strong: rgba(16, 24, 40, 0.14);
-      --accent: #2563EB;
-      --accent-hover: #1D4ED8;
-      --accent-subtle: rgba(37, 99, 235, 0.06);
-      --accent-muted: rgba(37, 99, 235, 0.12);
+      --accent: #181818;
+      --accent-hover: #000000;
+      --accent-subtle: rgba(24, 24, 24, 0.04);
+      --accent-muted: rgba(24, 24, 24, 0.10);
       --trust: #059669;
       --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --radius: 12px;
@@ -234,20 +234,25 @@
       box-shadow: 0 0 0 2px var(--accent-muted);
     }
 
+    .tp-action-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 28px;
+      gap: 16px;
+    }
     .tp-back {
       display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 24px; padding: 8px 0;
+      padding: 10px 0;
       background: none; border: none;
-      font-family: var(--font); font-size: 13px; font-weight: 500;
+      font-family: var(--font); font-size: 14px; font-weight: 500;
       color: var(--text-muted); cursor: pointer;
       transition: color 0.2s;
     }
     .tp-back:hover { color: var(--text-primary); }
     .tp-back svg { width: 14px; height: 14px; }
+    .tp-back--hidden { visibility: hidden; }
 
-    .tp-next-wrap {
-      margin-top: 24px;
-    }
     .tp-next-btn {
       display: inline-flex; align-items: center; justify-content: center;
       height: 48px; padding: 0 32px;
@@ -365,18 +370,31 @@
     .tp-result__cta-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
     /* Diagnosis form */
-    .tp-diagnosis {
+    .tp-lead-card {
+      background: var(--bg-surface); border: 1px solid var(--border-default);
+      border-radius: var(--radius); padding: 32px;
       text-align: center; margin-bottom: 40px;
+      box-shadow: var(--shadow-sm);
     }
-    .tp-diagnosis__toggle {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: none; border: none;
-      font-family: var(--font); font-size: 14px; font-weight: 600;
-      color: var(--accent); cursor: pointer;
-      text-decoration: underline; text-underline-offset: 3px;
-      transition: color 0.2s;
+    .tp-lead-card__head { margin-bottom: 20px; }
+    .tp-lead-card__title {
+      font-size: 18px; font-weight: 700; color: var(--text-strongest);
+      margin-bottom: 8px;
     }
-    .tp-diagnosis__toggle:hover { color: var(--accent-hover); }
+    .tp-lead-card__sub {
+      font-size: 14px; color: var(--text-secondary); line-height: 1.5;
+      max-width: 400px; margin: 0 auto;
+    }
+    .tp-lead-card__btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 48px; padding: 0 32px;
+      background: var(--text-strongest); color: #fff;
+      font-family: var(--font); font-size: 15px; font-weight: 600;
+      border: none; border-radius: 100px; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .tp-lead-card__btn:hover { background: #000; }
+    .tp-lead-card__btn.is-hidden { display: none; }
     .tp-diagnosis__form {
       display: none;
       max-width: 400px; margin: 24px auto 0;
@@ -656,9 +674,13 @@
     <a href="https://app.allybi.co/signup" class="tp-result__cta-secondary">Começar grátis por 30 dias</a>
   </div>
 
-  <!-- Diagnosis -->
-  <div class="tp-diagnosis">
-    <button class="tp-diagnosis__toggle" onclick="tpToggleDiagnosis()">Receber diagnóstico completo</button>
+  <!-- Lead capture card -->
+  <div class="tp-lead-card">
+    <div class="tp-lead-card__head">
+      <h3 class="tp-lead-card__title">Quer a leitura completa?</h3>
+      <p class="tp-lead-card__sub">Enviamos uma leitura com seus gargalos, estimativa anual e onde o Allybi reduz esse fluxo.</p>
+    </div>
+    <button class="tp-lead-card__btn" onclick="tpToggleDiagnosis()">Receber diagnóstico completo</button>
     <div class="tp-diagnosis__form" id="diagnosis-form">
       <div class="tp-diagnosis__field">
         <label for="diag-nome">Nome</label>
@@ -676,8 +698,8 @@
         <label for="diag-area">Área</label>
         <input type="text" id="diag-area" placeholder="Ex.: Jurídico, Financeiro, Operações">
       </div>
-      <button class="tp-diagnosis__submit" onclick="tpSubmitDiagnosis()">Enviar</button>
-      <div class="tp-diagnosis__success" id="diagnosis-success">Recebemos seus dados. Entraremos em contato em breve.</div>
+      <button class="tp-diagnosis__submit" onclick="tpSubmitDiagnosis()">Enviar diagnóstico</button>
+      <div class="tp-diagnosis__success" id="diagnosis-success">Recebemos. Vamos enviar sua leitura completa em breve.</div>
     </div>
   </div>
 </section>
@@ -791,7 +813,7 @@
       q: 'Quando isso acontece, onde você costuma procurar?',
       mode: 'multi',
       hint: 'Selecione todos que se aplicam',
-      opts: ['E-mail', 'OneDrive', 'SharePoint', 'Drive', 'WhatsApp', 'Pasta local', 'Desktop', 'Alguém do time', 'Outro']
+      opts: ['E-mail', 'OneDrive', 'SharePoint', 'Google Drive', 'WhatsApp', 'Pasta local', 'Desktop', 'Alguém do time']
     },
     {
       q: 'Quanto tempo uma busca costuma levar?',
@@ -802,7 +824,7 @@
       q: 'Depois que você encontra o arquivo, o que ainda falta antes de usar ou enviar?',
       mode: 'multi',
       hint: 'Selecione todos que se aplicam',
-      opts: ['Confirmar versão', 'Achar fonte/aprovação', 'Baixar ou anexar', 'Explicar contexto', 'Preparar resposta', 'Conferir destinatário', 'Perguntar para alguém']
+      opts: ['Confirmar versão', 'Achar fonte ou aprovação', 'Baixar ou anexar', 'Explicar contexto', 'Preparar resposta', 'Conferir destinatário', 'Perguntar para alguém']
     },
     {
       q: 'Quantas vezes por semana alguém pede "manda de novo", "qual é a última?" ou "tem fonte?"',
@@ -870,24 +892,21 @@
 
     var hintHtml = qData.hint ? '<p class="tp-quiz__hint">' + qData.hint + '</p>' : '';
 
-    var backHtml = '';
-    if (i > 0) {
-      backHtml = '<button class="tp-back" onclick="tpGoBack(' + i + ')">' +
-        '<svg viewBox="0 0 14 14" fill="none"><path d="M8.5 3L4.5 7L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        'Voltar</button>';
-    }
+    var backBtn = i > 0
+      ? '<button class="tp-back" onclick="tpGoBack(' + i + ')"><svg viewBox="0 0 14 14" fill="none"><path d="M8.5 3L4.5 7L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Voltar</button>'
+      : '<span class="tp-back tp-back--hidden">Voltar</span>';
 
-    var nextHtml = '';
-    if (qData.mode === 'multi') {
-      nextHtml = '<div class="tp-next-wrap"><button class="tp-next-btn" onclick="tpAdvance(' + i + ')">Próxima</button></div>';
-    }
+    var nextBtn = qData.mode === 'multi'
+      ? '<button class="tp-next-btn" onclick="tpAdvance(' + i + ')">' + (i === totalSteps - 1 ? 'Ver resultado' : 'Próxima') + '</button>'
+      : '';
+
+    var actionRow = '<div class="tp-action-row">' + backBtn + nextBtn + '</div>';
 
     screen.innerHTML =
       '<h2 class="tp-quiz__question">' + qData.q + '</h2>' +
       hintHtml +
       '<div class="' + chipsClass + '">' + chipsHtml + '</div>' +
-      nextHtml +
-      backHtml;
+      actionRow;
 
     container.appendChild(screen);
   });
@@ -1000,12 +1019,12 @@
     document.getElementById('result-days').innerHTML = 'Isso dá quase <strong>' + days + ' dias úteis por mês</strong> só procurando, confirmando e reenviando.';
 
     // Share links
-    var shareText = encodeURIComponent('Eu calculei quanto tempo perco procurando e confirmando arquivo. São ' + monthlyHours + 'h/mês! Faça o seu: https://allybi.co/tempo');
+    var shareText = encodeURIComponent('Perco cerca de' + monthlyHours + 'h/mês só entre procurar, confirmar e preparar arquivo. Fiz a calculadora da Allybi:https://allybi.com.br/tempo.html');
     document.getElementById('share-whatsapp').href = 'https://wa.me/?text=' + shareText;
-    document.getElementById('share-linkedin').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://allybi.co/tempo');
+    document.getElementById('share-linkedin').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://allybi.com.br/tempo.html');
 
     // Store for copy
-    window._tpShareText = 'Eu calculei quanto tempo perco procurando e confirmando arquivo. São ' + monthlyHours + 'h/mês! Faça o seu: https://allybi.co/tempo';
+    window._tpShareText = 'Perco cerca de' + monthlyHours + 'h/mês só entre procurar, confirmar e preparar arquivo. Fiz a calculadora da Allybi:https://allybi.com.br/tempo.html';
 
     // Show result & bridge
     document.getElementById('result').classList.add('active');
@@ -1029,7 +1048,9 @@
   /* ── Diagnosis form ── */
   window.tpToggleDiagnosis = function() {
     var form = document.getElementById('diagnosis-form');
-    form.classList.toggle('active');
+    form.classList.add('active');
+    var btn = document.querySelector('.tp-lead-card__btn');
+    if (btn) btn.classList.add('is-hidden');
   };
 
   window.tpSubmitDiagnosis = function() {

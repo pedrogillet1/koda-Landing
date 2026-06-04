@@ -55,7 +55,7 @@
 .sec-controls__detail { font-size:12px; color:var(--allybi-text-muted); line-height:1.5; display:block; padding-top:8px; border-top:1px solid var(--allybi-border-subtle); }
 
 /* ── 5. PERMISSIONS ── */
-.sec-permissions__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:900px; margin:0 auto; }
+.sec-permissions__grid { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; max-width:1100px; margin:0 auto; }
 .sec-permissions__card { padding:24px; border:1px solid var(--allybi-border-default); border-radius:var(--allybi-radius-card); background:var(--allybi-bg-surface); display:flex; flex-direction:column; gap:8px; }
 .sec-permissions__card img,.sec-permissions__card svg { flex-shrink:0; }
 .sec-permissions__card h3 { font-size:14px; font-weight:600; color:var(--allybi-text-strongest); }
@@ -107,7 +107,7 @@
 @media(max-width:1024px){
   .sec-controls__grid { grid-template-columns:repeat(2,1fr); }
   .sec-ai__flow { grid-template-columns:repeat(2,1fr); }
-  .sec-permissions__grid { grid-template-columns:repeat(2,1fr); }
+  .sec-permissions__grid { grid-template-columns:repeat(3,1fr); }
 }
 @media(max-width:768px){
   .sec-hero { padding-top:calc(var(--allybi-section-py-mobile) + 32px); padding-bottom:32px; }

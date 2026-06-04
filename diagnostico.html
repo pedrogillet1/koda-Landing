@@ -26,7 +26,7 @@
     /* ── Diagnostic page styles ── */
     .diag-hero { padding: 80px 0 60px; }
     .diag-hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .diag-hero__eyebrow { display: inline-block; font-size: 13px; font-weight: 600; color: var(--allybi-accent, #2563EB); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .diag-hero__eyebrow { display: inline-block; font-size: 13px; font-weight: 600; color: var(--allybi-accent, #181818); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
     .diag-hero__h1 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; color: var(--allybi-text-strongest, #111); margin-bottom: 16px; }
     .diag-hero__sub { font-size: 16px; line-height: 1.6; color: var(--allybi-text-secondary, #6B7280); margin-bottom: 24px; max-width: 520px; }
     .diag-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
@@ -47,12 +47,12 @@
     .diag-quiz__progress-wrap { margin-bottom: 32px; }
     .diag-quiz__progress-label { font-size: 13px; font-weight: 600; color: var(--allybi-text-secondary, #6B7280); margin-bottom: 8px; }
     .diag-quiz__progress-bar { width: 100%; height: 6px; border-radius: 3px; background: #E5E7EB; overflow: hidden; }
-    .diag-quiz__progress-fill { height: 100%; border-radius: 3px; background: var(--allybi-accent, #2563EB); transition: width 0.4s ease; }
+    .diag-quiz__progress-fill { height: 100%; border-radius: 3px; background: var(--allybi-accent, #181818); transition: width 0.4s ease; }
     .diag-quiz__question { font-size: clamp(18px, 2.5vw, 24px); font-weight: 700; color: var(--allybi-text-strongest, #111); line-height: 1.3; margin-bottom: 28px; letter-spacing: -0.015em; }
     .diag-quiz__chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
     .diag-quiz__chip { min-height: 52px; padding: 12px 20px; border-radius: 12px; border: 1.5px solid #E5E7EB; background: #fff; font-size: 14px; font-weight: 500; color: var(--allybi-text-strongest, #111); cursor: pointer; transition: all 0.2s; display: flex; align-items: center; user-select: none; }
-    .diag-quiz__chip:hover { border-color: var(--allybi-accent, #2563EB); background: rgba(37, 99, 235, 0.04); }
-    .diag-quiz__chip.is-selected { border-color: var(--allybi-accent, #2563EB); background: rgba(37, 99, 235, 0.08); color: var(--allybi-accent, #2563EB); font-weight: 600; }
+    .diag-quiz__chip:hover { border-color: var(--allybi-accent, #181818); background: rgba(24, 24, 24, 0.03); }
+    .diag-quiz__chip.is-selected { border-color: var(--allybi-accent, #181818); background: rgba(24, 24, 24, 0.06); color: var(--allybi-accent, #181818); font-weight: 600; }
     .diag-quiz__nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .diag-quiz__back { font-size: 14px; font-weight: 500; color: var(--allybi-text-secondary, #6B7280); background: none; border: none; cursor: pointer; padding: 8px 0; }
     .diag-quiz__back:hover { color: var(--allybi-text-strongest, #111); }
@@ -80,13 +80,18 @@
 
     .diag-share { background: var(--allybi-bg-alt-1, #F9FAFB); border-radius: 14px; padding: 24px; text-align: center; margin-bottom: 40px; }
     .diag-share__text { font-size: 14px; color: var(--allybi-text-secondary, #6B7280); margin-bottom: 12px; }
-    .diag-share__url { font-size: 13px; font-weight: 500; color: var(--allybi-accent, #2563EB); word-break: break-all; }
+    .diag-share__url { font-size: 13px; font-weight: 500; color: var(--allybi-accent, #181818); word-break: break-all; }
     .diag-share__btns { display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
     .diag-share__btn { padding: 8px 18px; border-radius: 8px; border: 1px solid #E5E7EB; background: #fff; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
-    .diag-share__btn:hover { border-color: var(--allybi-accent, #2563EB); color: var(--allybi-accent, #2563EB); }
+    .diag-share__btn:hover { border-color: var(--allybi-accent, #181818); color: var(--allybi-accent, #181818); }
 
     .diag-result__ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 32px; }
-    .diag-result__form-trigger { font-size: 14px; font-weight: 500; color: var(--allybi-accent, #2563EB); cursor: pointer; background: none; border: none; text-decoration: underline; display: block; margin: 0 auto 40px; }
+    .diag-lead-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 14px; padding: 28px; text-align: center; margin-bottom: 32px; }
+    .diag-lead-card__title { font-size: 18px; font-weight: 700; color: #111; margin-bottom: 8px; }
+    .diag-lead-card__sub { font-size: 14px; color: #6B7280; line-height: 1.5; max-width: 400px; margin: 0 auto 16px; }
+    .diag-lead-card__btn { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 32px; background: #181818; color: #fff; font-family: inherit; font-size: 15px; font-weight: 600; border: none; border-radius: 100px; cursor: pointer; transition: background 0.2s; }
+    .diag-lead-card__btn:hover { background: #000; }
+    .diag-lead-card__btn.is-hidden { display: none; }
 
     /* Lead form */
     .diag-form { display: none; max-width: 440px; margin: 0 auto 48px; background: #fff; border: 1px solid #E5E7EB; border-radius: 14px; padding: 28px 24px; }
@@ -95,7 +100,7 @@
     .diag-form__field { margin-bottom: 14px; }
     .diag-form__field label { display: block; font-size: 13px; font-weight: 600; color: var(--allybi-text-strongest, #111); margin-bottom: 5px; }
     .diag-form__field input, .diag-form__field select { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #D1D5DB; font-size: 14px; font-family: inherit; background: #fff; }
-    .diag-form__field input:focus, .diag-form__field select:focus { outline: none; border-color: var(--allybi-accent, #2563EB); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+    .diag-form__field input:focus, .diag-form__field select:focus { outline: none; border-color: var(--allybi-accent, #181818); box-shadow: 0 0 0 3px rgba(24,24,24,0.08); }
     .diag-form__submit { width: 100%; margin-top: 8px; }
 
     /* Product bridge */
@@ -103,7 +108,7 @@
     .diag-bridge__headline { font-size: clamp(18px, 2.5vw, 28px); font-weight: 700; color: var(--allybi-text-strongest, #111); margin-bottom: 32px; letter-spacing: -0.015em; }
     .diag-bridge__flow { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; margin-bottom: 32px; }
     .diag-bridge__step { padding: 10px 16px; border-radius: 10px; font-size: 13px; font-weight: 600; background: #fff; border: 1.5px solid #E5E7EB; color: var(--allybi-text-strongest, #111); white-space: nowrap; }
-    .diag-bridge__step--allybi { background: rgba(37,99,235,0.08); border-color: var(--allybi-accent, #2563EB); color: var(--allybi-accent, #2563EB); }
+    .diag-bridge__step--allybi { background: rgba(24,24,24,0.06); border-color: #181818; color: #181818; }
     .diag-bridge__arrow { color: #D1D5DB; font-size: 18px; margin: 0 6px; }
 
     /* Mobile */
@@ -111,6 +116,7 @@
       .diag-hero__grid { grid-template-columns: 1fr; gap: 32px; }
       .diag-hero { padding: 60px 0 40px; }
       .diag-insights { grid-template-columns: 1fr; }
+      .diag-prestart div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
       .diag-flow__nodes { flex-wrap: wrap; justify-content: center; gap: 6px; }
       .diag-flow__arrow { margin: 0 3px; }
       .diag-bridge__flow { gap: 4px; }
@@ -252,6 +258,32 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
+     PRE-START
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="diag-prestart" id="diag-prestart" style="padding:56px 0 64px;background:var(--allybi-bg-alt-1,#F9FAFB);">
+  <div class="allybi-container" style="max-width:900px;">
+    <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#111;text-align:center;margin-bottom:32px;letter-spacing:-0.02em;">O que o diagnóstico mostra</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div style="background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:24px;">
+        <h3 style="font-size:15px;font-weight:600;color:#111;margin-bottom:6px;">Onde o pedido começa</h3>
+        <p style="font-size:13px;color:#6B7280;line-height:1.5;">Cliente, gestor, reunião ou rotina.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:24px;">
+        <h3 style="font-size:15px;font-weight:600;color:#111;margin-bottom:6px;">Onde a certeza quebra</h3>
+        <p style="font-size:13px;color:#6B7280;line-height:1.5;">Versão, fonte, aprovação ou contexto.</p>
+      </div>
+      <div style="background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:24px;">
+        <h3 style="font-size:15px;font-weight:600;color:#111;margin-bottom:6px;">O que precisa mudar</h3>
+        <p style="font-size:13px;color:#6B7280;line-height:1.5;">Onde Allybi reduz busca, confirmação e envio manual.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <button onclick="document.getElementById('diag-start-btn').click()" class="allybi-btn allybi-btn--primary allybi-btn--lg">Começar diagnóstico</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
      QUIZ
      ═══════════════════════════════════════════════════════════════ -->
 <section id="diag-quiz" class="diag-quiz">
@@ -312,10 +344,13 @@
       <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg">Come&ccedil;ar gr&aacute;tis por 30 dias</a>
     </div>
 
-    <button class="diag-result__form-trigger" id="diag-form-toggle">Receber diagn&oacute;stico completo</button>
+    <div class="diag-lead-card">
+      <h3 class="diag-lead-card__title">Receber diagn&oacute;stico completo</h3>
+      <p class="diag-lead-card__sub">Enviamos uma leitura com o score, principal gargalo e recomenda&ccedil;&otilde;es para reduzir o fluxo manual.</p>
+      <button class="diag-lead-card__btn" id="diag-form-toggle">Receber diagn&oacute;stico completo</button>
+    </div>
 
     <div id="diag-form" class="diag-form">
-      <div class="diag-form__title">Receba o diagn&oacute;stico completo</div>
       <div class="diag-form__field">
         <label for="diag-name">Nome</label>
         <input type="text" id="diag-name" placeholder="Seu nome">
@@ -695,7 +730,8 @@
 
   // Lead form toggle
   document.getElementById('diag-form-toggle').addEventListener('click', function() {
-    document.getElementById('diag-form').classList.toggle('is-active');
+    document.getElementById('diag-form').classList.add('is-active');
+    this.classList.add('is-hidden');
   });
 
   // Form submit

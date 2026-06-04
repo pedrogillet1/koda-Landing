@@ -16,7 +16,7 @@
 .s-hero__grid {
   display: grid;
   grid-template-columns: 46fr 54fr;
-  gap: 56px;
+  gap: clamp(40px, 5vw, 56px);
   align-items: center;
 }
 
@@ -511,12 +511,6 @@
   background: var(--allybi-bg-dark-elevated);
 }
 
-.s-workflow__step--source .s-workflow__step-num,
-.s-workflow__step--confirm .s-workflow__step-num {
-  background: rgba(5, 150, 105, 0.15);
-  color: #34D399;
-}
-
 .s-workflow__step-num {
   width: 32px;
   height: 32px;
@@ -541,7 +535,7 @@
 .s-workflow__step p {
   font-size: 13px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.58);
 }
 
 /* Connector arrows between steps */

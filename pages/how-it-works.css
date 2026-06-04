@@ -580,53 +580,46 @@
 }
 
 /* ── 5. SOURCE / ACTION TRUST ── */
-.hiw-trust {
-  padding: 32px 0;
+/* ── 5b. SOURCES & ACTIONS GROUPED CARDS ── */
+.hiw-sa__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto;
 }
-
-.hiw-trust__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+.hiw-sa__card {
+  padding: 28px 24px;
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: var(--allybi-radius-card, 16px);
 }
-
-.hiw-trust__group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.hiw-sa__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--allybi-text-strongest);
+  margin-bottom: 4px;
 }
-
-.hiw-trust__label {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.hiw-sa__micro {
+  font-size: 12px;
   color: var(--allybi-text-muted);
-  white-space: nowrap;
+  margin-bottom: 16px;
 }
-
-.hiw-trust__items {
+.hiw-sa__items {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
 }
-
-.hiw-trust__items span {
+.hiw-sa__items span {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
+  gap: 8px;
+  font-size: 13px;
   font-weight: 500;
-  color: var(--allybi-text-secondary);
-  white-space: nowrap;
+  color: var(--allybi-text-primary);
 }
-
-.hiw-trust__divider {
-  width: 1px;
-  height: 24px;
-  background: var(--allybi-border-default);
+.hiw-sa__items span img {
+  flex-shrink: 0;
 }
 
 /* ── 6. FINAL CTA ── */
@@ -718,13 +711,7 @@
   .hiw-rail__label { font-size: 11px; }
   .hiw-rail__detail { font-size: 9px; }
 
-  .hiw-trust__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .hiw-trust__divider { display: none; }
+  .hiw-sa__grid { grid-template-columns: 1fr; max-width: 400px; }
 }
 
 @media (max-width: 600px) {

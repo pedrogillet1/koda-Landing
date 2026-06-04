@@ -125,29 +125,7 @@
       </div>
     </div>
 
-    <!-- Workflow preview rail -->
-    <div class="hiw-rail hiw-reveal" aria-hidden="true">
-      <div class="hiw-rail__step">
-        <span class="hiw-rail__label">Fontes conectadas</span>
-        <span class="hiw-rail__detail">Outlook · OneDrive · SharePoint · Uploads</span>
-      </div>
-      <span class="hiw-rail__arrow">&rarr;</span>
-      <div class="hiw-rail__step">
-        <span class="hiw-rail__label">Pergunta no chat</span>
-      </div>
-      <span class="hiw-rail__arrow">&rarr;</span>
-      <div class="hiw-rail__step hiw-rail__step--source">
-        <span class="hiw-rail__label">Resposta com fonte</span>
-      </div>
-      <span class="hiw-rail__arrow">&rarr;</span>
-      <div class="hiw-rail__step">
-        <span class="hiw-rail__label">Mensagem preparada</span>
-      </div>
-      <span class="hiw-rail__arrow">&rarr;</span>
-      <div class="hiw-rail__step hiw-rail__step--confirm">
-        <span class="hiw-rail__label">Revisão antes do envio</span>
-      </div>
-    </div>
+    <!-- Flow rail removed: the page itself explains the workflow -->
   </div>
 </section>
 
@@ -187,7 +165,7 @@
 
         <!-- Step 3 -->
         <div class="hiw-flow__step hiw-reveal" data-step="3">
-          <div class="hiw-flow__step-num hiw-flow__step-num--source">3</div>
+          <div class="hiw-flow__step-num">3</div>
           <h3>Receba com fonte</h3>
           <p>O Allybi mostra a resposta e de onde ela veio: arquivo, página, seção, trecho ou data.</p>
         </div>
@@ -208,7 +186,7 @@
 
         <!-- Step 6 -->
         <div class="hiw-flow__step hiw-reveal" data-step="6">
-          <div class="hiw-flow__step-num hiw-flow__step-num--confirm">6</div>
+          <div class="hiw-flow__step-num">6</div>
           <h3>Revise antes de enviar</h3>
           <p>Você vê destinatário, mensagem, fonte e arquivo. Nada sai sem confirmação.</p>
         </div>
@@ -384,27 +362,25 @@
 <!-- ═══════════════════════════════════════════════════════════════
      5. SOURCE / ACTION TRUST
      ═══════════════════════════════════════════════════════════════ -->
-<section class="hiw-trust" style="background:var(--allybi-bg-alt-1);border-top:1px solid var(--allybi-border-default);border-bottom:1px solid var(--allybi-border-default);">
+<section class="hiw-sources-actions allybi-section" style="background:var(--allybi-bg-alt-1);">
   <div class="allybi-container">
-    <div class="hiw-trust__inner hiw-reveal">
-      <div class="hiw-trust__group">
-        <span class="hiw-trust__label">Fontes</span>
-        <div class="hiw-trust__items">
-          <span><img src="assets/images/outlook-icon.svg" alt="" width="16" height="16"> Outlook</span>
-          <span><img src="assets/images/onedrive-icon.svg" alt="" width="16" height="16"> OneDrive</span>
-          <span><img src="assets/images/sharepoint-icon.svg" alt="" width="16" height="16"> SharePoint</span>
-          <span>
-            <img src="assets/images/uploads-icon.svg" alt="" width="16" height="16">
-            Uploads
-          </span>
+    <div class="hiw-sa__grid hiw-reveal">
+      <div class="hiw-sa__card">
+        <h3 class="hiw-sa__title">Fontes</h3>
+        <p class="hiw-sa__micro">Onde a informação entra.</p>
+        <div class="hiw-sa__items">
+          <span><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20"> Outlook</span>
+          <span><img src="assets/images/onedrive-icon.svg" alt="" width="20" height="20"> OneDrive</span>
+          <span><img src="assets/images/sharepoint-icon.svg" alt="" width="20" height="20"> SharePoint</span>
+          <span><img src="assets/images/uploads-icon.svg" alt="" width="20" height="20"> Uploads</span>
         </div>
       </div>
-      <div class="hiw-trust__divider"></div>
-      <div class="hiw-trust__group">
-        <span class="hiw-trust__label">Envios</span>
-        <div class="hiw-trust__items">
-          <span><img src="assets/images/outlook-icon.svg" alt="" width="16" height="16"> E-mail via Outlook</span>
-          <span><img src="assets/images/whatsapp-icon.svg" alt="" width="16" height="16"> WhatsApp handoff</span>
+      <div class="hiw-sa__card">
+        <h3 class="hiw-sa__title">Envios</h3>
+        <p class="hiw-sa__micro">Onde a resposta sai com revisão.</p>
+        <div class="hiw-sa__items">
+          <span><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20"> E-mail via Outlook</span>
+          <span><img src="assets/images/whatsapp-icon.svg" alt="" width="20" height="20"> WhatsApp handoff</span>
         </div>
       </div>
     </div>

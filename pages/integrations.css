@@ -377,9 +377,9 @@
 /* ── 7. TRUST / PERMISSIONS ── */
 .integ-trust__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 900px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .integ-trust__card {
@@ -440,7 +440,7 @@
 @media (max-width: 1024px) {
   .integ-after__flow { gap: 0; }
   .integ-after__step { min-width: 100px; max-width: 130px; }
-  .integ-trust__grid { grid-template-columns: repeat(2, 1fr); }
+  .integ-trust__grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
