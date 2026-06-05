@@ -1,0 +1,46 @@
+=== SEND CLARITY GREP PROOF ===
+Date: Fri Jun  5 14:56:50 -03 2026
+
+--- Preparar envio ---
+  PASS (none found)
+
+--- Mensagem preparada ---
+  PASS (none found)
+
+--- prepara o envio ---
+  PASS (none found)
+
+--- envio via WhatsApp ---
+  PASS (none found)
+
+--- Enviável ---
+  PASS (none found)
+
+--- prepara mensagens ---
+  PASS (none found)
+
+--- prepare e-mail ---
+  PASS (none found)
+
+--- prepara e-mail ---
+  PASS (none found)
+
+--- app.allybi.com.brm ---
+  PASS (none found)
+
+--- Koda ---
+  PASS (none found)
+
+--- citações de fonte ---
+  PASS (none found)
+
+--- respostas citando ---
+  PASS (none found)
+
+--- enviar com fonte ---
+  PASS (none found)
+
+=== Allowed: tempo.html bar label 'Preparar envio' (measures manual workflow time, not Allybi feature) ===
+128:        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Preparar envio</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:45%"></div></div></div>
+
+=== END GREP PROOF ===

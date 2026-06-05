@@ -320,19 +320,19 @@
 .s-pain .allybi-card {
   padding: 0;
   border-radius: var(--allybi-radius-card);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .s-pain__illustration {
   width: 100%;
-  height: 180px;
+  min-height: 180px;
   background: var(--allybi-bg-alt-1);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
-  padding: 20px;
+  padding: 24px 20px;
 }
 
 /* Pain card visuals */
@@ -987,6 +987,6 @@
   .s-hero__h1 { font-size: 26px; }
   .s-hero__sub { font-size: 14px; }
   .s-pain__text { padding: 20px; }
-  .s-pain__illustration { height: 140px; }
+  .s-pain__illustration { min-height: 140px; height: auto; }
   .s-cases__card { padding: 24px; }
 }
