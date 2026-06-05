@@ -347,9 +347,8 @@
       <p class="allybi-body-lg" style="max-width:540px;margin:12px auto 0;">Fontes e ações têm papéis diferentes. O Allybi separa busca, importação, resposta e envio.</p>
     </div>
 
-    <!-- Matrix A: Fontes — Desktop table -->
+    <!-- Unified matrix — Desktop table -->
     <div class="integ-matrix__section integ-reveal">
-      <h3 class="integ-matrix__subtitle">Fontes conectadas</h3>
       <div class="integ-matrix__wrap integ-matrix__desktop-only">
         <table class="integ-matrix__table">
           <thead>
@@ -359,6 +358,7 @@
               <th><span class="integ-matrix__col-icon"><img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24"></span>OneDrive</th>
               <th><span class="integ-matrix__col-icon"><img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24"></span>SharePoint</th>
               <th><span class="integ-matrix__col-icon"><img src="assets/images/uploads-icon.svg" alt="" width="24" height="24"></span>Uploads</th>
+              <th><span class="integ-matrix__col-icon"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24"></span>WhatsApp</th>
               <th class="integ-matrix__coming-col"><span class="integ-matrix__col-icon"><img src="assets/images/gmail-icon.svg" alt="" width="24" height="24"></span>Gmail</th>
               <th class="integ-matrix__coming-col"><span class="integ-matrix__col-icon"><img src="assets/images/google-drive-icon.svg" alt="" width="24" height="24"></span>Google Drive</th>
             </tr>
@@ -366,27 +366,45 @@
           <tbody>
             <tr>
               <td class="integ-matrix__capability">Pesquisar conteúdo</td>
-              <td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td>
+              <td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td>
+              <td><span class="integ-cross">✗</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
             </tr>
             <tr>
               <td class="integ-matrix__capability">Importar arquivos</td>
-              <td>Sim, anexos</td><td>Sim</td><td>Sim</td><td>Sim</td>
+              <td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td>
+              <td><span class="integ-cross">✗</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
             </tr>
             <tr>
               <td class="integ-matrix__capability">Perguntar no chat</td>
-              <td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td>
+              <td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td>
+              <td><span class="integ-cross">✗</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
             </tr>
             <tr>
               <td class="integ-matrix__capability">Comparar versões</td>
-              <td>Sim, quando arquivos estão disponíveis</td><td>Sim</td><td>Sim</td><td>Sim</td>
+              <td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td><td><span class="integ-check">✓</span></td>
+              <td><span class="integ-cross">✗</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
+            </tr>
+            <tr>
+              <td class="integ-matrix__capability">Preparar mensagem</td>
+              <td><span class="integ-check">✓</span></td><td><span class="integ-cross">✗</span></td><td><span class="integ-cross">✗</span></td><td><span class="integ-cross">✗</span></td>
+              <td><span class="integ-check">✓</span></td>
+              <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
+              <td class="integ-matrix__coming-col"><span class="integ-cross">✗</span></td>
+            </tr>
+            <tr>
+              <td class="integ-matrix__capability">Enviar</td>
+              <td><span class="integ-check">✓</span></td><td><span class="integ-cross">✗</span></td><td><span class="integ-cross">✗</span></td><td><span class="integ-cross">✗</span></td>
+              <td><span class="allybi-badge allybi-badge--coming" style="font-size:10px">Handoff</span></td>
+              <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
+              <td class="integ-matrix__coming-col"><span class="integ-cross">✗</span></td>
             </tr>
             <tr class="integ-matrix__status-row">
               <td class="integ-matrix__capability">Status</td>
@@ -394,6 +412,7 @@
               <td><span class="allybi-badge allybi-badge--trust">Disponível</span></td>
               <td><span class="allybi-badge allybi-badge--trust">Disponível</span></td>
               <td><span class="allybi-badge allybi-badge--trust">Disponível</span></td>
+              <td><span class="allybi-badge allybi-badge--coming">Handoff</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
               <td class="integ-matrix__coming-col"><span class="allybi-badge allybi-badge--coming">Em breve</span></td>
             </tr>
@@ -401,109 +420,61 @@
         </table>
       </div>
 
-      <!-- Matrix A: Fontes — Mobile accordion -->
+      <!-- Unified matrix — Mobile accordion -->
       <div class="integ-matrix__mobile-only">
         <div class="integ-matrix__accordion">
           <details class="integ-matrix__acc-item">
             <summary><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20"> Outlook <span class="allybi-badge allybi-badge--trust">Disponível</span></summary>
             <div class="integ-matrix__acc-body">
-              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span>Sim, anexos</span></div>
-              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span>Sim</span></div>
+              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Preparar mensagem</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Enviar</span><span class="integ-check">✓</span></div>
             </div>
           </details>
           <details class="integ-matrix__acc-item">
             <summary><img src="assets/images/onedrive-icon.svg" alt="" width="20" height="20"> OneDrive <span class="allybi-badge allybi-badge--trust">Disponível</span></summary>
             <div class="integ-matrix__acc-body">
-              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span>Sim</span></div>
+              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span class="integ-check">✓</span></div>
             </div>
           </details>
           <details class="integ-matrix__acc-item">
             <summary><img src="assets/images/sharepoint-icon.svg" alt="" width="20" height="20"> SharePoint <span class="allybi-badge allybi-badge--trust">Disponível</span></summary>
             <div class="integ-matrix__acc-body">
-              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span>Sim</span></div>
+              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span class="integ-check">✓</span></div>
             </div>
           </details>
           <details class="integ-matrix__acc-item">
-            <summary>Uploads <span class="allybi-badge allybi-badge--trust">Disponível</span></summary>
+            <summary><img src="assets/images/uploads-icon.svg" alt="" width="20" height="20"> Uploads <span class="allybi-badge allybi-badge--trust">Disponível</span></summary>
             <div class="integ-matrix__acc-body">
-              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span>Sim</span></div>
+              <div class="integ-matrix__acc-row"><span>Pesquisar conteúdo</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Importar arquivos</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Perguntar no chat</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Comparar versões</span><span class="integ-check">✓</span></div>
+            </div>
+          </details>
+          <details class="integ-matrix__acc-item">
+            <summary><img src="assets/images/whatsapp-icon.svg" alt="" width="20" height="20"> WhatsApp <span class="allybi-badge allybi-badge--coming">Handoff</span></summary>
+            <div class="integ-matrix__acc-body">
+              <div class="integ-matrix__acc-row"><span>Preparar mensagem</span><span class="integ-check">✓</span></div>
+              <div class="integ-matrix__acc-row"><span>Enviar</span><span>Handoff</span></div>
             </div>
           </details>
           <details class="integ-matrix__acc-item integ-matrix__acc-item--coming">
-            <summary>Gmail <span class="allybi-badge allybi-badge--coming">Em breve</span></summary>
+            <summary><img src="assets/images/gmail-icon.svg" alt="" width="20" height="20"> Gmail <span class="allybi-badge allybi-badge--coming">Em breve</span></summary>
             <div class="integ-matrix__acc-body"><p style="color:var(--allybi-text-muted);font-size:13px;">Todas as capacidades estarão disponíveis quando a integração for lançada.</p></div>
           </details>
           <details class="integ-matrix__acc-item integ-matrix__acc-item--coming">
-            <summary>Google Drive <span class="allybi-badge allybi-badge--coming">Em breve</span></summary>
+            <summary><img src="assets/images/google-drive-icon.svg" alt="" width="20" height="20"> Google Drive <span class="allybi-badge allybi-badge--coming">Em breve</span></summary>
             <div class="integ-matrix__acc-body"><p style="color:var(--allybi-text-muted);font-size:13px;">Todas as capacidades estarão disponíveis quando a integração for lançada.</p></div>
-          </details>
-        </div>
-      </div>
-    </div>
-
-    <!-- Matrix B: Ações de envio -->
-    <div class="integ-matrix__section integ-reveal" style="margin-top:56px;">
-      <h3 class="integ-matrix__subtitle">Ações de envio</h3>
-      <div class="integ-matrix__wrap integ-matrix__desktop-only">
-        <table class="integ-matrix__table" style="min-width:420px;">
-          <thead>
-            <tr>
-              <th class="integ-matrix__capability">Capacidade</th>
-              <th><span class="integ-matrix__col-icon"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24"></span>E-mail via Outlook</th>
-              <th><span class="integ-matrix__col-icon"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24"></span>WhatsApp handoff</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="integ-matrix__capability">Preparar mensagem</td>
-              <td>Sim</td><td>Sim</td>
-            </tr>
-            <tr>
-              <td class="integ-matrix__capability">Revisar antes de enviar</td>
-              <td>Sim</td><td>Sim</td>
-            </tr>
-            <tr>
-              <td class="integ-matrix__capability">Enviar</td>
-              <td>Sim, com confirmação</td><td>Handoff — usuário envia no WhatsApp</td>
-            </tr>
-            <tr class="integ-matrix__status-row">
-              <td class="integ-matrix__capability">Status</td>
-              <td><span class="allybi-badge allybi-badge--trust">Disponível</span></td>
-              <td><span class="allybi-badge allybi-badge--coming">Handoff</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Mobile accordion for actions -->
-      <div class="integ-matrix__mobile-only">
-        <div class="integ-matrix__accordion">
-          <details class="integ-matrix__acc-item">
-            <summary><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20"> E-mail via Outlook <span class="allybi-badge allybi-badge--trust">Disponível</span></summary>
-            <div class="integ-matrix__acc-body">
-              <div class="integ-matrix__acc-row"><span>Preparar mensagem</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Revisar antes de enviar</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Enviar</span><span>Sim, com confirmação</span></div>
-            </div>
-          </details>
-          <details class="integ-matrix__acc-item">
-            <summary><img src="assets/images/whatsapp-icon.svg" alt="" width="20" height="20"> WhatsApp handoff <span class="allybi-badge allybi-badge--coming">Handoff</span></summary>
-            <div class="integ-matrix__acc-body">
-              <div class="integ-matrix__acc-row"><span>Preparar mensagem</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Revisar antes de enviar</span><span>Sim</span></div>
-              <div class="integ-matrix__acc-row"><span>Enviar</span><span>Handoff — usuário envia no WhatsApp</span></div>
-            </div>
           </details>
         </div>
       </div>
