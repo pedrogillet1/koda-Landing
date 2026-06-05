@@ -26,7 +26,7 @@
     <nav class="allybi-nav desktop-only">
       <div class="nav-dropdown"><button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button><div class="nav-dropdown-menu"><a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="nav.security">Security</a></div></div>
       <div class="nav-dropdown"><button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button><div class="nav-dropdown-menu"><a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a><a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a><a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a></div></div>
-      <div class="nav-dropdown"><button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button><div class="nav-dropdown-menu"><a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a><a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a><a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a><a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a></div></div>
+      <div class="nav-dropdown"><button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button><div class="nav-dropdown-menu"><a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a><a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a><a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a></div></div>
       <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
       <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
     </nav>
@@ -43,69 +43,107 @@
 </div>
 
 <main>
-  <div class="result-hero" id="r-hero">
-    <h1 id="r-h1"></h1>
-    <p class="result-hero__sub">O problema não é uma pessoa. É o caminho entre pedir, encontrar, confirmar e enviar.</p>
-  </div>
 
-  <div class="result-cards" id="r-cards">
-    <div class="result-card"><div class="result-card__value" id="r-score"></div><div class="result-card__label">Atrito no fluxo</div><div class="result-card__small" id="r-band"></div></div>
-    <div class="result-card"><div class="result-card__value" id="r-dim"></div><div class="result-card__label">Maior gargalo</div><div class="result-card__small">Onde a certeza mais quebra.</div></div>
-    <div class="result-card"><div class="result-card__value" id="r-allybi"></div><div class="result-card__label">O que o Allybi reduziria</div></div>
-  </div>
-
-  <div class="result-interp" id="r-interp"></div>
-
-  <div class="result-bars" id="r-bars">
-    <div class="result-bars__title">Dimensões de atrito</div>
-  </div>
-
-  <div class="result-share">
-    <div class="result-share__title">Compartilhar com o time</div>
-    <div class="result-share__preview" id="r-share-text"></div>
-    <div class="result-share__btns">
-      <a class="result-share__btn" id="r-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp</a>
-      <a class="result-share__btn" id="r-li" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
-      <button class="result-share__btn" id="r-copy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar texto</button>
+  <!-- RESULT HERO — two columns -->
+  <section style="padding:clamp(100px,14vh,148px) 24px clamp(48px,7vh,80px);">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,72px);align-items:start;" id="r-hero-grid">
+      <div>
+        <h1 id="r-h1" style="font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:-.035em;line-height:1.06;color:#181818;margin-bottom:20px;text-wrap:balance;"></h1>
+        <p style="font-size:clamp(15px,1.2vw,17px);color:#55534E;line-height:1.6;margin-bottom:8px;">O problema não é uma pessoa. É o caminho entre pedir, encontrar, confirmar e enviar.</p>
+        <p style="font-size:14px;color:#6C6B6E;margin-bottom:32px;">Quanto mais alto o score, mais o fluxo depende de busca manual, memória e confirmação.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px;" id="r-cards">
+          <div class="result-card"><div class="result-card__value" id="r-score"></div><div class="result-card__label">Atrito no fluxo</div><div class="result-card__small" id="r-band"></div></div>
+          <div class="result-card"><div class="result-card__value" id="r-dim" style="font-size:clamp(16px,2vw,22px);"></div><div class="result-card__label">Maior gargalo</div><div class="result-card__small">Onde a certeza mais quebra.</div></div>
+          <div class="result-card"><div class="result-card__value" id="r-allybi" style="font-size:clamp(16px,2vw,22px);"></div><div class="result-card__label">O que o Allybi reduziria</div></div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="#r-share" class="tool-btn tool-btn--primary" style="font-size:14px;height:44px;padding:0 24px;">Compartilhar com o time</a>
+          <a href="#r-bars" class="tool-btn tool-btn--secondary" style="font-size:14px;height:44px;padding:0 24px;">Ver onde o fluxo trava</a>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:18px;padding:32px 28px;box-shadow:0 8px 40px rgba(0,0,0,.06);">
+        <p style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#6C6B6E;margin-bottom:20px;">Resumo para compartilhar</p>
+        <p id="r-share-preview" style="font-size:16px;line-height:1.55;color:#181818;margin-bottom:16px;"></p>
+        <p style="font-size:13px;color:#6C6B6E;font-style:italic;margin-bottom:20px;">Faz também para a gente comparar?</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid #E6E6EC;">
+          <span style="font-size:12px;color:#6C6B6E;">Diagnóstico do Fluxo</span>
+          <span style="font-size:12px;font-weight:600;color:#181818;">Allybi</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="result-lead" id="r-lead">
-    <h3>Quer receber a leitura completa?</h3>
-    <p class="result-lead__sub">Enviamos o mapa com score, gargalo principal e recomendações para reduzir busca, confirmação e envio manual.</p>
-    <button class="tool-btn tool-btn--primary" id="r-lead-open" style="width:100%">Receber no WhatsApp</button>
-    <div class="result-lead__form" id="r-lead-form">
-      <div class="result-lead__field"><label for="l-nome">Nome</label><input type="text" id="l-nome" placeholder="Seu nome"></div>
-      <div class="result-lead__field"><label for="l-wa">WhatsApp</label><input type="tel" id="l-wa" placeholder="+55 11 99999-9999"></div>
-      <div class="result-lead__field"><label for="l-email">E-mail corporativo</label><input type="email" id="l-email" placeholder="você@empresa.com"></div>
-      <div class="result-lead__field"><label for="l-area">Área</label><input type="text" id="l-area" placeholder="Ex.: Jurídico, Financeiro, Operações"></div>
-      <div class="result-lead__field"><label for="l-size">Tamanho do time</label><select id="l-size"><option value="">Selecione...</option><option value="1-5">1–5 pessoas</option><option value="6-15">6–15 pessoas</option><option value="16-50">16–50 pessoas</option><option value="51-200">51–200 pessoas</option><option value="200+">Mais de 200</option></select></div>
-      <button class="tool-btn tool-btn--primary" style="width:100%;margin-top:8px" id="r-lead-submit">Enviar leitura</button>
-      <div class="result-lead__success" id="r-lead-ok">Pronto. Vamos enviar a leitura completa.</div>
+  <!-- BREAKDOWN -->
+  <section id="r-bars" style="padding:clamp(48px,7vh,80px) 24px;background:#F5F5F5;">
+    <div style="max-width:720px;margin:0 auto;">
+      <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#181818;text-align:center;margin-bottom:8px;">Onde o fluxo trava</h2>
+      <p style="font-size:15px;color:#6C6B6E;text-align:center;margin-bottom:32px;">O score mostra onde a certeza se perde antes do envio.</p>
+      <div id="r-bars-container"></div>
+      <div class="result-interp" id="r-interp" style="margin-top:32px;"></div>
     </div>
-    <p class="result-lead__micro">Sem documentos. Usamos seus dados só para enviar a leitura.</p>
-  </div>
+  </section>
 
-  <div class="result-bridge" style="margin:0 24px 56px;max-width:720px;margin-left:auto;margin-right:auto;">
-    <h2>O Allybi transforma esse fluxo em uma conversa com fonte.</h2>
-    <p class="result-bridge__sub">Conecte fontes, pergunte no chat, receba resposta com fonte e revise antes de enviar por e-mail ou WhatsApp.</p>
-    <div class="result-bridge__flow">
-      <span class="result-bridge__step">Pedido</span>
-      <span class="result-bridge__arrow">&rarr;</span>
-      <span class="result-bridge__step result-bridge__step--active">Pergunta no Allybi</span>
-      <span class="result-bridge__arrow">&rarr;</span>
-      <span class="result-bridge__step result-bridge__step--active">Resposta com fonte</span>
-      <span class="result-bridge__arrow">&rarr;</span>
-      <span class="result-bridge__step">Mensagem preparada</span>
-      <span class="result-bridge__arrow">&rarr;</span>
-      <span class="result-bridge__step">Confirmação</span>
+  <!-- SHARE -->
+  <section id="r-share" style="padding:clamp(48px,7vh,80px) 24px;">
+    <div style="max-width:640px;margin:0 auto;text-align:center;">
+      <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#181818;margin-bottom:8px;">Compartilhar com o time</h2>
+      <p style="font-size:14px;color:#6C6B6E;margin-bottom:20px;">Sem expor arquivos. Só o resumo do fluxo.</p>
+      <div class="result-share__btns">
+        <a class="result-share__btn" id="r-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp</a>
+        <a class="result-share__btn" id="r-li" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+        <button class="result-share__btn" id="r-copy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar texto</button>
+      </div>
     </div>
-    <div class="result-bridge__ctas">
-      <a href="https://app.allybi.co/signup" class="tool-btn tool-btn--primary" style="background:#fff;color:#181818;">Começar grátis por 30 dias</a>
-      <a href="how-it-works.html" class="tool-btn tool-btn--ghost" style="color:rgba(255,255,255,.6);">Ver como funciona</a>
+  </section>
+
+  <!-- LEAD CAPTURE -->
+  <section style="padding:clamp(48px,7vh,80px) 24px;background:#F5F5F5;">
+    <div class="result-lead" id="r-lead" style="max-width:680px;">
+      <h3>Quer receber a leitura completa?</h3>
+      <p class="result-lead__sub">Enviamos o mapa com score, maior gargalo e recomendações para reduzir busca, confirmação e envio manual.</p>
+      <button class="tool-btn tool-btn--primary" id="r-lead-open" style="width:100%" data-event="diagnostic_lead_open">Receber no WhatsApp</button>
+      <div class="result-lead__form" id="r-lead-form">
+        <div class="result-lead__field"><label for="l-nome">Nome</label><input type="text" id="l-nome" placeholder="Seu nome"></div>
+        <div class="result-lead__field"><label for="l-wa">WhatsApp</label><input type="tel" id="l-wa" placeholder="+55 11 99999-9999"></div>
+        <div class="result-lead__field"><label for="l-email">E-mail corporativo</label><input type="email" id="l-email" placeholder="você@empresa.com"></div>
+        <div class="result-lead__field"><label for="l-area">Área</label><input type="text" id="l-area" placeholder="Ex.: Jurídico, Financeiro, Operações"></div>
+        <div class="result-lead__field"><label for="l-size">Tamanho do time</label><select id="l-size"><option value="">Selecione...</option><option value="1-5">1–5</option><option value="6-15">6–15</option><option value="16-50">16–50</option><option value="51-200">51–200</option><option value="200+">Mais de 200</option></select></div>
+        <button class="tool-btn tool-btn--primary" style="width:100%;margin-top:8px" id="r-lead-submit" data-event="diagnostic_lead_submit">Enviar leitura</button>
+        <div class="result-lead__success" id="r-lead-ok">Pronto. Vamos enviar sua leitura.</div>
+      </div>
+      <p class="result-lead__micro">Nenhum arquivo é pedido. Usamos seus dados só para enviar a leitura.</p>
     </div>
-    <a href="diagnostico-questionario.html" class="result-bridge__redo">Refazer diagnóstico</a>
-  </div>
+  </section>
+
+  <!-- ALLYBI BRIDGE -->
+  <section style="padding:clamp(64px,9vh,112px) 24px;background:#0B0D0E;color:#fff;">
+    <div style="max-width:1000px;margin:0 auto;">
+      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;text-align:center;margin-bottom:12px;text-wrap:balance;">O Allybi reduz a parte manual do fluxo.</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,.55);text-align:center;max-width:560px;margin:0 auto 40px;line-height:1.6;">Conecte Outlook, OneDrive, SharePoint ou uploads. Pergunte no chat, receba resposta com fonte e prepare e-mail ou WhatsApp para revisar antes de enviar.</p>
+      <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px 20px;max-width:760px;margin:0 auto 40px;align-items:center;">
+        <div style="padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;font-size:14px;color:rgba(255,255,255,.6);">Procurar em vários lugares</div>
+        <span style="font-size:18px;color:rgba(255,255,255,.2);">→</span>
+        <div style="padding:14px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);border-radius:12px;font-size:14px;color:#fff;font-weight:500;">Perguntar no chat</div>
+        <div style="padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;font-size:14px;color:rgba(255,255,255,.6);">Confirmar versão e fonte</div>
+        <span style="font-size:18px;color:rgba(255,255,255,.2);">→</span>
+        <div style="padding:14px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);border-radius:12px;font-size:14px;color:#fff;font-weight:500;">Resposta com fonte</div>
+        <div style="padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;font-size:14px;color:rgba(255,255,255,.6);">Perguntar quem pode confirmar</div>
+        <span style="font-size:18px;color:rgba(255,255,255,.2);">→</span>
+        <div style="padding:14px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);border-radius:12px;font-size:14px;color:#fff;font-weight:500;">Contexto visível</div>
+        <div style="padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:12px;font-size:14px;color:rgba(255,255,255,.6);">Montar mensagem e anexar</div>
+        <span style="font-size:18px;color:rgba(255,255,255,.2);">→</span>
+        <div style="padding:14px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);border-radius:12px;font-size:14px;color:#fff;font-weight:500;">Mensagem preparada + revisão</div>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://app.allybi.co/signup" class="tool-btn tool-btn--primary" style="background:#fff;color:#181818;" data-event="diagnostic_trial_click">Começar grátis por 30 dias</a>
+        <a href="how-it-works.html" class="tool-btn tool-btn--ghost" style="color:rgba(255,255,255,.6);" data-event="diagnostic_how_it_works_click">Ver como funciona</a>
+      </div>
+      <div style="text-align:center;margin-top:20px;">
+        <a href="diagnostico-questionario.html" style="font-size:13px;color:rgba(255,255,255,.4);text-decoration:underline;text-underline-offset:3px;">Refazer diagnóstico</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="allybi-footer">
@@ -113,7 +151,7 @@
     <div class="footer-brand"><a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a><p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p></div>
     <div class="footer-columns">
       <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4><div class="footer-col-links"><a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="footer.security">Security</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4><div class="footer-col-links"><a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a><a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a><a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a><a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a></div></div>
+      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4><div class="footer-col-links"><a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a><a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a><a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a></div></div>
       <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4><div class="footer-col-links"><a href="about.html" data-i18n-key="footer.about">About</a><a href="faq.html" data-i18n-key="footer.faq">FAQ</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a></div></div>
     </div>
     <div class="footer-bottom"><p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p></div>
@@ -128,46 +166,79 @@
   var raw; try{ raw=JSON.parse(sessionStorage.getItem('allybi_diag')); }catch(e){}
   if(!raw||!Array.isArray(raw)||raw.length<6){ window.location.href='diagnostico.html'; return; }
 
-  // Dimension scoring
+  // Dimension scoring per spec
   var dims=[0,0,0,0,0]; // espalhadas, versao, fonte, envio, dependencia
-  // Q2: search location
-  if(raw[1]===7) dims[0]+=6; // vários lugares
-  if(raw[1]===6) dims[4]+=5; // pergunta para alguém
-  // Q3: actual location
-  var q3map=[[0,0,0,0,0],[1,0,1,0,0],[2,0,0,1,0],[0,0,0,0,0],[3,0,0,0,2],[0,0,0,0,6],[5,1,2,0,1]];
-  var q3w=q3map[raw[2]]||[0,0,0,0,0]; dims.forEach(function(_,i){dims[i]+=q3w[i];});
-  // Q4: version certainty
-  var q4map=[[0,5,0,0,0],[0,4,0,0,0],[1,3,0,0,0],[0,1,3,0,0],[0,1,2,0,5],[2,5,4,1,2]];
-  var q4w=q4map[raw[3]]||[0,0,0,0,0]; dims.forEach(function(_,i){dims[i]+=q4w[i];});
-  // Q5: blockers (multi)
-  var q5items=Array.isArray(raw[4])?raw[4]:[];
-  var q5map=[[4,0,0,0,0],[0,5,0,0,0],[0,0,5,0,0],[0,0,0,4,0],[0,0,0,3,0],[0,0,2,0,5]];
-  q5items.forEach(function(i){var w=q5map[i]||[0,0,0,0,0]; dims.forEach(function(_,d){dims[d]+=w[d];});});
-  // Q6: expensive error
-  var q6map=[[0,6,0,1,0],[0,0,0,4,0],[0,0,5,0,0],[0,1,0,5,0],[0,4,2,0,0],[0,0,1,0,6]];
-  var q6w=q6map[raw[5]]||[0,0,0,0,0]; dims.forEach(function(_,i){dims[i]+=q6w[i];});
 
-  // Normalize each to 0-20
-  var maxPossible=[15,20,17,14,20]; // rough maximums
-  dims=dims.map(function(d,i){ return Math.min(20,Math.round(d/maxPossible[i]*20)); });
+  // Q1 (raw[0]): pressure source — envio manual signals
+  if(raw[0]===0||raw[0]===1) dims[3]+=2; // cliente/gestor
+
+  // Q2 (raw[1]): first search reflex — fontes espalhadas signals
+  var q2map=[3,0,0,0,4,3,3,4,8]; // email,onedrive,sharepoint,gdrive,whatsapp,pasta,desktop,alguem,varios
+  dims[0]+=q2map[raw[1]]||0;
+  if(raw[1]===7) dims[4]+=7; // perguntar para alguém
+
+  // Q3 (raw[2]): actual location
+  var q3esp=[0,0,5,0,5,6,8]; // arquivo,email,anexo,pasta,conversa,cabeça,espalhada
+  var q3dep=[0,0,0,0,2,8,1];
+  var q3fnt=[0,1,0,0,0,0,2];
+  dims[0]+=q3esp[raw[2]]||0;
+  dims[4]+=q3dep[raw[2]]||0;
+  dims[2]+=q3fnt[raw[2]]||0;
+
+  // Q4 (raw[3]): version certainty
+  var q4ver=[7,5,4,2,6,9]; // nome,data,pasta,email,alguem,sem padrão
+  var q4fnt=[4,0,0,0,5,7];
+  var q4dep=[0,0,0,0,7,5];
+  dims[1]+=q4ver[raw[3]]||0;
+  dims[2]+=q4fnt[raw[3]]||0;
+  dims[4]+=q4dep[raw[3]]||0;
+
+  // Q5 (raw[4]): blockers — multi-select
+  var q5items=Array.isArray(raw[4])?raw[4]:[];
+  var q5esp=[4,0,0,0,0,0,0]; // encontrar arquivo
+  var q5ver=[0,5,0,0,0,0,0]; // confirmar versão
+  var q5fnt=[0,0,8,4,0,0,0]; // fonte/aprovação, explicar contexto
+  var q5env=[0,0,0,0,6,5,0]; // preparar resposta, conferir dest
+  var q5dep=[0,0,0,0,0,0,7]; // saber quem pode confirmar
+  q5items.forEach(function(i){
+    dims[0]+=q5esp[i]||0; dims[1]+=q5ver[i]||0; dims[2]+=q5fnt[i]||0; dims[3]+=q5env[i]||0; dims[4]+=q5dep[i]||0;
+  });
+
+  // Q6 (raw[5]): expensive error
+  var q6ver=[7,0,0,0,6,0]; // versão errada, dado desatualizado
+  var q6fnt=[0,0,8,0,4,0]; // sem fonte, dado desatualizado
+  var q6env=[0,5,0,7,0,0]; // demorar, anexo errado
+  var q6dep=[0,0,0,0,0,8]; // depender de pessoa
+  dims[1]+=q6ver[raw[5]]||0;
+  dims[2]+=q6fnt[raw[5]]||0;
+  dims[3]+=q6env[raw[5]]||0;
+  dims[4]+=q6dep[raw[5]]||0;
+
+  // Cap each at 20
+  dims=dims.map(function(d){ return Math.min(20,d); });
   var score=dims.reduce(function(a,b){return a+b;},0);
   if(score>100) score=100;
 
   var DIM_NAMES=['Fontes espalhadas','Versão frágil','Fonte invisível','Envio manual','Dependência de confirmação'];
   var ALLYBI_ACT=['Fontes conectadas','Versão confirmada','Resposta com fonte','Mensagem preparada','Menos ida e volta'];
   var INTERPS=[
-    'A informação existe, mas o caminho muda toda vez. Isso cria busca manual e dúvida antes do envio.',
-    'O arquivo aparece, mas a certeza não. O time ainda precisa provar que é a versão certa.',
-    'A resposta até pode estar certa, mas falta origem, aprovação ou contexto para confiar.',
-    'Depois de encontrar, ainda falta montar resposta, conferir destinatário e anexar certo.',
-    'O fluxo funciona enquanto alguém lembra. Quando essa pessoa não está, a certeza some.'
+    ['A informação existe, mas o caminho muda.','Quando cada pessoa procura em um lugar diferente, o time perde tempo antes mesmo de confirmar se achou o certo.'],
+    ['O arquivo aparece, mas a certeza não.','Nome, data ou pasta ajudam, mas não provam sozinhos que aquela versão pode ser usada.'],
+    ['A resposta até pode estar certa, mas falta prova.','Sem origem, aprovação ou contexto, o time precisa perguntar de novo antes de confiar.'],
+    ['Encontrar é só metade do trabalho.','Depois ainda vem mensagem, anexo, destinatário, contexto e revisão.'],
+    ['O fluxo depende de memória.','Quando a certeza está na cabeça de alguém, cada ausência vira atraso ou dúvida.']
   ];
 
-  // Find top dimension
+  // Find top dimension (tie-break: fonte>versao>espalhadas>dependencia>envio)
+  var tieOrder=[2,1,0,4,3];
   var topIdx=0, topVal=dims[0];
-  dims.forEach(function(d,i){ if(d>topVal||(d===topVal&&[2,1,0,4,3].indexOf(i)<[2,1,0,4,3].indexOf(topIdx))){ topVal=d; topIdx=i; } });
+  for(var i=1;i<5;i++){
+    if(dims[i]>topVal||(dims[i]===topVal&&tieOrder.indexOf(i)<tieOrder.indexOf(topIdx))){
+      topVal=dims[i]; topIdx=i;
+    }
+  }
 
-  var bandLabel=score<=25?'Fluxo claro':score<=50?'Atrito moderado':score<=75?'Alto atrito':'Fluxo dependente de confirmação manual';
+  var bandLabel=score<=25?'Fluxo claro':score<=50?'Atrito moderado':score<=75?'Alto atrito':'Fluxo dependente demais';
 
   // Render
   document.getElementById('r-h1').textContent='Seu time marcou '+score+'/100 em atrito no fluxo.';
@@ -175,26 +246,30 @@
   document.getElementById('r-band').textContent=bandLabel;
   document.getElementById('r-dim').textContent=DIM_NAMES[topIdx];
   document.getElementById('r-allybi').textContent=ALLYBI_ACT[topIdx];
-  document.getElementById('r-interp').innerHTML='<h3>'+DIM_NAMES[topIdx]+'</h3><p>'+INTERPS[topIdx]+'</p>';
+
+  var shareBase='Nosso maior atrito apareceu em '+DIM_NAMES[topIdx]+'. Score: '+score+'/100. Não é sobre pessoas; é sobre o caminho entre pedir, confirmar e enviar.';
+  document.getElementById('r-share-preview').textContent=shareBase;
+
+  document.getElementById('r-interp').innerHTML='<h3>'+INTERPS[topIdx][0]+'</h3><p>'+INTERPS[topIdx][1]+'</p>';
 
   // Bars
-  var barsEl=document.getElementById('r-bars');
+  var barsEl=document.getElementById('r-bars-container');
   DIM_NAMES.forEach(function(name,i){
-    var pct=dims[i]*5; // 0-20 → 0-100
+    var pct=dims[i]*5;
     var isTop=i===topIdx;
     barsEl.innerHTML+='<div class="result-bar"><span class="result-bar__label">'+name+'</span><div class="result-bar__track"><div class="result-bar__fill'+(isTop?' result-bar__fill--accent':'')+'" style="width:0%;" data-w="'+pct+'%"></div></div></div>';
   });
-  setTimeout(function(){ document.querySelectorAll('.result-bar__fill').forEach(function(f){f.style.width=f.dataset.w;}); },200);
+  setTimeout(function(){ document.querySelectorAll('.result-bar__fill').forEach(function(f){f.style.width=f.dataset.w;}); },300);
 
   // Share
-  var shareText='Fiz o Diagnóstico do Fluxo da Allybi. Nosso maior atrito apareceu em '+DIM_NAMES[topIdx]+'. Não é sobre pessoas; é sobre o caminho entre pedir, confirmar e enviar.';
-  document.getElementById('r-share-text').textContent=shareText;
-  var waText='Faz esse diagnóstico rapidinho também? Quero comparar onde nosso fluxo perde certeza. https://allybi.com.br/diagnostico.html';
+  var waText='Fiz o Diagnóstico do Fluxo da Allybi. '+shareBase+' Faz também para a gente comparar? https://allybi.com.br/diagnostico.html';
+  var liText='Mapeei onde o fluxo perde certeza entre pedido e envio. Score: '+score+'/100. O maior gargalo apareceu em '+DIM_NAMES[topIdx]+'.';
+  var copyText='Fiz o Diagnóstico do Fluxo da Allybi. Score: '+score+'/100. Maior gargalo: '+DIM_NAMES[topIdx]+'. O diagnóstico mostra onde o time perde certeza entre pedir, encontrar, confirmar e enviar. https://allybi.com.br/diagnostico.html';
   document.getElementById('r-wa').href='https://wa.me/?text='+encodeURIComponent(waText);
   document.getElementById('r-li').href='https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent('https://allybi.com.br/diagnostico.html');
   document.getElementById('r-copy').addEventListener('click',function(){
-    navigator.clipboard.writeText(shareText+' https://allybi.com.br/diagnostico.html').then(function(){
-      document.getElementById('r-copy').innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';
+    navigator.clipboard.writeText(copyText).then(function(){
+      document.getElementById('r-copy').innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg> Copiado!';
     });
   });
 
@@ -209,6 +284,11 @@
     this.style.display='none';
     document.getElementById('r-lead-ok').style.display='block';
   });
+
+  // Responsive
+  if(window.innerWidth<768){
+    document.getElementById('r-hero-grid').style.gridTemplateColumns='1fr';
+  }
 })();
 </script>
 </body>

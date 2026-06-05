@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Calculadora do Tempo Perdido — Allybi</title>
-  <meta name="description" content="Calcule em menos de 1 minuto quanto tempo você perde procurando, confirmando versão, achando fonte e preparando envio. Sem cadastro, sem upload.">
+  <meta name="description" content="Estime em menos de 1 minuto quantas horas somem procurando, confirmando versão, achando fonte e preparando envio. 5 perguntas, sem enviar arquivos.">
   <link rel="canonical" href="https://allybi.co/tempo.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,6 @@
         <div class="nav-dropdown-menu">
           <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
         </div>
       </div>
@@ -86,7 +85,6 @@
       <div class="mobile-dropdown-items">
         <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
         <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
         <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
       </div>
     </div>
@@ -107,69 +105,137 @@
   <div class="tool-hero__grid">
     <div class="tool-hero__copy">
       <span class="tool-hero__eyebrow">Calculadora individual</span>
-      <h1>Quanto do seu m&ecirc;s some antes de voc&ecirc; ter certeza?</h1>
-      <p class="tool-hero__sub">Em menos de 1 minuto, veja quanto tempo vai embora procurando, confirmando vers&atilde;o, achando fonte e preparando envio.</p>
+      <h1>Quantas horas somem antes do arquivo sair certo?</h1>
+      <p class="tool-hero__sub">Em menos de 1 minuto, estime o tempo que vai embora procurando, confirmando versão, achando fonte e preparando envio.</p>
       <div class="tool-hero__ctas">
-        <a href="tempo-questionario.html" class="tool-btn tool-btn--primary">Calcular meu tempo</a>
-        <a href="metodologia.html" class="tool-btn tool-btn--secondary">Ver como calculamos</a>
+        <a href="tempo-questionario.html" class="tool-btn tool-btn--primary" data-event="tempo_start_click">Calcular meu tempo</a>
+        <a href="metodologia.html" class="tool-btn tool-btn--secondary" data-event="tempo_methodology_click">Ver como calculamos</a>
       </div>
       <div class="tool-hero__trust">
-        <span>Sem cadastro</span>
-        <span>Sem upload</span>
-        <span>Resultado imediato</span>
+        <span>5 perguntas</span>
+        <span>Sem enviar arquivos</span>
+        <span>Resultado na hora</span>
       </div>
     </div>
-
     <div class="tool-preview">
-      <p class="tool-preview__label">Seu resultado aparece assim</p>
-      <p class="tool-preview__metric">14h/m&ecirc;s</p>
-      <p class="tool-preview__metric-sub">quase 2 dias &uacute;teis</p>
+      <p class="tool-preview__label">Exemplo de resultado</p>
+      <p class="tool-preview__metric">14h/mês</p>
+      <p class="tool-preview__metric-sub">quase 2 dias úteis</p>
       <div class="tool-preview__bars">
-        <div class="tool-preview__bar">
-          <span class="tool-preview__bar-label">Procurar</span>
-          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:65%"></div></div>
-        </div>
-        <div class="tool-preview__bar">
-          <span class="tool-preview__bar-label">Confirmar vers&atilde;o</span>
-          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:80%"></div></div>
-        </div>
-        <div class="tool-preview__bar">
-          <span class="tool-preview__bar-label">Achar fonte</span>
-          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:50%"></div></div>
-        </div>
-        <div class="tool-preview__bar">
-          <span class="tool-preview__bar-label">Preparar envio</span>
-          <div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:45%"></div></div>
-        </div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Procurar</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:65%"></div></div></div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Confirmar versão</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:80%"></div></div></div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Achar fonte</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:50%"></div></div></div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Preparar envio</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:45%"></div></div></div>
       </div>
-      <span class="tool-preview__highlight">Maior gargalo: confirmar vers&atilde;o</span>
-      <p class="tool-preview__footer">Baseado nas suas respostas. Sem enviar arquivos.</p>
+      <span class="tool-preview__highlight">Maior gargalo: confirmar versão</span>
+      <p class="tool-preview__footer">Baseado nas suas respostas. Nenhum arquivo é enviado.</p>
     </div>
   </div>
 </section>
 
-<!-- SECTION: A BUSCA NAO TERMINA -->
-<section class="tool-section tool-section--alt">
-  <div class="tool-section__header">
-    <h2>A busca n&atilde;o termina quando o arquivo aparece.</h2>
+<!-- O QUE A CALCULADORA MEDE -->
+<section class="tool-section tool-section--alt" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>O que a calculadora mede</h2>
+      <p>Não é só "procurar". O tempo costuma aparecer em etapas pequenas que ninguém mede.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1000px;margin:0 auto;padding:0 24px;" class="allybi-reveal">
+      <div class="tool-card">
+        <h3>Procurar</h3>
+        <p>E-mail, pasta, anexo, nuvem, desktop ou alguém do time.</p>
+      </div>
+      <div class="tool-card">
+        <h3>Confirmar</h3>
+        <p>Versão certa, fonte, aprovação e contexto.</p>
+      </div>
+      <div class="tool-card">
+        <h3>Preparar</h3>
+        <p>Mensagem, anexo, destinatário e envio sem erro.</p>
+      </div>
+      <div class="tool-card">
+        <h3>Repetir</h3>
+        <p>O custo aparece quando esse caminho se repete toda semana.</p>
+      </div>
+    </div>
   </div>
-  <div class="tool-cards" style="padding:0 24px;">
-    <div class="tool-card">
-      <h3>Procurar</h3>
-      <p>E-mail, pasta, anexo, nuvem, desktop, algu&eacute;m do time.</p>
+</section>
+
+<!-- POR QUE ESSE TEMPO SOME -->
+<section class="tool-section" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>Por que esse tempo some?</h2>
+      <p>Porque o arquivo quase nunca chega sozinho com versão, fonte, contexto e destinatário já claros.</p>
     </div>
-    <div class="tool-card">
-      <h3>Confirmar</h3>
-      <p>Vers&atilde;o certa, fonte, aprova&ccedil;&atilde;o, contexto.</p>
-    </div>
-    <div class="tool-card">
-      <h3>Preparar</h3>
-      <p>Mensagem, anexo, destinat&aacute;rio e envio sem erro.</p>
+    <div class="allybi-reveal" style="max-width:880px;margin:0 auto;padding:28px 32px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <p style="font-size:14px;color:#6C6B6E;margin-bottom:16px;font-style:italic;">"me manda a última versão?"</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <span style="font-size:13px;padding:8px 14px;background:#F5F5F5;border-radius:8px;color:#32302C;">Onde está?</span>
+          <span style="font-size:13px;padding:8px 14px;background:#F5F5F5;border-radius:8px;color:#32302C;">É a versão certa?</span>
+          <span style="font-size:13px;padding:8px 14px;background:rgba(251,188,4,.08);border:1px solid rgba(251,188,4,.2);border-radius:8px;color:#92400E;">Tem fonte?</span>
+          <span style="font-size:13px;padding:8px 14px;background:#F5F5F5;border-radius:8px;color:#32302C;">Posso anexar?</span>
+          <span style="font-size:13px;padding:8px 14px;background:rgba(251,188,4,.08);border:1px solid rgba(251,188,4,.2);border-radius:8px;color:#92400E;">Quem confirma?</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:15px;color:#32302C;line-height:1.6;margin-bottom:20px;">Cada etapa parece pequena. Repetida toda semana, vira horas por mês.</p>
+        <a href="tempo-questionario.html" class="tool-btn tool-btn--primary" data-event="tempo_start_click">Calcular meu tempo</a>
+      </div>
     </div>
   </div>
-  <div style="text-align:center;margin-top:36px;">
-    <a href="tempo-questionario.html" class="tool-btn tool-btn--primary">Come&ccedil;ar agora</a>
-    <p style="font-size:13px;color:var(--tool-gray-500);margin-top:14px;">N&atilde;o pedimos documentos. S&oacute; perguntas sobre o fluxo.</p>
+</section>
+
+<!-- COMO O RESULTADO APARECE -->
+<section class="tool-section tool-section--alt" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>Você recebe mais que um número.</h2>
+      <p>O resultado mostra tempo mensal, maior gargalo e onde o Allybi reduziria o caminho.</p>
+    </div>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:840px;margin:0 auto;padding:0 24px;">
+      <div class="tool-card" style="text-align:center;"><h3 style="font-size:28px;letter-spacing:-.02em;">14h/mês</h3><p>Tempo por mês</p></div>
+      <div class="tool-card" style="text-align:center;"><h3 style="font-size:16px;">Confirmar versão</h3><p>Maior gargalo</p></div>
+      <div class="tool-card" style="text-align:center;"><h3 style="font-size:16px;">Versão confirmada</h3><p>O que o Allybi reduziria</p></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;" class="allybi-reveal">
+      <a href="tempo-questionario.html" class="tool-btn tool-btn--primary" data-event="tempo_start_click">Ver meu resultado</a>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE O ALLYBI REDUZ -->
+<section class="tool-section" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>O Allybi reduz justamente esse caminho.</h2>
+      <p>Conecte fontes, pergunte no chat, receba resposta com fonte e prepare o envio para revisar.</p>
+    </div>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px 20px;max-width:800px;margin:0 auto;align-items:center;padding:0 24px;">
+      <div style="padding:14px 18px;background:#F5F5F5;border-radius:12px;font-size:14px;color:#55534E;">Procurar em vários lugares</div>
+      <span style="font-size:18px;color:#E6E6EC;">→</span>
+      <div style="padding:14px 18px;background:#181818;border-radius:12px;font-size:14px;color:#fff;">Perguntar no chat</div>
+      <div style="padding:14px 18px;background:#F5F5F5;border-radius:12px;font-size:14px;color:#55534E;">Conferir versão e fonte</div>
+      <span style="font-size:18px;color:#E6E6EC;">→</span>
+      <div style="padding:14px 18px;background:#181818;border-radius:12px;font-size:14px;color:#fff;">Resposta com fonte</div>
+      <div style="padding:14px 18px;background:#F5F5F5;border-radius:12px;font-size:14px;color:#55534E;">Montar mensagem e anexar</div>
+      <span style="font-size:18px;color:#E6E6EC;">→</span>
+      <div style="padding:14px 18px;background:#181818;border-radius:12px;font-size:14px;color:#fff;">Mensagem preparada + revisão</div>
+    </div>
+    <div style="text-align:center;margin-top:40px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="allybi-reveal">
+      <a href="https://app.allybi.co/signup" class="tool-btn tool-btn--primary" data-event="tempo_trial_click">Começar grátis por 30 dias</a>
+      <a href="how-it-works.html" class="tool-btn tool-btn--secondary" data-event="tempo_how_it_works_click">Ver como funciona</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding:clamp(64px,9vh,96px) 0;background:#F5F5F5;">
+  <div class="allybi-container" style="text-align:center;">
+    <h2 class="allybi-reveal" style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:14px;text-wrap:balance;">Veja quanto tempo esse fluxo está custando.</h2>
+    <p class="allybi-reveal" style="font-size:16px;color:#6C6B6E;margin-bottom:32px;">São 5 perguntas rápidas. Nenhum arquivo é enviado.</p>
+    <a href="tempo-questionario.html" class="tool-btn tool-btn--primary allybi-reveal" data-event="tempo_start_click">Calcular meu tempo</a>
   </div>
 </section>
 
@@ -205,7 +271,6 @@
         <div class="footer-col-links">
           <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
         </div>
       </div>

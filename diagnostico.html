@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Diagnóstico do Fluxo — Allybi</title>
-  <meta name="description" content="Mapeie onde seu time perde certeza entre o pedido e o envio. Sem upload, sem nomes de clientes e com resultado imediato.">
+  <meta name="description" content="Em menos de 1 minuto, mapeie onde o fluxo do time perde certeza entre pedido e envio. 6 perguntas, sem enviar arquivos, sem nomes de clientes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -46,7 +46,6 @@
         <div class="nav-dropdown-menu">
           <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
         </div>
       </div>
@@ -85,7 +84,6 @@
       <div class="mobile-dropdown-items">
         <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
         <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
         <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
       </div>
     </div>
@@ -103,75 +101,167 @@
 
 <!-- HERO -->
 <section class="tool-hero">
-  <div class="tool-hero-inner">
-    <div class="tool-hero-content">
-      <span class="tool-eyebrow">Diagnóstico do time</span>
-      <h1>Onde seu time perde certeza entre o pedido e o envio?</h1>
-      <p class="tool-sub">Em menos de 1 minuto, mapeie onde o documento trava: pedido, busca, versão, fonte, confirmação ou envio.</p>
-      <div class="tool-ctas">
-        <a href="diagnostico-questionario.html" class="allybi-btn allybi-btn--primary">Mapear fluxo do time</a>
-        <a href="metodologia.html" class="allybi-btn allybi-btn--secondary">Ver metodologia</a>
+  <div class="tool-hero__grid">
+    <div class="tool-hero__copy">
+      <span class="tool-hero__eyebrow">Diagnóstico do time</span>
+      <h1>Entre o pedido e o envio, onde seu time trava?</h1>
+      <p class="tool-hero__sub">Em menos de 1 minuto, mapeie onde o fluxo perde certeza: pedido, busca, versão, fonte, confirmação ou envio.</p>
+      <div class="tool-hero__ctas">
+        <a href="diagnostico-questionario.html" class="tool-btn tool-btn--primary" data-event="diagnostic_start_click">Mapear fluxo do time</a>
+        <a href="metodologia.html" class="tool-btn tool-btn--secondary" data-event="diagnostic_methodology_click">Ver como calculamos</a>
       </div>
-      <p class="tool-trust">Sem upload · sem nomes de clientes · resultado imediato</p>
+      <div class="tool-hero__trust">
+        <span>6 perguntas</span>
+        <span>Sem enviar arquivos</span>
+        <span>Sem nomes de clientes</span>
+      </div>
     </div>
     <div class="tool-preview">
-      <span class="tool-preview-label">Exemplo de resultado</span>
-      <div class="tool-preview-metric">72/100</div>
-      <span class="tool-preview-metric-sub">Atrito no fluxo</span>
-      <div class="tool-preview-bars">
-        <div class="tool-bar">
-          <span class="tool-bar-label">Fontes espalhadas</span>
-          <div class="tool-bar-track"><div class="tool-bar-fill" style="width:55%"></div></div>
-          <span class="tool-bar-value">55%</span>
-        </div>
-        <div class="tool-bar">
-          <span class="tool-bar-label">Versão frágil</span>
-          <div class="tool-bar-track"><div class="tool-bar-fill" style="width:80%"></div></div>
-          <span class="tool-bar-value">80%</span>
-        </div>
-        <div class="tool-bar">
-          <span class="tool-bar-label">Fonte invisível</span>
-          <div class="tool-bar-track"><div class="tool-bar-fill" style="width:90%"></div></div>
-          <span class="tool-bar-value">90%</span>
-        </div>
-        <div class="tool-bar">
-          <span class="tool-bar-label">Envio manual</span>
-          <div class="tool-bar-track"><div class="tool-bar-fill" style="width:40%"></div></div>
-          <span class="tool-bar-value">40%</span>
-        </div>
-        <div class="tool-bar">
-          <span class="tool-bar-label">Dependência humana</span>
-          <div class="tool-bar-track"><div class="tool-bar-fill" style="width:60%"></div></div>
-          <span class="tool-bar-value">60%</span>
-        </div>
+      <p class="tool-preview__label">Exemplo de diagnóstico</p>
+      <p class="tool-preview__metric">68/100</p>
+      <p class="tool-preview__metric-sub">Atrito no fluxo</p>
+      <div class="tool-preview__bars">
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Fontes espalhadas</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:55%"></div></div></div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Versão frágil</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:70%"></div></div></div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Fonte invisível</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:85%"></div></div></div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Envio manual</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:40%"></div></div></div>
+        <div class="tool-preview__bar"><span class="tool-preview__bar-label">Dependência de confirmação</span><div class="tool-preview__bar-track"><div class="tool-preview__bar-fill" style="width:60%"></div></div></div>
       </div>
-      <p class="tool-preview-highlight">Maior gargalo: Fonte invisível</p>
-      <span class="tool-preview-footer">Baseado nas respostas do time.</span>
+      <span class="tool-preview__highlight">Maior gargalo: fonte invisível</span>
+      <p class="tool-preview__footer">Baseado nas respostas do time. Nenhum arquivo é enviado.</p>
     </div>
   </div>
 </section>
 
-<!-- SECTION: O CAMINHO -->
-<section class="tool-section--alt">
-  <div class="tool-section-inner">
-    <h2>O diagnóstico não mede pessoas. Mede o caminho.</h2>
-    <div class="tool-cards">
-      <div class="tool-card">
-        <h3>Pedido</h3>
-        <p>De onde vem a solicitação.</p>
+<!-- O QUE O DIAGNÓSTICO MEDE -->
+<section class="tool-section tool-section--alt" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>O que o diagnóstico mede</h2>
+      <p>Não é desempenho de pessoas. É o caminho que o documento percorre até poder ser enviado.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto;padding:0 24px;" class="allybi-reveal">
+      <div class="tool-card"><h3>Pedido</h3><p>De onde vem a solicitação: cliente, gestor, reunião, e-mail ou rotina.</p></div>
+      <div class="tool-card"><h3>Busca</h3><p>Onde o time procura primeiro quando precisa responder rápido.</p></div>
+      <div class="tool-card"><h3>Versão</h3><p>Como o time confirma que pode usar aquele arquivo.</p></div>
+      <div class="tool-card"><h3>Fonte</h3><p>Se existe origem, aprovação ou contexto suficiente para confiar.</p></div>
+      <div class="tool-card"><h3>Envio</h3><p>O que ainda falta antes de mandar sem erro.</p></div>
+      <div class="tool-card"><h3>Confirmação</h3><p>Quem precisa aprovar ou quem pode provar que está certo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE O FLUXO PERDE CERTEZA -->
+<section class="tool-section" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>O problema não é uma pessoa. É o caminho.</h2>
+      <p>Quando pedido, arquivo, versão, fonte e envio estão separados, cada resposta depende de confirmação manual.</p>
+    </div>
+    <div class="allybi-reveal" style="max-width:880px;margin:0 auto;padding:28px 32px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <p style="font-size:14px;color:#6C6B6E;margin-bottom:16px;font-style:italic;">"qual versão eu mando?"</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <span style="font-size:13px;padding:8px 14px;background:#F5F5F5;border-radius:8px;color:#32302C;">Pedido</span>
+          <span style="font-size:13px;padding:8px 14px;background:#F5F5F5;border-radius:8px;color:#32302C;">Procura</span>
+          <span style="font-size:13px;padding:8px 14px;background:rgba(251,188,4,.08);border:1px solid rgba(251,188,4,.2);border-radius:8px;color:#92400E;">Versão?</span>
+          <span style="font-size:13px;padding:8px 14px;background:rgba(251,188,4,.08);border:1px solid rgba(251,188,4,.2);border-radius:8px;color:#92400E;">Fonte?</span>
+          <span style="font-size:13px;padding:8px 14px;background:rgba(251,188,4,.08);border:1px solid rgba(251,188,4,.2);border-radius:8px;color:#92400E;">Quem confirma?</span>
+          <span style="font-size:13px;padding:8px 14px;background:#F5F5F5;border-radius:8px;color:#32302C;">Envio</span>
+        </div>
       </div>
-      <div class="tool-card">
-        <h3>Certeza</h3>
-        <p>Onde versão, fonte ou aprovação quebram.</p>
-      </div>
-      <div class="tool-card">
-        <h3>Envio</h3>
-        <p>O que ainda precisa acontecer antes de mandar.</p>
+      <div>
+        <p style="font-size:15px;color:#32302C;line-height:1.6;margin-bottom:20px;">O diagnóstico mostra onde a certeza quebra antes do envio — sem pedir documentos, nomes de clientes ou acesso ao sistema.</p>
+        <a href="diagnostico-questionario.html" class="tool-btn tool-btn--primary" data-event="diagnostic_start_click">Mapear fluxo do time</a>
       </div>
     </div>
-    <div class="tool-section-cta">
-      <a href="diagnostico-questionario.html" class="allybi-btn allybi-btn--primary">Começar diagnóstico</a>
-      <small>Sem documentos. Sem nomes de clientes. Só fluxo.</small>
+  </div>
+</section>
+
+<!-- COMO O RESULTADO APARECE -->
+<section class="tool-section tool-section--alt" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>Você recebe um mapa do fluxo.</h2>
+      <p>O resultado mostra o atrito total, o maior gargalo e onde o Allybi reduziria o caminho.</p>
+    </div>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:840px;margin:0 auto;padding:0 24px;">
+      <div class="tool-card" style="text-align:center;"><h3 style="font-size:28px;letter-spacing:-.02em;">68/100</h3><p>Atrito no fluxo</p></div>
+      <div class="tool-card" style="text-align:center;"><h3 style="font-size:16px;">Fonte invisível</h3><p>Maior gargalo</p></div>
+      <div class="tool-card" style="text-align:center;"><h3 style="font-size:16px;">Resposta com fonte</h3><p>O que o Allybi reduziria</p></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;" class="allybi-reveal">
+      <a href="diagnostico-questionario.html" class="tool-btn tool-btn--primary" data-event="diagnostic_start_click">Ver meu diagnóstico</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMO USAR COM O TIME -->
+<section class="tool-section" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>Faça sozinho. Depois compare com o time.</h2>
+      <p>O diagnóstico funciona melhor quando mais de uma pessoa responde. Cada pessoa enxerga o caminho de um jeito.</p>
+    </div>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:0 auto;padding:0 24px;">
+      <div class="tool-card" style="text-align:center;">
+        <h3 style="font-size:32px;font-weight:700;color:#181818;margin-bottom:8px;">1</h3>
+        <h3>Responda em 1 minuto</h3>
+        <p>Sem enviar arquivos, sem nomes de clientes.</p>
+      </div>
+      <div class="tool-card" style="text-align:center;">
+        <h3 style="font-size:32px;font-weight:700;color:#181818;margin-bottom:8px;">2</h3>
+        <h3>Compartilhe o link</h3>
+        <p>Mande para quem também procura, confirma ou envia documentos.</p>
+      </div>
+      <div class="tool-card" style="text-align:center;">
+        <h3 style="font-size:32px;font-weight:700;color:#181818;margin-bottom:8px;">3</h3>
+        <h3>Compare o padrão</h3>
+        <p>Veja se o gargalo aparece em versão, fonte, envio ou dependência.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="allybi-reveal">
+      <a href="diagnostico-questionario.html" class="tool-btn tool-btn--primary" data-event="diagnostic_start_click">Começar diagnóstico</a>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE O ALLYBI REDUZ -->
+<section class="tool-section tool-section--alt" style="padding:clamp(64px,9vh,96px) 0;">
+  <div class="allybi-container">
+    <div class="tool-section__header allybi-reveal">
+      <h2>O Allybi reduz justamente onde o fluxo quebra.</h2>
+      <p>Conecte fontes, pergunte no chat, receba resposta com fonte e prepare o envio para revisar.</p>
+    </div>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px 20px;max-width:800px;margin:0 auto;align-items:center;padding:0 24px;">
+      <div style="padding:14px 18px;background:#fff;border:1px solid #E6E6EC;border-radius:12px;font-size:14px;color:#55534E;">Procurar em vários lugares</div>
+      <span style="font-size:18px;color:#E6E6EC;">→</span>
+      <div style="padding:14px 18px;background:#181818;border-radius:12px;font-size:14px;color:#fff;">Perguntar no chat</div>
+      <div style="padding:14px 18px;background:#fff;border:1px solid #E6E6EC;border-radius:12px;font-size:14px;color:#55534E;">Confirmar versão manualmente</div>
+      <span style="font-size:18px;color:#E6E6EC;">→</span>
+      <div style="padding:14px 18px;background:#181818;border-radius:12px;font-size:14px;color:#fff;">Comparar e ver fonte</div>
+      <div style="padding:14px 18px;background:#fff;border:1px solid #E6E6EC;border-radius:12px;font-size:14px;color:#55534E;">Depender de alguém lembrar</div>
+      <span style="font-size:18px;color:#E6E6EC;">→</span>
+      <div style="padding:14px 18px;background:#181818;border-radius:12px;font-size:14px;color:#fff;">Contexto visível</div>
+      <div style="padding:14px 18px;background:#fff;border:1px solid #E6E6EC;border-radius:12px;font-size:14px;color:#55534E;">Montar resposta do zero</div>
+      <span style="font-size:18px;color:#E6E6EC;">→</span>
+      <div style="padding:14px 18px;background:#181818;border-radius:12px;font-size:14px;color:#fff;">Mensagem preparada + revisão</div>
+    </div>
+    <div style="text-align:center;margin-top:40px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="allybi-reveal">
+      <a href="https://app.allybi.co/signup" class="tool-btn tool-btn--primary" data-event="diagnostic_trial_click">Começar grátis por 30 dias</a>
+      <a href="how-it-works.html" class="tool-btn tool-btn--secondary" data-event="diagnostic_how_it_works_click">Ver como funciona</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding:clamp(64px,9vh,96px) 0;background:#F5F5F5;">
+  <div class="allybi-container" style="text-align:center;">
+    <h2 class="allybi-reveal" style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:14px;text-wrap:balance;">Veja onde seu fluxo perde certeza.</h2>
+    <p class="allybi-reveal" style="font-size:16px;color:#6C6B6E;margin-bottom:32px;">São 6 perguntas rápidas. Nenhum arquivo é enviado.</p>
+    <div class="allybi-reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="diagnostico-questionario.html" class="tool-btn tool-btn--primary" data-event="diagnostic_start_click">Mapear fluxo do time</a>
+      <a href="metodologia.html" class="tool-btn tool-btn--secondary">Ver como calculamos</a>
     </div>
   </div>
 </section>
@@ -208,7 +298,6 @@
         <div class="footer-col-links">
           <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
         </div>
       </div>

@@ -35,7 +35,7 @@
   };
   const HOME_META = {
     en: {
-      title: 'Allybi — find answers with source and send with confirmation',
+      title: 'Allybi — find, confirm and send the right document',
       description: 'Connect Outlook, OneDrive, SharePoint and uploads. Ask in chat, get source-cited answers, and prepare email or WhatsApp with confirmation.',
       ogTitle: 'Allybi — source-cited answers, ready to send',
       ogDescription: 'A chat for finding, confirming, and sending the right document.',
@@ -43,7 +43,7 @@
       twitterDescription: 'Connect sources, ask in chat, get answers with source. Prepare email or WhatsApp with confirmation.'
     },
     pt: {
-      title: 'Allybi — encontre respostas com fonte e envie com confirmação',
+      title: 'Allybi — encontre, confirme e envie o documento certo',
       description: 'Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, receba resposta com fonte e prepare e-mail ou WhatsApp com confirmação.',
       ogTitle: 'Allybi — resposta com fonte, pronta para enviar',
       ogDescription: 'Um chat para encontrar, confirmar e enviar o documento certo.',

@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Preços — Allybi</title>
-  <meta name="description" content="30 dias grátis. Depois, R$170/mês. Um plano para perguntar aos seus documentos, conectar fontes e preparar envios com confirmação.">
+  <meta name="description" content="30 dias grátis. Depois R$170/mês. Um plano para encontrar, confirmar e enviar o documento certo — com fonte e revisão antes de qualquer envio.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Preços — Allybi">
   <meta property="og:description" content="30 dias grátis. Depois, R$170/mês. Um plano. Respostas com fonte, confirmação antes de enviar, seus dados não treinam modelos.">
@@ -54,7 +54,6 @@
         <div class="nav-dropdown-menu">
           <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
         </div>
       </div>
@@ -93,7 +92,6 @@
       <div class="mobile-dropdown-items">
         <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
         <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
         <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
       </div>
     </div>
@@ -110,150 +108,206 @@
 
 <main>
 
-<!-- HERO -->
-<section class="pricing-hero allybi-section">
-  <div class="allybi-container">
-    <div class="pricing-hero__inner allybi-reveal">
-      <span class="pricing-hero__eyebrow">Preços</span>
-      <h1 class="allybi-h1">30 dias grátis.<br>Depois, R$170/mês.</h1>
-      <p class="allybi-body-lg">Um plano para perguntar aos seus documentos, conectar fontes e preparar envios com confirmação.</p>
+<!-- ════════════════════════════════════════════════════════════
+     1. HERO + PRICING CARD — two columns, first viewport
+     ════════════════════════════════════════════════════════════ -->
+<section style="padding:clamp(120px,15vh,168px) 0 clamp(64px,9vh,96px);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,72px);align-items:start;" class="pricing-hero-grid">
+    <!-- Left: copy -->
+    <div class="allybi-reveal">
+      <span style="display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--allybi-accent);margin-bottom:20px;padding:6px 14px;background:var(--allybi-accent-subtle);border-radius:100px;border:1px solid var(--allybi-accent-muted);">Preços</span>
+      <h1 style="font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-.035em;line-height:1.04;color:#181818;margin-bottom:20px;text-wrap:balance;">30 dias grátis.<br>Depois R$170/mês.</h1>
+      <p style="font-size:clamp(16px,1.2vw,19px);color:#55534E;line-height:1.55;max-width:480px;margin-bottom:32px;">Um plano para encontrar, confirmar e enviar o documento certo — com fonte e revisão antes de qualquer envio.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
+        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="pricing_primary_cta_click">Começar grátis por 30 dias</a>
+        <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-event="pricing_secondary_cta_click">Ver como funciona</a>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#6C6B6E;font-weight:500;">
+        <span style="display:flex;align-items:center;gap:5px;"><span style="width:5px;height:5px;border-radius:50%;background:#34A853;"></span>Comece sem demo</span>
+        <span style="display:flex;align-items:center;gap:5px;"><span style="width:5px;height:5px;border-radius:50%;background:#34A853;"></span>Cancele quando quiser</span>
+        <span style="display:flex;align-items:center;gap:5px;"><span style="width:5px;height:5px;border-radius:50%;background:#34A853;"></span>Nada sai sem confirmação</span>
+      </div>
+    </div>
+    <!-- Right: pricing card -->
+    <div class="allybi-reveal" style="background:#fff;border:1px solid #E6E6EC;border-radius:24px;padding:36px 32px;box-shadow:0 8px 40px rgba(0,0,0,.06);">
+      <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:4px;">
+        <span style="font-size:13px;font-weight:600;color:#181818;">Allybi Pro</span>
+        <span style="font-size:11px;font-weight:600;color:#34A853;background:rgba(52,168,83,.08);padding:3px 10px;border-radius:100px;margin-left:8px;">30 dias grátis</span>
+      </div>
+      <div style="margin-bottom:20px;">
+        <span style="font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-.03em;color:#181818;">R$170</span>
+        <span style="font-size:16px;color:#6C6B6E;">/mês</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0;margin-bottom:24px;">
+        <div style="padding:14px 0;border-bottom:1px solid #E6E6EC;"><span style="font-size:13px;font-weight:600;color:#181818;">Conecte</span><span style="font-size:13px;color:#6C6B6E;margin-left:8px;">Outlook · OneDrive · SharePoint · Uploads</span></div>
+        <div style="padding:14px 0;border-bottom:1px solid #E6E6EC;"><span style="font-size:13px;font-weight:600;color:#181818;">Pergunte</span><span style="font-size:13px;color:#6C6B6E;margin-left:8px;">Chat com documentos, e-mails e fontes</span></div>
+        <div style="padding:14px 0;border-bottom:1px solid #E6E6EC;"><span style="font-size:13px;font-weight:600;color:#181818;">Confirme</span><span style="font-size:13px;color:#6C6B6E;margin-left:8px;">Resposta com fonte · comparação de versões</span></div>
+        <div style="padding:14px 0;border-bottom:1px solid #E6E6EC;"><span style="font-size:13px;font-weight:600;color:#181818;">Envie</span><span style="font-size:13px;color:#6C6B6E;margin-left:8px;">E-mail via Outlook · WhatsApp handoff · revisão</span></div>
+        <div style="padding:14px 0;"><span style="font-size:13px;font-weight:600;color:#181818;">Controle</span><span style="font-size:13px;color:#6C6B6E;margin-left:8px;">Permissões · documentos não treinam modelos<!-- TODO: confirm no-training with legal --></span></div>
+      </div>
+      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" style="width:100%;" data-event="pricing_plan_cta_click">Começar grátis por 30 dias</a>
+      <p style="font-size:13px;color:#6C6B6E;text-align:center;margin-top:12px;">Depois do teste, R$170/mês. Cancele quando quiser.</p>
     </div>
   </div>
 </section>
 
-<!-- PRICING CARD -->
-<section class="pricing-included allybi-section" style="background-color:var(--allybi-bg-alt-1)">
+<!-- ════════════════════════════════════════════════════════════
+     2. WHAT'S INCLUDED
+     ════════════════════════════════════════════════════════════ -->
+<section class="allybi-section" style="background:#F5F5F5;padding:clamp(80px,10vh,112px) 0;">
   <div class="allybi-container">
-    <div class="pricing-card allybi-reveal">
-      <h2 class="allybi-h2" style="margin-bottom:8px">Allybi Pro</h2>
-      <div class="pricing-card__price">
-        <span class="pricing-card__amount">R$170</span>
-        <span class="pricing-card__period">/mês</span>
-      </div>
-      <p class="pricing-card__trial">30 dias grátis</p>
-
-      <!-- Grouped benefits -->
-      <div class="pricing-benefits">
-
-        <!-- Group 1: Conecte -->
-        <div class="pricing-benefit-group">
-          <h3 class="pricing-benefit-group__title">Conecte</h3>
-          <ul class="pricing-benefit-group__list">
-            <li>Outlook</li>
-            <li>OneDrive</li>
-            <li>SharePoint</li>
-            <li>Uploads</li>
-          </ul>
-        </div>
-
-        <!-- Group 2: Pergunte -->
-        <div class="pricing-benefit-group">
-          <h3 class="pricing-benefit-group__title">Pergunte</h3>
-          <ul class="pricing-benefit-group__list">
-            <li>Chat com documentos e fontes conectadas</li>
-            <li>Respostas com fonte</li>
-            <li>Comparação de versões</li>
-          </ul>
-        </div>
-
-        <!-- Group 3: Envie -->
-        <div class="pricing-benefit-group">
-          <h3 class="pricing-benefit-group__title">Envie</h3>
-          <ul class="pricing-benefit-group__list">
-            <li>E-mail via Outlook com confirmação</li>
-            <li>WhatsApp handoff com revisão</li>
-            <li>Nada sai sem sua aprovação</li>
-          </ul>
-        </div>
-
-        <!-- Group 4: Controle -->
-        <div class="pricing-benefit-group">
-          <h3 class="pricing-benefit-group__title">Controle</h3>
-          <ul class="pricing-benefit-group__list">
-            <li>Workspaces isolados</li>
-            <li>Permissões de integração</li>
-            <li>Seus documentos não treinam modelos</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" style="width:100%">Começar grátis por 30 dias</a>
-      <p class="pricing-card__note">Sem freemium. Depois do teste, R$170/mês. Cancele quando quiser.</p>
-      <p style="font-size:14px;margin-top:12px"><a href="contact.html" style="color:var(--allybi-text-secondary);text-decoration:underline">Falar com vendas</a></p>
+    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
+      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;text-wrap:balance;">Tudo que entra no fluxo do Allybi Pro.</h2>
+      <p style="font-size:16px;color:#6C6B6E;">Não é só buscar arquivo. É encontrar, confirmar, preparar e revisar antes de enviar.</p>
+    </div>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:1100px;margin:0 auto;">
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;">Fontes conectadas</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;">Outlook, OneDrive, SharePoint e uploads no mesmo chat.</p></div>
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;">Linguagem normal</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;">Pergunte como falaria com alguém do time.</p></div>
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;">Resposta com fonte</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;">Arquivo, trecho, página ou data quando disponível.</p></div>
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;">Versão e contexto</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;">Compare arquivos e veja o que mudou.</p></div>
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;">Envio com revisão</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;">E-mail ou WhatsApp handoff. Você revisa antes.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SUPPORTED FORMATS -->
-<section class="pricing-formats allybi-section" style="background-color:var(--allybi-bg-page)">
+<!-- ════════════════════════════════════════════════════════════
+     3. SOURCES, UPLOADS AND SENDS
+     ════════════════════════════════════════════════════════════ -->
+<section class="allybi-section" style="padding:clamp(80px,10vh,112px) 0;">
   <div class="allybi-container">
-    <div class="allybi-section-header allybi-reveal">
-      <h2 class="allybi-h2">Formatos suportados</h2>
+    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
+      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;text-wrap:balance;">Fontes entram. Envios saem com revisão.</h2>
+      <p style="font-size:16px;color:#6C6B6E;max-width:560px;margin:0 auto;">O Allybi busca nas fontes conectadas ou nos arquivos enviados. Depois prepara a mensagem para você revisar.</p>
     </div>
-    <div class="pricing-formats__grid allybi-reveal allybi-stagger">
-      <div class="pricing-formats__card">
-        <h3>Documentos</h3>
-        <p>PDF, DOC, DOCX</p>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;max-width:1000px;margin:0 auto;">
+      <!-- Sources -->
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:18px;padding:28px 24px;">
+        <h3 style="font-size:15px;font-weight:700;color:#181818;margin-bottom:16px;">Fontes conectadas</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:#32302C;"><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20"> Outlook</span>
+          <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:#32302C;"><img src="assets/images/onedrive-icon.svg" alt="" width="20" height="20"> OneDrive</span>
+          <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:#32302C;"><img src="assets/images/sharepoint-icon.svg" alt="" width="20" height="20"> SharePoint</span>
+        </div>
       </div>
-      <div class="pricing-formats__card">
-        <h3>Apresentações</h3>
-        <p>PPT, PPTX</p>
+      <!-- Uploads -->
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:18px;padding:28px 24px;">
+        <h3 style="font-size:15px;font-weight:700;color:#181818;margin-bottom:16px;">Uploads</h3>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#6C6B6E;">
+          <span>Documentos — PDF, DOC, DOCX</span>
+          <span>Apresentações — PPT, PPTX</span>
+          <span>Planilhas — XLS, XLSX</span>
+          <span>Imagens — JPG, PNG</span>
+          <span>Mídia — MP3, MP4</span>
+        </div>
       </div>
-      <div class="pricing-formats__card">
-        <h3>Planilhas</h3>
-        <p>XLS, XLSX</p>
-      </div>
-      <div class="pricing-formats__card">
-        <h3>Imagens</h3>
-        <p>JPG, JPEG, PNG</p>
-      </div>
-      <div class="pricing-formats__card">
-        <h3>Mídia</h3>
-        <p>MP3, MP4</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW TO START -->
-<section class="pricing-rollout allybi-section" style="background-color:var(--allybi-bg-alt-1)">
-  <div class="allybi-container">
-    <div class="allybi-section-header allybi-reveal">
-      <h2 class="allybi-h2">Como começar</h2>
-    </div>
-    <div class="pricing-rollout__steps allybi-reveal allybi-stagger">
-      <div class="pricing-rollout__step">
-        <div class="pricing-rollout__step-num">1</div>
-        <h3>Crie sua conta</h3>
-      </div>
-      <div class="pricing-rollout__step">
-        <div class="pricing-rollout__step-num">2</div>
-        <h3>Conecte uma fonte ou suba arquivos</h3>
-      </div>
-      <div class="pricing-rollout__step">
-        <div class="pricing-rollout__step-num">3</div>
-        <h3>Faça uma pergunta no chat</h3>
-      </div>
-      <div class="pricing-rollout__step">
-        <div class="pricing-rollout__step-num">4</div>
-        <h3>Revise antes de enviar</h3>
+      <!-- Sends -->
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:18px;padding:28px 24px;">
+        <h3 style="font-size:15px;font-weight:700;color:#181818;margin-bottom:16px;">Envios</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div><span style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#32302C;"><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20"> E-mail via Outlook</span><p style="font-size:12px;color:#6C6B6E;margin:4px 0 0 28px;">Prepara e envia com confirmação.</p></div>
+          <div><span style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#32302C;"><img src="assets/images/whatsapp-icon.svg" alt="" width="20" height="20"> WhatsApp handoff</span><p style="font-size:12px;color:#6C6B6E;margin:4px 0 0 28px;">Prepara e abre para você revisar e mandar.</p></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="pricing-cta">
+<!-- ════════════════════════════════════════════════════════════
+     4. HOW TO START — 5 steps
+     ════════════════════════════════════════════════════════════ -->
+<section class="allybi-section" style="background:#F5F5F5;padding:clamp(80px,10vh,112px) 0;">
   <div class="allybi-container">
-    <div class="pricing-cta__inner allybi-reveal">
-      <h2>Veja uma resposta com fonte em minutos.</h2>
-      <p>Conecte uma fonte ou suba um arquivo. O Allybi encontra, confirma e prepara o envio.</p>
-      <div class="pricing-cta__btns">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-magnetic="0.2">Começar grátis por 30 dias</a>
-        <a href="contact.html" class="allybi-btn allybi-btn--secondary-inverse">Falar com vendas</a>
+    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
+      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;">Como começar</h2>
+      <p style="font-size:16px;color:#6C6B6E;">Do primeiro login ao primeiro envio revisado em poucos minutos.</p>
+    </div>
+    <div class="allybi-reveal" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">1</div>
+        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;">Crie sua conta</h3>
+        <p style="font-size:12px;color:#6C6B6E;">Comece o teste de 30 dias.</p>
+      </div>
+      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">2</div>
+        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;">Conecte ou suba</h3>
+        <p style="font-size:12px;color:#6C6B6E;">Outlook, OneDrive, SharePoint ou uploads.</p>
+      </div>
+      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">3</div>
+        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;">Pergunte no chat</h3>
+        <p style="font-size:12px;color:#6C6B6E;">Em linguagem normal.</p>
+      </div>
+      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">4</div>
+        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;">Receba com fonte</h3>
+        <p style="font-size:12px;color:#6C6B6E;">Veja a resposta e de onde veio.</p>
+      </div>
+      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">5</div>
+        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;">Revise e envie</h3>
+        <p style="font-size:12px;color:#6C6B6E;">E-mail sai pelo Outlook. WhatsApp abre como handoff.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     5. FAQ
+     ════════════════════════════════════════════════════════════ -->
+<section class="allybi-section" style="padding:clamp(80px,10vh,112px) 0;">
+  <div class="allybi-container">
+    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
+      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;">Perguntas comuns</h2>
+    </div>
+    <div class="allybi-accordion allybi-reveal" style="max-width:860px;margin:0 auto;">
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false" data-event="pricing_faq_open"><span>O que acontece depois dos 30 dias?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>Depois do teste, o plano passa a custar R$170/mês. Você pode cancelar quando quiser.</p></div>
+      </div>
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false"><span>Preciso fazer demo para começar?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>Não. O teste é self-serve. Você pode começar conectando uma fonte ou subindo arquivos.</p></div>
+      </div>
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false"><span>O que está incluído no Allybi Pro?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>Fontes conectadas, uploads, chat com documentos/e-mails/anexos, respostas com fonte, comparação de versões, preparação de e-mail via Outlook e WhatsApp handoff com revisão.</p></div>
+      </div>
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false"><span>O Allybi envia mensagens sozinho?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>Não. Nada sai sem confirmação. E-mails via Outlook passam por revisão. No WhatsApp, o Allybi prepara a mensagem e abre o handoff para você revisar e mandar.</p></div>
+      </div>
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false"><span>O Allybi lê meu WhatsApp?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>Não. WhatsApp é handoff de envio. O Allybi não lê, pesquisa ou sincroniza sua caixa de WhatsApp.</p></div>
+      </div>
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false"><span>Quais formatos posso subir?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, JPG, JPEG, PNG, MP3 e MP4.</p></div>
+      </div>
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false"><span>Posso cancelar?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>Sim. Você pode cancelar quando quiser.</p></div>
+      </div>
+      <div class="allybi-accordion__item">
+        <button class="allybi-accordion__trigger" aria-expanded="false"><span>Existe plano gratuito?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <div class="allybi-accordion__content"><p>O teste gratuito dura 30 dias. Depois, o plano é R$170/mês.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     6. FINAL CTA
+     ════════════════════════════════════════════════════════════ -->
+<section style="padding:clamp(80px,10vh,128px) 0;background:#0B0D0E;color:#fff;">
+  <div class="allybi-container" style="text-align:center;">
+    <h2 class="allybi-reveal" style="font-size:clamp(24px,3vw,40px);font-weight:700;margin-bottom:14px;text-wrap:balance;">Comece com um fluxo real.</h2>
+    <p class="allybi-reveal" style="font-size:16px;color:rgba(255,255,255,.55);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;">Conecte uma fonte ou suba um arquivo. Pergunte no chat, receba resposta com fonte e revise antes de enviar.</p>
+    <div class="allybi-reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="pricing_final_cta_click">Começar grátis por 30 dias</a>
+      <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary-inverse">Ver como funciona</a>
+    </div>
+    <p class="allybi-reveal" style="font-size:13px;color:rgba(255,255,255,.4);margin-top:16px;">Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </section>
 
@@ -289,7 +343,6 @@
         <div class="footer-col-links">
           <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
         </div>
       </div>
@@ -345,6 +398,10 @@
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script>
+// FAQ accordion
+document.querySelectorAll('.allybi-accordion__trigger').forEach(function(btn){btn.addEventListener('click',function(){var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);var content=btn.nextElementSibling;if(!expanded){content.style.maxHeight=content.scrollHeight+'px'}else{content.style.maxHeight='0'}})});
+</script>
 
 </body>
 </html>

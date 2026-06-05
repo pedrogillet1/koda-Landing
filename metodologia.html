@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Metodologia — Índice Allybi da Calculadora e Diagnóstico</title>
-  <meta name="description" content="Como calculamos a Calculadora e o Diagnóstico. Fontes, fórmulas, faixas, privacidade e critérios de amostra.">
+  <title>Metodologia — Como calculamos tempo perdido e atrito no fluxo | Allybi</title>
+  <meta name="description" content="Entenda como a Calculadora do Tempo Perdido e o Diagnóstico do Fluxo estimam tempo, atrito e gargalos sem pedir documentos, nomes de clientes ou acesso às ferramentas.">
+  <link rel="canonical" href="https://allybi.com.br/metodologia.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,143 +18,139 @@
   <link rel="stylesheet" href="allybi-footer.css">
   <link rel="stylesheet" href="allybi-responsive.css">
   <style>
-    .met-hero { padding: 160px 0 80px; text-align: center; }
-    .met-hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.03em; color: var(--allybi-text-strongest); margin-bottom: 20px; text-wrap: balance; }
-    .met-hero p { font-size: 17px; color: var(--allybi-text-secondary); max-width: 680px; margin: 0 auto; line-height: 1.6; }
+    /* ── Hero ── */
+    .met-hero { padding: 160px 0 96px; text-align: center; }
+    .met-hero__eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--allybi-text-muted, #6C6B6E); margin-bottom: 16px; }
+    .met-hero h1 { font-size: clamp(32px, 4.5vw, 52px); font-weight: 700; letter-spacing: -0.03em; color: #181818; margin-bottom: 20px; text-wrap: balance; line-height: 1.1; }
+    .met-hero__sub { font-size: 17px; color: var(--allybi-text-secondary, #55534E); max-width: 640px; margin: 0 auto 32px; line-height: 1.6; }
+    .met-hero__ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .met-hero__trust { font-size: 13px; color: var(--allybi-text-muted, #6C6B6E); letter-spacing: 0.02em; }
+    .met-hero__card { max-width: 480px; margin: 48px auto 0; padding: 28px 32px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; text-align: left; }
+    .met-hero__card-title { font-size: 15px; font-weight: 700; color: #181818; margin-bottom: 16px; }
+    .met-hero__card-flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--allybi-text-secondary, #55534E); margin-bottom: 20px; }
+    .met-hero__card-flow span { padding: 5px 12px; background: #F5F5F5; border-radius: 6px; white-space: nowrap; }
+    .met-hero__card-flow .met-arrow { background: none; padding: 0; color: #6C6B6E; }
+    .met-hero__card-tools { display: flex; gap: 16px; margin-bottom: 12px; }
+    .met-hero__card-tool { flex: 1; padding: 12px 16px; background: #F5F5F5; border-radius: 10px; }
+    .met-hero__card-tool strong { display: block; font-size: 13px; font-weight: 700; color: #181818; margin-bottom: 2px; }
+    .met-hero__card-tool span { font-size: 12px; color: #6C6B6E; }
+    .met-hero__card-note { font-size: 12px; color: #6C6B6E; font-style: italic; }
 
-    .met-intro {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 0 48px;
-    }
-    .met-intro h2 {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--allybi-text-strongest);
-      margin-bottom: 12px;
-    }
-    .met-intro p {
-      font-size: 15px;
-      color: var(--allybi-text-secondary);
-      line-height: 1.7;
-    }
+    /* ── Section base ── */
+    .met-section { padding: 96px 0; }
+    .met-section .allybi-container { max-width: 1140px; }
+    .met-section__title { font-size: clamp(24px, 3.5vw, 36px); font-weight: 700; color: #181818; letter-spacing: -0.02em; margin-bottom: 12px; text-align: center; text-wrap: balance; }
+    .met-section__sub { font-size: 16px; color: var(--allybi-text-secondary, #55534E); max-width: 640px; margin: 0 auto 48px; line-height: 1.6; text-align: center; }
 
-    .met-sections { padding: 0 0 var(--allybi-section-py); }
-    .met-sections .allybi-container { max-width: 760px; }
+    /* ── Two tools cards ── */
+    .met-tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 960px; margin: 0 auto; }
+    .met-tool-card { padding: 36px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; display: flex; flex-direction: column; }
+    .met-tool-card__badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; background: #F5F5F5; color: #6C6B6E; margin-bottom: 16px; width: fit-content; }
+    .met-tool-card h3 { font-size: 20px; font-weight: 700; color: #181818; margin-bottom: 10px; letter-spacing: -0.01em; }
+    .met-tool-card__promise { font-size: 15px; color: var(--allybi-text-secondary, #55534E); line-height: 1.6; margin-bottom: 20px; }
+    .met-tool-card__list { list-style: none; padding: 0; margin: 0 0 20px; }
+    .met-tool-card__list li { font-size: 13px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; padding: 4px 0 4px 16px; position: relative; }
+    .met-tool-card__list li::before { content: ''; position: absolute; left: 0; top: 11px; width: 5px; height: 5px; border-radius: 50%; background: #d0d0d0; }
+    .met-tool-card__result { padding: 12px 16px; background: #F5F5F5; border-radius: 8px; font-size: 13px; color: #181818; font-weight: 500; margin-bottom: 24px; }
+    .met-tool-card .allybi-btn { margin-top: auto; }
 
-    .met-card {
-      padding: 32px;
-      background: var(--allybi-bg-surface);
-      border: 1px solid var(--allybi-border-default);
-      border-radius: var(--allybi-radius-card);
-      margin-bottom: 20px;
-    }
-    .met-card h2 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--allybi-text-strongest);
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
-    }
-    .met-card p {
-      font-size: 15px;
-      color: var(--allybi-text-secondary);
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-    .met-card p:last-child { margin-bottom: 0; }
-    .met-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 12px;
-    }
-    .met-card ul li {
-      font-size: 14px;
-      color: var(--allybi-text-secondary);
-      line-height: 1.6;
-      padding: 6px 0 6px 20px;
-      position: relative;
-    }
-    .met-card ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 14px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--allybi-border-default, #d0d0d0);
-    }
-    .met-card code {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 13px;
-      background: var(--allybi-bg-alt-1, #f5f5f5);
-      padding: 3px 8px;
-      border-radius: 4px;
-      color: var(--allybi-text-strongest);
-    }
-    .met-card .met-formula {
-      padding: 16px 20px;
-      background: var(--allybi-bg-alt-1, #f5f5f5);
-      border-radius: 8px;
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 14px;
-      color: var(--allybi-text-strongest);
-      margin: 12px 0;
-      text-align: center;
-      line-height: 1.6;
-    }
-    .met-card .met-bands {
-      margin: 12px 0;
-      padding: 0;
-    }
-    .met-card .met-bands li {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 13px;
-    }
-    .met-card .met-flow {
-      padding: 16px 20px;
-      background: var(--allybi-bg-alt-1, #f5f5f5);
-      border-radius: 8px;
-      font-size: 14px;
-      color: var(--allybi-text-strongest);
-      margin: 12px 0;
-      text-align: center;
-      line-height: 1.8;
-    }
+    /* ── Scenario card ── */
+    .met-scenario { max-width: 860px; margin: 0 auto; padding: 40px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
+    .met-scenario__grid { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: start; }
+    .met-scenario__path-label { font-size: 13px; font-weight: 600; color: #181818; margin-bottom: 12px; }
+    .met-scenario__path { display: flex; flex-direction: column; gap: 0; }
+    .met-scenario__step { font-size: 14px; color: var(--allybi-text-secondary, #55534E); padding: 8px 16px; position: relative; }
+    .met-scenario__step::before { content: ''; position: absolute; left: 4px; top: 0; bottom: 0; width: 1px; background: #E6E6EC; }
+    .met-scenario__step:first-child::before { top: 50%; }
+    .met-scenario__step:last-child::before { bottom: 50%; }
+    .met-scenario__step--yellow { color: #856404; background: #FFF8E1; border-radius: 6px; font-weight: 500; }
+    .met-scenario__copy { font-size: 15px; color: var(--allybi-text-secondary, #55534E); line-height: 1.7; }
+    .met-scenario__trust { font-size: 13px; color: #6C6B6E; margin-top: 16px; font-style: italic; }
 
-    .met-microcopy {
-      font-size: 12px !important;
-      color: var(--allybi-text-muted) !important;
-      font-style: italic;
-      margin-top: 8px;
-    }
+    /* ── Three columns ── */
+    .met-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+    .met-3col-card { padding: 32px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
+    .met-3col-card h3 { font-size: 17px; font-weight: 700; color: #181818; margin-bottom: 16px; }
+    .met-3col-card ul { list-style: none; padding: 0; margin: 0; }
+    .met-3col-card ul li { font-size: 14px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; padding: 5px 0 5px 16px; position: relative; }
+    .met-3col-card ul li::before { content: ''; position: absolute; left: 0; top: 12px; width: 5px; height: 5px; border-radius: 50%; background: #d0d0d0; }
 
-    .met-inline-ctas {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-    @media (min-width: 769px) {
-      .met-inline-ctas { margin-top: 40px; }
-    }
+    /* ── Formula section ── */
+    .met-formula-card { max-width: 860px; margin: 0 auto; padding: 40px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
+    .met-formula-main { padding: 20px 24px; background: #F5F5F5; border-radius: 10px; font-size: 16px; font-weight: 600; color: #181818; text-align: center; margin-bottom: 24px; letter-spacing: -0.01em; }
+    .met-formula-sub { font-size: 14px; color: var(--allybi-text-secondary, #55534E); margin-bottom: 24px; }
+    .met-inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .met-input-item { padding: 16px; background: #F5F5F5; border-radius: 10px; }
+    .met-input-item strong { display: block; font-size: 14px; font-weight: 700; color: #181818; margin-bottom: 4px; }
+    .met-input-item span { font-size: 13px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; }
+    .met-formula-expand { width: 100%; padding: 14px; border: 1px solid #E6E6EC; border-radius: 10px; background: #fff; font-size: 14px; font-weight: 600; color: #181818; cursor: pointer; text-align: center; transition: background 0.15s; }
+    .met-formula-expand:hover { background: #F5F5F5; }
+    .met-formula-detail { display: none; margin-top: 16px; padding: 20px 24px; background: #F5F5F5; border-radius: 10px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; color: #181818; line-height: 1.8; }
+    .met-formula-detail.is-open { display: block; }
+    .met-formula-note { font-size: 13px; color: #6C6B6E; margin-top: 16px; font-style: italic; }
+
+    /* ── Dimensions ── */
+    .met-dimensions { max-width: 860px; margin: 0 auto; }
+    .met-dim-card { padding: 20px 24px; background: #fff; border: 1px solid #E6E6EC; border-radius: 12px; margin-bottom: 12px; display: grid; grid-template-columns: 200px 1fr; gap: 16px; align-items: center; }
+    .met-dim-card strong { font-size: 14px; font-weight: 700; color: #181818; }
+    .met-dim-card p { font-size: 13px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; margin: 0; }
+    .met-dim-bar { height: 6px; background: #E6E6EC; border-radius: 3px; margin-top: 8px; overflow: hidden; }
+    .met-dim-bar span { display: block; height: 100%; border-radius: 3px; background: #181818; transition: width 0.6s cubic-bezier(.22,1,.36,1); }
+    .met-scoring-note { text-align: center; font-size: 15px; color: #181818; font-weight: 600; margin-top: 24px; padding: 16px; background: #F5F5F5; border-radius: 10px; max-width: 860px; margin-left: auto; margin-right: auto; }
+
+    /* ── Result bands ── */
+    .met-results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 960px; margin: 0 auto; }
+    .met-result-col h3 { font-size: 18px; font-weight: 700; color: #181818; margin-bottom: 8px; }
+    .met-result-col__sub { font-size: 13px; color: #6C6B6E; margin-bottom: 20px; }
+    .met-band { padding: 14px 18px; border-left: 3px solid #E6E6EC; margin-bottom: 8px; }
+    .met-band strong { display: block; font-size: 14px; color: #181818; margin-bottom: 2px; }
+    .met-band span { font-size: 13px; color: var(--allybi-text-secondary, #55534E); }
+
+    /* ── Privacy cards ── */
+    .met-privacy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; }
+    .met-priv-card { padding: 28px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
+    .met-priv-card h3 { font-size: 15px; font-weight: 700; color: #181818; margin-bottom: 8px; }
+    .met-priv-card p { font-size: 14px; color: var(--allybi-text-secondary, #55534E); line-height: 1.6; margin: 0; }
+    .met-legal-micro { text-align: center; font-size: 12px; color: #6C6B6E; font-style: italic; margin-top: 24px; max-width: 640px; margin-left: auto; margin-right: auto; }
+
+    /* ── Before/After ── */
+    .met-ba-grid { max-width: 860px; margin: 0 auto; }
+    .met-ba-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid #F5F5F5; }
+    .met-ba-row:last-child { border-bottom: none; }
+    .met-ba-manual { font-size: 14px; color: var(--allybi-text-secondary, #55534E); text-align: right; }
+    .met-ba-arrow { font-size: 16px; color: #d0d0d0; }
+    .met-ba-allybi { font-size: 14px; font-weight: 600; color: #181818; }
+
+    /* ── FAQ ── */
+    .met-faq { max-width: 720px; margin: 0 auto; }
+    .met-faq-item { border-bottom: 1px solid #E6E6EC; }
+    .met-faq-item:first-child { border-top: 1px solid #E6E6EC; }
+    .met-faq-q { width: 100%; padding: 20px 0; border: none; background: none; font-size: 15px; font-weight: 600; color: #181818; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .met-faq-q::after { content: '+'; font-size: 20px; font-weight: 400; color: #6C6B6E; flex-shrink: 0; transition: transform 0.2s; }
+    .met-faq-q[aria-expanded="true"]::after { content: '\2212'; }
+    .met-faq-a { display: none; padding: 0 0 20px; font-size: 14px; color: var(--allybi-text-secondary, #55534E); line-height: 1.7; }
+    .met-faq-a.is-open { display: block; }
+
+    /* ── Responsive ── */
     @media (max-width: 768px) {
-      .met-inline-ctas { margin-top: 28px; }
+      .met-hero { padding: 120px 0 64px; }
+      .met-section { padding: 64px 0; }
+      .met-tools-grid { grid-template-columns: 1fr; }
+      .met-3col { grid-template-columns: 1fr; max-width: 480px; }
+      .met-scenario__grid { grid-template-columns: 1fr; }
+      .met-inputs-grid { grid-template-columns: 1fr; }
+      .met-dim-card { grid-template-columns: 1fr; }
+      .met-results-grid { grid-template-columns: 1fr; }
+      .met-privacy-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .met-ba-row { grid-template-columns: 1fr; gap: 4px; text-align: left; }
+      .met-ba-manual { text-align: left; color: #6C6B6E; }
+      .met-ba-arrow { display: none; }
+      .met-hero__card-tools { flex-direction: column; }
     }
     @media (max-width: 480px) {
-      .met-inline-ctas { flex-direction: column; align-items: stretch; text-align: center; }
-    }
-
-    .met-cta-section { padding: var(--allybi-section-py) 0; text-align: center; }
-    .met-cta-section .met-cta__buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-    @media (max-width: 768px) {
-      .met-hero { padding: 120px 0 48px; }
-      .met-card { padding: 24px; }
-    }
-    @media (max-width: 480px) {
-      .met-cta-section .met-cta__buttons { flex-direction: column; align-items: center; }
+      .met-hero__ctas { flex-direction: column; align-items: center; }
+      .met-hero__ctas .allybi-btn { width: 100%; max-width: 320px; justify-content: center; }
+      .met-hero__card-flow { justify-content: center; }
     }
   </style>
 </head>
@@ -185,7 +182,6 @@
         <div class="nav-dropdown-menu">
           <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
         </div>
       </div>
@@ -224,7 +220,6 @@
       <div class="mobile-dropdown-items">
         <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
         <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="indice.html" data-i18n-key="nav.indice">Allybi Index</a>
         <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
       </div>
     </div>
@@ -241,113 +236,416 @@
 
 <main>
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════════════════════════════════
+     1. HERO
+     ═══════════════════════════════════════════════════════════════ -->
 <section class="met-hero">
   <div class="allybi-container">
-    <h1>Como calculamos a Calculadora<br>e o Diagnóstico do Fluxo</h1>
-    <p>A metodologia é simples: estimamos tempo perdido individual e atrito do time entre pedir, encontrar, confirmar e enviar.</p>
+    <p class="met-hero__eyebrow allybi-reveal">Metodologia</p>
+    <h1 class="allybi-reveal">Como medimos tempo perdido e atrito no fluxo.</h1>
+    <p class="met-hero__sub allybi-reveal">A Calculadora estima o tempo individual. O Diagnóstico mapeia onde o time perde certeza. Nenhum arquivo é pedido.</p>
+    <div class="met-hero__ctas allybi-reveal">
+      <a href="tempo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="methodology_calculator_cta_click">Calcular meu tempo</a>
+      <a href="diagnostico.html" class="allybi-btn allybi-btn--secondary allybi-btn--lg" data-event="methodology_diagnostic_cta_click">Mapear fluxo do time</a>
+    </div>
+    <p class="met-hero__trust allybi-reveal">sem enviar arquivos · sem nomes de clientes · resultado na hora</p>
+
+    <div class="met-hero__card allybi-reveal" data-event="methodology_view">
+      <p class="met-hero__card-title">Dois testes. Uma lógica.</p>
+      <div class="met-hero__card-flow">
+        <span>Perguntas simples</span>
+        <span class="met-arrow">&rarr;</span>
+        <span>Estimativa</span>
+        <span class="met-arrow">&rarr;</span>
+        <span>Gargalo</span>
+        <span class="met-arrow">&rarr;</span>
+        <span>Caminho que o Allybi reduz</span>
+      </div>
+      <div class="met-hero__card-tools">
+        <div class="met-hero__card-tool">
+          <strong>Calculadora</strong>
+          <span>tempo por mês</span>
+        </div>
+        <div class="met-hero__card-tool">
+          <strong>Diagnóstico</strong>
+          <span>atrito no fluxo</span>
+        </div>
+      </div>
+      <p class="met-hero__card-note">Estimativa, não auditoria.</p>
+    </div>
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="met-intro">
+<!-- ═══════════════════════════════════════════════════════════════
+     2. TWO TOOLS, TWO PURPOSES
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section" style="background:#FAFAF8">
   <div class="allybi-container">
-    <h2>Por que isso existe?</h2>
-    <p>Toda equipe tem informação espalhada. O custo aparece quando alguém precisa procurar, confirmar versão, encontrar fonte, preparar resposta e enviar sem erro. A Calculadora e o Diagnóstico tornam esse custo visível sem pedir documentos, login ou dados sensíveis.</p>
+    <h2 class="met-section__title allybi-reveal">Dois testes. Dois tipos de resposta.</h2>
+    <p class="met-section__sub allybi-reveal">Um mede o tempo que some no seu fluxo. O outro mostra onde o time perde certeza.</p>
+    <div class="met-tools-grid">
+      <div class="met-tool-card allybi-reveal">
+        <span class="met-tool-card__badge">Individual</span>
+        <h3>Calculadora do Tempo Perdido</h3>
+        <p class="met-tool-card__promise">Estima quantas horas por mês vão embora entre procurar, confirmar e preparar o envio.</p>
+        <ul class="met-tool-card__list">
+          <li>Frequência semanal</li>
+          <li>Lugares onde você procura</li>
+          <li>Tempo médio até achar algo útil</li>
+          <li>Etapas depois que o arquivo aparece</li>
+          <li>Maior gargalo</li>
+        </ul>
+        <div class="met-tool-card__result">h/mês · gargalo principal · onde o Allybi reduziria</div>
+        <a href="tempo.html" class="allybi-btn allybi-btn--primary" data-event="methodology_calculator_cta_click">Calcular meu tempo</a>
+      </div>
+      <div class="met-tool-card allybi-reveal">
+        <span class="met-tool-card__badge">Time</span>
+        <h3>Diagnóstico do Fluxo</h3>
+        <p class="met-tool-card__promise">Mapeia onde o caminho perde certeza entre o pedido e o envio.</p>
+        <ul class="met-tool-card__list">
+          <li>Origem do pedido</li>
+          <li>Primeiro lugar onde o time procura</li>
+          <li>Onde a informação costuma estar</li>
+          <li>Como a versão é confirmada</li>
+          <li>O que trava antes do envio</li>
+          <li>Erro mais caro</li>
+        </ul>
+        <div class="met-tool-card__result">score 0–100 · maior atrito · etapa que o Allybi reduziria</div>
+        <a href="diagnostico.html" class="allybi-btn allybi-btn--primary" data-event="methodology_diagnostic_cta_click">Mapear fluxo do time</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- SECTIONS -->
-<section class="met-sections">
+<!-- ═══════════════════════════════════════════════════════════════
+     3. WHY THIS EXISTS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section">
   <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">O custo não aparece quando o arquivo abre.</h2>
+    <p class="met-section__sub allybi-reveal">Ele aparece no caminho inteiro: procurar, confirmar versão, achar fonte, preparar contexto e enviar sem erro.</p>
 
-    <!-- 1. O que medimos -->
-    <div class="met-card">
-      <h2>O que medimos</h2>
-      <ul>
-        <li>Quantidade de lugares abertos para encontrar informação.</li>
-        <li>Tempo médio para achar ou confirmar um arquivo.</li>
-        <li>Dúvida sobre versão correta.</li>
-        <li>Procura por fonte, aprovação ou contexto.</li>
-        <li>Esforço de preparar resposta e envio.</li>
-        <li>Retrabalho causado por versão errada ou informação desatualizada.</li>
-      </ul>
-      <p>Fontes consideradas: Outlook, OneDrive, SharePoint, uploads, e-mails, anexos e pastas.</p>
+    <div class="met-scenario allybi-reveal">
+      <div class="met-scenario__grid">
+        <div>
+          <p class="met-scenario__path-label">"qual versão eu mando?"</p>
+          <div class="met-scenario__path">
+            <div class="met-scenario__step">Pedido</div>
+            <div class="met-scenario__step">Procurar</div>
+            <div class="met-scenario__step met-scenario__step--yellow">Versão?</div>
+            <div class="met-scenario__step met-scenario__step--yellow">Fonte?</div>
+            <div class="met-scenario__step met-scenario__step--yellow">Contexto?</div>
+            <div class="met-scenario__step">Envio</div>
+          </div>
+        </div>
+        <div>
+          <p class="met-scenario__copy">Cada etapa parece pequena. Repetida toda semana, vira tempo perdido, atraso e risco de enviar errado.</p>
+          <p class="met-scenario__trust">Por isso os testes perguntam sobre o fluxo, não sobre documentos reais.</p>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- 2. O que não pedimos -->
-    <div class="met-card">
-      <h2>O que não pedimos</h2>
-      <ul>
-        <li>Documentos reais.</li>
-        <li>Nomes de clientes.</li>
-        <li>CPFs, CNPJs ou dados sensíveis.</li>
-        <li>Valores financeiros reais.</li>
-        <li>Acesso a ferramentas.</li>
-        <li>Login para responder.</li>
-      </ul>
+<!-- ═══════════════════════════════════════════════════════════════
+     4. WHAT WE ASK / DO NOT ASK / DO NOT CLAIM
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section" style="background:#FAFAF8">
+  <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">O que entra — e o que fica fora.</h2>
+    <p class="met-section__sub allybi-reveal">A metodologia foi desenhada para revelar o padrão sem pedir arquivos, nomes de clientes ou acesso ao sistema.</p>
+
+    <div class="met-3col">
+      <div class="met-3col-card allybi-reveal">
+        <h3>O que perguntamos</h3>
+        <ul>
+          <li>Com que frequência o fluxo acontece</li>
+          <li>Onde você ou o time procura</li>
+          <li>Quanto tempo costuma levar</li>
+          <li>O que falta depois que o arquivo aparece</li>
+          <li>Onde a certeza quebra</li>
+        </ul>
+      </div>
+      <div class="met-3col-card allybi-reveal">
+        <h3>O que não pedimos</h3>
+        <ul>
+          <li>Documentos reais</li>
+          <li>Nomes de clientes</li>
+          <li>CPFs, CNPJs ou dados sensíveis</li>
+          <li>Valores financeiros reais</li>
+          <li>Login para responder</li>
+          <li>Acesso às suas ferramentas</li>
+        </ul>
+      </div>
+      <div class="met-3col-card allybi-reveal">
+        <h3>O que não prometemos</h3>
+        <ul>
+          <li>Não é auditoria financeira</li>
+          <li>Não é pesquisa nacional</li>
+          <li>Não é análise jurídica</li>
+          <li>Não prova produtividade individual</li>
+          <li>Não mede desempenho de pessoas</li>
+        </ul>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- 3. Como a Calculadora funciona -->
-    <div class="met-card">
-      <h2>Como a Calculadora funciona</h2>
-      <p>A Calculadora estima tempo perdido individual. Ela combina frequência semanal, tempo médio por busca, etapas extras depois de encontrar o arquivo e retrabalho.</p>
-      <div class="met-formula">tempo mensal = (busca + confirmação + retrabalho + preparação) × 4,33 semanas</div>
-      <p>É uma estimativa conservadora, não uma auditoria financeira.</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     5. HOW THE CALCULADORA ESTIMATES TIME
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section">
+  <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">Como a Calculadora estima o tempo perdido</h2>
+    <p class="met-section__sub allybi-reveal">A conta transforma respostas simples em uma estimativa conservadora de horas por mês.</p>
+
+    <div class="met-formula-card allybi-reveal">
+      <div class="met-formula-main">frequência × caminho manual × 4,33 semanas = tempo por mês</div>
+      <p class="met-formula-sub">O "caminho manual" combina: tempo até achar algo útil, quantidade de lugares onde você procura, etapas depois que o arquivo aparece e retrabalho.</p>
+
+      <div class="met-inputs-grid">
+        <div class="met-input-item">
+          <strong>Frequência</strong>
+          <span>Quantas vezes por semana esse fluxo acontece.</span>
+        </div>
+        <div class="met-input-item">
+          <strong>Dispersão</strong>
+          <span>Quanto a busca se espalha entre e-mail, nuvem, pasta, WhatsApp, desktop ou alguém do time.</span>
+        </div>
+        <div class="met-input-item">
+          <strong>Tempo de busca</strong>
+          <span>Quanto demora até encontrar algo útil.</span>
+        </div>
+        <div class="met-input-item">
+          <strong>Etapas depois de achar</strong>
+          <span>Confirmar versão, achar fonte, explicar contexto, preparar resposta, conferir destinatário.</span>
+        </div>
+        <div class="met-input-item" style="grid-column: 1 / -1">
+          <strong>Pressão</strong>
+          <span>O erro ou travamento que mais pesa quando precisa enviar rápido.</span>
+        </div>
+      </div>
+
+      <button class="met-formula-expand" aria-expanded="false" data-event="methodology_formula_expand" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('is-open')">Ver fórmula completa</button>
+      <div class="met-formula-detail">
+        busca por item = tempo médio × multiplicador de dispersão<br>
+        etapas extras = soma das confirmações depois que o arquivo aparece<br>
+        tempo semanal = frequência × (busca por item + etapas extras) + retrabalho<br>
+        tempo mensal = tempo semanal × 4,33 ÷ 60
+      </div>
+      <p class="met-formula-note">O resultado é uma estimativa conservadora. Serve para tornar o custo visível, não para substituir uma auditoria.</p>
     </div>
+  </div>
+</section>
 
-    <!-- 4. Como o Diagnóstico do Fluxo funciona -->
-    <div class="met-card">
-      <h2>Como o Diagnóstico do Fluxo funciona</h2>
-      <p>O Diagnóstico mede onde o time perde certeza entre pedido e envio. Cada resposta alimenta dimensões de atrito: fontes espalhadas, versão frágil, fonte/aprovação invisível, envio manual e dependência de confirmação.</p>
-      <p>Faixas de resultado:</p>
-      <ul class="met-bands">
-        <li>0–25: Fluxo claro</li>
-        <li>26–50: Fluxo parcialmente manual</li>
-        <li>51–75: Fluxo com alto atrito</li>
-        <li>76–100: Fluxo dependente de confirmação manual</li>
-      </ul>
+<!-- ═══════════════════════════════════════════════════════════════
+     6. HOW THE DIAGNÓSTICO SCORES FRICTION
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section" style="background:#FAFAF8">
+  <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">Como o Diagnóstico calcula o atrito do fluxo</h2>
+    <p class="met-section__sub allybi-reveal">O score mostra onde o time perde certeza antes de enviar.</p>
+
+    <div class="met-dimensions">
+      <div class="met-dim-card allybi-reveal">
+        <div>
+          <strong>Fontes espalhadas</strong>
+          <div class="met-dim-bar"><span style="width:0" data-width="75%"></span></div>
+        </div>
+        <p>Quando a resposta pode estar em e-mail, pasta, nuvem, conversa, anexo antigo ou alguém do time.</p>
+      </div>
+      <div class="met-dim-card allybi-reveal">
+        <div>
+          <strong>Versão frágil</strong>
+          <div class="met-dim-bar"><span style="width:0" data-width="60%"></span></div>
+        </div>
+        <p>Quando a confirmação depende de nome do arquivo, data, pasta ou memória.</p>
+      </div>
+      <div class="met-dim-card allybi-reveal">
+        <div>
+          <strong>Fonte invisível</strong>
+          <div class="met-dim-bar"><span style="width:0" data-width="50%"></span></div>
+        </div>
+        <p>Quando falta origem, aprovação ou contexto suficiente para confiar.</p>
+      </div>
+      <div class="met-dim-card allybi-reveal">
+        <div>
+          <strong>Envio manual</strong>
+          <div class="met-dim-bar"><span style="width:0" data-width="45%"></span></div>
+        </div>
+        <p>Quando ainda falta montar mensagem, anexar, conferir destinatário e preparar resposta.</p>
+      </div>
+      <div class="met-dim-card allybi-reveal">
+        <div>
+          <strong>Dependência de confirmação</strong>
+          <div class="met-dim-bar"><span style="width:0" data-width="65%"></span></div>
+        </div>
+        <p>Quando a certeza depende de perguntar para alguém.</p>
+      </div>
     </div>
+    <div class="met-scoring-note allybi-reveal">Cada dimensão recebe pontos de 0 a 20. A soma forma o score final de 0 a 100.</div>
+  </div>
+</section>
 
-    <!-- 5. Como o Índice Allybi funciona -->
-    <div class="met-card">
-      <h2>Como o Índice Allybi funciona</h2>
-      <p>O Índice mostra apenas dados agregados dos diagnósticos. Se a amostra for pequena, mostramos "Em coleta" em vez de inventar números.</p>
-      <p>30 respostas é a amostra mínima que usamos para evitar mostrar padrões com base em poucos casos. O Índice não é pesquisa nacional nem auditoria estatística.</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     7. HOW TO READ THE RESULT
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section">
+  <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">Como ler o resultado</h2>
+    <p class="met-section__sub allybi-reveal">O número não julga pessoas. Ele mostra quanto o fluxo depende de procura, memória e confirmação manual.</p>
+
+    <div class="met-results-grid">
+      <div class="met-result-col allybi-reveal">
+        <h3>Calculadora</h3>
+        <p class="met-result-col__sub">tempo por mês · equivalente anual · maior gargalo · onde o Allybi reduziria</p>
+        <div class="met-band"><strong>0–3 h/mês</strong><span>Pequeno no mês. Caro no momento errado.</span></div>
+        <div class="met-band"><strong>3–10 h/mês</strong><span>Rotina invisível.</span></div>
+        <div class="met-band"><strong>10–25 h/mês</strong><span>Dias úteis em confirmação manual.</span></div>
+        <div class="met-band"><strong>25+ h/mês</strong><span>Fluxo caro demais para depender de memória.</span></div>
+      </div>
+      <div class="met-result-col allybi-reveal">
+        <h3>Diagnóstico</h3>
+        <p class="met-result-col__sub">score 0–100 · faixa de atrito · maior dimensão · etapa reduzida pelo Allybi</p>
+        <div class="met-band"><strong>0–25</strong><span>Fluxo claro.</span></div>
+        <div class="met-band"><strong>26–50</strong><span>Atrito moderado.</span></div>
+        <div class="met-band"><strong>51–75</strong><span>Alto atrito.</span></div>
+        <div class="met-band"><strong>76–100</strong><span>Fluxo dependente demais de confirmação manual.</span></div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- 6. Privacidade e LGPD -->
-    <div class="met-card">
-      <h2>Privacidade e LGPD</h2>
-      <p>A LGPD é a Lei nº 13.709/2018. Dados anonimizados não são considerados dados pessoais quando não permitem identificação razoável do titular. Mesmo assim, a Allybi evita coletar documentos, nomes de clientes e dados sensíveis nessas ferramentas.</p>
-      <p class="met-microcopy">Isso é uma explicação de privacidade, não aconselhamento jurídico.</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     8. PRIVACY AND LGPD
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section" style="background:#FAFAF8" data-event="methodology_privacy_section_view">
+  <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">Privacidade desde a pergunta.</h2>
+    <p class="met-section__sub allybi-reveal">As ferramentas foram desenhadas para medir o caminho, não para coletar documentos.</p>
+
+    <div class="met-privacy-grid">
+      <div class="met-priv-card allybi-reveal">
+        <h3>Sem arquivos</h3>
+        <p>Você não envia contratos, propostas, planilhas ou anexos para responder.</p>
+      </div>
+      <div class="met-priv-card allybi-reveal">
+        <h3>Sem nomes de clientes</h3>
+        <p>As perguntas falam sobre o fluxo, não sobre casos reais.</p>
+      </div>
+      <div class="met-priv-card allybi-reveal">
+        <h3>Sem acesso às ferramentas</h3>
+        <p>Não pedimos login, conexão com e-mail, Drive, OneDrive, SharePoint ou WhatsApp para calcular.</p>
+      </div>
+      <div class="met-priv-card allybi-reveal">
+        <h3>Dados mínimos</h3>
+        <p>Usamos respostas para mostrar o resultado e, se você pedir, enviar a leitura completa.</p>
+      </div>
+      <div class="met-priv-card allybi-reveal">
+        <h3>LGPD</h3>
+        <p>A LGPD é a Lei nº 13.709/2018. A Allybi evita coletar documentos, nomes de clientes e dados sensíveis nessas ferramentas.</p>
+      </div>
     </div>
+    <p class="met-legal-micro allybi-reveal">Esta página explica a metodologia das ferramentas Allybi. Não é aconselhamento jurídico, auditoria financeira ou pesquisa estatística oficial.</p>
+  </div>
+</section>
 
-    <!-- 7. Como o Allybi entra -->
-    <div class="met-card">
-      <h2>Como o Allybi entra</h2>
-      <p>Os diagnósticos mostram o tamanho do atrito. O Allybi reduz o fluxo: conecte fontes, suba arquivos, pergunte no chat, receba resposta com fonte e revise antes de enviar.</p>
-      <div class="met-flow">Fonte conectada → pergunta no chat → resposta com fonte → mensagem preparada → confirmação</div>
-      <div class="met-inline-ctas">
-        <a href="tempo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg">Calcular meu tempo perdido</a>
-        <a href="diagnostico.html" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Mapear fluxo do time</a>
-        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Começar grátis por 30 dias</a>
+<!-- ═══════════════════════════════════════════════════════════════
+     9. HOW ALLYBI REDUCES THE PATH
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section">
+  <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">O Allybi reduz o mesmo caminho que os testes revelam.</h2>
+    <p class="met-section__sub allybi-reveal">Os testes mostram onde o fluxo pesa. O Allybi transforma esse caminho em uma conversa com fonte e revisão.</p>
+
+    <div class="met-ba-grid">
+      <div class="met-ba-row allybi-reveal">
+        <span class="met-ba-manual">Procurar em vários lugares</span>
+        <span class="met-ba-arrow">&rarr;</span>
+        <span class="met-ba-allybi">Perguntar no chat</span>
+      </div>
+      <div class="met-ba-row allybi-reveal">
+        <span class="met-ba-manual">Confirmar versão no olho</span>
+        <span class="met-ba-arrow">&rarr;</span>
+        <span class="met-ba-allybi">Comparar e ver fonte</span>
+      </div>
+      <div class="met-ba-row allybi-reveal">
+        <span class="met-ba-manual">Pedir contexto para alguém</span>
+        <span class="met-ba-arrow">&rarr;</span>
+        <span class="met-ba-allybi">Contexto visível na resposta</span>
+      </div>
+      <div class="met-ba-row allybi-reveal">
+        <span class="met-ba-manual">Montar resposta do zero</span>
+        <span class="met-ba-arrow">&rarr;</span>
+        <span class="met-ba-allybi">Mensagem preparada</span>
+      </div>
+      <div class="met-ba-row allybi-reveal">
+        <span class="met-ba-manual">Medo de enviar errado</span>
+        <span class="met-ba-arrow">&rarr;</span>
+        <span class="met-ba-allybi">Revisão antes do envio</span>
       </div>
     </div>
 
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:48px" class="allybi-reveal">
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="methodology_final_cta_click">Começar grátis por 30 dias</a>
+      <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary allybi-btn--lg">Ver como funciona</a>
+    </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- ═══════════════════════════════════════════════════════════════
+     10. FAQ
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="met-section" style="background:#FAFAF8">
+  <div class="allybi-container">
+    <h2 class="met-section__title allybi-reveal">Perguntas sobre a metodologia</h2>
+
+    <div class="met-faq">
+      <div class="met-faq-item allybi-reveal">
+        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">A Calculadora é uma auditoria?</button>
+        <div class="met-faq-a">Não. É uma estimativa conservadora baseada nas suas respostas sobre frequência, tempo e etapas do fluxo.</div>
+      </div>
+      <div class="met-faq-item allybi-reveal">
+        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">O Diagnóstico mede desempenho de pessoas?</button>
+        <div class="met-faq-a">Não. Ele mede onde o caminho perde certeza. O problema é o fluxo manual, não uma pessoa específica.</div>
+      </div>
+      <div class="met-faq-item allybi-reveal">
+        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">Preciso enviar documentos?</button>
+        <div class="met-faq-a">Não. Nenhum arquivo é pedido para responder à Calculadora ou ao Diagnóstico.</div>
+      </div>
+      <div class="met-faq-item allybi-reveal">
+        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">Por que vocês perguntam onde eu procuro?</button>
+        <div class="met-faq-a">Porque o tempo costuma aparecer quando a informação se espalha entre e-mail, pasta, nuvem, conversa, anexo ou alguém do time.</div>
+      </div>
+      <div class="met-faq-item allybi-reveal">
+        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">Por que o resultado é uma estimativa?</button>
+        <div class="met-faq-a">Porque usamos faixas de resposta, não auditoria técnica do ambiente. A ideia é tornar o custo visível rápido, sem acesso aos seus dados.</div>
+      </div>
+      <div class="met-faq-item allybi-reveal">
+        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">Como o Allybi reduz esse problema?</button>
+        <div class="met-faq-a">Conectando fontes, recebendo uploads, respondendo com fonte e preparando e-mail ou WhatsApp handoff para revisão antes do envio.</div>
+      </div>
+      <div class="met-faq-item allybi-reveal">
+        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">O Allybi pesquisa no WhatsApp?</button>
+        <div class="met-faq-a">Não. WhatsApp é handoff: o Allybi prepara a mensagem e abre o WhatsApp para você revisar e mandar. Ele não lê nem sincroniza sua caixa de entrada.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     11. FINAL CTA
+     ═══════════════════════════════════════════════════════════════ -->
 <section class="s-cta">
   <div class="allybi-container">
     <div class="s-cta__inner">
-      <h2>Pare de procurar em tudo para responder uma coisa.</h2>
-      <p>Conecte suas fontes, pergunte no chat e envie com fonte.</p>
+      <h2>Meça o caminho antes de tentar corrigir no escuro.</h2>
+      <p>Comece pela Calculadora se o problema é individual. Use o Diagnóstico se quer mapear o fluxo do time.</p>
       <div class="s-cta__ctas">
-        <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="start_free_clicked">Começar grátis por 30 dias</a>
-        <a href="contact.html" class="allybi-btn allybi-btn--secondary-inverse allybi-btn--lg">Falar com vendas</a>
+        <a href="tempo.html" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="methodology_final_cta_click">Calcular meu tempo</a>
+        <a href="diagnostico.html" class="allybi-btn allybi-btn--secondary-inverse allybi-btn--lg" data-event="methodology_final_cta_click">Mapear fluxo do time</a>
       </div>
+      <p style="margin-top:16px;font-size:14px;color:rgba(255,255,255,0.6)"><a href="https://app.allybi.com.br/signup" style="color:rgba(255,255,255,0.8);text-decoration:underline">Começar grátis por 30 dias</a></p>
     </div>
   </div>
 </section>
@@ -384,7 +682,6 @@
         <div class="footer-col-links">
           <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
           <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="indice.html" data-i18n-key="footer.indice">Allybi Index</a>
           <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
         </div>
       </div>
@@ -435,9 +732,33 @@
   </div>
 </footer>
 
-
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script>
+/* FAQ accordion */
+document.querySelectorAll('.met-faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    this.nextElementSibling.classList.toggle('is-open');
+  });
+});
+/* Diagnostic bars animate on scroll */
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  var barObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        var bar = e.target;
+        bar.style.width = bar.getAttribute('data-width');
+        barObserver.unobserve(bar);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.met-dim-bar span[data-width]').forEach(function(bar){
+    barObserver.observe(bar);
+  });
+}
+</script>
 </body>
 </html>

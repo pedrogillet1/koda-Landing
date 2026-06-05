@@ -29,7 +29,6 @@
     "calculator": "Time Calculator",
     "for_operations": "For operations",
     "diagnostic": "Flow Diagnostic",
-    "indice": "Allybi Index",
     "methodology": "Methodology"
   },
   "footer": {
@@ -77,7 +76,6 @@
     "data_use": "Integrations & Data Use",
     "data_deletion": "Data Deletion",
     "calculator": "Time Calculator",
-    "indice": "Allybi Index",
     "col_tools": "Tools",
     "methodology": "Methodology",
     "operations": "For operations",

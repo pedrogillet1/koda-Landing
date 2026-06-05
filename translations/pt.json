@@ -29,7 +29,6 @@
     "calculator": "Tempo perdido",
     "for_operations": "Para operações",
     "diagnostic": "Diagnóstico do fluxo",
-    "indice": "Índice Allybi",
     "methodology": "Metodologia"
   },
   "footer": {
@@ -77,7 +76,6 @@
     "data_use": "Integrações e Uso de Dados",
     "data_deletion": "Exclusão de Dados",
     "calculator": "Tempo perdido",
-    "indice": "Índice Allybi",
     "col_tools": "Ferramentas",
     "methodology": "Como calculamos",
     "operations": "Para operações",
@@ -85,8 +83,8 @@
   },
   "hero": {
     "eyebrow": "IA privada para documentos, e-mails e envios",
-    "title": "Um chat para encontrar a resposta certa — e enviar com fonte.",
-    "subtitle": "Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte em linguagem normal. O Allybi mostra a fonte e prepara e-mail ou WhatsApp para você revisar.",
+    "title": "Um chat para encontrar, confirmar e enviar o documento certo.",
+    "subtitle": "Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte em linguagem normal. O Allybi mostra a fonte, prepara o envio por e-mail ou WhatsApp e pede sua revisão antes de enviar.",
     "cta_primary": "Começar grátis por 30 dias",
     "cta_secondary": "Ver como funciona",
     "chip1": "Respostas com fonte",
@@ -217,20 +215,28 @@
       "item5": "Outlook, OneDrive e SharePoint disponíveis"
     },
     "pain": {
-      "title": "O trabalho não termina quando você acha o arquivo.",
-      "subtitle": "O custo aparece depois da busca: confirmar versão, achar fonte, preparar a resposta e enviar sem erro.",
-      "card1_title": "Encontrar",
+      "title": "Achar não basta.",
+      "subtitle": "Depois que o arquivo aparece, ainda falta saber se é a versão certa, de onde veio e se pode ser enviado.",
+      "card1_title": "Espalhado",
       "card1_desc": "A resposta pode estar no e-mail, na pasta, no anexo, no upload ou em uma conversa antiga.",
-      "card2_title": "Confirmar",
-      "card2_desc": "Achar não basta se ninguém sabe se é a versão certa, aprovada ou segura para usar.",
-      "card3_title": "Enviar",
+      "card2_title": "Parecido",
+      "card2_desc": "Três arquivos parecem certos. Só um pode ser enviado.",
+      "card3_title": "Enviável",
       "card3_desc": "Antes de mandar, ainda falta conferir destinatário, arquivo, contexto e fonte.",
       "send_recipient": "Destinatário",
       "send_confirm": "Confirmar"
     },
     "workflow": {
-      "title": "Do pedido ao envio, sem abrir tudo de novo.",
-      "subtitle": "O Allybi transforma o caminho inteiro em uma conversa com fonte.",
+      "title": "Do pedido ao envio, em uma mensagem.",
+      "subtitle": "O Allybi transforma procura, confirmação e preparo em um fluxo com fonte e revisão.",
+      "f1": "\"qual versão mando?\"",
+      "f2_label": "Pergunta no chat",
+      "f2": "linguagem normal",
+      "f3_label": "Resposta com fonte",
+      "f4_label": "Mensagem preparada",
+      "f4": "E-mail ou WhatsApp handoff",
+      "f5_label": "Confirmação",
+      "f5": "você revisa antes de enviar",
       "s1_title": "Conecte ou suba",
       "s1_desc": "Conecte Outlook, OneDrive e SharePoint. Ou suba arquivos direto no Allybi.",
       "s2_title": "Pergunte no chat",
@@ -383,8 +389,7 @@
       "calc_cta": "Calcular meu tempo →",
       "diag_title": "Diagnóstico do Fluxo",
       "diag_desc": "Mapeie onde o time perde certeza entre o pedido e o envio.",
-      "diag_cta": "Mapear fluxo do time →",
-      "index_link": "Índice Allybi"
+      "diag_cta": "Mapear fluxo do time →"
     },
     "usecases": {
       "title": "Momentos em que ninguém quer adivinhar.",

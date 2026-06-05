@@ -1,0 +1,50 @@
+=== GREP PROOF: metodologia-complete-rework ===
+
+1. indice.html references in HTML files:
+  (empty = PASS)
+
+2. Índice/indice in translations:
+  (empty = PASS)
+
+3. app.allybi.com.brm.br:
+  (empty = PASS)
+
+4. 'sem upload' in metodologia.html:
+  (empty = PASS)
+
+5. WhatsApp as source in metodologia.html:
+413:          <span>Quanto a busca se espalha entre e-mail, nuvem, pasta, WhatsApp, desktop ou alguém do time.</span>
+538:        <p>Não pedimos login, conexão com e-mail, Drive, OneDrive, SharePoint ou WhatsApp para calcular.</p>
+629:        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open">O Allybi pesquisa no WhatsApp?</button>
+
+6. Methodology page sections (H2 tags):
+284:    Dois testes. Dois tipos de resposta.
+325:    O custo não aparece quando o arquivo abre.
+355:    O que entra — e o que fica fora.
+399:    Como a Calculadora estima o tempo perdido
+446:    Como o Diagnóstico calcula o atrito do fluxo
+495:    Como ler o resultado
+524:    Privacidade desde a pergunta.
+558:    O Allybi reduz o mesmo caminho que os testes revelam.
+601:    Perguntas sobre a metodologia
+642:      Meça o caminho antes de tentar corrigir no escuro.
+
+7. indice.html is redirect:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="refresh" content="0;url=metodologia.html">
+
+8. Header nav Tools dropdown (first file check - index.html):
+        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
+        <div class="nav-dropdown-menu">
+          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
+          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
+          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+        </div>
+--
+      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
+
+=== END GREP PROOF ===
