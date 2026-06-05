@@ -342,6 +342,7 @@
 .ucf-security__inner {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .ucf-security__inner h2 {
@@ -394,7 +395,7 @@
 }
 
 .ucf-security__cta {
-  margin-top: 8px;
+  margin: 8px auto 0;
 }
 
 /* ---------- FINAL CTA ---------- */
