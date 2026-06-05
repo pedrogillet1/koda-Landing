@@ -1,0 +1,31 @@
+=== MOBILE QA GREP PROOF ===
+Date: Fri Jun  5 16:46:02 -03 2026
+
+app.allybi.com.brm: PASS
+Koda: PASS
+indice.html: PASS
+Índice: PASS
+Enviável: FOUND
+./translations/pt.json:224:      "card3_title": "Enviável",
+enviar com fonte: PASS
+Envie com fonte: PASS
+respostas citando: PASS
+citações de fonte: PASS
+fundamentado: PASS
+Confirmar envio: PASS
+envio via WhatsApp: PASS
+Preparar envio: PASS
+Sem upload: PASS
+modo cadê: PASS
+Google humano: PASS
+Manual Search: PASS
+X-Ray: PASS
+Cemitério: PASS
+
+Double periods check:
+./integrations.html:9:  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint e uploads ao Allybi. Pergunte no chat, receba respostas com fonte e envia e-mails via Outlook com confirmação. WhatsApp abre como handoff..">
+./integrations.html:119:      <p class="allybi-body-lg">O Allybi reúne e-mails, anexos, arquivos na nuvem e uploads em um chat simples — e envia e-mails via Outlook com sua confirmação ou abre WhatsApp como handoff..</p>
+./how-it-works.html:9:  <meta name="description" content="Conecte fontes, suba arquivos, pergunte no chat e receba respostas com fonte. O Allybi envia e-mails via Outlook com confirmação. WhatsApp abre como handoff..">
+./how-it-works.html:113:      <p class="hiw-hero__sub">Conecte fontes, suba arquivos e pergunte no chat. O Allybi responde com fonte, monta a mensagem e envia e-mails via Outlook depois da sua confirmação. WhatsApp abre como handoff..</p>
+
+=== END ===

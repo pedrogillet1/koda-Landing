@@ -376,7 +376,7 @@
       "see_all": "Ver todas as perguntas →"
     },
     "final_cta": {
-      "title": "Conecte. Pergunte. Envie com fonte.",
+      "title": "Conecte. Pergunte. Envie com confirmação.",
       "support": "Comece grátis, conecte uma fonte ou suba um arquivo e veja o Allybi encontrar a resposta antes do envio.",
       "cta": "Começar grátis por 30 dias",
       "cta2": "Falar com vendas"
@@ -396,7 +396,7 @@
       "subtitle": "Quando existe pressão, arquivo errado vira risco.",
       "legal_label": "Jurídico",
       "legal_context": "Antes da revisão do sócio",
-      "legal_copy": "Compare versões, encontre a cláusula e envie com fonte.",
+      "legal_copy": "Compare versões, encontre a cláusula e envie com confirmação.",
       "legal_query": "\"mostrar alterações da cláusula 12.4 entre v2 e v3\"",
       "legal_cta": "Veja para advogados →",
       "finance_label": "Financeiro",
@@ -411,7 +411,7 @@
       "ops_cta": "Veja para operações →"
     },
     "final_cta": {
-      "title": "Conecte. Pergunte. Envie com fonte.",
+      "title": "Conecte. Pergunte. Envie com confirmação.",
       "support": "Comece grátis, conecte uma fonte ou suba um arquivo e veja uma resposta com fonte antes do envio.",
       "cta": "Começar grátis por 30 dias",
       "cta2": "Falar com vendas"
@@ -702,7 +702,7 @@
     "cta_demo": "Começar grátis",
     "mock_badge": "Resposta com fonte",
     "mock_confirm": "Confirmar antes de enviar",
-    "mock_confirm_btn": "Confirmar envio",
+    "mock_confirm_btn": "Enviar via Outlook",
     "mock_cancel": "Cancelar",
     "mock_imported": "3 arquivos importados do OneDrive",
     "mock_query": "quais são os termos de não concorrência?",
@@ -1954,6 +1954,6 @@
   },
   "ucl": {
     "mock_cancel": "Cancelar",
-    "mock_confirm_btn": "Confirmar envio"
+    "mock_confirm_btn": "Enviar via Outlook"
   }
 }

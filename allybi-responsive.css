@@ -1350,7 +1350,84 @@ img, svg, video {
 }
 
 /* ==========================================================================
-   N. PRINT STYLES (bonus)
+   N. MOBILE-FIRST QA PASS — June 2026
+   ========================================================================== */
+
+/* Scroll margin for anchor targets behind sticky header */
+:target {
+  scroll-margin-top: 80px;
+}
+
+/* Mobile flow sections: force vertical */
+@media (max-width: 767px) {
+  /* Pricing workflow card 2-col → stack */
+  [style*="42% 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Before/after comparison → stack */
+  [style*="1fr 1fr"][style*="max-width:800px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Homepage workflow flow arrows → vertical */
+  .s-workflow__flow {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .s-workflow__flow-arrow {
+    transform: rotate(90deg);
+    margin: 4px auto;
+  }
+
+  /* Integrations matrix: hide desktop table, show mobile accordion */
+  .integ-matrix__desktop-only {
+    display: none !important;
+  }
+  .integ-matrix__mobile-only {
+    display: block !important;
+  }
+
+  /* Legal page tables: scroll wrapper */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ensure all inline grid sections stack */
+  [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Smaller phones: extra compact */
+@media (max-width: 480px) {
+  /* Pricing card on very small screens */
+  .pricing-card {
+    padding: 24px 20px !important;
+  }
+
+  /* Hero chip wrapping */
+  .s-hero__proof,
+  .pricing-hero__trust {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Methodology dimensions stack */
+  .met-dim-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Result pages comparison grid */
+  .met-results-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   O. PRINT STYLES (bonus)
    ========================================================================== */
 @media print {
   .allybi-header,
