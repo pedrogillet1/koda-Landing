@@ -10,6 +10,17 @@
   }
 }
 
+@media (max-width: 860px) {
+  /* Workflow value card → stack */
+  .allybi-section [style*="42% 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Before/after comparison → stack */
+  .allybi-section [style*="1fr 1fr"][style*="max-width:800px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 @media (max-width: 768px) {
   /* Included 5-col → 2-col */
   .allybi-section [style*="repeat(5,1fr)"] {

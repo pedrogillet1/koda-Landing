@@ -171,46 +171,90 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════
-     3. SOURCES, UPLOADS AND SENDS
+     3. WORKFLOW VALUE — What you get for R$170/month
      ════════════════════════════════════════════════════════════ -->
-<section class="allybi-section" style="padding:clamp(80px,10vh,112px) 0;">
+<section class="allybi-section" style="background:#F5F5F5;padding:clamp(80px,10vh,112px) 0;">
   <div class="allybi-container">
-    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
-      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;">Fontes entram.<br>Envios saem com revisão.</h2>
-      <p style="font-size:16px;color:#6C6B6E;max-width:560px;margin:0 auto;">O Allybi busca nas fontes conectadas ou nos arquivos enviados. Depois prepara a mensagem para você revisar.</p>
+    <div style="text-align:center;max-width:720px;margin:0 auto 48px;" class="allybi-reveal">
+      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6C6B6E;background:#fff;border:1px solid #E6E6EC;padding:5px 14px;border-radius:20px;margin-bottom:16px;">Incluso no Pro</span>
+      <h2 style="font-size:clamp(24px,3.5vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;">O plano cobre o caminho inteiro.</h2>
+      <p style="font-size:16px;color:#6C6B6E;line-height:1.6;max-width:600px;margin:0 auto;">Conecte fontes, pergunte no chat, receba a resposta com fonte e envie e-mail via Outlook depois da sua confirmação. WhatsApp abre como handoff.</p>
     </div>
-    <div class="allybi-reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;max-width:1000px;margin:0 auto;">
-      <!-- Sources -->
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:18px;padding:28px 24px;">
-        <h3 style="font-size:15px;font-weight:700;color:#181818;margin-bottom:16px;">Fontes conectadas</h3>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;justify-items:center;">
-          <img src="assets/images/outlook-icon.svg" alt="Outlook" width="32" height="32">
-          <img src="assets/images/onedrive-icon.svg" alt="OneDrive" width="32" height="32">
-          <img src="assets/images/sharepoint-icon.svg" alt="SharePoint" width="32" height="32">
+
+    <!-- Main 2-column workflow card -->
+    <div class="allybi-reveal" style="background:#fff;border:1px solid #E6E6EC;border-radius:24px;padding:clamp(32px,5vw,48px);max-width:1100px;margin:0 auto;display:grid;grid-template-columns:42% 1fr;gap:clamp(32px,4vw,56px);align-items:center;">
+
+      <!-- Left: text + numbered list -->
+      <div>
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#181818;letter-spacing:-.02em;margin-bottom:12px;line-height:1.2;">Do pedido ao envio,<br>sem refazer o caminho.</h3>
+        <p style="font-size:15px;color:#6C6B6E;line-height:1.6;margin-bottom:28px;">O Allybi reúne fontes e uploads em um chat. Você pergunta, recebe a resposta com fonte e revisa o envio antes de sair.</p>
+        <ol style="list-style:none;counter-reset:steps;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:14px;">
+          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">1.</span>Conecte Outlook, OneDrive, SharePoint ou uploads.</li>
+          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">2.</span>Pergunte em linguagem normal.</li>
+          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">3.</span>Receba a resposta com arquivo e fonte.</li>
+          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">4.</span>Revise destinatário, mensagem, arquivo e canal.</li>
+          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">5.</span>Envie via Outlook ou abra WhatsApp handoff.</li>
+        </ol>
+        <p style="font-size:13px;color:#6C6B6E;font-style:italic;">Nada sai sem sua confirmação.</p>
+      </div>
+
+      <!-- Right: product mockup -->
+      <div style="background:#FAFAF8;border:1px solid #E6E6EC;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:16px;">
+        <!-- Source chips -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14">Outlook</span>
+          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14">OneDrive</span>
+          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14">SharePoint</span>
+          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14">Uploads</span>
+        </div>
+        <!-- Chat question -->
+        <div style="background:#fff;border:1px solid #E6E6EC;border-radius:10px;padding:10px 14px;font-size:13px;color:#32302C;display:flex;align-items:center;gap:8px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6C6B6E" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          qual versão posso enviar ao cliente?
+        </div>
+        <!-- Answer with source -->
+        <div style="background:#fff;border:1px solid #E6E6EC;border-radius:10px;padding:14px;">
+          <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#34A853;margin-bottom:8px;">Resposta com fonte</span>
+          <p style="font-size:13px;font-weight:600;color:#181818;margin-bottom:4px;">contrato_final_AGORA.pdf</p>
+          <p style="font-size:11px;color:#6C6B6E;display:flex;align-items:center;gap:4px;">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Fonte: Clientes / Contratos / 14 mar
+          </p>
+        </div>
+        <!-- Review panel -->
+        <div style="background:#fff;border:1px solid #E6E6EC;border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px;">
+          <span style="font-size:11px;font-weight:600;color:#6C6B6E;">Você revisa antes de enviar</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;">Arquivo ✓</span>
+            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;">Fonte ✓</span>
+            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;">Destinatário ✓</span>
+            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;">Canal ✓</span>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:4px;">
+            <span style="flex:1;text-align:center;font-size:12px;color:#6C6B6E;padding:8px;border:1px solid #E6E6EC;border-radius:8px;cursor:default;">Cancelar</span>
+            <span style="flex:1;text-align:center;font-size:12px;font-weight:600;color:#fff;background:#181818;padding:8px;border-radius:8px;cursor:default;">Enviar via Outlook</span>
+          </div>
+          <span style="font-size:11px;color:#6C6B6E;text-align:center;margin-top:2px;">WhatsApp handoff: abrir WhatsApp</span>
         </div>
       </div>
-      <!-- Uploads -->
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:18px;padding:28px 24px;">
-        <h3 style="font-size:15px;font-weight:700;color:#181818;margin-bottom:16px;">Uploads</h3>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;justify-items:center;">
-          <img src="assets/images/pdf-icon.png" alt="PDF" width="32" height="32">
-          <img src="assets/images/doc-icon.png" alt="DOCX" width="32" height="32">
-          <img src="assets/images/xls-icon.png" alt="XLSX" width="32" height="32">
-          <img src="assets/images/pptx-icon.png" alt="PPTX" width="32" height="32">
-          <img src="assets/images/jpg-icon.png" alt="JPG" width="32" height="32">
-          <img src="assets/images/png-icon.png" alt="PNG" width="32" height="32">
-          <img src="assets/images/mp3-icon.svg" alt="MP3" width="32" height="32">
-          <img src="assets/images/mp4-icon.png" alt="MP4" width="32" height="32">
-        </div>
+    </div>
+
+    <!-- Compact before/after comparison -->
+    <div class="allybi-reveal" style="max-width:800px;margin:32px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:12px;padding:18px 20px;">
+        <span style="font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#6C6B6E;display:block;margin-bottom:8px;">Antes</span>
+        <p style="font-size:13px;color:#6C6B6E;line-height:1.6;">procurar em 4 lugares · confirmar versão · montar mensagem · anexar · revisar</p>
       </div>
-      <!-- Sends -->
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:18px;padding:28px 24px;">
-        <h3 style="font-size:15px;font-weight:700;color:#181818;margin-bottom:16px;">Envios</h3>
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;justify-items:center;">
-          <img src="assets/images/outlook-icon.svg" alt="E-mail via Outlook" width="32" height="32">
-          <img src="assets/images/whatsapp-icon.svg" alt="WhatsApp handoff" width="32" height="32">
-        </div>
+      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:12px;padding:18px 20px;">
+        <span style="font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#34A853;display:block;margin-bottom:8px;">Com Allybi</span>
+        <p style="font-size:13px;color:#181818;font-weight:500;line-height:1.6;">perguntar uma vez · resposta com fonte · envio revisado</p>
       </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="allybi-reveal" style="text-align:center;margin-top:40px;">
+      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="pricing_workflow_cta">Começar grátis por 30 dias</a>
+      <p style="font-size:13px;color:#6C6B6E;margin-top:12px;">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
     </div>
   </div>
 </section>
