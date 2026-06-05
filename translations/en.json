@@ -202,7 +202,7 @@
   },
   "home": {
     "trust": {
-      "item1": "End-to-end encrypted",
+      "item1": "Encrypted in transit and at rest",
       "item2": "No model training on your data",
       "item3": "Grounded in your files",
       "item4": "Confirmation before every send",
@@ -264,7 +264,7 @@
       "title": "How Allybi works",
       "subtitle": "Three steps. No chaos. No learning curve.",
       "step1_title": "Bring in your files",
-      "step1_desc": "Upload documents, connect email, or link Slack. Allybi indexes everything into private, project-level workspaces.",
+      "step1_desc": "Upload documents, connect email, or link SharePoint. Allybi indexes everything into private, project-level workspaces.",
       "step2_title": "Ask in plain language",
       "step2_desc": "Ask anything — \"What changed in the indemnity clause?\" Allybi returns answer with sources with exact sources and page numbers.",
       "step3_title": "Act with confidence",
@@ -543,7 +543,7 @@
     "hero_support": "Connect sources, upload documents, ask in chat, and review before sending via email or WhatsApp.",
     "flow_upload": "Upload",
     "flow_organize": "Organize",
-    "flow_search": "Search & Ask",
+    "flow_search": "Search & Chat",
     "flow_edit": "Edit",
     "flow_connect": "Connect",
     "flow_send": "Send with Confirmation",
@@ -590,13 +590,13 @@
     "edit_suggestion_text": "\"The proposed timeline is 6 weeks, with a 2-week buffer for regulatory review. Milestones are outlined in Appendix B.\"",
     "connect_eyebrow": "Step 5",
     "connect_title": "Search across your messages.",
-    "connect_p1": "Connect Gmail, Outlook, or Slack to bring your messages into the same workspace as your files. Search across emails and channels alongside your documents.",
+    "connect_p1": "Connect Outlook, OneDrive, or SharePoint to bring your files and messages into the same workspace. Search across emails and documents alongside your uploads.",
     "connect_p2": "Access is permissioned. You control exactly which accounts and channels are connected. Disconnect anytime, and your data is removed from the workspace.",
     "connect_gmail": "Gmail",
     "connect_active": "Connected",
     "connect_outlook": "Outlook",
     "connect_available": "Available",
-    "connect_slack": "Slack",
+    "connect_slack": "SharePoint",
     "connect_active_slack": "Connected",
     "send_eyebrow": "Step 6",
     "send_title": "Nothing leaves without your approval.",
@@ -631,7 +631,7 @@
     "faq_a3": "Yes. You can rewrite paragraphs in .docx files and create formulas or update tables in .xlsx spreadsheets directly inside Allybi. AI suggests improvements, but you always approve changes before they are saved.",
     "faq_q4": "Is my data used to train AI models?",
     "faq_a4": "No. Your files are never used for model training. Your data is encrypted, isolated, and accessible only to you. This is an architecture decision, not a policy toggle.",
-    "faq_q5": "What happens when I connect Gmail or Slack?",
+    "faq_q5": "What happens when I connect Outlook or SharePoint?",
     "faq_a5": "Allybi indexes the messages you authorize so you can search across them alongside your files. Access is permissioned and revocable. When you disconnect, your data is removed from the workspace.",
     "faq_q6": "What does \"send with confirmation\" mean?",
     "faq_a6": "Before any email, file share, or outbound action is executed, Allybi shows you exactly what will happen and requires your explicit approval. Nothing leaves your workspace without your confirmation.",
@@ -909,7 +909,7 @@
     "pains": {
       "chaos": {
         "title": "Cross-functional chaos",
-        "desc": "Proposals in Drive, decisions in Slack, approvals in email. When information lives everywhere, finding the latest version of anything takes longer than the work itself."
+        "desc": "Proposals in Drive, decisions in SharePoint, approvals in email. When information lives everywhere, finding the latest version of anything takes longer than the work itself."
       },
       "latest": {
         "title": "Finding the latest file",
@@ -922,7 +922,7 @@
     },
     "feature1": {
       "title": "Search across docs and messages.",
-      "desc": "Ask Allybi a question and it searches your documents, emails, and Slack messages in one query. Find the proposal, the email thread where it was approved, and the Slack message with the client feedback — all at once, with exact source citations."
+      "desc": "Ask Allybi a question and it searches your documents, emails, and SharePoint files in one query. Find the proposal, the email thread where it was approved, and the SharePoint document with the client feedback — all at once, with exact source citations."
     },
     "feature2": {
       "title": "Project-level organization.",
@@ -958,12 +958,12 @@
     },
     "faq": {
       "title": "Frequently asked questions",
-      "q1": "Can Allybi search across email and Slack at the same time?",
-      "a1": "Yes. Connect your Gmail, Outlook, or Slack account and Allybi will search across documents and messages in a single query. Results show the source type (document, email, or message) with exact citations.",
+      "q1": "Can Allybi search across email and SharePoint at the same time?",
+      "a1": "Yes. Connect your Outlook, OneDrive, or SharePoint account and Allybi will search across documents and messages in a single query. Results show the source type (document, email, or message) with exact citations.",
       "q2": "How does project organization work?",
       "a2": "Create project workspaces and drag in files. Each workspace is isolated — search results only come from files within that project. You can share access with specific team members while keeping other projects private.",
       "q3": "What file types does Allybi support?",
-      "a3": "Allybi supports PDF, DOCX, XLSX, PPTX, and plain text files. You can also connect email (Gmail, Outlook) and Slack to search across messages alongside your documents.",
+      "a3": "Allybi supports PDF, DOCX, XLSX, PPTX, and plain text files. You can also connect email (Gmail, Outlook) and SharePoint to search across files alongside your documents.",
       "q4": "Can I edit documents directly in Allybi?",
       "a4": "Yes. Open documents and spreadsheets directly in the workspace. Make edits, update values, and get AI-assisted suggestions without leaving Allybi.",
       "q5": "Is my data private?",
@@ -977,7 +977,7 @@
       "result1": "<strong>ACME_Proposal_v3.pdf</strong> — Page 4: Pricing tier set at <mark>$24,000/year</mark> for Enterprise, with 15% volume discount above 50 seats.",
       "source_email": "Email",
       "result2": "<strong>Re: ACME pricing review</strong> — Sarah confirmed <mark>approval of the Enterprise tier</mark> pricing on Feb 12. Attached revised proposal.",
-      "source_slack": "Slack",
+      "source_slack": "SharePoint",
       "result3": "<strong>#deals channel</strong> — Marcus: \"Client is happy with the <mark>volume discount structure</mark>. Ready to move to contract stage.\"",
       "email_to_label": "To",
       "email_body": "Hi James, following up on our conversation last week. I have attached the updated proposal with the revised pricing tiers we discussed. Please review and let me know if you have any questions before our call on Thursday.",
@@ -1076,11 +1076,11 @@
     "faq": {
       "title": "Security FAQ",
       "q1": "Do my documents train AI models?",
-      "a1": "No. Your documents are never used to train AI models. This is contractually guaranteed. Allybi uses your files only to generate answers during your session.",
+      "a1": "No. Your documents are never used to train AI models. This is contractually guaranteed. Allybi uses your files only to generate answers in your workspace.",
       "q2": "How are files protected?",
       "a2": "All files are encrypted with TLS in transit and AES-256-GCM at rest. Encryption keys are managed separately from document storage for additional protection.",
       "q3": "How do connected services work?",
-      "a3": "Allybi connects to services like Gmail, Outlook, and Slack through OAuth with scoped permissions. You authorize each connection individually and can revoke access at any time.",
+      "a3": "Allybi connects to services like Outlook, OneDrive, and SharePoint through OAuth with scoped permissions. You authorize each connection individually and can revoke access at any time.",
       "q4": "What happens before a message is sent?",
       "a4": "Before any email or message is sent, Allybi shows you the full content, recipient, and any attachments. You must explicitly confirm before anything leaves the platform.",
       "q5": "How can I disconnect integrations?",
@@ -1107,8 +1107,8 @@
       "desc": "Access Outlook emails and calendar. Search messages, find relevant context, draft responses — all from one workspace."
     },
     "slack": {
-      "title": "Slack",
-      "desc": "Search Slack channels and threads. Find decisions, discussions, and shared files without leaving your workspace."
+      "title": "SharePoint",
+      "desc": "Search SharePoint sites and libraries. Find decisions, documents, and shared files without leaving your workspace."
     },
     "docs": {
       "title": "Docs & Sheets",
@@ -1133,8 +1133,8 @@
       "desc": "A client emails asking for the updated proposal. Allybi finds the latest version, attaches it, and drafts a reply — you confirm before it sends."
     },
     "workflow2": {
-      "title": "Search a Slack thread and pull the right doc",
-      "desc": "Your team discussed pricing changes in Slack last week. Allybi searches the thread, finds the referenced spreadsheet, and opens it for review."
+      "title": "Search a SharePoint library and pull the right doc",
+      "desc": "Your team stored pricing changes in SharePoint last week. Allybi searches the library, finds the referenced spreadsheet, and opens it for review."
     },
     "workflow3": {
       "title": "Edit a spreadsheet and send the update",
@@ -1163,7 +1163,7 @@
     "faq": {
       "title": "Integration FAQ",
       "q1": "Which services can I connect?",
-      "a1": "Allybi currently supports Gmail, Outlook, and Slack integrations. You can also upload and edit .docx and .xlsx files directly in the workspace.",
+      "a1": "Allybi currently supports Outlook, OneDrive, and SharePoint integrations. You can also upload and edit .docx and .xlsx files directly in the workspace.",
       "q2": "How do I connect an integration?",
       "a2": "Go to your account settings and select the integration you want to connect. You'll be redirected to the service's OAuth page to authorize access with scoped permissions.",
       "q3": "Can Allybi send emails on my behalf?",
@@ -1194,7 +1194,7 @@
     },
     "trust": {
       "title": "Security and privacy included",
-      "support": "Every plan includes end-to-end encryption, project isolation, no model training on your data, and explicit confirmation before anything is sent."
+      "support": "Every plan includes encryption in transit and at rest, project isolation, no model training on your data, and explicit confirmation before anything is sent."
     },
     "starter": {
       "name": "Starter",
@@ -1213,7 +1213,7 @@
       "tagline": "For teams that need more",
       "f1": "Unlimited documents",
       "f2": "All Starter features",
-      "f3": "Email & Slack integration",
+      "f3": "Email & connected sources",
       "f4": "Send with confirmation",
       "f5": "Team workspace",
       "f6": "Priority support",
@@ -1246,7 +1246,7 @@
       "editing_starter": "Basic",
       "editing_team": "Full",
       "editing_enterprise": "Full",
-      "integrations": "Email & Slack integration",
+      "integrations": "Email & connected sources",
       "send_confirm": "Send with confirmation",
       "team_workspace": "Team workspace",
       "priority_support": "Priority support",
@@ -1263,8 +1263,8 @@
     },
     "faq": {
       "title": "Pricing questions",
-      "q1": "Is there a free plan?",
-      "a1": "Allybi is currently in 30 days free phase. We work directly with each team to ensure the product fits your workflow. Book a demo to learn about access options.",
+      "q1": "Is there a free trial?",
+      "a1": "Yes. Allybi offers a 30-day free trial, then $170/month. We work directly with each team to ensure the product fits your workflow. Book a demo to learn about access options.",
       "q2": "What does onboarding include?",
       "a2": "Every team gets a dedicated walkthrough of Allybi, help setting up projects and integrations, and guidance on getting the most out of grounded search and version comparison.",
       "q3": "Are there usage limits?",
@@ -1339,7 +1339,7 @@
       },
       "item4": {
         "title": "Send with confirmation",
-        "desc": "See how email and Slack integration works with explicit review before anything is sent."
+        "desc": "See how email and connected sources work with explicit review before anything is sent."
       }
     },
     "audience": {
@@ -1389,7 +1389,7 @@
       "interest_placeholder": "Select an area",
       "interest_search": "AI document search",
       "interest_editing": "Document editing",
-      "interest_integrations": "Email & Slack integrations",
+      "interest_integrations": "Email & connected sources",
       "interest_security": "Security & privacy",
       "interest_all": "Full platform overview",
       "message_label": "Message (optional)",
@@ -1481,7 +1481,7 @@
     "card3": {
       "time": "Trying to find the approved proposal before the client call",
       "role": "Operations Lead",
-      "narrative": "The client is on the phone in 5 minutes asking about the project timeline. The proposal is somewhere between email, Slack, and three project folders.",
+      "narrative": "The client is on the phone in 5 minutes asking about the project timeline. The proposal is somewhere between email, SharePoint, and three project folders.",
       "outcome": "Found the right file. Prepared WhatsApp handoff with review before send.",
       "label": "Representative scenario",
       "timing": "Before client follow-up",
@@ -1573,10 +1573,10 @@
       "title": "Outlook",
       "status": "Live",
       "f1": "Search emails and attachments",
-      "f2": "Bring the right file into Ask",
+      "f2": "Bring the right file into Chat",
       "f3": "Prepare email responses with confirmation",
       "where_label": "Where:",
-      "t1": "Ask",
+      "t1": "Chat",
       "t2": "Integrations",
       "t3": "Review-before-send"
     },
@@ -1584,10 +1584,10 @@
       "title": "OneDrive",
       "status": "Live",
       "f1": "Import files and folders",
-      "f2": "Bring cloud content into Upload or Ask",
+      "f2": "Bring cloud content into Upload or chat",
       "where_label": "Where:",
       "t1": "Upload",
-      "t2": "Ask",
+      "t2": "Chat",
       "t3": "Integrations"
     },
     "sharepoint": {
@@ -1597,7 +1597,7 @@
       "f2": "Bring team documents into Allybi",
       "where_label": "Where:",
       "t1": "Upload",
-      "t2": "Ask",
+      "t2": "Chat",
       "t3": "Integrations"
     },
     "whatsapp": {
@@ -1650,7 +1650,7 @@
       "col_gdrive": "Google Drive",
       "r1": "Search source content",
       "r2": "Import files",
-      "r3": "Use in Ask",
+      "r3": "Search in chat",
       "r4": "Use in Upload",
       "r5": "Prepare email response",
       "r6": "Prepare WhatsApp handoff",
@@ -1746,7 +1746,7 @@
     },
     "security": {
       "q1": "Does Allybi train on my documents?",
-      "a1": "No. Your documents are never used to train AI models. This is contractually guaranteed. Allybi uses your files only to generate answers during your session.",
+      "a1": "No. Your documents are never used to train AI models. This is contractually guaranteed. Allybi uses your files only to generate answers in your workspace.",
       "q2": "How is data encrypted?",
       "a2": "All data is encrypted with TLS in transit and AES-256-GCM at rest. Encryption keys are managed separately from document storage. Workspaces are isolated so no data leaks between projects or users."
     },
@@ -1849,7 +1849,7 @@
       "title": "Client follow-ups, proposal tracking, compliance checks.",
       "subtitle": "The bottleneck is not the decision. It is finding the right document, the latest version, and the right context to act on.",
       "card1_title": "Client waiting for the follow-up",
-      "card1_desc": "The client asked for the updated SOW two days ago. The file is somewhere between email, folders, and three Slack threads.",
+      "card1_desc": "The client asked for the updated SOW two days ago. The file is somewhere between email, folders, and three SharePoint folders.",
       "card2_title": "Proposal_final_v2_updated",
       "card2_desc": "Version confusion wastes time and erodes trust. Sending the wrong version to a client or partner is invisible until it causes damage.",
       "card3_title": "Compliance without the paper trail",

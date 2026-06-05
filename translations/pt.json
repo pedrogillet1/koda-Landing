@@ -82,7 +82,7 @@
     "diagnostic": "Diagnóstico do fluxo"
   },
   "hero": {
-    "eyebrow": "IA privada para documentos, e-mails e envios",
+    "eyebrow": "Chat com fonte para documentos, e-mails e envios",
     "title": "Um chat para encontrar, confirmar e enviar o documento certo.",
     "subtitle": "Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte em linguagem normal. O Allybi mostra a fonte, prepara o envio por e-mail ou WhatsApp e pede sua revisão antes de enviar.",
     "cta_primary": "Começar grátis por 30 dias",
@@ -280,7 +280,7 @@
       "title": "Como Allybi funciona",
       "subtitle": "Três etapas. Sem caos. Sem curva de aprendizado.",
       "step1_title": "Traga seus arquivos",
-      "step1_desc": "Carregue documentos, conecte e-mail ou vincule o Slack. Allybi indexa tudo em workspaces privados por projeto.",
+      "step1_desc": "Conecte Outlook, OneDrive, SharePoint ou suba arquivos. Allybi organiza tudo no seu workspace.",
       "step2_title": "Pergunte em linguagem natural",
       "step2_desc": "Pergunte qualquer coisa — \"O que mudou na cláusula de indenização?\" Allybi retorna respostas com fonte com fontes exatas e números de página.",
       "step3_title": "Aja com confiança",
@@ -315,10 +315,10 @@
       "edit_bullet2": "Edição de planilhas com suporte a fórmulas",
       "edit_bullet3": "Histórico de versões preservado automaticamente",
       "edit_bullet4": "Exporte para PDF, DOCX ou XLSX",
-      "connect_title": "Conecte E-mail e Slack",
-      "connect_desc": "Pesquise e-mails e Slack junto com seus documentos. Rascunhe e envie respostas com o contexto completo do projeto.",
-      "connect_bullet1": "Integração com Gmail e Outlook",
-      "connect_bullet2": "Busca em canais e DMs do Slack",
+      "connect_title": "Conecte E-mail e Fontes",
+      "connect_desc": "Pesquise e-mails e documentos junto com seus uploads. Rascunhe e envie respostas com o contexto completo do projeto.",
+      "connect_bullet1": "Integração com Outlook, OneDrive e SharePoint",
+      "connect_bullet2": "Pesquise em e-mails, anexos e pastas",
       "connect_bullet3": "Rascunhe e-mails com fontes nos seus arquivos",
       "connect_bullet4": "Confirmação explícita antes de cada envio"
     },
@@ -419,11 +419,11 @@
   },
   "about": {
     "hero_eyebrow": "Sobre Allybi",
-    "hero_h1": "Criamos Allybi para acabar com o trabalho escondido entre pedir e enviar.",
+    "hero_h1": "Criamos a Allybi para acabar com o trabalho escondido entre pedir e enviar.",
     "hero_support": "Toda equipe já tem a informação. O problema é que ela vive espalhada entre arquivos, e-mails, versões e conversas.",
     "hero": {
       "eyebrow": "Sobre Allybi",
-      "title": "Criamos Allybi para acabar com o trabalho escondido entre pedir e enviar.",
+      "title": "Criamos a Allybi para acabar com o trabalho escondido entre pedir e enviar.",
       "subtitle": "Toda equipe já tem a informação. O problema é que ela vive espalhada entre arquivos, e-mails, versões e conversas."
     },
     "why_title": "Por que Allybi existe",
@@ -434,7 +434,7 @@
       "title": "Por que Allybi existe",
       "p1": "Todos os dias, profissionais jurídicos, financeiros e de negócios lidam com centenas de documentos que não criaram. Contratos chegam em diferentes formatos. Planilhas são duplicadas. Apresentações se multiplicam em caixas de entrada. Encontrar o arquivo certo na hora certa se torna um imposto sobre cada decisão que você toma.",
       "p2": "A maioria das ferramentas de IA promete resolver isso, mas introduz um novo problema: exigem que você entregue seus dados sem transparência sobre como são usados, armazenados ou utilizados para treinamento. Para equipes que trabalham com informações sensíveis, essa troca não é aceitável.",
-      "p3": "Allybi foi criado para eliminar ambos os problemas. Um workspace onde você pode pesquisar, comparar versões, preparar respostas e enviar com respostas citando a fonte e confirmação antes de qualquer envio."
+      "p3": "Allybi foi criado para eliminar ambos os problemas. Um workspace onde você pode pesquisar, comparar versões, preparar respostas e enviar com respostas com fonte e confirmação antes de qualquer envio."
     },
     "convictions_title": "O problema que nos recusamos a aceitar",
     "conviction_1_title": "Você não deveria ter que trocar privacidade por velocidade.",
@@ -653,13 +653,13 @@
     "edit_suggestion_text": "\"O cronograma proposto é de 6 semanas, com um buffer de 2 semanas para revisão regulatória. Os marcos estão descritos no Apêndice B.\"",
     "connect_eyebrow": "Etapa 5",
     "connect_title": "Pesquise suas mensagens.",
-    "connect_p1": "Conecte Gmail, Outlook ou Slack para trazer suas mensagens para o mesmo workspace que seus arquivos. Pesquise e-mails e canais junto com seus documentos.",
+    "connect_p1": "Conecte Outlook, OneDrive e SharePoint para trazer seus e-mails e documentos para o mesmo workspace. Pesquise em tudo junto.",
     "connect_p2": "O acesso é permissionado. Você controla exatamente quais contas e canais estão conectados. Desconecte a qualquer momento e seus dados são removidos do workspace.",
     "connect_gmail": "Gmail",
     "connect_active": "Conectado",
     "connect_outlook": "Outlook",
     "connect_available": "Disponível",
-    "connect_slack": "Slack",
+    "connect_slack": "SharePoint",
     "connect_active_slack": "Conectado",
     "send_eyebrow": "Etapa 6",
     "send_title": "Nada sai sem sua aprovação.",
@@ -694,7 +694,7 @@
     "faq_a3": "Sim. Você pode reescrever parágrafos em arquivos .docx e criar fórmulas ou atualizar tabelas em planilhas .xlsx diretamente dentro do Allybi. IA sugere melhorias, mas você sempre aprova as alterações antes que sejam salvas.",
     "faq_q4": "Meus dados são usados para treinar modelos de IA?",
     "faq_a4": "Não. Seus arquivos nunca são usados para treinamento de modelos. Seus dados são criptografados, isolados e acessíveis apenas por você. Isso é uma decisão de arquitetura, não uma opção configurável.",
-    "faq_q5": "O que acontece quando conecto Gmail ou Slack?",
+    "faq_q5": "O que acontece quando conecto Outlook ou OneDrive?",
     "faq_a5": "Allybi indexa as mensagens que você autoriza para que você possa pesquisá-las junto com seus arquivos. O acesso é permissionado e revogável. Ao desconectar, seus dados são removidos do workspace.",
     "faq_q6": "O que significa \"enviar com confirmação\"?",
     "faq_a6": "Antes que qualquer e-mail, compartilhamento de arquivo ou ação externa seja executada, Allybi mostra exatamente o que acontecerá e exige sua aprovação explícita. Nada sai do seu workspace sem sua confirmação.",
@@ -719,7 +719,7 @@
   "legal": {
     "hero_eyebrow": "Para advogados",
     "hero_h1": "Para advogados que não podem se dar ao luxo da versão errada.",
-    "hero_support": "Pesquise contratos, compare minutas, encontre a cláusula exata e prepare a resposta certa — com citações de fonte e confirmação antes de qualquer envio.",
+    "hero_support": "Pesquise contratos, compare minutas, encontre a cláusula exata e prepare a resposta certa — com respostas com fonte e confirmação antes de qualquer envio.",
     "pressure1_title": "Sócio pergunta o que mudou",
     "pressure1_desc": "Você precisa da resposta em segundos. Não depois de 20 minutos comparando dois PDFs manualmente.",
     "pressure2_title": "Cliente pede a última minuta",
@@ -743,7 +743,7 @@
     "sec1_title": "Criptografado",
     "sec1_desc": "Todos os dados criptografados em trânsito e em repouso.",
     "sec2_title": "Sem treinamento de modelo",
-    "sec2_desc": "Documentos nunca treinam modelos de IA. Garantido.",
+    "sec2_desc": "Documentos nunca treinam modelos de IA. Documentos não treinam modelos.",
     "sec3_title": "Workspaces isolados",
     "sec3_desc": "Cada caso é um ambiente isolado.",
     "sec4_title": "Confirmação explícita",
@@ -755,7 +755,7 @@
     "hero": {
       "eyebrow": "Para financeiro",
       "title": "Encontre o deck, modelo ou métrica certo — sem vasculhar.",
-      "subtitle": "Pesquise em documentos financeiros, compare versões e prepare respostas com fonte nos seus dados reais — com citações de fonte e confirmação antes do envio."
+      "subtitle": "Pesquise em documentos financeiros, compare versões e prepare respostas com fonte nos seus dados reais — com respostas com fonte e confirmação antes do envio."
     },
     "pressure": {
       "title": "Antes de reuniões do conselho, revisões trimestrais, atualizações para investidores.",
@@ -765,7 +765,7 @@
       "card2_title": "Números espalhados entre arquivos",
       "card2_desc": "Receita no modelo, ARR no deck, burn rate no memo do conselho. O CFO precisa de um número, da fonte certa, agora.",
       "card3_title": "Anexo errado enviado",
-      "card3_desc": "Enviar o modelo do trimestre passado para o conselho destruir a confiança instantaneamente. O erro é invisível até ser tarde demais."
+      "card3_desc": "Mandar o modelo do trimestre passado para o conselho não parece grave até alguém abrir. O erro é invisível até ser tarde demais."
     },
     "feature1": {
       "title": "Encontre números em todos os documentos.",
@@ -799,12 +799,12 @@
       "btn": "Confirmar"
     },
     "security": {
-      "title": "Privado por design. Fundamentado por padrão.",
+      "title": "Privado por design. Resposta com fonte por padrão.",
       "subtitle": "Seus dados financeiros nunca treinam modelos. Cada resposta cita a fonte. Nada é enviado sem sua aprovação.",
       "p1_title": "Criptografado em repouso e em trânsito",
       "p1_desc": "Modelos financeiros e decks do conselho permanecem totalmente criptografados.",
       "p2_title": "Sem treinamento de modelo",
-      "p2_desc": "Seus dados nunca treinam modelos de IA. Garantido contratualmente.",
+      "p2_desc": "Seus dados nunca treinam modelos de IA. Esse compromisso está nos nossos termos.",
       "p3_title": "Workspaces isolados",
       "p3_desc": "Cada projeto é isolado. Sem vazamento de dados entre workspaces.",
       "p4_title": "Confirmação antes de cada envio",
@@ -820,15 +820,15 @@
     "hero": {
       "eyebrow": "Para operações",
       "title": "Encontre a proposta aprovada, plano ou follow-up.",
-      "subtitle": "Pesquise em documentos operacionais, encontre a versão mais recente e prepare respostas — com respostas citando a fonte e confirmação antes de qualquer envio."
+      "subtitle": "Pesquise em documentos operacionais, encontre a versão mais recente e prepare respostas — com respostas com fonte e confirmação antes de qualquer envio."
     },
     "pressure": {
       "title": "Follow-ups com clientes, acompanhamento de propostas, verificações de conformidade.",
       "subtitle": "O gargalo não é a decisão. É encontrar o documento certo, a versão mais recente e o contexto certo para agir.",
       "card1_title": "Cliente esperando o follow-up",
-      "card1_desc": "O cliente pediu o SOW atualizado há dois dias. O arquivo está em algum lugar entre e-mail, pastas e três threads do Slack.",
+      "card1_desc": "O cliente pediu o SOW atualizado há dois dias. O arquivo está em algum lugar entre e-mail, pastas e três threads de e-mail.",
       "card2_title": "Proposta_final_v2_atualizada",
-      "card2_desc": "Confusão de versões desperdiça tempo e destruir confiança. Enviar a versão errada para um cliente ou parceiro é invisível até causar dano.",
+      "card2_desc": "Confusão de versões desperdiça tempo e destrói confiança. Enviar a versão errada para um cliente ou parceiro é invisível até causar dano.",
       "card3_title": "Conformidade sem o rastro documental",
       "card3_desc": "Quando uma verificação de conformidade chega, você precisa rastrear até a proposta aprovada e o rastro de decisão. Arquivos espalhados tornam isso mais difícil do que deveria."
     },
@@ -895,7 +895,7 @@
       "f2": "Redija e envie respostas com confirmação",
       "f3": "Conecte via OAuth com permissões com escopo",
       "where_label": "Onde:",
-      "t1": "Ask",
+      "t1": "Chat",
       "t2": "Integrações",
       "t3": "Revisão antes de enviar"
     },
@@ -903,10 +903,10 @@
       "title": "OneDrive",
       "status": "Ativo",
       "f1": "Importe arquivos e pastas para seu workspace",
-      "f2": "Use em Ask e Upload",
+      "f2": "Use no chat e em uploads",
       "where_label": "Onde:",
       "t1": "Importar",
-      "t2": "Ask",
+      "t2": "Chat",
       "t3": "Integrações"
     },
     "sharepoint": {
@@ -916,7 +916,7 @@
       "f2": "Pesquise em documentos da equipe",
       "where_label": "Onde:",
       "t1": "Importar",
-      "t2": "Ask",
+      "t2": "Chat",
       "t3": "Integrações"
     },
     "whatsapp": {
@@ -949,7 +949,7 @@
       "s2": "Allybi",
       "s2d": "Processa e fundamenta nos seus arquivos",
       "s3": "Resposta com fonte",
-      "s3d": "Citação de fonte, consciência de versão",
+      "s3d": "Resposta com fonte, consciência de versão",
       "s4": "Ação preparada",
       "s4d": "Rascunho de e-mail ou mensagem",
       "s5": "Confirmação",
@@ -969,8 +969,8 @@
       "col_gdrive": "Google Drive",
       "r1": "Pesquisar conteúdo da fonte",
       "r2": "Importar arquivos",
-      "r3": "Usar no Ask",
-      "r4": "Usar no Upload",
+      "r3": "Pesquisar no chat",
+      "r4": "Enviar uploads",
       "r5": "Preparar resposta por e-mail",
       "r6": "Preparar envio WhatsApp",
       "r7": "Status",
@@ -998,14 +998,14 @@
       },
       "notraining": {
         "title": "Sem treinamento com documentos de usuários",
-        "desc": "Seus documentos nunca são usados para treinar modelos de IA. Isso é garantido contratualmente nos nossos termos de serviço — seus dados permanecem seus."
+        "desc": "Seus documentos nunca são usados para treinar modelos de IA. Isso está nos nossos termos de serviço — seus dados permanecem seus."
       },
       "permissioned": {
         "title": "Integrações permissionadas",
         "desc": "Cada conexão requer autorização OAuth explícita. Você escolhe exatamente quais serviços o Allybi pode acessar e revoga o acesso a qualquer momento."
       },
       "cited": {
-        "title": "Respostas com citação de fonte",
+        "title": "Respostas com resposta com fonte",
         "desc": "Cada resposta de IA referencia o documento, página e seção exatos. Se a resposta não estiver nos seus documentos, Allybi informa em vez de inventar."
       },
       "confirmation": {
@@ -1058,7 +1058,7 @@
       "legal_title": "Equipes jurídicas",
       "legal_desc": "Compare cláusulas entre versões, encontre o anexo certo e envie com confirmação. Feito para fluxos de trabalho com muitos contratos.",
       "docs_title": "Fluxos com muitos documentos",
-      "docs_desc": "Pesquise em centenas de arquivos, obtenha respostas com citação de fonte e aja a partir de um único workspace. Menos tempo caçando, mais tempo decidindo.",
+      "docs_desc": "Pesquise em centenas de arquivos, obtenha respostas com resposta com fonte e aja a partir de um único workspace. Menos tempo caçando, mais tempo decidindo.",
       "sensitive_title": "Informações sensíveis",
       "sensitive_desc": "Para equipes que não podem se dar ao luxo de enviar o arquivo errado, citar a versão errada ou perder o controle dos seus dados. Privacidade é a arquitetura."
     },
@@ -1102,7 +1102,7 @@
       "tagline": "Para equipes que precisam de mais",
       "f1": "Documentos ilimitados",
       "f2": "Todos os recursos do Starter",
-      "f3": "Integração com e-mail e Slack",
+      "f3": "Integração com e-mail e fontes conectadas",
       "f4": "Envio com confirmação",
       "f5": "Workspace de equipe",
       "f6": "Suporte prioritário",
@@ -1135,7 +1135,7 @@
       "editing_starter": "Básica",
       "editing_team": "Completa",
       "editing_enterprise": "Completa",
-      "integrations": "Integração com e-mail e Slack",
+      "integrations": "Integração com e-mail e fontes conectadas",
       "send_confirm": "Envio com confirmação",
       "team_workspace": "Workspace de equipe",
       "priority_support": "Suporte prioritário",
@@ -1205,7 +1205,7 @@
     },
     "security": {
       "q1": "O Allybi treina com meus documentos?",
-      "a1": "Não. Seus documentos nunca são usados para treinar modelos de IA. Isso é garantido contratualmente. O Allybi usa seus arquivos apenas para gerar respostas durante sua sessão.",
+      "a1": "Não. Seus documentos nunca são usados para treinar modelos de IA. Isso está nos nossos termos. O Allybi usa seus arquivos apenas para gerar respostas no seu workspace.",
       "q2": "Como os dados são criptografados?",
       "a2": "Todos os dados são criptografados com TLS em trânsito e AES-256-GCM em repouso. Chaves de criptografia são gerenciadas separadamente do armazenamento de documentos. Workspaces são isolados para que nenhum dado vaze entre projetos ou usuários."
     },
@@ -1279,7 +1279,7 @@
       "allybi_label": "Com Allybi",
       "allybi": "Busca multi-fonte encontrou o arquivo certo entre e-mail e pastas. Identificou a versão mais recente (Escopo_Cliente_Alfa_v2.docx). Preparou o envio via WhatsApp com o arquivo certo — revisou conteúdo e destinatário antes de abrir o WhatsApp.",
       "outcome": "Encontrou o arquivo certo. Preparou o envio via WhatsApp com revisão antes de enviar.",
-      "narrative": "O cliente está ao telefone em 5 minutos perguntando sobre o cronograma do projeto. A proposta está em algum lugar entre e-mail, Slack e três pastas de projetos.",
+      "narrative": "O cliente está ao telefone em 5 minutos perguntando sobre o cronograma do projeto. A proposta está em algum lugar entre e-mail, pastas e três pastas de projetos.",
       "label": "Cenário representativo"
     },
     "trust": {
@@ -1409,7 +1409,7 @@
       "q3": "Como os resultados de busca são com fontes?",
       "a3": "Cada resposta que Allybi fornece cita o documento de origem exato, número da página e passagem relevante. A fundamentação é aplicada no nível da arquitetura — se a informação não existir nos seus arquivos carregados, Allybi informará em vez de fabricar uma resposta.",
       "q4": "Meus dados são criptografados?",
-      "a4": "Sim. Todos os dados são criptografados em trânsito (TLS 1.2+) e em repouso (AES-256). Seus documentos nunca são usados para treinar modelos de IA — isso é garantido contratualmente. Você pode escolher hospedagem na UE ou nos EUA.",
+      "a4": "Sim. Todos os dados são criptografados em trânsito (TLS 1.2+) e em repouso (AES-256). Seus documentos nunca são usados para treinar modelos de IA — isso está nos nossos termos. Você pode escolher hospedagem na UE ou nos EUA.",
       "q5": "Posso controlar quem acessa meu workspace?",
       "a5": "Sim. Cada workspace de projeto tem seus próprios controles de acesso. Você decide quem pode visualizar, editar ou pesquisar dentro de um caso. Workspaces são totalmente isolados — nenhum dado vaza entre projetos ou contas.",
       "q6": "Como funciona a confirmação de envio?",
@@ -1484,7 +1484,7 @@
       },
       "notraining": {
         "title": "Sem treinamento de modelos",
-        "desc": "Seus dados financeiros nunca treinam modelos de IA. Isso é garantido contratualmente nos nossos termos."
+        "desc": "Seus dados financeiros nunca treinam modelos de IA. Isso está nos nossos termos."
       },
       "confirmation": {
         "title": "Confirmação explícita de envio",
@@ -1538,11 +1538,11 @@
     "pains": {
       "chaos": {
         "title": "Caos interfuncional",
-        "desc": "Propostas no Drive, decisões no Slack, aprovações no e-mail. Quando a informação está em todo lugar, encontrar a versão mais recente de qualquer coisa leva mais tempo que o próprio trabalho."
+        "desc": "Propostas no Drive, decisões no e-mail, aprovações no e-mail. Quando a informação está em todo lugar, encontrar a versão mais recente de qualquer coisa leva mais tempo que o próprio trabalho."
       },
       "latest": {
         "title": "Encontrar o arquivo mais recente",
-        "desc": "Era \"Proposta_final\" ou \"Proposta_final_v2_atualizada\"? A confusão de versões desperdiça tempo e destruir a confiança quando o documento errado chega a um cliente ou parceiro."
+        "desc": "Era \"Proposta_final\" ou \"Proposta_final_v2_atualizada\"? A confusão de versões desperdiça tempo e destrói a confiança quando o documento errado chega a um cliente ou parceiro."
       },
       "followup": {
         "title": "Dar seguimento sem o documento certo",
@@ -1551,7 +1551,7 @@
     },
     "feature1": {
       "title": "Pesquise documentos e mensagens.",
-      "desc": "Faça uma pergunta ao Allybi e ele pesquisa seus documentos, e-mails e mensagens do Slack em uma única consulta. Encontre a proposta, a thread de e-mail onde foi aprovada e a mensagem do Slack com o feedback do cliente — tudo de uma vez, com citações exatas da fonte."
+      "desc": "Faça uma pergunta ao Allybi e ele pesquisa seus documentos, e-mails e mensagens de e-mail em uma única consulta. Encontre a proposta, a thread de e-mail onde foi aprovada e a mensagem de e-mail com o feedback do cliente — tudo de uma vez, com citações exatas da fonte."
     },
     "feature2": {
       "title": "Organização por projeto.",
@@ -1577,7 +1577,7 @@
       },
       "notraining": {
         "title": "Sem treinamento de modelos",
-        "desc": "Seus documentos nunca treinam modelos de IA. Garantido contratualmente."
+        "desc": "Seus documentos nunca treinam modelos de IA. Esse compromisso está nos nossos termos."
       },
       "access": {
         "title": "Controle de acesso por projeto",
@@ -1587,12 +1587,12 @@
     },
     "faq": {
       "title": "Perguntas frequentes",
-      "q1": "Allybi pode pesquisar e-mail e Slack ao mesmo tempo?",
-      "a1": "Sim. Conecte sua conta Gmail, Outlook ou Slack e Allybi pesquisará documentos e mensagens em uma única consulta. Os resultados mostram o tipo de fonte (documento, e-mail ou mensagem) com citações exatas.",
+      "q1": "Allybi pode pesquisar e-mail e fontes conectadas ao mesmo tempo?",
+      "a1": "Sim. Conecte Outlook, OneDrive ou SharePoint e o Allybi pesquisará documentos e mensagens em uma única consulta. Os resultados mostram o tipo de fonte (documento, e-mail ou mensagem) com a fonte exata.",
       "q2": "Como funciona a organização por projeto?",
       "a2": "Crie workspaces de projeto e arraste arquivos. Cada workspace é isolado — os resultados de busca vêm apenas dos arquivos dentro daquele projeto. Você pode compartilhar acesso com membros específicos da equipe mantendo outros projetos privados.",
       "q3": "Quais tipos de arquivo Allybi suporta?",
-      "a3": "Allybi suporta arquivos PDF, DOCX, XLSX, PPTX e texto simples. Você também pode conectar e-mail (Gmail, Outlook) e Slack para pesquisar mensagens junto com seus documentos.",
+      "a3": "Allybi suporta PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, JPG, JPEG, PNG, MP3 e MP4. Você também pode conectar Outlook, OneDrive e SharePoint.",
       "q4": "Posso editar documentos diretamente no Allybi?",
       "a4": "Sim. Abra documentos e planilhas diretamente no workspace. Faça edições, atualize valores e receba sugestões assistidas por IA sem sair do Allybi.",
       "q5": "Meus dados são privados?",
@@ -1606,8 +1606,8 @@
       "result1": "<strong>ACME_Proposal_v3.pdf</strong> — Página 4: Faixa de preço definida em <mark>$24.000/ano</mark> para Enterprise, com 15% de desconto por volume acima de 50 licenças.",
       "source_email": "E-mail",
       "result2": "<strong>Re: Revisão de preços ACME</strong> — Sarah confirmou <mark>aprovação da faixa Enterprise</mark> em 12 Fev. Proposta revisada em anexo.",
-      "source_slack": "Slack",
-      "result3": "<strong>#canal-negocios</strong> — Marcus: \"Cliente satisfeito com a <mark>estrutura de desconto por volume</mark>. Pronto para avançar para a fase de contrato.\"",
+      "source_slack": "Anexo",
+      "result3": "<strong>Re: Desconto ACME</strong> — Marcus: \"Cliente satisfeito com a <mark>estrutura de desconto por volume</mark>. Pronto para avançar para a fase de contrato.\"",
       "email_to_label": "Para",
       "email_body": "Olá cliente, dando seguimento à nossa conversa da semana passada. Anexei a proposta atualizada com as faixas de preço revisadas que discutimos. Por favor, revise e me avise se tiver dúvidas antes da nossa chamada de quinta.",
       "email_attachment": "Proposal_v3_final.pdf",
@@ -1651,7 +1651,7 @@
       },
       "notraining": {
         "title": "Sem treinamento com documentos de usuários",
-        "desc": "Seus documentos nunca são usados para treinar modelos de IA. Isso é garantido contratualmente nos nossos termos de serviço — seus dados permanecem seus."
+        "desc": "Seus documentos nunca são usados para treinar modelos de IA. Isso está nos nossos termos de serviço — seus dados permanecem seus."
       }
     },
     "arch": {
@@ -1683,7 +1683,7 @@
       },
       "notraining": {
         "title": "Sem treinamento de modelos",
-        "desc": "Documentos de usuários não são usados para treinar modelos de IA. Esse compromisso é garantido contratualmente nos nossos termos de serviço."
+        "desc": "Documentos de usuários não são usados para treinar modelos de IA. Esse compromisso está nos nossos termos de serviço."
       }
     },
     "integ": {
@@ -1705,11 +1705,11 @@
     "faq": {
       "title": "FAQ de Segurança",
       "q1": "Meus documentos treinam modelos de IA?",
-      "a1": "Não. Seus documentos nunca são usados para treinar modelos de IA. Isso é garantido contratualmente. Allybi usa seus arquivos apenas para gerar respostas durante sua sessão.",
+      "a1": "Não. Seus documentos nunca são usados para treinar modelos de IA. Isso está nos nossos termos. Allybi usa seus arquivos apenas para gerar respostas no seu workspace.",
       "q2": "Como os arquivos são protegidos?",
       "a2": "Todos os arquivos são criptografados com TLS em trânsito e AES-256-GCM em repouso. Chaves de criptografia são gerenciadas separadamente do armazenamento de documentos para proteção adicional.",
       "q3": "Como funcionam os serviços conectados?",
-      "a3": "Allybi conecta-se a serviços como Gmail, Outlook e Slack por meio de OAuth com permissões com escopo. Você autoriza cada conexão individualmente e pode revogar o acesso a qualquer momento.",
+      "a3": "Allybi conecta-se a Outlook, OneDrive e SharePoint por meio de OAuth com permissões com escopo. Você autoriza cada conexão individualmente e pode revogar o acesso a qualquer momento.",
       "q4": "O que acontece antes de uma mensagem ser enviada?",
       "a4": "Antes que qualquer e-mail ou mensagem seja enviado, Allybi mostra o conteúdo completo, destinatário e quaisquer anexos. Você deve confirmar explicitamente antes que qualquer coisa saia da plataforma.",
       "q5": "Como posso desconectar integrações?",
@@ -1736,8 +1736,8 @@
       "desc": "Acesse e-mails e calendário do Outlook. Pesquise mensagens, encontre contexto relevante, redija respostas — tudo em um único workspace."
     },
     "slack": {
-      "title": "Slack",
-      "desc": "Pesquise canais e threads do Slack. Encontre decisões, discussões e arquivos compartilhados sem sair do seu workspace."
+      "title": "SharePoint",
+      "desc": "Acesse documentos e bibliotecas do SharePoint. Pesquise arquivos da equipe, encontre versões e traga o contexto para o chat."
     },
     "docs": {
       "title": "Docs e Planilhas",
@@ -1762,8 +1762,8 @@
       "desc": "Um cliente envia e-mail pedindo a proposta atualizada. Allybi encontra a versão mais recente, anexa e rascunha uma resposta — você confirma antes do envio."
     },
     "workflow2": {
-      "title": "Pesquise uma thread do Slack e encontre o documento certo",
-      "desc": "Sua equipe discutiu mudanças de preço no Slack semana passada. Allybi pesquisa a thread, encontra a planilha referenciada e abre para revisão."
+      "title": "Pesquise uma thread de e-mail e encontre o documento certo",
+      "desc": "Sua equipe discutiu mudanças de preço no e-mail semana passada. Allybi pesquisa a thread, encontra a planilha referenciada e abre para revisão."
     },
     "workflow3": {
       "title": "Edite uma planilha e envie a atualização",
@@ -1792,7 +1792,7 @@
     "faq": {
       "title": "FAQ de Integrações",
       "q1": "Quais serviços posso conectar?",
-      "a1": "Allybi atualmente suporta integrações com Gmail, Outlook e Slack. Você também pode carregar e editar arquivos .docx e .xlsx diretamente no workspace.",
+      "a1": "Allybi suporta integrações com Outlook, OneDrive e SharePoint. Você também pode subir arquivos diretamente. Gmail e Google Drive estão no roadmap.",
       "q2": "Como conecto uma integração?",
       "a2": "Acesse as configurações da sua conta e selecione a integração que deseja conectar. Você será redirecionado à página OAuth do serviço para autorizar o acesso com permissões com escopo.",
       "q3": "Allybi pode enviar e-mails em meu nome?",
@@ -1817,7 +1817,7 @@
       "title": "O que uma demo cobre",
       "item1": {
         "title": "Busca privada de documentos",
-        "desc": "Veja como a busca com IA encontra respostas com fonte nos seus arquivos reais com citações de fonte."
+        "desc": "Veja como a busca com IA encontra respostas com fonte nos seus arquivos reais com respostas com fonte."
       },
       "item2": {
         "title": "Organização por projeto",
@@ -1829,7 +1829,7 @@
       },
       "item4": {
         "title": "Envio com confirmação",
-        "desc": "Veja como a integração com e-mail e Slack funciona com revisão explícita antes de qualquer envio."
+        "desc": "Veja como a integração com e-mail e fontes conectadas funciona com revisão explícita antes de qualquer envio."
       }
     },
     "audience": {
@@ -1879,7 +1879,7 @@
       "interest_placeholder": "Selecione uma área",
       "interest_search": "Busca de documentos com IA",
       "interest_editing": "Edição de documentos",
-      "interest_integrations": "Integrações com e-mail e Slack",
+      "interest_integrations": "Integrações com e-mail e fontes conectadas",
       "interest_security": "Segurança e privacidade",
       "interest_all": "Visão geral completa da plataforma",
       "message_label": "Mensagem (opcional)",

@@ -138,7 +138,8 @@
             						<p>Our security and privacy framework provides comprehensive protection for user information while enabling the innovative features and capabilities that make the Allybi Service valuable. We are committed to transparency about our practices and providing users with meaningful control over their information.</p>
 
             						<h3>1.2 Scope and Application</h3>
-            						<p>This policy applies to all aspects of the Allybi Service, including our web platform, mobile applications, application programming interfaces (APIs), and underlying infrastructure. It governs the collection, use, processing, storage, and protection of all information processed by or through the Allybi Service.</p>
+            						<p><!-- TODO: Legal review needed - no mobile applications exist; Allybi is web-only -->
+            						This policy applies to all aspects of the Allybi Service, including our web platform, application programming interfaces (APIs), and underlying infrastructure. It governs the collection, use, processing, storage, and protection of all information processed by or through the Allybi Service.</p>
             						<p>The policy applies to all categories of users, including individual users, team members, organization administrators, and other persons who interact with the Allybi Service. It also governs our handling of information about website visitors, prospective users, and other individuals whose information we may process.</p>
             						<p>This policy covers all types of information processed by the Allybi Service, including user-uploaded documents, artificial intelligence queries and interactions, account information, usage analytics, and other data. Different types of information require different levels of protection, and this policy establishes appropriate safeguards for each category.</p>
 
@@ -262,7 +263,8 @@
             						<p><strong>Encryption at Rest</strong> protects stored information from unauthorized access if storage systems are compromised. All user documents and other sensitive information stored in Allybi systems are encrypted using AES-256 encryption. Encryption keys are managed securely and are not stored with encrypted data.</p>
             						<p><strong>Encryption in Transit</strong> protects information transmitted between user devices and Allybi servers from interception or modification. All communications use TLS 1.3 or higher encryption protocols. This includes web browser communications, mobile application communications, and API communications.</p>
             						<p><strong>Key Management</strong> includes secure generation, storage, rotation, and destruction of encryption keys. Encryption keys are generated using cryptographically secure random number generators. Keys are stored in secure key management systems with restricted access. Keys are rotated regularly to limit the impact of potential key compromise. Keys are securely destroyed when no longer needed.</p>
-            						<p><strong>End-to-End Encryption</strong> for sensitive communications ensures that information is encrypted on the user&rsquo;s device before transmission and can only be decrypted by the intended recipient. This prevents Allybi from accessing the plaintext content of encrypted communications.</p>
+            						<p><!-- TODO: Legal review needed - verify "end-to-end encryption" claim; current implementation uses TLS in transit and AES-256 at rest. Does Allybi truly implement E2EE where the server cannot access plaintext? -->
+            						<strong>End-to-End Encryption</strong> for sensitive communications ensures that information is encrypted on the user&rsquo;s device before transmission and can only be decrypted by the intended recipient. This prevents Allybi from accessing the plaintext content of encrypted communications.</p>
 
             						<h3>5.2 AI and Document Processing Security</h3>
             						<p>The Allybi Service implements security measures specific to AI processing and document analysis to protect user information while enabling AI functionality.</p>
@@ -277,8 +279,10 @@
             						<p>The Allybi Service uses secure communication channels to protect information transmitted between users, systems, and third parties.</p>
             						<p><strong>HTTPS/TLS</strong> is used for all web-based communications between users and the Allybi Service. All URLs use the HTTPS protocol with TLS 1.3 or higher encryption. Users are warned if they attempt to access Allybi services over unencrypted HTTP connections.</p>
             						<p><strong>API Security</strong> includes encryption of all API communications, authentication of API requests, and authorization checks to ensure that only authorized clients can access APIs. API communications use TLS 1.3 or higher encryption.</p>
-            						<p><strong>Mobile Application Security</strong> includes encryption of all communications between mobile applications and Allybi servers. Mobile applications use TLS 1.3 or higher encryption for all network communications.</p>
-            						<p><strong>Third-Party Communications</strong> with integrated services such as Slack, Gmail, and Outlook use secure communication channels. All communications with third-party APIs use TLS 1.3 or higher encryption and follow OAuth 2.0 security protocols.</p>
+            						<p><!-- TODO: Legal review needed - no mobile application exists; Allybi is web-only -->
+            						<strong>Mobile Application Security</strong> includes encryption of all communications between mobile applications and Allybi servers. Mobile applications use TLS 1.3 or higher encryption for all network communications.</p>
+            						<p><!-- TODO: Legal review needed - Slack is not available; Gmail is roadmap only -->
+            						<strong>Third-Party Communications</strong> with integrated services such as Outlook, OneDrive, and SharePoint use secure communication channels. All communications with third-party APIs use TLS 1.3 or higher encryption and follow OAuth 2.0 security protocols.</p>
           					</div>
 
           					<!-- Section 6: Network and Infrastructure Security -->
@@ -301,7 +305,8 @@
             						<p><strong>Monitoring and Logging</strong> includes comprehensive logging of system events, security events, and user activities. Logs are protected from unauthorized modification and are reviewed regularly for suspicious activity. Log retention complies with legal requirements and operational needs.</p>
 
             						<h3>6.3 Third-Party Integration Security</h3>
-            						<p>The Allybi Service implements security controls for integrations with third-party services including Slack, Gmail, and Outlook.</p>
+            						<p><!-- TODO: Legal review needed - Slack is not available; Gmail is roadmap only -->
+            						The Allybi Service implements security controls for integrations with third-party services including Outlook, OneDrive, and SharePoint.</p>
             						<p><strong>API Security</strong> includes authentication and authorization controls for third-party APIs. API communications are encrypted and authenticated. API access is logged and monitored for suspicious activity.</p>
             						<p><strong>Data Validation</strong> ensures that data received from third-party services is validated before processing. Invalid or suspicious data is rejected or quarantined for investigation.</p>
             						<p><strong>Rate Limiting</strong> prevents excessive API calls that could indicate abuse or attacks. Rate limits are enforced on both inbound and outbound API communications.</p>
