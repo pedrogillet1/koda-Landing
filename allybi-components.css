@@ -466,7 +466,8 @@
   margin: 0 auto var(--allybi-space-16);
 }
 
-.allybi-section-header .allybi-eyebrow {
+.allybi-section-header .allybi-eyebrow,
+.allybi-section-header .allybi-chip {
   margin-bottom: 16px;
 }
 
