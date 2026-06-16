@@ -147,7 +147,7 @@
       "cta": "Veja como advogados usam o Allybi",
       "mock_q": "\"mostrar alterações da cláusula 12.4 entre v2 e v3\"",
       "mock_heading": "Cláusula 12.4 — Limitação de responsabilidade",
-      "mock_src": "NDA_v3_final.pdf — p. 8",
+      "mock_src": "NDA_v3_final.pdf · p. 8",
       "mock_body": "Limite alterado de <s style=\"color:#DC2626;background:rgba(220,38,38,0.06);padding:1px 3px;border-radius:2px\">R$1M</s> para <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">R$3M</span>."
     },
     "finance": {
@@ -159,7 +159,7 @@
       "cta": "Ver fluxos financeiros",
       "mock_q": "\"qual foi a receita recorrente no último deck do conselho?\"",
       "mock_heading": "Receita Recorrente Anual — Q4",
-      "mock_src": "Deck_Conselho_Q4.pdf — slide 7",
+      "mock_src": "Deck_Conselho_Q4.pdf · slide 7",
       "heading": "Encontre o deck, modelo ou métrica certo. Responda com confiança.",
       "mock_body": "ARR Q4 atingiu <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">R$4,2M</span>, alta de 38% vs Q3."
     },
@@ -172,7 +172,7 @@
       "cta": "Ver fluxos de operações",
       "mock_q": "\"resumir entregas do escopo aprovado\"",
       "mock_heading": "Escopo — Cliente Alfa",
-      "mock_src": "Escopo_Cliente_Alfa_v2.docx — p. 3",
+      "mock_src": "Escopo_Cliente_Alfa_v2.docx · p. 3",
       "heading": "Encontre a proposta aprovada, plano ou follow-up. Avance com segurança.",
       "mock_body": "3 entregas no escopo aprovado, totalizando <span style=\"color:#059669;background:rgba(5,150,105,0.06);padding:1px 3px;border-radius:2px;font-weight:600\">R$185 mil</span>."
     }
@@ -834,13 +834,13 @@
       "query": "\"Qual foi o ARR do Q4 no último deck do conselho?\"",
       "badge": "Resposta com fonte",
       "answer": "ARR Q4 atingiu <strong>R$4,2M</strong>, alta de 38% vs Q3.",
-      "source": "Deck_Conselho_Q4.pdf — slide 7",
-      "src": "Deck_Conselho_Q4.pdf — slide 7"
+      "source": "Deck_Conselho_Q4.pdf · slide 7",
+      "src": "Deck_Conselho_Q4.pdf · slide 7"
     },
     "mock2": {
       "query": "\"Comparar receita entre Q3 e Q4\"",
-      "src_q3": "Deck_Conselho_Q3.pdf — slide 7",
-      "src_q4": "Deck_Conselho_Q4.pdf — slide 7"
+      "src_q3": "Deck_Conselho_Q3.pdf · slide 7",
+      "src_q4": "Deck_Conselho_Q4.pdf · slide 7"
     },
     "mock3": {
       "confirm_label": "Confirmar antes de enviar",
@@ -903,9 +903,9 @@
       "query": "\"quais são as entregas no escopo aprovado?\"",
       "badge": "Resposta com fonte",
       "answer": "3 entregas no escopo aprovado: diagnóstico (R$45 mil), implementação (R$95 mil) e treinamento (R$45 mil).",
-      "source": "Escopo_Cliente_Alfa_v2.docx — p. 3",
+      "source": "Escopo_Cliente_Alfa_v2.docx · p. 3",
       "heading": "Escopo — Cliente Alfa",
-      "src": "Escopo_Cliente_Alfa_v2.docx — p. 3"
+      "src": "Escopo_Cliente_Alfa_v2.docx · p. 3"
     },
     "mock2": {
       "latest": "Mais recente"
@@ -1719,9 +1719,9 @@
       "compare_v3_label": "Rascunho v3 — 18 Mar",
       "compare_v3_text": "Seção 8.1 — Indenização. O Fornecedor indenizará o Cliente contra todas as reclamações decorrentes de <span class=\"ucl-compare__added\">quaisquer atos ou omissões</span> relacionados aos Serviços...",
       "search_query": "\"Quais são os termos de não concorrência no contrato Anderson?\"",
-      "search_source1": "Anderson_MSA_v4.pdf — Página 12, Seção 9.3",
+      "search_source1": "Anderson_MSA_v4.pdf · Página 12, Seção 9.3",
       "search_text1": "O Contratado concorda em não exercer quaisquer <mark>atividades comerciais concorrentes</mark> dentro de um <mark>raio de 80 km</mark> por um período de <mark>24 meses</mark> após o término deste Contrato.",
-      "search_source2": "Anderson_Amendment_2.pdf — Página 3, Seção 2.1",
+      "search_source2": "Anderson_Amendment_2.pdf · Página 3, Seção 2.1",
       "search_text2": "O período de não concorrência descrito na Seção 9.3 é alterado para <mark>18 meses</mark> com escopo geográfico reduzido para <mark>40 km</mark>.",
       "send_badge": "Confirmar antes de enviar",
       "send_file": "Anderson_MSA_v4_final.pdf",
@@ -1808,9 +1808,9 @@
     "mock": {
       "query": "\"Qual é a contagem de ações totalmente diluídas?\"",
       "answer1_value": "12.450.000 ações",
-      "answer1_source": "Fonte: CapTable_Q4_2025.xlsx — Planilha \"Resumo\", Célula D14",
+      "answer1_source": "Fonte: CapTable_Q4_2025.xlsx · Planilha \"Resumo\", Célula D14",
       "answer2_value": "Avaliação post-money: $48M",
-      "answer2_source": "Fonte: Deck_Conselho_Q4.pptx — Slide 8",
+      "answer2_source": "Fonte: Deck_Conselho_Q4.pptx · Slide 8",
       "email_to_label": "Para",
       "email_subject_label": "Assunto",
       "email_subject": "Deck atualizado — Materiais Série B",

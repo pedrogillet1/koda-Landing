@@ -142,7 +142,7 @@
       "cta": "See how lawyers use Allybi",
       "mock_q": "\"Show clause 12.4 changes between v2 and v3\"",
       "mock_heading": "Section 12.4 — Limitation of Liability",
-      "mock_src": "NDA_v3_Final.pdf — p. 8",
+      "mock_src": "NDA_v3_Final.pdf · p. 8",
       "heading": "Compare clauses across versions. Send the right file with confirmation.",
       "mock_body": "Cap changed from <s style=\"color:#DC2626;background:rgba(220,38,38,0.08);padding:1px 3px;border-radius:2px\">$1M</s> to <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$3M</span>."
     },
@@ -155,7 +155,7 @@
       "cta": "See finance workflows",
       "mock_q": "\"What was Q4 ARR in the latest board deck?\"",
       "mock_heading": "Annual Recurring Revenue — Q4",
-      "mock_src": "Board_Deck_Q4.pdf — slide 7",
+      "mock_src": "Board_Deck_Q4.pdf · slide 7",
       "heading": "Find the right deck, model, or metric. Respond with confidence.",
       "mock_body": "Q4 ARR reached <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$4.2M</span>, up 38% from Q3."
     },
@@ -168,7 +168,7 @@
       "cta": "See business workflows",
       "mock_q": "\"Summarize deliverables in the Acme SOW\"",
       "mock_heading": "Acme Corp — Statement of Work",
-      "mock_src": "Acme_SOW_v2.docx — p. 3",
+      "mock_src": "Acme_SOW_v2.docx · p. 3",
       "heading": "Find the approved proposal, plan, or follow-up. Move forward safely.",
       "mock_body": "3 deliverables totaling <span style=\"color:#16A34A;background:rgba(22,163,74,0.08);padding:1px 3px;border-radius:2px;font-weight:600\">$185K</span>."
     }
@@ -894,9 +894,9 @@
       "compare_v3_label": "Draft v3 — Mar 18",
       "compare_v3_text": "Section 8.1 — Indemnification. The Supplier shall indemnify the Client against all claims arising from <span class=\"ucl-compare__added\">any acts or omissions</span> related to the Services...",
       "search_query": "\"What are the non-compete terms in the Anderson agreement?\"",
-      "search_source1": "Anderson_MSA_v4.pdf — Page 12, Section 9.3",
+      "search_source1": "Anderson_MSA_v4.pdf · Page 12, Section 9.3",
       "search_text1": "The Contractor agrees not to engage in any <mark>competing business activities</mark> within a <mark>50-mile radius</mark> for a period of <mark>24 months</mark> following termination of this Agreement.",
-      "search_source2": "Anderson_Amendment_2.pdf — Page 3, Section 2.1",
+      "search_source2": "Anderson_Amendment_2.pdf · Page 3, Section 2.1",
       "search_text2": "The non-compete period described in Section 9.3 is hereby amended to <mark>18 months</mark> with geographic scope reduced to <mark>25 miles</mark>.",
       "send_badge": "Confirm before sending",
       "send_file": "Anderson_MSA_v4_final.pdf",
@@ -983,9 +983,9 @@
     "mock": {
       "query": "\"What is the fully diluted share count?\"",
       "answer1_value": "12,450,000 shares",
-      "answer1_source": "Source: CapTable_Q4_2025.xlsx — Sheet \"Summary\", Cell D14",
+      "answer1_source": "Source: CapTable_Q4_2025.xlsx · Sheet \"Summary\", Cell D14",
       "answer2_value": "Post-money valuation: $48M",
-      "answer2_source": "Source: Board_Deck_Q4.pptx — Slide 8",
+      "answer2_source": "Source: Board_Deck_Q4.pptx · Slide 8",
       "email_to_label": "To",
       "email_subject_label": "Subject",
       "email_subject": "Updated deck — Series B materials",
@@ -2156,12 +2156,12 @@
       "query": "\"What was Q4 ARR in the latest board deck?\"",
       "badge": "Answer with source",
       "answer": "Q4 ARR reached <strong>$4.2M</strong>, up 38% from Q3.",
-      "source": "Board_Deck_Q4.pdf — slide 7"
+      "source": "Board_Deck_Q4.pdf · slide 7"
     },
     "mock2": {
       "query": "\"Compare ARR between Q3 and Q4 board decks\"",
-      "src_q3": "Board_Deck_Q3.pdf — slide 7",
-      "src_q4": "Board_Deck_Q4.pdf — slide 7"
+      "src_q3": "Board_Deck_Q3.pdf · slide 7",
+      "src_q4": "Board_Deck_Q4.pdf · slide 7"
     },
     "mock3": {
       "confirm_label": "Confirm before send",
@@ -2224,7 +2224,7 @@
       "query": "\"What are the deliverables in the Acme SOW?\"",
       "badge": "Answer with source",
       "answer": "3 deliverables totaling <strong>$185K</strong>: Phase 1 discovery ($45K), Phase 2 implementation ($95K), Phase 3 training ($45K).",
-      "source": "Acme_SOW_v2.docx — p. 3"
+      "source": "Acme_SOW_v2.docx · p. 3"
     },
     "mock2": {
       "latest": "Latest"
