@@ -920,6 +920,105 @@
   color: var(--allybi-accent);
 }
 
+/* Tools microcopy + mini visuals */
+.s-tools__micro {
+  font-size: 13px;
+  color: var(--allybi-text-muted);
+  margin: 10px auto 0;
+  max-width: 480px;
+}
+.s-tools__card-viz {
+  background: var(--allybi-bg-alt-1, #F5F5F5);
+  border: 1px solid var(--allybi-border, #E6E6EC);
+  border-radius: 10px;
+  padding: 14px 14px 10px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.s-tools__bar {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+  color: var(--allybi-text-secondary);
+}
+.s-tools__bar:last-of-type { margin-bottom: 0; }
+.s-tools__bar label { color: var(--allybi-text-secondary); }
+.s-tools__bar-fill {
+  position: relative;
+  display: block;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.s-tools__bar-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: var(--w, 0%);
+  background: linear-gradient(90deg, #181818, #55534E);
+  border-radius: inherit;
+  transition: width 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.s-tools__viz-caption {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--allybi-text-muted);
+  text-align: right;
+}
+.s-tools__map {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  align-items: center;
+}
+.s-tools__map-node {
+  position: relative;
+  font-size: 10px;
+  text-align: center;
+  padding: 8px 6px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--allybi-text-secondary);
+  font-weight: 500;
+}
+.s-tools__map-node + .s-tools__map-node::before {
+  content: "→";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--allybi-text-muted);
+  font-size: 10px;
+}
+.s-tools__map-node--stuck {
+  background: rgba(217, 45, 32, 0.08);
+  color: #B41E11;
+  font-weight: 600;
+}
+.s-tools__map-node--stuck::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #D92D20;
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  .s-tools__bar { grid-template-columns: 100px 1fr; font-size: 10px; }
+  .s-tools__map { grid-template-columns: repeat(3, 1fr); gap: 14px 6px; }
+  .s-tools__map-node + .s-tools__map-node::before { display: none; }
+}
+
 /* ── 8 · FAQ ── */
 .s-faq {
   padding: var(--allybi-section-py) 0;

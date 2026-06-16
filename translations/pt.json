@@ -398,7 +398,20 @@
       "calc_cta": "Calcular meu tempo →",
       "diag_title": "Diagnóstico do Fluxo",
       "diag_desc": "Mapeie onde o time perde certeza entre o pedido e o envio.",
-      "diag_cta": "Mapear fluxo do time →"
+      "diag_cta": "Mapear fluxo do time →",
+      "micro": "Resultado na hora. Sem cadastro para ver o resultado.",
+      "bar1": "Procurar",
+      "bar2": "Confirmar versão",
+      "bar3": "Achar fonte",
+      "bar4": "Preparar envio",
+      "viz_example": "Exemplo. Calcule o seu.",
+      "node1": "Pedido",
+      "node2": "Busca",
+      "node3": "Versão",
+      "node4": "Fonte",
+      "node5": "Confirmação",
+      "node6": "Envio",
+      "viz_stuck": "Onde o fluxo trava."
     },
     "usecases": {
       "title": "Momentos em que ninguém quer adivinhar.",

@@ -415,7 +415,20 @@
       "diag_desc": "Map where your team loses certainty between the request and the send.",
       "diag_cta": "Map your team's flow →",
       "rayox_title": "Time Lost Calculator",
-      "rayox_desc": "Find out how many hours per month you lose searching, confirming, and resending files."
+      "rayox_desc": "Find out how many hours per month you lose searching, confirming, and resending files.",
+      "micro": "Instant result. No signup to see it.",
+      "bar1": "Search",
+      "bar2": "Confirm version",
+      "bar3": "Find source",
+      "bar4": "Prepare send",
+      "viz_example": "Example. Run yours.",
+      "node1": "Request",
+      "node2": "Search",
+      "node3": "Version",
+      "node4": "Source",
+      "node5": "Confirmation",
+      "node6": "Send",
+      "viz_stuck": "Where the flow stalls."
     }
   },
   "about": {

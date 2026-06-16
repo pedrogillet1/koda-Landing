@@ -511,14 +511,33 @@
     <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:40px">
       <h2 class="allybi-h3" data-i18n-key="home.tools.title" style="font-size:clamp(20px,2.5vw,32px);font-weight:700;letter-spacing:-0.02em;color:var(--allybi-text-strongest);margin-bottom:12px">Before you try, measure what's costing time.</h2>
       <p style="font-size:15px;color:var(--allybi-text-secondary);max-width:520px;margin:0 auto" data-i18n-key="home.tools.subtitle">Two quick tools. One shows your lost time. The other shows where the team's flow stalls.</p>
+      <p class="s-tools__micro" data-i18n-key="home.tools.micro">Resultado na hora. Sem cadastro para ver o resultado.</p>
     </div>
     <div class="s-tools__grid">
       <a href="tempo.html" class="s-tools__card allybi-card allybi-reveal" style="text-decoration:none;color:inherit">
+        <div class="s-tools__card-viz s-tools__card-viz--bars" aria-hidden="true">
+          <div class="s-tools__bar"><label data-i18n-key="home.tools.bar1">Procurar</label><span class="s-tools__bar-fill" style="--w:62%"></span></div>
+          <div class="s-tools__bar"><label data-i18n-key="home.tools.bar2">Confirmar versão</label><span class="s-tools__bar-fill" style="--w:48%"></span></div>
+          <div class="s-tools__bar"><label data-i18n-key="home.tools.bar3">Achar fonte</label><span class="s-tools__bar-fill" style="--w:38%"></span></div>
+          <div class="s-tools__bar"><label data-i18n-key="home.tools.bar4">Preparar envio</label><span class="s-tools__bar-fill" style="--w:28%"></span></div>
+          <span class="s-tools__viz-caption" data-i18n-key="home.tools.viz_example">Exemplo. Calcule o seu.</span>
+        </div>
         <h3 data-i18n-key="home.tools.calc_title">Time Calculator</h3>
         <p data-i18n-key="home.tools.calc_desc">Find out how many hours per month you lose searching, confirming, and resending files.</p>
         <span class="s-tools__card-cta" data-i18n-key="home.tools.calc_cta">Calculate my time &rarr;</span>
       </a>
       <a href="diagnostico.html" class="s-tools__card allybi-card allybi-reveal" style="text-decoration:none;color:inherit">
+        <div class="s-tools__card-viz s-tools__card-viz--map" aria-hidden="true">
+          <ol class="s-tools__map">
+            <li class="s-tools__map-node" data-i18n-key="home.tools.node1">Pedido</li>
+            <li class="s-tools__map-node" data-i18n-key="home.tools.node2">Busca</li>
+            <li class="s-tools__map-node s-tools__map-node--stuck" data-i18n-key="home.tools.node3">Versão</li>
+            <li class="s-tools__map-node" data-i18n-key="home.tools.node4">Fonte</li>
+            <li class="s-tools__map-node" data-i18n-key="home.tools.node5">Confirmação</li>
+            <li class="s-tools__map-node" data-i18n-key="home.tools.node6">Envio</li>
+          </ol>
+          <span class="s-tools__viz-caption" data-i18n-key="home.tools.viz_stuck">Onde o fluxo trava.</span>
+        </div>
         <h3 data-i18n-key="home.tools.diag_title">Flow Diagnostic</h3>
         <p data-i18n-key="home.tools.diag_desc">Map where the team loses certainty between request and send.</p>
         <span class="s-tools__card-cta" data-i18n-key="home.tools.diag_cta">Map team flow &rarr;</span>
