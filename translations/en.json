@@ -239,13 +239,15 @@
       "s5_title": "Confirm",
       "s5_desc": "Nothing goes out without your review.",
       "f1": "\"which version do I send?\"",
-      "f2": "plain language",
+      "f2": "in plain language",
       "f2_label": "Ask in chat",
       "f3_label": "Answer with source",
       "f4": "file · source · recipient · channel",
       "f4_label": "Review",
       "f5": "Email via Outlook · WhatsApp handoff",
-      "f5_label": "Send"
+      "f5_label": "Send",
+      "f1_label": "Request",
+      "f3_micro": "Source: Clients / Contracts / Mar 14"
     },
     "usecase": {
       "title": "Built for teams where precision matters",

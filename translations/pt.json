@@ -234,7 +234,7 @@
       "subtitle": "O Allybi transforma procura, confirmação e preparo em um fluxo com fonte e revisão.",
       "f1": "\"qual versão mando?\"",
       "f2_label": "Pergunta no chat",
-      "f2": "linguagem normal",
+      "f2": "em linguagem normal",
       "f3_label": "Resposta com fonte",
       "f4_label": "Revisão",
       "f4": "arquivo · fonte · destinatário · canal",
@@ -249,7 +249,9 @@
       "s4_title": "Revise e envie",
       "s4_desc": "Veja destinatário, arquivo, fonte e canal. E-mail via Outlook sai com sua confirmação. WhatsApp abre como handoff.",
       "s5_title": "Confirme",
-      "s5_desc": "Nada sai sem sua revisão."
+      "s5_desc": "Nada sai sem sua revisão.",
+      "f1_label": "Pedido",
+      "f3_micro": "Fonte: Clientes / Contratos / 14 mar"
     },
     "usecase": {
       "title": "Feito para equipes onde a precisão importa",
