@@ -808,8 +808,8 @@
     "panel6_mock_details": "<strong style=\"color:var(--allybi-text-strongest)\">To:</strong> client@company.com<br><strong style=\"color:var(--allybi-text-strongest)\">File:</strong> Contrato_Anderson_v4.pdf<br><strong style=\"color:var(--allybi-text-strongest)\">Source:</strong> Clients / Contracts / Mar 14<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook",
     "panel6_cancel": "Cancel",
     "panel6_send": "Send via Outlook",
-    "depth_h2": "One question on the surface. The whole flow underneath.",
-    "depth_sub": "You ask in chat. Allybi organizes sources, context, version, and send without taking you out of the loop.",
+    "depth_h2": "One question in the chat. A full flow behind it.",
+    "depth_sub": "Allybi doesn't skip the review. It brings source, version, message, and channel to your confirmation.",
     "depth_in_h4": "In",
     "depth_in_sub": "Connected sources",
     "depth_mock_query": "\"which version can I send?\"",
@@ -828,7 +828,13 @@
     "panel5_label_source": "Source",
     "panel5_label_channel": "Channel",
     "panel5_source_val": "Clients / Contracts / Mar 14 · p. 12",
-    "panel5_wa_micro": "For WhatsApp, Allybi opens the chat with the message ready. You send it in WhatsApp."
+    "panel5_wa_micro": "For WhatsApp, Allybi opens the chat with the message ready. You send it in WhatsApp.",
+    "bridge_title": "Want to see where your flow stalls today?",
+    "bridge_sub": "Map in under 1 minute where the team loses certainty between request, search, version, source, confirmation, and send.",
+    "bridge_cta_primary": "Map team flow",
+    "bridge_cta_secondary": "Calculate my time",
+    "bridge_micro": "No documents requested. Instant result.",
+    "cta_micro": "30 days free. Nothing sent without confirmation."
   },
   "uc_overview": {
     "hero": {

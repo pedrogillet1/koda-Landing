@@ -807,8 +807,8 @@
     "panel6_mock_details": "<strong style=\"color:var(--allybi-text-strongest)\">Para:</strong> cliente@empresa.com.br<br><strong style=\"color:var(--allybi-text-strongest)\">Arquivo:</strong> Contrato_Anderson_v4.pdf<br><strong style=\"color:var(--allybi-text-strongest)\">Fonte:</strong> Clientes / Contratos / 14 mar<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook",
     "panel6_cancel": "Cancelar",
     "panel6_send": "Enviar via Outlook",
-    "depth_h2": "Por fora, uma pergunta. Por baixo, o fluxo inteiro.",
-    "depth_sub": "Você pergunta no chat. O Allybi organiza fontes, contexto, versão e envio sem tirar você do controle.",
+    "depth_h2": "Uma pergunta no chat. Um fluxo completo por trás.",
+    "depth_sub": "O Allybi não pula a revisão. Ele leva fonte, versão, mensagem e canal para sua confirmação.",
     "depth_in_h4": "Entram",
     "depth_in_sub": "Fontes conectadas",
     "depth_mock_query": "\"qual versão posso enviar?\"",
@@ -827,7 +827,13 @@
     "panel5_label_source": "Fonte",
     "panel5_label_channel": "Canal",
     "panel5_source_val": "Clientes / Contratos / 14 mar · p. 12",
-    "panel5_wa_micro": "Para WhatsApp, o Allybi abre a conversa com a mensagem pronta. Você envia no WhatsApp."
+    "panel5_wa_micro": "Para WhatsApp, o Allybi abre a conversa com a mensagem pronta. Você envia no WhatsApp.",
+    "bridge_title": "Quer ver onde seu fluxo trava hoje?",
+    "bridge_sub": "Mapeie em menos de 1 minuto onde o time perde certeza entre pedido, busca, versão, fonte, confirmação e envio.",
+    "bridge_cta_primary": "Mapear fluxo do time",
+    "bridge_cta_secondary": "Calcular meu tempo",
+    "bridge_micro": "Nenhum documento é pedido. Resultado na hora.",
+    "cta_micro": "30 dias grátis. Nada sai sem confirmação."
   },
   "legal": {
     "hero_eyebrow": "Para advogados",

@@ -127,3 +127,21 @@
   .hiw-hero h1 { font-size:26px; }
   .hiw-hero__sub { font-size:14px; }
 }
+
+/* ── 5. DIAGNOSTIC BRIDGE ── */
+.hiw-bridge { padding:clamp(64px,8vh,96px) 0; background:var(--allybi-bg-alt-1); border-top:1px solid var(--allybi-border-default); }
+.hiw-bridge__inner { max-width:680px; margin:0 auto; text-align:center; }
+.hiw-bridge__inner h2 { font-size:clamp(24px,2.8vw,36px); font-weight:700; letter-spacing:-0.02em; line-height:1.15; color:var(--allybi-text-strongest); margin:0 0 14px; text-wrap:balance; }
+.hiw-bridge__inner p { font-size:clamp(15px,1.15vw,17px); line-height:1.55; color:var(--allybi-text-secondary); max-width:580px; margin:0 auto 28px; }
+.hiw-bridge__ctas { display:flex; gap:18px; justify-content:center; align-items:center; flex-wrap:wrap; margin-bottom:14px; }
+.hiw-bridge__link { font-size:14px; font-weight:600; color:var(--allybi-text-strongest); text-decoration:underline; text-underline-offset:4px; }
+.hiw-bridge__micro { font-size:12px; color:var(--allybi-text-muted); margin:0; }
+
+@media (max-width: 600px) {
+  .hiw-bridge { padding:56px 0; }
+  .hiw-bridge__ctas { flex-direction:column; gap:14px; }
+  .hiw-bridge__ctas .allybi-btn--primary { width:100%; justify-content:center; }
+}
+
+/* CTA final micro */
+.hiw-cta__micro { margin-top:18px; font-size:12px; color:rgba(255,255,255,0.6); text-align:center; }
