@@ -1205,54 +1205,6 @@
     "cta_micro": "30 dias grátis. Nada sai sem confirmação."
   },
   "sec": {
-    "hero": {
-      "eyebrow": "Segurança",
-      "title": "Segurança e privacidade, tornadas visíveis.",
-      "subtitle": "Allybi é construído para fluxos de trabalho com documentos sensíveis: respostas com fonte, conexões permissionadas e confirmação antes de qualquer envio."
-    },
-    "pillars": {
-      "title": "Construído sobre seis pilares de confiança",
-      "encryption": {
-        "title": "Criptografia em repouso e em trânsito",
-        "desc": "Todos os dados são criptografados com TLS em trânsito e AES-256-GCM em repouso. Seus documentos são protegidos em cada estágio do seu ciclo de vida."
-      },
-      "notraining": {
-        "title": "Sem treinamento com documentos de usuários",
-        "desc": "Seus documentos nunca são usados para treinar modelos de IA. Isso está nos nossos termos de serviço — seus dados permanecem seus."
-      },
-      "permissioned": {
-        "title": "Integrações permissionadas",
-        "desc": "Cada conexão requer autorização OAuth explícita. Você escolhe exatamente quais serviços o Allybi pode acessar e revoga o acesso a qualquer momento."
-      },
-      "cited": {
-        "title": "Respostas com resposta com fonte",
-        "desc": "Cada resposta de IA referencia o documento, página e seção exatos. Se a resposta não estiver nos seus documentos, Allybi informa em vez de inventar."
-      },
-      "confirmation": {
-        "title": "Confirmação explícita antes de cada envio",
-        "desc": "Nada sai do Allybi sem sua revisão. Cada e-mail, mensagem e compartilhamento de arquivo exige confirmação explícita antes de ser enviado."
-      },
-      "isolated": {
-        "title": "Workspaces isolados",
-        "desc": "Projetos são isolados. Sem vazamento de dados entre workspaces. Cada workspace é criptografado e controlado de forma independente."
-      }
-    },
-    "willwont": {
-      "title": "O que o Allybi fará e não fará",
-      "will_heading": "O que o Allybi fará",
-      "will_1": "Citar a fonte exata para cada resposta de IA",
-      "will_2": "Pedir sua confirmação explícita antes de qualquer envio",
-      "will_3": "Manter seus documentos criptografados e isolados",
-      "wont_heading": "O que o Allybi não fará",
-      "wont_1": "Treinar modelos de IA com seus documentos",
-      "wont_2": "Enviar qualquer coisa sem sua aprovação explícita",
-      "wont_3": "Acessar dados que você não autorizou"
-    },
-    "cta": {
-      "title": "Veja como o Allybi protege seu trabalho.",
-      "subtitle": "Agende uma demonstração e faremos um tour pela nossa arquitetura de segurança.",
-      "book_demo": "Começar grátis"
-    },
     "hero_chip": "Segurança",
     "hero_h1": "Controle para documentos sensíveis.",
     "hero_lede": "Você escolhe o que conecta. O Allybi responde com fonte visível e leva mensagem, arquivo, destinatário e canal para revisão antes de qualquer envio.",
@@ -1260,7 +1212,7 @@
     "cta_talk_sales": "Falar com vendas sobre segurança",
     "hero_micro": "Documentos não treinam modelos · WhatsApp sem caixa sincronizada · Nada sai sem confirmação",
     "basics_h2": "As regras antes de conectar.",
-    "basics_sub": "O Allybi foi pensado para manter fonte, permissão e confirmação visíveis.",
+    "basics_sub": "Fonte, permissão e confirmação ficam visíveis em cada etapa.",
     "basics_c1_h": "Documentos não treinam modelos",
     "basics_c1_p": "Documentos, perguntas e respostas não são usados para treinar modelos.",
     "basics_c2_h": "Acesso permissionado",
@@ -1296,7 +1248,7 @@
     "not_c5_h": "Não apresenta incerteza como certeza",
     "not_c5_p": "Quando não há base suficiente, mostra a limitação.",
     "not_c6_h": "Não substitui sua revisão",
-    "not_c6_p": "O produto ajuda a encontrar e preparar. A decisão final é sua.",
+    "not_c6_p": "O Allybi encontra e prepara. Você decide e envia.",
     "ai_h2": "IA no contexto do seu workspace. Não no treinamento de modelos.",
     "ai_sub": "O Allybi usa IA para responder com base nas fontes autorizadas. Seus documentos, perguntas e respostas não são usados para treinar modelos.",
     "ai_zone1_label": "Pergunta",
@@ -1313,14 +1265,14 @@
     "perms_h2": "Conectar não significa abrir tudo.",
     "perms_sub": "Cada fonte tem um papel. WhatsApp não é fonte conectada.",
     "perms_group_connected": "Fontes conectadas",
-    "perms_outlook_desc": "E-mails e anexos autorizados.",
+    "perms_outlook_desc": "E-mails e anexos das pastas autorizadas.",
     "perms_onedrive_desc": "Arquivos e pastas autorizadas.",
     "perms_sharepoint_desc": "Sites e bibliotecas autorizadas.",
     "perms_uploads_h": "Uploads",
     "perms_uploads_desc": "Arquivos enviados ao workspace.",
     "perms_group_handoff": "Handoff",
-    "perms_whatsapp_desc": "Prepara a mensagem e abre o WhatsApp para revisão. Não lê nem pesquisa a caixa de entrada.",
-    "perms_roadmap": "Gmail e Google Drive estão no roadmap.",
+    "perms_whatsapp_desc": "O Allybi monta a mensagem. Você abre seu WhatsApp e envia.",
+    "perms_roadmap": "Gmail e Google Drive em breve.",
     "perms_cta": "Ver integrações",
     "sending_h2": "Nada sai sem sua confirmação.",
     "sending_sub": "O Allybi prepara. Você revisa e decide.",
@@ -1363,7 +1315,19 @@
     "ai_stmt4_p": "Quando não há base suficiente, a resposta indica isso.",
     "perms_highlight": "WhatsApp não é fonte. É handoff.",
     "cta_data_use": "Ver integrações e uso de dados",
-    "cta_micro": "30 dias grátis. Documentos não treinam modelos. Nada sai sem confirmação."
+    "cta_micro": "30 dias grátis. Documentos não treinam modelos. Nada sai sem confirmação.",
+    "panel_tag_connected": "conectado",
+    "panel_tag_added": "adicionados",
+    "panel_tag_handoff": "handoff",
+    "panel_uploads": "Uploads",
+    "panel_query": "Qual versão posso enviar?",
+    "panel_source": "Clientes / Contratos / 14 mar",
+    "panel_review_label": "Aguardando confirmação",
+    "panel_field_recipient": "Destinatário",
+    "panel_field_file": "Arquivo",
+    "panel_field_channel": "Canal",
+    "panel_cancel": "Cancelar",
+    "panel_send": "Enviar via Outlook"
   },
   "pricing": {
     "hero": {

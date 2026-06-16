@@ -332,3 +332,64 @@
 @media (max-width: 480px) {
   .sec-hero__trust .sec-hero__trust--secondary { display: none; }
 }
+
+/* ── Adversarial review fixes ── */
+
+/* Sending mock confirm — neutral dark (was green; brief says green ONLY for confirmed source) */
+.sec-sending__mock-confirm {
+  background: #181818 !important;
+  color: #FFFFFF !important;
+}
+
+/* Basics grid — 5-card balanced layout on wide viewports */
+@media (min-width: 1100px) {
+  .sec-basics__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+  .sec-basics__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sec-basics__card:nth-child(4),
+  .sec-basics__card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+/* Hero trust chips — hide secondary tier earlier (≤600) so 390/430 also cap to 3 */
+@media (max-width: 600px) {
+  .sec-hero__trust .sec-hero__trust--secondary { display: none; }
+}
+
+/* Policy cards — explicit focus-visible above hover state */
+.sec-policies__card:focus-visible {
+  outline: 2px solid var(--allybi-accent);
+  outline-offset: 2px;
+  border-color: var(--allybi-accent);
+}
+
+/* Highlight phrase 'WhatsApp não é fonte. É handoff.' — quote-style, not card-style */
+.sec-perms__highlight {
+  background: transparent !important;
+  border: none !important;
+  border-left: 3px solid #181818 !important;
+  border-radius: 0 !important;
+  padding: 8px 0 8px 18px !important;
+  margin: 28px auto 40px !important;
+  font-size: clamp(20px, 2vw, 28px) !important;
+  font-weight: 700;
+  color: var(--allybi-text-strongest);
+  max-width: 600px;
+  text-align: left;
+}
+
+/* WhatsApp handoff badge — darker purple for AA contrast */
+.sec-panel__source-tag--handoff { color: #4B1A99 !important; background: rgba(75, 26, 153, 0.10) !important; }
+
+/* Hero panel — collapse to a tighter visual on tablet so CTAs stay above the fold */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .sec-panel__answer { display: none; }
+  .sec-panel__sources { padding: 12px; }
+  .sec-panel__source-row { padding: 5px 8px; }
+}

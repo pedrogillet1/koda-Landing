@@ -73,7 +73,7 @@
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
       <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="allybi-mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div id="allybi-mobile-menu" class="mobile-menu">
@@ -125,48 +125,48 @@
             <div class="sec-panel__source-row sec-panel__source-row--ok">
               <img src="assets/images/outlook-icon.svg" alt="" width="18" height="18">
               <span class="sec-panel__source-name">Outlook</span>
-              <span class="sec-panel__source-tag">conectado</span>
+              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_connected">conectado</span>
             </div>
             <div class="sec-panel__source-row sec-panel__source-row--ok">
               <img src="assets/images/onedrive-icon.svg" alt="" width="18" height="18">
               <span class="sec-panel__source-name">OneDrive</span>
-              <span class="sec-panel__source-tag">conectado</span>
+              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_connected">conectado</span>
             </div>
             <div class="sec-panel__source-row sec-panel__source-row--ok">
               <img src="assets/images/sharepoint-icon.svg" alt="" width="18" height="18">
               <span class="sec-panel__source-name">SharePoint</span>
-              <span class="sec-panel__source-tag">conectado</span>
+              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_connected">conectado</span>
             </div>
             <div class="sec-panel__source-row sec-panel__source-row--ok">
               <img src="assets/images/uploads-icon.svg" alt="" width="18" height="18">
-              <span class="sec-panel__source-name">Uploads</span>
-              <span class="sec-panel__source-tag">adicionados</span>
+              <span class="sec-panel__source-name" data-i18n-key="sec.panel_uploads">Uploads</span>
+              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_added">adicionados</span>
             </div>
             <div class="sec-panel__source-row sec-panel__source-row--handoff">
               <img src="assets/images/whatsapp-icon.svg" alt="" width="18" height="18">
               <span class="sec-panel__source-name">WhatsApp</span>
-              <span class="sec-panel__source-tag sec-panel__source-tag--handoff">handoff</span>
+              <span class="sec-panel__source-tag sec-panel__source-tag--handoff" data-i18n-key="sec.panel_tag_handoff">handoff</span>
             </div>
           </div>
 
           <!-- Middle: source-cited answer -->
           <div class="sec-panel__answer">
-            <p class="sec-panel__answer-q"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> qual versão posso enviar?</p>
+            <p class="sec-panel__answer-q"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> <span data-i18n-key="sec.panel_query">Qual versão posso enviar?</span></p>
             <div class="sec-panel__answer-file">Contrato_Anderson_v4.pdf</div>
-            <p class="sec-panel__answer-source"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Clientes / Contratos / 14 mar</p>
+            <p class="sec-panel__answer-source"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> <span data-i18n-key="sec.panel_source">Clientes / Contratos / 14 mar</span></p>
           </div>
 
           <!-- Bottom: review panel with status -->
           <div class="sec-panel__review">
-            <div class="sec-panel__review-label">Aguardando confirmação</div>
+            <div class="sec-panel__review-label" data-i18n-key="sec.panel_review_label">Aguardando confirmação</div>
             <dl class="sec-panel__review-list">
-              <div><dt>Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
-              <div><dt>Arquivo</dt><dd>Contrato_Anderson_v4.pdf</dd></div>
-              <div><dt>Canal</dt><dd>Outlook</dd></div>
+              <div><dt data-i18n-key="sec.panel_field_recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
+              <div><dt data-i18n-key="sec.panel_field_file">Arquivo</dt><dd>Contrato_Anderson_v4.pdf</dd></div>
+              <div><dt data-i18n-key="sec.panel_field_channel">Canal</dt><dd>Outlook</dd></div>
             </dl>
             <div class="sec-panel__review-actions">
-              <span class="sec-panel__review-cancel">Cancelar</span>
-              <button type="button" tabindex="-1" class="sec-panel__review-send">Enviar via Outlook</button>
+              <span class="sec-panel__review-cancel" data-i18n-key="sec.panel_cancel">Cancelar</span>
+              <span class="sec-panel__review-send" data-i18n-key="sec.panel_send">Enviar via Outlook</span>
             </div>
           </div>
         </div>
@@ -295,10 +295,10 @@
       </div>
     </div>
     <div class="sec-ai__statements sec-reveal">
-      <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt1_h">Escopo limitado</h4><p data-i18n-key="sec.ai_stmt1_p">A busca acontece nas fontes conectadas ao workspace.</p></div>
-      <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt2_h">Sem treinamento</h4><p data-i18n-key="sec.ai_stmt2_p">Os dados do workspace não treinam modelos.</p></div>
-      <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt3_h">Fonte visível</h4><p data-i18n-key="sec.ai_stmt3_p">A resposta aponta para origem, trecho, página ou data quando disponível.</p></div>
-      <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt4_h">Limitação clara</h4><p data-i18n-key="sec.ai_stmt4_p">Quando não há base suficiente, a resposta indica isso.</p></div>
+      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt1_h">Escopo limitado</h3><p data-i18n-key="sec.ai_stmt1_p">A busca acontece nas fontes conectadas ao workspace.</p></div>
+      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt2_h">Sem treinamento</h3><p data-i18n-key="sec.ai_stmt2_p">Os dados do workspace não treinam modelos.</p></div>
+      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt3_h">Fonte visível</h3><p data-i18n-key="sec.ai_stmt3_p">A resposta aponta para origem, trecho, página ou data quando disponível.</p></div>
+      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt4_h">Limitação clara</h3><p data-i18n-key="sec.ai_stmt4_p">Quando não há base suficiente, a resposta indica isso.</p></div>
     </div>
   </div>
 </section>
@@ -317,16 +317,16 @@
       <div class="sec-perms__group">
         <span class="sec-perms__group-label" data-i18n-key="sec.perms_group_connected">Fontes conectadas</span>
         <div class="sec-perms__cards">
-          <div class="sec-perms__card"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h4>Outlook</h4><p data-i18n-key="sec.perms_outlook_desc">E-mails e anexos autorizados.<!-- TODO: confirm exact OAuth scope --></p></div>
-          <div class="sec-perms__card"><img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h4>OneDrive</h4><p data-i18n-key="sec.perms_onedrive_desc">Arquivos e pastas autorizadas.</p></div>
-          <div class="sec-perms__card"><img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h4>SharePoint</h4><p data-i18n-key="sec.perms_sharepoint_desc">Sites e bibliotecas autorizadas.</p></div>
-          <div class="sec-perms__card"><img src="assets/images/uploads-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h4 data-i18n-key="sec.perms_uploads_h">Uploads</h4><p data-i18n-key="sec.perms_uploads_desc">Arquivos enviados ao workspace.</p></div>
+          <div class="sec-perms__card"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>Outlook</h3><p data-i18n-key="sec.perms_outlook_desc">E-mails e anexos das pastas autorizadas.</p></div>
+          <div class="sec-perms__card"><img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>OneDrive</h3><p data-i18n-key="sec.perms_onedrive_desc">Arquivos e pastas autorizadas.</p></div>
+          <div class="sec-perms__card"><img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>SharePoint</h3><p data-i18n-key="sec.perms_sharepoint_desc">Sites e bibliotecas autorizadas.</p></div>
+          <div class="sec-perms__card"><img src="assets/images/uploads-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3 data-i18n-key="sec.perms_uploads_h">Uploads</h3><p data-i18n-key="sec.perms_uploads_desc">Arquivos enviados ao workspace.</p></div>
         </div>
       </div>
       <div class="sec-perms__group">
         <span class="sec-perms__group-label sec-perms__group-label--handoff" data-i18n-key="sec.perms_group_handoff">Handoff</span>
         <div class="sec-perms__cards">
-          <div class="sec-perms__card sec-perms__card--handoff"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h4>WhatsApp</h4><p data-i18n-key="sec.perms_whatsapp_desc">Prepara a mensagem e abre o WhatsApp para revisão. Não lê nem pesquisa a caixa de entrada.</p></div>
+          <div class="sec-perms__card sec-perms__card--handoff"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>WhatsApp</h3><p data-i18n-key="sec.perms_whatsapp_desc">O Allybi monta a mensagem. Você abre seu WhatsApp e envia.</p></div>
         </div>
       </div>
     </div>
@@ -361,8 +361,8 @@
       </div>
     </div>
     <div class="sec-sending__channels sec-reveal">
-      <div class="sec-sending__channel"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h4 data-i18n-key="sec.sending_ch1_h">E-mail via Outlook</h4><p data-i18n-key="sec.sending_ch1_p">Pode ser enviado depois da sua confirmação.</p></div>
-      <div class="sec-sending__channel"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h4 data-i18n-key="sec.sending_ch2_h">WhatsApp handoff</h4><p data-i18n-key="sec.sending_ch2_p">Abre o WhatsApp com mensagem pronta. O envio final é do usuário.</p></div>
+      <div class="sec-sending__channel"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3 data-i18n-key="sec.sending_ch1_h">E-mail via Outlook</h3><p data-i18n-key="sec.sending_ch1_p">Pode ser enviado depois da sua confirmação.</p></div>
+      <div class="sec-sending__channel"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3 data-i18n-key="sec.sending_ch2_h">WhatsApp handoff</h3><p data-i18n-key="sec.sending_ch2_p">Abre o WhatsApp com mensagem pronta. O envio final é do usuário.</p></div>
     </div>
   </div>
 </section>

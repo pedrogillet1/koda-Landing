@@ -2030,54 +2030,6 @@
     "cta_micro": "30 days free. Nothing sent without confirmation."
   },
   "sec": {
-    "hero": {
-      "eyebrow": "Security",
-      "title": "Security and privacy, made visible.",
-      "subtitle": "Allybi is built for sensitive document workflows: answer with sources, permissioned connections, and confirmation before anything goes out."
-    },
-    "pillars": {
-      "title": "Built on six trust pillars",
-      "encryption": {
-        "title": "Encryption at rest and in transit",
-        "desc": "All data is encrypted with TLS in transit and AES-256-GCM at rest. Your documents are protected at every stage of their lifecycle."
-      },
-      "notraining": {
-        "title": "No training on user documents",
-        "desc": "Your documents are never used to train AI models. This is contractually guaranteed in our terms of service -- your data stays yours."
-      },
-      "permissioned": {
-        "title": "Permissioned integrations",
-        "desc": "Every connection requires explicit OAuth authorization. You choose exactly which services Allybi can access, and you revoke access anytime."
-      },
-      "cited": {
-        "title": "Source-cited answers",
-        "desc": "Every AI answer references the exact document, page, and section. If the answer is not in your documents, Allybi tells you instead of guessing."
-      },
-      "confirmation": {
-        "title": "Explicit confirmation before every send",
-        "desc": "Nothing leaves Allybi without your review. Every email, message, and file share requires explicit confirmation before it is sent."
-      },
-      "isolated": {
-        "title": "Isolated workspaces",
-        "desc": "Projects are isolated. No data leakage between workspaces. Each workspace is encrypted and access-controlled independently."
-      }
-    },
-    "willwont": {
-      "title": "What Allybi will and will not do",
-      "will_heading": "What Allybi will do",
-      "will_1": "Cite sources for every answer -- file, page, and section",
-      "will_2": "Require your explicit confirmation before anything is sent",
-      "will_3": "Keep your data private, encrypted, and isolated",
-      "wont_heading": "What Allybi will not do",
-      "wont_1": "Train models on your files",
-      "wont_2": "Send anything without your review and approval",
-      "wont_3": "Access connections you have not authorized"
-    },
-    "cta": {
-      "title": "See how Allybi protects your work.",
-      "subtitle": "Book a demo and we will walk you through our security architecture.",
-      "book_demo": "Book demo"
-    },
     "hero_chip": "Security",
     "hero_h1": "Control for sensitive documents.",
     "hero_lede": "You choose what to connect. Allybi answers with visible source and brings message, file, recipient, and channel for review before any send.",
@@ -2085,7 +2037,7 @@
     "cta_talk_sales": "Talk to sales about security",
     "hero_micro": "Documents never train models · WhatsApp without synced inbox · Nothing sent without confirmation",
     "basics_h2": "The rules before you connect.",
-    "basics_sub": "Allybi was designed to keep source, permission, and confirmation visible.",
+    "basics_sub": "Source, permission, and confirmation stay visible at every step.",
     "basics_c1_h": "Documents never train models",
     "basics_c1_p": "Documents, questions, and answers are never used to train models.",
     "basics_c2_h": "Permissioned access",
@@ -2120,8 +2072,8 @@
     "not_c4_p": "Allybi works with explicit permissions.",
     "not_c5_h": "Doesn't present uncertainty as certainty",
     "not_c5_p": "When there's not enough basis, it shows the limitation.",
-    "not_c6_h": "Does not replace your review",
-    "not_c6_p": "The product helps you find and prepare. The final decision is yours.",
+    "not_c6_h": "Doesn't replace your review",
+    "not_c6_p": "Allybi finds and prepares. You decide and send.",
     "ai_h2": "AI in your workspace context. Not in model training.",
     "ai_sub": "Allybi uses AI to answer based on the sources you authorize. Your documents, questions, and answers are never used to train models.",
     "ai_zone1_label": "Question",
@@ -2138,14 +2090,14 @@
     "perms_h2": "Connecting does not mean opening everything.",
     "perms_sub": "Each source has a role. WhatsApp is not a connected source.",
     "perms_group_connected": "Connected sources",
-    "perms_outlook_desc": "Authorized emails and attachments.",
+    "perms_outlook_desc": "Emails and attachments from authorized folders.",
     "perms_onedrive_desc": "Authorized files and folders.",
     "perms_sharepoint_desc": "Authorized sites and libraries.",
     "perms_uploads_h": "Uploads",
     "perms_uploads_desc": "Files added to the workspace.",
     "perms_group_handoff": "Handoff",
-    "perms_whatsapp_desc": "Drafts the message and opens WhatsApp for your review. It never reads or searches your inbox.",
-    "perms_roadmap": "Gmail and Google Drive are on the roadmap.",
+    "perms_whatsapp_desc": "Allybi drafts the message. You open WhatsApp and send.",
+    "perms_roadmap": "Gmail and Google Drive coming up.",
     "perms_cta": "View integrations",
     "sending_h2": "Nothing leaves without your confirmation.",
     "sending_sub": "Allybi prepares. You review and decide.",
@@ -2188,7 +2140,19 @@
     "ai_stmt4_p": "When there's not enough basis, the answer says so.",
     "perms_highlight": "WhatsApp isn't a source. It's a handoff.",
     "cta_data_use": "See integrations and data use",
-    "cta_micro": "30 days free. Documents never train models. Nothing sent without confirmation."
+    "cta_micro": "30 days free. Documents never train models. Nothing sent without confirmation.",
+    "panel_tag_connected": "connected",
+    "panel_tag_added": "added",
+    "panel_tag_handoff": "handoff",
+    "panel_uploads": "Uploads",
+    "panel_query": "Which version can I send?",
+    "panel_source": "Clients / Contracts / Mar 14",
+    "panel_review_label": "Awaiting confirmation",
+    "panel_field_recipient": "Recipient",
+    "panel_field_file": "File",
+    "panel_field_channel": "Channel",
+    "panel_cancel": "Cancel",
+    "panel_send": "Send via Outlook"
   },
   "faq": {
     "hero": {
