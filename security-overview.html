@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Segurança e privacidade — Allybi</title>
-  <meta name="description" content="Veja como o Allybi protege documentos sensíveis com conexões permissionadas, criptografia, respostas com fonte e confirmação antes de qualquer envio.">
+  <title>Segurança | Allybi</title>
+  <meta name="description" content="Você escolhe o que conecta. O Allybi mostra fonte, não usa documentos para treinar modelos e nada sai sem confirmação. WhatsApp funciona como handoff, sem caixa sincronizada.">
+  <link rel="canonical" href="https://allybi.com.br/security-overview.html">
+  <link rel="alternate" hreflang="en" href="https://allybi.co/security-overview.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/security-overview.html">
+  <link rel="alternate" hreflang="x-default" href="https://allybi.co/security-overview.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Segurança e privacidade — Allybi">
-  <meta property="og:description" content="Controle, fonte e privacidade para documentos sensíveis.">
+  <meta property="og:title" content="Segurança | Allybi">
+  <meta property="og:description" content="Controle para documentos sensíveis: fontes permissionadas, resposta com fonte, revisão antes do envio e WhatsApp handoff.">
   <meta property="og:url" content="https://allybi.com.br/security-overview.html">
   <meta property="og:site_name" content="Allybi">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Segurança e privacidade — Allybi">
-  <meta name="twitter:description" content="Conexões permissionadas, criptografia, respostas com fonte e confirmação antes do envio.">
+  <meta name="twitter:title" content="Segurança | Allybi">
+  <meta name="twitter:description" content="Controle para documentos sensíveis: fontes permissionadas, resposta com fonte, revisão antes do envio e WhatsApp handoff.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -94,15 +98,79 @@
      ════════════════════════════════════════════════════════════ -->
 <section class="sec-hero">
   <div class="allybi-container">
-    <div class="sec-hero__inner sec-reveal">
-      <span class="allybi-chip allybi-chip--trust" data-i18n-key="sec.hero_chip">Segurança</span>
-      <h1 class="allybi-h1" data-i18n-key="sec.hero_h1">Controle para documentos sensíveis.</h1>
-      <p class="allybi-body-lg" data-i18n-key="sec.hero_lede">O Allybi usa conexões permissionadas, criptografia, respostas com fonte e confirmação antes de qualquer envio. Você escolhe o que conecta. Nada sai sem revisão.</p>
-      <div class="sec-hero__ctas">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="sec.cta_start_trial">Começar grátis por 30 dias</a>
-        <a href="contact.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="sec.cta_talk_sales">Falar com vendas sobre segurança</a>
+    <div class="sec-hero__grid">
+      <div class="sec-hero__text sec-reveal">
+        <span class="allybi-chip allybi-chip--trust" data-i18n-key="sec.hero_chip">Segurança</span>
+        <h1 class="allybi-h1" data-i18n-key="sec.hero_h1">Controle para documentos sensíveis.</h1>
+        <p class="allybi-body-lg" data-i18n-key="sec.hero_lede">Você escolhe o que conecta. O Allybi responde com fonte visível e leva mensagem, arquivo, destinatário e canal para revisão antes de qualquer envio.</p>
+        <div class="sec-hero__ctas">
+          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="sec.cta_start_trial">Começar grátis por 30 dias</a>
+          <a href="#policies" class="allybi-btn allybi-btn--secondary" data-i18n-key="sec.cta_see_policies">Ver políticas</a>
+        </div>
+        <p class="sec-hero__micro" data-i18n-key="sec.hero_micro">Documentos não treinam modelos · WhatsApp sem caixa sincronizada · Nada sai sem confirmação</p>
+        <div class="sec-hero__trust">
+          <span data-i18n-key="sec.hero_trust1">Fontes permissionadas</span>
+          <span data-i18n-key="sec.hero_trust2">Resposta com fonte</span>
+          <span data-i18n-key="sec.hero_trust3">Revisão antes do envio</span>
+          <span class="sec-hero__trust--secondary" data-i18n-key="sec.hero_trust4">WhatsApp handoff</span>
+          <span class="sec-hero__trust--secondary" data-i18n-key="sec.hero_trust5">Documentos não treinam modelos</span>
+        </div>
       </div>
-      <p class="sec-hero__micro" data-i18n-key="sec.hero_micro">Documentos não treinam modelos · WhatsApp sem caixa sincronizada · Envios com confirmação</p>
+
+      <!-- Hero visual: UNIQUE permission panel (not the hero-scene reused on other pages) -->
+      <div class="sec-hero__visual sec-reveal" role="img" data-i18n-aria-label="sec.hero_panel_aria" aria-label="Painel de controle: fontes autorizadas, resposta com fonte e revisão antes de qualquer envio.">
+        <div class="sec-panel" aria-hidden="true">
+          <!-- Top: source authorization status -->
+          <div class="sec-panel__sources">
+            <div class="sec-panel__source-row sec-panel__source-row--ok">
+              <img src="assets/images/outlook-icon.svg" alt="" width="18" height="18">
+              <span class="sec-panel__source-name">Outlook</span>
+              <span class="sec-panel__source-tag">conectado</span>
+            </div>
+            <div class="sec-panel__source-row sec-panel__source-row--ok">
+              <img src="assets/images/onedrive-icon.svg" alt="" width="18" height="18">
+              <span class="sec-panel__source-name">OneDrive</span>
+              <span class="sec-panel__source-tag">conectado</span>
+            </div>
+            <div class="sec-panel__source-row sec-panel__source-row--ok">
+              <img src="assets/images/sharepoint-icon.svg" alt="" width="18" height="18">
+              <span class="sec-panel__source-name">SharePoint</span>
+              <span class="sec-panel__source-tag">conectado</span>
+            </div>
+            <div class="sec-panel__source-row sec-panel__source-row--ok">
+              <img src="assets/images/uploads-icon.svg" alt="" width="18" height="18">
+              <span class="sec-panel__source-name">Uploads</span>
+              <span class="sec-panel__source-tag">adicionados</span>
+            </div>
+            <div class="sec-panel__source-row sec-panel__source-row--handoff">
+              <img src="assets/images/whatsapp-icon.svg" alt="" width="18" height="18">
+              <span class="sec-panel__source-name">WhatsApp</span>
+              <span class="sec-panel__source-tag sec-panel__source-tag--handoff">handoff</span>
+            </div>
+          </div>
+
+          <!-- Middle: source-cited answer -->
+          <div class="sec-panel__answer">
+            <p class="sec-panel__answer-q"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> qual versão posso enviar?</p>
+            <div class="sec-panel__answer-file">Contrato_Anderson_v4.pdf</div>
+            <p class="sec-panel__answer-source"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Clientes / Contratos / 14 mar</p>
+          </div>
+
+          <!-- Bottom: review panel with status -->
+          <div class="sec-panel__review">
+            <div class="sec-panel__review-label">Aguardando confirmação</div>
+            <dl class="sec-panel__review-list">
+              <div><dt>Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
+              <div><dt>Arquivo</dt><dd>Contrato_Anderson_v4.pdf</dd></div>
+              <div><dt>Canal</dt><dd>Outlook</dd></div>
+            </dl>
+            <div class="sec-panel__review-actions">
+              <span class="sec-panel__review-cancel">Cancelar</span>
+              <button type="button" tabindex="-1" class="sec-panel__review-send">Enviar via Outlook</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -113,12 +181,12 @@
 <section class="sec-basics allybi-section" style="background:var(--allybi-bg-alt-1);">
   <div class="allybi-container">
     <div class="sec-basics__header sec-reveal">
-      <h2 data-i18n-key="sec.basics_h2">O básico precisa estar claro.</h2>
-      <p data-i18n-key="sec.basics_sub">Antes de conectar qualquer fonte, estas são as regras do produto.</p>
+      <h2 data-i18n-key="sec.basics_h2">As regras antes de conectar.</h2>
+      <p data-i18n-key="sec.basics_sub">O Allybi foi pensado para manter fonte, permissão e confirmação visíveis.</p>
     </div>
     <div class="sec-basics__grid sec-reveal">
       <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c1_h">Dados não treinam modelos</h3>
+        <h3 data-i18n-key="sec.basics_c1_h">Documentos não treinam modelos</h3>
         <p data-i18n-key="sec.basics_c1_p">Documentos, perguntas e respostas não são usados para treinar modelos.</p>
       </div>
       <div class="sec-basics__card">
@@ -126,12 +194,16 @@
         <p data-i18n-key="sec.basics_c2_p">O Allybi só usa fontes que você conecta e autoriza.</p>
       </div>
       <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c3_h">Dados protegidos</h3>
-        <p data-i18n-key="sec.basics_c3_p">Criptografia em trânsito e em repouso.<!-- TODO: confirm AES-256-GCM with engineering --></p>
+        <h3 data-i18n-key="sec.basics_c3_h">Fonte visível</h3>
+        <p data-i18n-key="sec.basics_c3_p">Cada resposta mostra de onde veio quando há base suficiente.</p>
       </div>
       <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c4_h">Nada sai sozinho</h3>
-        <p data-i18n-key="sec.basics_c4_p">Você revisa mensagem, arquivo, fonte e destinatário antes de enviar.</p>
+        <h3 data-i18n-key="sec.basics_c4_h">Envio com revisão</h3>
+        <p data-i18n-key="sec.basics_c4_p">Você revisa mensagem, arquivo, fonte, destinatário e canal antes do envio.</p>
+      </div>
+      <div class="sec-basics__card">
+        <h3 data-i18n-key="sec.basics_c5_h">Detalhes nas políticas</h3>
+        <p data-i18n-key="sec.basics_c5_p">Detalhes de proteção e uso de dados ficam nas <a href="#policies" class="sec-basics__inline-link">políticas</a>.</p>
       </div>
     </div>
   </div>
@@ -143,28 +215,28 @@
 <section class="sec-access allybi-section">
   <div class="allybi-container">
     <div class="allybi-section-header sec-reveal">
-      <h2 class="allybi-h2" data-i18n-key="sec.access_h2">O que o Allybi pode acessar</h2>
-      <p class="allybi-body-lg" style="max-width:540px;margin:12px auto 0;" data-i18n-key="sec.access_sub">Acesso começa por autorização. O que não foi conectado não entra no chat.</p>
+      <h2 class="allybi-h2" data-i18n-key="sec.access_h2">O Allybi só usa o que você autoriza.</h2>
+      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="sec.access_sub">O que não foi conectado ou adicionado ao workspace não entra no chat.</p>
     </div>
     <div class="sec-access__grid sec-reveal">
-      <div class="sec-access__col">
-        <h3 data-i18n-key="sec.access_left_h">Fontes autorizadas</h3>
+      <div class="sec-access__col sec-access__col--ok">
+        <h3 data-i18n-key="sec.access_left_h">Pode usar</h3>
         <ul>
-          <li data-i18n-key="sec.access_left_1">Outlook conectado.</li>
-          <li data-i18n-key="sec.access_left_2">OneDrive conectado.</li>
-          <li data-i18n-key="sec.access_left_3">SharePoint conectado.</li>
-          <li data-i18n-key="sec.access_left_4">Uploads adicionados ao workspace.</li>
-          <li data-i18n-key="sec.access_left_5">Arquivos e anexos usados para responder com fonte.</li>
+          <li data-i18n-key="sec.access_left_1">Outlook conectado</li>
+          <li data-i18n-key="sec.access_left_2">OneDrive conectado</li>
+          <li data-i18n-key="sec.access_left_3">SharePoint conectado</li>
+          <li data-i18n-key="sec.access_left_4">Uploads adicionados ao workspace</li>
+          <li data-i18n-key="sec.access_left_5">Arquivos e anexos autorizados</li>
         </ul>
       </div>
-      <div class="sec-access__col">
-        <h3 data-i18n-key="sec.access_right_h">Controle do usuário</h3>
+      <div class="sec-access__col sec-access__col--not">
+        <h3 data-i18n-key="sec.access_right_h">Não usa</h3>
         <ul>
-          <li data-i18n-key="sec.access_right_1">Você escolhe o que conecta.</li>
-          <li data-i18n-key="sec.access_right_2">Você pode desconectar fontes.</li>
-          <li data-i18n-key="sec.access_right_3">Você revisa antes de enviar.</li>
-          <li data-i18n-key="sec.access_right_4">Você decide quando usar a resposta.</li>
-          <li data-i18n-key="sec.access_right_5">Nada sai sem confirmação.</li>
+          <li data-i18n-key="sec.access_right_1">WhatsApp inbox</li>
+          <li data-i18n-key="sec.access_right_2">Fontes não conectadas</li>
+          <li data-i18n-key="sec.access_right_3">Arquivos fora do workspace</li>
+          <li data-i18n-key="sec.access_right_4">Documentos removidos ou desconectados</li>
+          <li data-i18n-key="sec.access_right_5">Canais sem permissão</li>
         </ul>
       </div>
     </div>
@@ -183,9 +255,9 @@
     <div class="sec-not__grid sec-reveal">
       <div class="sec-not__card"><h3 data-i18n-key="sec.not_c1_h">Não treina modelos com seus dados</h3><p data-i18n-key="sec.not_c1_p">Documentos, perguntas e respostas não são usados para treinamento.</p></div>
       <div class="sec-not__card"><h3 data-i18n-key="sec.not_c2_h">Não lê seu WhatsApp</h3><p data-i18n-key="sec.not_c2_p">WhatsApp é handoff. A caixa de entrada não é pesquisada.</p></div>
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c3_h">Não envia sozinho</h3><p data-i18n-key="sec.not_c3_p">E-mails e handoffs exigem confirmação.</p></div>
+      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c3_h">Não envia sem revisão</h3><p data-i18n-key="sec.not_c3_p">E-mails via Outlook exigem revisão e confirmação. WhatsApp é enviado pelo usuário dentro do WhatsApp.</p></div>
       <div class="sec-not__card"><h3 data-i18n-key="sec.not_c4_h">Não acessa fontes não conectadas</h3><p data-i18n-key="sec.not_c4_p">O Allybi trabalha com permissões explícitas.</p></div>
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c5_h">Não deve inventar fonte</h3><p data-i18n-key="sec.not_c5_p">Quando não há base suficiente, indica limitação.<!-- TODO: confirm reliability of this behavior --></p></div>
+      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c5_h">Não apresenta incerteza como certeza</h3><p data-i18n-key="sec.not_c5_p">Quando não há base suficiente, mostra a limitação.</p></div>
       <div class="sec-not__card"><h3 data-i18n-key="sec.not_c6_h">Não substitui sua revisão</h3><p data-i18n-key="sec.not_c6_p">O produto ajuda a encontrar e preparar. A decisão final é sua.</p></div>
     </div>
   </div>
@@ -216,11 +288,17 @@
         <div class="sec-ai__zone-content" style="font-weight:600;">Contrato_Anderson_v4.pdf</div>
         <div style="font-size:11px;color:var(--allybi-text-muted);margin-top:4px;" data-i18n-key="sec.ai_zone3_source">Fonte: Clientes / Contratos / 14 mar</div>
       </div>
+      <div class="sec-ai__arrow" aria-hidden="true">&rarr;</div>
+      <div class="sec-ai__zone sec-ai__zone--limit">
+        <span class="sec-ai__zone-label" data-i18n-key="sec.ai_zone4_label">Limite claro</span>
+        <div class="sec-ai__zone-content" data-i18n-key="sec.ai_zone4_content">Sem fonte suficiente, mostra a limitação.</div>
+      </div>
     </div>
     <div class="sec-ai__statements sec-reveal">
       <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt1_h">Escopo limitado</h4><p data-i18n-key="sec.ai_stmt1_p">A busca acontece nas fontes conectadas ao workspace.</p></div>
-      <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt2_h">Sem treinamento</h4><p data-i18n-key="sec.ai_stmt2_p">Os dados do workspace não treinam modelos.<!-- TODO: confirm with legal --></p></div>
+      <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt2_h">Sem treinamento</h4><p data-i18n-key="sec.ai_stmt2_p">Os dados do workspace não treinam modelos.</p></div>
       <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt3_h">Fonte visível</h4><p data-i18n-key="sec.ai_stmt3_p">A resposta aponta para origem, trecho, página ou data quando disponível.</p></div>
+      <div class="sec-ai__stmt"><h4 data-i18n-key="sec.ai_stmt4_h">Limitação clara</h4><p data-i18n-key="sec.ai_stmt4_p">Quando não há base suficiente, a resposta indica isso.</p></div>
     </div>
   </div>
 </section>
@@ -232,8 +310,9 @@
   <div class="allybi-container">
     <div class="allybi-section-header sec-reveal">
       <h2 class="allybi-h2" data-i18n-key="sec.perms_h2">Conectar não significa abrir tudo.</h2>
-      <p class="allybi-body-lg" style="max-width:520px;margin:12px auto 0;" data-i18n-key="sec.perms_sub">Cada fonte tem um papel. WhatsApp não é fonte conectada.</p>
+      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="sec.perms_sub">Cada fonte tem um papel. WhatsApp não é fonte conectada.</p>
     </div>
+    <p class="sec-perms__highlight sec-reveal" data-i18n-key="sec.perms_highlight">WhatsApp não é fonte. É handoff.</p>
     <div class="sec-perms__groups sec-reveal">
       <div class="sec-perms__group">
         <span class="sec-perms__group-label" data-i18n-key="sec.perms_group_connected">Fontes conectadas</span>
@@ -251,7 +330,7 @@
         </div>
       </div>
     </div>
-    <p class="sec-perms__roadmap sec-reveal" data-i18n-key="sec.perms_roadmap">Gmail e Google Drive em breve.</p>
+    <p class="sec-perms__roadmap sec-reveal" data-i18n-key="sec.perms_roadmap">Gmail e Google Drive estão no roadmap.</p>
     <div style="text-align:center;margin-top:20px;" class="sec-reveal">
       <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="sec.perms_cta">Ver integrações</a>
     </div>
@@ -291,7 +370,7 @@
 <!-- ════════════════════════════════════════════════════════════
      8. POLICIES — CENTERED BALANCED GRID
      ════════════════════════════════════════════════════════════ -->
-<section class="sec-policies allybi-section" style="background:var(--allybi-bg-alt-1);">
+<section class="sec-policies allybi-section" id="policies" style="background:var(--allybi-bg-alt-1);">
   <div class="allybi-container">
     <div class="allybi-section-header sec-reveal">
       <h2 class="allybi-h2" data-i18n-key="sec.policies_h2">Políticas e documentos</h2>
@@ -315,12 +394,13 @@
 <section class="sec-cta">
   <div class="allybi-container">
     <div class="sec-cta__inner sec-reveal">
-      <h2 data-i18n-key="sec.cta_h2">Teste com segurança.</h2>
-      <p data-i18n-key="sec.cta_sub">Comece grátis por 30 dias. Se sua equipe quiser revisar permissões, integrações ou políticas antes de conectar fontes, fale com vendas.</p>
+      <h2 data-i18n-key="sec.cta_h2">Teste sem perder controle.</h2>
+      <p data-i18n-key="sec.cta_sub">Conecte uma fonte ou adicione um arquivo. Pergunte no chat, veja a fonte e revise antes de qualquer envio.</p>
       <div class="sec-cta__btns">
         <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="sec.cta_start_trial">Começar grátis por 30 dias</a>
-        <a href="contact.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="sec.cta_talk_sales">Falar com vendas sobre segurança</a>
+        <a href="integration-data-use.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="sec.cta_data_use">Ver integrações e uso de dados</a>
       </div>
+      <p class="sec-cta__micro" data-i18n-key="sec.cta_micro">30 dias grátis. Documentos não treinam modelos. Nada sai sem confirmação.</p>
     </div>
   </div>
 </section>
