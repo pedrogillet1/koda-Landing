@@ -526,3 +526,35 @@
   .integ-hero__trust { gap:10px 16px; }
   .integ-hero__trust span { font-size:11px; }
 }
+
+/* Two-matrix layout */
+.integ-matrix__section { margin-bottom: 48px; }
+.integ-matrix__heading {
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--allybi-text-strongest);
+  margin: 0 0 18px;
+  text-align: left;
+}
+.integ-matrix__table--actions th,
+.integ-matrix__table--actions td {
+  text-align: left;
+  vertical-align: top;
+}
+.integ-na {
+  font-size: 11px;
+  color: var(--allybi-text-muted);
+  font-style: italic;
+}
+
+/* Mobile accordion group headings */
+.integ-matrix__acc-group {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--allybi-text-muted);
+  margin: 28px 0 12px;
+}
+.integ-matrix__acc-group:first-of-type { margin-top: 0; }
