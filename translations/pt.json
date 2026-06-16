@@ -362,7 +362,8 @@
       "whatsapp_desc": "Prepare a mensagem e abra o WhatsApp para revisar e enviar. O Allybi não lê sua caixa de entrada.",
       "gmail_desc": "Pesquise conversas e importe anexos.",
       "gdrive_desc": "Importe arquivos e pastas do Drive para o Allybi.",
-      "cta": "Ver integrações"
+      "cta": "Ver integrações",
+      "after_review": "Depois da revisão"
     },
     "faq": {
       "title": "Perguntas frequentes",

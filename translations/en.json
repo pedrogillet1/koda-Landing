@@ -377,7 +377,8 @@
       "gmail_desc": "Search threads and bring attachments into Allybi.",
       "gdrive_desc": "Import files and folders from Drive into Allybi.",
       "uploads_desc": "Upload documents, spreadsheets, presentations, images, and media.",
-      "cta": "View integrations"
+      "cta": "View integrations",
+      "after_review": "After your review"
     },
     "faq": {
       "title": "Frequently asked questions",
