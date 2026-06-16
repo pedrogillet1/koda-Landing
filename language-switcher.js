@@ -43,12 +43,12 @@
       twitterDescription: 'Connect sources, ask in chat, get answers with source. Prepare email or WhatsApp with confirmation.'
     },
     pt: {
-      title: 'Allybi — encontre, confirme e envie o documento certo',
-      description: 'Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, receba resposta com fonte e prepare e-mail ou WhatsApp com confirmação.',
-      ogTitle: 'Allybi — resposta com fonte, pronta para enviar',
-      ogDescription: 'Um chat para encontrar, confirmar e enviar o documento certo.',
-      twitterTitle: 'Allybi — resposta com fonte, pronta para enviar',
-      twitterDescription: 'Conecte fontes, pergunte no chat e receba respostas com fonte. 30 dias grátis.'
+      title: 'Allybi | Encontre, confirme e envie o documento certo',
+      description: 'Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e envie e-mails via Outlook com confirmação. WhatsApp abre como handoff.',
+      ogTitle: 'Allybi | Encontre, confirme e envie o documento certo',
+      ogDescription: 'Pergunte no chat, receba resposta com fonte e revise antes de enviar.',
+      twitterTitle: 'Allybi | Encontre, confirme e envie o documento certo',
+      twitterDescription: 'Pergunte no chat, receba resposta com fonte e revise antes de enviar.'
     }
   };
 
