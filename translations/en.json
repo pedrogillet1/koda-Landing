@@ -99,7 +99,24 @@
     "scene_confirm_btn": "Prepare send →",
     "pricing_line": "30 days free. Then R$170/month. Cancel anytime.",
     "action_email": "Email via Outlook",
-    "action_whatsapp": "WhatsApp handoff"
+    "action_whatsapp": "WhatsApp handoff",
+    "scene": {
+      "uploads": "Uploads",
+      "query": "which version can I send to the client?",
+      "results_label": "3 versions found",
+      "v1_tag": "previous version",
+      "v2_tag": "source uncertain",
+      "v3_tag": "source confirmed",
+      "source": "SharePoint / Clients / Contracts / Mar 14",
+      "review_label": "Review before sending",
+      "recipient": "Recipient",
+      "file": "File",
+      "source_label": "Source",
+      "channel": "Channel",
+      "channel_value": "Email via Outlook",
+      "send": "Send via Outlook",
+      "handoff": "WhatsApp handoff"
+    }
   },
   "trust": {
     "item1": "Source-cited answers",

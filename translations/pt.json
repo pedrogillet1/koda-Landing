@@ -99,7 +99,24 @@
     "scene_confirm_label": "Você revisa antes de enviar",
     "scene_confirm_detail": "<span style=\"color:var(--allybi-text-muted);font-size:11px\">Você revisa antes de enviar</span>",
     "scene_confirm_btn": "Enviar via Outlook →",
-    "pricing_line": "30 dias grátis. Depois R$170/mês. Cancele quando quiser."
+    "pricing_line": "30 dias grátis. Depois R$170/mês. Cancele quando quiser.",
+    "scene": {
+      "uploads": "Uploads",
+      "query": "qual versão posso enviar ao cliente?",
+      "results_label": "3 versões encontradas",
+      "v1_tag": "versão anterior",
+      "v2_tag": "fonte incerta",
+      "v3_tag": "fonte confirmada",
+      "source": "SharePoint / Clientes / Contratos / 14 mar",
+      "review_label": "Revisar antes de enviar",
+      "recipient": "Destinatário",
+      "file": "Arquivo",
+      "source_label": "Fonte",
+      "channel": "Canal",
+      "channel_value": "E-mail via Outlook",
+      "send": "Enviar via Outlook",
+      "handoff": "WhatsApp handoff"
+    }
   },
   "trust": {
     "item1": "Respostas com fonte",

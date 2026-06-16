@@ -146,38 +146,64 @@
         </div>
       </div>
       <div class="s-hero__visual allybi-reveal" style="transition-delay: 200ms">
-        <div class="hero-scene">
+        <div class="hero-scene" id="heroScene" data-state="idle" role="img" aria-label="Allybi finds the right version, shows its source, and prepares the send for review">
           <div class="hero-scene__workspace">
-            <div class="hero-scene__source-strip">
-              <span class="hero-scene__source-pill hero-scene__source-pill--outlook"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14"> Outlook</span>
-              <span class="hero-scene__source-pill hero-scene__source-pill--onedrive"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14"> OneDrive</span>
-              <span class="hero-scene__source-pill hero-scene__source-pill--sharepoint"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14"> SharePoint</span>
-              <span class="hero-scene__source-pill hero-scene__source-pill--uploads"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14"> Uploads</span>
+            <!-- Stage 1: source pills -->
+            <div class="hero-scene__source-strip" data-stage="1">
+              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14"> Outlook</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14"> OneDrive</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14"> SharePoint</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
             </div>
+
             <div class="hero-scene__body">
-              <div class="hero-scene__query" data-i18n-key="hero.scene_query">
+              <!-- Stage 2: question -->
+              <div class="hero-scene__query" data-stage="2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                Which version can I send to the client?
+                <span data-i18n-key="hero.scene.query">qual versão posso enviar ao cliente?</span>
               </div>
-              <div class="hero-scene__result">
-                <span class="hero-scene__result-badge" data-i18n-key="hero.scene_badge">Answer with source</span>
-                <p data-i18n-key="hero.scene_answer"><strong>contrato_final_AGORA.pdf</strong></p>
+
+              <!-- Stage 3: versions -->
+              <div class="hero-scene__versions" data-stage="3">
+                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
+                <ul class="hero-scene__v-list">
+                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
+                    <span class="hero-scene__v-name">contrato_final.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v1_tag">versão anterior</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
+                    <span class="hero-scene__v-name">contrato_final_v3.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v2_tag">fonte incerta</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
+                    <span class="hero-scene__v-name">contrato_final_AGORA.pdf</span>
+                    <span class="hero-scene__v-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span data-i18n-key="hero.scene.v3_tag">fonte confirmada</span>
+                    </span>
+                  </li>
+                </ul>
+                <p class="hero-scene__source-line">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span data-i18n-key="hero.scene.source">SharePoint / Clientes / Contratos / 14 mar</span>
+                </p>
               </div>
-              <div class="hero-scene__source" data-i18n-key="hero.scene_source">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Source: Clients / Contracts / Mar 14
+
+              <!-- Stage 4: review panel -->
+              <div class="hero-scene__review" data-stage="4">
+                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
+                <dl class="hero-scene__review-list">
+                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
+                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd>contrato_final_AGORA.pdf</dd></div>
+                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd>SharePoint</dd></div>
+                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="hero.scene.channel_value">E-mail via Outlook</dd></div>
+                </dl>
               </div>
-              <div class="hero-scene__confirm">
-                <div class="hero-scene__confirm-row">
-                  <div class="hero-scene__confirm-detail" data-i18n-key="hero.scene_confirm_detail">
-                    <span style="color:var(--allybi-text-muted);font-size:11px" data-i18n-key="hero.scene_confirm_label">You review before sending</span>
-                  </div>
-                  <span class="hero-scene__confirm-btn" data-i18n-key="hero.scene_confirm_btn">Send via Outlook &rarr;</span>
-                </div>
-                <div class="hero-scene__action-chips">
-                  <span class="hero-scene__action-chip"><img src="assets/images/outlook-icon.svg" alt="" width="12" height="12"> <span data-i18n-key="hero.action_email">Email via Outlook</span></span>
-                  <span class="hero-scene__action-chip"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12"> <span data-i18n-key="hero.action_whatsapp">WhatsApp handoff</span></span>
-                </div>
+
+              <!-- Stage 5: send -->
+              <div class="hero-scene__send" data-stage="5">
+                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="hero.scene.send">Enviar via Outlook</button>
+                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
               </div>
             </div>
           </div>
@@ -726,5 +752,6 @@ document.querySelectorAll('.allybi-accordion__trigger').forEach(function(btn){bt
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script src="hero-sequence.js" defer></script>
 </body>
 </html>
