@@ -82,9 +82,9 @@
     "diagnostic": "Diagnóstico do fluxo"
   },
   "hero": {
-    "eyebrow": "Chat com fonte para documentos, e-mails e envios",
+    "eyebrow": "Chat para documentos e envios",
     "title": "Um chat para encontrar, confirmar e enviar o documento certo.",
-    "subtitle": "Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte em linguagem normal. O Allybi mostra a fonte, monta a mensagem e envia e-mails via Outlook com sua confirmação. WhatsApp abre como handoff.",
+    "subtitle": "Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte em linguagem normal. O Allybi mostra a fonte, monta a mensagem e envia e-mails via Outlook depois da sua confirmação. WhatsApp abre como handoff.",
     "cta_primary": "Começar grátis por 30 dias",
     "cta_secondary": "Ver como funciona",
     "chip1": "Respostas com fonte",
@@ -225,7 +225,7 @@
   },
   "home": {
     "trust": {
-      "item1": "Criptografia de ponta a ponta",
+      "item1": "Criptografia em trânsito e em repouso",
       "item2": "Respostas com fonte",
       "item3": "Sem treinamento com seus dados",
       "item4": "Confirmação antes de cada envio",
@@ -251,7 +251,7 @@
       "subtitle": "O Allybi transforma procura, confirmação e preparo em um fluxo com fonte e revisão.",
       "f1": "\"qual versão mando?\"",
       "f2_label": "Pergunta no chat",
-      "f2": "em linguagem normal",
+      "f2": "em linguagem normal · sem comando",
       "f3_label": "Resposta com fonte",
       "f4_label": "Revisão",
       "f4": "arquivo · fonte · destinatário · canal",
@@ -260,7 +260,7 @@
       "s1_title": "Conecte ou suba",
       "s1_desc": "Conecte Outlook, OneDrive e SharePoint. Ou suba arquivos direto no Allybi.",
       "s2_title": "Pergunte no chat",
-      "s2_desc": "Pergunte como falaria com alguém do time. Sem comandos. Sem busca manual.",
+      "s2_desc": "Em linguagem normal. Sem comando técnico.",
       "s3_title": "Receba com fonte",
       "s3_desc": "O Allybi mostra a resposta e de onde ela veio: arquivo, página, seção ou origem.",
       "s4_title": "Revise e envie",
@@ -348,7 +348,7 @@
       "title": "Privado por arquitetura. Controlado por você.",
       "subtitle": "Documentos, perguntas e respostas não treinam modelos. As conexões são permissionadas, os dados são criptografados e nada é enviado sem sua confirmação.",
       "pillar1": "Sem treinamento com seus dados",
-      "pillar1_desc": "Documentos, perguntas e respostas não são usados para treinar modelos.",
+      "pillar1_desc": "Seus documentos, perguntas e respostas nunca treinam modelos.",
       "pillar2": "Criptografia",
       "pillar2_desc": "Dados protegidos em trânsito e em repouso.",
       "pillar3": "Permissões de integração",
@@ -387,15 +387,15 @@
     "faq": {
       "title": "Perguntas frequentes",
       "q1": "O que o Allybi faz?",
-      "a1": "O Allybi conecta fontes, recebe uploads e transforma seus documentos em um chat. Você pergunta, recebe resposta com fonte e envia e-mails via Outlook com confirmação — ou abre WhatsApp como handoff.",
+      "a1": "O Allybi conecta fontes, recebe uploads e transforma seus documentos em um chat. Você pergunta, recebe resposta com fonte e envia e-mails via Outlook com confirmação. Ou abre o WhatsApp como handoff.",
       "q2": "O Allybi envia e-mail?",
       "a2": "Sim. Com Outlook conectado, o Allybi pode preparar e enviar e-mails depois da sua confirmação. Antes de enviar, você revisa destinatário, mensagem, fonte e anexo.",
       "q3": "O Allybi pesquisa no WhatsApp?",
       "a3": "Não. WhatsApp funciona como handoff: o Allybi prepara a mensagem e abre o WhatsApp para você revisar e enviar. Ele não lê nem sincroniza sua caixa de entrada do WhatsApp.",
       "q4": "Quanto custa?",
-      "a4": "30 dias grátis. Depois, R$170/mês.",
+      "a4": "30 dias grátis. Depois R$170/mês.",
       "q5": "Preciso agendar uma demonstração?",
-      "a5": "Não para começar. Você pode iniciar o teste grátis. Times que quiserem ajuda podem falar com vendas.",
+      "a5": "Não. Você pode começar o teste grátis agora. Equipes que quiserem revisar segurança ou permissões podem falar com vendas.",
       "q6": "O que acontece antes de algo ser enviado?",
       "a6": "Você revisa conteúdo, arquivo, fonte e destinatário. Nada sai sem sua confirmação.",
       "see_all": "Ver todas as perguntas →",
@@ -405,7 +405,7 @@
       "a8": "Hoje: Outlook, OneDrive, SharePoint e uploads de arquivos. Gmail e Google Drive entram em seguida."
     },
     "final_cta": {
-      "title": "Teste o caminho real.",
+      "title": "Pergunte. Veja a fonte. Envie com confirmação.",
       "support": "Conecte uma fonte ou suba um arquivo. Pergunte no chat, veja a fonte e revise antes de enviar.",
       "cta": "Começar grátis por 30 dias",
       "cta2": "Calcular tempo perdido",
@@ -416,11 +416,11 @@
       "subtitle": "Duas ferramentas rápidas. Uma mostra seu tempo perdido. A outra mostra onde o fluxo do time trava.",
       "calc_title": "Calculadora do Tempo Perdido",
       "calc_desc": "Descubra quantas horas por mês você perde procurando, confirmando e reenviando arquivos.",
-      "calc_cta": "Calcular meu tempo →",
+      "calc_cta": "Calcular meu tempo",
       "diag_title": "Diagnóstico do Fluxo",
       "diag_desc": "Mapeie onde o time perde certeza entre o pedido e o envio.",
-      "diag_cta": "Mapear fluxo do time →",
-      "micro": "Resultado na hora. Sem cadastro para ver o resultado.",
+      "diag_cta": "Mapear fluxo do time",
+      "micro": "Resultado na hora. Sem cadastro.",
       "bar1": "Procurar",
       "bar2": "Confirmar versão",
       "bar3": "Achar fonte",
@@ -444,11 +444,11 @@
       "legal_cta": "Veja para advogados →",
       "finance_label": "Financeiro",
       "finance_context": "Antes da reunião do conselho",
-      "finance_copy": "Encontre o deck certo, confirme o número e responda com origem.",
+      "finance_copy": "Encontre o deck certo, confirme o número e responda com a fonte.",
       "finance_query": "\"qual foi a receita recorrente no último deck do conselho?\"",
       "finance_cta": "Veja para financeiro →",
       "ops_label": "Operações",
-      "ops_context": "Antes do follow-up com cliente",
+      "ops_context": "Antes do retorno ao cliente",
       "ops_copy": "Ache a proposta aprovada, monte a resposta e revise antes de enviar.",
       "ops_query": "\"resumir entregas do escopo aprovado\"",
       "ops_cta": "Veja para operações →"
@@ -466,7 +466,7 @@
       "f_privacy": "Documentos não treinam modelos",
       "f_review": "Nada sai sem revisão",
       "cta": "Começar grátis por 30 dias",
-      "micro": "Cancele quando quiser."
+      "micro": "Cancele quando quiser. Nada sai sem confirmação."
     }
   },
   "about": {

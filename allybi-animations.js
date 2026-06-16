@@ -27,6 +27,15 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
 
     els.forEach(function (el) { observer.observe(el); });
+
+    // Safety fallback: anything still hidden after 4s gets revealed.
+    // Covers fullPage screenshot tools, slow scroll, and SEO crawlers that
+    // execute JS for a bounded period before snapshotting.
+    setTimeout(function () {
+      document.querySelectorAll('.allybi-reveal:not(.is-visible)').forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+    }, 4000);
   }
 
   // =========================================================================
