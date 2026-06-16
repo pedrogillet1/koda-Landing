@@ -1,0 +1,259 @@
+{
+  "url": "http://localhost:8080/index.html",
+  "capturedAt": "2026-06-16T18:50:47.665Z",
+  "viewports": [
+    {
+      "name": "360",
+      "w": 360,
+      "h": 780,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 360,
+        "clientW": 360,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    },
+    {
+      "name": "390",
+      "w": 390,
+      "h": 844,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 390,
+        "clientW": 390,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    },
+    {
+      "name": "430",
+      "w": 430,
+      "h": 932,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 430,
+        "clientW": 430,
+        "hasHOverflow": false,
+        "overflowingEls": [
+          {
+            "tag": "DIV",
+            "cls": "s-hero__text allybi-reveal is-visible",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "H1",
+            "cls": "s-hero__h1",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "P",
+            "cls": "s-hero__sub",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "DIV",
+            "cls": "s-hero__ctas",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "A",
+            "cls": "allybi-btn allybi-btn--secondary",
+            "right": 457,
+            "width": 210
+          },
+          {
+            "tag": "P",
+            "cls": "s-hero__pricing-line",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "DIV",
+            "cls": "s-hero__proof",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "SPAN",
+            "cls": "s-hero__chip",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "SPAN",
+            "cls": "s-hero__chip",
+            "right": 457,
+            "width": 437
+          },
+          {
+            "tag": "SPAN",
+            "cls": "s-hero__chip",
+            "right": 457,
+            "width": 437
+          }
+        ]
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    },
+    {
+      "name": "768",
+      "w": 768,
+      "h": 1024,
+      "device": "tablet",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 768,
+        "clientW": 768,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    },
+    {
+      "name": "1024",
+      "w": 1024,
+      "h": 768,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1024,
+        "clientW": 1024,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    },
+    {
+      "name": "1366",
+      "w": 1366,
+      "h": 768,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1366,
+        "clientW": 1366,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    },
+    {
+      "name": "1440",
+      "w": 1440,
+      "h": 900,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1440,
+        "clientW": 1440,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    },
+    {
+      "name": "1920",
+      "w": 1920,
+      "h": 1080,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1920,
+        "clientW": 1920,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": [
+        {
+          "marker": "fonte:",
+          "text": "Fonte: Clientes / Contratos / 14 mar",
+          "parentTag": "SPAN",
+          "parentClass": "s-workflow__flow-micro",
+          "i18nKey": null
+        }
+      ]
+    }
+  ]
+}

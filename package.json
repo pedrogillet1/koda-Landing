@@ -1,0 +1,29 @@
+{
+  "name": "koda-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "allybi-animations.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrogillet1/koda-Landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pedrogillet1/koda-Landing/issues"
+  },
+  "homepage": "https://github.com/pedrogillet1/koda-Landing#readme",
+  "devDependencies": {
+    "playwright": "^1.61.0"
+  }
+}
