@@ -10,10 +10,10 @@
   // =========================================================================
   function initReveal() {
     // Covers both the generic .allybi-reveal pattern and page-scoped patterns
-    // like .hiw-reveal (how-it-works.html) and .integ-reveal (integrations.html).
-    // New page-scoped patterns can be added to this selector without touching
-    // the rest of the function.
-    var revealSelector = '.allybi-reveal, .hiw-reveal, .integ-reveal';
+    // like .hiw-reveal (how-it-works.html), .integ-reveal (integrations.html),
+    // and .sec-reveal (security-overview.html). New page-scoped patterns can
+    // be added to this selector without touching the rest of the function.
+    var revealSelector = '.allybi-reveal, .hiw-reveal, .integ-reveal, .sec-reveal';
     var els = document.querySelectorAll(revealSelector);
     if (!els.length) return;
 

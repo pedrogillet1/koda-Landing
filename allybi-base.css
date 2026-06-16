@@ -345,7 +345,8 @@ textarea:focus-visible,
      never get stuck on an invisible section. */
   .allybi-reveal,
   .hiw-reveal,
-  .integ-reveal {
+  .integ-reveal,
+  .sec-reveal {
     opacity: 1 !important;
     transform: none !important;
   }
