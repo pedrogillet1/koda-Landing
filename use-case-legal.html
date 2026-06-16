@@ -70,7 +70,7 @@
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
       <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="allybi-mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -229,7 +229,7 @@
     <div class="ucl-feature__grid allybi-reveal">
       <div class="ucl-feature__text">
         <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f1_eyebrow">Comparação de versões</div>
-        <h3 data-i18n-key="ucl.f1_title">Compare minutas sem abrir tudo de novo.</h3>
+        <h2 data-i18n-key="ucl.f1_title">Compare minutas sem abrir tudo de novo.</h2>
         <p data-i18n-key="ucl.f1_desc">Carregue versões e pergunte o que mudou. O Allybi mostra a alteração com fonte, arquivo e seção.</p>
       </div>
       <div class="ucl-feature__visual">
@@ -255,7 +255,7 @@
     <div class="ucl-feature__grid ucl-feature__grid--reverse allybi-reveal">
       <div class="ucl-feature__text">
         <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f2_eyebrow">Resposta com fonte</div>
-        <h3 data-i18n-key="ucl.f2_title">Encontre a cláusula com fonte visível.</h3>
+        <h2 data-i18n-key="ucl.f2_title">Encontre a cláusula com fonte visível.</h2>
         <p data-i18n-key="ucl.f2_desc">Pergunte em linguagem normal e veja o documento, página e trecho de origem.</p>
       </div>
       <div class="ucl-feature__visual">
@@ -284,7 +284,7 @@
     <div class="ucl-feature__grid allybi-reveal">
       <div class="ucl-feature__text">
         <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f3_eyebrow">E-mail via Outlook</div>
-        <h3 data-i18n-key="ucl.f3_title">Revise antes de enviar pelo Outlook.</h3>
+        <h2 data-i18n-key="ucl.f3_title">Revise antes de enviar pelo Outlook.</h2>
         <p data-i18n-key="ucl.f3_desc">O Allybi mostra versão, destinatário, mensagem, fonte e canal. O e-mail só sai depois da sua confirmação.</p>
       </div>
       <div class="ucl-feature__visual">
@@ -315,7 +315,7 @@
     <div class="ucl-feature__grid ucl-feature__grid--reverse allybi-reveal">
       <div class="ucl-feature__text">
         <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f4_eyebrow">WhatsApp handoff</div>
-        <h3 data-i18n-key="ucl.f4_title">WhatsApp handoff sem caixa sincronizada.</h3>
+        <h2 data-i18n-key="ucl.f4_title">WhatsApp handoff sem caixa sincronizada.</h2>
         <p data-i18n-key="ucl.f4_desc">O Allybi abre o WhatsApp com a mensagem pronta. Você revisa e envia no WhatsApp. O Allybi não lê nem pesquisa sua caixa.</p>
       </div>
       <div class="ucl-feature__visual">
@@ -344,25 +344,28 @@
     </div>
     <div class="ucl-security__grid allybi-reveal allybi-stagger">
       <div class="ucl-security__point">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <div><strong data-i18n-key="ucl.sec1_title">Documentos não treinam modelos</strong></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div><strong data-i18n-key="ucl.sec1_title">Documentos não treinam modelos</strong><span data-i18n-key="ucl.sec1_desc">Documentos, perguntas e respostas não são usados para treinar modelos.</span></div>
       </div>
       <div class="ucl-security__point">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        <div><strong data-i18n-key="ucl.sec2_title">Fonte visível</strong></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div><strong data-i18n-key="ucl.sec2_title">Fonte visível</strong><span data-i18n-key="ucl.sec2_desc">Cada resposta mostra de onde veio quando há base suficiente.</span></div>
       </div>
       <div class="ucl-security__point">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-        <div><strong data-i18n-key="ucl.sec3_title">Permissões por fonte</strong></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+        <div><strong data-i18n-key="ucl.sec3_title">Permissões por fonte</strong><span data-i18n-key="ucl.sec3_desc">Cada fonte conectada exige autorização explícita.</span></div>
       </div>
       <div class="ucl-security__point">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <div><strong data-i18n-key="ucl.sec4_title">Nada sai sem confirmação</strong></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div><strong data-i18n-key="ucl.sec4_title">Nada sai sem confirmação</strong><span data-i18n-key="ucl.sec4_desc">Você revisa mensagem, arquivo, fonte, destinatário e canal antes do envio.</span></div>
       </div>
       <div class="ucl-security__point">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        <div><strong data-i18n-key="ucl.sec5_title">WhatsApp sem caixa sincronizada</strong></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <div><strong data-i18n-key="ucl.sec5_title">WhatsApp sem caixa sincronizada</strong><span data-i18n-key="ucl.sec5_desc">O Allybi não acessa nem sincroniza sua caixa do WhatsApp.</span></div>
       </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;" class="allybi-reveal">
+      <a href="security-overview.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="ucl.sec_cta">Ver segurança</a>
     </div>
   </div>
 </section>
