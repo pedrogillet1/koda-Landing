@@ -1,0 +1,330 @@
+{
+  "url": "http://localhost:8080/integrations.html",
+  "capturedAt": "2026-06-16T21:06:58.287Z",
+  "viewports": [
+    {
+      "name": "360",
+      "w": 360,
+      "h": 780,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 360,
+        "clientW": 360,
+        "hasHOverflow": false,
+        "overflowingEls": [
+          {
+            "tag": "DIV",
+            "cls": "integ-after__step",
+            "right": 462,
+            "width": 130
+          },
+          {
+            "tag": "DIV",
+            "cls": "integ-after__num",
+            "right": 413,
+            "width": 32
+          },
+          {
+            "tag": "H3",
+            "cls": "",
+            "right": 462,
+            "width": 130
+          },
+          {
+            "tag": "P",
+            "cls": "",
+            "right": 467,
+            "width": 140
+          },
+          {
+            "tag": "BR",
+            "cls": "",
+            "right": 482,
+            "width": 0
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "right": 444,
+            "width": 94
+          },
+          {
+            "tag": "DIV",
+            "cls": "integ-after__arrow",
+            "right": 490,
+            "width": 28
+          },
+          {
+            "tag": "svg",
+            "cls": "[object SVGAnimatedString]",
+            "right": 486,
+            "width": 20
+          },
+          {
+            "tag": "line",
+            "cls": "[object SVGAnimatedString]",
+            "right": 482,
+            "width": 12
+          },
+          {
+            "tag": "polyline",
+            "cls": "[object SVGAnimatedString]",
+            "right": 482,
+            "width": 6
+          }
+        ]
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "390",
+      "w": 390,
+      "h": 844,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 390,
+        "clientW": 390,
+        "hasHOverflow": false,
+        "overflowingEls": [
+          {
+            "tag": "DIV",
+            "cls": "integ-after__step",
+            "right": 466,
+            "width": 130
+          },
+          {
+            "tag": "DIV",
+            "cls": "integ-after__num",
+            "right": 417,
+            "width": 32
+          },
+          {
+            "tag": "H3",
+            "cls": "",
+            "right": 466,
+            "width": 130
+          },
+          {
+            "tag": "P",
+            "cls": "",
+            "right": 471,
+            "width": 140
+          },
+          {
+            "tag": "BR",
+            "cls": "",
+            "right": 486,
+            "width": 0
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "right": 448,
+            "width": 94
+          },
+          {
+            "tag": "DIV",
+            "cls": "integ-after__arrow",
+            "right": 494,
+            "width": 28
+          },
+          {
+            "tag": "svg",
+            "cls": "[object SVGAnimatedString]",
+            "right": 490,
+            "width": 20
+          },
+          {
+            "tag": "line",
+            "cls": "[object SVGAnimatedString]",
+            "right": 486,
+            "width": 12
+          },
+          {
+            "tag": "polyline",
+            "cls": "[object SVGAnimatedString]",
+            "right": 486,
+            "width": 6
+          }
+        ]
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "430",
+      "w": 430,
+      "h": 932,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 430,
+        "clientW": 430,
+        "hasHOverflow": false,
+        "overflowingEls": [
+          {
+            "tag": "DIV",
+            "cls": "integ-after__step",
+            "right": 466,
+            "width": 130
+          },
+          {
+            "tag": "H3",
+            "cls": "",
+            "right": 466,
+            "width": 130
+          },
+          {
+            "tag": "P",
+            "cls": "",
+            "right": 471,
+            "width": 140
+          },
+          {
+            "tag": "BR",
+            "cls": "",
+            "right": 486,
+            "width": 0
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "right": 448,
+            "width": 94
+          },
+          {
+            "tag": "DIV",
+            "cls": "integ-after__arrow",
+            "right": 494,
+            "width": 28
+          },
+          {
+            "tag": "svg",
+            "cls": "[object SVGAnimatedString]",
+            "right": 490,
+            "width": 20
+          },
+          {
+            "tag": "line",
+            "cls": "[object SVGAnimatedString]",
+            "right": 486,
+            "width": 12
+          },
+          {
+            "tag": "polyline",
+            "cls": "[object SVGAnimatedString]",
+            "right": 486,
+            "width": 6
+          },
+          {
+            "tag": "DIV",
+            "cls": "integ-after__step",
+            "right": 624,
+            "width": 130
+          }
+        ]
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "768",
+      "w": 768,
+      "h": 1024,
+      "device": "tablet",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 768,
+        "clientW": 768,
+        "hasHOverflow": false,
+        "overflowingEls": [
+          {
+            "tag": "DIV",
+            "cls": "integ-after__step",
+            "right": 786,
+            "width": 130
+          },
+          {
+            "tag": "P",
+            "cls": "",
+            "right": 786,
+            "width": 130
+          }
+        ]
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1024",
+      "w": 1024,
+      "h": 768,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1024,
+        "clientW": 1024,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1366",
+      "w": 1366,
+      "h": 768,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1366,
+        "clientW": 1366,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1440",
+      "w": 1440,
+      "h": 900,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1440,
+        "clientW": 1440,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1920",
+      "w": 1920,
+      "h": 1080,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1920,
+        "clientW": 1920,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    }
+  ]
+}

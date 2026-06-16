@@ -344,7 +344,8 @@ textarea:focus-visible,
   /* Force-reveal all opacity-hidden reveal patterns so reduced-motion users
      never get stuck on an invisible section. */
   .allybi-reveal,
-  .hiw-reveal {
+  .hiw-reveal,
+  .integ-reveal {
     opacity: 1 !important;
     transform: none !important;
   }
