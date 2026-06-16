@@ -19,20 +19,40 @@
 .hiw-hero__ctas { display:flex; gap:12px; margin-bottom:16px; }
 .hiw-hero__pricing { font-size:13px; color:var(--allybi-text-muted); margin-bottom:20px; }
 .hiw-hero__trust { display:flex; gap:16px; flex-wrap:wrap; }
-.hiw-hero__trust span { font-size:12px; font-weight:500; color:var(--allybi-text-muted); display:flex; align-items:center; gap:5px; }
-.hiw-hero__trust span::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--allybi-trust); }
+.hiw-hero__trust span { font-size:12px; font-weight:500; color:var(--allybi-text-secondary); display:flex; align-items:center; gap:5px; }
+/* Neutral muted dot — green is reserved for confirmed-source states */
+.hiw-hero__trust span::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--allybi-text-muted); opacity:0.6; }
 
 .hiw-hero__visual { position:relative; }
 
 @media (max-width: 900px) {
-  .hiw-hero { padding:96px 0 56px; }
-  .hiw-hero__grid { grid-template-columns:1fr; gap:32px; }
-  .hiw-hero h1 { font-size:32px; }
-  .hiw-hero__ctas { flex-direction:column; align-items:stretch; gap:14px; }
+  .hiw-hero { padding:88px 0 48px; }
+  .hiw-hero__grid { grid-template-columns:1fr; gap:28px; }
+  .hiw-hero h1 { font-size:30px; margin-bottom:18px; }
+  .hiw-hero__sub { margin-bottom:24px; }
+  .hiw-hero__ctas { flex-direction:column; align-items:stretch; gap:12px; }
   .hiw-hero__ctas .allybi-btn--primary { width:100%; justify-content:center; }
-  .hiw-hero__ctas .allybi-btn--secondary { background:transparent; border:none; padding:4px; text-decoration:underline; text-underline-offset:4px; color:var(--allybi-text-strongest); align-self:center; }
-  .hiw-hero__trust { gap:10px; }
+  .hiw-hero__ctas .allybi-btn--secondary { background:transparent; border:none; padding:4px; text-decoration:underline; text-underline-offset:4px; color:var(--allybi-text-strongest); align-self:flex-start; }
+  .hiw-hero__pricing { margin-bottom:14px; }
+  .hiw-hero__trust { gap:10px 16px; }
   .hiw-hero__trust span { font-size:11px; }
+}
+
+/* Panel 5 mock fields stack vertically on mobile to avoid the 64px squish */
+@media (max-width: 480px) {
+  .hiw-mock__inner dl > div {
+    grid-template-columns: 1fr !important;
+    gap: 2px !important;
+  }
+}
+
+/* Depth section vertical sequence on mobile */
+@media (max-width: 760px) {
+  .hiw-depth__map { flex-direction:column; }
+  .hiw-depth__zone { padding:24px 22px; border-top:1px solid var(--allybi-border-default); }
+  .hiw-depth__zone:first-child { border-top:none; }
+  .hiw-depth__zone--center { border-left:none; border-right:none; }
+  .hiw-depth__arrow { display:flex !important; justify-content:center; padding:4px 0; color:var(--allybi-text-muted); transform:rotate(90deg); }
 }
 
 /* ── 2. WORKFLOW STORYBOARD ── */
@@ -145,3 +165,11 @@
 
 /* CTA final micro */
 .hiw-cta__micro { margin-top:18px; font-size:12px; color:rgba(255,255,255,0.6); text-align:center; }
+
+.hiw-depth__zone-sub-line {
+  font-size: 11px !important;
+  color: var(--allybi-text-muted) !important;
+  margin-left: 26px;
+  font-weight: 500 !important;
+}
+.hiw-depth__zone-sub-line::before { display:none; }

@@ -252,6 +252,13 @@
           }
         });
 
+        // Translate accessible names that target attributes other than text content.
+        document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+          const key = element.getAttribute('data-i18n-aria-label');
+          const value = resolve(translations, key);
+          if (value != null) element.setAttribute('aria-label', value);
+        });
+
         return translations;
       } catch (err) {
         console.error('Translation error:', err);

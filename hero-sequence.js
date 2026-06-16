@@ -54,36 +54,28 @@
     return step();
   }
 
-  function loop() {
-    if (stopped) return;
-    runOnce().then(function () {
-      if (!stopped) loop();
-    });
-  }
-
-  // Start only when scene enters viewport once
+  // Start only when scene enters viewport once. Plays the storyboard a single
+  // time and freezes on s5 — brief explicitly forbids loops competing with
+  // the rest of the page.
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         observer.disconnect();
         scene.setAttribute('data-state', 'idle');
-        loop();
+        runOnce();
       }
     });
   }, { threshold: 0.3 });
   observer.observe(scene);
 
-  // Pause animation when the page is hidden, resume when visible
+  // If the page is hidden mid-sequence, stop the pending timer; the user
+  // gets the final state instantly when they come back.
   document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
+    if (document.hidden && timer) {
+      clearTimeout(timer);
+      timer = null;
       stopped = true;
-      if (timer) {
-        clearTimeout(timer);
-        timer = null;
-      }
-    } else if (stopped) {
-      stopped = false;
-      loop();
+      scene.setAttribute('data-state', 's5');
     }
   });
   }
