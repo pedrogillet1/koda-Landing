@@ -1,0 +1,93 @@
+{
+  "url": "http://localhost:8080/use-case-business.html",
+  "viewports": [
+    {
+      "name": "360",
+      "w": 360,
+      "device": "mobile",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 360,
+        "cw": 360,
+        "hasH": false
+      }
+    },
+    {
+      "name": "390",
+      "w": 390,
+      "device": "mobile",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 390,
+        "cw": 390,
+        "hasH": false
+      }
+    },
+    {
+      "name": "430",
+      "w": 430,
+      "device": "mobile",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 430,
+        "cw": 430,
+        "hasH": false
+      }
+    },
+    {
+      "name": "768",
+      "w": 768,
+      "device": "tablet",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 768,
+        "cw": 768,
+        "hasH": false
+      }
+    },
+    {
+      "name": "1024",
+      "w": 1024,
+      "device": "desktop",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 1024,
+        "cw": 1024,
+        "hasH": false
+      }
+    },
+    {
+      "name": "1366",
+      "w": 1366,
+      "device": "desktop",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 1366,
+        "cw": 1366,
+        "hasH": false
+      }
+    },
+    {
+      "name": "1440",
+      "w": 1440,
+      "device": "desktop",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 1440,
+        "cw": 1440,
+        "hasH": false
+      }
+    },
+    {
+      "name": "1920",
+      "w": 1920,
+      "device": "desktop",
+      "consoleMessages": [],
+      "overflow": {
+        "sw": 1920,
+        "cw": 1920,
+        "hasH": false
+      }
+    }
+  ]
+}
