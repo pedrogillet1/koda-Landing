@@ -1934,10 +1934,10 @@
     },
     "hero_chip": "Integrations",
     "hero_h1": "Connect the sources where the work already happens.",
-    "hero_sub": "Allybi pulls emails, attachments, cloud files, and uploads into one simple chat — then sends email via Outlook with your confirmation, or opens WhatsApp as a handoff.",
+    "hero_sub": "Connect Outlook, OneDrive, SharePoint, and uploads. Ask in chat, see the source of the answer, and review before sending. Email can go out through Outlook with your confirmation. WhatsApp opens as a handoff.",
     "cta_start_free": "Start free for 30 days",
     "cta_see_how": "See how it works",
-    "hero_micro": "Outlook, OneDrive, SharePoint, and uploads live · Gmail and Google Drive coming soon · WhatsApp is a handoff",
+    "hero_micro": "Available now: Outlook, OneDrive, SharePoint, and uploads. WhatsApp is a handoff — no connected inbox.",
     "live_chip": "Available now",
     "live_h2": "Connected sources",
     "outlook_card_desc": "Search emails, surface attachments, and prepare replies with confirmation.",
@@ -1990,7 +1990,13 @@
     "trust5_desc": "Every send goes through review.",
     "trust_cta": "View security",
     "final_cta_h2": "Connect a source and ask in minutes.",
-    "final_cta_sub": "Start free, connect Outlook, OneDrive, or SharePoint, or upload files. Allybi shows the source-cited answer before anything is sent."
+    "final_cta_sub": "Start free, connect Outlook, OneDrive, or SharePoint, or upload files. Allybi shows the source-cited answer before anything is sent.",
+    "hero_trust1": "Permissioned sources",
+    "hero_trust2": "Source-cited answer",
+    "hero_trust3": "Email via Outlook",
+    "hero_trust4": "WhatsApp handoff",
+    "hero_trust5": "Nothing sent without confirmation",
+    "hero_scene_aria": "Allybi brings connected sources together, shows the source-confirmed version, and prepares the send for review."
   },
   "sec": {
     "hero": {

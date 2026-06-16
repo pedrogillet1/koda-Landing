@@ -499,3 +499,30 @@
   .integ-premium-card__icon { width: 36px; height: 36px; }
   .integ-premium-card__icon img, .integ-premium-card__icon svg { width: 36px; height: 36px; }
 }
+
+/* ── HERO 2-COL (rebuild) ── */
+.integ-hero { padding: 120px 0 80px; }
+.integ-hero__grid { display:grid; grid-template-columns:52fr 48fr; gap:clamp(32px,3.5vw,56px); align-items:center; max-width:1200px; margin:0 auto; }
+.integ-hero__text { text-align:left; }
+.integ-hero__text .allybi-chip { margin-bottom:20px; }
+.integ-hero__text .allybi-h1 { font-size:clamp(32px,4.2vw,56px); line-height:1.05; font-weight:700; letter-spacing:-0.03em; color:var(--allybi-text-strongest); margin:0 0 24px; max-width:620px; text-wrap:balance; }
+.integ-hero__text .allybi-body-lg { font-size:clamp(15px,1.15vw,17px); line-height:1.6; color:var(--allybi-text-secondary); max-width:540px; margin:0 0 28px; }
+.integ-hero__ctas { display:flex; gap:12px; margin-bottom:16px; }
+.integ-hero__micro { font-size:13px; color:var(--allybi-text-muted); margin:0 0 20px; max-width:540px; line-height:1.55; }
+.integ-hero__trust { display:flex; gap:16px; flex-wrap:wrap; }
+.integ-hero__trust span { font-size:12px; font-weight:500; color:var(--allybi-text-secondary); display:flex; align-items:center; gap:5px; }
+.integ-hero__trust span::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--allybi-text-muted); opacity:0.6; }
+.integ-hero__visual { position:relative; }
+
+@media (max-width: 900px) {
+  .integ-hero { padding: 88px 0 48px; }
+  .integ-hero__grid { grid-template-columns:1fr; gap:28px; }
+  .integ-hero__text .allybi-h1 { font-size:30px; margin-bottom:18px; }
+  .integ-hero__text .allybi-body-lg { margin-bottom:22px; }
+  .integ-hero__ctas { flex-direction:column; align-items:stretch; gap:12px; }
+  .integ-hero__ctas .allybi-btn--primary { width:100%; justify-content:center; }
+  .integ-hero__ctas .allybi-btn--secondary { background:transparent; border:none; padding:4px; text-decoration:underline; text-underline-offset:4px; color:var(--allybi-text-strongest); align-self:flex-start; }
+  .integ-hero__micro { margin-bottom:14px; font-size:12px; }
+  .integ-hero__trust { gap:10px 16px; }
+  .integ-hero__trust span { font-size:11px; }
+}

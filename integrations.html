@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="pages/home.css">
   <link rel="stylesheet" href="pages/integrations.css">
   <link rel="stylesheet" href="allybi-responsive.css">
   <noscript>
@@ -118,18 +119,85 @@
      ════════════════════════════════════════════════════════════ -->
 <section class="integ-hero allybi-section">
   <div class="allybi-container">
-    <div class="integ-hero__inner integ-reveal">
-      <span class="allybi-chip allybi-chip--accent" data-i18n-key="integ.hero_chip">Integrações</span>
-      <h1 class="allybi-h1" data-i18n-key="integ.hero_h1">Conecte as fontes onde o trabalho já acontece.</h1>
-      <p class="allybi-body-lg" data-i18n-key="integ.hero_sub">O Allybi reúne e-mails, anexos, arquivos na nuvem e uploads em um chat simples — e envia e-mails via Outlook com sua confirmação ou abre WhatsApp como handoff.</p>
-      <div class="integ-hero__ctas">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="integ.cta_start_free">Começar grátis por 30 dias</a>
-        <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="integ.cta_see_how">Ver como funciona</a>
+    <div class="integ-hero__grid">
+      <div class="integ-hero__text integ-reveal">
+        <span class="allybi-chip allybi-chip--accent" data-i18n-key="integ.hero_chip">Integrações</span>
+        <h1 class="allybi-h1" data-i18n-key="integ.hero_h1">Conecte as fontes onde o trabalho já acontece.</h1>
+        <p class="allybi-body-lg" data-i18n-key="integ.hero_sub">Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar. E-mail pode sair pelo Outlook com confirmação. WhatsApp abre como handoff.</p>
+        <div class="integ-hero__ctas">
+          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="integ.cta_start_free">Começar grátis por 30 dias</a>
+          <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="integ.cta_see_how">Ver como funciona</a>
+        </div>
+        <p class="integ-hero__micro" data-i18n-key="integ.hero_micro">Disponível agora: Outlook, OneDrive, SharePoint e uploads. WhatsApp é handoff, sem inbox conectado.</p>
+        <div class="integ-hero__trust">
+          <span data-i18n-key="integ.hero_trust1">Fontes permissionadas</span>
+          <span data-i18n-key="integ.hero_trust2">Resposta com fonte</span>
+          <span data-i18n-key="integ.hero_trust3">E-mail via Outlook</span>
+          <span data-i18n-key="integ.hero_trust4">WhatsApp handoff</span>
+          <span data-i18n-key="integ.hero_trust5">Nada sai sem confirmação</span>
+        </div>
       </div>
-      <p class="integ-hero__micro" data-i18n-key="integ.hero_micro">Outlook, OneDrive, SharePoint e uploads disponíveis · Gmail e Google Drive em breve · WhatsApp é handoff</p>
-    </div>
 
-    <!-- Hero flow removed: page content explains integration flow -->
+      <div class="integ-hero__visual integ-reveal">
+        <div class="hero-scene" id="integHeroScene" data-state="idle" role="img" data-i18n-aria-label="integ.hero_scene_aria" aria-label="O Allybi reúne fontes conectadas, mostra a versão com fonte confirmada e prepara o envio para revisão.">
+          <div class="hero-scene__workspace">
+            <div class="hero-scene__source-strip" data-stage="1">
+              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14" aria-hidden="true"> Outlook</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14" aria-hidden="true"> OneDrive</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14" aria-hidden="true"> SharePoint</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14" aria-hidden="true"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
+            </div>
+
+            <div class="hero-scene__body">
+              <div class="hero-scene__query" data-stage="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span data-i18n-key="hero.scene.query">qual versão posso enviar ao cliente?</span>
+              </div>
+
+              <div class="hero-scene__versions" data-stage="3">
+                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
+                <ul class="hero-scene__v-list">
+                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
+                    <span class="hero-scene__v-name">contrato_final.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v1_tag">versão anterior</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
+                    <span class="hero-scene__v-name">contrato_final_v3.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v2_tag">fonte incerta</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
+                    <span class="hero-scene__v-name">contrato_final_AGORA.pdf</span>
+                    <span class="hero-scene__v-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span data-i18n-key="hero.scene.v3_tag">fonte confirmada</span>
+                    </span>
+                  </li>
+                </ul>
+                <p class="hero-scene__source-line">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span data-i18n-key="hero.scene.source">SharePoint / Clientes / Contratos / 14 mar</span>
+                </p>
+              </div>
+
+              <div class="hero-scene__review" data-stage="4">
+                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
+                <dl class="hero-scene__review-list">
+                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
+                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd>contrato_final_AGORA.pdf</dd></div>
+                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd>SharePoint</dd></div>
+                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="hero.scene.channel_value">E-mail via Outlook</dd></div>
+                </dl>
+              </div>
+
+              <div class="hero-scene__send" data-stage="5">
+                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="hero.scene.send">Enviar via Outlook</button>
+                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12" aria-hidden="true"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -590,6 +658,7 @@
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script src="hero-sequence.js" defer></script>
 <script>
 /* ── Scroll reveal for integrations page ── */
 (function(){
