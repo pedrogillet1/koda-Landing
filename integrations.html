@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Integrações — Allybi</title>
-  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint e uploads ao Allybi. Pergunte no chat, receba respostas com fonte e envia e-mails via Outlook com confirmação. WhatsApp abre como handoff.">
+  <title>Integrações | Allybi</title>
+  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar. E-mail via Outlook sai com confirmação. WhatsApp abre como handoff.">
+  <link rel="canonical" href="https://allybi.com.br/integrations.html">
+  <link rel="alternate" hreflang="en" href="https://allybi.co/integrations.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/integrations.html">
+  <link rel="alternate" hreflang="x-default" href="https://allybi.co/integrations.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Integrações — Allybi">
-  <meta property="og:description" content="Fontes conectadas, respostas com fonte e envios preparados com confirmação.">
+  <meta property="og:title" content="Integrações | Allybi">
+  <meta property="og:description" content="Fontes conectadas entram no chat. Outlook pode enviar e-mail com confirmação. WhatsApp abre como handoff.">
   <meta property="og:url" content="https://allybi.com.br/integrations.html">
   <meta property="og:site_name" content="Allybi">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Integrações — Allybi">
-  <meta name="twitter:description" content="Conecte fontes, pergunte no chat, receba com fonte e envie com confirmação.">
+  <meta name="twitter:title" content="Integrações | Allybi">
+  <meta name="twitter:description" content="Fontes conectadas entram no chat. Outlook pode enviar e-mail com confirmação. WhatsApp abre como handoff.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -202,6 +206,61 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════
+     1.5 VISUAL MAP — what enters / what Allybi does / what leaves
+     ════════════════════════════════════════════════════════════ -->
+<section class="integ-map allybi-section">
+  <div class="allybi-container">
+    <div class="allybi-section-header integ-reveal">
+      <h2 class="allybi-h2" data-i18n-key="integ.map_h2">O que entra, o que acontece e o que sai.</h2>
+      <p class="allybi-body-lg" style="max-width:600px;margin:12px auto 0;" data-i18n-key="integ.map_sub">As fontes entram no chat. A resposta vem com origem. A saída só acontece depois da sua revisão.</p>
+    </div>
+
+    <div class="integ-map__grid integ-reveal">
+      <div class="integ-map__col">
+        <span class="integ-map__col-label" data-i18n-key="integ.map_col1_label">Entram no chat</span>
+        <ul class="integ-map__list">
+          <li><img src="assets/images/outlook-icon.svg" alt="" width="18" height="18" aria-hidden="true"> Outlook</li>
+          <li><img src="assets/images/onedrive-icon.svg" alt="" width="18" height="18" aria-hidden="true"> OneDrive</li>
+          <li><img src="assets/images/sharepoint-icon.svg" alt="" width="18" height="18" aria-hidden="true"> SharePoint</li>
+          <li><img src="assets/images/uploads-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="hero.scene.uploads">Uploads</span></li>
+        </ul>
+        <p class="integ-map__col-copy" data-i18n-key="integ.map_col1_copy">E-mails, anexos, arquivos na nuvem e uploads.</p>
+      </div>
+
+      <div class="integ-map__arrow" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+
+      <div class="integ-map__col integ-map__col--center">
+        <span class="integ-map__col-label" data-i18n-key="integ.map_col2_label">Allybi organiza</span>
+        <ul class="integ-map__list">
+          <li data-i18n-key="integ.map_col2_b1">Busca contexto</li>
+          <li data-i18n-key="integ.map_col2_b2">Mostra fonte</li>
+          <li data-i18n-key="integ.map_col2_b3">Ajuda a confirmar versão</li>
+          <li data-i18n-key="integ.map_col2_b4">Monta mensagem para revisão</li>
+        </ul>
+        <p class="integ-map__col-copy" data-i18n-key="integ.map_col2_copy">A resposta não fica solta. Ela mostra de onde veio.</p>
+      </div>
+
+      <div class="integ-map__arrow" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+
+      <div class="integ-map__col">
+        <span class="integ-map__col-label" data-i18n-key="integ.map_col3_label">Você revisa e decide</span>
+        <ul class="integ-map__list">
+          <li><img src="assets/images/outlook-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="integ.map_col3_email">E-mail via Outlook</span></li>
+          <li><span class="integ-map__col-sub" data-i18n-key="integ.map_col3_email_micro">com confirmação</span></li>
+          <li><img src="assets/images/whatsapp-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="integ.map_col3_wa">WhatsApp handoff</span></li>
+          <li><span class="integ-map__col-sub" data-i18n-key="integ.map_col3_wa_micro">você envia no app</span></li>
+        </ul>
+        <p class="integ-map__col-copy" data-i18n-key="integ.map_col3_copy">Outlook pode sair com confirmação. WhatsApp abre com a mensagem pronta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
      2. FONTES CONECTADAS
      ════════════════════════════════════════════════════════════ -->
 <section class="integ-live allybi-section" style="background-color: var(--allybi-bg-alt-1);">
@@ -280,8 +339,8 @@
   <div class="allybi-container">
     <div class="allybi-section-header integ-reveal">
       <span class="allybi-chip allybi-chip--accent" data-i18n-key="integ.actions_chip">Ações</span>
-      <h2 class="allybi-h2" data-i18n-key="integ.actions_h2">Ações de envio</h2>
-      <p class="allybi-body-lg" style="max-width:520px;margin:12px auto 0;" data-i18n-key="integ.actions_sub">O Allybi não só encontra a resposta. Ele ajuda a preparar o próximo passo.</p>
+      <h2 class="allybi-h2" data-i18n-key="integ.actions_h2">Depois da resposta, vem a revisão.</h2>
+      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="integ.actions_sub">O Allybi leva mensagem, arquivo, fonte e canal para sua confirmação.</p>
     </div>
 
     <div class="integ-actions__grid integ-stagger">
@@ -324,8 +383,8 @@
 <section class="integ-after allybi-section" style="background-color: var(--allybi-bg-alt-1);">
   <div class="allybi-container">
     <div class="allybi-section-header integ-reveal">
-      <h2 class="allybi-h2" data-i18n-key="integ.after_h2">Depois de conectar, o que acontece?</h2>
-      <p class="allybi-body-lg" style="max-width:540px;margin:12px auto 0;" data-i18n-key="integ.after_sub">A fonte entra no fluxo do Allybi: pergunta, resposta com fonte, mensagem pronta, revisão e envio.</p>
+      <h2 class="allybi-h2" data-i18n-key="integ.after_h2">Da fonte conectada à revisão.</h2>
+      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="integ.after_sub">O Allybi reduz o caminho entre buscar, confirmar e enviar.</p>
     </div>
 
     <div class="integ-after__flow integ-reveal">
@@ -355,8 +414,8 @@
       </div>
       <div class="integ-after__step">
         <div class="integ-after__num">4</div>
-        <h3 data-i18n-key="integ.after_step4_title">Mensagem pronta</h3>
-        <p data-i18n-key="integ.after_step4_desc">E-mail ou WhatsApp com contexto.</p>
+        <h3 data-i18n-key="integ.after_step4_title">Mensagem para revisão</h3>
+        <p data-i18n-key="integ.after_step4_desc">Texto, arquivo e fonte juntos.</p>
       </div>
       <div class="integ-after__arrow" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -364,7 +423,15 @@
       <div class="integ-after__step">
         <div class="integ-after__num">5</div>
         <h3 data-i18n-key="integ.after_step5_title">Revisão</h3>
-        <p data-i18n-key="integ.after_step5_desc">Você confirma antes de enviar.</p>
+        <p data-i18n-key="integ.after_step5_desc">Você confirma destinatário, mensagem, arquivo, fonte e canal.</p>
+      </div>
+      <div class="integ-after__arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="integ-after__step">
+        <div class="integ-after__num">6</div>
+        <h3 data-i18n-key="integ.after_step6_title">Saída</h3>
+        <p data-i18n-key="integ.after_step6_desc">Outlook envia com confirmação. WhatsApp abre como handoff.</p>
       </div>
     </div>
   </div>
@@ -377,7 +444,8 @@
   <div class="allybi-container">
     <div class="allybi-section-header integ-reveal">
       <span class="allybi-chip allybi-chip--coming" data-i18n-key="integ.roadmap_chip">Roadmap</span>
-      <h2 class="allybi-h2" data-i18n-key="integ.roadmap_h2">Em breve</h2>
+      <h2 class="allybi-h2" data-i18n-key="integ.roadmap_h2">Próximas fontes</h2>
+      <p class="allybi-body-lg" style="max-width:580px;margin:12px auto 0;" data-i18n-key="integ.roadmap_sub">Gmail e Google Drive estão no roadmap. Hoje, o Allybi já funciona com Outlook, OneDrive, SharePoint e uploads.</p>
     </div>
 
     <div class="integ-coming__grid integ-stagger">
@@ -422,7 +490,7 @@
 
     <!-- Matrix A — Sources (Desktop table) -->
     <div class="integ-matrix__section integ-reveal">
-      <h3 class="integ-matrix__heading" data-i18n-key="integ.matrix_a_h">Fontes que entram no chat</h3>
+      <h3 class="integ-matrix__heading integ-matrix__desktop-only" data-i18n-key="integ.matrix_a_h">Fontes que entram no chat</h3>
       <div class="integ-matrix__wrap integ-matrix__desktop-only">
         <table class="integ-matrix__table">
           <caption class="sr-only" data-i18n-key="integ.matrix_a_caption">Capacidades de cada fonte conectada.</caption>
@@ -470,7 +538,7 @@
 
     <!-- Matrix B — Actions (Desktop table) -->
     <div class="integ-matrix__section integ-reveal">
-      <h3 class="integ-matrix__heading" data-i18n-key="integ.matrix_b_h">Ações depois da revisão</h3>
+      <h3 class="integ-matrix__heading integ-matrix__desktop-only" data-i18n-key="integ.matrix_b_h">Ações depois da revisão</h3>
       <div class="integ-matrix__wrap integ-matrix__desktop-only">
         <table class="integ-matrix__table integ-matrix__table--actions">
           <caption class="sr-only" data-i18n-key="integ.matrix_b_caption">Como cada canal de saída se comporta após a revisão do usuário.</caption>
@@ -642,12 +710,13 @@
 <section class="integ-cta">
   <div class="allybi-container">
     <div class="integ-cta__inner integ-reveal">
-      <h2 data-i18n-key="integ.final_cta_h2">Conecte uma fonte e pergunte em minutos.</h2>
-      <p data-i18n-key="integ.final_cta_sub">Comece grátis, conecte Outlook, OneDrive, SharePoint ou suba arquivos. O Allybi mostra a resposta com fonte antes do envio.</p>
+      <h2 data-i18n-key="integ.final_cta_h2">Conecte uma fonte e teste o caminho real.</h2>
+      <p data-i18n-key="integ.final_cta_sub">Pergunte no chat, veja a fonte da resposta e revise antes de enviar.</p>
       <div class="integ-cta__btns">
         <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="integ.cta_start_free">Começar grátis por 30 dias</a>
         <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="integ.cta_see_how">Ver como funciona</a>
       </div>
+      <p class="integ-cta__micro" data-i18n-key="integ.cta_micro">30 dias grátis. Nada sai sem confirmação.</p>
     </div>
   </div>
 </section>
