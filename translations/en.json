@@ -432,6 +432,21 @@
       "node5": "Confirmation",
       "node6": "Send",
       "viz_stuck": "Where the flow stalls."
+    },
+    "pricing_teaser": {
+      "title": "30 days free. Then R$170/month.",
+      "subtitle": "One plan to find, confirm, and send the right document.",
+      "plan_name": "Allybi Pro",
+      "period": "/month after trial",
+      "f_uploads": "Uploads",
+      "f_source": "Source-cited answer",
+      "f_compare": "Version comparison",
+      "f_email": "Email via Outlook with confirmation",
+      "f_whatsapp": "WhatsApp handoff",
+      "f_privacy": "Documents never train models",
+      "f_review": "Nothing sent without review",
+      "cta": "Start free for 30 days",
+      "micro": "Cancel anytime."
     }
   },
   "about": {

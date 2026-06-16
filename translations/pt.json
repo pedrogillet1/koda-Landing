@@ -434,6 +434,21 @@
       "ops_copy": "Ache a proposta aprovada, monte a resposta e revise antes de enviar.",
       "ops_query": "\"resumir entregas do escopo aprovado\"",
       "ops_cta": "Veja para operações →"
+    },
+    "pricing_teaser": {
+      "title": "30 dias grátis. Depois R$170/mês.",
+      "subtitle": "Um plano para encontrar, confirmar e enviar o documento certo.",
+      "plan_name": "Allybi Pro",
+      "period": "/mês depois do teste",
+      "f_uploads": "Uploads",
+      "f_source": "Resposta com fonte",
+      "f_compare": "Comparação de versões",
+      "f_email": "E-mail via Outlook com confirmação",
+      "f_whatsapp": "WhatsApp handoff",
+      "f_privacy": "Documentos não treinam modelos",
+      "f_review": "Nada sai sem revisão",
+      "cta": "Começar grátis por 30 dias",
+      "micro": "Cancele quando quiser."
     }
   },
   "about": {
