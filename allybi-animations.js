@@ -9,7 +9,11 @@
   // 1. Scroll Reveal
   // =========================================================================
   function initReveal() {
-    var els = document.querySelectorAll('.allybi-reveal');
+    // Covers both the generic .allybi-reveal pattern and page-scoped patterns
+    // like .hiw-reveal (how-it-works.html). New page-scoped patterns can be
+    // added to this selector without touching the rest of the function.
+    var revealSelector = '.allybi-reveal, .hiw-reveal';
+    var els = document.querySelectorAll(revealSelector);
     if (!els.length) return;
 
     if (prefersReducedMotion) {
@@ -32,8 +36,10 @@
     // Covers fullPage screenshot tools, slow scroll, and SEO crawlers that
     // execute JS for a bounded period before snapshotting.
     setTimeout(function () {
-      document.querySelectorAll('.allybi-reveal:not(.is-visible)').forEach(function (el) {
-        el.classList.add('is-visible');
+      document.querySelectorAll(revealSelector).forEach(function (el) {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+        }
       });
     }, 1500);
   }

@@ -296,3 +296,26 @@ ol {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ============================================
+   Reduced motion (universal)
+   Applies across every page that loads this stylesheet.
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Force-reveal all opacity-hidden reveal patterns so reduced-motion users
+     never get stuck on an invisible section. */
+  .allybi-reveal,
+  .hiw-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
