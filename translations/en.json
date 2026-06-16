@@ -391,7 +391,11 @@
       "a5": "Not to get started. You can begin the free trial. Teams that want help can talk to sales.",
       "q6": "What happens before something is sent?",
       "a6": "You review content, file, source, and recipient. Nothing goes out without your confirmation.",
-      "see_all": "See all questions →"
+      "see_all": "See all questions →",
+      "q7": "Do my documents train models?",
+      "a7": "No. Documents, questions, and answers are never used to train models.",
+      "q8": "What sources can I connect?",
+      "a8": "Today: Outlook, OneDrive, SharePoint, and file uploads. Gmail and Google Drive are next."
     },
     "final_cta": {
       "title": "Connect. Ask. Send with confirmation.",

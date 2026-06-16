@@ -376,7 +376,11 @@
       "a5": "Não para começar. Você pode iniciar o teste grátis. Times que quiserem ajuda podem falar com vendas.",
       "q6": "O que acontece antes de algo ser enviado?",
       "a6": "Você revisa conteúdo, arquivo, fonte e destinatário. Nada sai sem sua confirmação.",
-      "see_all": "Ver todas as perguntas →"
+      "see_all": "Ver todas as perguntas →",
+      "q7": "Meus documentos treinam modelos?",
+      "a7": "Não. Documentos, perguntas e respostas não são usados para treinar modelos.",
+      "q8": "Quais fontes posso conectar?",
+      "a8": "Hoje: Outlook, OneDrive, SharePoint e uploads de arquivos. Gmail e Google Drive entram em seguida."
     },
     "final_cta": {
       "title": "Conecte. Pergunte. Envie com confirmação.",
