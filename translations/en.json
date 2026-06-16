@@ -357,7 +357,9 @@
       "pillar5_desc": "You review content, source, file, and recipient before anything is sent.",
       "pillar6": "WhatsApp without inbox sync",
       "pillar6_desc": "Allybi prepares the message but never reads or searches your WhatsApp.",
-      "cta": "View security"
+      "cta": "View security",
+      "pillar7": "Source visible",
+      "pillar7_desc": "Every answer shows where it came from."
     },
     "integrations": {
       "title": "Your sources and your sends in the same flow.",

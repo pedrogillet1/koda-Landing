@@ -342,7 +342,9 @@
       "pillar5_desc": "Você revisa conteúdo, fonte, arquivo e destinatário antes de qualquer envio.",
       "pillar6": "WhatsApp sem caixa sincronizada",
       "pillar6_desc": "O Allybi prepara a mensagem, mas não lê nem pesquisa seu WhatsApp.",
-      "cta": "Ver segurança"
+      "cta": "Ver segurança",
+      "pillar7": "Fonte visível",
+      "pillar7_desc": "Cada resposta mostra de onde veio."
     },
     "integrations": {
       "title": "Suas fontes e seus envios no mesmo fluxo.",
