@@ -1,0 +1,134 @@
+{
+  "url": "http://localhost:8080/how-it-works.html",
+  "capturedAt": "2026-06-16T20:18:29.638Z",
+  "viewports": [
+    {
+      "name": "360",
+      "w": 360,
+      "h": 780,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 360,
+        "clientW": 360,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "390",
+      "w": 390,
+      "h": 844,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 390,
+        "clientW": 390,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "430",
+      "w": 430,
+      "h": 932,
+      "device": "mobile",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 430,
+        "clientW": 430,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "768",
+      "w": 768,
+      "h": 1024,
+      "device": "tablet",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 768,
+        "clientW": 768,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": true,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1024",
+      "w": 1024,
+      "h": 768,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1024,
+        "clientW": 1024,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1366",
+      "w": 1366,
+      "h": 768,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1366,
+        "clientW": 1366,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1440",
+      "w": 1440,
+      "h": 900,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1440,
+        "clientW": 1440,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    },
+    {
+      "name": "1920",
+      "w": 1920,
+      "h": 1080,
+      "device": "desktop",
+      "consoleMessages": [],
+      "failedRequests": [],
+      "overflow": {
+        "scrollW": 1920,
+        "clientW": 1920,
+        "hasHOverflow": false,
+        "overflowingEls": []
+      },
+      "menuCaptured": false,
+      "ptLeakOnEnRender": []
+    }
+  ]
+}
