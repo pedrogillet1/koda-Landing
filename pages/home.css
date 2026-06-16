@@ -1203,3 +1203,11 @@
   .s-pricing-teaser__card { padding: 24px; }
   .s-pricing-teaser__list li { font-size: 13px; }
 }
+
+/* Final CTA micro */
+.s-cta__micro {
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}

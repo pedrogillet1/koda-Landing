@@ -388,10 +388,11 @@
       "a8": "Hoje: Outlook, OneDrive, SharePoint e uploads de arquivos. Gmail e Google Drive entram em seguida."
     },
     "final_cta": {
-      "title": "Conecte. Pergunte. Envie com confirmação.",
-      "support": "Comece grátis, conecte uma fonte ou suba um arquivo e veja uma resposta com fonte antes do envio.",
+      "title": "Teste o caminho real.",
+      "support": "Conecte uma fonte ou suba um arquivo. Pergunte no chat, veja a fonte e revise antes de enviar.",
       "cta": "Começar grátis por 30 dias",
-      "cta2": "Falar com vendas"
+      "cta2": "Calcular tempo perdido",
+      "micro": "30 dias grátis. Nada sai sem confirmação."
     },
     "tools": {
       "title": "Antes de testar, meça o que está custando tempo.",

@@ -403,10 +403,11 @@
       "a8": "Today: Outlook, OneDrive, SharePoint, and file uploads. Gmail and Google Drive are next."
     },
     "final_cta": {
-      "title": "Connect. Ask. Send with confirmation.",
-      "support": "Start free, connect a source or upload a file, and see a source-cited answer before anything is sent.",
+      "title": "Try the real flow.",
+      "support": "Connect a source or upload a file. Ask in chat, see the source, and review before sending.",
       "cta": "Start free for 30 days",
-      "cta2": "Talk to sales"
+      "cta2": "Calculate lost time",
+      "micro": "30 days free. Nothing sent without confirmation."
     },
     "tools": {
       "title": "Before you try it, measure what's costing you time.",
