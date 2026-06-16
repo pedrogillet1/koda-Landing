@@ -633,3 +633,28 @@
   color: rgba(255, 255, 255, 0.65);
   text-align: center;
 }
+
+/* Trust pillars — secondary chips visually lower */
+.integ-hero__trust .integ-hero__trust--secondary { opacity: 0.85; }
+
+/* WhatsApp action card — muted chrome so it doesn't read as 'available' twin of Outlook */
+.integ-actions__grid .integ-premium-card:nth-child(2) {
+  background: var(--allybi-bg-alt-1);
+  border-style: dashed;
+}
+
+/* Hover transform guarded for reduced-motion + hover-capable devices only */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .integ-premium-card { transition: transform 180ms ease, box-shadow 180ms ease; }
+  .integ-premium-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -12px rgba(0,0,0,0.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .integ-premium-card { transition: none !important; }
+  .integ-premium-card:hover { transform: none !important; }
+}
+
+/* Mobile — cap trust chips to 3 + tighten hero, secondary CTA as text link */
+@media (max-width: 480px) {
+  .integ-hero__trust .integ-hero__trust--secondary { display: none; }
+  .integ-hero { padding-top: 80px; }
+}

@@ -74,7 +74,7 @@
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
       <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="allybi-mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -127,24 +127,23 @@
       <div class="integ-hero__text integ-reveal">
         <span class="allybi-chip allybi-chip--accent" data-i18n-key="integ.hero_chip">Integrações</span>
         <h1 class="allybi-h1" data-i18n-key="integ.hero_h1">Conecte as fontes onde o trabalho já acontece.</h1>
-        <p class="allybi-body-lg" data-i18n-key="integ.hero_sub">Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar. E-mail pode sair pelo Outlook com confirmação. WhatsApp abre como handoff.</p>
+        <p class="allybi-body-lg" data-i18n-key="integ.hero_sub">Pergunte no chat, veja a fonte da resposta, revise antes de enviar. Outlook envia com confirmação; WhatsApp abre como handoff.</p>
         <div class="integ-hero__ctas">
           <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="integ.cta_start_free">Começar grátis por 30 dias</a>
           <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="integ.cta_see_how">Ver como funciona</a>
         </div>
-        <p class="integ-hero__micro" data-i18n-key="integ.hero_micro">Disponível agora: Outlook, OneDrive, SharePoint e uploads. WhatsApp é handoff, sem inbox conectado.</p>
         <div class="integ-hero__trust">
-          <span data-i18n-key="integ.hero_trust1">Fontes permissionadas</span>
           <span data-i18n-key="integ.hero_trust2">Resposta com fonte</span>
           <span data-i18n-key="integ.hero_trust3">E-mail via Outlook</span>
-          <span data-i18n-key="integ.hero_trust4">WhatsApp handoff</span>
           <span data-i18n-key="integ.hero_trust5">Nada sai sem confirmação</span>
+          <span class="integ-hero__trust--secondary" data-i18n-key="integ.hero_trust1">Fontes permissionadas</span>
+          <span class="integ-hero__trust--secondary" data-i18n-key="integ.hero_trust4">WhatsApp handoff</span>
         </div>
       </div>
 
       <div class="integ-hero__visual integ-reveal">
         <div class="hero-scene" id="integHeroScene" data-state="idle" role="img" data-i18n-aria-label="integ.hero_scene_aria" aria-label="O Allybi reúne fontes conectadas, mostra a versão com fonte confirmada e prepara o envio para revisão.">
-          <div class="hero-scene__workspace">
+          <div class="hero-scene__workspace" aria-hidden="true">
             <div class="hero-scene__source-strip" data-stage="1">
               <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14" aria-hidden="true"> Outlook</span>
               <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14" aria-hidden="true"> OneDrive</span>
@@ -589,38 +588,38 @@
         <details class="integ-matrix__acc-item">
           <summary><img src="assets/images/uploads-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Uploads <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
           <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
           </div>
         </details>
         <details class="integ-matrix__acc-item">
           <summary><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Outlook <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
           <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_find_attach">Encontrar anexos</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_find_attach">Encontrar anexos</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
           </div>
         </details>
         <details class="integ-matrix__acc-item">
           <summary><img src="assets/images/onedrive-icon.svg" alt="" width="20" height="20" aria-hidden="true"> OneDrive <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
           <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
           </div>
         </details>
         <details class="integ-matrix__acc-item">
           <summary><img src="assets/images/sharepoint-icon.svg" alt="" width="20" height="20" aria-hidden="true"> SharePoint <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
           <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
           </div>
         </details>
 
@@ -629,9 +628,9 @@
         <details class="integ-matrix__acc-item">
           <summary><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20" aria-hidden="true"> <span data-i18n-key="integ.col_email_outlook">E-mail via Outlook</span> <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
           <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_draft_review">Monta mensagem para revisão</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_file_source">Mostra arquivo e fonte</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_user_reviews">Usuário revisa antes</span><span class="integ-check">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_draft_review">Monta mensagem para revisão</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_file_source">Mostra arquivo e fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_user_reviews">Usuário revisa antes</span><span class="integ-check" aria-label="sim">✓</span></div>
             <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_final_action">Ação final</span><span data-i18n-key="integ.cell_send_outlook">Enviar via Outlook</span></div>
             <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_who_sends">Quem envia</span><span data-i18n-key="integ.cell_allybi_sends">Allybi, depois da confirmação</span></div>
           </div>
@@ -639,9 +638,9 @@
         <details class="integ-matrix__acc-item">
           <summary><img src="assets/images/whatsapp-icon.svg" alt="" width="20" height="20" aria-hidden="true"> <span data-i18n-key="integ.col_wa_handoff">WhatsApp handoff</span> <span class="allybi-badge allybi-badge--handoff" data-i18n-key="integ.handoff_badge">Handoff</span></summary>
           <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_draft_review">Monta mensagem para revisão</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_file_source">Mostra arquivo e fonte</span><span class="integ-check">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_user_reviews">Usuário revisa antes</span><span class="integ-check">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_draft_review">Monta mensagem para revisão</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_file_source">Mostra arquivo e fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
+            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_user_reviews">Usuário revisa antes</span><span class="integ-check" aria-label="sim">✓</span></div>
             <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_final_action">Ação final</span><span data-i18n-key="integ.cell_open_wa">Abrir WhatsApp com mensagem pronta</span></div>
             <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_who_sends">Quem envia</span><span data-i18n-key="integ.cell_user_sends">Você, dentro do WhatsApp</span></div>
           </div>
