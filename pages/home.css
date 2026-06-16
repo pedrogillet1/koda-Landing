@@ -357,27 +357,48 @@
   border-radius: var(--allybi-radius-full);
 }
 
+/* Free the illustration container when it holds the version stack (3 rows + badges need more height) */
+.s-pain__illustration:has(.s-pain__visual-versions) {
+  height: auto;
+  min-height: 200px;
+  overflow: visible;
+  align-items: stretch;
+}
+
 .s-pain__visual-versions {
   width: 100%;
-  max-width: 240px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  max-width: 260px;
+  display: grid;
+  gap: 8px;
 }
 
 .s-pain__version-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
   padding: 8px 12px;
   background: var(--allybi-bg-surface);
   border: 1px solid var(--allybi-border-default);
   border-radius: var(--allybi-radius-sm);
 }
 
+/* Legacy modifier kept for backward compatibility (no longer in markup) */
 .s-pain__version-row--highlight {
   border-color: #FBBC04;
   background: rgba(251, 188, 4, 0.04);
+}
+
+/* Semaphore states */
+.s-pain__version-row--prev { opacity: 0.78; }
+.s-pain__version-row--warn {
+  border-color: rgba(251, 188, 4, 0.4);
+  background: rgba(251, 188, 4, 0.06);
+}
+.s-pain__version-row--confirmed {
+  border-color: rgba(52, 168, 83, 0.55);
+  background: rgba(52, 168, 83, 0.08);
+  box-shadow: 0 0 0 2px rgba(52, 168, 83, 0.10);
 }
 
 .s-pain__version-file {
@@ -385,16 +406,22 @@
   font-weight: 500;
   color: var(--allybi-text-primary);
   font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  word-break: break-all;
 }
 
 .s-pain__version-badge {
   font-size: 10px;
   font-weight: 600;
-  color: #92400E;
-  background: #FEF3C7;
-  padding: 2px 8px;
-  border-radius: var(--allybi-radius-full);
+  padding: 3px 8px;
+  border-radius: var(--allybi-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
 }
+.s-pain__version-badge--muted { color: #6C6B6E; background: rgba(0,0,0,0.04); }
+.s-pain__version-badge--warn  { color: #92400E; background: #FEF3C7; }
+.s-pain__version-badge--ok    { color: #1E7B43; background: rgba(52, 168, 83, 0.16); }
 
 .s-pain__visual-send {
   width: 100%;

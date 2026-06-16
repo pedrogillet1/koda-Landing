@@ -217,10 +217,13 @@
       "card1_desc": "The answer might be in an email, a folder, an attachment, an upload, or an old conversation.",
       "card2_title": "Look-alike",
       "card2_desc": "Three files look right. Only one can actually be sent.",
-      "card3_title": "Sendable",
+      "card3_title": "Before it leaves",
       "card3_desc": "Before it goes out, you still need to check the recipient, the file, the context, and the source.",
       "send_recipient": "Recipient",
-      "send_confirm": "Send via Outlook"
+      "send_confirm": "Send via Outlook",
+      "confirmed_badge": "source confirmed",
+      "uncertain_badge": "source uncertain",
+      "previous_badge": "previous version"
     },
     "workflow": {
       "title": "From request to send, in one message.",

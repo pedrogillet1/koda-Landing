@@ -221,10 +221,13 @@
       "card1_desc": "A resposta pode estar no e-mail, na pasta, no anexo, no upload ou em uma conversa antiga.",
       "card2_title": "Parecido",
       "card2_desc": "Três arquivos parecem certos. Só um pode ser enviado.",
-      "card3_title": "Enviável",
+      "card3_title": "Antes de sair",
       "card3_desc": "Antes de mandar, ainda falta conferir destinatário, arquivo, contexto e fonte.",
       "send_recipient": "Destinatário",
-      "send_confirm": "Enviar via Outlook"
+      "send_confirm": "Enviar via Outlook",
+      "confirmed_badge": "fonte confirmada",
+      "uncertain_badge": "fonte incerta",
+      "previous_badge": "versão anterior"
     },
     "workflow": {
       "title": "Do pedido ao envio, em uma mensagem.",
