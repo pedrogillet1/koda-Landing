@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Allybi para operações — pare de reconstruir contexto</title>
-  <meta name="description" content="Search across operational documents, find the latest version, and prepare responses — with source-cited answers and confirmation before anything is sent.">
+  <title>Allybi para operações | Propostas, SOWs e follow-ups com contexto</title>
+  <meta name="description" content="Encontre a proposta aprovada, o plano certo e o contexto do follow-up. Allybi mostra fonte, versão e revisão antes de qualquer envio.">
+  <link rel="canonical" href="https://allybi.com.br/use-case-business.html">
+  <link rel="alternate" hreflang="en" href="https://allybi.co/use-case-business.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/use-case-business.html">
+  <link rel="alternate" hreflang="x-default" href="https://allybi.co/use-case-business.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Allybi for Operations — Find the approved proposal, plan, or follow-up">
-  <meta property="og:description" content="Search across operational documents, find the latest version, and prepare responses with source-cited answers.">
-  <meta property="og:url" content="https://allybi.co/use-case-business.html">
+  <meta property="og:title" content="Allybi para operações | Propostas, SOWs e follow-ups com contexto">
+  <meta property="og:description" content="Encontre a proposta aprovada, o plano certo e o contexto do follow-up. Allybi mostra fonte, versão e revisão antes de qualquer envio.">
+  <meta property="og:url" content="https://allybi.com.br/use-case-business.html">
   <meta property="og:site_name" content="Allybi">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Allybi for Operations — Find the approved proposal, plan, or follow-up">
-  <meta name="twitter:description" content="Search across operational documents, find the latest version, and prepare responses with source-cited answers.">
+  <meta name="twitter:title" content="Allybi para operações | Propostas, SOWs e follow-ups com contexto">
+  <meta name="twitter:description" content="Encontre a proposta aprovada, o plano certo e o contexto do follow-up. Allybi mostra fonte, versão e revisão antes de qualquer envio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,8 +27,14 @@
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="pages/home.css">
   <link rel="stylesheet" href="pages/use-case-business.css">
   <link rel="stylesheet" href="allybi-responsive.css">
+  <noscript>
+    <style>
+      .allybi-reveal, .ucb-reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -64,7 +74,7 @@
       <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
       <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="allybi-mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -108,76 +118,86 @@
 
 <main>
 
-<!-- HERO -->
+<!-- ════════════════════════════════════════════════════════════
+     1. HERO (2-col with hero-scene mockup)
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucb-hero allybi-section">
   <div class="allybi-container">
-    <div class="ucb-hero__inner allybi-reveal">
-      <span class="ucb-hero__eyebrow" data-i18n-key="business.hero.eyebrow">For operations</span>
-      <h1 class="ucb-hero__h1" data-i18n-key="business.hero.title">Find the approved proposal, plan, or follow-up.</h1>
-      <p class="ucb-hero__sub" data-i18n-key="business.hero.subtitle">Search across operational documents, find the latest version, and prepare responses — with source-cited answers and confirmation before anything is sent.</p>
-      <div class="ucb-hero__ctas">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
+    <div class="ucb-hero__grid">
+      <div class="ucb-hero__text allybi-reveal">
+        <span class="ucb-hero__eyebrow" data-i18n-key="ucb.hero_eyebrow">Para operações</span>
+        <h1 class="ucb-hero__h1" data-i18n-key="ucb.hero_h1">Para operações que não podem perder o contexto do cliente.</h1>
+        <p class="ucb-hero__sub ucb-hero__sub--desktop" data-i18n-key="ucb.hero_sub">Encontre a proposta aprovada, o plano certo e o contexto do follow-up. O Allybi mostra fonte, versão e revisão antes de qualquer envio.</p>
+        <p class="ucb-hero__sub ucb-hero__sub--mobile" data-i18n-key="ucb.hero_sub_mobile">Encontre a proposta certa e revise o follow-up antes de sair.</p>
+        <div class="ucb-hero__ctas">
+          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="ucb.cta_primary">Começar grátis por 30 dias</a>
+          <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="ucb.cta_secondary">Ver como funciona</a>
+        </div>
+        <p class="ucb-hero__micro" data-i18n-key="ucb.hero_micro">Nada sai sem confirmação. WhatsApp é handoff.</p>
+        <div class="ucb-hero__trust">
+          <span data-i18n-key="ucb.trust1">Propostas</span>
+          <span data-i18n-key="ucb.trust2">SOWs</span>
+          <span data-i18n-key="ucb.trust3">Planos de projeto</span>
+          <span data-i18n-key="ucb.trust4">Follow-ups</span>
+          <span data-i18n-key="ucb.trust5">Resposta com fonte</span>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- PRESSURE -->
-<section class="ucb-pressure allybi-section">
-  <div class="allybi-container">
-    <div class="ucb-pressure__header allybi-reveal">
-      <h2 data-i18n-key="business.pressure.title">Client follow-ups, proposal tracking, compliance checks.</h2>
-      <p data-i18n-key="business.pressure.subtitle">The bottleneck is not the decision. It is finding the right document, the latest version, and the right context to act on.</p>
-    </div>
-    <div class="ucb-pressure__grid allybi-stagger">
-      <div class="ucb-pressure__card allybi-reveal">
-        <div class="ucb-pressure__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3 data-i18n-key="business.pressure.card1_title">Client waiting for the follow-up</h3>
-        <p data-i18n-key="business.pressure.card1_desc">The client asked for the updated SOW two days ago. The file is somewhere between email threads, cloud folders, and three different versions.</p>
-      </div>
-      <div class="ucb-pressure__card allybi-reveal">
-        <div class="ucb-pressure__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <h3 data-i18n-key="business.pressure.card2_title">Proposal_final_v2_updated</h3>
-        <p data-i18n-key="business.pressure.card2_desc">Confusão de versão gasta tempo e destrói a confiança. Sending the wrong version to a client or partner is invisible until it causes damage.</p>
-      </div>
-      <div class="ucb-pressure__card allybi-reveal">
-        <div class="ucb-pressure__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <h3 data-i18n-key="business.pressure.card3_title">Compliance without the paper trail</h3>
-        <p data-i18n-key="business.pressure.card3_desc">When a compliance check lands, you need to trace back to the approved proposal and the decision trail. Scattered files make this harder than it should be.</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="ucb-hero__visual allybi-reveal">
+        <div class="hero-scene" id="ucbHeroScene" data-state="idle" role="img" data-i18n-aria-label="ucb.scene.aria" aria-label="O Allybi identifica o SOW mais recente, mostra a fonte e prepara o follow-up para revisão.">
+          <div class="hero-scene__workspace" aria-hidden="true">
+            <div class="hero-scene__source-strip" data-stage="1">
+              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14" aria-hidden="true"> Outlook</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14" aria-hidden="true"> OneDrive</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14" aria-hidden="true"> SharePoint</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14" aria-hidden="true"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
+            </div>
 
-<!-- FEATURE 1: SEARCH ACROSS PROPOSALS -->
-<section class="ucb-feature allybi-section">
-  <div class="allybi-container">
-    <div class="ucb-feature__split allybi-reveal">
-      <div class="ucb-feature__text">
-        <h2 data-i18n-key="business.feature1.title">Search across proposals and project plans.</h2>
-        <p data-i18n-key="business.feature1.desc">Ask "quais são as entregas no escopo aprovado?" and get the answer with a citation to the exact file and page. Search across all your uploaded documents in one query — proposals, project plans, meeting notes, budgets.</p>
-      </div>
-      <div class="ucb-feature__visual">
-        <div class="ucb-mock">
-          <div class="ucb-mock__bar"><span></span><span></span><span></span></div>
-          <div class="ucb-mock__body">
-            <div class="ucb-mock__q" data-i18n-key="business.mock1.query">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              "quais são as entregas no escopo aprovado?"
-            </div>
-            <div class="ucb-mock__answer">
-              <span class="ucb-mock__badge" data-i18n-key="business.mock1.badge">Answer with source</span>
-              <p data-i18n-key="business.mock1.answer">3 entregas totalizando <strong>R$185 mil</strong>: Fase 1 descoberta (R$45 mil), Fase 2 implementação (R$95 mil), Fase 3 treinamento (R$45 mil).</p>
-            </div>
-            <div class="ucb-mock__source" data-i18n-key="business.mock1.source">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Escopo_Cliente_Alfa_v2.docx — p. 3
+            <div class="hero-scene__body">
+              <div class="hero-scene__query" data-stage="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span data-i18n-key="ucb.scene.query">manda o SOW atualizado?</span>
+              </div>
+
+              <div class="hero-scene__versions" data-stage="3">
+                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
+                <ul class="hero-scene__v-list">
+                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
+                    <span class="hero-scene__v-name" data-i18n-key="ucb.scene.v1_name">Escopo_Cliente_Alfa_v1.docx</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="ucb.scene.v1_tag">versão anterior</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
+                    <span class="hero-scene__v-name" data-i18n-key="ucb.scene.v2_name">Escopo_Cliente_Alfa_revisado.docx</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="ucb.scene.v2_tag">fonte incerta</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
+                    <span class="hero-scene__v-name" data-i18n-key="ucb.scene.v3_name">Escopo_Cliente_Alfa_v2.docx</span>
+                    <span class="hero-scene__v-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span data-i18n-key="ucb.scene.v3_tag">mais recente</span>
+                    </span>
+                  </li>
+                </ul>
+                <p class="hero-scene__source-line">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span data-i18n-key="ucb.scene.source">Projetos / Cliente Alfa / Escopo · Mar 8</span>
+                </p>
+              </div>
+
+              <div class="hero-scene__review" data-stage="4">
+                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
+                <dl class="hero-scene__review-list">
+                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
+                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd data-i18n-key="ucb.scene.review_file">Escopo_Cliente_Alfa_v2.docx</dd></div>
+                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd data-i18n-key="ucb.scene.review_source">Projetos / Cliente Alfa</dd></div>
+                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="ucb.scene.review_channel">Outlook</dd></div>
+                </dl>
+              </div>
+
+              <div class="hero-scene__send" data-stage="5">
+                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="ucb.scene.send">Enviar via Outlook</button>
+                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12" aria-hidden="true"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
+              </div>
             </div>
           </div>
         </div>
@@ -186,13 +206,83 @@
   </div>
 </section>
 
-<!-- FEATURE 2: FIND THE LATEST VERSION -->
+<!-- ════════════════════════════════════════════════════════════
+     2. PAIN — O cliente espera. O contexto está espalhado.
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucb-pressure allybi-section">
+  <div class="allybi-container">
+    <div class="ucb-pressure__header allybi-reveal">
+      <h2 data-i18n-key="ucb.pain_title">O cliente espera. O contexto está espalhado.</h2>
+      <p data-i18n-key="ucb.pain_sub">O gargalo não é decidir. É encontrar documento, versão e contexto antes de responder.</p>
+    </div>
+    <div class="ucb-pressure__grid allybi-stagger">
+      <div class="ucb-pressure__card allybi-reveal">
+        <div class="ucb-pressure__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.pain_card1_title">Cliente esperando o follow-up</h3>
+        <p data-i18n-key="ucb.pain_card1_desc">O SOW atualizado está em algum lugar entre e-mail, pasta e anexo.</p>
+      </div>
+      <div class="ucb-pressure__card allybi-reveal">
+        <div class="ucb-pressure__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.pain_card2_title">Proposta_final_v2_atualizada</h3>
+        <p data-i18n-key="ucb.pain_card2_desc">Três arquivos parecem certos. Só um foi aprovado.</p>
+      </div>
+      <div class="ucb-pressure__card allybi-reveal">
+        <div class="ucb-pressure__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.pain_card3_title">Conformidade sem rastro</h3>
+        <p data-i18n-key="ucb.pain_card3_desc">Quando pedem o rastro de decisão, contexto espalhado vira retrabalho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     3. PROOF 1 — Encontre entregas no escopo aprovado
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucb-feature allybi-section">
+  <div class="allybi-container">
+    <div class="ucb-feature__split allybi-reveal">
+      <div class="ucb-feature__text">
+        <h2 data-i18n-key="ucb.proof1_title">Encontre entregas no escopo aprovado.</h2>
+        <p data-i18n-key="ucb.proof1_desc">Pergunte no chat e veja a resposta com arquivo, página e fonte.</p>
+      </div>
+      <div class="ucb-feature__visual">
+        <div class="ucb-mock">
+          <div class="ucb-mock__bar"><span></span><span></span><span></span></div>
+          <div class="ucb-mock__body">
+            <div class="ucb-mock__q">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span data-i18n-key="ucb.proof1_query">quais são as entregas no escopo aprovado?</span>
+            </div>
+            <div class="ucb-mock__answer">
+              <span class="ucb-mock__badge" data-i18n-key="ucb.proof1_badge">Resposta com fonte</span>
+              <p data-i18n-key="ucb.proof1_answer">3 entregas no escopo aprovado: diagnóstico, implementação e treinamento.</p>
+            </div>
+            <div class="ucb-mock__source">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span data-i18n-key="ucb.proof1_source">Escopo_Cliente_Alfa_v2.docx · p. 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     4. PROOF 2 — Confirme a versão mais recente
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucb-feature ucb-feature--alt allybi-section">
   <div class="allybi-container">
     <div class="ucb-feature__split ucb-feature__split--reverse allybi-reveal">
       <div class="ucb-feature__text">
-        <h2 data-i18n-key="business.feature2.title">Find the latest version.</h2>
-        <p data-i18n-key="business.feature2.desc">When you ask for a document, Allybi searches across all uploaded versions and identifies which one is the most recent. No more opening five folders to guess which "final" is actually final.</p>
+        <h2 data-i18n-key="ucb.proof2_title">Confirme a versão mais recente.</h2>
+        <p data-i18n-key="ucb.proof2_desc">O Allybi ajuda a identificar a versão atual antes de montar a resposta.</p>
       </div>
       <div class="ucb-feature__visual">
         <div class="ucb-mock">
@@ -201,19 +291,19 @@
             <div class="ucb-mock__versions">
               <div class="ucb-mock__version-item ucb-mock__version-item--old">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <span>Escopo_Cliente_Alfa_v1.docx</span>
-                <span class="ucb-mock__version-date">Jan 15</span>
+                <span data-i18n-key="ucb.proof2_v1">Escopo_Cliente_Alfa_v1.docx</span>
+                <span class="ucb-mock__version-date" data-i18n-key="ucb.proof2_v1_date">Jan 15</span>
               </div>
               <div class="ucb-mock__version-item ucb-mock__version-item--old">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <span>Escopo_Cliente_Alfa_revisado.docx</span>
-                <span class="ucb-mock__version-date">Feb 3</span>
+                <span data-i18n-key="ucb.proof2_v2">Escopo_Cliente_Alfa_revisado.docx</span>
+                <span class="ucb-mock__version-date" data-i18n-key="ucb.proof2_v2_date">Feb 3</span>
               </div>
               <div class="ucb-mock__version-item ucb-mock__version-item--latest">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <span>Escopo_Cliente_Alfa_v2.docx</span>
-                <span class="ucb-mock__version-badge" data-i18n-key="business.mock2.latest">Latest</span>
-                <span class="ucb-mock__version-date">Mar 8</span>
+                <span data-i18n-key="ucb.proof2_v3">Escopo_Cliente_Alfa_v2.docx</span>
+                <span class="ucb-mock__version-badge" data-i18n-key="ucb.proof2_latest">Mais recente</span>
+                <span class="ucb-mock__version-date" data-i18n-key="ucb.proof2_v3_date">Mar 8</span>
               </div>
             </div>
           </div>
@@ -223,66 +313,44 @@
   </div>
 </section>
 
-<!-- FEATURE 3: DRAFT RESPONSES -->
+<!-- ════════════════════════════════════════════════════════════
+     5. PROOF 3 — Monte follow-up com contexto real
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucb-feature allybi-section">
   <div class="allybi-container">
     <div class="ucb-feature__split allybi-reveal">
       <div class="ucb-feature__text">
-        <h2 data-i18n-key="business.feature3.title">Draft responses from your own context.</h2>
-        <p data-i18n-key="business.feature3.desc">Tell Allybi to draft a follow-up with the latest SOW attached. It composes the message source-cited from your documents — no fabricated content — and shows you exactly what will be sent before you confirm.</p>
-      </div>
-      <div class="ucb-feature__visual">
-        <div class="ucb-mock">
-          <div class="ucb-mock__bar"><span></span><span></span><span></span></div>
-          <div class="ucb-mock__body">
-            <div class="ucb-mock__draft">
-              <div class="ucb-mock__draft-field">
-                <span class="ucb-mock__draft-label" data-i18n-key="business.mock3.to">To</span>
-                <span class="ucb-mock__draft-value">cliente@empresa.com.br</span>
-              </div>
-              <div class="ucb-mock__draft-body" data-i18n-key="business.mock3.body">Olá, seguindo nossa conversa. Segue o escopo atualizado com o cronograma de entregas revisado conforme discutimos. Favor revisar a Seção 3 para os marcos atualizados.</div>
-              <div class="ucb-mock__draft-attachment">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7.5 1.5l-5 5a3.5 3.5 0 0 0 5 5l5-5a2 2 0 0 0-3-3l-5 5a.5.5 0 0 0 .7.7l4-4" stroke="currentColor" stroke-width="1"/></svg>
-                <span data-i18n-key="business.mock3.attachment">Escopo_Cliente_Alfa_v2.docx</span>
-                <span class="ucb-mock__draft-badge" data-i18n-key="business.mock3.badge">Latest</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURE 4: CONFIRMATION BEFORE SEND -->
-<section class="ucb-feature ucb-feature--alt allybi-section">
-  <div class="allybi-container">
-    <div class="ucb-feature__split ucb-feature__split--reverse allybi-reveal">
-      <div class="ucb-feature__text">
-        <h2 data-i18n-key="business.feature4.title">Confirmation before send.</h2>
-        <p data-i18n-key="business.feature4.desc">Whether it is an email via Outlook or a message handoff to WhatsApp, Allybi always shows you the content, the file, and the recipient before anything goes out. Nothing is sent without your explicit approval.</p>
+        <h2 data-i18n-key="ucb.proof3_title">Monte follow-up com contexto real.</h2>
+        <p data-i18n-key="ucb.proof3_desc">O Allybi monta a mensagem com arquivo, fonte e contexto para revisão. Você decide o que sai.</p>
       </div>
       <div class="ucb-feature__visual">
         <div class="ucb-mock">
           <div class="ucb-mock__bar"><span></span><span></span><span></span></div>
           <div class="ucb-mock__body">
             <div class="ucb-mock__confirm">
-              <div class="ucb-mock__confirm-label" data-i18n-key="business.mock4.confirm_label">Confirm before send</div>
+              <div class="ucb-mock__confirm-label" data-i18n-key="ucb.proof3_label">Revisar antes de enviar</div>
               <div class="ucb-mock__confirm-fields">
                 <div class="ucb-mock__confirm-field">
-                  <span class="ucb-mock__confirm-key" data-i18n-key="business.mock4.to">To</span>
-                  <span class="ucb-mock__confirm-value">cliente@empresa.com.br</span>
+                  <span class="ucb-mock__confirm-key" data-i18n-key="ucb.proof3_to_key">Para</span>
+                  <span class="ucb-mock__confirm-value" data-i18n-key="ucb.proof3_to_value">cliente@empresa.com.br</span>
                 </div>
                 <div class="ucb-mock__confirm-field">
-                  <span class="ucb-mock__confirm-key" data-i18n-key="business.mock4.attachment">Attachment</span>
-                  <span class="ucb-mock__confirm-value">Escopo_Cliente_Alfa_v2.docx</span>
+                  <span class="ucb-mock__confirm-key" data-i18n-key="ucb.proof3_msg_key">Mensagem</span>
+                  <span class="ucb-mock__confirm-value" data-i18n-key="ucb.proof3_msg_value">Segue o SOW atualizado com o cronograma revisado.</span>
                 </div>
                 <div class="ucb-mock__confirm-field">
-                  <span class="ucb-mock__confirm-key" data-i18n-key="business.mock4.via">Via</span>
-                  <span class="ucb-mock__confirm-value">Outlook</span>
+                  <span class="ucb-mock__confirm-key" data-i18n-key="ucb.proof3_file_key">Arquivo</span>
+                  <span class="ucb-mock__confirm-value" data-i18n-key="ucb.proof3_file_value">Escopo_Cliente_Alfa_v2.docx</span>
+                </div>
+                <div class="ucb-mock__confirm-field">
+                  <span class="ucb-mock__confirm-key" data-i18n-key="ucb.proof3_src_key">Fonte</span>
+                  <span class="ucb-mock__confirm-value" data-i18n-key="ucb.proof3_src_value">Projetos / Cliente Alfa / Escopo · p. 3</span>
+                </div>
+                <div class="ucb-mock__confirm-field">
+                  <span class="ucb-mock__confirm-key" data-i18n-key="ucb.proof3_channel_key">Canal</span>
+                  <span class="ucb-mock__confirm-value" data-i18n-key="ucb.proof3_channel_value">Outlook</span>
                 </div>
               </div>
-              <span class="ucb-mock__confirm-btn" data-i18n-key="business.mock4.btn">Confirm</span>
             </div>
           </div>
         </div>
@@ -291,16 +359,123 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- ════════════════════════════════════════════════════════════
+     6. PROOF 4 — Revise canal e destinatário antes de sair
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucb-feature ucb-feature--alt allybi-section">
+  <div class="allybi-container">
+    <div class="ucb-feature__split ucb-feature__split--reverse allybi-reveal">
+      <div class="ucb-feature__text">
+        <h2 data-i18n-key="ucb.proof4_title">Revise canal e destinatário antes de sair.</h2>
+        <p data-i18n-key="ucb.proof4_desc">E-mail pode sair pelo Outlook depois da confirmação. WhatsApp abre como handoff com a mensagem pronta.</p>
+      </div>
+      <div class="ucb-feature__visual">
+        <div class="ucb-mock">
+          <div class="ucb-mock__bar"><span></span><span></span><span></span></div>
+          <div class="ucb-mock__body">
+            <div class="ucb-mock__channels">
+              <div class="ucb-mock__channel ucb-mock__channel--primary">
+                <div class="ucb-mock__channel-head">
+                  <img src="assets/images/outlook-icon.svg" alt="" width="16" height="16" aria-hidden="true">
+                  <span class="ucb-mock__channel-name" data-i18n-key="ucb.proof4_outlook">Outlook</span>
+                  <span class="ucb-mock__channel-status" data-i18n-key="ucb.proof4_outlook_status">Envia após confirmação</span>
+                </div>
+                <div class="ucb-mock__channel-meta">
+                  <span data-i18n-key="ucb.proof4_outlook_meta">Para cliente@empresa.com.br · Escopo_Cliente_Alfa_v2.docx</span>
+                </div>
+              </div>
+              <div class="ucb-mock__channel ucb-mock__channel--handoff">
+                <div class="ucb-mock__channel-head">
+                  <img src="assets/images/whatsapp-icon.svg" alt="" width="16" height="16" aria-hidden="true">
+                  <span class="ucb-mock__channel-name" data-i18n-key="ucb.proof4_wa">WhatsApp</span>
+                  <span class="ucb-mock__channel-status ucb-mock__channel-status--alt" data-i18n-key="ucb.proof4_wa_status">Handoff com mensagem pronta</span>
+                </div>
+                <div class="ucb-mock__channel-meta">
+                  <span data-i18n-key="ucb.proof4_wa_meta">Abre o WhatsApp com a mensagem revisada. Você envia.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     7. SECURITY — Controle para propostas, SOWs e follow-ups
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucb-security allybi-section">
+  <div class="allybi-container">
+    <div class="ucb-security__header allybi-reveal">
+      <h2 data-i18n-key="ucb.sec_title">Controle para propostas, SOWs e follow-ups.</h2>
+      <p data-i18n-key="ucb.sec_sub">Documentos não treinam modelos. Respostas mostram fonte. Nada sai sem confirmação.</p>
+    </div>
+    <div class="ucb-security__grid allybi-stagger">
+      <div class="ucb-security__card allybi-reveal">
+        <div class="ucb-security__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.sec_c1">Documentos não treinam modelos</h3>
+      </div>
+      <div class="ucb-security__card allybi-reveal">
+        <div class="ucb-security__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.sec_c2">Fonte visível</h3>
+      </div>
+      <div class="ucb-security__card allybi-reveal">
+        <div class="ucb-security__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.sec_c3">Permissões por fonte</h3>
+      </div>
+      <div class="ucb-security__card allybi-reveal">
+        <div class="ucb-security__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.sec_c4">Nada sai sem confirmação</h3>
+      </div>
+      <div class="ucb-security__card allybi-reveal">
+        <div class="ucb-security__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3 data-i18n-key="ucb.sec_c5">WhatsApp sem caixa sincronizada</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     8. DIAGNOSTIC BRIDGE
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucb-diag allybi-section">
+  <div class="allybi-container">
+    <div class="ucb-diag__inner allybi-reveal">
+      <h2 data-i18n-key="ucb.diag_title">Onde seu fluxo perde contexto?</h2>
+      <p data-i18n-key="ucb.diag_sub">Mapeie em menos de 1 minuto se o gargalo está no pedido, busca, versão, fonte, confirmação ou envio.</p>
+      <div class="ucb-diag__ctas">
+        <a href="diagnostico.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="ucb.diag_cta">Mapear fluxo do time</a>
+        <a href="tempo.html" class="ucb-diag__link" data-i18n-key="ucb.diag_link">Calcular meu tempo</a>
+      </div>
+      <p class="ucb-diag__micro" data-i18n-key="ucb.diag_micro">Nenhum documento é pedido. Resultado na hora.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     9. FINAL CTA
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucb-cta">
   <div class="allybi-container">
     <div class="ucb-cta__inner allybi-reveal">
-      <h2 data-i18n-key="business.cta.title">Your projects deserve more clarity.</h2>
-      <p data-i18n-key="business.cta.subtitle">See how Allybi fits the way your operations team already works.</p>
+      <h2 data-i18n-key="ucb.final_title">Teste com uma proposta ou SOW real.</h2>
+      <p data-i18n-key="ucb.final_sub">Pergunte no chat, veja a fonte e revise antes de enviar.</p>
       <div class="ucb-cta__buttons">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
-        <a href="contact.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="home.final_cta.cta2">Contact sales</a>
+        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="ucb.final_cta1">Começar grátis por 30 dias</a>
+        <a href="integrations.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="ucb.final_cta2">Ver integrações</a>
       </div>
+      <p class="ucb-cta__micro" data-i18n-key="ucb.final_micro">30 dias grátis. Nada sai sem confirmação.</p>
     </div>
   </div>
 </section>
@@ -363,7 +538,7 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      
+
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
@@ -400,5 +575,6 @@
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script src="hero-sequence.js" defer></script>
 </body>
 </html>

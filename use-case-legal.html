@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Allybi para advogados — contratos, minutas e anexos com fonte</title>
-  <meta name="description" content="For lawyers who cannot afford the wrong version. Search contracts, compare drafts, find clauses, and send with confirmation.">
+  <title>Allybi para advogados | Contratos, minutas e anexos com fonte</title>
+  <meta name="description" content="Pesquise contratos, compare minutas, encontre cláusulas e revise a versão antes do envio. Allybi mostra fonte, ajuda a confirmar contexto e envia e-mail via Outlook com confirmação.">
+  <link rel="canonical" href="https://allybi.com.br/use-case-legal.html">
+  <link rel="alternate" hreflang="en" href="https://allybi.co/use-case-legal.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/use-case-legal.html">
+  <link rel="alternate" hreflang="x-default" href="https://allybi.co/use-case-legal.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Allybi para advogados | Contratos, minutas e anexos com fonte">
+  <meta property="og:description" content="Pesquise contratos, compare minutas, encontre cláusulas e revise a versão antes do envio. Allybi mostra fonte, ajuda a confirmar contexto e envia e-mail via Outlook com confirmação.">
+  <meta property="og:url" content="https://allybi.com.br/use-case-legal.html">
+  <meta property="og:site_name" content="Allybi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Allybi para advogados | Contratos, minutas e anexos com fonte">
+  <meta name="twitter:description" content="Pesquise contratos, compare minutas, encontre cláusulas e revise a versão antes do envio. Allybi mostra fonte, ajuda a confirmar contexto e envia e-mail via Outlook com confirmação.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,8 +27,10 @@
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="pages/home.css">
   <link rel="stylesheet" href="pages/use-case-legal.css">
   <link rel="stylesheet" href="allybi-responsive.css">
+  <noscript><style>.allybi-reveal,.hiw-reveal,.integ-reveal,.sec-reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 
@@ -102,56 +116,82 @@
 
 <!-- HERO -->
 <section class="ucl-hero">
-  <div class="allybi-container allybi-reveal">
-    <span class="ucl-hero__eyebrow" data-i18n-key="legal.hero_eyebrow">For lawyers</span>
-    <h1 data-i18n-key="legal.hero_h1">For lawyers who cannot afford the wrong version.</h1>
-    <p data-i18n-key="legal.hero_support">Search contracts, compare drafts, find the exact clause, and prepare the right response — with source citations and confirmation before anything is sent.</p>
-    <div class="ucl-hero__ctas">
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
-      <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hero.cta_secondary">See how it works</a>
-    </div>
-  </div>
-</section>
-
-<!-- PRESSURE MOMENTS -->
-<section class="ucl-pressure">
   <div class="allybi-container">
-    <div class="ucl-pressure__grid allybi-stagger">
-      <div class="ucl-pressure__card allybi-reveal">
-        <h3 data-i18n-key="legal.pressure1_title">Partner asks what changed</h3>
-        <p data-i18n-key="legal.pressure1_desc">You need the answer in seconds. Not after 20 minutes comparing two PDFs manually.</p>
+    <div class="ucl-hero__grid">
+      <div class="ucl-hero__text allybi-reveal">
+        <span class="ucl-hero__eyebrow" data-i18n-key="ucl.hero_eyebrow">Para advogados</span>
+        <h1 data-i18n-key="ucl.hero_h1">Para advogados que não podem enviar a versão errada.</h1>
+        <p class="ucl-hero__sub" data-i18n-key="ucl.hero_sub">Pesquise contratos, compare minutas e encontre a cláusula exata. O Allybi mostra a fonte, ajuda a confirmar a versão e leva o envio para revisão.</p>
+        <div class="ucl-hero__ctas">
+          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="ucl.cta_primary">Começar grátis por 30 dias</a>
+          <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="ucl.cta_secondary">Ver como funciona</a>
+        </div>
+        <p class="ucl-hero__micro" data-i18n-key="ucl.hero_micro">Nada sai sem confirmação. WhatsApp é handoff.</p>
+        <div class="ucl-hero__trust">
+          <span data-i18n-key="ucl.trust1">Contratos e minutas</span>
+          <span data-i18n-key="ucl.trust2">Comparação de versões</span>
+          <span data-i18n-key="ucl.trust3">Resposta com fonte</span>
+          <span data-i18n-key="ucl.trust4">E-mail via Outlook</span>
+          <span data-i18n-key="ucl.trust5">WhatsApp handoff</span>
+        </div>
       </div>
-      <div class="ucl-pressure__card allybi-reveal">
-        <h3 data-i18n-key="legal.pressure2_title">Client asks for the latest draft</h3>
-        <p data-i18n-key="legal.pressure2_desc">It must be the right one. One outdated contract sent to opposing counsel costs trust that takes months to rebuild.</p>
-      </div>
-      <div class="ucl-pressure__card allybi-reveal">
-        <h3 data-i18n-key="legal.pressure3_title">Clause buried across versions</h3>
-        <p data-i18n-key="legal.pressure3_desc">The non-compete clause exists in five different drafts. Finding the latest version shouldn't be a research project.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- FEATURE 1: Compare clauses -->
-<section class="ucl-feature">
-  <div class="allybi-container">
-    <div class="ucl-feature__grid allybi-reveal">
-      <div class="ucl-feature__text">
-        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f1_eyebrow">Version comparison</div>
-        <h3 data-i18n-key="legal.f1_title">Compare clause language across versions.</h3>
-        <p data-i18n-key="legal.f1_desc">Upload two versions and Allybi highlights exactly what changed — clause by clause. Compare indemnification language, liability caps, or termination provisions without manual redlining.</p>
-      </div>
-      <div class="ucl-feature__visual">
-        <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
-        <div class="ucl-mock__body">
-          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Seção 8.1 — Indenização</div>
-          <div style="font-size:13px;line-height:1.7;color:var(--allybi-text-primary);">
-            O Fornecedor deverá indenizar o Cliente contra todas as reclamações decorrentes de <span class="ucl-compare__removed">atos negligentes</span><span class="ucl-compare__added">quaisquer atos ou omissões</span> relacionados aos Serviços, até o limite de <span class="ucl-compare__removed">R$1M</span><span class="ucl-compare__added">R$3M</span>.
-          </div>
-          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--allybi-text-muted);margin-top:12px;padding-top:10px;border-top:1px solid var(--allybi-border-subtle);">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Draft v2 vs v3 — Seção 8.1
+      <div class="ucl-hero__visual allybi-reveal">
+        <div class="hero-scene" id="uclHeroScene" data-state="idle" role="img" data-i18n-aria-label="ucl.hero_scene_aria" aria-label="O Allybi compara minutas, mostra a cláusula com fonte confirmada e prepara o envio da versão certa para revisão.">
+          <div class="hero-scene__workspace" aria-hidden="true">
+            <div class="hero-scene__source-strip" data-stage="1">
+              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14" aria-hidden="true"> Outlook</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14" aria-hidden="true"> OneDrive</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14" aria-hidden="true"> SharePoint</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14" aria-hidden="true"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
+            </div>
+
+            <div class="hero-scene__body">
+              <div class="hero-scene__query" data-stage="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span data-i18n-key="ucl.scene.query">o que mudou na cláusula 8.1?</span>
+              </div>
+
+              <div class="hero-scene__versions" data-stage="3">
+                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
+                <ul class="hero-scene__v-list">
+                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
+                    <span class="hero-scene__v-name">Anderson_MSA_v2.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="ucl.scene.v1_tag">versão anterior</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
+                    <span class="hero-scene__v-name">Anderson_MSA_v3.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="ucl.scene.v2_tag">fonte incerta</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
+                    <span class="hero-scene__v-name">Anderson_MSA_v4.pdf</span>
+                    <span class="hero-scene__v-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span data-i18n-key="ucl.scene.v3_tag">fonte confirmada</span>
+                    </span>
+                  </li>
+                </ul>
+                <p class="hero-scene__source-line">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span data-i18n-key="ucl.scene.source">SharePoint / Anderson / Contratos / 14 mar</span>
+                </p>
+              </div>
+
+              <div class="hero-scene__review" data-stage="4">
+                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
+                <dl class="hero-scene__review-list">
+                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>anderson@cliente.com.br</dd></div>
+                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd>Anderson_MSA_v4.pdf</dd></div>
+                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd>SharePoint</dd></div>
+                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="hero.scene.channel_value">E-mail via Outlook</dd></div>
+                </dl>
+              </div>
+
+              <div class="hero-scene__send" data-stage="5">
+                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="hero.scene.send">Enviar via Outlook</button>
+                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12" aria-hidden="true"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -159,28 +199,78 @@
   </div>
 </section>
 
-<!-- FEATURE 2: Search across matter -->
+<!-- PAIN MOMENTS -->
+<section class="ucl-pressure">
+  <div class="allybi-container">
+    <div class="ucl-pressure__header allybi-reveal">
+      <h2 data-i18n-key="ucl.pain_title">A versão errada não parece grave até alguém abrir.</h2>
+      <p data-i18n-key="ucl.pain_sub">O trabalho jurídico não termina quando o arquivo aparece. Ainda falta saber se é a minuta certa, a cláusula certa e se pode sair.</p>
+    </div>
+    <div class="ucl-pressure__grid allybi-stagger">
+      <div class="ucl-pressure__card allybi-reveal">
+        <h3 data-i18n-key="ucl.pain1_title">Sócio pergunta o que mudou</h3>
+        <p data-i18n-key="ucl.pain1_desc">Você precisa responder em segundos, não depois de comparar dois PDFs manualmente.</p>
+      </div>
+      <div class="ucl-pressure__card allybi-reveal">
+        <h3 data-i18n-key="ucl.pain2_title">Cliente pede a última minuta</h3>
+        <p data-i18n-key="ucl.pain2_desc">A versão errada custa confiança antes mesmo de virar erro jurídico.</p>
+      </div>
+      <div class="ucl-pressure__card allybi-reveal">
+        <h3 data-i18n-key="ucl.pain3_title">Cláusula enterrada entre versões</h3>
+        <p data-i18n-key="ucl.pain3_desc">A cláusula existe. O problema é saber em qual minuta ela está e se ainda vale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF 1: Compare drafts -->
+<section class="ucl-feature">
+  <div class="allybi-container">
+    <div class="ucl-feature__grid allybi-reveal">
+      <div class="ucl-feature__text">
+        <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f1_eyebrow">Comparação de versões</div>
+        <h3 data-i18n-key="ucl.f1_title">Compare minutas sem abrir tudo de novo.</h3>
+        <p data-i18n-key="ucl.f1_desc">Carregue versões e pergunte o que mudou. O Allybi mostra a alteração com fonte, arquivo e seção.</p>
+      </div>
+      <div class="ucl-feature__visual">
+        <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
+        <div class="ucl-mock__body">
+          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Seção 8.1 · Indenização</div>
+          <div style="font-size:13px;line-height:1.7;color:var(--allybi-text-primary);">
+            O Fornecedor deverá indenizar o Cliente contra todas as reclamações decorrentes de <span class="ucl-compare__removed">atos negligentes</span><span class="ucl-compare__added">quaisquer atos ou omissões</span> relacionados aos Serviços, até o limite de <span class="ucl-compare__removed">R$1M</span><span class="ucl-compare__added">R$3M</span>.
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--allybi-text-muted);margin-top:12px;padding-top:10px;border-top:1px solid var(--allybi-border-subtle);">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Anderson_MSA_v3 vs v4 · Seção 8.1
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF 2: Find the clause -->
 <section class="ucl-feature">
   <div class="allybi-container">
     <div class="ucl-feature__grid ucl-feature__grid--reverse allybi-reveal">
       <div class="ucl-feature__text">
-        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f2_eyebrow">Cross-source search</div>
-        <h3 data-i18n-key="legal.f2_title">Search across contracts and matter files.</h3>
-        <p data-i18n-key="legal.f2_desc">Ask in natural language — "What are the termination provisions?" — and get source-cited answers with exact citations. Every result links to the source document, page, and passage.</p>
+        <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f2_eyebrow">Resposta com fonte</div>
+        <h3 data-i18n-key="ucl.f2_title">Encontre a cláusula com fonte visível.</h3>
+        <p data-i18n-key="ucl.f2_desc">Pergunte em linguagem normal e veja o documento, página e trecho de origem.</p>
       </div>
       <div class="ucl-feature__visual">
         <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
         <div class="ucl-mock__body">
           <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--allybi-text-muted);padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;margin-bottom:14px;">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Quais são os termos de não concorrência no contrato Anderson?
+            <span data-i18n-key="ucl.f2_q">Quais são os termos de não concorrência no contrato Anderson?</span>
           </div>
-          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--allybi-trust);margin-bottom:6px;display:flex;align-items:center;gap:4px;"><span style="width:5px;height:5px;border-radius:50%;background:var(--allybi-trust)"></span> Resposta com fonte</div>
-          <div style="font-size:13px;line-height:1.6;color:var(--allybi-text-primary);margin-bottom:8px;">
-            Seção 9.3: O contratado concorda em não realizar atividades concorrentes em um raio de <strong>80 km</strong> por <strong>24 meses</strong>.
+          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--allybi-trust);margin-bottom:6px;display:flex;align-items:center;gap:4px;"><span style="width:5px;height:5px;border-radius:50%;background:var(--allybi-trust)"></span> <span data-i18n-key="ucl.f2_label">Resposta com fonte</span></div>
+          <div style="font-size:13px;line-height:1.6;color:var(--allybi-text-primary);margin-bottom:8px;" data-i18n-key="ucl.f2_a">
+            Seção 9.3: não concorrência por 24 meses em raio de 80 km.
           </div>
-          <div style="font-size:11px;color:var(--allybi-text-muted);padding-top:8px;border-top:1px solid var(--allybi-border-subtle);">
-            Anderson_MSA_v4.pdf — p. 12, Seção 9.3
+          <div style="font-size:11px;color:var(--allybi-text-muted);padding-top:8px;border-top:1px solid var(--allybi-border-subtle);" data-i18n-key="ucl.f2_source">
+            Anderson_MSA_v4.pdf · p. 12 · Seção 9.3
           </div>
         </div>
       </div>
@@ -188,14 +278,14 @@
   </div>
 </section>
 
-<!-- FEATURE 3: Send with confirmation -->
+<!-- PROOF 3: Review before sending via Outlook -->
 <section class="ucl-feature">
   <div class="allybi-container">
     <div class="ucl-feature__grid allybi-reveal">
       <div class="ucl-feature__text">
-        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f3_eyebrow">Confirmation before send</div>
-        <h3 data-i18n-key="legal.f3_title">Prepare the right send with confirmation.</h3>
-        <p data-i18n-key="legal.f3_desc">When you attach a file or prepare a response, Allybi shows you exactly which version you're sending — file name, date, and recipient — and asks for explicit confirmation.</p>
+        <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f3_eyebrow">E-mail via Outlook</div>
+        <h3 data-i18n-key="ucl.f3_title">Revise antes de enviar pelo Outlook.</h3>
+        <p data-i18n-key="ucl.f3_desc">O Allybi mostra versão, destinatário, mensagem, fonte e canal. O e-mail só sai depois da sua confirmação.</p>
       </div>
       <div class="ucl-feature__visual">
         <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
@@ -203,14 +293,14 @@
           <div class="ucl-confirm">
             <div class="ucl-confirm__label" data-i18n-key="ucl.mock_confirm_label">Revisar antes de enviar</div>
             <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:12px;">
-              <strong style="color:var(--allybi-text-strongest)">Para:</strong> opposing.counsel@firm.com<br>
-              <strong style="color:var(--allybi-text-strongest)">Arquivo:</strong> Anderson_MSA_v4_final.pdf<br>
-              <strong style="color:var(--allybi-text-strongest)">Versão:</strong> v4 — Última modificação Mar 18<br>
-              <strong style="color:var(--allybi-text-strongest)">Via:</strong> Outlook
+              <strong style="color:var(--allybi-text-strongest)" data-i18n-key="ucl.mock_to">Para:</strong> anderson@cliente.com.br<br>
+              <strong style="color:var(--allybi-text-strongest)" data-i18n-key="ucl.mock_file">Arquivo:</strong> Anderson_MSA_v4.pdf<br>
+              <strong style="color:var(--allybi-text-strongest)" data-i18n-key="ucl.mock_source">Fonte:</strong> SharePoint / Anderson / Contratos<br>
+              <strong style="color:var(--allybi-text-strongest)" data-i18n-key="ucl.mock_channel">Canal:</strong> <span data-i18n-key="ucl.mock_channel_value">E-mail via Outlook</span>
             </div>
             <div class="ucl-confirm__row">
-              <span style="font-size:12px;color:var(--allybi-text-muted);" data-i18n-key="ucl.mock_cancel">Cancel</span>
-              <span class="ucl-confirm__btn" data-i18n-key="ucl.mock_confirm_btn">Confirm &amp; Send</span>
+              <span style="font-size:12px;color:var(--allybi-text-muted);" data-i18n-key="ucl.mock_cancel">Cancelar</span>
+              <span class="ucl-confirm__btn" data-i18n-key="ucl.mock_confirm_btn">Enviar via Outlook</span>
             </div>
           </div>
         </div>
@@ -219,25 +309,25 @@
   </div>
 </section>
 
-<!-- FEATURE 4: WhatsApp handoff -->
+<!-- PROOF 4: WhatsApp handoff -->
 <section class="ucl-feature">
   <div class="allybi-container">
     <div class="ucl-feature__grid ucl-feature__grid--reverse allybi-reveal">
       <div class="ucl-feature__text">
-        <div class="ucl-feature__eyebrow" data-i18n-key="legal.f4_eyebrow">WhatsApp handoff</div>
-        <h3 data-i18n-key="legal.f4_title">Prepare a WhatsApp message after Allybi drafts it.</h3>
-        <p data-i18n-key="legal.f4_desc">Allybi helps you prepare a message for the right contact — you review the content and recipient, then it opens WhatsApp with everything ready. No synced inbox. Full review before handoff.</p>
+        <div class="ucl-feature__eyebrow" data-i18n-key="ucl.f4_eyebrow">WhatsApp handoff</div>
+        <h3 data-i18n-key="ucl.f4_title">WhatsApp handoff sem caixa sincronizada.</h3>
+        <p data-i18n-key="ucl.f4_desc">O Allybi abre o WhatsApp com a mensagem pronta. Você revisa e envia no WhatsApp. O Allybi não lê nem pesquisa sua caixa.</p>
       </div>
       <div class="ucl-feature__visual">
         <div class="ucl-mock__chrome"><span></span><span></span><span></span></div>
         <div class="ucl-mock__body">
-          <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;">WhatsApp handoff</div>
-          <div style="font-size:13px;color:var(--allybi-text-secondary);padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;margin-bottom:12px;line-height:1.6;">
-            "Dr. Santos, segue a versão atualizada do SPA com os termos de indenização revisados conforme nossa conversa. Favor revisar a Seção 8.1."
+          <div style="font-size:12px;font-weight:600;color:var(--allybi-text-strongest);margin-bottom:12px;" data-i18n-key="ucl.f4_mock_title">WhatsApp handoff</div>
+          <div style="font-size:13px;color:var(--allybi-text-secondary);padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;margin-bottom:12px;line-height:1.6;" data-i18n-key="ucl.f4_mock_msg">
+            "Dr. Anderson, segue a versão v4 do MSA com a Seção 8.1 revisada. Confirme o recebimento quando puder."
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--allybi-trust-subtle);border-radius:8px;border:1px solid var(--allybi-trust-muted);">
-            <span style="font-size:12px;font-weight:500;color:var(--allybi-trust);">Contato: Dr. Santos</span>
-            <span style="font-size:11px;font-weight:600;padding:5px 12px;background:var(--allybi-trust);color:#fff;border-radius:6px;">Revisar e abrir WhatsApp</span>
+            <span style="font-size:12px;font-weight:500;color:var(--allybi-trust);" data-i18n-key="ucl.f4_mock_contact">Contato: Dr. Anderson</span>
+            <span style="font-size:11px;font-weight:600;padding:5px 12px;background:var(--allybi-trust);color:#fff;border-radius:6px;" data-i18n-key="ucl.f4_mock_btn">Revisar e abrir WhatsApp</span>
           </div>
         </div>
       </div>
@@ -249,36 +339,59 @@
 <section class="ucl-security">
   <div class="allybi-container">
     <div class="ucl-security__header allybi-reveal">
-      <h2 data-i18n-key="legal.security_title">Security for sensitive legal work.</h2>
-      <p data-i18n-key="legal.security_sub">Your documents are protected from the moment they enter Allybi.</p>
+      <h2 data-i18n-key="ucl.security_title">Controle para trabalho jurídico sensível.</h2>
+      <p data-i18n-key="ucl.security_sub">Documentos não treinam modelos. Respostas mostram fonte. Nada sai sem confirmação.</p>
     </div>
     <div class="ucl-security__grid allybi-reveal allybi-stagger">
       <div class="ucl-security__point">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <div><strong data-i18n-key="legal.sec1_title">Encrypted</strong><span data-i18n-key="legal.sec1_desc">All data encrypted in transit and at rest.</span></div>
-      </div>
-      <div class="ucl-security__point">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <div><strong data-i18n-key="legal.sec2_title">No model training</strong><span data-i18n-key="legal.sec2_desc">Documents never train AI models. Guaranteed.<!-- TODO: verify legal --></span></div>
+        <div><strong data-i18n-key="ucl.sec1_title">Documentos não treinam modelos</strong></div>
       </div>
       <div class="ucl-security__point">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        <div><strong data-i18n-key="legal.sec3_title">Isolated workspaces</strong><span data-i18n-key="legal.sec3_desc">Each matter is a sealed environment.</span></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div><strong data-i18n-key="ucl.sec2_title">Fonte visível</strong></div>
+      </div>
+      <div class="ucl-security__point">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+        <div><strong data-i18n-key="ucl.sec3_title">Permissões por fonte</strong></div>
       </div>
       <div class="ucl-security__point">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <div><strong data-i18n-key="legal.sec4_title">Explicit confirmation</strong><span data-i18n-key="legal.sec4_desc">Nothing leaves without your review and approval.</span></div>
+        <div><strong data-i18n-key="ucl.sec4_title">Nada sai sem confirmação</strong></div>
+      </div>
+      <div class="ucl-security__point">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <div><strong data-i18n-key="ucl.sec5_title">WhatsApp sem caixa sincronizada</strong></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- DIAGNOSTIC BRIDGE -->
+<section class="ucl-bridge">
+  <div class="allybi-container">
+    <div class="ucl-bridge__inner allybi-reveal">
+      <h2 data-i18n-key="ucl.bridge_title">Onde seu fluxo jurídico perde certeza?</h2>
+      <p data-i18n-key="ucl.bridge_sub">Mapeie em menos de 1 minuto se o gargalo está na busca, versão, fonte, confirmação ou envio.</p>
+      <div class="ucl-bridge__ctas">
+        <a href="diagnostico.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="ucl.bridge_cta_primary">Mapear fluxo do time</a>
+        <a href="tempo.html" class="ucl-bridge__link" data-i18n-key="ucl.bridge_cta_secondary">Calcular meu tempo</a>
+      </div>
+      <p class="ucl-bridge__micro" data-i18n-key="ucl.bridge_micro">Nenhum documento é pedido. Resultado na hora.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
 <section class="ucl-cta">
   <div class="allybi-container allybi-reveal">
-    <h2 data-i18n-key="legal.cta_title">See what clarity looks like for your practice.</h2>
-    <p data-i18n-key="legal.cta_sub">Bring your contracts, drafts, and matter files into one private workspace.</p>
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
+    <h2 data-i18n-key="ucl.cta_title">Teste com uma minuta real.</h2>
+    <p data-i18n-key="ucl.cta_sub">Pergunte no chat, veja a fonte e revise antes de enviar.</p>
+    <div class="ucl-cta__ctas">
+      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="ucl.cta_primary">Começar grátis por 30 dias</a>
+      <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="ucl.cta_secondary_final">Ver integrações</a>
+    </div>
+    <p class="ucl-cta__micro" data-i18n-key="ucl.cta_micro">30 dias grátis. Nada sai sem confirmação.</p>
   </div>
 </section>
 
@@ -340,7 +453,7 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      
+
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
@@ -368,5 +481,6 @@
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script src="hero-sequence.js" defer></script>
 </body>
 </html>

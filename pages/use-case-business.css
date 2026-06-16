@@ -4,14 +4,20 @@
 
 /* ---------- HERO ---------- */
 .ucb-hero {
-  padding-top: 160px;
-  padding-bottom: var(--allybi-space-20);
-  text-align: center;
+  padding: 120px 0 80px;
 }
 
-.ucb-hero__inner {
-  max-width: 800px;
+.ucb-hero__grid {
+  display: grid;
+  grid-template-columns: 52fr 48fr;
+  gap: clamp(32px, 3.5vw, 56px);
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.ucb-hero__text {
+  text-align: left;
 }
 
 .ucb-hero__eyebrow {
@@ -26,27 +32,69 @@
 }
 
 .ucb-hero__h1 {
-  font-size: clamp(32px, 5vw, 52px);
-  line-height: 1.08;
+  font-size: clamp(32px, 4.2vw, 56px);
+  line-height: 1.05;
   font-weight: 700;
   color: var(--allybi-text-strongest);
-  letter-spacing: -0.025em;
-  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  max-width: 620px;
+  text-wrap: balance;
 }
 
 .ucb-hero__sub {
-  font-size: clamp(17px, 1.4vw, 20px);
-  line-height: 1.5;
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.6;
   color: var(--allybi-text-secondary);
-  max-width: 640px;
-  margin: 0 auto;
+  max-width: 540px;
+  margin: 0 0 24px;
+}
+
+.ucb-hero__sub--mobile {
+  display: none;
 }
 
 .ucb-hero__ctas {
   display: flex;
-  justify-content: center;
   gap: 12px;
-  margin-top: 32px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.ucb-hero__micro {
+  font-size: 13px;
+  color: var(--allybi-text-muted);
+  margin: 0 0 20px;
+  max-width: 540px;
+  line-height: 1.55;
+}
+
+.ucb-hero__trust {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ucb-hero__trust span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--allybi-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ucb-hero__trust span::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--allybi-text-muted);
+  opacity: 0.6;
+}
+
+.ucb-hero__visual {
+  position: relative;
 }
 
 /* ---------- PRESSURE ---------- */
@@ -372,6 +420,169 @@
   border-radius: 8px;
 }
 
+/* ---------- CHANNELS (Proof 4) ---------- */
+.ucb-mock__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ucb-mock__channel {
+  border: 1px solid var(--allybi-border-default);
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: var(--allybi-bg-surface);
+}
+
+.ucb-mock__channel--primary {
+  border-color: var(--allybi-trust, #059669);
+  background: var(--allybi-trust-subtle, rgba(5,150,105,0.05));
+}
+
+.ucb-mock__channel-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.ucb-mock__channel-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--allybi-text-strongest);
+}
+
+.ucb-mock__channel-status {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--allybi-trust, #059669);
+}
+
+.ucb-mock__channel-status--alt {
+  color: var(--allybi-text-muted);
+}
+
+.ucb-mock__channel-meta {
+  font-size: 12px;
+  color: var(--allybi-text-secondary);
+  line-height: 1.5;
+}
+
+/* ---------- SECURITY ---------- */
+.ucb-security {
+  padding: var(--allybi-section-py, 96px) 0;
+}
+
+.ucb-security__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--allybi-space-16, 64px);
+}
+
+.ucb-security__header h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--allybi-text-strongest);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.ucb-security__header p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--allybi-text-secondary);
+}
+
+.ucb-security__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.ucb-security__card {
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ucb-security__icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--allybi-accent-subtle, rgba(37,99,235,0.06));
+  border-radius: 10px;
+  color: var(--allybi-accent);
+}
+
+.ucb-security__card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--allybi-text-strongest);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* ---------- DIAGNOSTIC BRIDGE ---------- */
+.ucb-diag {
+  padding: var(--allybi-section-py, 96px) 0;
+  background: var(--allybi-bg-alt-1);
+}
+
+.ucb-diag__inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ucb-diag__inner h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--allybi-text-strongest);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.ucb-diag__inner p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--allybi-text-secondary);
+  margin-bottom: 28px;
+}
+
+.ucb-diag__ctas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.ucb-diag__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--allybi-text-strongest);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ucb-diag__micro {
+  font-size: 13px;
+  color: var(--allybi-text-muted);
+  margin: 0;
+}
+
 /* ---------- FINAL CTA ---------- */
 .ucb-cta {
   padding: var(--allybi-section-py, 96px) 0;
@@ -404,10 +615,41 @@
   display: flex;
   justify-content: center;
   gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ucb-cta__micro {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
 }
 
 /* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+  .ucb-security__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 960px) {
+  .ucb-hero {
+    padding: 96px 0 56px;
+  }
+
+  .ucb-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .ucb-hero__text {
+    text-align: left;
+  }
+
+  .ucb-hero__h1 {
+    font-size: clamp(28px, 6vw, 40px);
+    max-width: none;
+  }
+
   .ucb-pressure__grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -427,30 +669,66 @@
     margin: 0 auto;
   }
 
-  .ucb-hero {
-    padding-top: 120px;
+  .ucb-security__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
   .ucb-hero {
-    padding-top: 110px;
-    padding-bottom: var(--allybi-space-12, 48px);
+    padding: 88px 0 48px;
+  }
+
+  .ucb-hero__sub--desktop {
+    display: none;
+  }
+
+  .ucb-hero__sub--mobile {
+    display: block;
+    font-size: 16px;
+    line-height: 1.55;
   }
 
   .ucb-hero__ctas {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 12px;
   }
 
-  .ucb-hero__ctas .allybi-btn {
+  .ucb-hero__ctas .allybi-btn--primary {
     width: 100%;
-    max-width: 320px;
-    min-height: 44px;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .ucb-hero__ctas .allybi-btn--secondary {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--allybi-text-strongest);
+    align-self: flex-start;
+    min-height: 32px;
+  }
+
+  .ucb-hero__micro {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .ucb-hero__trust {
+    gap: 10px 16px;
+  }
+
+  .ucb-hero__trust span {
+    font-size: 11px;
   }
 
   .ucb-pressure,
   .ucb-feature,
+  .ucb-security,
+  .ucb-diag,
   .ucb-cta {
     padding: var(--allybi-section-py-mobile, 64px) 0;
   }
@@ -466,6 +744,17 @@
     min-height: 44px;
   }
 
+  .ucb-diag__ctas {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ucb-diag__ctas .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+  }
+
   .ucb-mock {
     max-width: 100%;
   }
@@ -473,11 +762,27 @@
   .ucb-pressure__card {
     padding: 24px;
   }
+
+  .ucb-security__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ucb-security__card {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .ucb-security__card h3 {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 390px) {
   .ucb-hero {
-    padding-top: 100px;
+    padding: 80px 0 40px;
   }
 
   .ucb-pressure__card {

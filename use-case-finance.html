@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Allybi para financeiro — o número certo, do arquivo certo</title>
-  <meta name="description" content="Search across financial documents, compare versions, and prepare responses with source from your actual data — with source citations and confirmation before send.">
+  <title>Allybi para financeiro | Decks, modelos e números com fonte</title>
+  <meta name="description" content="Encontre o deck, o modelo e o número certo antes da reunião. Allybi mostra fonte, compara versões e leva a resposta para revisão antes do envio.">
+  <link rel="canonical" href="https://allybi.com.br/use-case-finance.html">
+  <link rel="alternate" hreflang="en" href="https://allybi.co/use-case-finance.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/use-case-finance.html">
+  <link rel="alternate" hreflang="x-default" href="https://allybi.co/use-case-finance.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Allybi for Finance — Find the right deck, model, or metric">
-  <meta property="og:description" content="Search across financial documents, compare versions, and prepare responses with source from your actual data.">
-  <meta property="og:url" content="https://allybi.co/use-case-finance.html">
+  <meta property="og:title" content="Allybi para financeiro | Decks, modelos e números com fonte">
+  <meta property="og:description" content="Encontre o deck, o modelo e o número certo antes da reunião. Allybi mostra fonte, compara versões e leva a resposta para revisão antes do envio.">
+  <meta property="og:url" content="https://allybi.com.br/use-case-finance.html">
   <meta property="og:site_name" content="Allybi">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Allybi for Finance — Find the right deck, model, or metric">
-  <meta name="twitter:description" content="Search across financial documents, compare versions, and prepare responses with source from your actual data.">
+  <meta name="twitter:title" content="Allybi para financeiro | Decks, modelos e números com fonte">
+  <meta name="twitter:description" content="Encontre o deck, o modelo e o número certo antes da reunião. Allybi mostra fonte, compara versões e leva a resposta para revisão antes do envio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,8 +27,14 @@
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="pages/home.css">
   <link rel="stylesheet" href="pages/use-case-finance.css">
   <link rel="stylesheet" href="allybi-responsive.css">
+  <noscript>
+    <style>
+      .allybi-reveal, .ucf-reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -108,76 +118,154 @@
 
 <main>
 
-<!-- HERO -->
+<!-- ════════════════════════════════════════════════════════════
+     1. HERO (2-col, hero-scene reused)
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucf-hero allybi-section">
   <div class="allybi-container">
-    <div class="ucf-hero__inner allybi-reveal">
-      <span class="ucf-hero__eyebrow" data-i18n-key="finance.hero.eyebrow">For finance</span>
-      <h1 class="ucf-hero__h1" data-i18n-key="finance.hero.title">Find the right deck, model, or metric — without digging.</h1>
-      <p class="ucf-hero__sub" data-i18n-key="finance.hero.subtitle">Search across financial documents, compare versions, and prepare responses with source from your actual data — with source citations and confirmation before send.</p>
-      <div class="ucf-hero__ctas">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
+    <div class="ucf-hero__grid">
+      <div class="ucf-hero__text allybi-reveal">
+        <span class="ucf-hero__eyebrow" data-i18n-key="ucf.hero_eyebrow">Para financeiro</span>
+        <h1 class="ucf-hero__h1" data-i18n-key="ucf.hero_h1">Para equipes financeiras que não podem apresentar o número errado.</h1>
+        <p class="ucf-hero__sub ucf-hero__sub--desktop" data-i18n-key="ucf.hero_sub">Encontre o deck, o modelo e a métrica certa antes da reunião. O Allybi mostra a fonte, ajuda a comparar versões e leva a resposta para revisão antes do envio.</p>
+        <p class="ucf-hero__sub ucf-hero__sub--mobile" data-i18n-key="ucf.hero_sub_mobile">Encontre o número certo, com fonte, antes da reunião.</p>
+        <div class="ucf-hero__ctas">
+          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="ucf.cta_start_free">Começar grátis por 30 dias</a>
+          <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="ucf.cta_see_how">Ver como funciona</a>
+        </div>
+        <p class="ucf-hero__micro" data-i18n-key="ucf.hero_micro">30 dias grátis. Nada sai sem confirmação.</p>
+        <div class="ucf-hero__trust">
+          <span data-i18n-key="ucf.trust1">Decks</span>
+          <span data-i18n-key="ucf.trust2">Modelos</span>
+          <span data-i18n-key="ucf.trust3">KPIs</span>
+          <span data-i18n-key="ucf.trust4">Comparação de versões</span>
+          <span data-i18n-key="ucf.trust5">Resposta com fonte</span>
+        </div>
+      </div>
+
+      <div class="ucf-hero__visual allybi-reveal">
+        <div class="hero-scene" id="ucfHeroScene" data-state="idle" role="img" data-i18n-aria-label="ucf.scene.aria" aria-label="O Allybi encontra o deck correto, mostra a fonte e prepara a resposta para revisão antes do envio.">
+          <div class="hero-scene__workspace" aria-hidden="true">
+            <div class="hero-scene__source-strip" data-stage="1">
+              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14" aria-hidden="true"> Outlook</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14" aria-hidden="true"> OneDrive</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14" aria-hidden="true"> SharePoint</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14" aria-hidden="true"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
+            </div>
+
+            <div class="hero-scene__body">
+              <div class="hero-scene__query" data-stage="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span data-i18n-key="ucf.scene.query">qual foi o ARR do Q4 no último deck?</span>
+              </div>
+
+              <div class="hero-scene__versions" data-stage="3">
+                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
+                <ul class="hero-scene__v-list">
+                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
+                    <span class="hero-scene__v-name" data-i18n-key="ucf.scene.v1_name">Deck_Conselho_Q3.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="ucf.scene.v1_tag">versão anterior</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
+                    <span class="hero-scene__v-name" data-i18n-key="ucf.scene.v2_name">Q4_v2_draft.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="ucf.scene.v2_tag">fonte incerta</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
+                    <span class="hero-scene__v-name" data-i18n-key="ucf.scene.v3_name">Deck_Conselho_Q4.pdf</span>
+                    <span class="hero-scene__v-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span data-i18n-key="ucf.scene.v3_tag">fonte confirmada</span>
+                    </span>
+                  </li>
+                </ul>
+                <p class="hero-scene__source-line">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span data-i18n-key="ucf.scene.source">Deck_Conselho_Q4.pdf · slide 7</span>
+                </p>
+              </div>
+
+              <div class="hero-scene__review" data-stage="4">
+                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
+                <dl class="hero-scene__review-list">
+                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>conselho@empresa.com.br</dd></div>
+                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd data-i18n-key="ucf.scene.review_file">Deck_Conselho_Q4.pdf</dd></div>
+                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd data-i18n-key="ucf.scene.review_source">Deck_Conselho_Q4.pdf · slide 7</dd></div>
+                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="ucf.scene.review_channel">Outlook</dd></div>
+                </dl>
+              </div>
+
+              <div class="hero-scene__send" data-stage="5">
+                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="ucf.scene.send">Enviar via Outlook</button>
+                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12" aria-hidden="true"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRESSURE -->
+<!-- ════════════════════════════════════════════════════════════
+     2. PAIN
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucf-pressure allybi-section">
   <div class="allybi-container">
     <div class="ucf-pressure__header allybi-reveal">
-      <h2 data-i18n-key="finance.pressure.title">Before board meetings, quarterly reviews, investor updates.</h2>
-      <p data-i18n-key="finance.pressure.subtitle">The pressure is not the analysis. It is finding the right file, the right number, and the right version before the window closes.</p>
+      <h2 data-i18n-key="ucf.pain_title">O número errado só aparece quando alguém abre o arquivo.</h2>
+      <p data-i18n-key="ucf.pain_sub">Antes de uma reunião, o risco não é só achar o deck. É saber se o número, a versão e a fonte estão certos.</p>
     </div>
     <div class="ucf-pressure__grid allybi-stagger">
       <div class="ucf-pressure__card allybi-reveal">
         <div class="ucf-pressure__icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
         </div>
-        <h3 data-i18n-key="finance.pressure.card1_title">Three versions of the deck</h3>
-        <p data-i18n-key="finance.pressure.card1_desc">Deck_Conselho_Q4_v2, Deck_Conselho_Q4_final, Deck_Conselho_Q4_final_updated. Which one has the right ARR figure?</p>
+        <h3 data-i18n-key="ucf.pain_card1_title">Três versões do deck</h3>
+        <p data-i18n-key="ucf.pain_card1_desc">Q4_v2, Q4_final, Q4_atualizado. Só uma tem o ARR certo.</p>
       </div>
       <div class="ucf-pressure__card allybi-reveal">
         <div class="ucf-pressure__icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <h3 data-i18n-key="finance.pressure.card2_title">Numbers buried across files</h3>
-        <p data-i18n-key="finance.pressure.card2_desc">Revenue in the model, ARR in the deck, burn rate in the board memo. The CFO needs one number, from the right source, now.</p>
+        <h3 data-i18n-key="ucf.pain_card2_title">Números espalhados entre arquivos</h3>
+        <p data-i18n-key="ucf.pain_card2_desc">Receita no modelo, ARR no deck, burn rate no memo. A fonte precisa aparecer junto.</p>
       </div>
       <div class="ucf-pressure__card allybi-reveal">
         <div class="ucf-pressure__icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </div>
-        <h3 data-i18n-key="finance.pressure.card3_title">Wrong attachment sent</h3>
-        <p data-i18n-key="finance.pressure.card3_desc">Enviar o modelo do trimestre passado para o conselho destrói a confiança instantaneamente. The mistake is invisible until it is too late.</p>
+        <h3 data-i18n-key="ucf.pain_card3_title">Anexo errado para o conselho</h3>
+        <p data-i18n-key="ucf.pain_card3_desc">O erro parece invisível até alguém abrir o arquivo.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURE 1: FIND NUMBERS ACROSS DOCUMENTS -->
+<!-- ════════════════════════════════════════════════════════════
+     3. PROOF 1 — Find with source
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucf-feature allybi-section">
   <div class="allybi-container">
     <div class="ucf-feature__split allybi-reveal">
       <div class="ucf-feature__text">
-        <h2 data-i18n-key="finance.feature1.title">Find numbers across documents.</h2>
-        <p data-i18n-key="finance.feature1.desc">Ask "What was Q4 ARR in the latest board deck?" and get the exact figure with a citation to the source file and slide. Revenue figures, metrics, KPIs — all searchable across your uploaded documents, with references you can verify.</p>
+        <h2 data-i18n-key="ucf.proof1_title">Encontre o número com origem visível.</h2>
+        <p data-i18n-key="ucf.proof1_desc">Pergunte sobre métricas, KPIs ou números de um deck. O Allybi mostra arquivo, slide ou trecho de origem.</p>
       </div>
       <div class="ucf-feature__visual">
         <div class="ucf-mock">
           <div class="ucf-mock__bar"><span></span><span></span><span></span></div>
           <div class="ucf-mock__body">
-            <div class="ucf-mock__q" data-i18n-key="finance.mock1.query">
+            <div class="ucf-mock__q">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              "What was Q4 ARR in the latest board deck?"
+              <span data-i18n-key="ucf.proof1_query">Qual foi o ARR do Q4 no último deck do conselho?</span>
             </div>
             <div class="ucf-mock__answer">
-              <span class="ucf-mock__badge" data-i18n-key="finance.mock1.badge">Answer with source</span>
-              <p data-i18n-key="finance.mock1.answer">Q4 ARR reached <strong>R$4,2M</strong>, up 38% from Q3.</p>
+              <span class="ucf-mock__badge" data-i18n-key="ucf.proof1_badge">Resposta com fonte</span>
+              <p data-i18n-key="ucf.proof1_answer">ARR Q4 atingiu <strong>R$4,2M</strong>, alta de 38% vs Q3.</p>
             </div>
-            <div class="ucf-mock__source" data-i18n-key="finance.mock1.source">
+            <div class="ucf-mock__source">
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Deck_Conselho_Q4.pdf — slide 7
+              <span data-i18n-key="ucf.proof1_source">Deck_Conselho_Q4.pdf · slide 7</span>
             </div>
           </div>
         </div>
@@ -186,34 +274,32 @@
   </div>
 </section>
 
-<!-- FEATURE 2: COMPARE ACROSS QUARTERLY VERSIONS -->
+<!-- ════════════════════════════════════════════════════════════
+     4. PROOF 2 — Compare versions
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucf-feature ucf-feature--alt allybi-section">
   <div class="allybi-container">
     <div class="ucf-feature__split ucf-feature__split--reverse allybi-reveal">
       <div class="ucf-feature__text">
-        <h2 data-i18n-key="finance.feature2.title">Compare across quarterly versions.</h2>
-        <p data-i18n-key="finance.feature2.desc">Upload multiple versions and ask what changed. Allybi will show you the differences between Q3 and Q4 figures with exact source references for both files — so you can verify before presenting.</p>
+        <h2 data-i18n-key="ucf.proof2_title">Compare versões trimestrais.</h2>
+        <p data-i18n-key="ucf.proof2_desc">Veja o que mudou entre Q3 e Q4 antes de apresentar.</p>
       </div>
       <div class="ucf-feature__visual">
         <div class="ucf-mock">
           <div class="ucf-mock__bar"><span></span><span></span><span></span></div>
           <div class="ucf-mock__body">
-            <div class="ucf-mock__q" data-i18n-key="finance.mock2.query">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              "Compare ARR between Q3 and Q4 board decks"
-            </div>
             <div class="ucf-mock__compare">
               <div class="ucf-mock__compare-row">
                 <span class="ucf-mock__compare-label">Q3</span>
                 <span class="ucf-mock__compare-val ucf-mock__compare-val--old">R$3,05M</span>
-                <span class="ucf-mock__compare-src" data-i18n-key="finance.mock2.src_q3">Deck_Conselho_Q3.pdf — slide 7</span>
+                <span class="ucf-mock__compare-src" data-i18n-key="ucf.proof2_src_q3">Deck_Conselho_Q3.pdf · slide 7</span>
               </div>
               <div class="ucf-mock__compare-row">
                 <span class="ucf-mock__compare-label">Q4</span>
                 <span class="ucf-mock__compare-val ucf-mock__compare-val--new">R$4,2M</span>
-                <span class="ucf-mock__compare-src" data-i18n-key="finance.mock2.src_q4">Deck_Conselho_Q4.pdf — slide 7</span>
+                <span class="ucf-mock__compare-src" data-i18n-key="ucf.proof2_src_q4">Deck_Conselho_Q4.pdf · slide 7</span>
               </div>
-              <div class="ucf-mock__compare-delta">+38% trimestre contra trimestre</div>
+              <div class="ucf-mock__compare-delta" data-i18n-key="ucf.proof2_delta">+38% trimestre contra trimestre</div>
             </div>
           </div>
         </div>
@@ -222,35 +308,41 @@
   </div>
 </section>
 
-<!-- FEATURE 3: PREPARE THE RESPONSE -->
+<!-- ════════════════════════════════════════════════════════════
+     5. PROOF 3 — Prepare for review
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucf-feature allybi-section">
   <div class="allybi-container">
     <div class="ucf-feature__split allybi-reveal">
       <div class="ucf-feature__text">
-        <h2 data-i18n-key="finance.feature3.title">Prepare the response with confirmation.</h2>
-        <p data-i18n-key="finance.feature3.desc">Draft an email to the board with the latest deck attached. Allybi finds the correct version, composes the message, and shows you exactly which file, recipient, and content will be sent — nothing goes out until you confirm.</p>
+        <h2 data-i18n-key="ucf.proof3_title">Monte a resposta para revisão.</h2>
+        <p data-i18n-key="ucf.proof3_desc">O Allybi encontra o deck correto, monta a mensagem e mostra destinatário, anexo, fonte e canal antes do envio.</p>
       </div>
       <div class="ucf-feature__visual">
         <div class="ucf-mock">
           <div class="ucf-mock__bar"><span></span><span></span><span></span></div>
           <div class="ucf-mock__body">
             <div class="ucf-mock__confirm">
-              <div class="ucf-mock__confirm-label" data-i18n-key="finance.mock3.confirm_label">Confirm before send</div>
+              <div class="ucf-mock__confirm-label" data-i18n-key="ucf.proof3_label">Revisar antes de enviar</div>
               <div class="ucf-mock__confirm-fields">
                 <div class="ucf-mock__confirm-field">
-                  <span class="ucf-mock__confirm-key" data-i18n-key="finance.mock3.to">To</span>
+                  <span class="ucf-mock__confirm-key" data-i18n-key="ucf.proof3_to">Para</span>
                   <span class="ucf-mock__confirm-value">conselho@empresa.com.br</span>
                 </div>
                 <div class="ucf-mock__confirm-field">
-                  <span class="ucf-mock__confirm-key" data-i18n-key="finance.mock3.attachment">Attachment</span>
+                  <span class="ucf-mock__confirm-key" data-i18n-key="ucf.proof3_attachment">Anexo</span>
                   <span class="ucf-mock__confirm-value">Deck_Conselho_Q4.pdf</span>
                 </div>
                 <div class="ucf-mock__confirm-field">
-                  <span class="ucf-mock__confirm-key" data-i18n-key="finance.mock3.via">Via</span>
+                  <span class="ucf-mock__confirm-key" data-i18n-key="ucf.proof3_source">Fonte</span>
+                  <span class="ucf-mock__confirm-value" data-i18n-key="ucf.proof3_source_value">Deck_Conselho_Q4.pdf · slide 7</span>
+                </div>
+                <div class="ucf-mock__confirm-field">
+                  <span class="ucf-mock__confirm-key" data-i18n-key="ucf.proof3_channel">Canal</span>
                   <span class="ucf-mock__confirm-value">Outlook</span>
                 </div>
               </div>
-              <span class="ucf-mock__confirm-btn" data-i18n-key="finance.mock3.btn">Confirm</span>
+              <span class="ucf-mock__confirm-btn" data-i18n-key="ucf.proof3_btn">Confirmar</span>
             </div>
           </div>
         </div>
@@ -259,45 +351,108 @@
   </div>
 </section>
 
-<!-- SECURITY -->
-<section class="ucf-security allybi-section">
+<!-- ════════════════════════════════════════════════════════════
+     6. PROOF 4 — Share without losing control
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucf-feature ucf-feature--alt allybi-section">
   <div class="allybi-container">
-    <div class="ucf-security__inner allybi-reveal">
-      <h2 data-i18n-key="finance.security.title">Private by design. Com fonte por padrão.</h2>
-      <p class="ucf-security__subtitle" data-i18n-key="finance.security.subtitle">Your financial data never trains models. Every answer cites the source. Nothing is sent without your approval.</p>
-      <div class="ucf-security__grid allybi-stagger">
-        <div class="ucf-security__point allybi-reveal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          <div><strong data-i18n-key="finance.security.p1_title">Encrypted at rest and in transit</strong><span data-i18n-key="finance.security.p1_desc">Financial models and board decks stay fully encrypted.</span></div>
-        </div>
-        <div class="ucf-security__point allybi-reveal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <div><strong data-i18n-key="finance.security.p2_title">No model training</strong><span data-i18n-key="finance.security.p2_desc">Your data never trains AI models. Contractually guaranteed.<!-- TODO: verify legal --></span></div>
-        </div>
-        <div class="ucf-security__point allybi-reveal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          <div><strong data-i18n-key="finance.security.p3_title">Isolated workspaces</strong><span data-i18n-key="finance.security.p3_desc">Each project is isolated. No data leakage between workspaces.</span></div>
-        </div>
-        <div class="ucf-security__point allybi-reveal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <div><strong data-i18n-key="finance.security.p4_title">Confirmation before every send</strong><span data-i18n-key="finance.security.p4_desc">You review file, version, and recipient before anything leaves.</span></div>
+    <div class="ucf-feature__split ucf-feature__split--reverse allybi-reveal">
+      <div class="ucf-feature__text">
+        <h2 data-i18n-key="ucf.proof4_title">Compartilhe sem perder controle.</h2>
+        <p data-i18n-key="ucf.proof4_desc">E-mail pode sair via Outlook depois da confirmação. Para WhatsApp, o Allybi abre handoff com a mensagem pronta.</p>
+      </div>
+      <div class="ucf-feature__visual">
+        <div class="ucf-mock">
+          <div class="ucf-mock__bar"><span></span><span></span><span></span></div>
+          <div class="ucf-mock__body">
+            <div class="ucf-mock__channels">
+              <div class="ucf-mock__channel">
+                <div class="ucf-mock__channel-icon"><img src="assets/images/outlook-icon.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="ucf-mock__channel-body">
+                  <strong data-i18n-key="ucf.proof4_ch1_title">Outlook</strong>
+                  <span data-i18n-key="ucf.proof4_ch1_desc">Envio direto após a confirmação.</span>
+                </div>
+              </div>
+              <div class="ucf-mock__channel">
+                <div class="ucf-mock__channel-icon"><img src="assets/images/whatsapp-icon.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="ucf-mock__channel-body">
+                  <strong data-i18n-key="ucf.proof4_ch2_title">WhatsApp handoff</strong>
+                  <span data-i18n-key="ucf.proof4_ch2_desc">Mensagem pronta. Você revisa e envia no app.</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <a href="security-overview.html" class="allybi-btn allybi-btn--secondary-inverse ucf-security__cta allybi-reveal" data-i18n-key="finance.security.cta">Learn more about security</a>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- ════════════════════════════════════════════════════════════
+     7. SECURITY (5 cards)
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucf-security allybi-section">
+  <div class="allybi-container">
+    <div class="ucf-security__inner allybi-reveal">
+      <h2 data-i18n-key="ucf.security_title">Controle para dados financeiros sensíveis.</h2>
+      <p class="ucf-security__subtitle" data-i18n-key="ucf.security_sub">Documentos, perguntas e respostas não treinam modelos. Cada resposta mostra de onde veio. Nada sai sem confirmação.</p>
+      <div class="ucf-security__grid allybi-stagger">
+        <div class="ucf-security__point allybi-reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div><strong data-i18n-key="ucf.security_p1_title">Documentos não treinam modelos</strong><span data-i18n-key="ucf.security_p1_desc">Arquivos, perguntas e respostas ficam fora de qualquer treinamento.</span></div>
+        </div>
+        <div class="ucf-security__point allybi-reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <div><strong data-i18n-key="ucf.security_p2_title">Fonte visível</strong><span data-i18n-key="ucf.security_p2_desc">Cada resposta mostra arquivo, slide ou trecho de origem.</span></div>
+        </div>
+        <div class="ucf-security__point allybi-reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div><strong data-i18n-key="ucf.security_p3_title">Permissões por fonte</strong><span data-i18n-key="ucf.security_p3_desc">O Allybi respeita o que cada pessoa pode ver em cada fonte conectada.</span></div>
+        </div>
+        <div class="ucf-security__point allybi-reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div><strong data-i18n-key="ucf.security_p4_title">Nada sai sem confirmação</strong><span data-i18n-key="ucf.security_p4_desc">Você revisa destinatário, anexo, fonte e canal antes de cada envio.</span></div>
+        </div>
+        <div class="ucf-security__point allybi-reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <div><strong data-i18n-key="ucf.security_p5_title">WhatsApp handoff</strong><span data-i18n-key="ucf.security_p5_desc">O Allybi não envia pelo WhatsApp. Abre o app com a mensagem pronta para você revisar.</span></div>
+        </div>
+      </div>
+      <a href="security-overview.html" class="allybi-btn allybi-btn--secondary-inverse ucf-security__cta allybi-reveal" data-i18n-key="ucf.security_cta">Ver visão geral de segurança</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     8. DIAGNOSTIC BRIDGE
+     ════════════════════════════════════════════════════════════ -->
+<section class="ucf-bridge">
+  <div class="allybi-container">
+    <div class="ucf-bridge__inner allybi-reveal">
+      <h2 data-i18n-key="ucf.bridge_title">Onde seu time perde certeza antes da reunião?</h2>
+      <p data-i18n-key="ucf.bridge_sub">Mapeie em menos de 1 minuto se o gargalo está no deck, número, versão, fonte, confirmação ou envio.</p>
+      <div class="ucf-bridge__ctas">
+        <a href="diagnostico.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="ucf.bridge_cta_primary">Mapear fluxo do time</a>
+        <a href="tempo.html" class="ucf-bridge__link" data-i18n-key="ucf.bridge_cta_secondary">Calcular meu tempo</a>
+      </div>
+      <p class="ucf-bridge__micro" data-i18n-key="ucf.bridge_micro">Nenhum documento é pedido. Resultado na hora.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     9. FINAL CTA
+     ════════════════════════════════════════════════════════════ -->
 <section class="ucf-cta">
   <div class="allybi-container">
     <div class="ucf-cta__inner allybi-reveal">
-      <h2 data-i18n-key="finance.cta.title">Your financial documents deserve more clarity.</h2>
-      <p data-i18n-key="finance.cta.subtitle">See how Allybi fits the way your finance team already works.</p>
+      <h2 data-i18n-key="ucf.cta_title">Teste com um deck ou modelo real.</h2>
+      <p data-i18n-key="ucf.cta_sub">Pergunte no chat, veja a fonte e revise antes de enviar.</p>
       <div class="ucf-cta__buttons">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="hero.cta_primary">Start free for 30 days</a>
-        <a href="contact.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="home.final_cta.cta2">Contact sales</a>
+        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="ucf.cta_primary">Começar grátis por 30 dias</a>
+        <a href="integrations.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="ucf.cta_secondary">Ver integrações</a>
       </div>
+      <p class="ucf-cta__micro" data-i18n-key="ucf.cta_micro">30 dias grátis. Nada sai sem confirmação.</p>
     </div>
   </div>
 </section>
@@ -360,7 +515,7 @@
     <div class="footer-mobile-links">
       <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
       <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      
+
       <a href="about.html" data-i18n-key="footer.about">About</a>
       <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
       <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
@@ -397,5 +552,6 @@
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script src="hero-sequence.js" defer></script>
 </body>
 </html>

@@ -2,21 +2,27 @@
    Allybi — Finance Use Case (pages/use-case-finance.css)
    ========================================================================== */
 
-/* ---------- HERO ---------- */
+/* ---------- HERO (2-col, hero-scene reused) ---------- */
 .ucf-hero {
-  padding-top: 160px;
-  padding-bottom: var(--allybi-space-20);
-  text-align: center;
+  padding: 120px 0 80px;
 }
 
-.ucf-hero__inner {
-  max-width: 800px;
+.ucf-hero__grid {
+  display: grid;
+  grid-template-columns: 52fr 48fr;
+  gap: clamp(32px, 3.5vw, 56px);
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.ucf-hero__text {
+  text-align: left;
 }
 
 .ucf-hero__eyebrow {
   display: inline-block;
-  font-size: var(--allybi-hero-eyebrow-size, 13px);
+  font-size: 13px;
   font-weight: 600;
   line-height: 1;
   color: var(--allybi-accent);
@@ -26,27 +32,69 @@
 }
 
 .ucf-hero__h1 {
-  font-size: clamp(32px, 5vw, 52px);
-  line-height: 1.08;
+  font-size: clamp(32px, 4.2vw, 56px);
+  line-height: 1.05;
   font-weight: 700;
   color: var(--allybi-text-strongest);
-  letter-spacing: -0.025em;
-  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  max-width: 620px;
+  text-wrap: balance;
 }
 
 .ucf-hero__sub {
-  font-size: clamp(17px, 1.4vw, 20px);
-  line-height: 1.5;
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.6;
   color: var(--allybi-text-secondary);
-  max-width: 640px;
-  margin: 0 auto;
+  max-width: 540px;
+  margin: 0 0 28px;
+}
+
+.ucf-hero__sub--mobile {
+  display: none;
 }
 
 .ucf-hero__ctas {
   display: flex;
-  justify-content: center;
   gap: 12px;
-  margin-top: 32px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.ucf-hero__micro {
+  font-size: 13px;
+  color: var(--allybi-text-muted);
+  margin: 0 0 20px;
+  max-width: 540px;
+  line-height: 1.55;
+}
+
+.ucf-hero__trust {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ucf-hero__trust span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--allybi-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ucf-hero__trust span::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--allybi-text-muted);
+  opacity: 0.6;
+}
+
+.ucf-hero__visual {
+  position: relative;
 }
 
 /* ---------- PRESSURE ---------- */
@@ -332,6 +380,53 @@
   border-radius: 8px;
 }
 
+/* ---------- CHANNELS MOCK (Proof 4) ---------- */
+.ucf-mock__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ucf-mock__channel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--allybi-border-default);
+  border-radius: 10px;
+  background: var(--allybi-bg-alt-1);
+}
+
+.ucf-mock__channel-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--allybi-bg-surface);
+  border: 1px solid var(--allybi-border-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ucf-mock__channel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ucf-mock__channel-body strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--allybi-text-strongest);
+}
+
+.ucf-mock__channel-body span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--allybi-text-secondary);
+}
+
 /* ---------- SECURITY ---------- */
 .ucf-security {
   padding: var(--allybi-section-py, 96px) 0;
@@ -362,9 +457,10 @@
 
 .ucf-security__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px 48px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 40px;
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .ucf-security__point {
@@ -396,6 +492,63 @@
 
 .ucf-security__cta {
   margin: 8px auto 0;
+}
+
+/* ---------- DIAGNOSTIC BRIDGE ---------- */
+.ucf-bridge {
+  padding: clamp(72px, 9vh, 112px) 0;
+  background: var(--allybi-bg-alt-1);
+  border-top: 1px solid var(--allybi-border-default);
+  border-bottom: 1px solid var(--allybi-border-default);
+}
+
+.ucf-bridge__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ucf-bridge__inner h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--allybi-text-strongest);
+  margin: 0 0 12px;
+}
+
+.ucf-bridge__inner > p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--allybi-text-secondary);
+  margin: 0 0 28px;
+}
+
+.ucf-bridge__ctas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.ucf-bridge__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--allybi-text-strongest);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ucf-bridge__link:hover {
+  color: var(--allybi-accent);
+}
+
+.ucf-bridge__micro {
+  font-size: 13px;
+  color: var(--allybi-text-muted);
+  margin: 0;
 }
 
 /* ---------- FINAL CTA ---------- */
@@ -431,6 +584,13 @@
   display: flex;
   justify-content: center;
   gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ucf-cta__micro {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -457,32 +617,77 @@
   .ucf-security__grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  .ucf-hero {
-    padding-top: 120px;
-  }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .ucf-hero {
-    padding-top: 110px;
-    padding-bottom: var(--allybi-space-12, 48px);
+    padding: 88px 0 48px;
+  }
+
+  .ucf-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ucf-hero__text {
+    text-align: left;
+  }
+
+  .ucf-hero__h1 {
+    font-size: clamp(28px, 7vw, 38px);
+    margin-bottom: 18px;
+  }
+
+  .ucf-hero__sub--desktop {
+    display: none;
+  }
+
+  .ucf-hero__sub--mobile {
+    display: block;
+    margin-bottom: 22px;
   }
 
   .ucf-hero__ctas {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 10px;
   }
 
-  .ucf-hero__ctas .allybi-btn {
+  .ucf-hero__ctas .allybi-btn--primary {
     width: 100%;
-    max-width: 320px;
-    min-height: 44px;
+    justify-content: center;
+    min-height: 48px;
   }
 
+  .ucf-hero__ctas .allybi-btn--secondary {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--allybi-text-strongest);
+    align-self: flex-start;
+  }
+
+  .ucf-hero__micro {
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .ucf-hero__trust {
+    gap: 10px 16px;
+  }
+
+  .ucf-hero__trust span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 640px) {
   .ucf-pressure,
   .ucf-feature,
   .ucf-security,
+  .ucf-bridge,
   .ucf-cta {
     padding: var(--allybi-section-py-mobile, 64px) 0;
   }
@@ -497,6 +702,17 @@
   }
 
   .ucf-cta__buttons .allybi-btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+  }
+
+  .ucf-bridge__ctas {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ucf-bridge__ctas .allybi-btn {
     width: 100%;
     max-width: 320px;
     min-height: 44px;
@@ -517,7 +733,7 @@
 
 @media (max-width: 390px) {
   .ucf-hero {
-    padding-top: 100px;
+    padding: 80px 0 40px;
   }
 
   .ucf-pressure__card {
