@@ -2,17 +2,24 @@
 // 5 acts: source pills → question → 3 versions appear (cinza, amber, green) → review panel → send.
 // Plays once when the scene enters viewport, then loops with a long pause.
 // Respects prefers-reduced-motion (shows final state immediately, no animation).
+//
+// Targets every .hero-scene[data-state] in the page — supports multiple hero
+// mockups (e.g., one per page) without coupling to a specific id.
 (function () {
   'use strict';
 
-  var scene = document.getElementById('heroScene');
-  if (!scene) return;
+  var scenes = document.querySelectorAll('.hero-scene[data-state]');
+  if (!scenes.length) return;
 
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) {
-    scene.setAttribute('data-state', 's5');
+    scenes.forEach(function (s) { s.setAttribute('data-state', 's5'); });
     return;
   }
+
+  scenes.forEach(function (scene) { initScene(scene); });
+
+  function initScene(scene) {
 
   // Storyboard: each entry sets a state then waits N ms before the next.
   var STORYBOARD = [
@@ -79,4 +86,5 @@
       loop();
     }
   });
+  }
 })();

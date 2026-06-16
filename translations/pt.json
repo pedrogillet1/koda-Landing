@@ -640,9 +640,9 @@
     "submit": "Enviar mensagem"
   },
   "hiw": {
-    "hero_eyebrow": "Produto",
+    "hero_eyebrow": "Como funciona",
     "hero_h1": "Pergunte, confirme e envie sem abrir tudo de novo.",
-    "hero_support": "Conecte fontes, suba arquivos e pergunte no chat. O Allybi responde com fonte, monta a mensagem e envia e-mails via Outlook depois da sua confirmação. WhatsApp abre como handoff.",
+    "hero_support": "Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar.",
     "cta_integrations": "Ver integrações",
     "s1_title": "Conecte ou suba",
     "s1_desc": "Conecte Outlook, OneDrive e SharePoint. Ou suba PDFs, DOCX, XLSX, PPTX e outros arquivos.",
@@ -767,10 +767,10 @@
     "mock_confirm_label": "Revisar antes de enviar",
     "mock_confirm_details": "<strong style=\"color:var(--allybi-text-strongest)\">Para:</strong> cliente@empresa.com<br><strong style=\"color:var(--allybi-text-strongest)\">Arquivo:</strong> SPA_Draft_v3.pdf (v3)<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook",
     "strip_upload": "Subir arquivo",
-    "hero_pricing": "30 dias grátis. Depois R$170/mês. Cancele quando quiser.",
-    "hero_trust1": "Respostas com fonte",
-    "hero_trust2": "Nada enviado sem confirmação",
-    "hero_trust3": "WhatsApp sem caixa sincronizada",
+    "hero_pricing": "30 dias grátis. Nada sai sem confirmação.",
+    "hero_trust1": "Resposta com fonte",
+    "hero_trust2": "E-mail via Outlook",
+    "hero_trust3": "WhatsApp handoff",
     "story_h2": "Do pedido ao envio, sem abrir tudo de novo.",
     "story_sub": "O Allybi reduz o caminho inteiro: fonte, pergunta, resposta, versão, mensagem e confirmação.",
     "panel1_title": "Conecte ou suba",
@@ -820,7 +820,8 @@
     "depth_bottom1": "Busca contexto",
     "depth_bottom2": "Compara versões",
     "depth_bottom3": "Mostra fonte",
-    "depth_bottom4": "Prepara mensagem"
+    "depth_bottom4": "Prepara mensagem",
+    "hero_trust4": "Documentos não treinam modelos"
   },
   "legal": {
     "hero_eyebrow": "Para advogados",

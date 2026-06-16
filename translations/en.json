@@ -641,9 +641,9 @@
     }
   },
   "hiw": {
-    "hero_eyebrow": "Product",
+    "hero_eyebrow": "How it works",
     "hero_h1": "Ask, confirm, and send without reopening everything.",
-    "hero_support": "Connect sources, upload files, and ask in chat. Allybi answers with source, drafts the message, and sends emails via Outlook after your confirmation. WhatsApp opens as a handoff.",
+    "hero_support": "Connect Outlook, OneDrive, SharePoint, and uploads. Ask in chat, see the source of the answer, and review before sending.",
     "flow_upload": "Upload",
     "flow_organize": "Organize",
     "flow_search": "Search & Chat",
@@ -768,10 +768,10 @@
     "mock_confirm_details": "<strong style=\"color:var(--allybi-text-strongest)\">To:</strong> client@company.com<br><strong style=\"color:var(--allybi-text-strongest)\">File:</strong> SPA_Draft_v3.pdf (v3)<br><strong style=\"color:var(--allybi-text-strongest)\">Via:</strong> Outlook",
     "mock_cancel": "Cancel",
     "mock_confirm_btn": "Confirm & Send",
-    "hero_pricing": "30 days free. Then R$170/month. Cancel anytime.",
-    "hero_trust1": "Source-cited answers",
-    "hero_trust2": "Nothing sent without confirmation",
-    "hero_trust3": "WhatsApp without inbox sync",
+    "hero_pricing": "30 days free. Nothing sent without confirmation.",
+    "hero_trust1": "Source-cited answer",
+    "hero_trust2": "Email via Outlook",
+    "hero_trust3": "WhatsApp handoff",
     "story_h2": "From request to send, without reopening everything.",
     "story_sub": "Allybi shortens the whole path: source, question, answer, version, message, and confirmation.",
     "panel1_title": "Connect or upload",
@@ -821,7 +821,8 @@
     "depth_bottom1": "Finds context",
     "depth_bottom2": "Compares versions",
     "depth_bottom3": "Shows source",
-    "depth_bottom4": "Drafts message"
+    "depth_bottom4": "Drafts message",
+    "hero_trust4": "Documents never train models"
   },
   "uc_overview": {
     "hero": {

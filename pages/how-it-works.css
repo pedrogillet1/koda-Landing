@@ -8,16 +8,32 @@
 .hiw-reveal.is-visible { opacity:1; transform:translateY(0); }
 @media(prefers-reduced-motion:reduce){ .hiw-reveal{ opacity:1; transform:none; transition:none; } }
 
-/* ── 1. HERO ── */
-.hiw-hero { padding:168px 0 160px; text-align:center; }
-.hiw-hero__eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--allybi-accent); margin-bottom:20px; padding:6px 14px; background:var(--allybi-accent-subtle); border-radius:var(--allybi-radius-full); border:1px solid var(--allybi-accent-muted); }
-.hiw-hero h1 { font-size:clamp(30px,4.5vw,56px); line-height:1.05; font-weight:700; letter-spacing:-.03em; color:var(--allybi-text-strongest); margin-bottom:32px; max-width:700px; margin-left:auto; margin-right:auto; text-wrap:balance; hyphens:none; }
-.hiw-hero__sub { font-size:clamp(15px,1.2vw,18px); line-height:1.6; color:var(--allybi-text-secondary); max-width:580px; margin:0 auto 48px; }
-.hiw-hero__ctas { display:flex; gap:12px; justify-content:center; margin-bottom:14px; }
-.hiw-hero__pricing { font-size:13px; color:var(--allybi-text-muted); margin-bottom:16px; }
-.hiw-hero__trust { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+/* ── 1. HERO (2 cols: text + mockup) ── */
+.hiw-hero { padding:120px 0 80px; }
+.hiw-hero__grid { display:grid; grid-template-columns:52fr 48fr; gap:clamp(32px,3.5vw,56px); align-items:center; max-width:1200px; margin:0 auto; }
+.hiw-hero__text { text-align:left; }
+.hiw-hero__eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--allybi-accent); margin-bottom:20px; padding:6px 14px 6px 10px; background:var(--allybi-accent-subtle); border-radius:var(--allybi-radius-full); border:1px solid var(--allybi-accent-muted); }
+.hiw-hero__eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--allybi-accent); }
+.hiw-hero h1 { font-size:clamp(32px,4.2vw,56px); line-height:1.05; font-weight:700; letter-spacing:-.03em; color:var(--allybi-text-strongest); margin-bottom:24px; max-width:620px; text-wrap:balance; hyphens:none; }
+.hiw-hero__sub { font-size:clamp(15px,1.15vw,17px); line-height:1.6; color:var(--allybi-text-secondary); max-width:540px; margin:0 0 32px; }
+.hiw-hero__ctas { display:flex; gap:12px; margin-bottom:16px; }
+.hiw-hero__pricing { font-size:13px; color:var(--allybi-text-muted); margin-bottom:20px; }
+.hiw-hero__trust { display:flex; gap:16px; flex-wrap:wrap; }
 .hiw-hero__trust span { font-size:12px; font-weight:500; color:var(--allybi-text-muted); display:flex; align-items:center; gap:5px; }
 .hiw-hero__trust span::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--allybi-trust); }
+
+.hiw-hero__visual { position:relative; }
+
+@media (max-width: 900px) {
+  .hiw-hero { padding:96px 0 56px; }
+  .hiw-hero__grid { grid-template-columns:1fr; gap:32px; }
+  .hiw-hero h1 { font-size:32px; }
+  .hiw-hero__ctas { flex-direction:column; align-items:stretch; gap:14px; }
+  .hiw-hero__ctas .allybi-btn--primary { width:100%; justify-content:center; }
+  .hiw-hero__ctas .allybi-btn--secondary { background:transparent; border:none; padding:4px; text-decoration:underline; text-underline-offset:4px; color:var(--allybi-text-strongest); align-self:center; }
+  .hiw-hero__trust { gap:10px; }
+  .hiw-hero__trust span { font-size:11px; }
+}
 
 /* ── 2. WORKFLOW STORYBOARD ── */
 .hiw-story { padding:0 0 24px; }

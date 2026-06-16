@@ -17,8 +17,23 @@
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="pages/home.css">
   <link rel="stylesheet" href="pages/how-it-works.css">
   <link rel="stylesheet" href="allybi-responsive.css">
+  <noscript>
+    <style>
+      .allybi-reveal, .hiw-reveal { opacity: 1 !important; transform: none !important; }
+      .hero-scene[data-state] .hero-scene__source-strip,
+      .hero-scene[data-state] .hero-scene__query,
+      .hero-scene[data-state] .hero-scene__versions,
+      .hero-scene[data-state] .hero-scene__review,
+      .hero-scene[data-state] .hero-scene__send,
+      .hero-scene[data-state] .hero-scene__v,
+      .hero-scene[data-state] .hero-scene__source-line {
+        opacity: 1 !important; transform: none !important;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -107,23 +122,84 @@
      ═══════════════════════════════════════════════════════════════ -->
 <section class="hiw-hero">
   <div class="allybi-container">
-    <div class="hiw-hero__inner hiw-reveal">
-      <span class="hiw-hero__eyebrow" data-i18n-key="hiw.hero_eyebrow">Produto</span>
-      <h1 data-i18n-key="hiw.hero_h1">Pergunte, confirme e envie sem abrir tudo de novo.</h1>
-      <p class="hiw-hero__sub" data-i18n-key="hiw.hero_support">Conecte fontes, suba arquivos e pergunte no chat. O Allybi responde com fonte, monta a mensagem e envia e-mails via Outlook depois da sua confirmação. WhatsApp abre como handoff.</p>
-      <div class="hiw-hero__ctas">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Começar grátis por 30 dias</a>
-        <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hiw.cta_integrations">Ver integrações</a>
+    <div class="hiw-hero__grid">
+      <div class="hiw-hero__text hiw-reveal">
+        <span class="hiw-hero__eyebrow" data-i18n-key="hiw.hero_eyebrow">Como funciona</span>
+        <h1 data-i18n-key="hiw.hero_h1">Pergunte, confirme e envie sem abrir tudo de novo.</h1>
+        <p class="hiw-hero__sub" data-i18n-key="hiw.hero_support">Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar.</p>
+        <div class="hiw-hero__ctas">
+          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Começar grátis por 30 dias</a>
+          <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hiw.cta_integrations">Ver integrações</a>
+        </div>
+        <p class="hiw-hero__pricing" data-i18n-key="hiw.hero_pricing">30 dias grátis. Nada sai sem confirmação.</p>
+        <div class="hiw-hero__trust">
+          <span data-i18n-key="hiw.hero_trust1">Resposta com fonte</span>
+          <span data-i18n-key="hiw.hero_trust2">E-mail via Outlook</span>
+          <span data-i18n-key="hiw.hero_trust3">WhatsApp handoff</span>
+          <span data-i18n-key="hiw.hero_trust4">Documentos não treinam modelos</span>
+        </div>
       </div>
-      <p class="hiw-hero__pricing" data-i18n-key="hiw.hero_pricing">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
-      <div class="hiw-hero__trust">
-        <span data-i18n-key="hiw.hero_trust1">Respostas com fonte</span>
-        <span data-i18n-key="hiw.hero_trust2">Nada enviado sem confirmação</span>
-        <span data-i18n-key="hiw.hero_trust3">WhatsApp sem caixa sincronizada</span>
+
+      <div class="hiw-hero__visual hiw-reveal">
+        <div class="hero-scene" id="hiwHeroScene" data-state="idle" role="img" aria-label="Allybi finds the right version, shows its source, and prepares the send for review">
+          <div class="hero-scene__workspace">
+            <div class="hero-scene__source-strip" data-stage="1">
+              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14"> Outlook</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14"> OneDrive</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14"> SharePoint</span>
+              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
+            </div>
+
+            <div class="hero-scene__body">
+              <div class="hero-scene__query" data-stage="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span data-i18n-key="hero.scene.query">qual versão posso enviar ao cliente?</span>
+              </div>
+
+              <div class="hero-scene__versions" data-stage="3">
+                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
+                <ul class="hero-scene__v-list">
+                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
+                    <span class="hero-scene__v-name">contrato_final.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v1_tag">versão anterior</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
+                    <span class="hero-scene__v-name">contrato_final_v3.pdf</span>
+                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v2_tag">fonte incerta</span>
+                  </li>
+                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
+                    <span class="hero-scene__v-name">contrato_final_AGORA.pdf</span>
+                    <span class="hero-scene__v-tag">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span data-i18n-key="hero.scene.v3_tag">fonte confirmada</span>
+                    </span>
+                  </li>
+                </ul>
+                <p class="hero-scene__source-line">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span data-i18n-key="hero.scene.source">SharePoint / Clientes / Contratos / 14 mar</span>
+                </p>
+              </div>
+
+              <div class="hero-scene__review" data-stage="4">
+                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
+                <dl class="hero-scene__review-list">
+                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
+                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd>contrato_final_AGORA.pdf</dd></div>
+                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd>SharePoint</dd></div>
+                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="hero.scene.channel_value">E-mail via Outlook</dd></div>
+                </dl>
+              </div>
+
+              <div class="hero-scene__send" data-stage="5">
+                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="hero.scene.send">Enviar via Outlook</button>
+                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Flow rail removed: the page itself explains the workflow -->
   </div>
 </section>
 
@@ -403,6 +479,7 @@
 <script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
+<script src="hero-sequence.js" defer></script>
 <script>
 /* ── Scroll reveal ── */
 (function(){
