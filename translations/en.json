@@ -1480,7 +1480,7 @@
       "team_note": "Need help for your team? Talk to sales."
     },
     "plan": {
-      "name": "Allybi Pro",
+      "name": "Allybi",
       "period": "/month",
       "trial": "30 days free",
       "cta": "Start free for 30 days",
@@ -1508,7 +1508,7 @@
     "card.label_control": "Control",
     "card.desc_control": "Permissions · your documents never train models",
     "card.reassurance": "Start without a demo. Set up in minutes.",
-    "flow.title": "Everything inside the Allybi Pro workflow.",
+    "flow.title": "What's included in the plan.",
     "flow.subtitle": "It's not just file search. It's finding, confirming, preparing, and reviewing before you send.",
     "flow.card1_title": "Connected sources",
     "flow.card1_desc": "Outlook, OneDrive, SharePoint, and uploads in the same chat.",
@@ -1520,7 +1520,7 @@
     "flow.card4_desc": "Compare files and see what changed.",
     "flow.card5_title": "Reviewed sending",
     "flow.card5_desc": "Email or WhatsApp handoff. You review first.",
-    "workflow.eyebrow": "Included in Pro",
+    "workflow.eyebrow": "Included",
     "workflow.title": "The plan covers the whole path.",
     "workflow.subtitle": "Connect sources, ask in chat, get a source-cited answer, and send email via Outlook after your confirmation. WhatsApp opens as a handoff.",
     "workflow.card_title": "From request to send,<br>without retracing your steps.",
@@ -1529,7 +1529,7 @@
     "workflow.step2": "Ask in plain language.",
     "workflow.step3": "Get the answer with the file and the source.",
     "workflow.step4": "Review recipient, message, file, and channel.",
-    "workflow.step5": "Send via Outlook or open the WhatsApp handoff.",
+    "workflow.step5": "Outlook sends with confirmation. WhatsApp opens as a handoff.",
     "workflow.footnote": "Nothing sends without your confirmation.",
     "mockup.question": "which version can I send to the client?",
     "mockup.answer_label": "Source-cited answer",
@@ -1541,7 +1541,7 @@
     "mockup.chip_channel": "Channel ✓",
     "mockup.cancel": "Cancel",
     "mockup.send_outlook": "Send via Outlook",
-    "mockup.whatsapp_handoff": "WhatsApp handoff: open WhatsApp",
+    "mockup.whatsapp_handoff": "WhatsApp handoff",
     "compare.before_label": "Before",
     "compare.before_desc": "search in 4 places · confirm version · draft message · attach · review",
     "compare.after_label": "With Allybi",
@@ -1564,8 +1564,8 @@
     "faq.a1_v2": "After the trial, the plan is R$170/month. You can cancel anytime.",
     "faq.q2_v2": "Do I need a demo to get started?",
     "faq.a2_v2": "No. The trial is self-serve. You can start by connecting a source or uploading files.",
-    "faq.q3_v2": "What's included in Allybi Pro?",
-    "faq.a3_v2": "Connected sources, uploads, chat with documents/emails/attachments, source-cited answers, version comparison, email drafting via Outlook, and reviewed WhatsApp handoff.",
+    "faq.q3_v2": "What's included?",
+    "faq.a3_v2": "Outlook, OneDrive, SharePoint, uploads, chat with documents, emails, and attachments, source-cited answers, version comparison, review before sending, email via Outlook with confirmation, and WhatsApp handoff.",
     "faq.q4_v2": "Does Allybi send messages on its own?",
     "faq.a4_v2": "No. Nothing sends without confirmation. Emails via Outlook go through review. For WhatsApp, Allybi prepares the message and opens the handoff for you to review and send.",
     "faq.q5": "Does Allybi read my WhatsApp?",
@@ -1579,7 +1579,11 @@
     "final.title_v2": "Start with a real workflow.",
     "final.subtitle_v2": "Connect a source or upload a file. Ask in chat, get a source-cited answer, and review before you send.",
     "final.secondary_cta": "See how it works",
-    "final.note": "Then R$170/month. Cancel anytime."
+    "final.note": "Then R$170/month. Cancel anytime.",
+    "plan.plan_name": "Allybi",
+    "hero.trust4": "Documents never train models",
+    "hero.trust5": "WhatsApp handoff",
+    "hero.micro": "No demo. Nothing sent without confirmation."
   },
   "demo": {
     "nav": {

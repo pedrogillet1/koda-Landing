@@ -244,3 +244,14 @@
     font-size: 28px;
   }
 }
+
+/* Pricing hero microcopy (brief item 2: "Sem demo. Nada sai sem confirmação.") */
+.pricing-hero__micro {
+  font-size: 13px;
+  color: var(--allybi-text-muted, #6C6B6E);
+  margin: 0 0 16px;
+  max-width: 540px;
+}
+@media (max-width: 600px) {
+  .pricing-hero__micro { font-size: 12px; }
+}
