@@ -11,3 +11,9 @@ tests/
 ngrok-config.yml
 SETUP-GUIDE.md
 backend-server.js
+node_modules/
+*.mjs
+qa-screenshots/
+qa-scripts/
+audit/
+package-lock.json

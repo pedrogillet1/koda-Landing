@@ -41,79 +41,105 @@
 <body>
 
 <!-- HEADER -->
-<header id="allybi-header" class="allybi-header">
-  <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
-    <nav class="allybi-nav desktop-only">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="nav-dropdown-menu">
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-        <div class="nav-dropdown-menu">
-          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-        <div class="nav-dropdown-menu">
-          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
     </nav>
-    <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
   </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div id="allybi-mobile-menu" class="mobile-menu">
-  <nav class="mobile-menu-nav">
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-      <div class="mobile-dropdown-items">
-        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
-      </div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
     </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-      <div class="mobile-dropdown-items">
-        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-        <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
-      </div>
-    </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-      <div class="mobile-dropdown-items">
-        <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
-      </div>
-    </div>
-    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
-  </nav>
-  <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </div>
 
@@ -123,8 +149,8 @@
 <!-- HERO -->
 <section class="contact-hero allybi-section" style="padding-bottom:0">
   <div class="allybi-container contact-hero-inner">
-    <h1 class="allybi-h1 allybi-reveal" data-i18n-key="contact.hero.title">Talk to Allybi</h1>
-    <p class="allybi-body-lg allybi-reveal" data-i18n-key="contact.hero.subtitle">Pick a topic and send your message. We will route it to the right place.</p>
+    <h1 class="allybi-h1 allybi-reveal" data-i18n-key="contact.hero.title">Fale com a Allybi</h1>
+    <p class="allybi-body-lg allybi-reveal" data-i18n-key="contact.hero.subtitle">Escolha um assunto e envie sua mensagem. Encaminhamos para o lugar certo.</p>
   </div>
 </section>
 
@@ -138,8 +164,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <div>
-          <h3 data-i18n-key="contact.path.sales_title">Talk to sales</h3>
-          <p data-i18n-key="contact.path.sales_desc">For teams, onboarding, security, or commercial questions.</p>
+          <h3 data-i18n-key="contact.path.sales_title">Falar com vendas</h3>
+          <p data-i18n-key="contact.path.sales_desc">Para times, onboarding, segurança ou questões comerciais.</p>
         </div>
         <svg class="contact-path-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
@@ -149,8 +175,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <div>
-          <h3 data-i18n-key="contact.path.product_title">Product question</h3>
-          <p data-i18n-key="contact.path.product_desc">Features, integrations, uploads, chat, sources, and sending.</p>
+          <h3 data-i18n-key="contact.path.product_title">Dúvida sobre o produto</h3>
+          <p data-i18n-key="contact.path.product_desc">Recursos, integrações, uploads, chat, fontes e envio.</p>
         </div>
         <svg class="contact-path-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
@@ -160,8 +186,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <div>
-          <h3 data-i18n-key="contact.path.security_title">Security question</h3>
-          <p data-i18n-key="contact.path.security_desc">Privacy, encryption, permissions, data, and compliance.</p>
+          <h3 data-i18n-key="contact.path.security_title">Dúvida sobre segurança</h3>
+          <p data-i18n-key="contact.path.security_desc">Privacidade, criptografia, permissões, dados e conformidade.</p>
         </div>
         <svg class="contact-path-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
@@ -171,8 +197,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
         <div>
-          <h3 data-i18n-key="contact.path.support_title">Support</h3>
-          <p data-i18n-key="contact.path.support_desc">Account, access, technical errors, or product usage.</p>
+          <h3 data-i18n-key="contact.path.support_title">Suporte</h3>
+          <p data-i18n-key="contact.path.support_desc">Conta, acesso, erros técnicos ou uso do produto.</p>
         </div>
         <svg class="contact-path-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
@@ -182,8 +208,8 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </div>
         <div>
-          <h3 data-i18n-key="contact.path.partner_title">Partnership</h3>
-          <p data-i18n-key="contact.path.partner_desc">Integrations, reselling, or co-development opportunities.</p>
+          <h3 data-i18n-key="contact.path.partner_title">Parcerias</h3>
+          <p data-i18n-key="contact.path.partner_desc">Integrações, revenda ou oportunidades de co-desenvolvimento.</p>
         </div>
         <svg class="contact-path-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
@@ -197,46 +223,46 @@
   <div class="allybi-container">
     <div class="contact-form-wrapper">
       <div class="allybi-section-header">
-        <h2 class="allybi-h2 allybi-reveal" data-i18n-key="contact.form.title">Send us a message</h2>
-        <p class="allybi-body-lg allybi-reveal" data-i18n-key="contact.form.subtitle">We respond within one business day.</p>
+        <h2 class="allybi-h2" data-i18n-key="contact.form.title">Envie uma mensagem</h2>
+        <p class="allybi-body-lg" data-i18n-key="contact.form.subtitle">Respondemos em até um dia útil.</p>
       </div>
 
-      <form class="contact-form allybi-reveal" action="#" method="POST">
+      <form class="contact-form" action="#" method="POST">
         <div class="contact-form__row">
           <div class="allybi-input-group">
-            <label class="allybi-label" for="contact-name" data-i18n-key="contact.form.label_name">Name</label>
+            <label class="allybi-label" for="contact-name" data-i18n-key="contact.form.label_name">Nome</label>
             <input class="allybi-input" type="text" id="contact-name" name="name" required placeholder="Seu nome" data-i18n-key-placeholder="contact.form.placeholder_name">
           </div>
           <div class="allybi-input-group">
-            <label class="allybi-label" for="contact-email" data-i18n-key="contact.form.label_email">Work email</label>
+            <label class="allybi-label" for="contact-email" data-i18n-key="contact.form.label_email">E-mail de trabalho</label>
             <input class="allybi-input" type="email" id="contact-email" name="email" required placeholder="você@empresa.com" data-i18n-key-placeholder="contact.form.placeholder_email">
           </div>
         </div>
 
         <div class="contact-form__row">
           <div class="allybi-input-group">
-            <label class="allybi-label" for="contact-company" data-i18n-key="contact.form.label_company">Company <span class="contact-optional" data-i18n-key="contact.form.optional">(optional)</span></label>
+            <label class="allybi-label" for="contact-company" data-i18n-key="contact.form.label_company">Empresa <span class="contact-optional" data-i18n-key="contact.form.optional">(opcional)</span></label>
             <input class="allybi-input" type="text" id="contact-company" name="company" placeholder="Nome da empresa" data-i18n-key-placeholder="contact.form.placeholder_company">
           </div>
           <div class="allybi-input-group">
-            <label class="allybi-label" for="contact-category" data-i18n-key="contact.form.label_category">Category</label>
+            <label class="allybi-label" for="contact-category" data-i18n-key="contact.form.label_category">Categoria</label>
             <select class="allybi-select" id="contact-category" name="category" required>
-              <option value="" disabled selected data-i18n-key="contact.form.select_placeholder">Select a category</option>
-              <option value="sales" data-i18n-key="contact.form.cat_sales">Talk to sales</option>
-              <option value="product" data-i18n-key="contact.form.cat_product">Product question</option>
-              <option value="security" data-i18n-key="contact.form.cat_security">Security question</option>
-              <option value="support" data-i18n-key="contact.form.cat_support">Support</option>
-              <option value="partnership" data-i18n-key="contact.form.cat_partnership">Partnership</option>
+              <option value="" disabled selected data-i18n-key="contact.form.select_placeholder">Selecione uma categoria</option>
+              <option value="sales" data-i18n-key="contact.form.cat_sales">Falar com vendas</option>
+              <option value="product" data-i18n-key="contact.form.cat_product">Dúvida sobre o produto</option>
+              <option value="security" data-i18n-key="contact.form.cat_security">Dúvida sobre segurança</option>
+              <option value="support" data-i18n-key="contact.form.cat_support">Suporte</option>
+              <option value="partnership" data-i18n-key="contact.form.cat_partnership">Parcerias</option>
             </select>
           </div>
         </div>
 
         <div class="allybi-input-group">
-          <label class="allybi-label" for="contact-message" data-i18n-key="contact.form.label_message">Message</label>
+          <label class="allybi-label" for="contact-message" data-i18n-key="contact.form.label_message">Mensagem</label>
           <textarea class="allybi-textarea" id="contact-message" name="message" rows="5" required placeholder="Conte rapidamente como podemos ajudar..." data-i18n-key-placeholder="contact.form.placeholder_message"></textarea>
         </div>
 
-        <button type="submit" class="allybi-btn allybi-btn--primary contact-submit-btn" data-i18n-key="contact.form.submit">Send message</button>
+        <button type="submit" class="allybi-btn allybi-btn--primary contact-submit-btn" data-i18n-key="contact.form.submit">Enviar mensagem</button>
       </form>
     </div>
   </div>
@@ -245,95 +271,14 @@
 <!-- REASSURANCE -->
 <section class="contact-reassurance">
   <div class="allybi-container">
-    <p class="contact-reassurance-text allybi-reveal" data-i18n-key="contact.reassurance">Product, security, and sensitive workflow questions are welcome. We read every message carefully.</p>
+    <p class="contact-reassurance-text" data-i18n-key="contact.reassurance">Dúvidas sobre produto, segurança e fluxos sensíveis são bem-vindas. Lemos cada mensagem com atenção.</p>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="allybi-footer">
-  <div class="allybi-footer-inner">
-    <div class="footer-brand">
-      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
-      <p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p>
-    </div>
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-        <div class="footer-col-links">
-          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
-        <div class="footer-col-links">
-          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
-        <div class="footer-col-links">
-          <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-        <div class="footer-col-links">
-          <a href="about.html" data-i18n-key="footer.about">About</a>
-          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
-          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-        <div class="footer-col-links">
-          <a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a>
-          <a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-          <a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a>
-          <a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a>
-          <a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-mobile-links">
-      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      
-      <a href="about.html" data-i18n-key="footer.about">About</a>
-      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-      <div class="footer-bottom-right">
-        <div class="language-selector" id="footer-language-selector">
-          <button class="language-toggle" aria-expanded="false">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-            <span class="lang-label">English</span>
-          </button>
-          <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
-            <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
 
 <!-- Scripts -->
-<script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
 <script>
@@ -402,6 +347,59 @@
   }
 })();
 </script>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

@@ -74,7 +74,8 @@ const server = http.createServer((req, res) => {
 
 function renderHtmlForHost(html, req, filePath) {
   const hostLocale = domainLocale.localeForHost(req.headers.host);
-  const locale = hostLocale || 'en';
+  // Default unmapped hosts (localhost/dev/preview) to Portuguese — the site is PT-first.
+  const locale = hostLocale || 'pt';
   const translations = readTranslations(locale);
   let rendered = html;
 

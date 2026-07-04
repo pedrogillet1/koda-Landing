@@ -1,0 +1,156 @@
+[
+  {
+    "file": "/assets/landing-shots/hero/hero-product-desktop.png",
+    "w": 1280,
+    "h": 1120,
+    "sha": "8bb2b435890151bc85db4fbccc52b0a62bf1528fc12de12911e88ed0590838bb",
+    "size": 142395
+  },
+  {
+    "file": "/assets/landing-shots/hero/hero-product-mobile.png",
+    "w": 700,
+    "h": 920,
+    "sha": "4fc279c363092b0003d23b089eb72a4ec67ce0561b8cb861daf0f28206381aff",
+    "size": 80062
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-01-pedido-desktop.png",
+    "w": 1880,
+    "h": 1160,
+    "sha": "7925b4ffdba977e47ec847cacf5418fc7c1dd59fb60b10f74c12de9562290f3d",
+    "size": 78172
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-01-pedido-mobile.png",
+    "w": 700,
+    "h": 880,
+    "sha": "9f788bbe87c84f21c825754ad490454ee5f6d8a6605be9a54410fc86029d222a",
+    "size": 39284
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-02-pergunta-desktop.png",
+    "w": 1880,
+    "h": 1160,
+    "sha": "c3aa0db7663ce343dc04e47cb4a1b4ad139e818388ac691bd7df49c3805035d9",
+    "size": 51379
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-02-pergunta-mobile.png",
+    "w": 700,
+    "h": 880,
+    "sha": "c6043d9e330386c6eb19ae72c5aa088829581409649f7dde9b2c0b77f62467a6",
+    "size": 15619
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-03-resposta-desktop.png",
+    "w": 1880,
+    "h": 1160,
+    "sha": "9bd96b3fa74294dc91e93ffa0f05e35f4bdf909fc1cb7ef1a5e52470d98774d3",
+    "size": 81180
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-03-resposta-mobile.png",
+    "w": 700,
+    "h": 880,
+    "sha": "9754505404adb576aef2d08a2f57b8e8b8cdd740792af53bce6ba99f52cc10d6",
+    "size": 59344
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-04-revisao-desktop.png",
+    "w": 1880,
+    "h": 1160,
+    "sha": "81460dbc17969ff7e6cbb73355565d91681c3b2174b0bef079d29588fd2e03f7",
+    "size": 101773
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-04-revisao-mobile.png",
+    "w": 700,
+    "h": 880,
+    "sha": "779147213f7b2dcbda32c2ca8261368f764d595da40840bbf9039a7a54dbd5cb",
+    "size": 58097
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-05-envio-desktop.png",
+    "w": 1880,
+    "h": 1160,
+    "sha": "135cf67d6b2ed9696c8e322d881359ea6a45a870d8326f6ac8d4329bd3db22b8",
+    "size": 111398
+  },
+  {
+    "file": "/assets/landing-shots/flow/flow-05-envio-mobile.png",
+    "w": 700,
+    "h": 880,
+    "sha": "a6a7d4877fc4dd32e0d60a7c71f1dc45566eccb0e189d277f8199aac16266329",
+    "size": 61050
+  },
+  {
+    "file": "/assets/landing-shots/use-cases/usecase-finance-desktop.png",
+    "w": 1440,
+    "h": 1040,
+    "sha": "b8ed6f8642b0b3f624a2e459dc4751d6a3d72618c94762c15f5abc6bf52f02e0",
+    "size": 84366
+  },
+  {
+    "file": "/assets/landing-shots/use-cases/usecase-finance-mobile.png",
+    "w": 700,
+    "h": 860,
+    "sha": "a07206e081905ed246efa4cea2e5fd4aada2af355af3d2c266b7b59669f0b329",
+    "size": 62989
+  },
+  {
+    "file": "/assets/landing-shots/use-cases/usecase-legal-desktop.png",
+    "w": 1440,
+    "h": 1040,
+    "sha": "25611f35a7a30a7e47bb3d08804c1528c41143d30439c7503592d7c7f5dea76d",
+    "size": 104054
+  },
+  {
+    "file": "/assets/landing-shots/use-cases/usecase-legal-mobile.png",
+    "w": 700,
+    "h": 860,
+    "sha": "7bc233cfa82b8a41cf5c356777683675bd6be0d51058773c4c215341a7778ee2",
+    "size": 81169
+  },
+  {
+    "file": "/assets/landing-shots/use-cases/usecase-operations-desktop.png",
+    "w": 1440,
+    "h": 1040,
+    "sha": "021e8f6ac2715befa0cb2a82f50669a35525ecebe41da836927f48d1f1c39d8b",
+    "size": 107785
+  },
+  {
+    "file": "/assets/landing-shots/use-cases/usecase-operations-mobile.png",
+    "w": 700,
+    "h": 860,
+    "sha": "28a0809591f2c0616bbc1e40c7ce4f399a3eb3079c1541926c52c7ed1e84cdd0",
+    "size": 84574
+  },
+  {
+    "file": "/assets/landing-shots/system/system-email-draft-desktop.png",
+    "w": 1440,
+    "h": 1080,
+    "sha": "36fdf501fdb7e665450372402a059102304c94ba46524299e09cfdd77dc563ae",
+    "size": 93721
+  },
+  {
+    "file": "/assets/landing-shots/system/system-email-draft-mobile.png",
+    "w": 700,
+    "h": 1000,
+    "sha": "f9bc6a269a1bf1a4f16abcf2dcba932ece30405fbe041496d7bf7875566ddbbd",
+    "size": 80738
+  },
+  {
+    "file": "/assets/landing-shots/system/system-whatsapp-handoff-desktop.png",
+    "w": 1440,
+    "h": 1080,
+    "sha": "94b42ff1ee2226b188195da34dc1666c21386c5dcb55f8049bcf4851ec552500",
+    "size": 70198
+  },
+  {
+    "file": "/assets/landing-shots/system/system-whatsapp-handoff-mobile.png",
+    "w": 700,
+    "h": 1000,
+    "sha": "015dfa6d56168e45338f4f9dc93334ff75115e0952c9a622ba9631170187e644",
+    "size": 60420
+  }
+]

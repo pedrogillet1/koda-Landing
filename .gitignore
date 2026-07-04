@@ -17,3 +17,8 @@ npm-debug.log*
 .vscode/
 .idea/
 
+qa-screenshots/
+artifacts/
+_*.mjs
+audit-*.mjs
+*.output

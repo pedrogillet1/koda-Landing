@@ -3,762 +3,467 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#FAFAF8">
+  <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Metodologia — Como calculamos tempo perdido e atrito no fluxo | Allybi</title>
-  <meta name="description" content="Entenda como a Calculadora do Tempo Perdido e o Diagnóstico do Fluxo estimam tempo, atrito e gargalos sem pedir documentos, nomes de clientes ou acesso às ferramentas.">
+  <title>Metodologia dos Diagnósticos | Allybi</title>
+  <meta name="description" content="Veja como a Allybi estima tempo perdido e calcula atrito no fluxo, com fórmulas, pesos, faixas e exemplos transparentes.">
   <link rel="canonical" href="https://allybi.com.br/metodologia.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
   <link rel="stylesheet" href="allybi-responsive.css">
-  <style>
-    /* ── Hero ── */
-    .met-hero { padding: 160px 0 96px; text-align: center; }
-    .met-hero__eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--allybi-text-muted, #6C6B6E); margin-bottom: 16px; }
-    .met-hero h1 { font-size: clamp(32px, 4.5vw, 52px); font-weight: 700; letter-spacing: -0.03em; color: #181818; margin-bottom: 20px; text-wrap: balance; line-height: 1.1; }
-    .met-hero__sub { font-size: 17px; color: var(--allybi-text-secondary, #55534E); max-width: 640px; margin: 0 auto 32px; line-height: 1.6; }
-    .met-hero__ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-    .met-hero__trust { font-size: 13px; color: var(--allybi-text-muted, #6C6B6E); letter-spacing: 0.02em; }
-    .met-hero__card { max-width: 480px; margin: 48px auto 0; padding: 28px 32px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; text-align: left; }
-    .met-hero__card-title { font-size: 15px; font-weight: 700; color: #181818; margin-bottom: 16px; }
-    .met-hero__card-flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--allybi-text-secondary, #55534E); margin-bottom: 20px; }
-    .met-hero__card-flow span { padding: 5px 12px; background: #F5F5F5; border-radius: 6px; white-space: nowrap; }
-    .met-hero__card-flow .met-arrow { background: none; padding: 0; color: #6C6B6E; }
-    .met-hero__card-tools { display: flex; gap: 16px; margin-bottom: 12px; }
-    .met-hero__card-tool { flex: 1; padding: 12px 16px; background: #F5F5F5; border-radius: 10px; }
-    .met-hero__card-tool strong { display: block; font-size: 13px; font-weight: 700; color: #181818; margin-bottom: 2px; }
-    .met-hero__card-tool span { font-size: 12px; color: #6C6B6E; }
-    .met-hero__card-note { font-size: 12px; color: #6C6B6E; font-style: italic; }
-
-    /* ── Section base ── */
-    .met-section { padding: 96px 0; }
-    .met-section .allybi-container { max-width: 1140px; }
-    .met-section__title { font-size: clamp(24px, 3.5vw, 36px); font-weight: 700; color: #181818; letter-spacing: -0.02em; margin-bottom: 12px; text-align: center; text-wrap: balance; }
-    .met-section__sub { font-size: 16px; color: var(--allybi-text-secondary, #55534E); max-width: 640px; margin: 0 auto 48px; line-height: 1.6; text-align: center; }
-
-    /* ── Two tools cards ── */
-    .met-tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 960px; margin: 0 auto; }
-    .met-tool-card { padding: 36px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; display: flex; flex-direction: column; }
-    .met-tool-card__badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; background: #F5F5F5; color: #6C6B6E; margin-bottom: 16px; width: fit-content; }
-    .met-tool-card h3 { font-size: 20px; font-weight: 700; color: #181818; margin-bottom: 10px; letter-spacing: -0.01em; }
-    .met-tool-card__promise { font-size: 15px; color: var(--allybi-text-secondary, #55534E); line-height: 1.6; margin-bottom: 20px; }
-    .met-tool-card__list { list-style: none; padding: 0; margin: 0 0 20px; }
-    .met-tool-card__list li { font-size: 13px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; padding: 4px 0 4px 16px; position: relative; }
-    .met-tool-card__list li::before { content: ''; position: absolute; left: 0; top: 11px; width: 5px; height: 5px; border-radius: 50%; background: #d0d0d0; }
-    .met-tool-card__result { padding: 12px 16px; background: #F5F5F5; border-radius: 8px; font-size: 13px; color: #181818; font-weight: 500; margin-bottom: 24px; }
-    .met-tool-card .allybi-btn { margin-top: auto; }
-
-    /* ── Scenario card ── */
-    .met-scenario { max-width: 860px; margin: 0 auto; padding: 40px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
-    .met-scenario__grid { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: start; }
-    .met-scenario__path-label { font-size: 13px; font-weight: 600; color: #181818; margin-bottom: 12px; }
-    .met-scenario__path { display: flex; flex-direction: column; gap: 0; }
-    .met-scenario__step { font-size: 14px; color: var(--allybi-text-secondary, #55534E); padding: 8px 16px; position: relative; }
-    .met-scenario__step::before { content: ''; position: absolute; left: 4px; top: 0; bottom: 0; width: 1px; background: #E6E6EC; }
-    .met-scenario__step:first-child::before { top: 50%; }
-    .met-scenario__step:last-child::before { bottom: 50%; }
-    .met-scenario__step--yellow { color: #856404; background: #FFF8E1; border-radius: 6px; font-weight: 500; }
-    .met-scenario__copy { font-size: 15px; color: var(--allybi-text-secondary, #55534E); line-height: 1.7; }
-    .met-scenario__trust { font-size: 13px; color: #6C6B6E; margin-top: 16px; font-style: italic; }
-
-    /* ── Three columns ── */
-    .met-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
-    .met-3col-card { padding: 32px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
-    .met-3col-card h3 { font-size: 17px; font-weight: 700; color: #181818; margin-bottom: 16px; }
-    .met-3col-card ul { list-style: none; padding: 0; margin: 0; }
-    .met-3col-card ul li { font-size: 14px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; padding: 5px 0 5px 16px; position: relative; }
-    .met-3col-card ul li::before { content: ''; position: absolute; left: 0; top: 12px; width: 5px; height: 5px; border-radius: 50%; background: #d0d0d0; }
-
-    /* ── Formula section ── */
-    .met-formula-card { max-width: 860px; margin: 0 auto; padding: 40px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
-    .met-formula-main { padding: 20px 24px; background: #F5F5F5; border-radius: 10px; font-size: 16px; font-weight: 600; color: #181818; text-align: center; margin-bottom: 24px; letter-spacing: -0.01em; }
-    .met-formula-sub { font-size: 14px; color: var(--allybi-text-secondary, #55534E); margin-bottom: 24px; }
-    .met-inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
-    .met-input-item { padding: 16px; background: #F5F5F5; border-radius: 10px; }
-    .met-input-item strong { display: block; font-size: 14px; font-weight: 700; color: #181818; margin-bottom: 4px; }
-    .met-input-item span { font-size: 13px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; }
-    .met-formula-expand { width: 100%; padding: 14px; border: 1px solid #E6E6EC; border-radius: 10px; background: #fff; font-size: 14px; font-weight: 600; color: #181818; cursor: pointer; text-align: center; transition: background 0.15s; }
-    .met-formula-expand:hover { background: #F5F5F5; }
-    .met-formula-detail { display: none; margin-top: 16px; padding: 20px 24px; background: #F5F5F5; border-radius: 10px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; color: #181818; line-height: 1.8; }
-    .met-formula-detail.is-open { display: block; }
-    .met-formula-note { font-size: 13px; color: #6C6B6E; margin-top: 16px; font-style: italic; }
-
-    /* ── Dimensions ── */
-    .met-dimensions { max-width: 860px; margin: 0 auto; }
-    .met-dim-card { padding: 20px 24px; background: #fff; border: 1px solid #E6E6EC; border-radius: 12px; margin-bottom: 12px; display: grid; grid-template-columns: 200px 1fr; gap: 16px; align-items: center; }
-    .met-dim-card strong { font-size: 14px; font-weight: 700; color: #181818; }
-    .met-dim-card p { font-size: 13px; color: var(--allybi-text-secondary, #55534E); line-height: 1.5; margin: 0; }
-    .met-dim-bar { height: 6px; background: #E6E6EC; border-radius: 3px; margin-top: 8px; overflow: hidden; }
-    .met-dim-bar span { display: block; height: 100%; border-radius: 3px; background: #181818; transition: width 0.6s cubic-bezier(.22,1,.36,1); }
-    .met-scoring-note { text-align: center; font-size: 15px; color: #181818; font-weight: 600; margin-top: 24px; padding: 16px; background: #F5F5F5; border-radius: 10px; max-width: 860px; margin-left: auto; margin-right: auto; }
-
-    /* ── Result bands ── */
-    .met-results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 960px; margin: 0 auto; }
-    .met-result-col h3 { font-size: 18px; font-weight: 700; color: #181818; margin-bottom: 8px; }
-    .met-result-col__sub { font-size: 13px; color: #6C6B6E; margin-bottom: 20px; }
-    .met-band { padding: 14px 18px; border-left: 3px solid #E6E6EC; margin-bottom: 8px; }
-    .met-band strong { display: block; font-size: 14px; color: #181818; margin-bottom: 2px; }
-    .met-band span { font-size: 13px; color: var(--allybi-text-secondary, #55534E); }
-
-    /* ── Privacy cards ── */
-    .met-privacy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; }
-    .met-priv-card { padding: 28px; background: #fff; border: 1px solid #E6E6EC; border-radius: 16px; }
-    .met-priv-card h3 { font-size: 15px; font-weight: 700; color: #181818; margin-bottom: 8px; }
-    .met-priv-card p { font-size: 14px; color: var(--allybi-text-secondary, #55534E); line-height: 1.6; margin: 0; }
-    .met-legal-micro { text-align: center; font-size: 12px; color: #6C6B6E; font-style: italic; margin-top: 24px; max-width: 640px; margin-left: auto; margin-right: auto; }
-
-    /* ── Before/After ── */
-    .met-ba-grid { max-width: 860px; margin: 0 auto; }
-    .met-ba-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid #F5F5F5; }
-    .met-ba-row:last-child { border-bottom: none; }
-    .met-ba-manual { font-size: 14px; color: var(--allybi-text-secondary, #55534E); text-align: right; }
-    .met-ba-arrow { font-size: 16px; color: #d0d0d0; }
-    .met-ba-allybi { font-size: 14px; font-weight: 600; color: #181818; }
-
-    /* ── FAQ ── */
-    .met-faq { max-width: 720px; margin: 0 auto; }
-    .met-faq-item { border-bottom: 1px solid #E6E6EC; }
-    .met-faq-item:first-child { border-top: 1px solid #E6E6EC; }
-    .met-faq-q { width: 100%; padding: 20px 0; border: none; background: none; font-size: 15px; font-weight: 600; color: #181818; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .met-faq-q::after { content: '+'; font-size: 20px; font-weight: 400; color: #6C6B6E; flex-shrink: 0; transition: transform 0.2s; }
-    .met-faq-q[aria-expanded="true"]::after { content: '\2212'; }
-    .met-faq-a { display: none; padding: 0 0 20px; font-size: 14px; color: var(--allybi-text-secondary, #55534E); line-height: 1.7; }
-    .met-faq-a.is-open { display: block; }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .met-hero { padding: 120px 0 64px; }
-      .met-section { padding: 64px 0; }
-      .met-tools-grid { grid-template-columns: 1fr; }
-      .met-3col { grid-template-columns: 1fr; max-width: 480px; }
-      .met-scenario__grid { grid-template-columns: 1fr; }
-      .met-inputs-grid { grid-template-columns: 1fr; }
-      .met-dim-card { grid-template-columns: 1fr; }
-      .met-results-grid { grid-template-columns: 1fr; }
-      .met-privacy-grid { grid-template-columns: 1fr; max-width: 480px; }
-      .met-ba-row { grid-template-columns: 1fr; gap: 4px; text-align: left; }
-      .met-ba-manual { text-align: left; color: #6C6B6E; }
-      .met-ba-arrow { display: none; }
-      .met-hero__card-tools { flex-direction: column; }
-    }
-    @media (max-width: 480px) {
-      .met-hero__ctas { flex-direction: column; align-items: center; }
-      .met-hero__ctas .allybi-btn { width: 100%; max-width: 320px; justify-content: center; }
-      .met-hero__card-flow { justify-content: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/tools/allybi-tools.css">
 </head>
-<body>
+<body class="tool-page">
+
+<a class="allybi-skip-link" href="#metodologia-main">Pular para o conteúdo</a>
 
 <!-- HEADER -->
-<header id="allybi-header" class="allybi-header">
-  <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
-    <nav class="allybi-nav desktop-only">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="nav-dropdown-menu">
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-        <div class="nav-dropdown-menu">
-          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-        <div class="nav-dropdown-menu">
-          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
     </nav>
-    <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.com.br/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
   </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div id="allybi-mobile-menu" class="mobile-menu">
-  <nav class="mobile-menu-nav">
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-      <div class="mobile-dropdown-items">
-        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
-      </div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
     </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-      <div class="mobile-dropdown-items">
-        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-        <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
-      </div>
-    </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-      <div class="mobile-dropdown-items">
-        <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
-      </div>
-    </div>
-    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
-  </nav>
-  <div class="mobile-ctas">
-    <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.com.br/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </div>
 
 
-<main>
+<main id="metodologia-main" class="allybi-tools-root">
 
-<!-- ═══════════════════════════════════════════════════════════════
-     1. HERO
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-hero">
-  <div class="allybi-container">
-    <p class="met-hero__eyebrow allybi-reveal" data-i18n-key="metod.hero_eyebrow">Metodologia</p>
-    <h1 class="allybi-reveal" data-i18n-key="metod.hero_title">Como medimos tempo perdido e atrito no fluxo.</h1>
-    <p class="met-hero__sub allybi-reveal" data-i18n-key="metod.hero_sub">A Calculadora estima o tempo individual. O Diagnóstico mapeia onde o time perde certeza. Nenhum arquivo é pedido.</p>
-    <div class="met-hero__ctas allybi-reveal">
-      <a href="tempo.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="methodology_calculator_cta_click" data-i18n-key="metod.cta_calc">Calcular meu tempo</a>
-      <a href="diagnostico.html" class="allybi-btn allybi-btn--secondary allybi-btn--lg" data-event="methodology_diagnostic_cta_click" data-i18n-key="metod.cta_diag">Mapear fluxo do time</a>
-    </div>
-    <p class="met-hero__trust allybi-reveal" data-i18n-key="metod.hero_trust">sem enviar arquivos · sem nomes de clientes · resultado na hora</p>
-
-    <div class="met-hero__card allybi-reveal" data-event="methodology_view">
-      <p class="met-hero__card-title" data-i18n-key="metod.card_title">Dois testes. Uma lógica.</p>
-      <div class="met-hero__card-flow">
-        <span data-i18n-key="metod.card_flow_1">Perguntas simples</span>
-        <span class="met-arrow">&rarr;</span>
-        <span data-i18n-key="metod.card_flow_2">Estimativa</span>
-        <span class="met-arrow">&rarr;</span>
-        <span data-i18n-key="metod.card_flow_3">Gargalo</span>
-        <span class="met-arrow">&rarr;</span>
-        <span data-i18n-key="metod.card_flow_4">Caminho que o Allybi reduz</span>
-      </div>
-      <div class="met-hero__card-tools">
-        <div class="met-hero__card-tool">
-          <strong data-i18n-key="metod.card_tool1_name">Calculadora</strong>
-          <span data-i18n-key="metod.card_tool1_desc">tempo por mês</span>
+  <!-- §60 HERO -->
+  <section class="tools-hero">
+    <div class="tools-hero-inner">
+      <div class="tools-hero-copy">
+        <p class="tools-eyebrow">METODOLOGIA</p>
+        <h1 class="tools-h1">Como estimamos tempo perdido e atrito no fluxo.</h1>
+        <p class="tools-sub">A Calculadora estima o tempo individual. O Diagnóstico mapeia onde o time perde certeza. Os dois usam respostas por faixa e não pedem arquivos.</p>
+        <div class="tools-actions">
+          <a class="tools-btn tools-btn--primary" href="tempo-questionario.html">Calcular meu tempo</a>
+          <a class="tools-btn tools-btn--secondary" href="diagnostico-questionario.html">Mapear fluxo do time</a>
         </div>
-        <div class="met-hero__card-tool">
-          <strong data-i18n-key="metod.card_tool2_name">Diagnóstico</strong>
-          <span data-i18n-key="metod.card_tool2_desc">atrito no fluxo</span>
-        </div>
+        <p class="tools-trust">Estimativas, não auditorias.</p>
       </div>
-      <p class="met-hero__card-note" data-i18n-key="metod.card_note">Estimativa, não auditoria.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     2. TWO TOOLS, TWO PURPOSES
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section" style="background:#FAFAF8">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.tools_title">Dois testes. Dois tipos de resposta.</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.tools_sub">Um mede o tempo que some no seu fluxo. O outro mostra onde o time perde certeza.</p>
-    <div class="met-tools-grid">
-      <div class="met-tool-card allybi-reveal">
-        <span class="met-tool-card__badge" data-i18n-key="metod.tool_calc_badge">Individual</span>
-        <h3 data-i18n-key="metod.tool_calc_name">Calculadora do Tempo Perdido</h3>
-        <p class="met-tool-card__promise" data-i18n-key="metod.tool_calc_promise">Estima quantas horas por mês vão embora entre procurar, confirmar e preparar o envio.</p>
-        <ul class="met-tool-card__list">
-          <li data-i18n-key="metod.tool_calc_li_1">Frequência semanal</li>
-          <li data-i18n-key="metod.tool_calc_li_2">Lugares onde você procura</li>
-          <li data-i18n-key="metod.tool_calc_li_3">Tempo médio até achar algo útil</li>
-          <li data-i18n-key="metod.tool_calc_li_4">Etapas depois que o arquivo aparece</li>
-          <li data-i18n-key="metod.tool_calc_li_5">Maior gargalo</li>
-        </ul>
-        <div class="met-tool-card__result" data-i18n-key="metod.tool_calc_result">h/mês · gargalo principal · onde o Allybi reduziria</div>
-        <a href="tempo.html" class="allybi-btn allybi-btn--primary" data-event="methodology_calculator_cta_click" data-i18n-key="metod.cta_calc">Calcular meu tempo</a>
-      </div>
-      <div class="met-tool-card allybi-reveal">
-        <span class="met-tool-card__badge" data-i18n-key="metod.tool_diag_badge">Time</span>
-        <h3 data-i18n-key="metod.tool_diag_name">Diagnóstico do Fluxo</h3>
-        <p class="met-tool-card__promise" data-i18n-key="metod.tool_diag_promise">Mapeia onde o caminho perde certeza entre o pedido e o envio.</p>
-        <ul class="met-tool-card__list">
-          <li data-i18n-key="metod.tool_diag_li_1">Origem do pedido</li>
-          <li data-i18n-key="metod.tool_diag_li_2">Primeiro lugar onde o time procura</li>
-          <li data-i18n-key="metod.tool_diag_li_3">Onde a informação costuma estar</li>
-          <li data-i18n-key="metod.tool_diag_li_4">Como a versão é confirmada</li>
-          <li data-i18n-key="metod.tool_diag_li_5">O que trava antes do envio</li>
-          <li data-i18n-key="metod.tool_diag_li_6">Erro mais caro</li>
-        </ul>
-        <div class="met-tool-card__result" data-i18n-key="metod.tool_diag_result">score 0–100 · maior atrito · etapa que o Allybi reduziria</div>
-        <a href="diagnostico.html" class="allybi-btn allybi-btn--primary" data-event="methodology_diagnostic_cta_click" data-i18n-key="metod.cta_diag">Mapear fluxo do time</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     3. WHY THIS EXISTS
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.cost_title">O custo não aparece quando o arquivo abre.</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.cost_sub">Ele aparece no caminho inteiro: procurar, confirmar versão, achar fonte, preparar contexto e enviar sem erro.</p>
-
-    <div class="met-scenario allybi-reveal">
-      <div class="met-scenario__grid">
-        <div>
-          <p class="met-scenario__path-label" data-i18n-key="metod.scenario_quote">"qual versão eu mando?"</p>
-          <div class="met-scenario__path">
-            <div class="met-scenario__step" data-i18n-key="metod.scenario_step_request">Pedido</div>
-            <div class="met-scenario__step" data-i18n-key="metod.scenario_step_search">Procurar</div>
-            <div class="met-scenario__step met-scenario__step--yellow" data-i18n-key="metod.scenario_step_version">Versão?</div>
-            <div class="met-scenario__step met-scenario__step--yellow" data-i18n-key="metod.scenario_step_source">Fonte?</div>
-            <div class="met-scenario__step met-scenario__step--yellow" data-i18n-key="metod.scenario_step_context">Contexto?</div>
-            <div class="met-scenario__step" data-i18n-key="metod.scenario_step_send">Envio</div>
+      <aside class="tools-method-hero-visual" aria-label="Resumo das ferramentas Allybi">
+        <div class="tools-method-hero-half">
+          <span class="tools-method-hero-half-eyebrow">CALCULADORA</span>
+          <div>
+            <div class="tools-method-hero-half-metric">h/mês</div>
+            <p class="tools-method-hero-half-caption">frequência × caminho manual × 4,33 semanas</p>
           </div>
         </div>
+        <div class="divider"></div>
+        <div class="tools-method-hero-half">
+          <span class="tools-method-hero-half-eyebrow">DIAGNÓSTICO</span>
+          <div>
+            <div class="tools-method-hero-half-metric">0&ndash;100</div>
+            <p class="tools-method-hero-half-caption">seis etapas com pesos definidos</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- §62 DOIS TESTES. DUAS RESPOSTAS. -->
+  <section class="tools-warm-slab">
+    <div class="tools-warm-slab-inner">
+      <h2 class="tools-h2">Dois testes. Duas respostas.</h2>
+      <p class="tools-sub">Um transforma o caminho em horas. O outro transforma o fluxo em uma pontuação de atrito.</p>
+      <div class="tools-twosplit">
         <div>
-          <p class="met-scenario__copy" data-i18n-key="metod.scenario_copy">Cada etapa parece pequena. Repetida toda semana, vira tempo perdido, atraso e risco de enviar errado.</p>
-          <p class="met-scenario__trust" data-i18n-key="metod.scenario_trust">Por isso os testes perguntam sobre o fluxo, não sobre documentos reais.</p>
+          <p class="tools-twosplit-item-eyebrow">INDIVIDUAL</p>
+          <h3 class="tools-twosplit-item-title">Calculadora do Tempo Perdido</h3>
+          <p class="tools-twosplit-item-body">Estima horas por mês, equivalente anual e maior gargalo.</p>
+          <p class="tools-twosplit-item-output">h/mês · h/ano · dias úteis · gargalo</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     4. WHAT WE ASK / DO NOT ASK / DO NOT CLAIM
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section" style="background:#FAFAF8">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.scope_title">O que entra — e o que fica fora.</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.scope_sub">A metodologia foi desenhada para revelar o padrão sem pedir arquivos, nomes de clientes ou acesso ao sistema.</p>
-
-    <div class="met-3col">
-      <div class="met-3col-card allybi-reveal">
-        <h3 data-i18n-key="metod.ask_title">O que perguntamos</h3>
-        <ul>
-          <li data-i18n-key="metod.ask_li_1">Com que frequência o fluxo acontece</li>
-          <li data-i18n-key="metod.ask_li_2">Onde você ou o time procura</li>
-          <li data-i18n-key="metod.ask_li_3">Quanto tempo costuma levar</li>
-          <li data-i18n-key="metod.ask_li_4">O que falta depois que o arquivo aparece</li>
-          <li data-i18n-key="metod.ask_li_5">Onde a certeza quebra</li>
-        </ul>
-      </div>
-      <div class="met-3col-card allybi-reveal">
-        <h3 data-i18n-key="metod.skip_title">O que não pedimos</h3>
-        <ul>
-          <li data-i18n-key="metod.skip_li_1">Documentos reais</li>
-          <li data-i18n-key="metod.skip_li_2">Nomes de clientes</li>
-          <li data-i18n-key="metod.skip_li_3">CPFs, CNPJs ou dados sensíveis</li>
-          <li data-i18n-key="metod.skip_li_4">Valores financeiros reais</li>
-          <li data-i18n-key="metod.skip_li_5">Login para responder</li>
-          <li data-i18n-key="metod.skip_li_6">Acesso às suas ferramentas</li>
-        </ul>
-      </div>
-      <div class="met-3col-card allybi-reveal">
-        <h3 data-i18n-key="metod.disclaim_title">O que não prometemos</h3>
-        <ul>
-          <li data-i18n-key="metod.disclaim_li_1">Não é auditoria financeira</li>
-          <li data-i18n-key="metod.disclaim_li_2">Não é pesquisa nacional</li>
-          <li data-i18n-key="metod.disclaim_li_3">Não é análise jurídica</li>
-          <li data-i18n-key="metod.disclaim_li_4">Não prova produtividade individual</li>
-          <li data-i18n-key="metod.disclaim_li_5">Não mede desempenho de pessoas</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     5. HOW THE CALCULADORA ESTIMATES TIME
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.calc_title">Como a Calculadora estima o tempo perdido</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.calc_sub">A conta transforma respostas simples em uma estimativa conservadora de horas por mês.</p>
-
-    <div class="met-formula-card allybi-reveal">
-      <div class="met-formula-main" data-i18n-key="metod.formula_main">frequência × caminho manual × 4,33 semanas = tempo por mês</div>
-      <p class="met-formula-sub" data-i18n-key="metod.formula_sub">O "caminho manual" combina: tempo até achar algo útil, quantidade de lugares onde você procura, etapas depois que o arquivo aparece e retrabalho.</p>
-
-      <div class="met-inputs-grid">
-        <div class="met-input-item">
-          <strong data-i18n-key="metod.input_freq_name">Frequência</strong>
-          <span data-i18n-key="metod.input_freq_desc">Quantas vezes por semana esse fluxo acontece.</span>
-        </div>
-        <div class="met-input-item">
-          <strong data-i18n-key="metod.input_disp_name">Dispersão</strong>
-          <span data-i18n-key="metod.input_disp_desc">Quanto a busca se espalha entre e-mail, nuvem, pasta, WhatsApp, desktop ou alguém do time.</span>
-        </div>
-        <div class="met-input-item">
-          <strong data-i18n-key="metod.input_search_name">Tempo de busca</strong>
-          <span data-i18n-key="metod.input_search_desc">Quanto demora até encontrar algo útil.</span>
-        </div>
-        <div class="met-input-item">
-          <strong data-i18n-key="metod.input_steps_name">Etapas depois de achar</strong>
-          <span data-i18n-key="metod.input_steps_desc">Confirmar versão, achar fonte, explicar contexto, preparar resposta, conferir destinatário.</span>
-        </div>
-        <div class="met-input-item" style="grid-column: 1 / -1">
-          <strong data-i18n-key="metod.input_pressure_name">Pressão</strong>
-          <span data-i18n-key="metod.input_pressure_desc">O erro ou travamento que mais pesa quando precisa enviar rápido.</span>
-        </div>
-      </div>
-
-      <button class="met-formula-expand" aria-expanded="false" data-event="methodology_formula_expand" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('is-open')" data-i18n-key="metod.formula_expand">Ver fórmula completa</button>
-      <div class="met-formula-detail" data-i18n-key="metod.formula_detail">
-        busca por item = tempo médio × multiplicador de dispersão<br>
-        etapas extras = soma das confirmações depois que o arquivo aparece<br>
-        tempo semanal = frequência × (busca por item + etapas extras) + retrabalho<br>
-        tempo mensal = tempo semanal × 4,33 ÷ 60
-      </div>
-      <p class="met-formula-note" data-i18n-key="metod.formula_note">O resultado é uma estimativa conservadora. Serve para tornar o custo visível, não para substituir uma auditoria.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     6. HOW THE DIAGNÓSTICO SCORES FRICTION
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section" style="background:#FAFAF8">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.diag_title">Como o Diagnóstico calcula o atrito do fluxo</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.diag_sub">O score mostra onde o time perde certeza antes de enviar.</p>
-
-    <div class="met-dimensions">
-      <div class="met-dim-card allybi-reveal">
+        <div class="divider"></div>
         <div>
-          <strong data-i18n-key="metod.dim_scattered_name">Fontes espalhadas</strong>
-          <div class="met-dim-bar"><span style="width:0" data-width="75%"></span></div>
+          <p class="tools-twosplit-item-eyebrow">TIME</p>
+          <h3 class="tools-twosplit-item-title">Diagnóstico do Fluxo</h3>
+          <p class="tools-twosplit-item-body">Mapeia pedido, busca, versão, fonte, confirmação e envio.</p>
+          <p class="tools-twosplit-item-output">0&ndash;100 · faixa de atrito · maior etapa</p>
         </div>
-        <p data-i18n-key="metod.dim_scattered_desc">Quando a resposta pode estar em e-mail, pasta, nuvem, conversa, anexo antigo ou alguém do time.</p>
       </div>
-      <div class="met-dim-card allybi-reveal">
+    </div>
+  </section>
+
+  <!-- §63 O QUE ENTRA. O QUE FICA FORA. -->
+  <section class="tools-section" style="background:#fff">
+    <div class="tools-container">
+      <h2 class="tools-h2">O que entra. O que fica fora.</h2>
+      <div class="tools-ledger-3" style="margin-top:36px">
         <div>
-          <strong data-i18n-key="metod.dim_fragile_name">Versão frágil</strong>
-          <div class="met-dim-bar"><span style="width:0" data-width="60%"></span></div>
+          <p class="tools-ledger-item-eyebrow">O QUE PERGUNTAMOS</p>
+          <ul style="margin-top:10px;list-style:none;padding:0;color:#55534E;font-size:15px;line-height:24px">
+            <li>· frequência</li>
+            <li>· lugares onde procura</li>
+            <li>· tempo por faixa</li>
+            <li>· etapas depois de achar</li>
+            <li>· forma de confirmação</li>
+            <li>· revisão antes do envio</li>
+          </ul>
         </div>
-        <p data-i18n-key="metod.dim_fragile_desc">Quando a confirmação depende de nome do arquivo, data, pasta ou memória.</p>
-      </div>
-      <div class="met-dim-card allybi-reveal">
         <div>
-          <strong data-i18n-key="metod.dim_invisible_name">Fonte invisível</strong>
-          <div class="met-dim-bar"><span style="width:0" data-width="50%"></span></div>
+          <p class="tools-ledger-item-eyebrow">O QUE NÃO PEDIMOS</p>
+          <ul style="margin-top:10px;list-style:none;padding:0;color:#55534E;font-size:15px;line-height:24px">
+            <li>· documentos</li>
+            <li>· nomes de clientes</li>
+            <li>· empresa para começar</li>
+            <li>· valores reais</li>
+            <li>· login</li>
+            <li>· acesso às ferramentas</li>
+          </ul>
         </div>
-        <p data-i18n-key="metod.dim_invisible_desc">Quando falta origem, aprovação ou contexto suficiente para confiar.</p>
-      </div>
-      <div class="met-dim-card allybi-reveal">
         <div>
-          <strong data-i18n-key="metod.dim_manual_name">Envio manual</strong>
-          <div class="met-dim-bar"><span style="width:0" data-width="45%"></span></div>
+          <p class="tools-ledger-item-eyebrow">O QUE NÃO AFIRMAMOS</p>
+          <ul style="margin-top:10px;list-style:none;padding:0;color:#55534E;font-size:15px;line-height:24px">
+            <li>· não é auditoria</li>
+            <li>· não é benchmark</li>
+            <li>· não mede desempenho</li>
+            <li>· não prova produtividade</li>
+            <li>· não substitui análise técnica</li>
+          </ul>
         </div>
-        <p data-i18n-key="metod.dim_manual_desc">Quando ainda falta montar mensagem, anexar, conferir destinatário e preparar resposta.</p>
       </div>
-      <div class="met-dim-card allybi-reveal">
-        <div>
-          <strong data-i18n-key="metod.dim_dependency_name">Dependência de confirmação</strong>
-          <div class="met-dim-bar"><span style="width:0" data-width="65%"></span></div>
+    </div>
+  </section>
+
+  <!-- §64+§65 CALCULADORA -->
+  <section id="calculadora" class="tools-bottleneck-section tools-bottleneck-section--inverted tools-section">
+    <div class="tools-container">
+      <p class="tools-eyebrow" style="color:rgba(255,255,255,.6)">CALCULADORA</p>
+      <h2 class="tools-h2">Como o tempo vira horas por mês.</h2>
+      <p class="tools-sub">A fórmula combina frequência, busca, dispersão, etapas depois de achar e rechecagem.</p>
+      <p class="tools-method-formula">frequência semanal × minutos por ocorrência × 4,33 ÷ 60</p>
+
+      <div class="tools-method-tables" data-tools-accordion data-first-open>
+        <div class="tools-method-table">
+          <button type="button" data-acc-trigger style="all:unset;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center"><h3>Frequência (vezes por semana)</h3></button>
+          <div data-acc-panel><ul>
+            <li>1 a 2 = 1,5</li><li>3 a 5 = 4</li><li>6 a 10 = 8</li><li>11 a 20 = 15,5</li><li>Mais de 20 = 22</li>
+          </ul></div>
         </div>
-        <p data-i18n-key="metod.dim_dependency_desc">Quando a certeza depende de perguntar para alguém.</p>
+        <div class="tools-method-table">
+          <button type="button" data-acc-trigger style="all:unset;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center"><h3>Tempo de busca (minutos)</h3></button>
+          <div data-acc-panel><ul>
+            <li>Menos de 2 = 1 minuto</li><li>2 a 5 = 3,5 minutos</li><li>6 a 10 = 8 minutos</li><li>11 a 20 = 15,5 minutos</li><li>Mais de 20 = 25 minutos</li>
+          </ul></div>
+        </div>
+        <div class="tools-method-table">
+          <button type="button" data-acc-trigger style="all:unset;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center"><h3>Dispersão (multiplicador por lugar)</h3></button>
+          <div data-acc-panel><ul>
+            <li>1 lugar = ×1,00</li><li>2 lugares = ×1,10</li><li>3 lugares = ×1,20</li><li>4 lugares = ×1,30</li><li>5 lugares = ×1,40</li><li>6 ou mais = ×1,50</li>
+          </ul></div>
+        </div>
+        <div class="tools-method-table">
+          <button type="button" data-acc-trigger style="all:unset;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center"><h3>Etapas extras (minutos)</h3></button>
+          <div data-acc-panel><ul>
+            <li>confirmar versão = 3 minutos</li><li>fonte ou contexto = 2,5 minutos</li><li>pedir validação = 3 minutos</li><li>mensagem e anexo = 2,5 minutos</li><li>destinatário e canal = 1,5 minuto</li>
+          </ul></div>
+        </div>
+        <div class="tools-method-table">
+          <button type="button" data-acc-trigger style="all:unset;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center"><h3>Rechecagem (%)</h3></button>
+          <div data-acc-panel><ul>
+            <li>nunca = 0%</li><li>raramente = 8%</li><li>às vezes = 25%</li><li>frequentemente = 50%</li><li>quase sempre = 75%</li>
+          </ul></div>
+        </div>
+      </div>
+      <p class="tools-sub" style="margin-top:18px">A rechecagem repete metade do caminho já percorrido. Por isso o percentual é aplicado sobre 50% da soma entre busca e etapas extras.</p>
+    </div>
+  </section>
+
+  <!-- §66 EXEMPLO DA CALCULADORA -->
+  <section class="tools-warm-slab">
+    <div class="tools-warm-slab-inner">
+      <h2 class="tools-h2">Exemplo de cálculo.</h2>
+      <p class="tools-sub">Respostas usadas: 6 a 10 ocorrências por semana, 4 lugares, 6 a 10 minutos de busca, confirmar versão + fonte + mensagem, rechecagem às vezes.</p>
+      <div class="tools-walkthrough-steps">
+        <div class="tools-walkthrough-step">1. Busca por ocorrência: 8 × 1,30 = 10,4 min</div>
+        <div class="tools-walkthrough-step">2. Etapas extras: 3 + 2,5 + 2,5 = 8 min</div>
+        <div class="tools-walkthrough-step">3. Rechecagem: (10,4 + 8) × 25% × 50% = 2,3 min</div>
+        <div class="tools-walkthrough-step">4. Minutos por ocorrência: 10,4 + 8 + 2,3 = 20,7 min</div>
+        <div class="tools-walkthrough-step">5. Tempo mensal: 8 × 20,7 × 4,33 ÷ 60 = 11,95 h</div>
+      </div>
+      <ul class="tools-bands" style="margin-top:22px">
+        <li><strong>Resultado exibido:</strong> ≈ 12 h/mês</li>
+        <li><strong>Equivalente anual:</strong> ≈ 144 h/ano</li>
+        <li><strong>Dias úteis:</strong> ≈ 18 dias úteis</li>
+        <li><strong>Faixa estimada:</strong> 9,5 a 14,5 h/mês</li>
+      </ul>
+      <p class="tools-sub" style="margin-top:14px">O arredondamento evita falsa precisão. A faixa usa 20% para cima e para baixo.</p>
+    </div>
+  </section>
+
+  <!-- §67+§68 DIAGNÓSTICO -->
+  <section id="diagnostico" class="tools-section" style="background:#fff">
+    <div class="tools-container">
+      <p class="tools-eyebrow">DIAGNÓSTICO</p>
+      <h2 class="tools-h2">Como seis respostas viram uma pontuação de atrito.</h2>
+      <p class="tools-sub">Cada etapa recebe valor de 0 a 3. O peso transforma as respostas em uma pontuação de 0 a 100.</p>
+
+      <ul class="tools-bands" style="margin-top:22px;max-width:560px">
+        <li><strong>Pedido</strong> · peso 12</li>
+        <li><strong>Busca</strong> · peso 18</li>
+        <li><strong>Versão</strong> · peso 20</li>
+        <li><strong>Fonte</strong> · peso 20</li>
+        <li><strong>Confirmação</strong> · peso 18</li>
+        <li><strong>Envio</strong> · peso 12</li>
+      </ul>
+
+      <p style="margin-top:16px;font-family:Menlo,monospace;background:#F5F5F5;padding:10px 14px;border-radius:10px;display:inline-block">pontuação = soma de (peso × resposta) ÷ 3</p>
+
+      <ul class="tools-bands" style="margin-top:18px;max-width:560px">
+        <li><strong>0</strong> · pouca fricção</li>
+        <li><strong>1</strong> · fricção leve</li>
+        <li><strong>2</strong> · fricção recorrente</li>
+        <li><strong>3</strong> · fricção forte</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- §68 EXEMPLO DIAGNÓSTICO -->
+  <section class="tools-section" style="background:#F5F5F5">
+    <div class="tools-container">
+      <h2 class="tools-h2">Exemplo de pontuação.</h2>
+      <p class="tools-sub">Respostas: Pedido = 1, Busca = 2, Versão = 2, Fonte = 3, Confirmação = 2, Envio = 2.</p>
+      <div class="tools-walkthrough-steps">
+        <div class="tools-walkthrough-step">Pedido: 12 × 1 ÷ 3 = 4</div>
+        <div class="tools-walkthrough-step">Busca: 18 × 2 ÷ 3 = 12</div>
+        <div class="tools-walkthrough-step">Versão: 20 × 2 ÷ 3 = 13,3</div>
+        <div class="tools-walkthrough-step">Fonte: 20 × 3 ÷ 3 = 20</div>
+        <div class="tools-walkthrough-step">Confirmação: 18 × 2 ÷ 3 = 12</div>
+        <div class="tools-walkthrough-step">Envio: 12 × 2 ÷ 3 = 8</div>
+        <div class="tools-walkthrough-step"><strong>Soma: 69,3 · arredondado para 69/100</strong></div>
+      </div>
+      <ul class="tools-bands" style="margin-top:18px;max-width:560px">
+        <li><strong>Faixa:</strong> Atrito alto</li>
+        <li><strong>Maior gargalo:</strong> Fonte invisível</li>
+      </ul>
+      <p class="tools-sub" style="margin-top:14px">A pontuação não julga pessoas. Ela mostra onde o caminho depende de busca, memória e validação manual.</p>
+    </div>
+  </section>
+
+  <!-- §69 COMO LER -->
+  <section class="tools-warm-slab">
+    <div class="tools-warm-slab-inner">
+      <h2 class="tools-h2">Como ler o resultado.</h2>
+      <p class="tools-sub">Calculadora — faixas por horas mensais:</p>
+      <ul class="tools-bands">
+        <li><strong>abaixo de 3 h/mês</strong> · Pequeno no mês. Caro no momento errado.</li>
+        <li><strong>3 a menos de 10</strong> · Uma rotina invisível já ocupa parte do mês.</li>
+        <li><strong>10 a menos de 25</strong> · Dias úteis estão indo para confirmação manual.</li>
+        <li><strong>25 ou mais</strong> · Esse fluxo está caro demais para depender de memória.</li>
+      </ul>
+      <p class="tools-sub" style="margin-top:22px">Diagnóstico — faixas por pontuação:</p>
+      <ul class="tools-bands">
+        <li><strong>0 a 24</strong> · Fluxo claro</li>
+        <li><strong>25 a 49</strong> · Atrito moderado</li>
+        <li><strong>50 a 74</strong> · Atrito alto</li>
+        <li><strong>75 a 100</strong> · Atrito crítico</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- §70 PRIVACIDADE -->
+  <section class="tools-bottleneck-section tools-bottleneck-section--inverted tools-section">
+    <div class="tools-container">
+      <h2 class="tools-h2">A medição começa sem documentos.</h2>
+      <div class="tools-result-rows" style="margin-top:26px">
+        <div style="border-color:rgba(255,255,255,.16) !important;color:#fff"><span class="tools-result-rows-label" style="color:rgba(255,255,255,.6)">SEM ARQUIVOS</span><span class="tools-result-rows-value" style="color:rgba(255,255,255,.86)">Nenhum contrato, planilha, proposta ou anexo é pedido.</span></div>
+        <div style="border-color:rgba(255,255,255,.16) !important;color:#fff"><span class="tools-result-rows-label" style="color:rgba(255,255,255,.6)">SEM NOMES DE CLIENTES</span><span class="tools-result-rows-value" style="color:rgba(255,255,255,.86)">As perguntas descrevem padrões, não casos reais.</span></div>
+        <div style="border-color:rgba(255,255,255,.16) !important;color:#fff"><span class="tools-result-rows-label" style="color:rgba(255,255,255,.6)">SEM LOGIN</span><span class="tools-result-rows-value" style="color:rgba(255,255,255,.86)">Você não conecta Outlook, OneDrive, SharePoint, Google Drive ou WhatsApp para responder.</span></div>
+        <div style="border-color:rgba(255,255,255,.16) !important;color:#fff"><span class="tools-result-rows-label" style="color:rgba(255,255,255,.6)">LEAD OPCIONAL</span><span class="tools-result-rows-value" style="color:rgba(255,255,255,.86)">Contato só é pedido depois do resultado, se você solicitar a leitura completa.</span></div>
+        <div style="border-color:rgba(255,255,255,.16) !important;color:#fff"><span class="tools-result-rows-label" style="color:rgba(255,255,255,.6)">RESPOSTA NO NAVEGADOR</span><span class="tools-result-rows-value" style="color:rgba(255,255,255,.86)">O cálculo usa as respostas no cliente. O lead opcional recebe apenas o resumo derivado.</span></div>
+      </div>
+      <p style="margin-top:20px"><a href="privacy.html" style="color:#fff;opacity:.85;text-decoration:underline">Ver Política de Privacidade</a></p>
+    </div>
+  </section>
+
+  <!-- §71 FAQ -->
+  <section class="tools-section" style="background:#fff">
+    <div class="tools-container">
+      <h2 class="tools-h2">Perguntas frequentes.</h2>
+      <div class="tools-faq" data-tools-faq>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">A Calculadora é uma auditoria?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">Não. É uma estimativa baseada em faixas de frequência, tempo e etapas do fluxo.</div></div>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">O Diagnóstico mede desempenho de pessoas?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">Não. Ele mede onde o caminho perde certeza. O problema é o fluxo, não uma pessoa específica.</div></div>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">Preciso enviar documentos?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">Não. Nenhum arquivo é pedido para responder.</div></div>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">Por que usam 4,33 semanas?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">Porque 52 semanas divididas por 12 meses resultam em aproximadamente 4,33 semanas por mês.</div></div>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">Por que existe uma faixa estimada?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">Porque as respostas são dadas por faixas. A margem de 20% reduz falsa precisão.</div></div>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">O resultado compara minha empresa com outras?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">Não. Não existe benchmark ou percentil. O resultado usa apenas suas respostas.</div></div>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">O Allybi pesquisa no WhatsApp?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">Não. WhatsApp é handoff. O Allybi prepara a mensagem e abre o aplicativo para você enviar.</div></div>
+        <div class="tools-faq-item"><button type="button" class="tools-faq-trigger" aria-expanded="false">Como o Allybi entra depois do resultado?<span aria-hidden="true">+</span></button><div class="tools-faq-panel">O Allybi conecta fontes, recebe uploads, mostra a origem, ajuda a comparar versões e leva arquivo, mensagem, destinatário e canal para revisão.</div></div>
       </div>
     </div>
-    <div class="met-scoring-note allybi-reveal" data-i18n-key="metod.scoring_note">Cada dimensão recebe pontos de 0 a 20. A soma forma o score final de 0 a 100.</div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     7. HOW TO READ THE RESULT
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.read_title">Como ler o resultado</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.read_sub">O número não julga pessoas. Ele mostra quanto o fluxo depende de procura, memória e confirmação manual.</p>
-
-    <div class="met-results-grid">
-      <div class="met-result-col allybi-reveal">
-        <h3 data-i18n-key="metod.read_calc_h">Calculadora</h3>
-        <p class="met-result-col__sub" data-i18n-key="metod.read_calc_sub">tempo por mês · equivalente anual · maior gargalo · onde o Allybi reduziria</p>
-        <div class="met-band"><strong data-i18n-key="metod.read_calc_b1_label">0–3 h/mês</strong><span data-i18n-key="metod.read_calc_b1_desc">Pequeno no mês. Caro no momento errado.</span></div>
-        <div class="met-band"><strong data-i18n-key="metod.read_calc_b2_label">3–10 h/mês</strong><span data-i18n-key="metod.read_calc_b2_desc">Rotina invisível.</span></div>
-        <div class="met-band"><strong data-i18n-key="metod.read_calc_b3_label">10–25 h/mês</strong><span data-i18n-key="metod.read_calc_b3_desc">Dias úteis em confirmação manual.</span></div>
-        <div class="met-band"><strong data-i18n-key="metod.read_calc_b4_label">25+ h/mês</strong><span data-i18n-key="metod.read_calc_b4_desc">Fluxo caro demais para depender de memória.</span></div>
-      </div>
-      <div class="met-result-col allybi-reveal">
-        <h3 data-i18n-key="metod.read_diag_h">Diagnóstico</h3>
-        <p class="met-result-col__sub" data-i18n-key="metod.read_diag_sub">score 0–100 · faixa de atrito · maior dimensão · etapa reduzida pelo Allybi</p>
-        <div class="met-band"><strong data-i18n-key="metod.read_diag_b1_label">0–25</strong><span data-i18n-key="metod.read_diag_b1_desc">Fluxo claro.</span></div>
-        <div class="met-band"><strong data-i18n-key="metod.read_diag_b2_label">26–50</strong><span data-i18n-key="metod.read_diag_b2_desc">Atrito moderado.</span></div>
-        <div class="met-band"><strong data-i18n-key="metod.read_diag_b3_label">51–75</strong><span data-i18n-key="metod.read_diag_b3_desc">Alto atrito.</span></div>
-        <div class="met-band"><strong data-i18n-key="metod.read_diag_b4_label">76–100</strong><span data-i18n-key="metod.read_diag_b4_desc">Fluxo dependente demais de confirmação manual.</span></div>
+  <!-- §72 CTA FINAL -->
+  <section class="tools-section" style="background:#fff;text-align:center">
+    <div class="tools-container">
+      <h2 class="tools-h2" style="text-align:center">Meça o caminho antes de tentar corrigir no escuro.</h2>
+      <p class="tools-sub" style="margin-left:auto;margin-right:auto;text-align:center">Use a Calculadora para uma leitura individual. Use o Diagnóstico para mapear o fluxo do time.</p>
+      <div class="tools-actions" style="justify-content:center">
+        <a class="tools-btn tools-btn--primary" href="tempo-questionario.html">Calcular meu tempo</a>
+        <a class="tools-btn tools-btn--secondary" href="diagnostico-questionario.html">Mapear fluxo do time</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     8. PRIVACY AND LGPD
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section" style="background:#FAFAF8" data-event="methodology_privacy_section_view">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.privacy_title">Privacidade desde a pergunta.</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.privacy_sub">As ferramentas foram desenhadas para medir o caminho, não para coletar documentos.</p>
-
-    <div class="met-privacy-grid">
-      <div class="met-priv-card allybi-reveal">
-        <h3 data-i18n-key="metod.priv_files_title">Sem arquivos</h3>
-        <p data-i18n-key="metod.priv_files_desc">Você não envia contratos, propostas, planilhas ou anexos para responder.</p>
-      </div>
-      <div class="met-priv-card allybi-reveal">
-        <h3 data-i18n-key="metod.priv_clients_title">Sem nomes de clientes</h3>
-        <p data-i18n-key="metod.priv_clients_desc">As perguntas falam sobre o fluxo, não sobre casos reais.</p>
-      </div>
-      <div class="met-priv-card allybi-reveal">
-        <h3 data-i18n-key="metod.priv_tools_title">Sem acesso às ferramentas</h3>
-        <p data-i18n-key="metod.priv_tools_desc">Não pedimos login, conexão com e-mail, Drive, OneDrive, SharePoint ou WhatsApp para calcular.</p>
-      </div>
-      <div class="met-priv-card allybi-reveal">
-        <h3 data-i18n-key="metod.priv_minimal_title">Dados mínimos</h3>
-        <p data-i18n-key="metod.priv_minimal_desc">Usamos respostas para mostrar o resultado e, se você pedir, enviar a leitura completa.</p>
-      </div>
-      <div class="met-priv-card allybi-reveal">
-        <h3 data-i18n-key="metod.priv_lgpd_title">LGPD</h3>
-        <p data-i18n-key="metod.priv_lgpd_desc">A LGPD é a Lei nº 13.709/2018. A Allybi evita coletar documentos, nomes de clientes e dados sensíveis nessas ferramentas.</p>
-      </div>
-    </div>
-    <p class="met-legal-micro allybi-reveal" data-i18n-key="metod.legal_micro">Esta página explica a metodologia das ferramentas Allybi. Não é aconselhamento jurídico, auditoria financeira ou pesquisa estatística oficial.</p>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     9. HOW ALLYBI REDUCES THE PATH
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.ba_title">O Allybi reduz o mesmo caminho que os testes revelam.</h2>
-    <p class="met-section__sub allybi-reveal" data-i18n-key="metod.ba_sub">Os testes mostram onde o fluxo pesa. O Allybi transforma esse caminho em uma conversa com fonte e revisão.</p>
-
-    <div class="met-ba-grid">
-      <div class="met-ba-row allybi-reveal">
-        <span class="met-ba-manual" data-i18n-key="metod.ba_manual_1">Procurar em vários lugares</span>
-        <span class="met-ba-arrow">&rarr;</span>
-        <span class="met-ba-allybi" data-i18n-key="metod.ba_allybi_1">Perguntar no chat</span>
-      </div>
-      <div class="met-ba-row allybi-reveal">
-        <span class="met-ba-manual" data-i18n-key="metod.ba_manual_2">Confirmar versão no olho</span>
-        <span class="met-ba-arrow">&rarr;</span>
-        <span class="met-ba-allybi" data-i18n-key="metod.ba_allybi_2">Comparar e ver fonte</span>
-      </div>
-      <div class="met-ba-row allybi-reveal">
-        <span class="met-ba-manual" data-i18n-key="metod.ba_manual_3">Pedir contexto para alguém</span>
-        <span class="met-ba-arrow">&rarr;</span>
-        <span class="met-ba-allybi" data-i18n-key="metod.ba_allybi_3">Contexto visível na resposta</span>
-      </div>
-      <div class="met-ba-row allybi-reveal">
-        <span class="met-ba-manual" data-i18n-key="metod.ba_manual_4">Montar resposta do zero</span>
-        <span class="met-ba-arrow">&rarr;</span>
-        <span class="met-ba-allybi" data-i18n-key="metod.ba_allybi_4">Mensagem pronta</span>
-      </div>
-      <div class="met-ba-row allybi-reveal">
-        <span class="met-ba-manual" data-i18n-key="metod.ba_manual_5">Medo de enviar errado</span>
-        <span class="met-ba-arrow">&rarr;</span>
-        <span class="met-ba-allybi" data-i18n-key="metod.ba_allybi_5">Revisão antes do envio</span>
-      </div>
-    </div>
-
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:48px" class="allybi-reveal">
-      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="methodology_final_cta_click" data-i18n-key="metod.cta_trial">Começar grátis por 30 dias</a>
-      <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary allybi-btn--lg" data-i18n-key="metod.cta_how">Ver como funciona</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     10. FAQ
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="met-section" style="background:#FAFAF8">
-  <div class="allybi-container">
-    <h2 class="met-section__title allybi-reveal" data-i18n-key="metod.faq_title">Perguntas sobre a metodologia</h2>
-
-    <div class="met-faq">
-      <div class="met-faq-item allybi-reveal">
-        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open" data-i18n-key="metod.faq_q1">A Calculadora é uma auditoria?</button>
-        <div class="met-faq-a" data-i18n-key="metod.faq_a1">Não. É uma estimativa conservadora baseada nas suas respostas sobre frequência, tempo e etapas do fluxo.</div>
-      </div>
-      <div class="met-faq-item allybi-reveal">
-        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open" data-i18n-key="metod.faq_q2">O Diagnóstico mede desempenho de pessoas?</button>
-        <div class="met-faq-a" data-i18n-key="metod.faq_a2">Não. Ele mede onde o caminho perde certeza. O problema é o fluxo manual, não uma pessoa específica.</div>
-      </div>
-      <div class="met-faq-item allybi-reveal">
-        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open" data-i18n-key="metod.faq_q3">Preciso enviar documentos?</button>
-        <div class="met-faq-a" data-i18n-key="metod.faq_a3">Não. Nenhum arquivo é pedido para responder à Calculadora ou ao Diagnóstico.</div>
-      </div>
-      <div class="met-faq-item allybi-reveal">
-        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open" data-i18n-key="metod.faq_q4">Por que vocês perguntam onde eu procuro?</button>
-        <div class="met-faq-a" data-i18n-key="metod.faq_a4">Porque o tempo costuma aparecer quando a informação se espalha entre e-mail, pasta, nuvem, conversa, anexo ou alguém do time.</div>
-      </div>
-      <div class="met-faq-item allybi-reveal">
-        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open" data-i18n-key="metod.faq_q5">Por que o resultado é uma estimativa?</button>
-        <div class="met-faq-a" data-i18n-key="metod.faq_a5">Porque usamos faixas de resposta, não auditoria técnica do ambiente. A ideia é tornar o custo visível rápido, sem acesso aos seus dados.</div>
-      </div>
-      <div class="met-faq-item allybi-reveal">
-        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open" data-i18n-key="metod.faq_q6">Como o Allybi reduz esse problema?</button>
-        <div class="met-faq-a" data-i18n-key="metod.faq_a6">Conectando fontes, recebendo uploads, respondendo com fonte e preparando e-mail ou WhatsApp handoff para revisão antes do envio.</div>
-      </div>
-      <div class="met-faq-item allybi-reveal">
-        <button class="met-faq-q" aria-expanded="false" data-event="methodology_faq_open" data-i18n-key="metod.faq_q7">O Allybi pesquisa no WhatsApp?</button>
-        <div class="met-faq-a" data-i18n-key="metod.faq_a7">Não. WhatsApp é handoff: o Allybi prepara a mensagem e abre o WhatsApp para você revisar e mandar. Ele não lê nem sincroniza sua caixa de entrada.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     11. FINAL CTA
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="s-cta">
-  <div class="allybi-container">
-    <div class="s-cta__inner">
-      <h2 data-i18n-key="metod.final_title">Meça o caminho antes de tentar corrigir no escuro.</h2>
-      <p data-i18n-key="metod.final_sub">Comece pela Calculadora se o problema é individual. Use o Diagnóstico se quer mapear o fluxo do time.</p>
-      <div class="s-cta__ctas">
-        <a href="tempo.html" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="methodology_final_cta_click" data-i18n-key="metod.cta_calc">Calcular meu tempo</a>
-        <a href="diagnostico.html" class="allybi-btn allybi-btn--secondary-inverse allybi-btn--lg" data-event="methodology_final_cta_click" data-i18n-key="metod.cta_diag">Mapear fluxo do time</a>
-      </div>
-      <p style="margin-top:16px;font-size:14px;color:rgba(255,255,255,0.6)"><a href="https://app.allybi.com.br/signup" style="color:rgba(255,255,255,0.8);text-decoration:underline" data-i18n-key="metod.cta_trial">Começar grátis por 30 dias</a></p>
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="allybi-footer">
-  <div class="allybi-footer-inner">
-    <div class="footer-brand">
-      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
-      <p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
     </div>
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-        <div class="footer-col-links">
-          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
-        <div class="footer-col-links">
-          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
-        <div class="footer-col-links">
-          <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-        <div class="footer-col-links">
-          <a href="about.html" data-i18n-key="footer.about">About</a>
-          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
-          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-        <div class="footer-col-links">
-          <a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a>
-          <a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-          <a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a>
-          <a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a>
-          <a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-mobile-links">
-      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-      <a href="about.html" data-i18n-key="footer.about">About</a>
-      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-      <div class="footer-bottom-right">
-        <div class="language-selector" id="footer-language-selector">
-          <button class="language-toggle" aria-expanded="false">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-            <span class="lang-label">English</span>
-          </button>
-          <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
-            <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
-          </ul>
-        </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="language-switcher.js"></script>
+
 <script src="allybi-header.js"></script>
-<script src="allybi-animations.js"></script>
-<script>
-/* FAQ accordion */
-document.querySelectorAll('.met-faq-q').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-    this.nextElementSibling.classList.toggle('is-open');
-  });
-});
-/* Diagnostic bars animate on scroll */
-if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  var barObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) {
-        var bar = e.target;
-        bar.style.width = bar.getAttribute('data-width');
-        barObserver.unobserve(bar);
-      }
-    });
-  }, { threshold: 0.3 });
-  document.querySelectorAll('.met-dim-bar span[data-width]').forEach(function(bar){
-    barObserver.observe(bar);
-  });
-}
-</script>
+<script src="assets/tools/allybi-tools-data.js"></script>
+<script src="assets/tools/allybi-methodology.js"></script>
+<script src="assets/tools/allybi-tools-qa.js"></script>
 </body>
 </html>

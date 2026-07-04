@@ -6,535 +6,542 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Como funciona | Allybi</title>
-  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar. E-mail via Outlook sai com confirmação. WhatsApp abre como handoff.">
+  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint, Google Drive e uploads. Pergunte no chat, receba resposta com fonte, compare versões e revise antes de enviar.">
   <link rel="canonical" href="https://allybi.com.br/how-it-works.html">
   <link rel="alternate" hreflang="en" href="https://allybi.co/how-it-works.html">
   <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/how-it-works.html">
   <link rel="alternate" hreflang="x-default" href="https://allybi.co/how-it-works.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Como funciona | Allybi">
-  <meta property="og:description" content="Do pedido ao envio, o Allybi mostra fonte, ajuda a confirmar versão e leva a mensagem para revisão.">
+  <meta property="og:description" content="Do pedido ao envio, com fonte e confirmação.">
   <meta property="og:url" content="https://allybi.com.br/how-it-works.html">
   <meta property="og:site_name" content="Allybi">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Como funciona | Allybi">
-  <meta name="twitter:description" content="Do pedido ao envio, o Allybi mostra fonte, ajuda a confirmar versão e leva a mensagem para revisão.">
+  <meta name="twitter:description" content="Do pedido ao envio, com fonte e confirmação.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
   <link rel="stylesheet" href="allybi-header.css">
   <link rel="stylesheet" href="allybi-footer.css">
-  <link rel="stylesheet" href="pages/home.css">
   <link rel="stylesheet" href="pages/how-it-works.css">
   <link rel="stylesheet" href="allybi-responsive.css">
   <noscript>
     <style>
-      .allybi-reveal, .hiw-reveal { opacity: 1 !important; transform: none !important; }
-      .hero-scene[data-state] .hero-scene__source-strip,
-      .hero-scene[data-state] .hero-scene__query,
-      .hero-scene[data-state] .hero-scene__versions,
-      .hero-scene[data-state] .hero-scene__review,
-      .hero-scene[data-state] .hero-scene__send,
-      .hero-scene[data-state] .hero-scene__v,
-      .hero-scene[data-state] .hero-scene__source-line {
-        opacity: 1 !important; transform: none !important;
-      }
+      .hw-reveal { opacity: 1 !important; transform: none !important; }
     </style>
   </noscript>
 </head>
 <body>
 
 <!-- HEADER -->
-<header id="allybi-header" class="allybi-header">
-  <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
-    <nav class="allybi-nav desktop-only">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="nav-dropdown-menu">
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-        <div class="nav-dropdown-menu">
-          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-        <div class="nav-dropdown-menu">
-          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
     </nav>
-    <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
   </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div id="allybi-mobile-menu" class="mobile-menu">
-  <nav class="mobile-menu-nav">
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-      <div class="mobile-dropdown-items">
-        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
-      </div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
     </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-      <div class="mobile-dropdown-items">
-        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-        <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
-      </div>
-    </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-      <div class="mobile-dropdown-items">
-        <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
-      </div>
-    </div>
-    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
-  </nav>
-  <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </div>
 
-
-<main>
+<main id="how-it-works-page">
 
 <!-- ═══════════════════════════════════════════════════════════════
-     1. HERO
+     1. HERO + REQUEST STRIP
      ═══════════════════════════════════════════════════════════════ -->
-<section class="hiw-hero">
-  <div class="allybi-container">
-    <div class="hiw-hero__grid">
-      <div class="hiw-hero__text hiw-reveal">
-        <span class="hiw-hero__eyebrow" data-i18n-key="hiw.hero_eyebrow">Como funciona</span>
-        <h1 data-i18n-key="hiw.hero_h1">Pergunte, confirme e envie sem abrir tudo de novo.</h1>
-        <p class="hiw-hero__sub" data-i18n-key="hiw.hero_support">Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar.</p>
-        <div class="hiw-hero__ctas">
-          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hero.cta_primary">Começar grátis por 30 dias</a>
-          <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="hiw.cta_integrations">Ver integrações</a>
-        </div>
-        <p class="hiw-hero__pricing" data-i18n-key="hiw.hero_pricing">30 dias grátis. Nada sai sem confirmação.</p>
-        <div class="hiw-hero__trust">
-          <span data-i18n-key="hiw.hero_trust1">Resposta com fonte</span>
-          <span data-i18n-key="hiw.hero_trust2">E-mail via Outlook</span>
-          <span data-i18n-key="hiw.hero_trust3">WhatsApp handoff</span>
-          <span data-i18n-key="hiw.hero_trust4">Documentos não treinam modelos</span>
-        </div>
+<section class="hw-hero" aria-labelledby="hw-hero-title">
+  <div class="hw-hero__container">
+    <div class="hw-hero__copy hw-reveal">
+      <span class="hw-eyebrow">COMO FUNCIONA</span>
+      <h1 id="hw-hero-title" class="hw-h1">Pergunte, confirme e envie <span>sem abrir tudo de novo.</span></h1>
+      <p class="hw-sub">Conecte Outlook, OneDrive, SharePoint, Google Drive e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar.</p>
+      <p class="hw-channel">Resposta com fonte · E-mail via Outlook · WhatsApp handoff · Documentos não treinam modelos.</p>
+      <div class="hw-actions">
+        <a class="hw-btn-primary" href="https://app.allybi.com.br">Começar grátis por 30 dias</a>
+        <a class="hw-btn-secondary" href="#fluxo-completo">
+          <span>Ver o fluxo completo</span>
+          <svg class="hw-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
+      <p class="hw-micro">30 dias grátis. Nada sai sem confirmação.</p>
+    </div>
 
-      <div class="hiw-hero__visual hiw-reveal">
-        <div class="hero-scene" id="hiwHeroScene" data-state="idle" role="img" data-i18n-aria-label="hiw.hero_scene_aria" aria-label="O Allybi encontra a versão certa, mostra a fonte e prepara o envio para revisão.">
-          <div class="hero-scene__workspace">
-            <div class="hero-scene__source-strip" data-stage="1">
-              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14"> Outlook</span>
-              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14"> OneDrive</span>
-              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14"> SharePoint</span>
-              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
+    <div class="hw-request hw-reveal">
+      <div class="hw-request__left">
+        <span class="hw-request__label">O PEDIDO</span>
+        <span class="hw-request__meta">Cliente · hoje, 09:12</span>
+      </div>
+      <p class="hw-request__quote">“Qual versão da proposta posso enviar ao cliente?”</p>
+      <div class="hw-request__right">
+        <span>Resposta com fonte</span>
+        <span>Revisão antes do envio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     2. HISTÓRIA PRINCIPAL :6 CAPÍTULOS
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="fluxo-completo" class="workflow-story-section" aria-labelledby="hw-story-title">
+  <div class="hw-story__container">
+    <header class="hw-story__header hw-reveal">
+      <span class="hw-eyebrow">O CAMINHO COMPLETO</span>
+      <h2 id="hw-story-title" class="hw-h2">Um pedido. Seis momentos de controle.</h2>
+      <p class="hw-sub">O mesmo pedido acompanha toda a página. Cada etapa mostra o que muda até o envio revisado.</p>
+    </header>
+
+    <div class="hw-chapters">
+
+      <!-- CAPÍTULO 01 -->
+      <article class="hw-chapter" data-chapter="01">
+        <header class="hw-chapter__copy hw-reveal">
+          <span class="hw-chapter__num">01</span>
+          <h3 class="hw-chapter__title">Conecte o que já usa.</h3>
+          <p class="hw-chapter__desc">Outlook, OneDrive, SharePoint e Google Drive entram com autorização. Uploads ficam disponíveis no mesmo chat.</p>
+        </header>
+        <div class="hw-chapter__visual hw-reveal">
+          <picture class="how-product-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/how-it-works/01-connect-mobile.png">
+            <img src="/assets/landing-shots/how-it-works/01-connect-desktop.png" alt="Tela do Allybi mostrando Outlook, OneDrive, SharePoint e uploads disponíveis no workspace." width="1808" height="1088" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 02 -->
+      <article class="hw-chapter" data-chapter="02">
+        <header class="hw-chapter__copy hw-reveal">
+          <span class="hw-chapter__num">02</span>
+          <h3 class="hw-chapter__title">Pergunte como falaria com alguém.</h3>
+          <p class="hw-chapter__desc">Não existe comando especial. A conversa começa com a pergunta real.</p>
+        </header>
+        <div class="hw-chapter__visual hw-reveal">
+          <picture class="how-product-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/how-it-works/02-question-mobile.png">
+            <img src="/assets/landing-shots/how-it-works/02-question-desktop.png" alt="Composer do chat do Allybi com a pergunta sobre qual proposta foi aprovada pelo cliente." width="1808" height="1088" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 03 -->
+      <article class="hw-chapter" data-chapter="03">
+        <header class="hw-chapter__copy hw-reveal">
+          <span class="hw-chapter__num">03</span>
+          <h3 class="hw-chapter__title">Receba a resposta e veja de onde veio.</h3>
+          <p class="hw-chapter__desc">A resposta não aparece solta. Arquivo, fonte e data ficam juntos.</p>
+        </header>
+        <div class="hw-chapter__visual hw-reveal">
+          <picture class="how-product-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/how-it-works/03-answer-source-mobile.png">
+            <img src="/assets/landing-shots/how-it-works/03-answer-source-desktop.png" alt="Resposta do Allybi com o arquivo aprovado, a fonte do SharePoint e um trecho da fonte." width="1808" height="1088" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 04 -->
+      <article class="hw-chapter" data-chapter="04">
+        <header class="hw-chapter__copy hw-reveal">
+          <span class="hw-chapter__num">04</span>
+          <h3 class="hw-chapter__title">Compare antes de escolher.</h3>
+          <p class="hw-chapter__desc">Arquivos parecidos deixam de depender do nome ou da memória.</p>
+        </header>
+        <div class="hw-chapter__visual hw-reveal">
+          <picture class="how-product-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/how-it-works/04-compare-mobile.png">
+            <img src="/assets/landing-shots/how-it-works/04-compare-desktop.png" alt="Comparação no Allybi entre as versões v3 e v4 da proposta, com mudanças de escopo, valor e status." width="1808" height="1088" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 05 -->
+      <article class="hw-chapter" data-chapter="05">
+        <header class="hw-chapter__copy hw-reveal">
+          <span class="hw-chapter__num">05</span>
+          <h3 class="hw-chapter__title">A mensagem chega pronta para revisão.</h3>
+          <p class="hw-chapter__desc">Destinatário, assunto, mensagem, arquivo e fonte ficam no mesmo lugar.</p>
+        </header>
+        <div class="hw-chapter__visual hw-reveal">
+          <picture class="how-product-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/how-it-works/05-email-draft-mobile.png">
+            <img src="/assets/landing-shots/how-it-works/05-email-draft-desktop.png" alt="Rascunho de e-mail no Allybi com destinatário, assunto, mensagem, arquivo e fonte." width="1808" height="1088" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 06 — antes/depois manual -->
+      <article class="hw-chapter hw-chapter--toggle" data-chapter="06" data-confirm-state="before">
+        <header class="hw-chapter__copy hw-reveal">
+          <span class="hw-chapter__num">06</span>
+          <h3 class="hw-chapter__title">Você confirma antes de sair.</h3>
+          <p class="hw-chapter__desc">A revisão libera Outlook e WhatsApp handoff. Nenhum envio acontece nesta página.</p>
+        </header>
+        <div class="hw-chapter__visual hw-reveal">
+          <div class="confirm-toggle" role="group" aria-labelledby="hw-confirm-toggle-label" data-confirm-toggle hidden>
+            <span class="confirm-toggle__label" id="hw-confirm-toggle-label">ESTADO DA REVISÃO</span>
+            <div class="confirm-toggle__buttons">
+              <button type="button" class="confirm-toggle__btn is-active" data-confirm-state-btn="before" aria-pressed="true" aria-label="Antes da confirmação">Antes</button>
+              <button type="button" class="confirm-toggle__btn" data-confirm-state-btn="after" aria-pressed="false" aria-label="Depois da confirmação">Depois</button>
             </div>
-
-            <div class="hero-scene__body">
-              <div class="hero-scene__query" data-stage="2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <span data-i18n-key="hero.scene.query">qual versão posso enviar ao cliente?</span>
-              </div>
-
-              <div class="hero-scene__versions" data-stage="3">
-                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
-                <ul class="hero-scene__v-list">
-                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
-                    <span class="hero-scene__v-name">contrato_final.pdf</span>
-                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v1_tag">versão anterior</span>
-                  </li>
-                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
-                    <span class="hero-scene__v-name">contrato_final_v3.pdf</span>
-                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v2_tag">fonte incerta</span>
-                  </li>
-                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
-                    <span class="hero-scene__v-name">contrato_final_AGORA.pdf</span>
-                    <span class="hero-scene__v-tag">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                      <span data-i18n-key="hero.scene.v3_tag">fonte confirmada</span>
-                    </span>
-                  </li>
-                </ul>
-                <p class="hero-scene__source-line">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                  <span data-i18n-key="hero.scene.source">SharePoint / Clientes / Contratos / 14 mar</span>
-                </p>
-              </div>
-
-              <div class="hero-scene__review" data-stage="4">
-                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
-                <dl class="hero-scene__review-list">
-                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
-                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd>contrato_final_AGORA.pdf</dd></div>
-                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd>SharePoint</dd></div>
-                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="hero.scene.channel_value">E-mail via Outlook</dd></div>
-                </dl>
-              </div>
-
-              <div class="hero-scene__send" data-stage="5">
-                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="hero.scene.send">Enviar via Outlook</button>
-                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
-              </div>
-            </div>
           </div>
+          <div class="confirm-shot-stage" data-confirm-stage>
+            <picture class="how-product-shot confirm-shot confirm-shot--before is-active" data-confirm-shot="before">
+              <source media="(max-width: 767px)" srcset="/assets/landing-shots/how-it-works/06-confirm-before-mobile.png">
+              <img src="/assets/landing-shots/how-it-works/06-confirm-before-desktop.png" alt="Revisão no Allybi aguardando confirmação, com Outlook e WhatsApp ainda desabilitados." width="1808" height="1088" loading="lazy" decoding="async">
+            </picture>
+            <picture class="how-product-shot confirm-shot confirm-shot--after" data-confirm-shot="after" aria-hidden="true">
+              <source media="(max-width: 767px)" srcset="/assets/landing-shots/how-it-works/06-confirm-after-mobile.png">
+              <img src="/assets/landing-shots/how-it-works/06-confirm-after-desktop.png" alt="Revisão concluída no Allybi, com e-mail via Outlook e WhatsApp handoff liberados." width="1808" height="1088" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <span class="sr-only" data-confirm-live aria-live="polite">Estado exibido: aguardando confirmação.</span>
         </div>
-      </div>
+      </article>
+
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     2. WORKFLOW STORYBOARD — 6 self-contained panels
+     3. SELETOR DE ATRITO
      ═══════════════════════════════════════════════════════════════ -->
-<section class="hiw-story">
-  <div class="hiw-story__container">
-    <div class="hiw-story__header hiw-reveal">
-      <h2 data-i18n-key="hiw.story_h2">Do pedido ao envio, sem abrir tudo de novo.</h2>
-      <p data-i18n-key="hiw.story_sub">O Allybi reduz o caminho inteiro: fonte, pergunta, resposta, versão, mensagem e confirmação.</p>
+<section class="friction-selector-section" aria-labelledby="hw-friction-title">
+  <div class="hw-friction__container">
+    <div class="hw-friction__copy hw-reveal">
+      <span class="hw-eyebrow">DIAGNÓSTICO</span>
+      <h2 id="hw-friction-title" class="hw-h2">Qual parte do caminho seu time mais repete?</h2>
+      <p class="hw-sub">Escolha uma etapa. Depois, mapeie o fluxo completo em menos de 1 minuto.</p>
+      <div class="hw-friction__actions">
+        <a class="hw-btn-primary hw-btn-primary--md" href="/diagnostico-questionario.html">Mapear fluxo do time</a>
+        <a class="hw-btn-secondary hw-btn-secondary--md" href="/tempo-questionario.html">Calcular meu tempo</a>
+      </div>
+      <p class="hw-friction__trust">Nenhum arquivo é pedido. Resultado na hora.</p>
     </div>
 
-    <!-- Panel 1 -->
-    <div class="hiw-panel hiw-reveal">
-      <div class="hiw-panel__text">
-        <span class="hiw-panel__num">01</span>
-        <h3 data-i18n-key="hiw.panel1_title">Conecte ou suba</h3>
-        <p data-i18n-key="hiw.panel1_desc">Conecte Outlook, OneDrive e SharePoint. Ou suba arquivos e pastas para usar no chat.</p>
-        <div class="hiw-panel__chips"><span>Outlook</span><span>OneDrive</span><span>SharePoint</span><span data-i18n-key="hiw.chip_uploads">Uploads</span></div>
+    <fieldset class="hw-friction__panel hw-reveal">
+      <legend class="hw-friction__legend">ONDE O ATRITO APARECE</legend>
+      <div class="hw-friction__options" role="radiogroup">
+        <label class="hw-friction__option">
+          <input type="radio" name="hw-friction" value="pedido">
+          <span>Pedido</span>
+        </label>
+        <label class="hw-friction__option">
+          <input type="radio" name="hw-friction" value="busca">
+          <span>Busca</span>
+        </label>
+        <label class="hw-friction__option">
+          <input type="radio" name="hw-friction" value="versao" checked>
+          <span>Versão</span>
+        </label>
+        <label class="hw-friction__option">
+          <input type="radio" name="hw-friction" value="fonte">
+          <span>Fonte</span>
+        </label>
+        <label class="hw-friction__option">
+          <input type="radio" name="hw-friction" value="confirmacao">
+          <span>Confirmação</span>
+        </label>
+        <label class="hw-friction__option">
+          <input type="radio" name="hw-friction" value="envio">
+          <span>Envio</span>
+        </label>
       </div>
-      <div class="hiw-panel__visual">
-        <div class="hiw-mock"><div class="hiw-mock__bar"><span></span><span></span><span></span></div><div class="hiw-mock__inner">
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
-            <span class="hiw-chip">Contrato_Anderson_v4.pdf</span>
-            <span class="hiw-chip">Deck_Conselho_Q4.pptx</span>
-            <span class="hiw-chip">Escopo_Cliente_Alfa_v2.docx</span>
-          </div>
-          <div class="hiw-mock__success" data-i18n-key="hiw.panel1_mock_success">3 arquivos importados do OneDrive</div>
-        </div></div>
+      <div class="hw-friction__insight" aria-live="polite">
+        <h4 class="hw-friction__insight-title" data-insight-title>Arquivos parecidos exigem confirmação manual.</h4>
+        <p class="hw-friction__insight-body" data-insight-body>O nome ajuda, mas não confirma versão, fonte ou aprovação.</p>
       </div>
-    </div>
-
-    <!-- Panel 2 -->
-    <div class="hiw-panel hiw-panel--reverse hiw-reveal">
-      <div class="hiw-panel__text">
-        <span class="hiw-panel__num">02</span>
-        <h3 data-i18n-key="hiw.panel2_title">Pergunte no chat</h3>
-        <p data-i18n-key="hiw.panel2_desc">Pergunte como falaria com alguém do time. Sem comando técnico.</p>
-      </div>
-      <div class="hiw-panel__visual">
-        <div class="hiw-mock"><div class="hiw-mock__bar"><span></span><span></span><span></span></div><div class="hiw-mock__inner">
-          <div class="hiw-mock__query"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> <span data-i18n-key="hiw.panel2_mock_query">qual versão foi enviada ao cliente?</span></div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
-            <span class="hiw-chip hiw-chip--action" data-i18n-key="hiw.panel2_chip1">Comparar versões</span>
-            <span class="hiw-chip hiw-chip--action" data-i18n-key="hiw.panel2_chip2">Encontrar fonte</span>
-            <span class="hiw-chip hiw-chip--action" data-i18n-key="hiw.panel2_chip3">Preparar e-mail</span>
-            <span class="hiw-chip hiw-chip--action" data-i18n-key="hiw.panel2_chip4">Abrir handoff</span>
-          </div>
-        </div></div>
-      </div>
-    </div>
-
-    <!-- Panel 3 -->
-    <div class="hiw-panel hiw-reveal">
-      <div class="hiw-panel__text">
-        <span class="hiw-panel__num">03</span>
-        <h3 data-i18n-key="hiw.panel3_title">Receba com fonte</h3>
-        <p data-i18n-key="hiw.panel3_desc">A resposta mostra de onde veio: arquivo, trecho, página ou data.</p>
-        <div class="hiw-panel__chips"><span class="hiw-panel__chip--source" data-i18n-key="hiw.panel3_chip">resposta com fonte</span></div>
-      </div>
-      <div class="hiw-panel__visual">
-        <div class="hiw-mock"><div class="hiw-mock__bar"><span></span><span></span><span></span></div><div class="hiw-mock__inner">
-          <div class="hiw-mock__badge" data-i18n-key="hiw.panel3_mock_badge">Resposta com fonte</div>
-          <p style="margin:0 0 8px;font-size:14px;color:var(--allybi-text-primary);" data-i18n-key="hiw.panel3_mock_answer">A versão enviada foi <strong>Contrato_Anderson_v4.pdf</strong>.</p>
-          <div class="hiw-mock__source-line"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> <span data-i18n-key="hiw.panel3_mock_source">Fonte: Clientes / Contratos / 14 mar · p. 12</span></div>
-        </div></div>
-      </div>
-    </div>
-
-    <!-- Panel 4 -->
-    <div class="hiw-panel hiw-panel--reverse hiw-reveal">
-      <div class="hiw-panel__text">
-        <span class="hiw-panel__num">04</span>
-        <h3 data-i18n-key="hiw.panel4_title">Compare e confirme</h3>
-        <p data-i18n-key="hiw.panel4_desc">Veja o que mudou antes de usar ou enviar.</p>
-      </div>
-      <div class="hiw-panel__visual">
-        <div class="hiw-mock"><div class="hiw-mock__bar"><span></span><span></span><span></span></div><div class="hiw-mock__inner">
-          <div style="font-size:11px;font-weight:600;color:var(--allybi-text-muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;" data-i18n-key="hiw.panel4_mock_clause">Cláusula 8.1: Indenização</div>
-          <div style="font-size:13px;line-height:1.7;color:var(--allybi-text-primary);" data-i18n-key="hiw.panel4_mock_text">O Fornecedor deverá indenizar o Cliente contra reclamações decorrentes de <span style="color:#DC2626;background:rgba(220,38,38,0.06);padding:1px 3px;border-radius:2px;text-decoration:line-through;"><span class="sr-only">removido: </span>atos negligentes</span> <span style="color:#1E7B43;background:rgba(52,168,83,0.10);padding:1px 4px;border-radius:2px;font-weight:600;"><span class="sr-only">adicionado: </span>quaisquer atos ou omissões</span>, até o limite de <span style="color:#DC2626;background:rgba(220,38,38,0.06);padding:1px 3px;border-radius:2px;text-decoration:line-through;"><span class="sr-only">removido: </span>R$1M</span> <span style="color:#1E7B43;background:rgba(52,168,83,0.10);padding:1px 4px;border-radius:2px;font-weight:600;"><span class="sr-only">adicionado: </span>R$3M</span>.</div>
-          <div class="hiw-mock__source-line" style="margin-top:12px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> <span data-i18n-key="hiw.panel4_mock_source">Contrato v3 vs v4 · Cláusula 8.1</span></div>
-          <div style="margin-top:8px;font-size:11px;font-weight:600;color:#1E7B43;display:inline-flex;align-items:center;gap:4px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n-key="hiw.panel4_status">Alteração confirmada na fonte</span></div>
-        </div></div>
-      </div>
-    </div>
-
-    <!-- Panel 5 -->
-    <div class="hiw-panel hiw-reveal">
-      <div class="hiw-panel__text">
-        <span class="hiw-panel__num">05</span>
-        <h3 data-i18n-key="hiw.panel5_title">Monte a mensagem para revisão</h3>
-        <p data-i18n-key="hiw.panel5_desc">O Allybi monta a mensagem com contexto, arquivo e canal. Você ainda decide o que sai.</p>
-        <div class="hiw-panel__chips"><span data-i18n-key="hiw.panel5_chip1">E-mail via Outlook</span><span data-i18n-key="hiw.panel5_chip2">WhatsApp handoff</span></div>
-      </div>
-      <div class="hiw-panel__visual">
-        <div class="hiw-mock"><div class="hiw-mock__bar"><span></span><span></span><span></span></div><div class="hiw-mock__inner">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--allybi-text-muted);margin-bottom:10px;" data-i18n-key="hiw.panel5_mock_ready">Mensagem pronta para revisão</div>
-          <div style="font-size:13px;color:var(--allybi-text-primary);line-height:1.6;padding:10px 12px;background:var(--allybi-bg-alt-1);border-radius:8px;margin-bottom:12px;" data-i18n-key="hiw.panel5_mock_body">"Olá, segue a versão confirmada do contrato com a cláusula 8.1 atualizada."</div>
-          <dl style="display:grid;gap:4px;font-size:12px;margin:0 0 12px;">
-            <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;"><dt style="color:var(--allybi-text-muted);" data-i18n-key="hiw.panel5_label_file">Arquivo</dt><dd style="margin:0;font-weight:600;color:var(--allybi-text-strongest);">Contrato_Anderson_v4.pdf</dd></div>
-            <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;"><dt style="color:var(--allybi-text-muted);" data-i18n-key="hiw.panel5_label_source">Fonte</dt><dd style="margin:0;font-weight:600;color:var(--allybi-text-strongest);" data-i18n-key="hiw.panel5_source_val">Clientes / Contratos / 14 mar · p. 12</dd></div>
-            <div style="display:grid;grid-template-columns:64px 1fr;gap:8px;"><dt style="color:var(--allybi-text-muted);" data-i18n-key="hiw.panel5_label_channel">Canal</dt><dd style="margin:0;font-weight:600;color:var(--allybi-text-strongest);">Outlook</dd></div>
-          </dl>
-          <div style="display:flex;gap:8px;margin-bottom:8px;">
-            <span class="hiw-chip hiw-chip--action"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14"> <span data-i18n-key="hiw.panel5_chip1">E-mail via Outlook</span></span>
-            <span class="hiw-chip hiw-chip--action"><img src="assets/images/whatsapp-icon.svg" alt="" width="14" height="14"> <span data-i18n-key="hiw.panel5_chip2">WhatsApp handoff</span></span>
-          </div>
-          <p style="font-size:11px;color:var(--allybi-text-muted);margin:6px 0 0;line-height:1.5;" data-i18n-key="hiw.panel5_wa_micro">Para WhatsApp, o Allybi abre a conversa com a mensagem pronta. Você envia no WhatsApp.</p>
-        </div></div>
-      </div>
-    </div>
-
-    <!-- Panel 6 -->
-    <div class="hiw-panel hiw-panel--reverse hiw-reveal">
-      <div class="hiw-panel__text">
-        <span class="hiw-panel__num">06</span>
-        <h3 data-i18n-key="hiw.panel6_title">Revise e envie</h3>
-        <p data-i18n-key="hiw.panel6_desc">Você vê destinatário, mensagem, fonte e arquivo. Nada sai sem confirmação.</p>
-      </div>
-      <div class="hiw-panel__visual">
-        <div class="hiw-mock"><div class="hiw-mock__bar"><span></span><span></span><span></span></div><div class="hiw-mock__inner">
-          <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--allybi-trust);margin-bottom:10px;" data-i18n-key="hiw.panel6_mock_label">Revisar antes de enviar</div>
-          <div style="font-size:12px;color:var(--allybi-text-secondary);line-height:1.7;margin-bottom:14px;" data-i18n-key="hiw.panel6_mock_details">
-            <strong style="color:var(--allybi-text-strongest)">Para:</strong> cliente@empresa.com.br<br>
-            <strong style="color:var(--allybi-text-strongest)">Arquivo:</strong> Contrato_Anderson_v4.pdf<br>
-            <strong style="color:var(--allybi-text-strongest)">Fonte:</strong> Clientes / Contratos / 14 mar<br>
-            <strong style="color:var(--allybi-text-strongest)">Via:</strong> Outlook
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:12px;color:var(--allybi-text-muted);" data-i18n-key="hiw.panel6_cancel">Cancelar</span>
-            <span style="font-size:11px;font-weight:600;padding:7px 16px;background:var(--allybi-trust);color:#fff;border-radius:6px;" data-i18n-key="hiw.panel6_send">Enviar via Outlook</span>
-          </div>
-          <p style="margin:12px 0 0;font-size:11px;color:var(--allybi-text-muted);text-align:center;" data-i18n-key="hiw.panel6_trust_micro">Nada sai sem sua confirmação.</p>
-        </div></div>
-      </div>
-    </div>
+    </fieldset>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     3. SURFACE / DEPTH — One consolidated section
+     4. CTA FINAL ESCURO
      ═══════════════════════════════════════════════════════════════ -->
-<section class="hiw-depth" style="background:var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="hiw-depth__header hiw-reveal">
-      <h2 data-i18n-key="hiw.depth_h2">Uma pergunta no chat. Um fluxo completo por trás.</h2>
-      <p data-i18n-key="hiw.depth_sub">O Allybi não pula a revisão. Ele leva fonte, versão, mensagem e canal para sua confirmação.</p>
+<section class="hw-final" aria-labelledby="hw-final-title">
+  <div class="hw-final__container hw-reveal">
+    <span class="hw-eyebrow hw-eyebrow--dark">COMEÇAR</span>
+    <h2 id="hw-final-title" class="hw-h2 hw-h2--dark">Agora faça uma pergunta real.</h2>
+    <p class="hw-sub hw-sub--dark">Conecte uma fonte ou suba um arquivo. O Allybi mostra a fonte e espera sua confirmação antes de qualquer envio.</p>
+    <div class="hw-actions hw-actions--center">
+      <a class="hw-btn-primary hw-btn-primary--invert" href="https://app.allybi.com.br">Começar grátis por 30 dias</a>
+      <a class="hw-btn-secondary hw-btn-secondary--invert" href="/integrations.html">
+        <span>Ver integrações</span>
+        <svg class="hw-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
-    <div class="hiw-depth__map hiw-reveal">
-      <div class="hiw-depth__zone">
-        <h3 data-i18n-key="hiw.depth_in_h4">Entram</h3>
-        <p class="hiw-depth__zone-sub" data-i18n-key="hiw.depth_in_sub">Fontes conectadas</p>
-        <div class="hiw-depth__zone-items">
-          <span><img src="assets/images/outlook-icon.svg" alt="" width="18" height="18"> Outlook</span>
-          <span><img src="assets/images/onedrive-icon.svg" alt="" width="18" height="18"> OneDrive</span>
-          <span><img src="assets/images/sharepoint-icon.svg" alt="" width="18" height="18"> SharePoint</span>
-          <span><img src="assets/images/uploads-icon.svg" alt="" width="18" height="18"> <span data-i18n-key="hiw.chip_uploads">Uploads</span></span>
-        </div>
-      </div>
-      <div class="hiw-depth__arrow" aria-hidden="true">&rarr;</div>
-      <div class="hiw-depth__zone hiw-depth__zone--center">
-        <h3 data-i18n-key="hiw.depth_center_h">Allybi</h3>
-        <div class="hiw-depth__mini-mock">
-          <div style="font-size:12px;color:var(--allybi-text-muted);margin-bottom:6px;" data-i18n-key="hiw.depth_mock_query">"qual versão posso enviar?"</div>
-          <div style="font-size:13px;font-weight:600;color:var(--allybi-text-strongest);">contrato_final_AGORA.pdf</div>
-          <div class="hiw-depth__source-chip" data-i18n-key="hiw.depth_source_chip">com fonte</div>
-        </div>
-      </div>
-      <div class="hiw-depth__arrow" aria-hidden="true">&rarr;</div>
-      <div class="hiw-depth__zone">
-        <h3 data-i18n-key="hiw.depth_out_h4">Saem</h3>
-        <p class="hiw-depth__zone-sub" data-i18n-key="hiw.depth_out_sub">Envios com revisão</p>
-        <div class="hiw-depth__zone-items">
-          <span><img src="assets/images/outlook-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="hiw.depth_out_email">E-mail via Outlook</span></span>
-          <span class="hiw-depth__zone-sub-line" data-i18n-key="hiw.depth_out_email_micro">com confirmação</span>
-          <span><img src="assets/images/whatsapp-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="hiw.depth_out_wa">WhatsApp handoff</span></span>
-          <span class="hiw-depth__zone-sub-line" data-i18n-key="hiw.depth_out_wa_micro">você envia no app</span>
-        </div>
-      </div>
-    </div>
-    <div class="hiw-depth__bottom hiw-reveal">
-      <span data-i18n-key="hiw.depth_bottom1">Busca contexto</span>
-      <span data-i18n-key="hiw.depth_bottom2">Compara versões</span>
-      <span data-i18n-key="hiw.depth_bottom3">Mostra fonte</span>
-      <span data-i18n-key="hiw.depth_bottom4">Prepara mensagem</span>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     5. DIAGNOSTIC BRIDGE
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="hiw-bridge">
-  <div class="allybi-container">
-    <div class="hiw-bridge__inner hiw-reveal">
-      <h2 data-i18n-key="hiw.bridge_title">Quer ver onde seu fluxo trava hoje?</h2>
-      <p data-i18n-key="hiw.bridge_sub">Mapeie em menos de 1 minuto onde o time perde certeza entre pedido, busca, versão, fonte, confirmação e envio.</p>
-      <div class="hiw-bridge__ctas">
-        <a href="diagnostico.html" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="hiw.bridge_cta_primary">Mapear fluxo do time</a>
-        <a href="tempo.html" class="hiw-bridge__link" data-i18n-key="hiw.bridge_cta_secondary">Calcular meu tempo</a>
-      </div>
-      <p class="hiw-bridge__micro" data-i18n-key="hiw.bridge_micro">Nenhum documento é pedido. Resultado na hora.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     6. FINAL CTA
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="hiw-cta">
-  <div class="allybi-container hiw-reveal">
-    <h2 data-i18n-key="hiw.cta_title">Faça o primeiro fluxo completo em minutos.</h2>
-    <p data-i18n-key="hiw.cta_subtitle">Conecte uma fonte ou suba um arquivo. Pergunte no chat, receba com fonte e revise antes de enviar.</p>
-    <div class="hiw-cta__btns">
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="hero.cta_primary">Começar grátis por 30 dias</a>
-      <a href="integrations.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="hiw.cta_integrations">Ver integrações</a>
-    </div>
-    <p class="hiw-cta__micro" data-i18n-key="hiw.cta_micro">30 dias grátis. Nada sai sem confirmação.</p>
+    <p class="hw-final__trust">Sem demo obrigatória. Cancele quando quiser.</p>
+    <p class="hw-final__control">Nada sai sem confirmação. Documentos não treinam modelos.</p>
   </div>
 </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="allybi-footer">
-  <div class="allybi-footer-inner">
-    <div class="footer-brand">
-      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
-      <p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
     </div>
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-        <div class="footer-col-links">
-          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
-        <div class="footer-col-links">
-          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
-        <div class="footer-col-links">
-          <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-        <div class="footer-col-links">
-          <a href="about.html" data-i18n-key="footer.about">About</a>
-          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
-          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-        <div class="footer-col-links">
-          <a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a>
-          <a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-          <a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a>
-          <a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a>
-          <a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-mobile-links">
-      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="about.html" data-i18n-key="footer.about">About</a>
-      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-      <div class="footer-bottom-right">
-        <div class="language-selector" id="footer-language-selector">
-          <button class="language-toggle" aria-expanded="false">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-            <span class="lang-label">English</span>
-          </button>
-          <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
-            <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
-          </ul>
-        </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
       </div>
     </div>
   </div>
 </footer>
-
-<script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
-<script src="allybi-animations.js"></script>
-<script src="hero-sequence.js" defer></script>
 <script>
-/* ── Scroll reveal ── */
+/* ─── Scroll reveal :viewport-aware entrance, with visibility safety net ─── */
 (function(){
+  var els = [].slice.call(document.querySelectorAll('.hw-reveal'));
+  if (!els.length) return;
+  function revealAll(){ els.forEach(function(el){ el.classList.add('is-visible'); }); }
+
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('.hiw-reveal');
-  if (prefersReduced) {
-    els.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'none'; });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
+  if (prefersReduced || !('IntersectionObserver' in window)) { revealAll(); return; }
+
+  /* Entrance animation for real users as each element crosses the viewport. */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
       if (e.isIntersecting) {
         e.target.classList.add('is-visible');
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.15 });
-  els.forEach(function(el) { io.observe(el); });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  els.forEach(function(el){ io.observe(el); });
+
+  /* Safety net: never leave content permanently hidden (e.g. if the page is
+     jumped/programmatically scrolled with smooth-scroll active, or the
+     observer is starved). Reveals anything still hidden after a short delay. */
+  setTimeout(revealAll, 1200);
+})();
+
+/* ─── Friction selector :radios + aria-live insight ─── */
+(function(){
+  var INSIGHTS = {
+    pedido:       { title: 'O pedido chega sem contexto suficiente.',           body: 'Antes da busca, alguém precisa descobrir exatamente o que foi pedido.' },
+    busca:        { title: 'O time abre mais lugares do que deveria.',          body: 'E-mail, pasta, SharePoint e anexos precisam ser verificados separadamente.' },
+    versao:       { title: 'Arquivos parecidos exigem confirmação manual.',     body: 'O nome ajuda, mas não confirma versão, fonte ou aprovação.' },
+    fonte:        { title: 'A resposta aparece, mas a origem não fica clara.',  body: 'Sem a fonte visível, alguém precisa provar de onde a informação veio.' },
+    confirmacao:  { title: 'A decisão depende de perguntar de novo.',           body: 'O caminho para quando falta contexto, aprovação ou alguém para confirmar.' },
+    envio:        { title: 'A revisão acontece em lugares diferentes.',         body: 'Mensagem, arquivo, destinatário e canal precisam ser conferidos separadamente.' }
+  };
+  var radios = document.querySelectorAll('input[name="hw-friction"]');
+  var titleEl = document.querySelector('[data-insight-title]');
+  var bodyEl = document.querySelector('[data-insight-body]');
+  if (!radios.length || !titleEl || !bodyEl) return;
+  function update(value){
+    var data = INSIGHTS[value];
+    if (!data) return;
+    titleEl.textContent = data.title;
+    bodyEl.textContent = data.body;
+  }
+  radios.forEach(function(r){
+    r.addEventListener('change', function(){
+      if (r.checked) update(r.value);
+    });
+  });
+})();
+
+/* ─── Capítulo 06 :antes/depois toggle (manual, no autoplay) ─── */
+(function(){
+  var chapter = document.querySelector('.hw-chapter--toggle');
+  if (!chapter) return;
+  var toggle = chapter.querySelector('[data-confirm-toggle]');
+  var stage = chapter.querySelector('[data-confirm-stage]');
+  var live = chapter.querySelector('[data-confirm-live]');
+  if (!toggle || !stage) return;
+  var buttons = toggle.querySelectorAll('[data-confirm-state-btn]');
+  var shots = stage.querySelectorAll('[data-confirm-shot]');
+  if (!buttons.length || !shots.length) return;
+
+  /* Reveal the toggle only once JS has wired listeners — no-JS users get
+     just the "before" image. */
+  toggle.removeAttribute('hidden');
+  chapter.classList.add('is-enhanced');
+
+  var LIVE_TEXT = {
+    before: 'Estado exibido: aguardando confirmação.',
+    after: 'Estado exibido: revisão completa.'
+  };
+
+  function setState(state) {
+    if (state !== 'before' && state !== 'after') return;
+    chapter.setAttribute('data-confirm-state', state);
+    buttons.forEach(function(b){
+      var on = b.getAttribute('data-confirm-state-btn') === state;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    shots.forEach(function(s){
+      var on = s.getAttribute('data-confirm-shot') === state;
+      s.classList.toggle('is-active', on);
+      if (on) s.removeAttribute('aria-hidden');
+      else s.setAttribute('aria-hidden', 'true');
+    });
+    if (live) live.textContent = LIVE_TEXT[state];
+  }
+
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      setState(b.getAttribute('data-confirm-state-btn'));
+    });
+  });
+
+  /* Proximity preload (~600px) of the inactive shot for the current
+     breakpoint — avoids loading both desktop and mobile at once. */
+  if ('IntersectionObserver' in window) {
+    var preloaded = false;
+    var preloader = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting && !preloaded) {
+          preloaded = true;
+          var isMobile = window.matchMedia('(max-width: 767px)').matches;
+          var url = isMobile
+            ? '/assets/landing-shots/how-it-works/06-confirm-after-mobile.png'
+            : '/assets/landing-shots/how-it-works/06-confirm-after-desktop.png';
+          var img = new Image();
+          img.src = url;
+          preloader.unobserve(chapter);
+        }
+      });
+    }, { rootMargin: '600px 0px' });
+    preloader.observe(chapter);
+  }
 })();
 </script>
 </body>

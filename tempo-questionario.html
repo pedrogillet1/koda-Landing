@@ -2,135 +2,78 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#FAFAF8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Calculadora — Allybi</title>
-  <meta name="robots" content="noindex">
+  <title>Calculadora | Allybi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="pages/tools.css">
-  <style>
-    /* Quiz-specific overrides for compact options */
-    .quiz-shell { max-width:820px; }
-    .quiz-progress__label { font-size:13px; font-weight:600; color:var(--tool-gray-500); margin-bottom:8px; }
-    .quiz-progress__bar { margin-bottom:0; }
-    .quiz-progress__micro { font-size:12px; color:var(--tool-gray-500); margin-top:12px; margin-bottom:40px; }
-    .quiz-question { font-size:clamp(28px,4vw,44px); line-height:1.1; margin-bottom:16px; }
-    .quiz-option { min-height:54px; padding:14px 18px; font-size:14px; gap:10px; }
-    .quiz-options--multi { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-    @media(max-width:600px){ .quiz-options--multi { grid-template-columns:1fr; } .quiz-option { min-height:48px; padding:12px 16px; } }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="assets/tools/allybi-tools.css">
 </head>
-<body style="background:#FAFAF8;font-family:var(--tool-font);margin:0;">
+<body>
+  <div id="allybi-questionnaire"
+       data-quiz="time"
+       data-result-href="tempo-resultado.html"
+       data-landing-href="tempo.html"></div>
 
-<!-- REDUCED HEADER -->
-<header class="quiz-header">
-  <div style="display:flex;align-items:center;gap:12px;">
-    <a href="/" class="quiz-header__logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="22"></a>
-    <span style="font-size:13px;font-weight:500;color:var(--tool-gray-500);">Calculadora do Tempo Perdido</span>
+  <script src="assets/tools/allybi-tools-data.js"></script>
+  <script src="assets/tools/allybi-questionnaire.js"></script>
+  <script src="assets/tools/allybi-tools-qa.js"></script>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
   </div>
-  <a href="tempo.html" class="quiz-header__exit">Sair</a>
-</header>
+</footer>
 
-<!-- QUIZ SHELL -->
-<div class="quiz-shell" id="quiz">
-  <div class="quiz-progress">
-    <div class="quiz-progress__label" id="q-label">1 de 5</div>
-    <div class="quiz-progress__bar"><div class="quiz-progress__fill" id="q-fill" style="width:20%"></div></div>
-    <div class="quiz-progress__micro">Leva menos de 1 minuto.</div>
-  </div>
-  <div id="q-body"></div>
-</div>
-
-<!-- LOADING -->
-<div class="quiz-loading" id="q-loading" style="display:none;">
-  <div class="quiz-loading__spinner"></div>
-  <div class="quiz-loading__text" id="q-loading-text">Calculando onde o tempo some…</div>
-</div>
-
-<script>
-(function(){
-  'use strict';
-  var Q = [
-    { q:'Em uma semana normal, quantas vezes você precisa achar ou conferir um arquivo?', type:'single', opts:['1–2','3–5','6–10','11–20','20+'] },
-    { q:'Quando isso acontece, onde você acaba procurando?', type:'multi', hint:'Selecione todos que se aplicam.', opts:['E-mail','OneDrive','SharePoint','Google Drive','WhatsApp','Pasta local','Desktop','Alguém do time'] },
-    { q:'Quanto tempo costuma ir embora até encontrar algo útil?', type:'single', opts:['Menos de 1 min','1–3 min','4–7 min','8–15 min','Mais de 15 min'] },
-    { q:'Depois que o arquivo aparece, o que ainda falta?', type:'multi', hint:'Selecione todos que se aplicam.', opts:['Confirmar versão','Achar fonte ou aprovação','Baixar ou anexar','Explicar contexto','Preparar resposta','Conferir destinatário','Perguntar para alguém'] },
-    { q:'Quando está com pressa, o que mais trava?', type:'single', opts:['Mandar versão errada','Não achar a fonte','Demorar demais','Mandar sem contexto','Anexar arquivo errado','Depender de alguém para confirmar'] }
-  ];
-  var TOTAL=Q.length, current=0, answers=new Array(TOTAL).fill(null);
-  var body=document.getElementById('q-body'), label=document.getElementById('q-label'), fill=document.getElementById('q-fill');
-  var micros={2:'Já dá para ver onde o tempo se espalha.',4:'Última pergunta.'};
-
-  function render(){
-    window.scrollTo(0,0);
-    var q=Q[current], isMulti=q.type==='multi';
-    label.textContent=(current+1)+' de '+TOTAL;
-    fill.style.width=((current+1)/TOTAL*100)+'%';
-    var h='<h2 class="quiz-question tool-fade-in" data-event="tempo_question_view" data-question="'+(current+1)+'">'+q.q+'</h2>';
-    if(q.hint) h+='<p class="quiz-hint">'+q.hint+'</p>';
-    h+='<div class="quiz-options'+(isMulti?' quiz-options--multi':'')+'" id="q-opts">';
-    q.opts.forEach(function(o,i){
-      var sel=isMulti?(answers[current]&&answers[current].indexOf(i)>-1):(answers[current]===i);
-      h+='<button class="quiz-option" role="option" aria-pressed="'+sel+'" data-i="'+i+'" data-event="tempo_answer_select"><span class="quiz-option__check"></span>'+o+'</button>';
-    });
-    h+='</div>';
-    if(micros[current]) h+='<p class="quiz-micro">'+micros[current]+'</p>';
-    h+='<div class="quiz-actions">';
-    h+=current>0?'<button class="quiz-actions__back" id="q-back" data-event="tempo_question_back"><svg viewBox="0 0 14 14" fill="none"><path d="M8.5 3L4.5 7L8.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Voltar</button>':'<span class="quiz-actions__back quiz-actions__back--hidden">Voltar</span>';
-    var nextLabel=current===TOTAL-1?'Ver resultado':(isMulti?'Próxima':'');
-    if(isMulti||current===TOTAL-1) h+='<button class="quiz-actions__next" id="q-next" data-event="tempo_question_next"'+(hasAnswer()?'':' disabled')+'>'+nextLabel+'</button>';
-    h+='</div>';
-    body.innerHTML=h;
-    bind();
-  }
-
-  function hasAnswer(){ var a=answers[current]; return a!==null&&(Array.isArray(a)?a.length>0:true); }
-
-  function bind(){
-    var opts=document.getElementById('q-opts');
-    opts.addEventListener('click',function(e){
-      var btn=e.target.closest('.quiz-option'); if(!btn) return;
-      var i=parseInt(btn.dataset.i), isMulti=Q[current].type==='multi';
-      if(isMulti){
-        if(!answers[current]) answers[current]=[];
-        var idx=answers[current].indexOf(i);
-        if(idx>-1) answers[current].splice(idx,1); else answers[current].push(i);
-        btn.setAttribute('aria-pressed',idx===-1?'true':'false');
-        var nx=document.getElementById('q-next'); if(nx) nx.disabled=!hasAnswer();
-      } else {
-        answers[current]=i;
-        opts.querySelectorAll('.quiz-option').forEach(function(b){b.setAttribute('aria-pressed','false');});
-        btn.setAttribute('aria-pressed','true');
-        setTimeout(function(){ advance(); },200);
-      }
-    });
-    var back=document.getElementById('q-back');
-    if(back) back.addEventListener('click',function(){ current--; render(); });
-    var next=document.getElementById('q-next');
-    if(next) next.addEventListener('click',function(){ if(hasAnswer()) advance(); });
-  }
-
-  function advance(){
-    if(current<TOTAL-1){ current++; render(); }
-    else { finish(); }
-  }
-
-  function finish(){
-    try{ sessionStorage.setItem('allybi_tempo',JSON.stringify(answers)); }catch(e){}
-    document.getElementById('quiz').style.display='none';
-    var loadEl=document.getElementById('q-loading');
-    loadEl.style.display='flex';
-    setTimeout(function(){
-      document.getElementById('q-loading-text').textContent='Montando seu resultado…';
-    },500);
-    setTimeout(function(){ window.location.href='tempo-resultado.html'; },900);
-  }
-
-  render();
-})();
-</script>
 </body>
 </html>

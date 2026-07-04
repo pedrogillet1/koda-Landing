@@ -57,7 +57,7 @@ git commit -m "Fix logo display: rename file to remove space
 # Step 4: Push to GitHub
 echo ""
 echo "Step 4: Pushing to GitHub..."
-git remote set-url origin https://pedrogillet1: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@github.com/pedrogillet1/koda-Landing.git
+git remote set-url origin https://pedrogillet1:REDACTED_ROTATE_THIS_TOKEN@github.com/pedrogillet1/koda-Landing.git
 git push origin main
 
 echo ""

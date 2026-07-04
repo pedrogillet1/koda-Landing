@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Preços | Allybi</title>
-  <meta name="description" content="Teste grátis por 30 dias. Depois, R$170/mês. Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte e revise antes de enviar.">
+  <meta name="description" content="Teste grátis por 30 dias. Depois, R$170/mês. Conecte Outlook, OneDrive, SharePoint, Google Drive e uploads. Pergunte no chat, veja a fonte e revise antes de enviar.">
   <link rel="canonical" href="https://allybi.com.br/pricing.html">
   <link rel="alternate" hreflang="en" href="https://allybi.co/pricing.html">
   <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/pricing.html">
@@ -33,423 +33,514 @@
 <body>
 
 <!-- HEADER -->
-<header id="allybi-header" class="allybi-header">
-  <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
-    <nav class="allybi-nav desktop-only">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="nav-dropdown-menu">
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-        <div class="nav-dropdown-menu">
-          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-        <div class="nav-dropdown-menu">
-          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
     </nav>
-    <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
   </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div id="allybi-mobile-menu" class="mobile-menu">
-  <nav class="mobile-menu-nav">
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-      <div class="mobile-dropdown-items">
-        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
-      </div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
     </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-      <div class="mobile-dropdown-items">
-        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-        <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
-      </div>
-    </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-      <div class="mobile-dropdown-items">
-        <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
-      </div>
-    </div>
-    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
-  </nav>
-  <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </div>
 
 
-<main>
 
-<!-- ════════════════════════════════════════════════════════════
-     1. HERO — value left, pricing card right
-     ════════════════════════════════════════════════════════════ -->
-<section class="pricing-hero">
-  <div class="pricing-hero__container pricing-hero-grid">
-    <!-- Left: value framing -->
-    <div class="allybi-reveal">
-      <span class="pricing-hero__eyebrow" data-i18n-key="pricing.hero.eyebrow">Preços</span>
-      <h1 class="pricing-hero__h1" data-i18n-key="pricing.hero.h1">Um plano para encontrar, confirmar e enviar o documento certo.</h1>
-      <p class="pricing-hero__sub" data-i18n-key="pricing.hero.sub">Teste grátis por 30 dias. Depois, R$170/mês. Cancele quando quiser.</p>
-      <p class="pricing-hero__support" data-i18n-key="pricing.hero.support_v2">Conecte Outlook, OneDrive, SharePoint ou uploads. Pergunte no chat, receba resposta com fonte e envie e-mail via Outlook com confirmação. WhatsApp abre como handoff.</p>
-      <p class="pricing-hero__micro" data-i18n-key="pricing.hero.micro">Sem demo. Nada sai sem confirmação.</p>
-      <div class="pricing-hero__trust">
-        <span><span class="pricing-hero__dot"></span><span data-i18n-key="pricing.hero.trust1">30 dias grátis</span></span>
-        <span><span class="pricing-hero__dot"></span><span data-i18n-key="pricing.hero.trust2">Sem demo obrigatória</span></span>
-        <span><span class="pricing-hero__dot"></span><span data-i18n-key="pricing.hero.trust3">Cancelamento simples</span></span>
-        <span><span class="pricing-hero__dot"></span><span data-i18n-key="pricing.hero.trust4">Documentos não treinam modelos</span></span>
-        <span><span class="pricing-hero__dot"></span><span data-i18n-key="pricing.hero.trust5">WhatsApp handoff</span></span>
-      </div>
-      <a href="how-it-works.html" class="pricing-hero__link" data-event="pricing_secondary_cta_click" data-i18n-key="pricing.hero.see_how">Ver como funciona &rarr;</a>
-    </div>
-    <!-- Right: pricing card -->
-    <div class="allybi-reveal pricing-card">
-      <div class="pricing-card__header">
-        <span class="pricing-card__name" data-i18n-key="pricing.plan.name">Allybi</span>
-        <span class="pricing-card__badge" data-i18n-key="pricing.plan.trial">30 dias grátis</span>
-      </div>
-      <div class="pricing-card__price">
-        <span class="pricing-card__amount">R$170</span>
-        <span class="pricing-card__period" data-i18n-key="pricing.plan.period">/mês</span>
-      </div>
-      <p class="pricing-card__price-note" data-i18n-key="pricing.card.price_note">Depois do teste. Cancele quando quiser.</p>
-      <p class="pricing-card__value" data-i18n-key="pricing.card.value">O fluxo completo para fontes conectadas, uploads, respostas com fonte e envio revisado.</p>
-      <div class="pricing-card__features">
-        <div class="pricing-card__row"><span class="pricing-card__label" data-i18n-key="pricing.card.label_connect">Conecte</span><span class="pricing-card__desc" data-i18n-key="pricing.card.desc_connect">Outlook · OneDrive · SharePoint · Uploads</span></div>
-        <div class="pricing-card__row"><span class="pricing-card__label" data-i18n-key="pricing.card.label_ask">Pergunte</span><span class="pricing-card__desc" data-i18n-key="pricing.card.desc_ask">Chat com documentos, e-mails, anexos e fontes conectadas</span></div>
-        <div class="pricing-card__row"><span class="pricing-card__label" data-i18n-key="pricing.card.label_confirm">Confirme</span><span class="pricing-card__desc" data-i18n-key="pricing.card.desc_confirm">Resposta com fonte · comparação de versões</span></div>
-        <div class="pricing-card__row"><span class="pricing-card__label" data-i18n-key="pricing.card.label_send">Envie</span><span class="pricing-card__desc" data-i18n-key="pricing.card.desc_send">E-mail via Outlook com confirmação · WhatsApp handoff com mensagem pronta</span></div>
-        <div class="pricing-card__row pricing-card__row--last"><span class="pricing-card__label" data-i18n-key="pricing.card.label_control">Controle</span><span class="pricing-card__desc" data-i18n-key="pricing.card.desc_control">Permissões · documentos não treinam modelos</span></div>
-      </div>
-      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg pricing-card__cta" data-event="pricing_plan_cta_click" data-i18n-key="pricing.plan.cta">Começar grátis por 30 dias</a>
-      <p class="pricing-card__reassurance" data-i18n-key="pricing.card.reassurance">Comece sem demo. Configure em poucos minutos.</p>
-    </div>
-  </div>
-</section>
 
-<!-- ════════════════════════════════════════════════════════════
-     2. WHAT'S INCLUDED
-     ════════════════════════════════════════════════════════════ -->
-<section class="allybi-section" style="background:#F5F5F5;padding:clamp(80px,10vh,112px) 0;">
-  <div class="allybi-container">
-    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
-      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;text-wrap:balance;" data-i18n-key="pricing.flow.title">O que entra no plano.</h2>
-      <p style="font-size:16px;color:#6C6B6E;" data-i18n-key="pricing.flow.subtitle">Não é só buscar arquivo. É encontrar, confirmar, preparar e revisar antes de enviar.</p>
-    </div>
-    <div class="allybi-reveal" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:1100px;margin:0 auto;">
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;" data-i18n-key="pricing.flow.card1_title">Fontes conectadas</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;" data-i18n-key="pricing.flow.card1_desc">Outlook, OneDrive, SharePoint e uploads no mesmo chat.</p></div>
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;" data-i18n-key="pricing.flow.card2_title">Linguagem normal</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;" data-i18n-key="pricing.flow.card2_desc">Pergunte como falaria com alguém do time.</p></div>
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;" data-i18n-key="pricing.flow.card3_title">Resposta com fonte</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;" data-i18n-key="pricing.flow.card3_desc">Arquivo, trecho, página ou data quando disponível.</p></div>
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;" data-i18n-key="pricing.flow.card4_title">Versão e contexto</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;" data-i18n-key="pricing.flow.card4_desc">Compare arquivos e veja o que mudou.</p></div>
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:16px;padding:24px 20px;"><h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:6px;" data-i18n-key="pricing.flow.card5_title">Envio com revisão</h3><p style="font-size:13px;color:#6C6B6E;line-height:1.5;" data-i18n-key="pricing.flow.card5_desc">Outlook sai com confirmação. WhatsApp abre como handoff.</p></div>
-    </div>
-  </div>
-</section>
 
-<!-- ════════════════════════════════════════════════════════════
-     3. WORKFLOW VALUE — What you get for R$170/month
-     ════════════════════════════════════════════════════════════ -->
-<section class="allybi-section" style="background:#F5F5F5;padding:clamp(80px,10vh,112px) 0;">
-  <div class="allybi-container">
-    <div style="text-align:center;max-width:720px;margin:0 auto 48px;" class="allybi-reveal">
-      <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6C6B6E;background:#fff;border:1px solid #E6E6EC;padding:5px 14px;border-radius:20px;margin-bottom:16px;" data-i18n-key="pricing.workflow.eyebrow">Incluído</span>
-      <h2 style="font-size:clamp(24px,3.5vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;" data-i18n-key="pricing.workflow.title">O plano cobre o caminho inteiro.</h2>
-      <p style="font-size:16px;color:#6C6B6E;line-height:1.6;max-width:600px;margin:0 auto;" data-i18n-key="pricing.workflow.subtitle">Conecte fontes, pergunte no chat, receba a resposta com fonte e envie e-mail via Outlook depois da sua confirmação. WhatsApp abre como handoff.</p>
+<main id="pricing-page">
+
+<!-- 1. HERO -->
+<section class="pricing-hero" aria-labelledby="pricing-hero-title">
+  <div class="pricing-hero-container">
+
+    <div class="pricing-hero-copy">
+      <p class="pricing-eyebrow">PREÇOS</p>
+      <h1 id="pricing-hero-title">
+        <span>Um plano para encontrar,</span>
+        <span>confirmar e enviar</span>
+        <span>o documento certo.</span>
+      </h1>
+      <p class="pricing-hero-subtitle">Conecte fontes, pergunte no chat, receba resposta com fonte e revise antes de enviar.</p>
+      <p class="pricing-hero-channel">E-mail via Outlook pode sair depois da sua confirmação. WhatsApp abre como handoff.</p>
+      <p class="pricing-hero-trust">Sem demo obrigatória. Cancele quando quiser.</p>
     </div>
 
-    <!-- Main 2-column workflow card -->
-    <div class="allybi-reveal" style="background:#fff;border:1px solid #E6E6EC;border-radius:24px;padding:clamp(32px,5vw,48px);max-width:1100px;margin:0 auto;display:grid;grid-template-columns:42% 1fr;gap:clamp(32px,4vw,56px);align-items:center;">
-
-      <!-- Left: text + numbered list -->
-      <div>
-        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#181818;letter-spacing:-.02em;margin-bottom:12px;line-height:1.2;" data-i18n-key="pricing.workflow.card_title">Do pedido ao envio,<br>sem refazer o caminho.</h3>
-        <p style="font-size:15px;color:#6C6B6E;line-height:1.6;margin-bottom:28px;" data-i18n-key="pricing.workflow.card_desc">O Allybi reúne fontes e uploads em um chat. Você pergunta, recebe a resposta com fonte e revisa o envio antes de sair.</p>
-        <ol style="list-style:none;counter-reset:steps;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:14px;">
-          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">1.</span><span data-i18n-key="pricing.workflow.step1">Conecte Outlook, OneDrive, SharePoint ou uploads.</span></li>
-          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">2.</span><span data-i18n-key="pricing.workflow.step2">Pergunte em linguagem normal.</span></li>
-          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">3.</span><span data-i18n-key="pricing.workflow.step3">Receba a resposta com arquivo e fonte.</span></li>
-          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">4.</span><span data-i18n-key="pricing.workflow.step4">Revise destinatário, mensagem, arquivo e canal.</span></li>
-          <li style="counter-increment:steps;display:flex;gap:12px;font-size:14px;color:#32302C;line-height:1.5;align-items:baseline;"><span style="font-weight:700;color:#181818;font-size:13px;min-width:20px;">5.</span><span data-i18n-key="pricing.workflow.step5">Outlook sai com confirmação. WhatsApp abre como handoff.</span></li>
-        </ol>
-        <p style="font-size:13px;color:#6C6B6E;font-style:italic;" data-i18n-key="pricing.workflow.footnote">Nada sai sem sua confirmação.</p>
+    <aside class="pricing-plan-panel" aria-label="Preço do Allybi">
+      <div class="pricing-plan-top">
+        <span class="pricing-plan-name">Allybi</span>
+        <span class="pricing-plan-badge">30 dias grátis</span>
       </div>
+      <div class="pricing-plan-price">
+        <span class="pricing-plan-amount">R$170</span>
+        <span class="pricing-plan-suffix">/mês</span>
+      </div>
+      <p class="pricing-plan-pricenote">depois do teste</p>
+      <a href="https://app.allybi.com.br" class="pricing-plan-cta">Começar grátis por 30 dias</a>
+      <a href="/how-it-works.html" class="pricing-plan-cta-secondary">Ver como funciona</a>
+      <p class="pricing-plan-micro">Cancele quando quiser.</p>
 
-      <!-- Right: product mockup -->
-      <div style="background:#FAFAF8;border:1px solid #E6E6EC;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:16px;">
-        <!-- Source chips -->
-        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14">Outlook</span>
-          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14">OneDrive</span>
-          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14">SharePoint</span>
-          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;color:#55534E;background:#fff;border:1px solid #E6E6EC;border-radius:20px;padding:4px 10px;"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14">Uploads</span>
+      <div class="pricing-plan-groups">
+        <div class="pricing-plan-group">
+          <span class="pricing-plan-group-label">Conecte</span>
+          <span class="pricing-plan-group-value">Outlook · OneDrive · SharePoint · Google Drive · Uploads</span>
         </div>
-        <!-- Chat question -->
-        <div style="background:#fff;border:1px solid #E6E6EC;border-radius:10px;padding:10px 14px;font-size:13px;color:#32302C;display:flex;align-items:center;gap:8px;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6C6B6E" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span data-i18n-key="pricing.mockup.question">qual versão posso enviar ao cliente?</span>
+        <div class="pricing-plan-group">
+          <span class="pricing-plan-group-label">Pergunte</span>
+          <span class="pricing-plan-group-value">Chat com documentos, e-mails, anexos e fontes conectadas</span>
         </div>
-        <!-- Answer with source -->
-        <div style="background:#fff;border:1px solid #E6E6EC;border-radius:10px;padding:14px;">
-          <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#34A853;margin-bottom:8px;" data-i18n-key="pricing.mockup.answer_label">Resposta com fonte</span>
-          <p style="font-size:13px;font-weight:600;color:#181818;margin-bottom:4px;">contrato_final_AGORA.pdf</p>
-          <p style="font-size:11px;color:#6C6B6E;display:flex;align-items:center;gap:4px;">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            <span data-i18n-key="pricing.mockup.source">Fonte: Clientes / Contratos / 14 mar</span>
-          </p>
+        <div class="pricing-plan-group">
+          <span class="pricing-plan-group-label">Confirme</span>
+          <span class="pricing-plan-group-value">Resposta com fonte · comparação de versões</span>
         </div>
-        <!-- Review panel -->
-        <div style="background:#fff;border:1px solid #E6E6EC;border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px;">
-          <span style="font-size:11px;font-weight:600;color:#6C6B6E;" data-i18n-key="pricing.mockup.review_label">Você revisa antes de enviar</span>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
-            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;" data-i18n-key="pricing.mockup.chip_file">Arquivo ✓</span>
-            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;" data-i18n-key="pricing.mockup.chip_source">Fonte ✓</span>
-            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;" data-i18n-key="pricing.mockup.chip_recipient">Destinatário ✓</span>
-            <span style="font-size:11px;color:#32302C;padding:6px 10px;background:#F5F5F5;border-radius:6px;" data-i18n-key="pricing.mockup.chip_channel">Canal ✓</span>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:4px;">
-            <span style="flex:1;text-align:center;font-size:12px;color:#6C6B6E;padding:8px;border:1px solid #E6E6EC;border-radius:8px;cursor:default;" data-i18n-key="pricing.mockup.cancel">Cancelar</span>
-            <span style="flex:1;text-align:center;font-size:12px;font-weight:600;color:#fff;background:#181818;padding:8px;border-radius:8px;cursor:default;" data-i18n-key="pricing.mockup.send_outlook">Enviar via Outlook</span>
-          </div>
-          <span style="font-size:11px;color:#6C6B6E;text-align:center;margin-top:2px;" data-i18n-key="pricing.mockup.whatsapp_handoff">WhatsApp handoff</span>
+        <div class="pricing-plan-group">
+          <span class="pricing-plan-group-label">Envie</span>
+          <span class="pricing-plan-group-value">Outlook com confirmação · WhatsApp handoff</span>
+        </div>
+        <div class="pricing-plan-group">
+          <span class="pricing-plan-group-label">Controle</span>
+          <span class="pricing-plan-group-value">Nada sai sem revisão · documentos não treinam modelos</span>
         </div>
       </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- 2. DARK PATH — O plano cobre o caminho inteiro (5 plan-flow screenshots) -->
+<section id="plano-caminho-inteiro" class="pricing-path-section pricing-plan-flow-section" aria-labelledby="pricing-path-title">
+  <div class="pricing-path-container">
+
+    <header class="pricing-path-header">
+      <p class="pricing-path-eyebrow">O QUE O PLANO COBRE</p>
+      <h2 id="pricing-path-title">O plano cobre o caminho inteiro.</h2>
+      <p class="pricing-path-subtitle">Da fonte conectada ao envio revisado, sem refazer o caminho em várias ferramentas.</p>
+    </header>
+
+    <div class="pricing-path-scrolltrack" data-plan-scrolltrack>
+    <div class="pricing-path-desktop" data-active-step="0" id="plano-caminho-inteiro-flow">
+
+      <div class="pricing-path-stepper" role="tablist" aria-label="Etapas cobertas pelo plano">
+        <button type="button" class="pricing-path-step is-active" data-step="0" role="tab" aria-selected="true" aria-controls="pricing-path-stage" aria-pressed="true" tabindex="0" id="pricing-step-0">
+          <span class="pricing-path-step-active-indicator" aria-hidden="true"></span>
+          <span class="pricing-path-step-num">01</span>
+          <span class="pricing-path-step-title">Conecte</span>
+          <span class="pricing-path-step-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span>
+        </button>
+        <button type="button" class="pricing-path-step" data-step="1" role="tab" aria-selected="false" aria-controls="pricing-path-stage" aria-pressed="false" tabindex="-1" id="pricing-step-1">
+          <span class="pricing-path-step-active-indicator" aria-hidden="true"></span>
+          <span class="pricing-path-step-num">02</span>
+          <span class="pricing-path-step-title">Pergunte</span>
+          <span class="pricing-path-step-desc">Use linguagem normal no chat.</span>
+        </button>
+        <button type="button" class="pricing-path-step" data-step="2" role="tab" aria-selected="false" aria-controls="pricing-path-stage" aria-pressed="false" tabindex="-1" id="pricing-step-2">
+          <span class="pricing-path-step-active-indicator" aria-hidden="true"></span>
+          <span class="pricing-path-step-num">03</span>
+          <span class="pricing-path-step-title">Confirme</span>
+          <span class="pricing-path-step-desc">Receba o documento certo com fonte visível.</span>
+        </button>
+        <button type="button" class="pricing-path-step" data-step="3" role="tab" aria-selected="false" aria-controls="pricing-path-stage" aria-pressed="false" tabindex="-1" id="pricing-step-3">
+          <span class="pricing-path-step-active-indicator" aria-hidden="true"></span>
+          <span class="pricing-path-step-num">04</span>
+          <span class="pricing-path-step-title">Revise</span>
+          <span class="pricing-path-step-desc">Confira mensagem, arquivo, fonte, destinatário e canal.</span>
+        </button>
+        <button type="button" class="pricing-path-step" data-step="4" role="tab" aria-selected="false" aria-controls="pricing-path-stage" aria-pressed="false" tabindex="-1" id="pricing-step-4">
+          <span class="pricing-path-step-active-indicator" aria-hidden="true"></span>
+          <span class="pricing-path-step-num">05</span>
+          <span class="pricing-path-step-title">Envie</span>
+          <span class="pricing-path-step-desc">Outlook fica liberado depois da confirmação. WhatsApp aparece como handoff.</span>
+        </button>
+      </div>
+
+      <div class="pricing-path-stage" id="pricing-path-stage" role="tabpanel" aria-labelledby="pricing-step-0" aria-live="polite">
+        <picture class="pricing-plan-flow-shot" data-state="0">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/01-connect-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/01-connect-desktop.png?v=plan-flow-2" alt="Tela do Allybi mostrando fontes conectadas e uploads disponíveis." width="1880" height="1160" loading="lazy" decoding="async">
+        </picture>
+        <picture class="pricing-plan-flow-shot" data-state="1">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/02-question-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/02-question-desktop.png?v=plan-flow-2" alt="Tela do Allybi com pergunta no chat sobre qual versão enviar ao cliente." width="1880" height="1160" loading="lazy" decoding="async">
+        </picture>
+        <picture class="pricing-plan-flow-shot" data-state="2">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/03-confirm-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/03-confirm-desktop.png?v=plan-flow-2" alt="Tela do Allybi com resposta e fonte confirmada." width="1880" height="1160" loading="lazy" decoding="async">
+        </picture>
+        <picture class="pricing-plan-flow-shot" data-state="3">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/04-review-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/04-review-desktop.png?v=plan-flow-2" alt="Tela do Allybi com rascunho aguardando revisão antes do envio." width="1880" height="1160" loading="lazy" decoding="async">
+        </picture>
+        <picture class="pricing-plan-flow-shot" data-state="4">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/05-send-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/05-send-desktop.png?v=plan-flow-2" alt="Tela do Allybi com envio via Outlook liberado e WhatsApp handoff disponível." width="1880" height="1160" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
     </div>
 
-    <!-- Compact before/after comparison -->
-    <div class="allybi-reveal" style="max-width:800px;margin:32px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:12px;padding:18px 20px;">
-        <span style="font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#6C6B6E;display:block;margin-bottom:8px;" data-i18n-key="pricing.compare.before_label">Antes</span>
-        <p style="font-size:13px;color:#6C6B6E;line-height:1.6;" data-i18n-key="pricing.compare.before_desc">procurar em 4 lugares · confirmar versão · montar mensagem · anexar · revisar</p>
-      </div>
-      <div style="background:#fff;border:1px solid #E6E6EC;border-radius:12px;padding:18px 20px;">
-        <span style="font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#34A853;display:block;margin-bottom:8px;" data-i18n-key="pricing.compare.after_label">Com Allybi</span>
-        <p style="font-size:13px;color:#181818;font-weight:500;line-height:1.6;" data-i18n-key="pricing.compare.after_desc">perguntar uma vez · resposta com fonte · envio revisado</p>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="allybi-reveal" style="text-align:center;margin-top:40px;">
-      <a href="https://app.allybi.com.br/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-event="pricing_workflow_cta" data-i18n-key="pricing.plan.cta">Começar grátis por 30 dias</a>
-      <p style="font-size:13px;color:#6C6B6E;margin-top:12px;" data-i18n-key="pricing.workflow.cta_note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+    <!-- Mobile: 5 articles in sequence with mobile screenshots -->
+    <div class="pricing-path-mobile" aria-label="Caminho coberto pelo plano">
+      <article class="pricing-path-chapter">
+        <p class="pricing-path-chapter-num">01</p>
+        <h3 class="pricing-path-chapter-title">Conecte</h3>
+        <p class="pricing-path-chapter-body">Outlook, OneDrive, SharePoint, Google Drive e uploads.</p>
+        <picture class="pricing-plan-flow-shot pricing-path-chapter-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/01-connect-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/01-connect-desktop.png?v=plan-flow-2" alt="Tela do Allybi mostrando fontes conectadas e uploads disponíveis." width="700" height="1080" loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="pricing-path-chapter">
+        <p class="pricing-path-chapter-num">02</p>
+        <h3 class="pricing-path-chapter-title">Pergunte</h3>
+        <p class="pricing-path-chapter-body">Use linguagem normal no chat.</p>
+        <picture class="pricing-plan-flow-shot pricing-path-chapter-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/02-question-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/02-question-desktop.png?v=plan-flow-2" alt="Tela do Allybi com pergunta no chat sobre qual versão enviar ao cliente." width="700" height="1080" loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="pricing-path-chapter">
+        <p class="pricing-path-chapter-num">03</p>
+        <h3 class="pricing-path-chapter-title">Confirme</h3>
+        <p class="pricing-path-chapter-body">Receba o documento certo com fonte visível.</p>
+        <picture class="pricing-plan-flow-shot pricing-path-chapter-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/03-confirm-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/03-confirm-desktop.png?v=plan-flow-2" alt="Tela do Allybi com resposta e fonte confirmada." width="700" height="1080" loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="pricing-path-chapter">
+        <p class="pricing-path-chapter-num">04</p>
+        <h3 class="pricing-path-chapter-title">Revise</h3>
+        <p class="pricing-path-chapter-body">Confira mensagem, arquivo, fonte, destinatário e canal.</p>
+        <picture class="pricing-plan-flow-shot pricing-path-chapter-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/04-review-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/04-review-desktop.png?v=plan-flow-2" alt="Tela do Allybi com rascunho aguardando revisão antes do envio." width="700" height="1080" loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="pricing-path-chapter">
+        <p class="pricing-path-chapter-num">05</p>
+        <h3 class="pricing-path-chapter-title">Envie</h3>
+        <p class="pricing-path-chapter-body">Outlook fica liberado depois da confirmação. WhatsApp aparece como handoff.</p>
+        <picture class="pricing-plan-flow-shot pricing-path-chapter-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/plan-flow/05-send-mobile.png?v=plan-flow-2">
+          <img src="/assets/landing-shots/plan-flow/05-send-desktop.png?v=plan-flow-2" alt="Tela do Allybi com envio via Outlook liberado e WhatsApp handoff disponível." width="700" height="1080" loading="lazy" decoding="async">
+        </picture>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     4. HOW TO START — 5 steps
-     ════════════════════════════════════════════════════════════ -->
-<section class="allybi-section" style="background:#F5F5F5;padding:clamp(80px,10vh,112px) 0;">
-  <div class="allybi-container">
-    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
-      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;margin-bottom:12px;" data-i18n-key="pricing.start.title">Como começar</h2>
-      <p style="font-size:16px;color:#6C6B6E;" data-i18n-key="pricing.start.subtitle">Do primeiro login ao primeiro envio revisado em poucos minutos.</p>
-    </div>
-    <div class="allybi-reveal" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:1100px;margin:0 auto;">
-      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">1</div>
-        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;" data-i18n-key="pricing.start.s1_title">Crie sua conta</h3>
-        <p style="font-size:12px;color:#6C6B6E;" data-i18n-key="pricing.start.s1_desc">Comece o teste de 30 dias.</p>
+<!-- 3. INCLUDED — Tudo incluído em um único plano -->
+<section class="pricing-included-section" aria-labelledby="pricing-included-title">
+  <div class="pricing-included-container">
+    <header class="pricing-included-header">
+      <p class="pricing-eyebrow pricing-eyebrow--dark">INCLUÍDO</p>
+      <h2 id="pricing-included-title">Tudo incluído em um único plano.</h2>
+      <p class="pricing-included-subtitle">Fontes, chat, resposta com fonte, confirmação, revisão e envio pelo Outlook depois da sua confirmação.</p>
+    </header>
+
+    <div class="pricing-included-ledger">
+      <div class="pricing-included-group">
+        <h3 class="pricing-included-group-title">Fontes</h3>
+        <ul class="pricing-included-list">
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Outlook</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>OneDrive</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>SharePoint</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Google Drive</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Uploads de documentos, apresentações, planilhas, imagens e mídia</span></li>
+        </ul>
       </div>
-      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">2</div>
-        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;" data-i18n-key="pricing.start.s2_title">Conecte ou suba</h3>
-        <p style="font-size:12px;color:#6C6B6E;" data-i18n-key="pricing.start.s2_desc">Outlook, OneDrive, SharePoint ou uploads.</p>
+      <div class="pricing-included-group">
+        <h3 class="pricing-included-group-title">Chat e respostas</h3>
+        <ul class="pricing-included-list">
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Perguntas em linguagem normal</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Busca em documentos, e-mails, anexos e fontes conectadas</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Resposta com fonte visível</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Arquivo, localização e data quando disponíveis</span></li>
+        </ul>
       </div>
-      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">3</div>
-        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;" data-i18n-key="pricing.start.s3_title">Pergunte no chat</h3>
-        <p style="font-size:12px;color:#6C6B6E;" data-i18n-key="pricing.start.s3_desc">Em linguagem normal.</p>
+      <div class="pricing-included-group">
+        <h3 class="pricing-included-group-title">Confirmação e envio</h3>
+        <ul class="pricing-included-list">
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Comparação de versões</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Revisão de mensagem, arquivo, fonte, destinatário e canal</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>E-mail via Outlook depois da confirmação</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>WhatsApp handoff com mensagem pronta</span></li>
+        </ul>
       </div>
-      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">4</div>
-        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;" data-i18n-key="pricing.start.s4_title">Receba com fonte</h3>
-        <p style="font-size:12px;color:#6C6B6E;" data-i18n-key="pricing.start.s4_desc">Veja a resposta e de onde veio.</p>
-      </div>
-      <div style="text-align:center;padding:24px 16px;background:#fff;border:1px solid #E6E6EC;border-radius:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:#F5F5F5;color:#6C6B6E;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">5</div>
-        <h3 style="font-size:14px;font-weight:600;color:#181818;margin-bottom:4px;" data-i18n-key="pricing.start.s5_title">Revise e envie</h3>
-        <p style="font-size:12px;color:#6C6B6E;" data-i18n-key="pricing.start.s5_desc">E-mail via Outlook sai com sua confirmação. WhatsApp abre como handoff.</p>
+      <div class="pricing-included-group">
+        <h3 class="pricing-included-group-title">Controle</h3>
+        <ul class="pricing-included-list">
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Você escolhe o que conecta</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Permissões por fonte</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Nada sai sem confirmação</span></li>
+          <li><span class="pricing-included-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span>Documentos, perguntas e respostas não treinam modelos</span></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     5. FAQ
-     ════════════════════════════════════════════════════════════ -->
-<section class="allybi-section" style="padding:clamp(80px,10vh,112px) 0;">
-  <div class="allybi-container">
-    <div class="allybi-section-header allybi-reveal" style="text-align:center;margin-bottom:48px;">
-      <h2 style="font-size:clamp(24px,3vw,40px);font-weight:700;letter-spacing:-.025em;color:#181818;" data-i18n-key="pricing.faq.title_v2">Perguntas comuns</h2>
-    </div>
-    <div class="allybi-accordion allybi-reveal" style="max-width:860px;margin:0 auto;">
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false" data-event="pricing_faq_open"><span data-i18n-key="pricing.faq.q1_v2">O que acontece depois dos 30 dias?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a1_v2">Depois do teste, o plano passa a custar R$170/mês. Você pode cancelar quando quiser.</p></div>
+<!-- 4. START — Comece sem demo obrigatória -->
+<section class="pricing-start-section" aria-labelledby="pricing-start-title">
+  <div class="pricing-start-container">
+    <header class="pricing-start-header">
+      <p class="pricing-eyebrow pricing-eyebrow--dark">COMECE</p>
+      <h2 id="pricing-start-title">Comece sem demo obrigatória.</h2>
+      <p class="pricing-start-subtitle">Crie sua conta, conecte uma fonte e faça uma pergunta real.</p>
+    </header>
+    <ol class="pricing-start-timeline">
+      <span class="pricing-start-timeline-line" aria-hidden="true"></span>
+      <li class="pricing-start-step">
+        <span class="pricing-start-node" aria-hidden="true">01</span>
+        <h3 class="pricing-start-step-title">Crie sua conta</h3>
+        <p class="pricing-start-step-body">Comece o teste de 30 dias sem reunião obrigatória.</p>
+      </li>
+      <li class="pricing-start-step">
+        <span class="pricing-start-node" aria-hidden="true">02</span>
+        <h3 class="pricing-start-step-title">Conecte ou suba</h3>
+        <p class="pricing-start-step-body">Use Outlook, OneDrive, SharePoint, Google Drive ou um arquivo.</p>
+      </li>
+      <li class="pricing-start-step">
+        <span class="pricing-start-node" aria-hidden="true">03</span>
+        <h3 class="pricing-start-step-title">Pergunte, revise e envie</h3>
+        <p class="pricing-start-step-body">Receba a resposta com fonte. Depois, revise e envie pelo Outlook com confirmação. WhatsApp abre como handoff.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. FAQ — Antes de começar -->
+<section id="faq" class="pricing-faq-section" aria-labelledby="pricing-faq-title">
+  <div class="pricing-faq-container">
+    <header class="pricing-faq-header">
+      <p class="pricing-eyebrow pricing-eyebrow--dark">PERGUNTAS COMUNS</p>
+      <h2 id="pricing-faq-title">Antes de começar.</h2>
+    </header>
+    <div class="pricing-faq-list">
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-1" id="pricing-faq-q-1">
+          <span>Quanto custa o Allybi?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-1" role="region" aria-labelledby="pricing-faq-q-1"><p>Os primeiros 30 dias são grátis. Depois, o Allybi custa R$170 por mês. Você pode cancelar quando quiser.</p></div>
       </div>
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false"><span data-i18n-key="pricing.faq.q2_v2">Preciso fazer demo para começar?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a2_v2">Não. O teste é self-serve. Você pode começar conectando uma fonte ou subindo arquivos.</p></div>
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-2" id="pricing-faq-q-2">
+          <span>Preciso agendar uma demo?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-2" role="region" aria-labelledby="pricing-faq-q-2"><p>Não. O Allybi é self-service. Você pode criar sua conta e começar sem reunião obrigatória.</p></div>
       </div>
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false"><span data-i18n-key="pricing.faq.q3_v2">O que está incluído?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a3_v2">Outlook, OneDrive, SharePoint, uploads, chat com documentos, e-mails e anexos, resposta com fonte, comparação de versões, revisão antes do envio, e-mail via Outlook com confirmação e WhatsApp handoff.</p></div>
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-3" id="pricing-faq-q-3">
+          <span>O que está incluído?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-3" role="region" aria-labelledby="pricing-faq-q-3"><p>Outlook, OneDrive, SharePoint, Google Drive, uploads, chat com documentos e e-mails, respostas com fonte, comparação de versões, revisão antes do envio, e-mail via Outlook com confirmação e WhatsApp handoff.</p></div>
       </div>
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false"><span data-i18n-key="pricing.faq.q4_v2">O Allybi envia mensagens sozinho?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a4_v2">Não. Nada sai sem confirmação. E-mails via Outlook passam por revisão. No WhatsApp, o Allybi prepara a mensagem e abre o handoff para você revisar e mandar.</p></div>
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-4" id="pricing-faq-q-4">
+          <span>O Allybi envia e-mail?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-4" role="region" aria-labelledby="pricing-faq-q-4"><p>Sim. Depois de você revisar destinatário, mensagem, arquivo, fonte e canal, o e-mail pode ser enviado via Outlook com sua confirmação.</p></div>
       </div>
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false"><span data-i18n-key="pricing.faq.q5">O Allybi lê meu WhatsApp?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a5">Não. WhatsApp é handoff de envio. O Allybi não lê, pesquisa ou sincroniza sua caixa de WhatsApp.</p></div>
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-5" id="pricing-faq-q-5">
+          <span>O Allybi envia pelo WhatsApp?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-5" role="region" aria-labelledby="pricing-faq-q-5"><p>Não. O Allybi abre o WhatsApp com a mensagem pronta. Você revisa e envia dentro do WhatsApp. O Allybi não lê nem sincroniza sua caixa.</p></div>
       </div>
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false"><span data-i18n-key="pricing.faq.q6">Quais formatos posso subir?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a6">PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, JPG, JPEG, PNG, MP3 e MP4.</p></div>
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-6" id="pricing-faq-q-6">
+          <span>Meus documentos treinam modelos?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-6" role="region" aria-labelledby="pricing-faq-q-6"><p>Não. Documentos, perguntas e respostas não treinam modelos.</p></div>
       </div>
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false"><span data-i18n-key="pricing.faq.q7">Posso cancelar?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a7">Sim. Você pode cancelar quando quiser.</p></div>
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-7" id="pricing-faq-q-7">
+          <span>Quais fontes posso conectar?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-7" role="region" aria-labelledby="pricing-faq-q-7"><p>Outlook, OneDrive, SharePoint e Google Drive. Você também pode subir arquivos diretamente.</p></div>
       </div>
-      <div class="allybi-accordion__item">
-        <button class="allybi-accordion__trigger" aria-expanded="false"><span data-i18n-key="pricing.faq.q8">Existe plano gratuito?</span><svg class="allybi-accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-        <div class="allybi-accordion__content"><p data-i18n-key="pricing.faq.a8">O teste gratuito dura 30 dias. Depois, o plano é R$170/mês.</p></div>
+      <div class="pricing-faq-item">
+        <button type="button" class="pricing-faq-trigger" aria-expanded="false" aria-controls="pricing-faq-a-8" id="pricing-faq-q-8">
+          <span>Quais arquivos posso subir?</span>
+          <span class="pricing-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="pricing-faq-answer" id="pricing-faq-a-8" role="region" aria-labelledby="pricing-faq-q-8"><p>Documentos, apresentações, planilhas, imagens e mídia.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     6. FINAL CTA
-     ════════════════════════════════════════════════════════════ -->
-<section style="padding:clamp(80px,10vh,128px) 0;background:#0B0D0E;color:#fff;">
-  <div class="allybi-container" style="text-align:center;">
-    <h2 class="allybi-reveal" style="font-size:clamp(24px,3vw,40px);font-weight:700;margin-bottom:14px;text-wrap:balance;" data-i18n-key="pricing.final.title_v2">Comece com um fluxo real.</h2>
-    <p class="allybi-reveal" style="font-size:16px;color:rgba(255,255,255,.55);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;" data-i18n-key="pricing.final.subtitle_v2">Conecte uma fonte ou suba um arquivo. Pergunte no chat, receba resposta com fonte e revise antes de enviar.</p>
-    <div class="allybi-reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-event="pricing_final_cta_click" data-i18n-key="pricing.plan.cta">Começar grátis por 30 dias</a>
-      <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="pricing.final.secondary_cta">Ver como funciona</a>
+<!-- 6. FINAL CTA -->
+<section class="pricing-final-cta-section" aria-labelledby="pricing-final-cta-title">
+  <div class="pricing-final-cta-container">
+    <p class="pricing-eyebrow pricing-eyebrow--final">COMEÇAR</p>
+    <h2 id="pricing-final-cta-title">Teste o caminho inteiro por 30 dias.</h2>
+    <p class="pricing-final-cta-subtitle">Conecte uma fonte, pergunte no chat, receba com fonte e revise antes de enviar.</p>
+    <div class="pricing-final-cta-actions">
+      <a href="https://app.allybi.com.br" class="pricing-final-cta-primary">Começar grátis por 30 dias</a>
+      <a href="/how-it-works.html" class="pricing-final-cta-secondary">Ver como funciona</a>
     </div>
-    <p class="allybi-reveal" style="font-size:13px;color:rgba(255,255,255,.4);margin-top:16px;" data-i18n-key="pricing.final.note">Depois R$170/mês. Cancele quando quiser.</p>
+    <p class="pricing-final-cta-trust">Nada sai sem confirmação. Documentos não treinam modelos.</p>
+    <p class="pricing-final-cta-micro">Cancele quando quiser.</p>
   </div>
 </section>
 
 </main>
 
+
 <!-- FOOTER -->
-<footer class="allybi-footer">
-  <div class="allybi-footer-inner">
-    <div class="footer-brand">
-      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
-      <p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
     </div>
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-        <div class="footer-col-links">
-          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
-        <div class="footer-col-links">
-          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
-        <div class="footer-col-links">
-          <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-        <div class="footer-col-links">
-          <a href="about.html" data-i18n-key="footer.about">About</a>
-          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
-          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-        <div class="footer-col-links">
-          <a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a>
-          <a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-          <a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a>
-          <a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a>
-          <a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-mobile-links">
-      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      
-      <a href="about.html" data-i18n-key="footer.about">About</a>
-      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-      <div class="footer-bottom-right">
-        <div class="language-selector" id="footer-language-selector">
-          <button class="language-toggle" aria-expanded="false">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-            <span class="lang-label">English</span>
-          </button>
-          <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
-            <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
-          </ul>
-        </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
       </div>
     </div>
   </div>
 </footer>
 
 
+
 <!-- Scripts -->
-<script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
 <script>
@@ -457,5 +548,6 @@
 document.querySelectorAll('.allybi-accordion__trigger').forEach(function(btn){btn.addEventListener('click',function(){var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);var content=btn.nextElementSibling;if(!expanded){content.style.maxHeight=content.scrollHeight+'px'}else{content.style.maxHeight='0'}})});
 </script>
 
+<script src="assets/pricing-page.js" defer></script>
 </body>
 </html>

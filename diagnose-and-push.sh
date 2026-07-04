@@ -45,7 +45,7 @@ echo "✅ Cleaned"
 echo ""
 echo "Step 2: Configuring remote..."
 git remote remove origin 2>/dev/null || true
-git remote add origin https://pedrogillet1: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@github.com/pedrogillet1/koda-Landing.git
+git remote add origin https://pedrogillet1:REDACTED_ROTATE_THIS_TOKEN@github.com/pedrogillet1/koda-Landing.git
 echo "✅ Remote configured"
 
 echo ""

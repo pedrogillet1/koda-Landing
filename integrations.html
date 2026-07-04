@@ -6,22 +6,26 @@
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
   <title>Integrações | Allybi</title>
-  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint e uploads. Pergunte no chat, veja a fonte da resposta e revise antes de enviar. E-mail via Outlook sai com confirmação. WhatsApp abre como handoff.">
+  <meta name="description" content="Conecte Outlook, OneDrive, SharePoint, Google Drive e uploads ao Allybi. Use as fontes no chat, envie e-mail via Outlook depois da confirmação e abra WhatsApp como handoff.">
   <link rel="canonical" href="https://allybi.com.br/integrations.html">
   <link rel="alternate" hreflang="en" href="https://allybi.co/integrations.html">
   <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/integrations.html">
   <link rel="alternate" hreflang="x-default" href="https://allybi.co/integrations.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Integrações | Allybi">
-  <meta property="og:description" content="Fontes conectadas entram no chat. Outlook pode enviar e-mail com confirmação. WhatsApp abre como handoff.">
+  <meta property="og:description" content="Outlook, OneDrive, SharePoint, Google Drive e uploads entram como fontes. Outlook envia depois da confirmação e WhatsApp abre como handoff.">
   <meta property="og:url" content="https://allybi.com.br/integrations.html">
   <meta property="og:site_name" content="Allybi">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Integrações | Allybi">
-  <meta name="twitter:description" content="Fontes conectadas entram no chat. Outlook pode enviar e-mail com confirmação. WhatsApp abre como handoff.">
+  <meta name="twitter:description" content="Outlook, OneDrive, SharePoint, Google Drive e uploads entram como fontes. Outlook envia depois da confirmação e WhatsApp abre como handoff.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hero product shot (responsive preload — only the version matching the
+       current viewport is fetched). -->
+  <link rel="preload" as="image" href="/assets/landing-shots/integrations/01-map-desktop.png?v=integrations-rebuild-4" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="/assets/landing-shots/integrations/01-map-mobile.png?v=integrations-rebuild-4"  media="(max-width: 767px)">
   <link rel="stylesheet" href="allybi-tokens.css">
   <link rel="stylesheet" href="allybi-base.css">
   <link rel="stylesheet" href="allybi-components.css">
@@ -39,761 +43,663 @@
 <body>
 
 <!-- HEADER -->
-<header id="allybi-header" class="allybi-header">
-  <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
-    <nav class="allybi-nav desktop-only">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="nav-dropdown-menu">
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-        <div class="nav-dropdown-menu">
-          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-        <div class="nav-dropdown-menu">
-          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
     </nav>
-    <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="allybi-mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
   </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div id="allybi-mobile-menu" class="mobile-menu">
-  <nav class="mobile-menu-nav">
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-      <div class="mobile-dropdown-items">
-        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
-      </div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
     </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-      <div class="mobile-dropdown-items">
-        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-        <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
-      </div>
-    </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-      <div class="mobile-dropdown-items">
-        <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
-      </div>
-    </div>
-    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
-  </nav>
-  <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </div>
 
 
-<main>
 
-<!-- ════════════════════════════════════════════════════════════
-     1. HERO
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-hero allybi-section">
-  <div class="allybi-container">
-    <div class="integ-hero__grid">
-      <div class="integ-hero__text integ-reveal">
-        <span class="allybi-chip allybi-chip--accent" data-i18n-key="integ.hero_chip">Integrações</span>
-        <h1 class="allybi-h1" data-i18n-key="integ.hero_h1">Conecte as fontes onde o trabalho já acontece.</h1>
-        <p class="allybi-body-lg" data-i18n-key="integ.hero_sub">Pergunte no chat, veja a fonte da resposta, revise antes de enviar. Outlook envia com confirmação; WhatsApp abre como handoff.</p>
-        <div class="integ-hero__ctas">
-          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="integ.cta_start_free">Começar grátis por 30 dias</a>
-          <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="integ.cta_see_how">Ver como funciona</a>
+
+<main id="integrations-page">
+
+<!-- 1. HERO -->
+<section class="integrations-hero integrations-hero--editorial" aria-labelledby="integrations-hero-title">
+  <div class="integrations-hero-container">
+    <div class="integrations-hero-copy">
+      <p class="integrations-hero-eyebrow">INTEGRAÇÕES</p>
+      <h1 id="integrations-hero-title"><span>Conecte as fontes</span><span>onde o trabalho já acontece.</span></h1>
+      <p class="integrations-hero-subtitle">Outlook, OneDrive, SharePoint, Google Drive e uploads entram como fontes. Depois da revisão, o e-mail pode sair via Outlook ou o WhatsApp abre como handoff.</p>
+      <div class="integrations-hero-actions">
+        <a class="integrations-hero-primary" href="https://app.allybi.com.br">Começar grátis por 30 dias</a>
+        <a class="integrations-hero-secondary" href="#connection-explorer">Ver as fontes conectadas <span class="integrations-hero-arrow" aria-hidden="true">→</span></a>
+      </div>
+      <p class="integrations-hero-trust">Fontes permissionadas · Resposta com fonte · Nada sai sem confirmação</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. FONTES QUE ENTRAM NO CHAT -->
+<section id="connection-explorer" class="connection-explorer-section integrations-product-images" aria-labelledby="connection-explorer-title">
+  <div class="connection-explorer-container">
+    <header class="connection-explorer-header">
+      <p class="connection-explorer-eyebrow">FONTES QUE ENTRAM NO CHAT</p>
+      <h2 id="connection-explorer-title"><span>Suas fontes entram</span><span>como parte da conversa.</span></h2>
+      <p class="connection-explorer-subtitle">Outlook, OneDrive, SharePoint, Google Drive e uploads entram como fontes. A resposta mostra de onde veio antes de qualquer envio.</p>
+    </header>
+
+    <!-- DESKTOP — seletor de fontes + product shot -->
+    <div class="connection-explorer-desktop" data-connection-explorer>
+      <div class="connection-explorer-tabs" role="tablist" aria-label="Fontes conectadas">
+        <button type="button" class="connection-explorer-tab is-active" role="tab" id="connection-explorer-tab-0" aria-selected="true" aria-controls="connection-explorer-panel" tabindex="0">
+          <span class="connection-explorer-tab-indicator" aria-hidden="true"></span>
+          <img src="assets/images/outlook-icon.svg" alt="" width="18" height="18" aria-hidden="true">
+          <span class="connection-explorer-tab-text">
+            <span class="connection-explorer-tab-name">Outlook</span>
+            <span class="connection-explorer-tab-role">Fonte e canal</span>
+          </span>
+        </button>
+        <button type="button" class="connection-explorer-tab" role="tab" id="connection-explorer-tab-1" aria-selected="false" aria-controls="connection-explorer-panel" tabindex="-1">
+          <span class="connection-explorer-tab-indicator" aria-hidden="true"></span>
+          <img src="assets/images/onedrive-icon.svg" alt="" width="18" height="18" aria-hidden="true">
+          <span class="connection-explorer-tab-text">
+            <span class="connection-explorer-tab-name">OneDrive</span>
+            <span class="connection-explorer-tab-role">Fonte</span>
+          </span>
+        </button>
+        <button type="button" class="connection-explorer-tab" role="tab" id="connection-explorer-tab-2" aria-selected="false" aria-controls="connection-explorer-panel" tabindex="-1">
+          <span class="connection-explorer-tab-indicator" aria-hidden="true"></span>
+          <img src="assets/images/sharepoint-icon.svg" alt="" width="18" height="18" aria-hidden="true">
+          <span class="connection-explorer-tab-text">
+            <span class="connection-explorer-tab-name">SharePoint</span>
+            <span class="connection-explorer-tab-role">Fonte</span>
+          </span>
+        </button>
+        <button type="button" class="connection-explorer-tab" role="tab" id="connection-explorer-tab-3" aria-selected="false" aria-controls="connection-explorer-panel" tabindex="-1">
+          <span class="connection-explorer-tab-indicator" aria-hidden="true"></span>
+          <img src="assets/images/google-drive-icon.svg" alt="" width="18" height="18" aria-hidden="true">
+          <span class="connection-explorer-tab-text">
+            <span class="connection-explorer-tab-name">Google Drive</span>
+            <span class="connection-explorer-tab-role">Fonte</span>
+          </span>
+        </button>
+        <button type="button" class="connection-explorer-tab" role="tab" id="connection-explorer-tab-4" aria-selected="false" aria-controls="connection-explorer-panel" tabindex="-1">
+          <span class="connection-explorer-tab-indicator" aria-hidden="true"></span>
+          <img src="assets/images/uploads-icon.svg" alt="" width="18" height="18" aria-hidden="true">
+          <span class="connection-explorer-tab-text">
+            <span class="connection-explorer-tab-name">Uploads</span>
+            <span class="connection-explorer-tab-role">Fonte direta</span>
+          </span>
+        </button>
+      </div>
+      <div class="connection-explorer-panel" id="connection-explorer-panel" role="tabpanel" aria-labelledby="connection-explorer-tab-0">
+        <div class="connection-explorer-state is-active" data-source="outlook">
+          <picture class="integration-product-shot connection-explorer-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/02-outlook-mobile.png?v=integrations-rebuild-4">
+            <img src="/assets/landing-shots/integrations/02-outlook-desktop.png?v=integrations-rebuild-4" alt="Allybi mostrando Outlook como fonte de e-mails e anexos e como canal de envio depois da confirmação." width="1880" height="1160" loading="lazy" decoding="async">
+          </picture>
         </div>
-        <div class="integ-hero__trust">
-          <span data-i18n-key="integ.hero_trust2">Resposta com fonte</span>
-          <span data-i18n-key="integ.hero_trust3">E-mail via Outlook</span>
-          <span data-i18n-key="integ.hero_trust5">Nada sai sem confirmação</span>
-          <span class="integ-hero__trust--secondary" data-i18n-key="integ.hero_trust1">Fontes permissionadas</span>
-          <span class="integ-hero__trust--secondary" data-i18n-key="integ.hero_trust4">WhatsApp handoff</span>
+        <div class="connection-explorer-state" data-source="onedrive">
+          <picture class="integration-product-shot connection-explorer-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/03-onedrive-mobile.png?v=integrations-rebuild-4">
+            <img src="/assets/landing-shots/integrations/03-onedrive-desktop.png?v=integrations-rebuild-4" alt="Allybi mostrando OneDrive como fonte de arquivos e pastas com a origem preservada." width="1880" height="1160" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="connection-explorer-state" data-source="sharepoint">
+          <picture class="integration-product-shot connection-explorer-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/04-sharepoint-mobile.png?v=integrations-rebuild-4">
+            <img src="/assets/landing-shots/integrations/04-sharepoint-desktop.png?v=integrations-rebuild-4" alt="Allybi mostrando SharePoint como fonte com site, biblioteca, pasta e arquivo de origem." width="1880" height="1160" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="connection-explorer-state" data-source="googledrive">
+          <picture class="integration-product-shot connection-explorer-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/04b-googledrive-mobile.png?v=integrations-rebuild-4">
+            <img src="/assets/landing-shots/integrations/04b-googledrive-desktop.png?v=integrations-rebuild-4" alt="Allybi mostrando Google Drive como fonte de arquivos e pastas do Drive com a origem preservada." width="1880" height="1160" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="connection-explorer-state" data-source="uploads">
+          <picture class="integration-product-shot connection-explorer-shot">
+            <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/05-uploads-mobile.png?v=integrations-rebuild-4">
+            <img src="/assets/landing-shots/integrations/05-uploads-desktop.png?v=integrations-rebuild-4" alt="Allybi mostrando uploads como fonte direta, sem conexão externa." width="1880" height="1160" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
+    </div>
 
-      <div class="integ-hero__visual integ-reveal">
-        <div class="hero-scene" id="integHeroScene" data-state="idle" role="img" data-i18n-aria-label="integ.hero_scene_aria" aria-label="O Allybi reúne fontes conectadas, mostra a versão com fonte confirmada e prepara o envio para revisão.">
-          <div class="hero-scene__workspace" aria-hidden="true">
-            <div class="hero-scene__source-strip" data-stage="1">
-              <span class="hero-scene__source-pill"><img src="assets/images/outlook-icon.svg" alt="" width="14" height="14" aria-hidden="true"> Outlook</span>
-              <span class="hero-scene__source-pill"><img src="assets/images/onedrive-icon.svg" alt="" width="14" height="14" aria-hidden="true"> OneDrive</span>
-              <span class="hero-scene__source-pill"><img src="assets/images/sharepoint-icon.svg" alt="" width="14" height="14" aria-hidden="true"> SharePoint</span>
-              <span class="hero-scene__source-pill"><img src="assets/images/uploads-icon.svg" alt="" width="14" height="14" aria-hidden="true"> <span data-i18n-key="hero.scene.uploads">Uploads</span></span>
-            </div>
+    <!-- MOBILE — quatro articles em sequência, sem accordion / sem tabs -->
+    <div class="connection-explorer-mobile" aria-label="Fontes em sequência">
+      <article class="connection-explorer-m-story" data-source="outlook">
+        <span class="connection-explorer-m-num">01</span>
+        <h3 class="connection-explorer-m-title">Outlook</h3>
+        <p class="connection-explorer-m-role">Fonte e canal</p>
+        <picture class="integration-product-shot connection-explorer-m-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/02-outlook-mobile.png?v=integrations-rebuild-4">
+          <img src="/assets/landing-shots/integrations/02-outlook-desktop.png?v=integrations-rebuild-4"
+               alt="Detalhe do Allybi mostrando Outlook como fonte de e-mails, anexos e canal de envio depois da confirmação."
+               width="700" height="1120"
+               loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="connection-explorer-m-story" data-source="onedrive">
+        <span class="connection-explorer-m-num">02</span>
+        <h3 class="connection-explorer-m-title">OneDrive</h3>
+        <p class="connection-explorer-m-role">Fonte</p>
+        <picture class="integration-product-shot connection-explorer-m-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/03-onedrive-mobile.png?v=integrations-rebuild-4">
+          <img src="/assets/landing-shots/integrations/03-onedrive-desktop.png?v=integrations-rebuild-4"
+               alt="Detalhe do Allybi mostrando OneDrive como fonte de arquivos e pastas com origem preservada."
+               width="700" height="1120"
+               loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="connection-explorer-m-story" data-source="sharepoint">
+        <span class="connection-explorer-m-num">03</span>
+        <h3 class="connection-explorer-m-title">SharePoint</h3>
+        <p class="connection-explorer-m-role">Fonte</p>
+        <picture class="integration-product-shot connection-explorer-m-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/04-sharepoint-mobile.png?v=integrations-rebuild-4">
+          <img src="/assets/landing-shots/integrations/04-sharepoint-desktop.png?v=integrations-rebuild-4"
+               alt="Detalhe do Allybi mostrando SharePoint como fonte com site, biblioteca, pasta e arquivo de origem."
+               width="700" height="1120"
+               loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="connection-explorer-m-story" data-source="googledrive">
+        <span class="connection-explorer-m-num">04</span>
+        <h3 class="connection-explorer-m-title">Google Drive</h3>
+        <p class="connection-explorer-m-role">Fonte</p>
+        <picture class="integration-product-shot connection-explorer-m-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/04b-googledrive-mobile.png?v=integrations-rebuild-4">
+          <img src="/assets/landing-shots/integrations/04b-googledrive-desktop.png?v=integrations-rebuild-4"
+               alt="Detalhe do Allybi mostrando Google Drive como fonte de arquivos e pastas do Drive com origem preservada."
+               width="700" height="1120"
+               loading="lazy" decoding="async">
+        </picture>
+      </article>
+      <article class="connection-explorer-m-story" data-source="uploads">
+        <span class="connection-explorer-m-num">05</span>
+        <h3 class="connection-explorer-m-title">Uploads</h3>
+        <p class="connection-explorer-m-role">Fonte direta</p>
+        <picture class="integration-product-shot connection-explorer-m-shot">
+          <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/05-uploads-mobile.png?v=integrations-rebuild-4">
+          <img src="/assets/landing-shots/integrations/05-uploads-desktop.png?v=integrations-rebuild-4"
+               alt="Detalhe do Allybi mostrando uploads como fonte direta sem conexão externa."
+               width="700" height="1120"
+               loading="lazy" decoding="async">
+        </picture>
+      </article>
+    </div>
 
-            <div class="hero-scene__body">
-              <div class="hero-scene__query" data-stage="2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <span data-i18n-key="hero.scene.query">qual versão posso enviar ao cliente?</span>
-              </div>
+  </div>
+</section>
 
-              <div class="hero-scene__versions" data-stage="3">
-                <p class="hero-scene__versions-label" data-i18n-key="hero.scene.results_label">3 versões encontradas</p>
-                <ul class="hero-scene__v-list">
-                  <li class="hero-scene__v hero-scene__v--prev" data-version="1">
-                    <span class="hero-scene__v-name">contrato_final.pdf</span>
-                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v1_tag">versão anterior</span>
-                  </li>
-                  <li class="hero-scene__v hero-scene__v--warn" data-version="2">
-                    <span class="hero-scene__v-name">contrato_final_v3.pdf</span>
-                    <span class="hero-scene__v-tag" data-i18n-key="hero.scene.v2_tag">fonte incerta</span>
-                  </li>
-                  <li class="hero-scene__v hero-scene__v--ok" data-version="3">
-                    <span class="hero-scene__v-name">contrato_final_AGORA.pdf</span>
-                    <span class="hero-scene__v-tag">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                      <span data-i18n-key="hero.scene.v3_tag">fonte confirmada</span>
-                    </span>
-                  </li>
-                </ul>
-                <p class="hero-scene__source-line">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                  <span data-i18n-key="hero.scene.source">SharePoint / Clientes / Contratos / 14 mar</span>
-                </p>
-              </div>
+<!-- 3. DEPOIS DA REVISÃO — Outlook envia e-mail, WhatsApp abre handoff -->
+<section id="depois-da-revisao" class="actions-section actions-section--channels integrations-product-images" aria-labelledby="actions-title">
+  <div class="actions-container">
+    <header class="actions-header">
+      <p class="actions-eyebrow">DEPOIS DA REVISÃO</p>
+      <h2 id="actions-title">
+        <span>Dois canais.</span>
+        <span>Dois comportamentos.</span>
+      </h2>
+      <p class="actions-subtitle">Outlook pode enviar e-mail. WhatsApp só abre o handoff para você concluir dentro do aplicativo.</p>
+    </header>
 
-              <div class="hero-scene__review" data-stage="4">
-                <p class="hero-scene__review-label" data-i18n-key="hero.scene.review_label">Revisar antes de enviar</p>
-                <dl class="hero-scene__review-list">
-                  <div><dt data-i18n-key="hero.scene.recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
-                  <div><dt data-i18n-key="hero.scene.file">Arquivo</dt><dd>contrato_final_AGORA.pdf</dd></div>
-                  <div><dt data-i18n-key="hero.scene.source_label">Fonte</dt><dd>SharePoint</dd></div>
-                  <div><dt data-i18n-key="hero.scene.channel">Canal</dt><dd data-i18n-key="hero.scene.channel_value">E-mail via Outlook</dd></div>
-                </dl>
-              </div>
+    <div class="actions-channels-shot">
+      <picture class="integration-product-shot integration-product-shot--channels">
+        <source media="(max-width: 767px)" srcset="/assets/landing-shots/integrations/06-channels-mobile.png?v=integrations-rebuild-4">
+        <img src="/assets/landing-shots/integrations/06-channels-desktop.png?v=integrations-rebuild-4"
+             alt="Tela do Allybi explicando que Outlook pode enviar e-mail depois da confirmação e WhatsApp funciona apenas como handoff."
+             width="1880" height="1160"
+             loading="lazy" decoding="async">
+      </picture>
+    </div>
+  </div>
+</section>
 
-              <div class="hero-scene__send" data-stage="5">
-                <button type="button" tabindex="-1" class="hero-scene__send-btn" data-i18n-key="hero.scene.send">Enviar via Outlook</button>
-                <span class="hero-scene__send-alt"><img src="assets/images/whatsapp-icon.svg" alt="" width="12" height="12" aria-hidden="true"> <span data-i18n-key="hero.scene.handoff">WhatsApp handoff</span></span>
-              </div>
-            </div>
-          </div>
+<!-- 4. ROLE LEDGER -->
+<section class="role-ledger-section" aria-labelledby="role-ledger-title">
+  <div class="role-ledger-container">
+    <header class="role-ledger-header">
+      <p class="role-ledger-eyebrow">PAPÉIS E LIMITES</p>
+      <h2 id="role-ledger-title">
+        <span>O papel de cada conexão,</span>
+        <span>sem misturar fonte e canal.</span>
+      </h2>
+      <p class="role-ledger-subtitle">Cada integração abaixo mostra o que entra, o que pode ser feito e como o fluxo termina.</p>
+    </header>
+
+    <div class="role-ledger-table">
+      <div class="role-ledger-headers">
+        <span>CONEXÃO</span>
+        <span>PAPEL</span>
+        <span>CONTEÚDO QUE ENTRA</span>
+        <span>O QUE PERMITE</span>
+        <span>COMO CONCLUI</span>
+      </div>
+      <div class="role-ledger-row">
+        <span class="role-ledger-conn"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24"><span class="role-ledger-conn-name">Outlook</span></span>
+        <span class="role-ledger-role">Fonte e canal</span>
+        <span>E-mails, threads, anexos e metadados selecionados.</span>
+        <span>Pesquisar, perguntar, comparar e preparar e-mail.</span>
+        <span>Allybi envia pelo Outlook depois da sua confirmação.</span>
+      </div>
+      <div class="role-ledger-row">
+        <span class="role-ledger-conn"><img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24"><span class="role-ledger-conn-name">OneDrive</span></span>
+        <span class="role-ledger-role">Fonte</span>
+        <span>Arquivos, pastas e metadados selecionados.</span>
+        <span>Pesquisar, perguntar, comparar e mostrar origem.</span>
+        <span>Não envia.</span>
+      </div>
+      <div class="role-ledger-row">
+        <span class="role-ledger-conn"><img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24"><span class="role-ledger-conn-name">SharePoint</span></span>
+        <span class="role-ledger-role">Fonte</span>
+        <span>Sites, bibliotecas, pastas e arquivos selecionados.</span>
+        <span>Pesquisar, perguntar, comparar e mostrar origem.</span>
+        <span>Não envia.</span>
+      </div>
+      <div class="role-ledger-row">
+        <span class="role-ledger-conn"><img src="assets/images/google-drive-icon.svg" alt="" width="24" height="24"><span class="role-ledger-conn-name">Google Drive</span></span>
+        <span class="role-ledger-role">Fonte</span>
+        <span>Arquivos, pastas e metadados selecionados.</span>
+        <span>Pesquisar, perguntar, comparar e mostrar origem.</span>
+        <span>Não envia.</span>
+      </div>
+      <div class="role-ledger-row">
+        <span class="role-ledger-conn"><span class="role-ledger-uploadicon" aria-hidden="true"><img src="assets/images/uploads-icon.svg" alt="" width="43" height="24"></span><span class="role-ledger-conn-name">Uploads</span></span>
+        <span class="role-ledger-role">Fonte direta</span>
+        <span>Arquivos enviados diretamente por você.</span>
+        <span>Pesquisar, perguntar, comparar e mostrar origem.</span>
+        <span>Não envia.</span>
+      </div>
+      <div class="role-ledger-row">
+        <span class="role-ledger-conn"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24"><span class="role-ledger-conn-name">WhatsApp</span></span>
+        <span class="role-ledger-role">Handoff</span>
+        <span>Nenhuma caixa entra no Allybi.</span>
+        <span>Preparar mensagem e abrir a conversa.</span>
+        <span>Você envia dentro do WhatsApp.</span>
+      </div>
+    </div>
+
+    <!-- Mobile accordion mirror -->
+    <div class="role-ledger-accordion">
+      <div class="role-ledger-acc-item">
+        <button type="button" class="role-ledger-acc-trigger" aria-expanded="true" aria-controls="role-ledger-acc-1">
+          <img src="assets/images/outlook-icon.svg" alt="" width="24" height="24">
+          <span>Outlook</span>
+          <span class="role-ledger-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="role-ledger-acc-panel" id="role-ledger-acc-1">
+          <p class="role-ledger-acc-label">PAPEL</p>
+          <p class="role-ledger-acc-value">Fonte e canal</p>
+          <p class="role-ledger-acc-label">CONTEÚDO QUE ENTRA</p>
+          <p class="role-ledger-acc-value">E-mails, threads, anexos e metadados selecionados.</p>
+          <p class="role-ledger-acc-label">O QUE PERMITE</p>
+          <p class="role-ledger-acc-value">Pesquisar, perguntar, comparar e preparar e-mail.</p>
+          <p class="role-ledger-acc-label">COMO CONCLUI</p>
+          <p class="role-ledger-acc-value">Allybi envia pelo Outlook depois da sua confirmação.</p>
+        </div>
+      </div>
+      <div class="role-ledger-acc-item">
+        <button type="button" class="role-ledger-acc-trigger" aria-expanded="false" aria-controls="role-ledger-acc-2">
+          <img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24">
+          <span>OneDrive</span>
+          <span class="role-ledger-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="role-ledger-acc-panel" id="role-ledger-acc-2">
+          <p class="role-ledger-acc-label">PAPEL</p>
+          <p class="role-ledger-acc-value">Fonte</p>
+          <p class="role-ledger-acc-label">CONTEÚDO QUE ENTRA</p>
+          <p class="role-ledger-acc-value">Arquivos, pastas e metadados selecionados.</p>
+          <p class="role-ledger-acc-label">O QUE PERMITE</p>
+          <p class="role-ledger-acc-value">Pesquisar, perguntar, comparar e mostrar origem.</p>
+          <p class="role-ledger-acc-label">COMO CONCLUI</p>
+          <p class="role-ledger-acc-value">Não envia.</p>
+        </div>
+      </div>
+      <div class="role-ledger-acc-item">
+        <button type="button" class="role-ledger-acc-trigger" aria-expanded="false" aria-controls="role-ledger-acc-3">
+          <img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24">
+          <span>SharePoint</span>
+          <span class="role-ledger-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="role-ledger-acc-panel" id="role-ledger-acc-3">
+          <p class="role-ledger-acc-label">PAPEL</p>
+          <p class="role-ledger-acc-value">Fonte</p>
+          <p class="role-ledger-acc-label">CONTEÚDO QUE ENTRA</p>
+          <p class="role-ledger-acc-value">Sites, bibliotecas, pastas e arquivos selecionados.</p>
+          <p class="role-ledger-acc-label">O QUE PERMITE</p>
+          <p class="role-ledger-acc-value">Pesquisar, perguntar, comparar e mostrar origem.</p>
+          <p class="role-ledger-acc-label">COMO CONCLUI</p>
+          <p class="role-ledger-acc-value">Não envia.</p>
+        </div>
+      </div>
+      <div class="role-ledger-acc-item">
+        <button type="button" class="role-ledger-acc-trigger" aria-expanded="false" aria-controls="role-ledger-acc-3b">
+          <img src="assets/images/google-drive-icon.svg" alt="" width="24" height="24">
+          <span>Google Drive</span>
+          <span class="role-ledger-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="role-ledger-acc-panel" id="role-ledger-acc-3b">
+          <p class="role-ledger-acc-label">PAPEL</p>
+          <p class="role-ledger-acc-value">Fonte</p>
+          <p class="role-ledger-acc-label">CONTEÚDO QUE ENTRA</p>
+          <p class="role-ledger-acc-value">Arquivos, pastas e metadados selecionados.</p>
+          <p class="role-ledger-acc-label">O QUE PERMITE</p>
+          <p class="role-ledger-acc-value">Pesquisar, perguntar, comparar e mostrar origem.</p>
+          <p class="role-ledger-acc-label">COMO CONCLUI</p>
+          <p class="role-ledger-acc-value">Não envia.</p>
+        </div>
+      </div>
+      <div class="role-ledger-acc-item">
+        <button type="button" class="role-ledger-acc-trigger" aria-expanded="false" aria-controls="role-ledger-acc-4">
+          <span class="role-ledger-acc-uploadicon" aria-hidden="true"><img src="assets/images/uploads-icon.svg" alt="" width="43" height="24"></span>
+          <span>Uploads</span>
+          <span class="role-ledger-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="role-ledger-acc-panel" id="role-ledger-acc-4">
+          <p class="role-ledger-acc-label">PAPEL</p>
+          <p class="role-ledger-acc-value">Fonte direta</p>
+          <p class="role-ledger-acc-label">CONTEÚDO QUE ENTRA</p>
+          <p class="role-ledger-acc-value">Arquivos enviados diretamente por você.</p>
+          <p class="role-ledger-acc-label">O QUE PERMITE</p>
+          <p class="role-ledger-acc-value">Pesquisar, perguntar, comparar e mostrar origem.</p>
+          <p class="role-ledger-acc-label">COMO CONCLUI</p>
+          <p class="role-ledger-acc-value">Não envia.</p>
+        </div>
+      </div>
+      <div class="role-ledger-acc-item">
+        <button type="button" class="role-ledger-acc-trigger" aria-expanded="false" aria-controls="role-ledger-acc-5">
+          <img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24">
+          <span>WhatsApp</span>
+          <span class="role-ledger-acc-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="role-ledger-acc-panel" id="role-ledger-acc-5">
+          <p class="role-ledger-acc-label">PAPEL</p>
+          <p class="role-ledger-acc-value">Handoff</p>
+          <p class="role-ledger-acc-label">CONTEÚDO QUE ENTRA</p>
+          <p class="role-ledger-acc-value">Nenhuma caixa entra no Allybi.</p>
+          <p class="role-ledger-acc-label">O QUE PERMITE</p>
+          <p class="role-ledger-acc-value">Preparar mensagem e abrir a conversa.</p>
+          <p class="role-ledger-acc-label">COMO CONCLUI</p>
+          <p class="role-ledger-acc-value">Você envia dentro do WhatsApp.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     1.5 VISUAL MAP — what enters / what Allybi does / what leaves
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-map allybi-section">
-  <div class="allybi-container">
-    <div class="allybi-section-header integ-reveal">
-      <h2 class="allybi-h2" data-i18n-key="integ.map_h2">O que entra, o que acontece e o que sai.</h2>
-      <p class="allybi-body-lg" style="max-width:600px;margin:12px auto 0;" data-i18n-key="integ.map_sub">As fontes entram no chat. A resposta vem com origem. A saída só acontece depois da sua revisão.</p>
+<!-- 5. CONNECTION CONTROL CYCLE -->
+<section class="connection-control-section" aria-labelledby="connection-control-title">
+  <div class="connection-control-container">
+    <header class="connection-control-header">
+      <p class="connection-control-eyebrow">CONTROLE DA CONEXÃO</p>
+      <h2 id="connection-control-title">
+        <span>Você autoriza.</span>
+        <span>Você pode revogar.</span>
+        <span>Você decide o que apagar.</span>
+      </h2>
+      <p class="connection-control-subtitle">As integrações Microsoft usam OAuth 2.0 e permissões mínimas. Desconectar interrompe novo acesso, mas não apaga automaticamente o conteúdo já importado.</p>
+    </header>
+
+    <ol class="connection-control-timeline">
+      <span class="connection-control-line" aria-hidden="true"></span>
+      <li class="connection-control-node">
+        <span class="connection-control-marker" aria-hidden="true">01</span>
+        <h3 class="connection-control-node-title">Autorizar</h3>
+        <p class="connection-control-node-body">Você escolhe a fonte e confirma as permissões necessárias.</p>
+        <p class="connection-control-node-secondary">Outlook, OneDrive, SharePoint e Google Drive usam OAuth 2.0.</p>
+      </li>
+      <li class="connection-control-node">
+        <span class="connection-control-marker" aria-hidden="true">02</span>
+        <h3 class="connection-control-node-title">Desconectar</h3>
+        <p class="connection-control-node-body">O Allybi deixa de acessar novos dados daquela fonte.</p>
+        <p class="connection-control-node-secondary">O acesso pode ser revogado nas configurações da conta.</p>
+      </li>
+      <li class="connection-control-node">
+        <span class="connection-control-marker connection-control-marker--warn" aria-hidden="true">03</span>
+        <h3 class="connection-control-node-title">Apagar</h3>
+        <p class="connection-control-node-body">Conteúdo já importado precisa ser removido separadamente.</p>
+        <p class="connection-control-node-secondary">Você pode apagar arquivos, workspace ou solicitar exclusão da conta.</p>
+      </li>
+    </ol>
+
+    <div class="connection-control-links">
+      <a href="/integration-data-use.html" class="connection-control-link">Ler Integrações e Uso de Dados →</a>
+      <a href="/security-overview.html" class="connection-control-link">Ver segurança →</a>
     </div>
+  </div>
+</section>
 
-    <div class="integ-map__grid integ-reveal">
-      <div class="integ-map__col">
-        <span class="integ-map__col-label" data-i18n-key="integ.map_col1_label">Entram no chat</span>
-        <ul class="integ-map__list">
-          <li><img src="assets/images/outlook-icon.svg" alt="" width="18" height="18" aria-hidden="true"> Outlook</li>
-          <li><img src="assets/images/onedrive-icon.svg" alt="" width="18" height="18" aria-hidden="true"> OneDrive</li>
-          <li><img src="assets/images/sharepoint-icon.svg" alt="" width="18" height="18" aria-hidden="true"> SharePoint</li>
-          <li><img src="assets/images/uploads-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="hero.scene.uploads">Uploads</span></li>
-        </ul>
-        <p class="integ-map__col-copy" data-i18n-key="integ.map_col1_copy">E-mails, anexos, arquivos na nuvem e uploads.</p>
+<!-- 6. FAQ -->
+<section class="integrations-faq-section" aria-labelledby="integrations-faq-title">
+  <div class="integrations-faq-container">
+    <header class="integrations-faq-header">
+      <p class="integrations-faq-eyebrow">PERGUNTAS SOBRE INTEGRAÇÕES</p>
+      <h2 id="integrations-faq-title">Antes de conectar.</h2>
+    </header>
+
+    <div class="integrations-faq-list">
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-1" id="integrations-faq-q-1">
+          <span>Quais fontes estão disponíveis agora?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-1"><p>Outlook, OneDrive, SharePoint, Google Drive e uploads. A página não apresenta integrações futuras como se já estivessem disponíveis.</p></div>
       </div>
-
-      <div class="integ-map__arrow" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-2" id="integrations-faq-q-2">
+          <span>O que o Outlook pode acessar?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-2"><p>E-mails, threads, anexos e metadados selecionados ou autorizados. Outlook também pode enviar e-mail depois da sua confirmação.</p></div>
       </div>
-
-      <div class="integ-map__col integ-map__col--center">
-        <span class="integ-map__col-label" data-i18n-key="integ.map_col2_label">Allybi organiza</span>
-        <ul class="integ-map__list">
-          <li data-i18n-key="integ.map_col2_b1">Busca contexto</li>
-          <li data-i18n-key="integ.map_col2_b2">Mostra fonte</li>
-          <li data-i18n-key="integ.map_col2_b3">Ajuda a confirmar versão</li>
-          <li data-i18n-key="integ.map_col2_b4">Monta mensagem para revisão</li>
-        </ul>
-        <p class="integ-map__col-copy" data-i18n-key="integ.map_col2_copy">A resposta não fica solta. Ela mostra de onde veio.</p>
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-3" id="integrations-faq-q-3">
+          <span>Preciso conectar todas as fontes?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-3"><p>Não. Você pode começar com uma única fonte ou usar somente uploads.</p></div>
       </div>
-
-      <div class="integ-map__arrow" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-4" id="integrations-faq-q-4">
+          <span>WhatsApp é uma fonte?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-4"><p>Não. O Allybi não lê, pesquisa nem sincroniza sua caixa. Ele prepara a mensagem e abre o WhatsApp como handoff. Você envia dentro do aplicativo.</p></div>
       </div>
-
-      <div class="integ-map__col">
-        <span class="integ-map__col-label" data-i18n-key="integ.map_col3_label">Você revisa e decide</span>
-        <ul class="integ-map__list">
-          <li><img src="assets/images/outlook-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="integ.map_col3_email">E-mail via Outlook</span></li>
-          <li><span class="integ-map__col-sub" data-i18n-key="integ.map_col3_email_micro">com confirmação</span></li>
-          <li><img src="assets/images/whatsapp-icon.svg" alt="" width="18" height="18" aria-hidden="true"> <span data-i18n-key="integ.map_col3_wa">WhatsApp handoff</span></li>
-          <li><span class="integ-map__col-sub" data-i18n-key="integ.map_col3_wa_micro">você envia no app</span></li>
-        </ul>
-        <p class="integ-map__col-copy" data-i18n-key="integ.map_col3_copy">Outlook pode sair com confirmação. WhatsApp abre com a mensagem pronta.</p>
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-5" id="integrations-faq-q-5">
+          <span>O Allybi envia e-mails?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-5"><p>Sim. Depois de você revisar destinatário, mensagem, arquivo, fonte e canal, o e-mail pode ser enviado via Outlook com sua confirmação.</p></div>
+      </div>
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-6" id="integrations-faq-q-6">
+          <span>O que acontece quando desconecto uma integração?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-6"><p>O Allybi deixa de acessar novos dados daquela fonte. Conteúdo já importado permanece no workspace até ser apagado.</p></div>
+      </div>
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-7" id="integrations-faq-q-7">
+          <span>Quais arquivos posso enviar por upload?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-7"><p>Documentos, apresentações, planilhas, imagens e mídia.</p></div>
+      </div>
+      <div class="integrations-faq-item">
+        <button type="button" class="integrations-faq-trigger" aria-expanded="false" aria-controls="integrations-faq-a-8" id="integrations-faq-q-8">
+          <span>Meus documentos treinam modelos?</span>
+          <span class="integrations-faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="integrations-faq-answer" id="integrations-faq-a-8"><p>Não. Documentos, perguntas e respostas não treinam modelos.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     2. FONTES CONECTADAS
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-live allybi-section" style="background-color: var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="allybi-section-header integ-reveal">
-      <span class="allybi-chip allybi-chip--trust" data-i18n-key="integ.live_chip">Disponível agora</span>
-      <h2 class="allybi-h2" data-i18n-key="integ.live_h2">Fontes conectadas</h2>
+<!-- 7. FINAL CTA -->
+<section class="integrations-final-section" aria-labelledby="integrations-final-title">
+  <div class="integrations-final-container">
+    <p class="integrations-final-eyebrow">COMEÇAR</p>
+    <h2 id="integrations-final-title">
+      <span>Conecte uma fonte</span>
+      <span>e faça a primeira pergunta.</span>
+    </h2>
+    <p class="integrations-final-subtitle">Comece com Outlook, OneDrive, SharePoint, Google Drive ou um upload. Depois, revise antes de qualquer envio.</p>
+    <div class="integrations-final-actions">
+      <a href="https://app.allybi.com.br" class="integrations-final-primary">Começar grátis por 30 dias</a>
+      <a href="/how-it-works.html" class="integrations-final-secondary">Ver como funciona</a>
     </div>
-
-    <div class="integ-live__grid integ-stagger">
-
-      <!-- Outlook -->
-      <div class="integ-premium-card integ-reveal">
-        <div class="integ-premium-card__header">
-          <div class="integ-premium-card__icon">
-            <img src="assets/images/outlook-icon.svg" alt="Outlook" width="48" height="48">
-          </div>
-          <div>
-            <h3 class="integ-premium-card__title">Outlook</h3>
-            <span class="allybi-status allybi-status--live" data-i18n-key="integ.matrix.available">Disponível</span>
-          </div>
-        </div>
-        <p class="integ-premium-card__desc" data-i18n-key="integ.outlook_card_desc">Pesquise e-mails, encontre anexos e prepare respostas com confirmação.</p>
-      </div>
-
-      <!-- OneDrive -->
-      <div class="integ-premium-card integ-reveal">
-        <div class="integ-premium-card__header">
-          <div class="integ-premium-card__icon">
-            <img src="assets/images/onedrive-icon.svg" alt="OneDrive" width="48" height="48">
-          </div>
-          <div>
-            <h3 class="integ-premium-card__title">OneDrive</h3>
-            <span class="allybi-status allybi-status--live" data-i18n-key="integ.matrix.available">Disponível</span>
-          </div>
-        </div>
-        <p class="integ-premium-card__desc" data-i18n-key="integ.onedrive_card_desc">Importe arquivos e pastas para usar no chat.</p>
-      </div>
-
-      <!-- SharePoint -->
-      <div class="integ-premium-card integ-reveal">
-        <div class="integ-premium-card__header">
-          <div class="integ-premium-card__icon">
-            <img src="assets/images/sharepoint-icon.svg" alt="SharePoint" width="48" height="48">
-          </div>
-          <div>
-            <h3 class="integ-premium-card__title">SharePoint</h3>
-            <span class="allybi-status allybi-status--live" data-i18n-key="integ.matrix.available">Disponível</span>
-          </div>
-        </div>
-        <p class="integ-premium-card__desc" data-i18n-key="integ.sharepoint_card_desc">Traga documentos de sites e bibliotecas da equipe.</p>
-      </div>
-
-      <!-- Uploads — improved icon -->
-      <div class="integ-premium-card integ-reveal">
-        <div class="integ-premium-card__header">
-          <div class="integ-premium-card__icon">
-            <img src="assets/images/uploads-icon.svg" alt="Uploads" width="48" height="48">
-          </div>
-          <div>
-            <h3 class="integ-premium-card__title">Uploads</h3>
-            <span class="allybi-status allybi-status--live" data-i18n-key="integ.matrix.available">Disponível</span>
-          </div>
-        </div>
-        <p class="integ-premium-card__desc" data-i18n-key="integ.uploads_card_desc">Suba documentos, planilhas, apresentações, imagens e mídia.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     3. AÇÕES DE ENVIO
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-actions allybi-section">
-  <div class="allybi-container">
-    <div class="allybi-section-header integ-reveal">
-      <span class="allybi-chip allybi-chip--accent" data-i18n-key="integ.actions_chip">Ações</span>
-      <h2 class="allybi-h2" data-i18n-key="integ.actions_h2">Depois da resposta, vem a revisão.</h2>
-      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="integ.actions_sub">O Allybi leva mensagem, arquivo, fonte e canal para sua confirmação.</p>
-    </div>
-
-    <div class="integ-actions__grid integ-stagger">
-
-      <!-- E-mail via Outlook -->
-      <div class="integ-premium-card integ-reveal">
-        <div class="integ-premium-card__header">
-          <div class="integ-premium-card__icon">
-            <img src="assets/images/outlook-icon.svg" alt="E-mail via Outlook" width="48" height="48">
-          </div>
-          <div>
-            <h3 class="integ-premium-card__title" data-i18n-key="integ.email_card_title">E-mail via Outlook</h3>
-            <span class="allybi-status allybi-status--live" data-i18n-key="integ.matrix.available">Disponível</span>
-          </div>
-        </div>
-        <p class="integ-premium-card__desc" data-i18n-key="integ.email_card_desc">Revise destinatário e anexos, e envie pelo Outlook depois da sua confirmação.</p>
-      </div>
-
-      <!-- WhatsApp handoff -->
-      <div class="integ-premium-card integ-reveal">
-        <div class="integ-premium-card__header">
-          <div class="integ-premium-card__icon">
-            <img src="assets/images/whatsapp-icon.svg" alt="WhatsApp" width="48" height="48">
-          </div>
-          <div>
-            <h3 class="integ-premium-card__title">WhatsApp handoff</h3>
-            <span class="allybi-status allybi-status--handoff" data-i18n-key="integ.handoff_badge">Handoff</span>
-          </div>
-        </div>
-        <p class="integ-premium-card__desc" data-i18n-key="integ.whatsapp_card_desc">Prepare a mensagem e abra o WhatsApp para revisar e enviar.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     4. DEPOIS DE CONECTAR
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-after allybi-section" style="background-color: var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="allybi-section-header integ-reveal">
-      <h2 class="allybi-h2" data-i18n-key="integ.after_h2">Da fonte conectada à revisão.</h2>
-      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="integ.after_sub">O Allybi reduz o caminho entre buscar, confirmar e enviar.</p>
-    </div>
-
-    <div class="integ-after__flow integ-reveal">
-      <div class="integ-after__step">
-        <div class="integ-after__num">1</div>
-        <h3 data-i18n-key="integ.after_step1_title">Fonte conectada</h3>
-        <p data-i18n-key="integ.after_step1_desc">Outlook, OneDrive, SharePoint ou upload.</p>
-      </div>
-      <div class="integ-after__arrow" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
-      <div class="integ-after__step">
-        <div class="integ-after__num">2</div>
-        <h3 data-i18n-key="integ.after_step2_title">Pergunta no chat</h3>
-        <p data-i18n-key="integ.after_step2_desc">"qual versão posso enviar ao cliente?"</p>
-      </div>
-      <div class="integ-after__arrow" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
-      <div class="integ-after__step">
-        <div class="integ-after__num">3</div>
-        <h3 data-i18n-key="integ.after_step3_title">Resposta com fonte</h3>
-        <p>contrato_final_AGORA.pdf<br><span style="font-size:11px;color:var(--allybi-text-muted);" data-i18n-key="integ.after_step3_source">Fonte: Clientes / Contratos / 14 mar</span></p>
-      </div>
-      <div class="integ-after__arrow" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
-      <div class="integ-after__step">
-        <div class="integ-after__num">4</div>
-        <h3 data-i18n-key="integ.after_step4_title">Mensagem para revisão</h3>
-        <p data-i18n-key="integ.after_step4_desc">Texto, arquivo e fonte juntos.</p>
-      </div>
-      <div class="integ-after__arrow" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
-      <div class="integ-after__step">
-        <div class="integ-after__num">5</div>
-        <h3 data-i18n-key="integ.after_step5_title">Revisão</h3>
-        <p data-i18n-key="integ.after_step5_desc">Você confirma destinatário, mensagem, arquivo, fonte e canal.</p>
-      </div>
-      <div class="integ-after__arrow" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </div>
-      <div class="integ-after__step">
-        <div class="integ-after__num">6</div>
-        <h3 data-i18n-key="integ.after_step6_title">Saída</h3>
-        <p data-i18n-key="integ.after_step6_desc">Outlook envia com confirmação. WhatsApp abre como handoff.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     5. ROADMAP
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-coming allybi-section">
-  <div class="allybi-container">
-    <div class="allybi-section-header integ-reveal">
-      <span class="allybi-chip allybi-chip--coming" data-i18n-key="integ.roadmap_chip">Roadmap</span>
-      <h2 class="allybi-h2" data-i18n-key="integ.roadmap_h2">Próximas fontes</h2>
-      <p class="allybi-body-lg" style="max-width:580px;margin:12px auto 0;" data-i18n-key="integ.roadmap_sub">Gmail e Google Drive estão no roadmap. Hoje, o Allybi já funciona com Outlook, OneDrive, SharePoint e uploads.</p>
-    </div>
-
-    <div class="integ-coming__grid integ-stagger">
-      <div class="integ-coming-card allybi-card integ-reveal">
-        <div class="integ-coming-card__header">
-          <div class="integ-coming-card__icon">
-            <img src="assets/images/gmail-icon.svg" alt="Gmail" width="40" height="40">
-          </div>
-          <div>
-            <h3 class="integ-coming-card__title">Gmail</h3>
-            <span class="allybi-badge allybi-badge--coming" data-i18n-key="integ.matrix.coming">Em breve</span>
-          </div>
-        </div>
-        <p class="integ-coming-card__desc" data-i18n-key="integ.gmail_card_desc">Pesquisar e-mails e anexos quando disponível.</p>
-      </div>
-
-      <div class="integ-coming-card allybi-card integ-reveal">
-        <div class="integ-coming-card__header">
-          <div class="integ-coming-card__icon">
-            <img src="assets/images/google-drive-icon.svg" alt="Google Drive" width="40" height="40">
-          </div>
-          <div>
-            <h3 class="integ-coming-card__title">Google Drive</h3>
-            <span class="allybi-badge allybi-badge--coming" data-i18n-key="integ.matrix.coming">Em breve</span>
-          </div>
-        </div>
-        <p class="integ-coming-card__desc" data-i18n-key="integ.gdrive_card_desc">Importar arquivos e pastas quando disponível.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     6. CAPABILITY MATRIX
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-matrix allybi-section" style="background-color: var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="allybi-section-header integ-reveal">
-      <h2 class="allybi-h2" data-i18n-key="integ.matrix_h2">O que cada conexão permite</h2>
-      <p class="allybi-body-lg" style="max-width:580px;margin:12px auto 0;" data-i18n-key="integ.matrix_sub">Fontes e ações têm papéis diferentes. Esta página separa o que entra no chat do que acontece depois da revisão.</p>
-    </div>
-
-    <!-- Matrix A — Sources (Desktop table) -->
-    <div class="integ-matrix__section integ-reveal">
-      <h3 class="integ-matrix__heading integ-matrix__desktop-only" data-i18n-key="integ.matrix_a_h">Fontes que entram no chat</h3>
-      <div class="integ-matrix__wrap integ-matrix__desktop-only">
-        <table class="integ-matrix__table">
-          <caption class="sr-only" data-i18n-key="integ.matrix_a_caption">Capacidades de cada fonte conectada.</caption>
-          <thead>
-            <tr>
-              <th class="integ-matrix__capability" scope="col" data-i18n-key="integ.matrix.col_capability">Capacidade</th>
-              <th scope="col"><span class="integ-matrix__col-icon"><img src="assets/images/uploads-icon.svg" alt="" width="24" height="24" aria-hidden="true"></span>Uploads</th>
-              <th scope="col"><span class="integ-matrix__col-icon"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"></span>Outlook</th>
-              <th scope="col"><span class="integ-matrix__col-icon"><img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24" aria-hidden="true"></span>OneDrive</th>
-              <th scope="col"><span class="integ-matrix__col-icon"><img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24" aria-hidden="true"></span>SharePoint</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_use_chat">Usar no chat</th>
-              <td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_search">Buscar conteúdo</th>
-              <td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_find_attach">Encontrar anexos</th>
-              <td><span class="integ-na" data-i18n-key="integ.cell_na">n/a</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-na" data-i18n-key="integ.cell_na">n/a</span></td><td><span class="integ-na" data-i18n-key="integ.cell_na">n/a</span></td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_show_source">Mostrar fonte</th>
-              <td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_compare">Comparar versões</th>
-              <td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td><td><span class="integ-check" aria-label="sim">✓</span></td>
-            </tr>
-            <tr class="integ-matrix__status-row">
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_status">Status</th>
-              <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></td>
-              <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></td>
-              <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></td>
-              <td><span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Matrix B — Actions (Desktop table) -->
-    <div class="integ-matrix__section integ-reveal">
-      <h3 class="integ-matrix__heading integ-matrix__desktop-only" data-i18n-key="integ.matrix_b_h">Ações depois da revisão</h3>
-      <div class="integ-matrix__wrap integ-matrix__desktop-only">
-        <table class="integ-matrix__table integ-matrix__table--actions">
-          <caption class="sr-only" data-i18n-key="integ.matrix_b_caption">Como cada canal de saída se comporta após a revisão do usuário.</caption>
-          <thead>
-            <tr>
-              <th class="integ-matrix__capability" scope="col" data-i18n-key="integ.matrix.col_capability">Capacidade</th>
-              <th scope="col"><span class="integ-matrix__col-icon"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"></span><span data-i18n-key="integ.col_email_outlook">E-mail via Outlook</span></th>
-              <th scope="col"><span class="integ-matrix__col-icon"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24" aria-hidden="true"></span><span data-i18n-key="integ.col_wa_handoff">WhatsApp handoff</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_draft_review">Monta mensagem para revisão</th>
-              <td><span class="integ-check" aria-label="sim">✓</span></td>
-              <td><span class="integ-check" aria-label="sim">✓</span></td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_show_file_source">Mostra arquivo e fonte</th>
-              <td><span class="integ-check" aria-label="sim">✓</span></td>
-              <td><span class="integ-check" aria-label="sim">✓</span></td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_user_reviews">Usuário revisa antes</th>
-              <td><span class="integ-check" aria-label="sim">✓</span></td>
-              <td><span class="integ-check" aria-label="sim">✓</span></td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_final_action">Ação final</th>
-              <td data-i18n-key="integ.cell_send_outlook">Enviar via Outlook</td>
-              <td data-i18n-key="integ.cell_open_wa">Abrir WhatsApp com mensagem pronta</td>
-            </tr>
-            <tr>
-              <th class="integ-matrix__capability" scope="row" data-i18n-key="integ.row_who_sends">Quem envia</th>
-              <td data-i18n-key="integ.cell_allybi_sends">Allybi, depois da confirmação</td>
-              <td data-i18n-key="integ.cell_user_sends">Você, dentro do WhatsApp</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Mobile accordions: Sources / Actions / Roadmap -->
-    <div class="integ-matrix__mobile-only">
-      <div class="integ-matrix__accordion">
-
-        <!-- Group A — Sources -->
-        <h3 class="integ-matrix__acc-group" data-i18n-key="integ.matrix_a_h">Fontes que entram no chat</h3>
-        <details class="integ-matrix__acc-item">
-          <summary><img src="assets/images/uploads-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Uploads <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
-          <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
-          </div>
-        </details>
-        <details class="integ-matrix__acc-item">
-          <summary><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Outlook <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
-          <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_find_attach">Encontrar anexos</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
-          </div>
-        </details>
-        <details class="integ-matrix__acc-item">
-          <summary><img src="assets/images/onedrive-icon.svg" alt="" width="20" height="20" aria-hidden="true"> OneDrive <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
-          <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
-          </div>
-        </details>
-        <details class="integ-matrix__acc-item">
-          <summary><img src="assets/images/sharepoint-icon.svg" alt="" width="20" height="20" aria-hidden="true"> SharePoint <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
-          <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_use_chat">Usar no chat</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_search">Buscar conteúdo</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_source">Mostrar fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_compare">Comparar versões</span><span class="integ-check" aria-label="sim">✓</span></div>
-          </div>
-        </details>
-
-        <!-- Group B — Actions -->
-        <h3 class="integ-matrix__acc-group" data-i18n-key="integ.matrix_b_h">Ações depois da revisão</h3>
-        <details class="integ-matrix__acc-item">
-          <summary><img src="assets/images/outlook-icon.svg" alt="" width="20" height="20" aria-hidden="true"> <span data-i18n-key="integ.col_email_outlook">E-mail via Outlook</span> <span class="allybi-badge allybi-badge--trust" data-i18n-key="integ.matrix.available">Disponível</span></summary>
-          <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_draft_review">Monta mensagem para revisão</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_file_source">Mostra arquivo e fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_user_reviews">Usuário revisa antes</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_final_action">Ação final</span><span data-i18n-key="integ.cell_send_outlook">Enviar via Outlook</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_who_sends">Quem envia</span><span data-i18n-key="integ.cell_allybi_sends">Allybi, depois da confirmação</span></div>
-          </div>
-        </details>
-        <details class="integ-matrix__acc-item">
-          <summary><img src="assets/images/whatsapp-icon.svg" alt="" width="20" height="20" aria-hidden="true"> <span data-i18n-key="integ.col_wa_handoff">WhatsApp handoff</span> <span class="allybi-badge allybi-badge--handoff" data-i18n-key="integ.handoff_badge">Handoff</span></summary>
-          <div class="integ-matrix__acc-body">
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_draft_review">Monta mensagem para revisão</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_show_file_source">Mostra arquivo e fonte</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_user_reviews">Usuário revisa antes</span><span class="integ-check" aria-label="sim">✓</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_final_action">Ação final</span><span data-i18n-key="integ.cell_open_wa">Abrir WhatsApp com mensagem pronta</span></div>
-            <div class="integ-matrix__acc-row"><span data-i18n-key="integ.row_who_sends">Quem envia</span><span data-i18n-key="integ.cell_user_sends">Você, dentro do WhatsApp</span></div>
-          </div>
-        </details>
-
-        <!-- Group C — Roadmap -->
-        <h3 class="integ-matrix__acc-group" data-i18n-key="integ.matrix_c_h">Roadmap</h3>
-        <details class="integ-matrix__acc-item integ-matrix__acc-item--coming">
-          <summary><img src="assets/images/gmail-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Gmail <span class="allybi-badge allybi-badge--coming" data-i18n-key="integ.matrix.coming">Em breve</span></summary>
-          <div class="integ-matrix__acc-body"><p style="color:var(--allybi-text-muted);font-size:13px;" data-i18n-key="integ.acc_coming_note">Todas as capacidades estarão disponíveis quando a integração for lançada.</p></div>
-        </details>
-        <details class="integ-matrix__acc-item integ-matrix__acc-item--coming">
-          <summary><img src="assets/images/google-drive-icon.svg" alt="" width="20" height="20" aria-hidden="true"> Google Drive <span class="allybi-badge allybi-badge--coming" data-i18n-key="integ.matrix.coming">Em breve</span></summary>
-          <div class="integ-matrix__acc-body"><p style="color:var(--allybi-text-muted);font-size:13px;" data-i18n-key="integ.acc_coming_note">Todas as capacidades estarão disponíveis quando a integração for lançada.</p></div>
-        </details>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     7. PERMISSÕES E SEGURANÇA
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-trust allybi-section">
-  <div class="allybi-container">
-    <div class="allybi-section-header integ-reveal">
-      <h2 class="allybi-h2" data-i18n-key="integ.trust_h2">Conexões permissionadas. Controle explícito.</h2>
-      <p class="allybi-body-lg" style="max-width:540px;margin:12px auto 0;" data-i18n-key="integ.trust_sub">O Allybi só usa fontes que você conecta e autoriza. As respostas mostram fonte e nada é enviado sem sua confirmação.</p>
-    </div>
-    <div class="integ-trust__grid integ-stagger">
-      <div class="integ-trust__card integ-reveal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <h3 data-i18n-key="integ.trust1_title">Permissões por fonte</h3>
-        <p data-i18n-key="integ.trust1_desc">Cada conexão exige autorização.</p>
-      </div>
-      <div class="integ-trust__card integ-reveal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        <h3 data-i18n-key="integ.trust2_title">Fonte visível</h3>
-        <p data-i18n-key="integ.trust2_desc">Respostas apontam para arquivo ou trecho.</p>
-      </div>
-      <div class="integ-trust__card integ-reveal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h3 data-i18n-key="integ.trust3_title">Sem treinamento</h3>
-        <p data-i18n-key="integ.trust3_desc">Seus dados não treinam modelos.</p>
-      </div>
-      <div class="integ-trust__card integ-reveal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        <h3 data-i18n-key="integ.trust4_title">WhatsApp sem sync</h3>
-        <p data-i18n-key="integ.trust4_desc">Não lemos nem pesquisamos sua caixa.</p>
-      </div>
-      <div class="integ-trust__card integ-reveal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <h3 data-i18n-key="integ.trust5_title">Nada sozinho</h3>
-        <p data-i18n-key="integ.trust5_desc">Envios passam por revisão.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:32px;" class="integ-reveal">
-      <a href="security-overview.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="integ.trust_cta">Ver segurança</a>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     8. FINAL CTA
-     ════════════════════════════════════════════════════════════ -->
-<section class="integ-cta">
-  <div class="allybi-container">
-    <div class="integ-cta__inner integ-reveal">
-      <h2 data-i18n-key="integ.final_cta_h2">Conecte uma fonte e teste o caminho real.</h2>
-      <p data-i18n-key="integ.final_cta_sub">Pergunte no chat, veja a fonte da resposta e revise antes de enviar.</p>
-      <div class="integ-cta__btns">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="integ.cta_start_free">Começar grátis por 30 dias</a>
-        <a href="how-it-works.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="integ.cta_see_how">Ver como funciona</a>
-      </div>
-      <p class="integ-cta__micro" data-i18n-key="integ.cta_micro">30 dias grátis. Nada sai sem confirmação.</p>
-    </div>
+    <p class="integrations-final-trust">30 dias grátis. Cancele quando quiser.</p>
   </div>
 </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="allybi-footer">
-  <div class="allybi-footer-inner">
-    <div class="footer-brand">
-      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
-      <p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
     </div>
-    <div class="footer-columns">
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4><div class="footer-col-links"><a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="footer.security">Security</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4><div class="footer-col-links"><a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a><a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a><a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4><div class="footer-col-links"><a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a><a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a><a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4><div class="footer-col-links"><a href="about.html" data-i18n-key="footer.about">About</a><a href="faq.html" data-i18n-key="footer.faq">FAQ</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4><div class="footer-col-links"><a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a><a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a><a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a><a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a><a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a></div></div>
-    </div>
-    <div class="footer-mobile-links">
-      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="about.html" data-i18n-key="footer.about">About</a>
-      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-      <div class="footer-bottom-right">
-        <div class="language-selector" id="footer-language-selector">
-          <button class="language-toggle" aria-expanded="false">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-            <span class="lang-label">English</span>
-          </button>
-          <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Português (BR)</li>
-            <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Español</li>
-          </ul>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
         </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
       </div>
     </div>
   </div>
 </footer>
-
-<script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
 <script src="hero-sequence.js" defer></script>
-<script>
-/* ── Scroll reveal for integrations page ── */
-(function(){
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('.integ-reveal');
-  if (prefersReduced) {
-    els.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'none'; });
-    return;
-  }
-  var delay = 0;
-  var io = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  els.forEach(function(el) { io.observe(el); });
-
-  /* Stagger children */
-  document.querySelectorAll('.integ-stagger').forEach(function(parent) {
-    var children = parent.querySelectorAll('.integ-reveal');
-    children.forEach(function(child, i) {
-      child.style.transitionDelay = (i * 80) + 'ms';
-    });
-  });
-})();
-</script>
+<script src="assets/integrations-page.js" defer></script>
 </body>
 </html>

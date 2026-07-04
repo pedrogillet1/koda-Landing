@@ -1,156 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-
-  	<!-- Favicon -->
-  	<link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  	<link rel="apple-touch-icon" href="assets/images/allybi-favicon.svg">
-
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
-  	<link rel="stylesheet" href="./design-system.css" />
-  	<link rel="stylesheet" href="./waitlist.css" />
-  	<link rel="stylesheet" href="./language-switcher.css" />
-  	<link rel="stylesheet" href="./light-theme-overrides.css" />
-  	<link rel="stylesheet" href="./allybi-tokens.css"><link rel="stylesheet" href="./allybi-base.css"><link rel="stylesheet" href="./allybi-components.css />
-  	<link rel="stylesheet" href="./allybi-responsive.css" />
-  	<link rel="stylesheet" href="./allybi-responsive.css" />
-  	<link rel="stylesheet" href="./mobile-header-fix.css?v=1765216940" />
-  	<link rel="stylesheet" href="./mobile-footer-fix.css?v=1764971001" />
-  	<link rel="stylesheet" href="./allybi-header.css" />
-  	<link rel="stylesheet" href="./compact-footer.css?v=1765220600" />
-  	<link rel="stylesheet" href="./allybi-components.css" />
-  	<link rel="stylesheet" href="./mobile-redesign.css?v=1765400000" />
-
-  	<title>Allybi Waitlist</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FAFAF8">
+  <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
+  <title>Lista de espera — Allybi</title>
+  <meta name="description" content="Entre na lista de espera da Allybi e garanta acesso antecipado ao Beta, prioridade para dar feedback e um ano grátis no lançamento.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lista de espera — Allybi">
+  <meta property="og:description" content="Garanta acesso antecipado ao Beta da Allybi, prioridade para feedback e um ano grátis no lançamento.">
+  <meta property="og:url" content="https://allybi.co/waitlist.html">
+  <meta property="og:site_name" content="Allybi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lista de espera — Allybi">
+  <meta name="twitter:description" content="Garanta acesso antecipado ao Beta da Allybi, prioridade para feedback e um ano grátis no lançamento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="allybi-tokens.css">
+  <link rel="stylesheet" href="allybi-base.css">
+  <link rel="stylesheet" href="allybi-components.css">
+  <link rel="stylesheet" href="allybi-header.css">
+  <link rel="stylesheet" href="allybi-footer.css">
+  <link rel="stylesheet" href="allybi-responsive.css">
 </head>
 <body>
-  	<div class="waitlist-page">
-    		<!-- Hero Section with Form -->
-    		<section class="waitlist-hero">
-      			<div class="decorative-background">
-        				<div class="circle-large"></div>
-        				<div class="circle-small"></div>
-        				<div class="line horizontal-1"></div>
-        				<div class="line horizontal-2"></div>
-        				<div class="line horizontal-3"></div>
-        				<div class="line vertical-1"></div>
-        				<div class="line vertical-2"></div>
-      			</div>
 
-      			<!-- Navigation -->
-      			<header>
-        				<nav class="main-nav" id="main-nav">
-          					<div class="logo">
-            						<a href="index.html">
-              							<img class="content-icon" alt="Allybi Logo" src="assets/images/allybi-logo.svg">
-            						</a>
-          					</div>
-          					<div class="nav-links desktop-only">
-            						<a href="about.html" data-i18n-key="nav.about">About Allybi</a>
-            						<a href="contact.html" data-i18n-key="nav.contact">Contact</a>
-            						<div class="language-switcher">
-              							<button id="language-toggle" aria-haspopup="true" aria-expanded="false">
-                								<span id="current-language">English</span>
-                								<span class="dropdown-arrow">&#9660;</span>
-              							</button>
-              							<ul id="language-menu" class="hidden">
-                								<li><a href="#" data-lang="en">English</a></li>
-                								<li><a href="#" data-lang="pt">Portugu&ecirc;s (BR)</a></li>
-                								<li><a href="#" data-lang="es">Espa&ntilde;ol</a></li>
-              							</ul>
-            						</div>
-            						<a href="https://app.allybi.co" class="demo-button" data-i18n-key="nav.open_app">Open Allybi</a>
-          					</div>
+<!-- HEADER -->
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
 
-          					<!-- Mobile Menu Toggle Button -->
-          					<button class="mobile-menu-toggle mobile-only" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
-            						<span class="menu-line"></span>
-            						<span class="menu-line"></span>
-            						<span class="menu-line"></span>
-          					</button>
-        				</nav>
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
 
-        				<!-- Mobile Dropdown Menu -->
-        				<div class="mobile-menu mobile-only" id="mobile-menu">
-          					<div class="mobile-menu-content">
-            						<div class="mobile-menu-row">
-              							<a href="about.html" class="mobile-menu-link" data-i18n-key="nav.about">About Allybi</a>
-              							<a href="contact.html" class="mobile-menu-link" data-i18n-key="nav.contact">Contact</a>
-              							<button class="mobile-menu-link mobile-lang-dropdown" id="mobile-lang-toggle">
-                								Language
-                								<span class="lang-right">
-                  									<span id="current-language-mobile" class="lang-flag">&#127468;&#127463;</span>
-                  									<span class="lang-arrow">&#9660;</span>
-                								</span>
-              							</button>
-            						</div>
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
+        </div>
+      </div>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
+        </div>
+      </div>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
+        </div>
+      </div>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
+    </nav>
 
-            						<div class="mobile-language-options" id="mobile-lang-options">
-              							<button class="mobile-lang-btn active" data-lang="en">&#127468;&#127463; English</button>
-              							<button class="mobile-lang-btn" data-lang="pt">&#127463;&#127479; Portugu&ecirc;s</button>
-              							<button class="mobile-lang-btn" data-lang="es">&#127466;&#127480; Espa&ntilde;ol</button>
-            						</div>
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
+    </div>
 
-            						<a href="https://app.allybi.co" class="mobile-cta-btn" data-i18n-key="nav.open_app">Open Allybi</a>
-          					</div>
-        				</div>
-      			</header>
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
 
-      			<!-- Waitlist Form Content -->
-      			<div class="waitlist-content">
-        				<div class="waitlist-header">
-          					<h1 data-i18n-key="waitlist.title">Allybi Waitlist</h1>
-          					<p data-i18n-key="waitlist.description">Welcome to Allybi – Your AI-powered document assistant<br/>Thanks for your interest in Allybi! We're putting the final touches on our Beta, and we'd love to give you early access as soon as it's ready.<br/>As a waitlist member, you'll get early access, priority feedback opportunities, exclusive updates – and one full year of Allybi free once we launch.</p>
-        				</div>
+  </div>
+</header>
 
-        				<!-- Form -->
-        				<form class="waitlist-form">
-          					<!-- Name Field -->
-          					<div class="form-field">
-            						<label for="name" data-i18n-key="form.name">Name</label>
-            						<input type="text" id="name" placeholder="Enter your name" data-i18n-key="form.name_placeholder" required>
-          					</div>
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
+    </div>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
+  </div>
+</div>
 
-          					<!-- Email Field -->
-          					<div class="form-field">
-            						<label for="email" data-i18n-key="form.email">Email</label>
-            						<input type="email" id="email" placeholder="Enter your email" data-i18n-key="form.email_placeholder" required>
-          					</div>
 
-          					<!-- Occupation Field -->
-          					<div class="form-field">
-            						<label for="occupation" data-i18n-key="form.occupation">Occupation/Industry</label>
-            						<input type="text" id="occupation" placeholder="Enter your occupation/Industry" data-i18n-key="form.occupation_placeholder" required>
-          					</div>
+<main>
 
-          					<!-- Submit Button -->
-          					<button type="submit" class="submit-button" data-i18n-key="waitlist.submit">Join The Waitlist</button>
-        				</form>
-      			</div>
-    		</section>
+<!-- HERO -->
+<section class="allybi-section allybi-section--flush-top" style="padding-top:var(--allybi-space-10);text-align:center">
+  <div class="allybi-narrow">
+    <p class="allybi-eyebrow allybi-reveal" data-i18n-key="waitlist.eyebrow">Beta por convite</p>
+    <h1 class="allybi-h1 allybi-reveal" data-i18n-key="waitlist.title">Entre na lista de espera da Allybi</h1>
+    <p class="allybi-body-lg allybi-reveal" data-i18n-key="waitlist.description">A Allybi é seu assistente de documentos com IA. Estamos dando os últimos retoques no Beta e queremos te dar acesso antecipado assim que estiver pronto. Como membro da lista de espera, você garante acesso antecipado, prioridade para dar feedback, novidades exclusivas — e um ano inteiro de Allybi grátis no lançamento.</p>
+  </div>
+</section>
 
-    		<!-- Compact Footer -->
-    		<footer class="compact-footer">
-      			<div class="compact-footer-inner">
-        				<div class="compact-footer-left">
-          					<img src="assets/images/allybi-logo.svg" alt="Allybi Logo" class="compact-footer-logo">
-          					<p class="compact-footer-copyright" data-i18n-key="footer.copyright">© 2026 Allybi. All rights reserved.</p>
-        				</div>
-        				<nav class="compact-footer-links">
-          					<a href="about.html" class="compact-footer-link" data-i18n-key="nav.about">About Allybi</a>
-          					<a href="contact.html" class="compact-footer-link" data-i18n-key="nav.contact">Contact</a>
-          					<a href="tos.html" class="compact-footer-link" data-i18n-key="footer.tos_short">Terms of Service</a>
-          					<a href="terms.html" class="compact-footer-link" data-i18n-key="footer.terms_short">Acceptable Use</a>
-          					<a href="privacy.html" class="compact-footer-link" data-i18n-key="footer.privacy_short">Privacy Policy</a>
-          					<a href="cookies.html" class="compact-footer-link" data-i18n-key="footer.cookies_short">Cookie Policy</a>
-          					<a href="security.html" class="compact-footer-link" data-i18n-key="footer.security_short">Security &amp; Privacy</a>
-        				</nav>
-      			</div>
-    		</footer>
-  	</div>
-  	<script src="language-switcher.js"></script>
-  	<script src="mobile-menu.js?v=1765215540"></script>
+<!-- WAITLIST FORM -->
+<section class="allybi-section allybi-section--dense" style="padding-top:var(--allybi-space-4)">
+  <div class="allybi-narrow">
+    <div class="allybi-card allybi-card--flat allybi-reveal">
+      <form id="waitlist-form" class="waitlist-form" action="#" method="POST">
+
+        <div class="allybi-input-group">
+          <label class="allybi-label" for="waitlist-name" data-i18n-key="form.name">Nome</label>
+          <input class="allybi-input" type="text" id="waitlist-name" name="name" required placeholder="Seu nome" data-i18n-key-placeholder="form.name_placeholder">
+        </div>
+
+        <div class="allybi-input-group">
+          <label class="allybi-label" for="waitlist-email" data-i18n-key="form.email">E-mail</label>
+          <input class="allybi-input" type="email" id="waitlist-email" name="email" required placeholder="você@empresa.com" data-i18n-key-placeholder="form.email_placeholder">
+        </div>
+
+        <div class="allybi-input-group">
+          <label class="allybi-label" for="waitlist-occupation" data-i18n-key="form.occupation">Profissão / Setor</label>
+          <input class="allybi-input" type="text" id="waitlist-occupation" name="occupation" required placeholder="Ex.: Advogado, Financeiro, Operações" data-i18n-key-placeholder="form.occupation_placeholder">
+        </div>
+
+        <button type="submit" class="allybi-btn allybi-btn--primary allybi-btn--lg" style="width:100%" data-i18n-key="waitlist.submit">Entrar na lista de espera</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- Scripts -->
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

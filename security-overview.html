@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="icon" type="image/svg+xml" href="assets/images/allybi-favicon.svg">
-  <title>Segurança | Allybi</title>
-  <meta name="description" content="Você escolhe o que conecta. O Allybi mostra fonte, não usa documentos para treinar modelos e nada sai sem confirmação. WhatsApp funciona como handoff, sem caixa sincronizada.">
+  <title>Segurança e privacidade | Allybi</title>
+  <meta name="description" content="Conheça como o Allybi protege dados com OAuth 2.0, criptografia em trânsito e em repouso, limites de uso de IA, confirmação antes do envio e controles de exclusão.">
   <link rel="canonical" href="https://allybi.com.br/security-overview.html">
   <link rel="alternate" hreflang="en" href="https://allybi.co/security-overview.html">
   <link rel="alternate" hreflang="pt-BR" href="https://allybi.com.br/security-overview.html">
   <link rel="alternate" hreflang="x-default" href="https://allybi.co/security-overview.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Segurança | Allybi">
-  <meta property="og:description" content="Controle para documentos sensíveis: fontes permissionadas, resposta com fonte, revisão antes do envio e WhatsApp handoff.">
+  <meta property="og:title" content="Segurança e privacidade | Allybi">
+  <meta property="og:description" content="Acesso autorizado, criptografia, dados fora do treinamento de modelos e confirmação antes de qualquer envio.">
   <meta property="og:url" content="https://allybi.com.br/security-overview.html">
   <meta property="og:site_name" content="Allybi">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Segurança | Allybi">
-  <meta name="twitter:description" content="Controle para documentos sensíveis: fontes permissionadas, resposta com fonte, revisão antes do envio e WhatsApp handoff.">
+  <meta name="twitter:title" content="Segurança e privacidade | Allybi">
+  <meta name="twitter:description" content="Acesso autorizado, criptografia, dados fora do treinamento de modelos e confirmação antes de qualquer envio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,405 +38,936 @@
 <body>
 
 <!-- HEADER -->
-<header id="allybi-header" class="allybi-header">
-  <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
-    <nav class="allybi-nav desktop-only">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="nav-dropdown-menu">
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-        <div class="nav-dropdown-menu">
-          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-        <div class="nav-dropdown-menu">
-          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
     </nav>
-    <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-controls="allybi-mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
   </div>
 </header>
-<div id="allybi-mobile-menu" class="mobile-menu">
-  <nav class="mobile-menu-nav">
-    <div class="mobile-dropdown"><button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button><div class="mobile-dropdown-items"><a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="nav.security">Security</a></div></div>
-    <div class="mobile-dropdown"><button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button><div class="mobile-dropdown-items"><a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a><a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a><a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a></div></div>
-    <div class="mobile-dropdown"><button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button><div class="mobile-dropdown-items"><a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a><a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a><a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a></div></div>
-    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
-  </nav>
-  <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
+    </div>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </div>
 
-<main>
+<!-- MAIN -->
+<main id="security-page">
 
-<!-- ════════════════════════════════════════════════════════════
-     1. HERO
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-hero">
-  <div class="allybi-container">
-    <div class="sec-hero__grid">
-      <div class="sec-hero__text sec-reveal">
-        <span class="allybi-chip allybi-chip--trust" data-i18n-key="sec.hero_chip">Segurança</span>
-        <h1 class="allybi-h1" data-i18n-key="sec.hero_h1">Controle para documentos sensíveis.</h1>
-        <p class="allybi-body-lg" data-i18n-key="sec.hero_lede">Você escolhe o que conecta. O Allybi responde com fonte visível e leva mensagem, arquivo, destinatário e canal para revisão antes de qualquer envio.</p>
-        <div class="sec-hero__ctas">
-          <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary allybi-btn--lg" data-i18n-key="sec.cta_start_trial">Começar grátis por 30 dias</a>
-          <a href="#policies" class="allybi-btn allybi-btn--secondary" data-i18n-key="sec.cta_see_policies">Ver políticas</a>
+<!-- 1. HERO -->
+<section class="security-hero security-hero--editorial" aria-labelledby="security-hero-title">
+  <div class="security-hero-container">
+    <div class="security-hero-copy">
+      <p class="security-hero-eyebrow">SEGURANÇA E PRIVACIDADE</p>
+      <h1 id="security-hero-title">
+        <span>Controle para</span>
+        <span>documentos sensíveis.</span>
+      </h1>
+      <p class="security-hero-subtitle">Você escolhe o que conecta. O Allybi responde com fonte visível e leva mensagem, arquivo, destinatário e canal para revisão antes de qualquer envio.</p>
+      <div class="security-hero-actions">
+        <a href="https://app.allybi.com.br" class="security-hero-primary">Começar grátis por 30 dias</a>
+        <a href="#security-documents" class="security-hero-secondary">Ver políticas<span class="security-hero-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ENCRYPTION - editorial ledger -->
+<section id="security-encryption" class="security-encryption-section" aria-labelledby="security-encryption-title">
+  <div class="security-encryption-container">
+
+    <header class="security-section-header">
+      <p class="security-section-eyebrow">CRIPTOGRAFIA</p>
+      <h2 id="security-encryption-title">Criptografia em trânsito e em repouso.</h2>
+      <p class="security-section-subtitle">A proteção acompanha o dado enquanto ele trafega e enquanto fica armazenado.</p>
+    </header>
+
+    <div class="security-encryption-ledger">
+
+      <article class="security-encryption-row security-encryption-transit">
+        <div class="security-encryption-copy">
+          <p class="security-encryption-row-eyebrow">01 · EM TRÂNSITO</p>
+          <h3 class="security-encryption-row-title">TLS protege a transferência.</h3>
+          <p class="security-encryption-row-body">Dados enviados entre seu dispositivo, serviços autorizados e o Allybi usam Transport Layer Security.</p>
         </div>
-        <p class="sec-hero__micro" data-i18n-key="sec.hero_micro">Documentos não treinam modelos · WhatsApp sem caixa sincronizada · Nada sai sem confirmação</p>
-        <div class="sec-hero__trust">
-          <span data-i18n-key="sec.hero_trust1">Fontes permissionadas</span>
-          <span data-i18n-key="sec.hero_trust2">Resposta com fonte</span>
-          <span data-i18n-key="sec.hero_trust3">Revisão antes do envio</span>
-          <span class="sec-hero__trust--secondary" data-i18n-key="sec.hero_trust4">WhatsApp handoff</span>
-          <span class="sec-hero__trust--secondary" data-i18n-key="sec.hero_trust5">Documentos não treinam modelos</span>
+        <div class="security-encryption-visual" role="img" aria-label="Dados protegidos por TLS durante a transferência entre o dispositivo e o Allybi">
+          <svg class="security-encryption-svg security-encryption-svg--desktop" viewBox="0 0 640 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="se-base-line" d="M40 78 H600" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M218 66 H422" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M218 90 H422" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M218 66 V90" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M422 66 V90" vector-effect="non-scaling-stroke"/>
+            <circle class="se-primary-dot" cx="40" cy="78" r="6"/>
+            <circle class="se-primary-dot" cx="600" cy="78" r="6"/>
+            <circle class="se-packet" cx="270" cy="78" r="3"/>
+            <circle class="se-packet" cx="320" cy="78" r="3"/>
+            <circle class="se-packet" cx="370" cy="78" r="3"/>
+            <text class="se-label" x="40" y="48" text-anchor="start">Dispositivo</text>
+            <text class="se-label" x="320" y="48" text-anchor="middle">TLS</text>
+            <text class="se-label" x="600" y="48" text-anchor="end">Allybi</text>
+            <text class="se-caption" x="320" y="118" text-anchor="middle">canal criptografado</text>
+          </svg>
+          <svg class="security-encryption-svg security-encryption-svg--mobile" viewBox="0 0 320 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="se-base-line" d="M42 26 V194" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M34 72 V142" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M50 72 V142" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M34 72 H50" vector-effect="non-scaling-stroke"/>
+            <path class="se-tunnel" d="M34 142 H50" vector-effect="non-scaling-stroke"/>
+            <circle class="se-primary-dot" cx="42" cy="26" r="5"/>
+            <circle class="se-primary-dot" cx="42" cy="194" r="5"/>
+            <circle class="se-packet" cx="42" cy="88" r="3"/>
+            <circle class="se-packet" cx="42" cy="108" r="3"/>
+            <circle class="se-packet" cx="42" cy="128" r="3"/>
+            <text class="se-label" x="72" y="31">Dispositivo</text>
+            <text class="se-label" x="72" y="96">TLS</text>
+            <text class="se-caption" x="72" y="115">canal criptografado</text>
+            <text class="se-label" x="72" y="199">Allybi</text>
+          </svg>
         </div>
-      </div>
+      </article>
 
-      <!-- Hero visual: UNIQUE permission panel (not the hero-scene reused on other pages) -->
-      <div class="sec-hero__visual sec-reveal" role="img" data-i18n-aria-label="sec.hero_panel_aria" aria-label="Painel de controle: fontes autorizadas, resposta com fonte e revisão antes de qualquer envio.">
-        <div class="sec-panel" aria-hidden="true">
-          <!-- Top: source authorization status -->
-          <div class="sec-panel__sources">
-            <div class="sec-panel__source-row sec-panel__source-row--ok">
-              <img src="assets/images/outlook-icon.svg" alt="" width="18" height="18">
-              <span class="sec-panel__source-name">Outlook</span>
-              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_connected">conectado</span>
-            </div>
-            <div class="sec-panel__source-row sec-panel__source-row--ok">
-              <img src="assets/images/onedrive-icon.svg" alt="" width="18" height="18">
-              <span class="sec-panel__source-name">OneDrive</span>
-              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_connected">conectado</span>
-            </div>
-            <div class="sec-panel__source-row sec-panel__source-row--ok">
-              <img src="assets/images/sharepoint-icon.svg" alt="" width="18" height="18">
-              <span class="sec-panel__source-name">SharePoint</span>
-              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_connected">conectado</span>
-            </div>
-            <div class="sec-panel__source-row sec-panel__source-row--ok">
-              <img src="assets/images/uploads-icon.svg" alt="" width="18" height="18">
-              <span class="sec-panel__source-name" data-i18n-key="sec.panel_uploads">Uploads</span>
-              <span class="sec-panel__source-tag" data-i18n-key="sec.panel_tag_added">adicionados</span>
-            </div>
-            <div class="sec-panel__source-row sec-panel__source-row--handoff">
-              <img src="assets/images/whatsapp-icon.svg" alt="" width="18" height="18">
-              <span class="sec-panel__source-name">WhatsApp</span>
-              <span class="sec-panel__source-tag sec-panel__source-tag--handoff" data-i18n-key="sec.panel_tag_handoff">handoff</span>
-            </div>
-          </div>
-
-          <!-- Middle: source-cited answer -->
-          <div class="sec-panel__answer">
-            <p class="sec-panel__answer-q"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> <span data-i18n-key="sec.panel_query">Qual versão posso enviar?</span></p>
-            <div class="sec-panel__answer-file">Contrato_Anderson_v4.pdf</div>
-            <p class="sec-panel__answer-source"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> <span data-i18n-key="sec.panel_source">Clientes / Contratos / 14 mar</span></p>
-          </div>
-
-          <!-- Bottom: review panel with status -->
-          <div class="sec-panel__review">
-            <div class="sec-panel__review-label" data-i18n-key="sec.panel_review_label">Aguardando confirmação</div>
-            <dl class="sec-panel__review-list">
-              <div><dt data-i18n-key="sec.panel_field_recipient">Destinatário</dt><dd>cliente@empresa.com.br</dd></div>
-              <div><dt data-i18n-key="sec.panel_field_file">Arquivo</dt><dd>Contrato_Anderson_v4.pdf</dd></div>
-              <div><dt data-i18n-key="sec.panel_field_channel">Canal</dt><dd>Outlook</dd></div>
-            </dl>
-            <div class="sec-panel__review-actions">
-              <span class="sec-panel__review-cancel" data-i18n-key="sec.panel_cancel">Cancelar</span>
-              <span class="sec-panel__review-send" data-i18n-key="sec.panel_send">Enviar via Outlook</span>
-            </div>
-          </div>
+      <article class="security-encryption-row security-encryption-rest">
+        <div class="security-encryption-copy">
+          <p class="security-encryption-row-eyebrow">02 · EM REPOUSO</p>
+          <h3 class="security-encryption-row-title">AES-256 protege o armazenamento.</h3>
+          <p class="security-encryption-row-body">Documentos e informações pessoais armazenados pelo Allybi usam criptografia AES de 256 bits.</p>
+          <p class="security-encryption-row-secondary">Tokens OAuth também ficam criptografados em repouso.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     2. TRUST PROOF STRIP
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-basics allybi-section" style="background:var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="sec-basics__header sec-reveal">
-      <h2 data-i18n-key="sec.basics_h2">As regras antes de conectar.</h2>
-      <p data-i18n-key="sec.basics_sub">O Allybi foi pensado para manter fonte, permissão e confirmação visíveis.</p>
-    </div>
-    <div class="sec-basics__grid sec-reveal">
-      <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c1_h">Documentos não treinam modelos</h3>
-        <p data-i18n-key="sec.basics_c1_p">Documentos, perguntas e respostas não são usados para treinar modelos.</p>
-      </div>
-      <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c2_h">Acesso permissionado</h3>
-        <p data-i18n-key="sec.basics_c2_p">O Allybi só usa fontes que você conecta e autoriza.</p>
-      </div>
-      <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c3_h">Fonte visível</h3>
-        <p data-i18n-key="sec.basics_c3_p">Cada resposta mostra de onde veio quando há base suficiente.</p>
-      </div>
-      <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c4_h">Envio com revisão</h3>
-        <p data-i18n-key="sec.basics_c4_p">Você revisa mensagem, arquivo, fonte, destinatário e canal antes do envio.</p>
-      </div>
-      <div class="sec-basics__card">
-        <h3 data-i18n-key="sec.basics_c5_h">Detalhes nas políticas</h3>
-        <p data-i18n-key="sec.basics_c5_p">Detalhes de proteção e uso de dados ficam nas <a href="#policies" class="sec-basics__inline-link">políticas</a>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     3. ACCESS BOUNDARIES
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-access allybi-section">
-  <div class="allybi-container">
-    <div class="allybi-section-header sec-reveal">
-      <h2 class="allybi-h2" data-i18n-key="sec.access_h2">O Allybi só usa o que você autoriza.</h2>
-      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="sec.access_sub">O que não foi conectado ou adicionado ao workspace não entra no chat.</p>
-    </div>
-    <div class="sec-access__grid sec-reveal">
-      <div class="sec-access__col sec-access__col--ok">
-        <h3 data-i18n-key="sec.access_left_h">Pode usar</h3>
-        <ul>
-          <li data-i18n-key="sec.access_left_1">Outlook conectado</li>
-          <li data-i18n-key="sec.access_left_2">OneDrive conectado</li>
-          <li data-i18n-key="sec.access_left_3">SharePoint conectado</li>
-          <li data-i18n-key="sec.access_left_4">Uploads adicionados ao workspace</li>
-          <li data-i18n-key="sec.access_left_5">Arquivos e anexos autorizados</li>
-        </ul>
-      </div>
-      <div class="sec-access__col sec-access__col--not">
-        <h3 data-i18n-key="sec.access_right_h">Não usa</h3>
-        <ul>
-          <li data-i18n-key="sec.access_right_1">WhatsApp inbox</li>
-          <li data-i18n-key="sec.access_right_2">Fontes não conectadas</li>
-          <li data-i18n-key="sec.access_right_3">Arquivos fora do workspace</li>
-          <li data-i18n-key="sec.access_right_4">Documentos removidos ou desconectados</li>
-          <li data-i18n-key="sec.access_right_5">Canais sem permissão</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     4. WHAT ALLYBI DOES NOT DO
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-not allybi-section" style="background:var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="allybi-section-header sec-reveal">
-      <h2 class="allybi-h2" data-i18n-key="sec.not_h2">O que o Allybi não faz</h2>
-      <p class="allybi-body-lg" style="max-width:520px;margin:12px auto 0;" data-i18n-key="sec.not_sub">Limites claros reduzem dúvida antes de usar.</p>
-    </div>
-    <div class="sec-not__grid sec-reveal">
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c1_h">Não treina modelos com seus dados</h3><p data-i18n-key="sec.not_c1_p">Documentos, perguntas e respostas não são usados para treinamento.</p></div>
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c2_h">Não lê seu WhatsApp</h3><p data-i18n-key="sec.not_c2_p">WhatsApp é handoff. A caixa de entrada não é pesquisada.</p></div>
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c3_h">Não envia sem revisão</h3><p data-i18n-key="sec.not_c3_p">E-mails via Outlook exigem revisão e confirmação. WhatsApp é enviado pelo usuário dentro do WhatsApp.</p></div>
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c4_h">Não acessa fontes não conectadas</h3><p data-i18n-key="sec.not_c4_p">O Allybi trabalha com permissões explícitas.</p></div>
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c5_h">Não apresenta incerteza como certeza</h3><p data-i18n-key="sec.not_c5_p">Quando não há base suficiente, mostra a limitação.</p></div>
-      <div class="sec-not__card"><h3 data-i18n-key="sec.not_c6_h">Não substitui sua revisão</h3><p data-i18n-key="sec.not_c6_p">O produto ajuda a encontrar e preparar. A decisão final é sua.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     5. AI ARCHITECTURE
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-ai allybi-section">
-  <div class="allybi-container">
-    <div class="allybi-section-header sec-reveal">
-      <h2 class="allybi-h2" data-i18n-key="sec.ai_h2">IA no contexto do seu workspace. Não no treinamento de modelos.</h2>
-      <p class="allybi-body-lg" style="max-width:580px;margin:12px auto 0;" data-i18n-key="sec.ai_sub">O Allybi usa IA para responder com base nas fontes autorizadas. Seus documentos, perguntas e respostas não são usados para treinar modelos.</p>
-    </div>
-    <div class="sec-ai__arch sec-reveal">
-      <div class="sec-ai__zone">
-        <span class="sec-ai__zone-label" data-i18n-key="sec.ai_zone1_label">Pergunta</span>
-        <div class="sec-ai__zone-content" data-i18n-key="sec.ai_zone1_content">"qual versão posso enviar?"</div>
-      </div>
-      <div class="sec-ai__arrow" aria-hidden="true">&rarr;</div>
-      <div class="sec-ai__zone sec-ai__zone--center">
-        <span class="sec-ai__zone-label" data-i18n-key="sec.ai_zone2_label">Contexto autorizado</span>
-        <div class="sec-ai__zone-sources">Outlook · OneDrive · SharePoint · Uploads</div>
-      </div>
-      <div class="sec-ai__arrow" aria-hidden="true">&rarr;</div>
-      <div class="sec-ai__zone sec-ai__zone--source">
-        <span class="sec-ai__zone-label" data-i18n-key="sec.ai_zone3_label">Resposta com fonte</span>
-        <div class="sec-ai__zone-content" style="font-weight:600;">Contrato_Anderson_v4.pdf</div>
-        <div style="font-size:11px;color:var(--allybi-text-muted);margin-top:4px;" data-i18n-key="sec.ai_zone3_source">Fonte: Clientes / Contratos / 14 mar</div>
-      </div>
-      <div class="sec-ai__arrow" aria-hidden="true">&rarr;</div>
-      <div class="sec-ai__zone sec-ai__zone--limit">
-        <span class="sec-ai__zone-label" data-i18n-key="sec.ai_zone4_label">Limite claro</span>
-        <div class="sec-ai__zone-content" data-i18n-key="sec.ai_zone4_content">Sem fonte suficiente, mostra a limitação.</div>
-      </div>
-    </div>
-    <div class="sec-ai__statements sec-reveal">
-      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt1_h">Escopo limitado</h3><p data-i18n-key="sec.ai_stmt1_p">A busca acontece nas fontes conectadas ao workspace.</p></div>
-      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt2_h">Sem treinamento</h3><p data-i18n-key="sec.ai_stmt2_p">Os dados do workspace não treinam modelos.</p></div>
-      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt3_h">Fonte visível</h3><p data-i18n-key="sec.ai_stmt3_p">A resposta aponta para origem, trecho, página ou data quando disponível.</p></div>
-      <div class="sec-ai__stmt"><h3 data-i18n-key="sec.ai_stmt4_h">Limitação clara</h3><p data-i18n-key="sec.ai_stmt4_p">Quando não há base suficiente, a resposta indica isso.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
-     6. PERMISSIONS & INTEGRATIONS
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-perms allybi-section" style="background:var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="allybi-section-header sec-reveal">
-      <h2 class="allybi-h2" data-i18n-key="sec.perms_h2">Conectar não significa abrir tudo.</h2>
-      <p class="allybi-body-lg" style="max-width:560px;margin:12px auto 0;" data-i18n-key="sec.perms_sub">Cada fonte tem um papel. WhatsApp não é fonte conectada.</p>
-    </div>
-    <p class="sec-perms__highlight sec-reveal" data-i18n-key="sec.perms_highlight">WhatsApp não é fonte. É handoff.</p>
-    <div class="sec-perms__groups sec-reveal">
-      <div class="sec-perms__group">
-        <span class="sec-perms__group-label" data-i18n-key="sec.perms_group_connected">Fontes conectadas</span>
-        <div class="sec-perms__cards">
-          <div class="sec-perms__card"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>Outlook</h3><p data-i18n-key="sec.perms_outlook_desc">E-mails e anexos das pastas autorizadas.</p></div>
-          <div class="sec-perms__card"><img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>OneDrive</h3><p data-i18n-key="sec.perms_onedrive_desc">Arquivos e pastas autorizadas.</p></div>
-          <div class="sec-perms__card"><img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>SharePoint</h3><p data-i18n-key="sec.perms_sharepoint_desc">Sites e bibliotecas autorizadas.</p></div>
-          <div class="sec-perms__card"><img src="assets/images/uploads-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3 data-i18n-key="sec.perms_uploads_h">Uploads</h3><p data-i18n-key="sec.perms_uploads_desc">Arquivos enviados ao workspace.</p></div>
+        <div class="security-encryption-visual" role="img" aria-label="Documentos, dados pessoais e tokens OAuth convergem para criptografia AES-256 em repouso">
+          <svg class="security-encryption-svg security-encryption-svg--desktop" viewBox="0 0 640 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="se-aes-line" d="M40 45 H460" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-line" d="M40 90 H510" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-line" d="M40 135 H460" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-converge" d="M460 45 C488 45 498 70 510 90" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-converge" d="M460 135 C488 135 498 110 510 90" vector-effect="non-scaling-stroke"/>
+            <circle class="se-primary-dot" cx="40" cy="45" r="4"/>
+            <circle class="se-primary-dot" cx="40" cy="90" r="4"/>
+            <circle class="se-primary-dot" cx="40" cy="135" r="4"/>
+            <circle class="se-aes-node" cx="510" cy="90" r="8"/>
+            <text class="se-aes-label" x="40" y="27">Documentos</text>
+            <text class="se-aes-label" x="40" y="72">Dados pessoais</text>
+            <text class="se-aes-label" x="40" y="117">Tokens OAuth</text>
+            <text class="se-aes-primary" x="535" y="86">AES-256</text>
+            <text class="se-caption" x="535" y="105">em repouso</text>
+          </svg>
+          <svg class="security-encryption-svg security-encryption-svg--mobile" viewBox="0 0 320 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="se-aes-line" d="M20 48 H210" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-line" d="M20 104 H240" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-line" d="M20 160 H210" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-converge" d="M210 48 C228 48 234 76 240 104" vector-effect="non-scaling-stroke"/>
+            <path class="se-aes-converge" d="M210 160 C228 160 234 132 240 104" vector-effect="non-scaling-stroke"/>
+            <circle class="se-primary-dot" cx="20" cy="48" r="4"/>
+            <circle class="se-primary-dot" cx="20" cy="104" r="4"/>
+            <circle class="se-primary-dot" cx="20" cy="160" r="4"/>
+            <circle class="se-aes-node" cx="240" cy="104" r="7"/>
+            <text class="se-aes-label" x="20" y="31">Documentos</text>
+            <text class="se-aes-label" x="20" y="87">Dados pessoais</text>
+            <text class="se-aes-label" x="20" y="143">Tokens OAuth</text>
+            <text class="se-aes-primary" x="258" y="100">AES-256</text>
+            <text class="se-caption" x="258" y="119">em repouso</text>
+          </svg>
         </div>
+      </article>
+
+      <article class="security-encryption-row security-key-row">
+        <div class="security-encryption-copy">
+          <p class="security-encryption-row-eyebrow">03 · GESTÃO DE CHAVES</p>
+          <h3 class="security-encryption-row-title">Controle e rotação.</h3>
+          <p class="security-encryption-row-body">As chaves são gerenciadas por sistemas seguros, com controles de acesso e políticas de rotação.</p>
+        </div>
+        <div class="security-encryption-visual" role="img" aria-label="Chaves passam por sistemas seguros, controle de acesso e rotação periódica">
+          <svg class="security-encryption-svg security-encryption-svg--desktop" viewBox="0 0 640 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="se-key-line" d="M40 50 H600" vector-effect="non-scaling-stroke"/>
+            <circle class="se-primary-dot" cx="40" cy="50" r="5"/>
+            <circle class="se-primary-dot" cx="320" cy="50" r="5"/>
+            <circle class="se-success-dot" cx="600" cy="50" r="5"/>
+            <text class="se-aes-label" x="40" y="27" text-anchor="start">Sistemas seguros</text>
+            <text class="se-aes-label" x="320" y="27" text-anchor="middle">Controle de acesso</text>
+            <text class="se-aes-label" x="600" y="27" text-anchor="end">Rotação</text>
+            <text class="se-caption" x="40" y="76" text-anchor="start">proteção</text>
+            <text class="se-caption" x="320" y="76" text-anchor="middle">limite</text>
+            <text class="se-caption" x="600" y="76" text-anchor="end">ciclo</text>
+          </svg>
+          <svg class="security-encryption-svg security-encryption-svg--mobile" viewBox="0 0 320 190" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="se-key-line" d="M42 24 V156" vector-effect="non-scaling-stroke"/>
+            <circle class="se-primary-dot" cx="42" cy="24" r="5"/>
+            <circle class="se-primary-dot" cx="42" cy="90" r="5"/>
+            <circle class="se-success-dot" cx="42" cy="156" r="5"/>
+            <text class="se-aes-label" x="72" y="29">Sistemas seguros</text>
+            <text class="se-aes-label" x="72" y="95">Controle de acesso</text>
+            <text class="se-aes-label" x="72" y="161">Rotação</text>
+          </svg>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3. ACCESS AND PERMISSIONS -->
+<section class="security-access-section" aria-labelledby="security-access-title">
+  <div class="security-access-container">
+    <header class="security-section-header">
+      <p class="security-section-eyebrow">ACESSO E PERMISSÕES</p>
+      <h2 id="security-access-title">Acesso começa por autorização.</h2>
+      <p class="security-section-subtitle">O Allybi usa OAuth 2.0 e solicita somente as permissões necessárias para as funções que você ativa.</p>
+    </header>
+
+    <div class="security-access-ledger">
+      <div class="security-access-headers">
+        <span>FONTE</span>
+        <span>DADOS AUTORIZADOS</span>
+        <span>SEU CONTROLE</span>
       </div>
-      <div class="sec-perms__group">
-        <span class="sec-perms__group-label sec-perms__group-label--handoff" data-i18n-key="sec.perms_group_handoff">Handoff</span>
-        <div class="sec-perms__cards">
-          <div class="sec-perms__card sec-perms__card--handoff"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3>WhatsApp</h3><p data-i18n-key="sec.perms_whatsapp_desc">O Allybi monta a mensagem. Você abre seu WhatsApp e envia.</p></div>
+      <div class="security-access-row">
+        <span class="security-access-source">
+          <img src="assets/images/outlook-icon.svg" alt="" width="28" height="28">
+          <span class="security-access-name">Outlook</span>
+        </span>
+        <span class="security-access-data">E-mails, threads, anexos e metadados selecionados.</span>
+        <span class="security-access-control">Você autoriza, desconecta e pode apagar o conteúdo importado.</span>
+      </div>
+      <div class="security-access-row">
+        <span class="security-access-source">
+          <img src="assets/images/onedrive-icon.svg" alt="" width="28" height="28">
+          <span class="security-access-name">OneDrive</span>
+        </span>
+        <span class="security-access-data">Arquivos, pastas e metadados selecionados.</span>
+        <span class="security-access-control">Você autoriza, desconecta e pode apagar o conteúdo importado.</span>
+      </div>
+      <div class="security-access-row">
+        <span class="security-access-source">
+          <img src="assets/images/sharepoint-icon.svg" alt="" width="28" height="28">
+          <span class="security-access-name">SharePoint</span>
+        </span>
+        <span class="security-access-data">Sites, bibliotecas, pastas e arquivos selecionados.</span>
+        <span class="security-access-control">Você autoriza, desconecta e pode apagar o conteúdo importado.</span>
+      </div>
+      <div class="security-access-row">
+        <span class="security-access-source">
+          <img src="assets/images/google-drive-icon.svg" alt="" width="28" height="28">
+          <span class="security-access-name">Google Drive</span>
+        </span>
+        <span class="security-access-data">Arquivos, pastas e metadados selecionados.</span>
+        <span class="security-access-control">Você autoriza, desconecta e pode apagar o conteúdo importado.</span>
+      </div>
+      <div class="security-access-row">
+        <span class="security-access-source">
+          <span class="security-access-icon" aria-hidden="true">
+            <img src="assets/images/uploads-icon.svg" alt="" width="51" height="28">
+          </span>
+          <span class="security-access-name">Uploads</span>
+        </span>
+        <span class="security-access-data">Somente arquivos enviados diretamente por você.</span>
+        <span class="security-access-control">Você pode apagar os arquivos do workspace.</span>
+      </div>
+    </div>
+
+    <!-- Mobile accordion -->
+    <div class="security-access-accordion" aria-label="Permissões por fonte">
+      <div class="security-access-acc-item">
+        <button type="button" class="security-access-acc-trigger" aria-expanded="true" aria-controls="security-acc-1">
+          <img src="assets/images/outlook-icon.svg" alt="" width="24" height="24">
+          <span>Outlook</span>
+          <span class="security-access-acc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-access-acc-panel" id="security-acc-1">
+          <p class="security-access-acc-label">DADOS AUTORIZADOS</p>
+          <p class="security-access-acc-text">E-mails, threads, anexos e metadados selecionados.</p>
+          <p class="security-access-acc-label">CONTROLE</p>
+          <p class="security-access-acc-text">Você autoriza, desconecta e pode apagar o conteúdo importado.</p>
+          <p class="security-access-acc-label">AO DESCONECTAR</p>
+          <p class="security-access-acc-text">O Allybi para de acessar novos dados. Conteúdo já importado não é apagado automaticamente.</p>
         </div>
       </div>
+      <div class="security-access-acc-item">
+        <button type="button" class="security-access-acc-trigger" aria-expanded="false" aria-controls="security-acc-2">
+          <img src="assets/images/onedrive-icon.svg" alt="" width="24" height="24">
+          <span>OneDrive</span>
+          <span class="security-access-acc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-access-acc-panel" id="security-acc-2">
+          <p class="security-access-acc-label">DADOS AUTORIZADOS</p>
+          <p class="security-access-acc-text">Arquivos, pastas e metadados selecionados.</p>
+          <p class="security-access-acc-label">CONTROLE</p>
+          <p class="security-access-acc-text">Você autoriza, desconecta e pode apagar o conteúdo importado.</p>
+          <p class="security-access-acc-label">AO DESCONECTAR</p>
+          <p class="security-access-acc-text">O Allybi para de acessar novos dados. Conteúdo já importado não é apagado automaticamente.</p>
+        </div>
+      </div>
+      <div class="security-access-acc-item">
+        <button type="button" class="security-access-acc-trigger" aria-expanded="false" aria-controls="security-acc-3">
+          <img src="assets/images/sharepoint-icon.svg" alt="" width="24" height="24">
+          <span>SharePoint</span>
+          <span class="security-access-acc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-access-acc-panel" id="security-acc-3">
+          <p class="security-access-acc-label">DADOS AUTORIZADOS</p>
+          <p class="security-access-acc-text">Sites, bibliotecas, pastas e arquivos selecionados.</p>
+          <p class="security-access-acc-label">CONTROLE</p>
+          <p class="security-access-acc-text">Você autoriza, desconecta e pode apagar o conteúdo importado.</p>
+          <p class="security-access-acc-label">AO DESCONECTAR</p>
+          <p class="security-access-acc-text">O Allybi para de acessar novos dados. Conteúdo já importado não é apagado automaticamente.</p>
+        </div>
+      </div>
+      <div class="security-access-acc-item">
+        <button type="button" class="security-access-acc-trigger" aria-expanded="false" aria-controls="security-acc-gdrive">
+          <img src="assets/images/google-drive-icon.svg" alt="" width="24" height="24">
+          <span>Google Drive</span>
+          <span class="security-access-acc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-access-acc-panel" id="security-acc-gdrive">
+          <p class="security-access-acc-label">DADOS AUTORIZADOS</p>
+          <p class="security-access-acc-text">Arquivos, pastas e metadados selecionados.</p>
+          <p class="security-access-acc-label">CONTROLE</p>
+          <p class="security-access-acc-text">Você autoriza, desconecta e pode apagar o conteúdo importado.</p>
+          <p class="security-access-acc-label">AO DESCONECTAR</p>
+          <p class="security-access-acc-text">O Allybi para de acessar novos dados. Conteúdo já importado não é apagado automaticamente.</p>
+        </div>
+      </div>
+      <div class="security-access-acc-item">
+        <button type="button" class="security-access-acc-trigger" aria-expanded="false" aria-controls="security-acc-4">
+          <span class="security-access-acc-uploadicon" aria-hidden="true">
+            <img src="assets/images/uploads-icon.svg" alt="" width="43" height="24">
+          </span>
+          <span>Uploads</span>
+          <span class="security-access-acc-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-access-acc-panel" id="security-acc-4">
+          <p class="security-access-acc-label">DADOS AUTORIZADOS</p>
+          <p class="security-access-acc-text">Somente arquivos enviados diretamente por você.</p>
+          <p class="security-access-acc-label">CONTROLE</p>
+          <p class="security-access-acc-text">Você pode apagar os arquivos do workspace.</p>
+          <p class="security-access-acc-label">AO DESCONECTAR</p>
+          <p class="security-access-acc-text">Não existe conexão para revogar. Apague o arquivo diretamente no workspace.</p>
+        </div>
+      </div>
     </div>
-    <p class="sec-perms__roadmap sec-reveal" data-i18n-key="sec.perms_roadmap">Gmail e Google Drive estão no roadmap.</p>
-    <div style="text-align:center;margin-top:20px;" class="sec-reveal">
-      <a href="integrations.html" class="allybi-btn allybi-btn--secondary" data-i18n-key="sec.perms_cta">Ver integrações</a>
+
+    <aside class="security-disconnect-callout">
+      <h3 class="security-disconnect-title">Desconectar não é apagar.</h3>
+      <p class="security-disconnect-body">Desconectar interrompe novo acesso à fonte. O conteúdo já importado permanece no workspace até ser excluído.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- 4. INTERNAL CONTROLS & INFRASTRUCTURE -->
+<section class="security-internal-section" aria-labelledby="security-internal-title">
+  <div class="security-internal-container">
+    <header class="security-section-header">
+      <p class="security-section-eyebrow">CONTROLES INTERNOS</p>
+      <h2 id="security-internal-title">A proteção também limita o acesso interno.</h2>
+      <p class="security-section-subtitle">Acesso a dados pessoais fica restrito a pessoas autorizadas e às funções necessárias.</p>
+    </header>
+
+    <div class="security-internal-panels">
+      <article class="security-internal-panel">
+        <h3 class="security-internal-panel-title">Controle de acesso interno</h3>
+        <p class="security-internal-panel-sub">Quem acessa e com qual limite.</p>
+        <div class="security-internal-rows">
+          <div class="security-internal-row"><span class="security-internal-label">Autenticação</span><span class="security-internal-value">MFA para contas de funcionários</span></div>
+          <div class="security-internal-row"><span class="security-internal-label">Permissões</span><span class="security-internal-value">Acesso baseado em função</span></div>
+          <div class="security-internal-row"><span class="security-internal-label">Revisão</span><span class="security-internal-value">Revisões regulares de acesso</span></div>
+          <div class="security-internal-row"><span class="security-internal-label">Rastreabilidade</span><span class="security-internal-value">Logs de auditoria</span></div>
+        </div>
+      </article>
+
+      <article class="security-internal-panel">
+        <h3 class="security-internal-panel-title">Infraestrutura e resposta</h3>
+        <p class="security-internal-panel-sub">Proteções do ambiente e resposta a incidentes.</p>
+        <div class="security-internal-rows">
+          <div class="security-internal-row"><span class="security-internal-label">Rede</span><span class="security-internal-value">Segmentação e firewalls</span></div>
+          <div class="security-internal-row"><span class="security-internal-label">Monitoramento</span><span class="security-internal-value">Detecção e prevenção de intrusão</span></div>
+          <div class="security-internal-row"><span class="security-internal-label">Validação</span><span class="security-internal-value">Avaliações de segurança e testes de penetração regulares</span></div>
+          <div class="security-internal-row"><span class="security-internal-label">Resposta</span><span class="security-internal-value">Plano de resposta a incidentes</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     7. SENDING BOUNDARY
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-sending allybi-section">
-  <div class="allybi-container">
-    <div class="allybi-section-header sec-reveal">
-      <h2 class="allybi-h2" data-i18n-key="sec.sending_h2">Nada sai sem sua confirmação.</h2>
-      <p class="allybi-body-lg" style="max-width:520px;margin:12px auto 0;" data-i18n-key="sec.sending_sub">O Allybi prepara. Você revisa e decide.</p>
-    </div>
-    <div class="sec-sending__mock sec-reveal">
-      <div class="sec-sending__mock-label" data-i18n-key="sec.sending_mock_label">Revisar antes de enviar</div>
-      <div class="sec-sending__mock-rows">
-        <div class="sec-sending__mock-row"><span data-i18n-key="sec.sending_row_recipient">Destinatário</span><span>cliente@empresa.com.br</span></div>
-        <div class="sec-sending__mock-row"><span data-i18n-key="sec.sending_row_message">Mensagem</span><span data-i18n-key="sec.sending_row_message_value">"Segue a versão confirmada..."</span></div>
-        <div class="sec-sending__mock-row"><span data-i18n-key="sec.sending_row_file">Arquivo</span><span>Contrato_Anderson_v4.pdf</span></div>
-        <div class="sec-sending__mock-row"><span data-i18n-key="sec.sending_row_source">Fonte</span><span>Clientes / Contratos / 14 mar</span></div>
-        <div class="sec-sending__mock-row"><span data-i18n-key="sec.sending_row_channel">Canal</span><span>Outlook</span></div>
-      </div>
-      <div class="sec-sending__mock-actions">
-        <span class="sec-sending__mock-cancel" data-i18n-key="sec.sending_cancel">Cancelar</span>
-        <span class="sec-sending__mock-confirm" data-i18n-key="sec.sending_confirm">Enviar via Outlook</span>
-      </div>
-    </div>
-    <div class="sec-sending__channels sec-reveal">
-      <div class="sec-sending__channel"><img src="assets/images/outlook-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3 data-i18n-key="sec.sending_ch1_h">E-mail via Outlook</h3><p data-i18n-key="sec.sending_ch1_p">Pode ser enviado depois da sua confirmação.</p></div>
-      <div class="sec-sending__channel"><img src="assets/images/whatsapp-icon.svg" alt="" width="24" height="24" aria-hidden="true"><h3 data-i18n-key="sec.sending_ch2_h">WhatsApp handoff</h3><p data-i18n-key="sec.sending_ch2_p">Abre o WhatsApp com mensagem pronta. O envio final é do usuário.</p></div>
+<!-- 5. AI DATA USE - dark surface, allowed path + blocked boundary -->
+<section id="security-ai-data-use" class="security-ai-use-section" aria-labelledby="security-ai-use-title">
+  <div class="security-ai-use-container">
+
+    <header class="security-section-header">
+      <p class="security-section-eyebrow security-section-eyebrow--dark">USO DOS DADOS PELA IA</p>
+      <h2 id="security-ai-use-title">
+        <span>Seus dados servem para responder você.</span>
+        <span>Não para treinar modelos.</span>
+      </h2>
+      <p class="security-section-subtitle security-section-subtitle--dark">O processamento acontece quando você solicita uma resposta e fica limitado ao contexto autorizado da sua conta.</p>
+    </header>
+
+    <div class="security-ai-use-ledger">
+
+      <article class="security-ai-use-allowed">
+        <p class="security-ai-use-eyebrow">USADO PARA</p>
+        <h3 class="security-ai-use-title">Responder à sua solicitação.</h3>
+        <p class="security-ai-use-body">O processamento acontece quando você pede uma resposta e usa apenas o contexto autorizado.</p>
+        <div class="security-ai-use-visual" role="img" aria-label="Caminho permitido: dados autorizados passam por processamento solicitado e geram a resposta para você">
+          <svg class="security-ai-use-svg security-ai-use-svg--desktop" viewBox="0 0 520 190" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sai-allowed-line" d="M30 92 H490" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-node" cx="30" cy="92" r="6"/>
+            <circle class="sai-node" cx="260" cy="92" r="6"/>
+            <circle class="sai-success" cx="490" cy="92" r="6"/>
+            <text class="sai-top" x="30" y="55" text-anchor="start">Dados autorizados</text>
+            <text class="sai-top" x="260" y="55" text-anchor="middle">Processamento solicitado</text>
+            <text class="sai-top" x="490" y="55" text-anchor="end">Resposta para você</text>
+            <text class="sai-bottom" x="30" y="126" text-anchor="start">contexto permitido</text>
+            <text class="sai-bottom" x="260" y="126" text-anchor="middle">quando você solicita</text>
+            <text class="sai-bottom" x="490" y="126" text-anchor="end">resultado do pedido</text>
+          </svg>
+          <svg class="security-ai-use-svg security-ai-use-svg--mobile" viewBox="0 0 320 260" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sai-allowed-line" d="M42 30 V220" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-node" cx="42" cy="30" r="6"/>
+            <circle class="sai-node" cx="42" cy="125" r="6"/>
+            <circle class="sai-success" cx="42" cy="220" r="6"/>
+            <text class="sai-top" x="72" y="26">Dados autorizados</text>
+            <text class="sai-bottom" x="72" y="44">contexto permitido</text>
+            <text class="sai-top" x="72" y="121">Processamento solicitado</text>
+            <text class="sai-bottom" x="72" y="139">quando você solicita</text>
+            <text class="sai-top" x="72" y="216">Resposta para você</text>
+            <text class="sai-bottom" x="72" y="234">resultado do pedido</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="security-ai-use-blocked">
+        <p class="security-ai-use-eyebrow">NÃO USADO PARA</p>
+        <h3 class="security-ai-use-title">Treinamento, publicidade ou venda.</h3>
+        <p class="security-ai-use-body">Documentos, perguntas e respostas não entram nesses usos.</p>
+        <div class="security-ai-use-visual" role="img" aria-label="Caminho bloqueado: dados do workspace param no limite de uso. Não passam para treinamento de modelos, publicidade ou venda.">
+          <svg class="security-ai-use-svg security-ai-use-svg--desktop" viewBox="0 0 520 190" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sai-blocked-line" d="M36 92 H226" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-node" cx="30" cy="92" r="6"/>
+            <line class="sai-boundary" x1="240" y1="36" x2="240" y2="148" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-blocked-target" cx="286" cy="52" r="5" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-blocked-target" cx="286" cy="92" r="5" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-blocked-target" cx="286" cy="132" r="5" vector-effect="non-scaling-stroke"/>
+            <text class="sai-top" x="30" y="55" text-anchor="start">Dados do workspace</text>
+            <text class="sai-boundary-label" x="240" y="170" text-anchor="middle">limite de uso</text>
+            <text class="sai-blocked-text" x="306" y="56">Treinar modelos</text>
+            <text class="sai-blocked-text" x="306" y="96">Exibir publicidade</text>
+            <text class="sai-blocked-text" x="306" y="136">Vender dados</text>
+          </svg>
+          <svg class="security-ai-use-svg security-ai-use-svg--mobile" viewBox="0 0 320 270" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sai-blocked-line" d="M42 36 V104" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-node" cx="42" cy="30" r="6"/>
+            <line class="sai-boundary" x1="20" y1="124" x2="300" y2="124" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-blocked-target" cx="42" cy="158" r="5" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-blocked-target" cx="42" cy="202" r="5" vector-effect="non-scaling-stroke"/>
+            <circle class="sai-blocked-target" cx="42" cy="246" r="5" vector-effect="non-scaling-stroke"/>
+            <text class="sai-top" x="72" y="35">Dados do workspace</text>
+            <text class="sai-boundary-label" x="160" y="115" text-anchor="middle">limite de uso</text>
+            <text class="sai-blocked-text" x="72" y="162">Treinar modelos</text>
+            <text class="sai-blocked-text" x="72" y="206">Exibir publicidade</text>
+            <text class="sai-blocked-text" x="72" y="250">Vender dados</text>
+          </svg>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     8. POLICIES — CENTERED BALANCED GRID
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-policies allybi-section" id="policies" style="background:var(--allybi-bg-alt-1);">
-  <div class="allybi-container">
-    <div class="allybi-section-header sec-reveal">
-      <h2 class="allybi-h2" data-i18n-key="sec.policies_h2">Políticas e documentos</h2>
-      <p class="allybi-body-lg" style="max-width:520px;margin:12px auto 0;" data-i18n-key="sec.policies_sub">Revise detalhes legais, uso de dados e exclusão em páginas dedicadas.</p>
+<!-- 6. OUTBOUND - channel ledger + handoff limits strip -->
+<section id="security-outbound-boundaries" class="security-outbound-section" aria-labelledby="security-outbound-title">
+  <div class="security-outbound-container">
+
+    <header class="security-section-header">
+      <p class="security-section-eyebrow">LIMITES DE SAÍDA</p>
+      <h2 id="security-outbound-title">
+        <span>Outlook envia.</span>
+        <span>WhatsApp faz handoff.</span>
+      </h2>
+      <p class="security-section-subtitle">Os dois canais têm limites diferentes. Nenhum deles opera sem ação do usuário.</p>
+    </header>
+
+    <div class="security-channel-ledger">
+
+      <article class="security-channel-row security-channel-outlook">
+        <div class="security-channel-meta">
+          <p class="security-channel-meta-eyebrow">CANAL COM ENVIO</p>
+          <p class="security-channel-meta-name">Outlook</p>
+        </div>
+        <div class="security-channel-copy">
+          <p class="security-channel-copy-title">O envio exige confirmação.</p>
+          <p class="security-channel-copy-body">O Allybi prepara o e-mail. Você revisa e confirma antes de ele sair.</p>
+          <p class="security-channel-copy-limit">Sem confirmação, o envio não acontece.</p>
+        </div>
+        <div class="security-channel-visual" role="img" aria-label="Outlook: o Allybi prepara o conteúdo. A sua confirmação é o ponto obrigatório antes do envio ser realizado.">
+          <svg class="security-channel-svg security-channel-svg--desktop" viewBox="0 0 560 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sc-context-line" d="M30 76 H280" vector-effect="non-scaling-stroke"/>
+            <path class="sc-final-line" d="M280 76 H530" vector-effect="non-scaling-stroke"/>
+            <circle class="sc-primary-dot" cx="30" cy="76" r="6"/>
+            <circle class="sc-warning-ring" cx="280" cy="76" r="8" vector-effect="non-scaling-stroke"/>
+            <circle class="sc-success-dot" cx="530" cy="76" r="7"/>
+            <text class="sc-top" x="30" y="45" text-anchor="start">Revisão</text>
+            <text class="sc-top" x="280" y="45" text-anchor="middle">Sua confirmação</text>
+            <text class="sc-top" x="530" y="45" text-anchor="end">Envio via Outlook</text>
+            <text class="sc-bottom" x="30" y="111" text-anchor="start">conteúdo e destino</text>
+            <text class="sc-bottom" x="280" y="111" text-anchor="middle">ação obrigatória</text>
+            <text class="sc-bottom" x="530" y="111" text-anchor="end">e-mail enviado</text>
+          </svg>
+          <svg class="security-channel-svg security-channel-svg--mobile" viewBox="0 0 320 260" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sc-context-line" d="M42 30 V127" vector-effect="non-scaling-stroke"/>
+            <path class="sc-final-line" d="M42 127 V224" vector-effect="non-scaling-stroke"/>
+            <circle class="sc-primary-dot" cx="42" cy="30" r="6"/>
+            <circle class="sc-warning-ring" cx="42" cy="127" r="8" vector-effect="non-scaling-stroke"/>
+            <circle class="sc-success-dot" cx="42" cy="224" r="7"/>
+            <text class="sc-top" x="72" y="26">Revisão</text>
+            <text class="sc-bottom" x="72" y="44">conteúdo e destino</text>
+            <text class="sc-top" x="72" y="123">Sua confirmação</text>
+            <text class="sc-bottom" x="72" y="141">ação obrigatória</text>
+            <text class="sc-top" x="72" y="220">Envio via Outlook</text>
+            <text class="sc-bottom" x="72" y="238">e-mail enviado</text>
+          </svg>
+        </div>
+      </article>
+
+      <article class="security-channel-row security-channel-whatsapp">
+        <div class="security-channel-meta">
+          <p class="security-channel-meta-eyebrow">HANDOFF</p>
+          <p class="security-channel-meta-name">WhatsApp</p>
+        </div>
+        <div class="security-channel-copy">
+          <p class="security-channel-copy-title">O Allybi termina antes do envio.</p>
+          <p class="security-channel-copy-body">O Allybi prepara a mensagem e abre a conversa. Você envia dentro do WhatsApp.</p>
+          <p class="security-channel-copy-limit">A caixa do WhatsApp não entra no Allybi.</p>
+        </div>
+        <div class="security-channel-visual" role="img" aria-label="WhatsApp: o Allybi prepara a mensagem e abre a conversa, marcando o limite do Allybi. Você envia dentro do WhatsApp.">
+          <svg class="security-channel-svg security-channel-svg--desktop" viewBox="0 0 560 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sc-context-line" d="M30 76 H270" vector-effect="non-scaling-stroke"/>
+            <line class="sc-boundary" x1="290" y1="34" x2="290" y2="118" vector-effect="non-scaling-stroke"/>
+            <path class="sc-user-line" d="M310 76 H530" vector-effect="non-scaling-stroke"/>
+            <circle class="sc-primary-dot" cx="30" cy="76" r="6"/>
+            <circle class="sc-primary-dot" cx="220" cy="76" r="6"/>
+            <circle class="sc-user-endpoint" cx="530" cy="76" r="7" vector-effect="non-scaling-stroke"/>
+            <text class="sc-top" x="30" y="45" text-anchor="start">Mensagem pronta</text>
+            <text class="sc-top" x="220" y="45" text-anchor="middle">Abrir conversa</text>
+            <text class="sc-top" x="530" y="45" text-anchor="end">Você envia</text>
+            <text class="sc-bottom" x="30" y="111" text-anchor="start">preparada no Allybi</text>
+            <text class="sc-bottom" x="220" y="111" text-anchor="middle">handoff</text>
+            <text class="sc-bottom" x="530" y="111" text-anchor="end">dentro do WhatsApp</text>
+            <text class="sc-boundary-label" x="290" y="138" text-anchor="middle">limite do Allybi</text>
+          </svg>
+          <svg class="security-channel-svg security-channel-svg--mobile" viewBox="0 0 320 270" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <path class="sc-context-line" d="M42 30 V104" vector-effect="non-scaling-stroke"/>
+            <line class="sc-boundary" x1="20" y1="124" x2="300" y2="124" vector-effect="non-scaling-stroke"/>
+            <path class="sc-user-line" d="M42 146 V230" vector-effect="non-scaling-stroke"/>
+            <circle class="sc-primary-dot" cx="42" cy="30" r="6"/>
+            <circle class="sc-primary-dot" cx="42" cy="94" r="6"/>
+            <circle class="sc-user-endpoint" cx="42" cy="230" r="7" vector-effect="non-scaling-stroke"/>
+            <text class="sc-top" x="72" y="26">Mensagem pronta</text>
+            <text class="sc-bottom" x="72" y="44">preparada no Allybi</text>
+            <text class="sc-top" x="72" y="90">Abrir conversa</text>
+            <text class="sc-bottom" x="72" y="108">handoff</text>
+            <text class="sc-boundary-label" x="160" y="115" text-anchor="middle">limite do Allybi</text>
+            <text class="sc-top" x="72" y="226">Você envia</text>
+            <text class="sc-bottom" x="72" y="244">dentro do WhatsApp</text>
+          </svg>
+        </div>
+      </article>
+
     </div>
-    <div class="sec-policies__grid sec-reveal">
-      <a href="tos.html" class="sec-policies__card" data-i18n-key="sec.policies_tos">Termos de Serviço</a>
-      <a href="terms.html" class="sec-policies__card" data-i18n-key="sec.policies_acceptable">Uso Aceitável</a>
-      <a href="privacy.html" class="sec-policies__card" data-i18n-key="sec.policies_privacy">Privacidade</a>
-      <a href="cookies.html" class="sec-policies__card" data-i18n-key="sec.policies_cookies">Cookies</a>
-      <a href="integration-data-use.html" class="sec-policies__card" data-i18n-key="sec.policies_data_use">Integrações e Uso de Dados</a>
-      <a href="data-deletion.html" class="sec-policies__card" data-i18n-key="sec.policies_data_deletion">Exclusão de Dados</a>
+
+    <div class="security-handoff-limits">
+      <div class="security-handoff-limits-label">
+        <p class="security-handoff-limits-eyebrow">O HANDOFF NÃO ACESSA</p>
+      </div>
+      <div class="security-handoff-limits-facts">
+        <p class="security-handoff-limits-fact">Não lê a caixa.</p>
+        <p class="security-handoff-limits-fact">Não pesquisa conversas.</p>
+        <p class="security-handoff-limits-fact">Não sincroniza mensagens.</p>
+        <p class="security-handoff-limits-fact">Não envia automaticamente.</p>
+      </div>
     </div>
-    <p class="sec-policies__note sec-reveal" data-i18n-key="sec.policies_note">Certificações e relatórios de segurança serão adicionados conforme estiverem disponíveis.</p>
+
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════
-     9. FINAL CTA
-     ════════════════════════════════════════════════════════════ -->
-<section class="sec-cta">
-  <div class="allybi-container">
-    <div class="sec-cta__inner sec-reveal">
-      <h2 data-i18n-key="sec.cta_h2">Teste sem perder controle.</h2>
-      <p data-i18n-key="sec.cta_sub">Conecte uma fonte ou adicione um arquivo. Pergunte no chat, veja a fonte e revise antes de qualquer envio.</p>
-      <div class="sec-cta__btns">
-        <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary-inverse allybi-btn--lg" data-i18n-key="sec.cta_start_trial">Começar grátis por 30 dias</a>
-        <a href="integration-data-use.html" class="allybi-btn allybi-btn--secondary-inverse" data-i18n-key="sec.cta_data_use">Ver integrações e uso de dados</a>
-      </div>
-      <p class="sec-cta__micro" data-i18n-key="sec.cta_micro">30 dias grátis. Documentos não treinam modelos. Nada sai sem confirmação.</p>
+<!-- 7. LIFECYCLE: DELETION & RETENTION -->
+<section class="security-lifecycle-section" aria-labelledby="security-lifecycle-title">
+  <div class="security-lifecycle-container">
+    <header class="security-section-header">
+      <p class="security-section-eyebrow">EXCLUSÃO E RETENÇÃO</p>
+      <h2 id="security-lifecycle-title">Desconectar, apagar e excluir são ações diferentes.</h2>
+      <p class="security-section-subtitle">Cada ação muda uma parte diferente do acesso e dos dados armazenados.</p>
+    </header>
+
+    <ol class="security-lifecycle-timeline">
+      <span class="security-lifecycle-line" aria-hidden="true"></span>
+      <li class="security-lifecycle-node">
+        <span class="security-lifecycle-marker" aria-hidden="true">01</span>
+        <h3 class="security-lifecycle-title">Desconectar integração</h3>
+        <p class="security-lifecycle-body">Interrompe o acesso a novos dados da fonte.</p>
+        <p class="security-lifecycle-secondary">Conteúdo já importado não é apagado automaticamente.</p>
+      </li>
+      <li class="security-lifecycle-node">
+        <span class="security-lifecycle-marker" aria-hidden="true">02</span>
+        <h3 class="security-lifecycle-title">Apagar conteúdo</h3>
+        <p class="security-lifecycle-body">Remove arquivos ou conteúdo importado do workspace ativo.</p>
+        <p class="security-lifecycle-secondary">Arquivos podem ser apagados individualmente.</p>
+      </li>
+      <li class="security-lifecycle-node">
+        <span class="security-lifecycle-marker" aria-hidden="true">03</span>
+        <h3 class="security-lifecycle-title">Excluir conta</h3>
+        <p class="security-lifecycle-body">Remove perfil, dados do workspace, arquivos e conexões.</p>
+        <p class="security-lifecycle-secondary">A solicitação pode ser feita pelo produto ou pelo canal indicado na política.</p>
+      </li>
+      <li class="security-lifecycle-node security-lifecycle-node--backup">
+        <span class="security-lifecycle-marker security-lifecycle-marker--warn" aria-hidden="true">04</span>
+        <h3 class="security-lifecycle-title">Backups</h3>
+        <p class="security-lifecycle-body">Cópias de backup podem permanecer por até 90 dias.</p>
+        <p class="security-lifecycle-secondary">Depois desse período, são removidas permanentemente.</p>
+      </li>
+    </ol>
+
+    <p class="security-lifecycle-legal">Alguns registros legais, regulatórios, contábeis, de segurança ou prevenção a fraude podem ser mantidos quando exigido.</p>
+  </div>
+</section>
+
+<!-- 8. POLICIES AND DOCUMENTS -->
+<section class="security-documents-section" id="security-documents" aria-labelledby="security-documents-title">
+  <div class="security-documents-container">
+    <header class="security-section-header">
+      <p class="security-section-eyebrow">POLÍTICAS E DOCUMENTOS</p>
+      <h2 id="security-documents-title">Leia as regras antes de conectar.</h2>
+      <p class="security-section-subtitle">As páginas abaixo detalham uso, privacidade, integrações e exclusão.</p>
+    </header>
+
+    <div class="security-documents-grid">
+      <a href="/tos.html" class="security-document">
+        <span class="security-document-text">
+          <span class="security-document-title">Termos de Serviço</span>
+          <span class="security-document-description">Regras para conta, uso, assinatura e encerramento.</span>
+        </span>
+        <span class="security-document-arrow" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/terms.html" class="security-document">
+        <span class="security-document-text">
+          <span class="security-document-title">Uso Aceitável</span>
+          <span class="security-document-description">Usos permitidos e atividades proibidas.</span>
+        </span>
+        <span class="security-document-arrow" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/privacy.html" class="security-document">
+        <span class="security-document-text">
+          <span class="security-document-title">Política de Privacidade</span>
+          <span class="security-document-description">Dados coletados, uso, compartilhamento e direitos.</span>
+        </span>
+        <span class="security-document-arrow" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/cookies.html" class="security-document">
+        <span class="security-document-text">
+          <span class="security-document-title">Política de Cookies</span>
+          <span class="security-document-description">Cookies, preferências e tecnologias de medição.</span>
+        </span>
+        <span class="security-document-arrow" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/integration-data-use.html" class="security-document">
+        <span class="security-document-text">
+          <span class="security-document-title">Integrações e Uso de Dados</span>
+          <span class="security-document-description">Permissões, dados acessados e desconexão.</span>
+        </span>
+        <span class="security-document-arrow" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+      <a href="/data-deletion.html" class="security-document">
+        <span class="security-document-text">
+          <span class="security-document-title">Exclusão de Dados</span>
+          <span class="security-document-description">Arquivos, conteúdo importado, conta e backups.</span>
+        </span>
+        <span class="security-document-arrow" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
     </div>
+
+    <p class="security-contact-line">Dúvidas sobre segurança: <a href="mailto:info@allybi.co">info@allybi.co</a></p>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="security-faq-section" aria-labelledby="security-faq-title">
+  <div class="security-faq-container">
+    <header class="security-section-header">
+      <p class="security-section-eyebrow">PERGUNTAS DE SEGURANÇA</p>
+      <h2 id="security-faq-title">Antes de conectar seus dados.</h2>
+    </header>
+
+    <div class="security-faq-list">
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-1" id="security-faq-q-1">
+          <span>Como os dados são criptografados?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-1" role="region" aria-labelledby="security-faq-q-1">
+          <p>Em trânsito, os dados usam TLS. Em repouso, documentos e informações pessoais usam AES-256. Tokens OAuth também ficam criptografados em repouso.</p>
+        </div>
+      </div>
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-2" id="security-faq-q-2">
+          <span>Quais permissões o Allybi solicita?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-2" role="region" aria-labelledby="security-faq-q-2">
+          <p>As integrações usam OAuth 2.0 e permissões mínimas. Outlook, OneDrive, SharePoint e Google Drive acessam somente dados selecionados ou autorizados para as funções que você ativa.</p>
+        </div>
+      </div>
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-3" id="security-faq-q-3">
+          <span>Meus documentos treinam modelos?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-3" role="region" aria-labelledby="security-faq-q-3">
+          <p>Não. Documentos, perguntas e respostas não são usados para treinar modelos. Os dados também não são usados para publicidade nem vendidos.</p>
+        </div>
+      </div>
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-4" id="security-faq-q-4">
+          <span>Quem pode acessar dados internamente?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-4" role="region" aria-labelledby="security-faq-q-4">
+          <p>O acesso fica limitado a pessoas autorizadas e às funções necessárias, com MFA, permissões baseadas em função, revisões de acesso e logs de auditoria.</p>
+        </div>
+      </div>
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-5" id="security-faq-q-5">
+          <span>O que acontece quando desconecto uma integração?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-5" role="region" aria-labelledby="security-faq-q-5">
+          <p>O Allybi interrompe o acesso a novos dados daquela fonte. Conteúdo já importado permanece no workspace até ser apagado.</p>
+        </div>
+      </div>
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-6" id="security-faq-q-6">
+          <span>Como excluo meus dados?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-6" role="region" aria-labelledby="security-faq-q-6">
+          <p>Você pode apagar arquivos e conteúdo importado, desconectar integrações ou solicitar exclusão da conta. Backups podem permanecer por até 90 dias. Alguns registros podem ser mantidos quando exigido por lei.</p>
+        </div>
+      </div>
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-7" id="security-faq-q-7">
+          <span>O Allybi lê meu WhatsApp?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-7" role="region" aria-labelledby="security-faq-q-7">
+          <p>Não. O WhatsApp funciona como handoff. O Allybi pode preparar um rascunho e abrir a conversa, mas não lê, pesquisa ou sincroniza sua caixa.</p>
+        </div>
+      </div>
+      <div class="security-faq-item">
+        <button type="button" class="security-faq-trigger" aria-expanded="false" aria-controls="security-faq-a-8" id="security-faq-q-8">
+          <span>O Allybi pode enviar algo sem minha confirmação?</span>
+          <span class="security-faq-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </span>
+        </button>
+        <div class="security-faq-answer" id="security-faq-a-8" role="region" aria-labelledby="security-faq-q-8">
+          <p>Não. E-mail via Outlook exige sua confirmação. No WhatsApp, o envio final acontece dentro do próprio aplicativo pelo usuário.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CTA -->
+<section class="security-final-cta-section" aria-labelledby="security-final-cta-title">
+  <div class="security-final-cta-container">
+    <p class="security-section-eyebrow security-section-eyebrow--final">COMEÇAR</p>
+    <h2 id="security-final-cta-title">Conecte só o que fizer sentido.</h2>
+    <p class="security-final-cta-subtitle">Comece grátis por 30 dias. Você pode revogar acessos, apagar conteúdo importado e revisar antes de qualquer envio.</p>
+    <div class="security-final-cta-actions">
+      <a href="https://app.allybi.com.br" class="security-final-cta-primary">Começar grátis por 30 dias</a>
+      <a href="/privacy.html" class="security-final-cta-secondary">Ver Política de Privacidade</a>
+    </div>
+    <p class="security-final-cta-trust">Documentos, perguntas e respostas não treinam modelos.</p>
   </div>
 </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="allybi-footer">
-  <div class="allybi-footer-inner">
-    <div class="footer-brand"><a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a><p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p></div>
-    <div class="footer-columns">
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4><div class="footer-col-links"><a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a><a href="security-overview.html" data-i18n-key="footer.security">Security</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4><div class="footer-col-links"><a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a><a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a><a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4><div class="footer-col-links"><a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a><a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a><a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4><div class="footer-col-links"><a href="about.html" data-i18n-key="footer.about">About</a><a href="faq.html" data-i18n-key="footer.faq">FAQ</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a></div></div>
-      <div class="footer-col"><h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4><div class="footer-col-links"><a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a><a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a><a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a><a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a><a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a></div></div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
     </div>
-    <div class="footer-mobile-links"><a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a><a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a><a href="about.html" data-i18n-key="footer.about">About</a><a href="contact.html" data-i18n-key="footer.contact">Contact</a><a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a></div>
-    <div class="footer-bottom">
-      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-      <div class="footer-bottom-right"><div class="language-selector" id="footer-language-selector"><button class="language-toggle" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg><span class="lang-label">English</span></button><ul class="language-menu hidden" role="listbox"><li role="option" data-lang="pt">Português (BR)</li><li role="option" data-lang="en">English</li><li role="option" data-lang="es">Español</li></ul></div></div>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
+        </div>
+      </div>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
+      </div>
     </div>
   </div>
 </footer>
-
-<script src="language-switcher.js"></script>
 <script src="allybi-header.js"></script>
 <script src="allybi-animations.js"></script>
-<script>
-(function(){
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('.sec-reveal');
-  if (prefersReduced) { els.forEach(function(el){ el.style.opacity='1'; el.style.transform='none'; }); return; }
-  var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } }); },{ threshold:0.12 });
-  els.forEach(function(el){ io.observe(el); });
-})();
-</script>
+<script src="assets/security-page.js" defer></script>
+<script src="assets/security-sections.js" defer></script>
 </body>
 </html>

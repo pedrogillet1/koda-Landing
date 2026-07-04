@@ -38,91 +38,119 @@
 </head>
 <body>
 <!-- HEADER -->
-<header id="allybi-header" class="allybi-header">
-  <div class="allybi-header-inner">
-    <a href="/" class="allybi-logo"><img src="assets/images/allybi-logo.svg" alt="Allybi" height="24"></a>
-    <nav class="allybi-nav desktop-only">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-        <div class="nav-dropdown-menu">
-          <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
+<header class="site-header" data-site-header>
+  <div class="site-header__inner">
+
+    <a class="site-header__logo" href="/" aria-label="Allybi">
+      <img src="assets/images/allybi-logo.svg" alt="Allybi" width="42" height="42">
+    </a>
+
+    <nav class="site-header__desktop-nav" aria-label="Navegação principal">
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-produto" aria-haspopup="true">Produto<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-produto" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/how-it-works.html"><span class="site-header__dropdown-title">Como funciona</span><span class="site-header__dropdown-desc">Do pedido ao envio.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/integrations.html"><span class="site-header__dropdown-title">Integrações</span><span class="site-header__dropdown-desc">Outlook, OneDrive, SharePoint, Google Drive e uploads.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/security-overview.html"><span class="site-header__dropdown-title">Segurança</span><span class="site-header__dropdown-desc">Fonte, revisão e controle.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-        <div class="nav-dropdown-menu">
-          <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-casos" aria-haspopup="true">Casos de uso<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-casos" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-legal.html"><span class="site-header__dropdown-title">Advogados</span><span class="site-header__dropdown-desc">Minutas, cláusulas e versões.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-finance.html"><span class="site-header__dropdown-title">Financeiro</span><span class="site-header__dropdown-desc">Decks, modelos e números.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/use-case-business.html"><span class="site-header__dropdown-title">Operações</span><span class="site-header__dropdown-desc">Propostas, SOWs e follow-ups.</span></a>
         </div>
       </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-        <div class="nav-dropdown-menu">
-          <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
+      <div class="site-header__dropdown" data-dropdown>
+        <button type="button" class="site-header__nav-trigger" aria-expanded="false" aria-controls="dd-ferramentas" aria-haspopup="true">Ferramentas<span class="site-header__caret" aria-hidden="true">▾</span></button>
+        <div class="site-header__dropdown-panel" id="dd-ferramentas" role="menu">
+          <a class="site-header__dropdown-item" role="menuitem" href="/tempo.html"><span class="site-header__dropdown-title">Tempo perdido</span><span class="site-header__dropdown-desc">Calcule o tempo invisível.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/diagnostico.html"><span class="site-header__dropdown-title">Diagnóstico do fluxo</span><span class="site-header__dropdown-desc">Mapeie onde o time trava.</span></a>
+          <a class="site-header__dropdown-item" role="menuitem" href="/metodologia.html"><span class="site-header__dropdown-title">Metodologia</span><span class="site-header__dropdown-desc">Como calculamos.</span></a>
         </div>
       </div>
-      <a href="pricing.html" class="nav-link" data-i18n-key="nav.pricing">Pricing</a>
-      <a href="about.html" class="nav-link" data-i18n-key="nav.about">About</a>
+      <a href="/pricing.html" class="site-header__nav-link">Preços</a>
+      <a href="/about.html" class="site-header__nav-link">Sobre</a>
     </nav>
-    <div class="header-ctas desktop-only">
-      <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
-      <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary header-btn" data-i18n-key="nav.start_free" data-magnetic="0.2">Start free</a>
+
+    <div class="site-header__desktop-actions">
+      <a href="https://app.allybi.com.br" class="site-header__signin">Entrar</a>
+      <a href="https://app.allybi.com.br" class="site-header__cta">Começar grátis</a>
     </div>
-    <button id="allybi-mobile-toggle" class="mobile-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <button class="site-header__menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-toggle>
+      <span class="site-header__menu-line"></span>
+      <span class="site-header__menu-line"></span>
+    </button>
+
   </div>
 </header>
 
 <!-- MOBILE MENU -->
-<div id="allybi-mobile-menu" class="mobile-menu">
-  <nav class="mobile-menu-nav">
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.product">Product</button>
-      <div class="mobile-dropdown-items">
-        <a href="how-it-works.html" data-i18n-key="nav.how_it_works">How it works</a>
-        <a href="integrations.html" data-i18n-key="nav.integrations">Integrations</a>
-        <a href="security-overview.html" data-i18n-key="nav.security">Security</a>
-      </div>
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="mobile-menu__logo" href="/" aria-label="Allybi"><img src="assets/images/allybi-logo.svg" alt="Allybi" width="38" height="38"></a>
+    <button class="mobile-menu__close" type="button" aria-label="Fechar menu" data-mobile-menu-close>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Produto</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/how-it-works.html">Como funciona<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/integrations.html">Integrações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/security-overview.html">Segurança<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Casos de uso</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/use-case-legal.html">Advogados<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-finance.html">Financeiro<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/use-case-business.html">Operações<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Ferramentas</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/tempo.html">Tempo perdido<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/diagnostico.html">Diagnóstico do fluxo<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/metodologia.html">Metodologia<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <section class="mobile-menu__group">
+      <h2 class="mobile-menu__group-title">Empresa</h2>
+      <ul class="mobile-menu__list">
+        <li><a href="/pricing.html">Preços<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/about.html">Sobre<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/pricing.html#faq">FAQ<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="/contact.html">Contato<span class="mobile-menu__arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+    <div class="mobile-menu__actions">
+      <a href="https://app.allybi.com.br" class="mobile-menu__primary">Começar grátis</a>
+      <a href="https://app.allybi.com.br" class="mobile-menu__secondary">Entrar</a>
     </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.use_cases">Use cases</button>
-      <div class="mobile-dropdown-items">
-        <a href="use-case-legal.html" data-i18n-key="nav.for_lawyers">For lawyers</a>
-        <a href="use-case-finance.html" data-i18n-key="nav.for_finance">For finance</a>
-        <a href="use-case-business.html" data-i18n-key="nav.for_operations">For operations</a>
-      </div>
-    </div>
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown-trigger" data-i18n-key="nav.tools">Tools</button>
-      <div class="mobile-dropdown-items">
-        <a href="tempo.html" data-i18n-key="nav.calculator">Time Calculator</a>
-        <a href="diagnostico.html" data-i18n-key="nav.diagnostic">Flow Diagnostic</a>
-        <a href="metodologia.html" data-i18n-key="nav.methodology">Methodology</a>
-      </div>
-    </div>
-    <a href="pricing.html" class="mobile-nav-link" data-i18n-key="nav.pricing">Pricing</a>
-    <a href="about.html" class="mobile-nav-link" data-i18n-key="nav.about">About</a>
-    <a href="contact.html" class="mobile-nav-link" data-i18n-key="nav.contact">Contact</a>
-  </nav>
-  <div class="mobile-ctas">
-    <a href="https://app.allybi.co/signup" class="allybi-btn allybi-btn--primary" data-i18n-key="nav.start_free">Start free</a>
-    <a href="https://app.allybi.co/login" class="header-signin" data-i18n-key="nav.sign_in">Sign in</a>
+    <p class="mobile-menu__note">30 dias grátis. Depois R$170/mês. Cancele quando quiser.</p>
   </div>
 </div>
+<script src="allybi-header.js"></script>
+<script src="allybi-animations.js"></script>
 
 <main>
 <section class="legal-hero">
   <div class="allybi-container">
-    <div class="legal-eyebrow">Jur&#237;dico</div>
-    <h1 class="legal-h1">Termos de Servi&#231;o</h1>
-    <p class="legal-summary">As regras para criar conta, usar o Allybi, conectar fontes, enviar conte&#250;do, assinar o plano e encerrar o uso do servi&#231;o.</p>
+    <div class="legal-eyebrow">Jurídico</div>
+    <h1 class="legal-h1">Termos de Serviço</h1>
+    <p class="legal-summary">As regras para criar conta, usar o Allybi, conectar fontes, enviar conteúdo, assinar o plano e encerrar o uso do serviço.</p>
     <div class="legal-meta">
-      <span>&#218;ltima atualiza&#231;&#227;o: April 30, 2026</span>
-      <span>Vers&#227;o: 3.0</span>
+      <span>Última atualização: April 30, 2026</span>
+      <span>Versão: 3.0</span>
     </div>
   </div>
 </section>
@@ -131,14 +159,12 @@
   <div class="allybi-container">
     <div class="legal-content">
       <div class="legal-notice">
-        Esta p&#225;gina cont&#233;m texto jur&#237;dico em ingl&#234;s enquanto a vers&#227;o em portugu&#234;s passa por revis&#227;o. Em caso de d&#250;vida, entre em contato com a Allybi.
-        <!-- TODO: legal review required before full Portuguese publication -->
+        Esta página contém texto jurídico em inglês enquanto a versão em português passa por revisão. Em caso de dúvida, entre em contato com a Allybi.
       </div>
 
       <h2 id="section-1">1. Introduction and Acceptance</h2>
       <p>Welcome to Allybi, a secure document management and AI assistant platform designed to enhance your productivity and streamline your workflow. These Terms of Service (&ldquo;Terms,&rdquo; &ldquo;Agreement,&rdquo; or &ldquo;ToS&rdquo;) constitute a legally binding agreement between you (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and Camasmie Gillet Inc., a Delaware corporation (doing business as &ldquo;Allybi&rdquo;) (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), governing your access to and use of the Allybi web platform and all related services, features, content, and applications (collectively, the &ldquo;Service&rdquo; or &ldquo;Platform&rdquo;).</p>
-      <p><!-- TODO: Legal review needed - no mobile application exists; Allybi is web-only -->
-      By creating an account, accessing our website, or using any aspect of our Service, you acknowledge that you have read, understood, and agree to be bound by these Terms, our Privacy Policy, and our Acceptable Use Policy, all of which are incorporated herein by reference. If you do not agree to these Terms, you must not access or use our Service.</p>
+      <p>By creating an account, accessing our website, or using any aspect of our Service, you acknowledge that you have read, understood, and agree to be bound by these Terms, our Privacy Policy, and our Acceptable Use Policy, all of which are incorporated herein by reference. If you do not agree to these Terms, you must not access or use our Service.</p>
       <p>These Terms apply to all users of the Service, including without limitation users who are browsers, customers, merchants, contributors of content, information, and other materials or services on the Service. Your agreement with us includes these Terms and any additional terms, policies, or rules that may apply to specific features or services offered through the Platform.</p>
       <p>We reserve the right to modify these Terms at any time in our sole discretion. When we make material changes to these Terms, we will provide notice through the Service, via email, or through other reasonable means. Your continued use of the Service after such notice constitutes your acceptance of the modified Terms. If you do not agree to the modified Terms, you must discontinue your use of the Service.</p>
 
@@ -148,15 +174,14 @@
       <p><strong>&ldquo;AI Assistant&rdquo;</strong> refers to the artificial intelligence-powered features and functionalities integrated into the Service that provide automated assistance, analysis, and recommendations. This includes but is not limited to document summarization, information extraction, comparative analysis, and insight generation.</p>
       <p><strong>&ldquo;AI Output&rdquo;</strong> means text, summaries, comparisons, search results, extracted information, response drafts, suggested actions, and other content generated by Allybi based on user prompts, documents, and connected-source data.</p>
       <p><strong>&ldquo;Confidential Information&rdquo;</strong> means any non-public, proprietary, or confidential information disclosed by either party, including but not limited to technical data, trade secrets, know-how, research, product plans, products, services, customers, customer lists, markets, software, developments, inventions, processes, formulas, technology, designs, drawings, engineering, hardware configuration information, marketing, finances, or other business information.</p>
-      <p><strong>&ldquo;Connected Accounts&rdquo;</strong> means third-party accounts (such as Outlook, OneDrive, and SharePoint) that you authorize and connect to the Allybi Service to enable integration features. WhatsApp is available as a handoff workflow (not a connected account).</p>
+      <p><strong>&ldquo;Connected Accounts&rdquo;</strong> means third-party accounts (such as Outlook, OneDrive, SharePoint, and Google Drive) that you authorize and connect to the Allybi Service to enable integration features. WhatsApp is available as a handoff workflow (not a connected account).</p>
       <p><strong>&ldquo;Content&rdquo;</strong> means any text, graphics, images, music, software, audio, video, works of authorship, applications, or other materials that appear on or are transmitted through the Service.</p>
       <p><strong>&ldquo;Intellectual Property Rights&rdquo;</strong> means all intellectual property rights worldwide, including without limitation copyrights, trademarks, service marks, trade secrets, patents, moral rights, rights of publicity, and any other proprietary rights.</p>
-      <p><!-- TODO: Legal review needed - Slack is not available; Gmail is roadmap only -->
-      <strong>&ldquo;Integration Data&rdquo;</strong> means any data, information, or content accessed from your Connected Accounts (including Outlook emails and calendar entries, and content from other connected sources as they become available) after you authorize the connection through Allybi.</p>
+      <p><strong>&ldquo;Integration Data&rdquo;</strong> means any data, information, or content accessed from your Connected Accounts (including Outlook emails and calendar entries, and content from other connected sources as they become available) after you authorize the connection through Allybi.</p>
       <p><strong>&ldquo;Personal Data&rdquo;</strong> means any information relating to an identified or identifiable natural person, as defined by applicable data protection laws.</p>
       <p><strong>&ldquo;Service&rdquo; or &ldquo;Platform&rdquo;</strong> means the Allybi application, website, and all related services, features, content, and applications provided by the Company.</p>
       <p><strong>&ldquo;Subscription&rdquo;</strong> means a paid plan that provides access to premium features and enhanced functionality of the Service.</p>
-      <p><strong>&ldquo;Third-Party Integrations&rdquo;</strong> means the connections to and integrations with third-party services such as Outlook, OneDrive, SharePoint, and WhatsApp (with Gmail and Google Drive coming soon) that allow you to import, analyze, and process content through Allybi.</p>
+      <p><strong>&ldquo;Third-Party Integrations&rdquo;</strong> means the connections to and integrations with third-party services such as Outlook, OneDrive, SharePoint, Google Drive, and WhatsApp (with Gmail coming soon) that allow you to import, analyze, and process content through Allybi.</p>
       <p><strong>&ldquo;User Content&rdquo;</strong> means any Content that you upload, submit, post, transmit, or otherwise make available through the Service, including but not limited to documents, files, images, text, and other materials. User Content includes both directly uploaded files and Integration Data accessed through Connected Accounts.</p>
       <p><strong>&ldquo;User Data&rdquo;</strong> means all data, information, and content submitted, uploaded, or otherwise provided by you or on your behalf through the Service.</p>
 
@@ -175,13 +200,11 @@
         <li><strong>SharePoint Integration:</strong> Import files from SharePoint sites and libraries you can access.</li>
         <li><strong>WhatsApp Handoff:</strong> Prepare a message for a saved contact and review before opening WhatsApp. Allybi does not send automatically.</li>
         <li><strong>Gmail Integration:</strong> Coming soon. Search Gmail threads and import attachments.</li>
-        <li><strong>Google Drive Integration:</strong> Coming soon. Import files and folders from Drive.</li>
+        <li><strong>Google Drive Integration:</strong> Import files and folders from Google Drive into your Allybi workspace.</li>
       </ul>
       <p>Users may connect third-party accounts and services to import, analyze, summarize, and act on content through Allybi&rsquo;s integrated features.</p>
       <p><strong>Document Analysis and Response Preparation:</strong> Allybi helps users search across documents and connected sources, find clauses, versions, and attachments, compare versions, prepare responses, and review before sending. Users confirm before anything is sent. Allybi does not currently provide in-app editing of spreadsheets or document files.</p>
-      <p><!-- TODO: Legal review needed - verify "end-to-end encryption" claim; current implementation uses TLS in transit and AES-256 at rest -->
-      <strong>Security and Encryption:</strong> Enterprise-grade security measures including secure data transmission, encrypted storage, and multi-factor authentication options to protect user data and maintain confidentiality.</p>
-      <!-- TODO: Legal review needed - no mobile app exists; Allybi is web-only. Remove iOS/Android references in next legal revision -->
+      <p><strong>Security and Encryption:</strong> Enterprise-grade security measures including secure data transmission, encrypted storage, and multi-factor authentication options to protect user data and maintain confidentiality.</p>
       <p><strong>Web-Based Access:</strong> Access to your documents and AI assistant through our web-based interface, with potential future expansions to additional platforms.</p>
 
       <h3>3.2 Service Availability and Limitations</h3>
@@ -189,8 +212,7 @@
       <p>The Service is currently available to users in supported geographic regions. Certain features may not be available in all jurisdictions due to legal, regulatory, or technical constraints. We reserve the right to modify, suspend, or discontinue any aspect of the Service at any time, with or without notice, though we will make reasonable efforts to provide advance notice of material changes that affect core functionality.</p>
 
       <h3>3.3 Technical Requirements</h3>
-      <p><!-- TODO: Legal review needed - no mobile app exists; Allybi is web-only -->
-      To use the Service, you must have access to a compatible device with internet connectivity. Minimum system requirements include modern web browsers with JavaScript enabled for web access. Specific technical requirements may be updated from time to time and will be communicated through appropriate channels.</p>
+      <p>To use the Service, you must have access to a compatible device with internet connectivity. Minimum system requirements include modern web browsers with JavaScript enabled for web access. Specific technical requirements may be updated from time to time and will be communicated through appropriate channels.</p>
 
       <h2 id="section-4">4. User Eligibility and Account Requirements</h2>
 
@@ -213,8 +235,7 @@
 
       <h3>5.1 General Responsibilities</h3>
       <p>As a user of the Service, you agree to use the Platform in a manner that is lawful, ethical, and in accordance with these Terms. You are solely responsible for your conduct and any Content that you submit, upload, or otherwise make available through the Service. You represent and warrant that you have all necessary rights, licenses, and permissions to use and share any Content you provide through the Service.</p>
-      <p><!-- TODO: Legal review needed - Slack is not available; Gmail is roadmap only -->
-      When connecting third-party accounts (such as Outlook, OneDrive, and SharePoint) to Allybi, you represent and warrant that you have the authority to connect such accounts and that you have the right to authorize Allybi to access and process the content from those accounts. You further represent that you have the legal right to process any content accessed through these integrations for the purposes enabled by Allybi.</p>
+      <p>When connecting third-party accounts (such as Outlook, OneDrive, SharePoint, and Google Drive) to Allybi, you represent and warrant that you have the authority to connect such accounts and that you have the right to authorize Allybi to access and process the content from those accounts. You further represent that you have the legal right to process any content accessed through these integrations for the purposes enabled by Allybi.</p>
 
       <h3>5.2 Compliance with Laws</h3>
       <p>You agree to comply with all applicable local, state, national, and international laws, regulations, and rules in your use of the Service. This includes, but is not limited to, laws regarding data protection and privacy, intellectual property rights, export controls, and professional obligations such as attorney-client privilege, doctor-patient confidentiality, and other professional duties.</p>
@@ -267,8 +288,7 @@
       <h2 id="section-8">8. Software License and Restrictions</h2>
 
       <h3>8.1 License Grant</h3>
-      <p>Subject to your compliance with these Terms, <!-- TODO: Legal review needed - no mobile application exists; Allybi is web-only -->
-      the Company grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Allybi web platform and any other software provided as part of the Service solely for your personal or internal business use in accordance with these Terms.</p>
+      <p>Subject to your compliance with these Terms, the Company grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Allybi web platform and any other software provided as part of the Service solely for your personal or internal business use in accordance with these Terms.</p>
 
       <h3>8.2 License Restrictions</h3>
       <p>You agree not to, and you will not permit others to:</p>
@@ -314,7 +334,6 @@
       <h3>10.2 Data Security Measures</h3>
       <p>We implement industry-standard security measures to protect your data, including:</p>
       <ul>
-        <!-- TODO: Legal review needed - verify "end-to-end encryption" claim; current implementation uses TLS in transit and AES-256 at rest -->
         <li>Encryption for data transmission and storage</li>
         <li>Advanced password hashing and salting techniques</li>
         <li>Multi-factor authentication options</li>
@@ -344,8 +363,7 @@
 
       <h3>11.4 Third-Party Content and Services</h3>
       <p>The Service may contain links to third-party websites, applications, or services that are not owned or controlled by the Company. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites or services. You acknowledge and agree that the Company shall not be responsible or liable for any damage or loss caused by your use of any third-party content or services.</p>
-      <p><!-- TODO: Legal review needed - Slack is not available -->
-      Third-party services such as Google and Microsoft are separate entities, and their terms of service and privacy policies apply to your use of those services. Allybi is not responsible for third-party downtime, service changes, or discontinuation of services.</p>
+      <p>Third-party services such as Google and Microsoft are separate entities, and their terms of service and privacy policies apply to your use of those services. Allybi is not responsible for third-party downtime, service changes, or discontinuation of services.</p>
 
       <h3>11.5 Professional Responsibility</h3>
       <p>The Company is not a law firm, accounting firm, medical practice, or other professional service provider. The Service does not constitute professional advice of any kind. Users are responsible for ensuring that their use of the Service complies with applicable professional obligations, ethical requirements, and regulatory standards.</p>
@@ -492,87 +510,56 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="allybi-footer">
-  <div class="allybi-footer-inner">
-    <div class="footer-brand">
-      <a href="/"><span style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em">Allybi</span></a>
-      <p class="footer-tagline" data-i18n-key="footer.tagline">A chat for finding, confirming, and sending the right document.</p>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="site-footer__wordmark-link" href="/"><span class="site-footer__wordmark">Allybi</span></a>
+      <p class="site-footer__tagline">Um chat para encontrar, confirmar e enviar o documento certo.</p>
     </div>
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_product">Product</h4>
-        <div class="footer-col-links">
-          <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-          <a href="integrations.html" data-i18n-key="footer.integrations">Integrations</a>
-          <a href="security-overview.html" data-i18n-key="footer.security">Security</a>
-          <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
+    <nav class="site-footer__nav" aria-label="Rodapé">
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Produto</h3>
+        <div class="site-footer__links">
+          <a href="/how-it-works.html">Como funciona</a>
+          <a href="/integrations.html">Integrações</a>
+          <a href="/security-overview.html">Segurança</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_use_cases">Use cases</h4>
-        <div class="footer-col-links">
-          <a href="use-case-legal.html" data-i18n-key="footer.legal">For lawyers</a>
-          <a href="use-case-finance.html" data-i18n-key="footer.finance">For finance</a>
-          <a href="use-case-business.html" data-i18n-key="footer.operations">For operations</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Casos de uso</h3>
+        <div class="site-footer__links">
+          <a href="/use-case-legal.html">Advogados</a>
+          <a href="/use-case-finance.html">Financeiro</a>
+          <a href="/use-case-business.html">Operações</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_tools">Tools</h4>
-        <div class="footer-col-links">
-          <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-          <a href="diagnostico.html" data-i18n-key="footer.diagnostic">Flow Diagnostic</a>
-          <a href="metodologia.html" data-i18n-key="footer.methodology">Methodology</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Ferramentas</h3>
+        <div class="site-footer__links">
+          <a href="/tempo.html">Tempo perdido</a>
+          <a href="/diagnostico.html">Diagnóstico do fluxo</a>
+          <a href="/metodologia.html">Metodologia</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_company">Company</h4>
-        <div class="footer-col-links">
-          <a href="about.html" data-i18n-key="footer.about">About</a>
-          <a href="faq.html" data-i18n-key="footer.faq">FAQ</a>
-          <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
+      <div class="site-footer__group">
+        <h3 class="site-footer__group-title">Empresa</h3>
+        <div class="site-footer__links">
+          <a href="/pricing.html">Preços</a>
+          <a href="/about.html">Sobre</a>
+          <a href="/pricing.html#faq">FAQ</a>
+          <a href="/contact.html">Contato</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title" data-i18n-key="footer.col_legal">Legal</h4>
-        <div class="footer-col-links">
-          <a href="tos.html" data-i18n-key="footer.tos">Terms of Service</a>
-          <a href="terms.html" data-i18n-key="footer.acceptable_use">Acceptable Use</a>
-          <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-          <a href="cookies.html" data-i18n-key="footer.cookies">Cookies</a>
-          <a href="integration-data-use.html" data-i18n-key="footer.data_use">Integrations &amp; Data Use</a>
-          <a href="data-deletion.html" data-i18n-key="footer.data_deletion">Data Deletion</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-mobile-links">
-      <a href="how-it-works.html" data-i18n-key="footer.how_it_works">How it works</a>
-      <a href="pricing.html" data-i18n-key="footer.pricing">Pricing</a>
-      <a href="tempo.html" data-i18n-key="footer.calculator">Time Calculator</a>
-      <a href="about.html" data-i18n-key="footer.about">About</a>
-      <a href="contact.html" data-i18n-key="footer.contact">Contact</a>
-      <a href="privacy.html" data-i18n-key="footer.privacy_link">Privacy</a>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright" data-i18n-key="footer.copyright">&copy; 2026 Allybi. All rights reserved.</p>
-      <div class="footer-bottom-right">
-        <div class="language-selector" id="footer-language-selector">
-          <button class="language-toggle" aria-expanded="false">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M1 7h12M7 1c-1.657 2-2.5 4-2.5 6s.843 4 2.5 6M7 1c1.657 2 2.5 4 2.5 6s-.843 4-2.5 6" stroke="currentColor" stroke-width="1.2"/></svg>
-            <span class="lang-label">English</span>
-          </button>
-          <ul class="language-menu hidden" role="listbox">
-            <li role="option" data-lang="pt">Portugu&#234;s (BR)</li>
-            <li role="option" data-lang="en">English</li>
-            <li role="option" data-lang="es">Espa&#241;ol</li>
-          </ul>
-        </div>
+    </nav>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© 2026 Allybi. Todos os direitos reservados.</p>
+      <div class="site-footer__legal">
+        <a href="/terms.html">Termos</a>
+        <a href="/privacy.html">Privacidade</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="language-switcher.js"></script>
-<script src="allybi-header.js"></script>
-<script src="allybi-animations.js"></script>
 </body>
 </html>

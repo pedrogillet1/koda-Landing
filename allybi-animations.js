@@ -13,7 +13,7 @@
     // like .hiw-reveal (how-it-works.html), .integ-reveal (integrations.html),
     // and .sec-reveal (security-overview.html). New page-scoped patterns can
     // be added to this selector without touching the rest of the function.
-    var revealSelector = '.allybi-reveal, .hiw-reveal, .integ-reveal, .sec-reveal';
+    var revealSelector = '.allybi-reveal, .hiw-reveal, .integ-reveal, .sec-reveal, .about-reveal, .hw-reveal';
     var els = document.querySelectorAll(revealSelector);
     if (!els.length) return;
 
@@ -33,12 +33,16 @@
 
     els.forEach(function (el) { observer.observe(el); });
 
-    // Safety fallback: anything still hidden after 1.5s gets revealed.
-    // Covers fullPage screenshot tools, slow scroll, and SEO crawlers that
-    // execute JS for a bounded period before snapshotting.
+    // Safety fallback: only reveal items at or above the current viewport so
+    // crawlers / screenshot tools see above-the-fold content. Elements below
+    // the fold stay hidden until the user actually scrolls them in — that's
+    // what makes the per-card reveal animation visible on scroll.
     setTimeout(function () {
+      var vh = window.innerHeight;
       document.querySelectorAll(revealSelector).forEach(function (el) {
-        if (!el.classList.contains('is-visible')) {
+        if (el.classList.contains('is-visible')) return;
+        var rect = el.getBoundingClientRect();
+        if (rect.top < vh) {
           el.classList.add('is-visible');
         }
       });
@@ -238,5 +242,21 @@
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
+  }
+})();
+
+(function () {
+  var ua = navigator.userAgent;
+  var isSafari = /^((?!chrome|android|crios|fxios|edgios|edg|opr).)*safari/i.test(ua);
+  if (!isSafari) return;
+  function swap() {
+    document.querySelectorAll('img[src*="uploads-icon.svg"]').forEach(function (img) {
+      img.src = img.src.replace('uploads-icon.svg', 'uploads-icon.png');
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', swap);
+  } else {
+    swap();
   }
 })();
